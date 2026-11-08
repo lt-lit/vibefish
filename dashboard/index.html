@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vibefish</title>
+<meta name="description" content="Commander pod playtesting results: Forge AI games, per-deck consistency stats, card images from Scryfall.">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Stamp the stored theme before first paint so the page never flashes.
+  try { var t = localStorage.getItem('vibefish-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Vibefish</h1>
+    <p class="tag">Commander pod playtesting on Forge's AI</p>
+  </div>
+  <div class="controls">
+    <label class="run-pick">Run <select id="run-select" aria-label="Select a run"></select></label>
+    <button id="theme-toggle" type="button" title="Switch light/dark" aria-label="Switch light or dark theme">Theme</button>
+  </div>
+</header>
+
+<main id="app">
+  <p id="status" class="status" role="status">Loading…</p>
+  <section id="meta" class="meta" hidden></section>
+  <section id="decks" class="decks" aria-label="Decks in this pod" hidden></section>
+  <section id="charts" class="charts" aria-label="Charts" hidden></section>
+  <section id="cards" class="cards" aria-label="Cards" hidden></section>
+  <section id="games" class="games" aria-label="Games" hidden></section>
+</main>
+
+<footer class="foot">
+  <p>Games are played by <a href="https://github.com/Card-Forge/forge" rel="noopener">Forge</a>'s AI, headless. Card data and images come from <a href="https://scryfall.com" rel="noopener">Scryfall</a> and are shown unaltered; click a card to open it on Scryfall. Source: <a href="https://github.com/lt-lit/vibefish" rel="noopener">github.com/lt-lit/vibefish</a>.</p>
+  <p class="legal">Vibefish is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
+</footer>
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
