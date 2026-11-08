@@ -35,6 +35,10 @@ controller/vibefish-sim.sh play --out results/mine --deck-dir /path/to/decks \
   --games 10 --seed 42 --clock 900 --turn-cap 120
 ```
 
+## Branches
+
+`main` is stable and is what GitHub Pages serves; `testing` is where work integrates first; feature branches merge into `testing`.
+
 ## Layout
 
 | Path | What |
