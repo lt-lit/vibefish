@@ -1,0 +1,52 @@
+name: phase0-pod-smoke
+
+on:
+  workflow_dispatch:
+    inputs:
+      games:
+        description: "Games to play"
+        default: "3"
+      seed:
+        description: "RNG seed"
+        default: "20261108"
+  push:
+    paths:
+      - "forge/**"
+      - "runner/**"
+      - ".github/workflows/phase0.yml"
+
+jobs:
+  sim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Cache Forge runtime
+        uses: actions/cache@v4
+        with:
+          path: forge/runtime
+          key: forge-runtime-${{ runner.os }}-${{ hashFiles('forge/VERSION', 'forge/SHA256SUMS', 'forge/fetch-forge.sh') }}
+
+      - name: Fetch pinned Forge
+        run: forge/fetch-forge.sh
+
+      - name: Runner facts
+        run: |
+          nproc; free -g | head -2; java -version 2>&1 | head -1
+          cat forge/runtime/VIBEFISH_FORGE_VERSION
+
+      - name: Play the benchmark pod
+        run: runner/pod-smoke.sh -n "${{ inputs.games || '3' }}" -s "${{ inputs.seed || '20261108' }}" -o results
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pod-smoke-log
+          path: results/
+          retention-days: 30

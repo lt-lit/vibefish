@@ -1,0 +1,20 @@
+{
+  "name": "pod-v1",
+  "status": "frozen",
+  "chosen_on": "2026-11-08",
+  "chosen_with": "forge-2.0.15",
+  "description": "Fixed opponent pool for all Vibefish win-rate reporting: four Forge-bundled Commander precons. If this ever changes, that is a new pod with a new name and history restarts.",
+  "precon_dir": "res/quest/commanderprecons",
+  "seats": [
+    { "id": "mutant-menace",   "file": "Mutant Menace [PIP] [2024].dck",   "commander": "The Wise Mothman",        "set": "PIP", "year": 2024 },
+    { "id": "blight-curse",    "file": "Blight Curse [ECC] [2026].dck",    "commander": "Auntie Ool, Cursewretch", "set": "ECC", "year": 2026 },
+    { "id": "veloci-ramp-tor", "file": "Veloci-Ramp-Tor [LCC] [2023].dck", "commander": "Pantlaza, Sun-Favored",   "set": "LCC", "year": 2023 },
+    { "id": "squirreled-away", "file": "Squirreled Away [BLC] [2024].dck", "commander": "Hazel of the Rootbloom",  "set": "BLC", "year": 2024,
+      "note": "Chatterfang, Squirrel General is in the 99 as shipped" }
+  ],
+  "scheme": {
+    "baseline": "All four seats play each other. Expected win share is 25% each; the measured spread is the pod's own power calibration.",
+    "deck_under_test": "The tested deck takes one seat and the precons rotate out one at a time, so each precon sits out exactly one quarter of the games. Seat order rotates every game.",
+    "game_counts": "Multiples of four, so every precon sits out equally."
+  }
+}
