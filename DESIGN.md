@@ -266,7 +266,7 @@ Forge does the hard part (scripting every new card). Vibefish's job is to track 
 - How much of game state does Forge expose cleanly for the post-mortem serializer? **Mostly answered:** the event bus plus direct reads of `Game`/`Player` in the harness. Still open: whether to log hidden information (hands) per turn for post-mortems.
 - Playbook expression language: hand-roll, embed a tiny evaluator, or reuse Forge's `Valid`/`Count$` card-script syntax. Decide in Phase 2.
 - Pod rotation rule (§4.1, "each precon sits out a quarter of the games"): confirm before Phase 1 results accumulate.
-- Squirreled Away: play it as shipped (Hazel of the Rootbloom) or swap the commander to Chatterfang? A swap means a modified copy, no longer a bundled precon.
+- ~~Squirreled Away: play it as shipped (Hazel of the Rootbloom) or swap the commander to Chatterfang?~~ **Answered:** as shipped, Hazel in the command zone. Chatterfang is the product's alternate commander and stays in the 99.
 
 ## 14. Phase 0 results (2026-11-08)
 
