@@ -280,13 +280,14 @@
 
     // meta line
     const meta = $('#meta');
-    meta.replaceChildren(
+    meta.replaceChildren(...[
       el('span', {}, el('b', { text: String(rollup.games) }), ` games · ${rollup.completed_games ?? '–'} decided · ${rollup.drawn_games ?? 0} draws`),
       el('span', {}, 'Forge ', el('b', { text: rollup.forge_version || '?' })),
       el('span', {}, 'avg game ', el('b', { text: `${num(rollup.avg_game_turns, 0)} turns` }), ` (${num(rollup.avg_game_seconds, 0)} s)`),
       el('span', {}, 'generated ', el('b', { text: (rollup.generated || '').replace('T', ' ').replace('Z', ' UTC') })),
       rollup.pod ? el('span', {}, 'pod ', el('b', { text: rollup.pod })) : null,
-      rollup.mc && rollup.mc !== 'off' ? el('span', {}, 'Flat Monte Carlo ', el('b', { text: rollup.mc_available === false ? 'requested, unavailable' : rollup.mc })) : null);
+      rollup.mc && rollup.mc !== 'off' ? el('span', {}, 'Flat Monte Carlo ', el('b', { text: rollup.mc_available === false ? 'requested, unavailable' : rollup.mc })) : null,
+    ].filter(Boolean));
     meta.hidden = false;
 
     // deck cards (the KPI row)
@@ -389,7 +390,7 @@
     if (m.rounds_per_game) add('Rounds per game', num(m.rounds_per_game.sim_mean, 1), num(m.rounds_per_game.human_mean, 2), 'a round is one turn for each player');
     (m.precon_win_rate && m.precon_win_rate.rows || []).forEach((r) => { if (r.human_win_rate != null) add(`${r.deck} win rate`, pct(r.sim_win_rate, 1), pct(r.human_win_rate, 1), `${r.sim_games} sim games vs ${r.human_games} human stock games`); });
     if (m.precon_win_rate && m.precon_win_rate.spearman_rank_correlation != null) add('Precon rank correlation', String(m.precon_win_rate.spearman_rank_correlation), '1.0', `${m.precon_win_rate.decks_compared} decks; the human table ranks stock precons against mixed tables`);
-    const fig = el('figure', { class: 'chart' },
+    const fig = el('figure', { class: 'chart wide calibration' },
       el('figcaption', {}, el('div', {}, el('h3', { text: 'Calibration against human games' }),
         el('p', { text: `Sim numbers next to Playgroup.gg's tracked Commander games (reference copied ${sc.reference_retrieved || ''}). Likeness, not strength.` }))),
       el('div', { class: 'table-view' }, dataTable(['Metric', 'Sim', 'Human', 'Note'], rows)));

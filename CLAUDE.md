@@ -32,6 +32,7 @@ runner/run-pod.sh -R forge/runtime-snapshot -m on -p Vibefish-MC,Vibefish-MC,Vib
                                                        # A/B: Flat Monte Carlo vs heuristic, profiles rotate across seats; rollup reports arms
 runner/publish.sh results/<run-id> demo-data           # → demo-data/runs/<run-id>/, scorecard.json, index.json, card cache
 runner/scorecard.py results/<run-id>/rollup.json       # sim vs Playgroup human references (runner/reference/playgroup-commander.json)
+runner/goldfish.sh /abs/path/Deck.dck -n 8 -s 42        # deck vs three lands-only do-nothing decks → kill-turn distribution in goldfish.json
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```
