@@ -163,7 +163,7 @@ Per run rollup, per deck: games, wins, avg turn commander first cast, land-drop 
 
 | Phase | Deliverable | Done when |
 |---|---|---|
-| 0 Spike | Forge runs 4-player Commander sim headless on a local machine and in Actions | **Done 2026-11-08** (§14): 11/11 local games completed; first Actions run pending |
+| 0 Spike | Forge runs 4-player Commander sim headless on a local machine and in Actions | **Done 2026-11-08** (§14): 12/12 local games and 3/3 Actions games completed |
 | 1 Goldfish | Harness (JSON event logger, seeds, turn cap) + runner + rollup + first dashboard | Consistency stats for one deck visible on Pages with card images |
 | 2 Pilot | Per-deck AI profile, then PlaybookController v1 (mulligan, priority, hold) | Measurable improvement vs. the Default profile on same deck/pod |
 | 3 Lines | Scripted combo execution + LLM post-mortem loop | Playbook v2 generated from v1 losses beats v1 |
@@ -190,7 +190,7 @@ Phase 0 and 1 are the prototype. Nothing in Phase 2+ starts until Phase 1 runs e
 ## 9. Risks
 
 - **Multiplayer sim stability.** *Resolved in Phase 0:* plain mode with four decks seats all four in one Commander game. Tournament mode (`-t`/`-p`) pairs decks 1v1 at 20 life and ignores the deck folder for named decks; never use it for Commander.
-- **Forge's default clock.** `-c` defaults to 120 s and declares the game a draw; 3 of 11 Phase 0 games ran longer. The runner always sets it. Forge has no turn cap; the harness adds one.
+- **Forge's default clock.** `-c` defaults to 120 s and declares the game a draw; 4 of 15 Phase 0 games ran longer. The runner always sets it. Forge has no turn cap; the harness adds one.
 - **Ordering nondeterminism.** The same seed replays the same game, but the listing order of simultaneous events (declared attackers, their blocks) varies between runs. Diffs and regression comparisons must be order-insensitive; the recorded log is the replay source.
 - **Upstream AI churn.** Forge master (Oct–Nov 2026) added flat Monte Carlo, deck-plan detection, combo recognition and plan-aware mulligans. The first bump after 2.0.15 will move every baseline. Never average across `forge_version` (§11 step 4).
 - **Forge release churn.** Monthly releases change card scripts and occasionally AI internals. Pin a release; bump deliberately.
@@ -275,13 +275,13 @@ Forge 2.0.15 (release of 28 Sep 2026), Java 21, 4-core / 15 GB container. Script
 | Check | Result |
 |---|---|
 | 2-player constructed sim (two quest precons) | 2 games, 5 s and 11 s |
-| 4-deck Commander sim, plain mode | 11 games, all completed; 40 life, commander-damage kills, winner by last standing, no exceptions |
+| 4-deck Commander sim, plain mode | 15 games (12 local, 3 in Actions), all completed; 40 life, commander-damage kills, winner by last standing, no exceptions |
 | Tournament mode `-t RoundRobin -p 4 -f Commander` | pairs 1v1 at 20 life; not usable for Commander |
 | Seeded determinism | same seed → same 55-turn game and winner; 14 of 3,782 log lines differ, all attacker/blocker listing order |
-| Time per 4-player game | avg 98 s over 10, median 66 s, min 44 s, max 247 s; plus ~11 s startup per process |
-| Games over Forge's 120 s default clock | 3 of 11 (would have been draws) |
+| Time per 4-player game | avg 98 s over 10, median 66 s, min 44 s, max 247 s; plus ~11 s startup per process. Actions runner: 41 s, 85 s, 375 s |
+| Games over Forge's 120 s default clock | 4 of 15 (would have been draws) |
 | Download / extract | 283 MB tarball, 13 s download, 30 s extract; trimmed runtime ~190 MB |
-| GitHub Actions run | pending first green run of `.github/workflows/phase0.yml` |
+| GitHub Actions run | green on first run: `ubuntu-latest` (4 vCPU, 15 GB, Temurin 21); fetch + verify + extract 26 s; 3 pod games in 509 s wall; runtime cached at 66 MB compressed |
 
 Log shape (stock text log, one game ≈ 3,800 lines): `Phase` (~37%), `Mana`, `Add To Stack` / `Resolve Stack`, `Zone Change` (graveyard/exile moves only), `Turn`, `Damage`, `Combat`, `Life`, `Land`, `Mulligan`, `Game Outcome`. Missing: draws, hand contents, the zone a spell was cast from. This is why Phase 1 logs from the event bus instead of parsing text.
 

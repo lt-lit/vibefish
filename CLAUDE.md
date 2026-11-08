@@ -42,9 +42,9 @@ Output: stdout, plus `forge/runtime/profile/user/forge.log` (redirected from `~/
 - [x] 2. 4-deck Commander sim: four players in one game, 40 life, commander damage counted; 11/11 games completed.
 - [x] 3. Log shape recorded in `DESIGN.md` §14; it drives the Phase 1 `JsonGameLogger`.
 - [x] 4. Timing: 98 s/game average over 10 (median 66 s, range 44–247 s) plus ~11 s startup. Recorded in `DESIGN.md` §4.2.
-- [ ] 5. GitHub Actions on `ubuntu-latest`: `.github/workflows/phase0.yml`. Pending first green run.
+- [x] 5. GitHub Actions on `ubuntu-latest`: `.github/workflows/phase0.yml` green on its first run (2026-11-08): 4-vCPU runner, Forge fetched and verified in 26 s, 3 pod games completed in 509 s (41 s, 85 s, 375 s), runtime cached at 66 MB compressed.
 
-Phase 1 starts when step 5 is green.
+Phase 0 is complete. Phase 1 (harness, runner, rollup, dashboard) can start.
 
 ## Required README footer
 > Vibefish is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
