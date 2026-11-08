@@ -343,6 +343,6 @@ Built and verified end to end on the same container as Phase 0, then in Actions.
 | `rollup.py` | per-deck stats over shards; `index.json` upsert |
 | `scryfall.py` | 300 names in 5 requests, split cards via front-face retry, rerun resolves nothing |
 | Dashboard | light, dark and 390 px phone renders with no console errors or broken images; palette validated for four seats (light-mode contrast relief via direct labels and table views) |
-| Workflows | `pod-run.yml` (4 shards + rollup + optional publish), `pages.yml` (dashboard + demo-data) |
+| Workflows | `pod-run.yml` (4 shards + rollup + optional publish), `pages.yml` (dashboard + demo-data; needs Pages enabled once in repo settings with source "GitHub Actions", which the workflow token cannot do itself) |
 
 Demo data: the first published run is `demo-data/runs/2026-11-08-pod-v1-forge-2.0.15-s20261108` (20 games, 2 shards, seed 20261108); see `demo-data/index.json` for later runs.

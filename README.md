@@ -13,7 +13,7 @@ for the full picture.
 Java harness that records every game as a JSON event stream; the dashboard shows per-deck win rates,
 mulligans, land drops, commander timing and the cards that never get cast, with card images from Scryfall.
 
-**Dashboard:** https://lt-lit.github.io/vibefish/
+**Dashboard:** https://lt-lit.github.io/vibefish/ — deployed by `.github/workflows/pages.yml`. GitHub Pages has to be enabled once by the repository owner (Settings → Pages → Build and deployment → Source: **GitHub Actions**); the workflow token cannot create the site itself. Until then, run it locally as below.
 
 ## Quick start
 

@@ -38,7 +38,7 @@ Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never u
 ## Workflows
 - `phase0.yml`: Forge sim-mode smoke test on push to `forge/**`, `runner/**`.
 - `pod-run.yml` (manual): 4 shards × N games, rollup, optional publish into `demo-data/` on the branch.
-- `pages.yml`: deploys `dashboard/` + `demo-data/` (as `data/`) to GitHub Pages on push.
+- `pages.yml`: deploys `dashboard/` + `demo-data/` (as `data/`) to GitHub Pages on push. Requires Pages to be enabled once in repo settings with source "GitHub Actions"; the first run failed with "Create Pages site failed: Resource not accessible by integration" until that is done.
 
 ## Key links
 - Forge AI / sim flags: https://github.com/Card-Forge/forge/wiki/AI
