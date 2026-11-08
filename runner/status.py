@@ -28,7 +28,7 @@ h1{font-size:1.3rem;margin:0 0 4px}.muted{color:var(--muted);font-size:.9rem}
 table{border-collapse:collapse;font-size:.9rem;margin-top:8px}td,th{padding:3px 10px 3px 0;text-align:left;border-bottom:1px solid var(--border)}
 </style></head><body><h1>Vibefish runs</h1><p class="muted" id="when">loading…</p><div id="runs"></div>
 <script>
-const fmt=s=>s==null?'–':(s>=3600?`${Math.floor(s/3600)} h ${Math.round(s%3600/60)} min`:s>=90?`${Math.round(s/60)} min`:`${Math.round(s)} s`);
+const fmt=s=>s==null?'–':(s>=3600?`${Math.floor(s/3600)} h ${Math.round(s%3600/60)} min`:s>=600?`${Math.round(s/60)} min`:s>=90?`${Math.floor(s/60)} min ${Math.round(s%60)} s`:`${Math.round(s)} s`);
 async function tick(){try{const r=await fetch('status.json',{cache:'no-cache'});const d=await r.json();
 document.getElementById('when').textContent=`updated ${new Date(d.now*1000).toLocaleTimeString()} · refreshes every 15 s`;
 const el=document.getElementById('runs');el.replaceChildren();
