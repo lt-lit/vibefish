@@ -2,8 +2,14 @@
 # Plays the benchmark pod through the Vibefish harness, in parallel shards, then rolls the results up.
 #
 #   runner/run-pod.sh [-n GAMES] [-j SHARDS] [-s SEED] [-c CLOCK_S] [-t TURN_CAP] [-o RESULTS_DIR] [-i RUN_ID] [-x INDEX_JSON] [-k SHARD]
+#                     [-R RUNTIME_DIR] [-m off|on|max|lite] [-p PROFILE,PROFILE,...] [-r]
 #
 # -k K runs only shard K of the J shards (for one CI job per shard) and skips the rollup.
+# -R picks the Forge runtime (default forge/runtime; forge/runtime-snapshot for the daily snapshot).
+# -m switches Forge's Flat Monte Carlo AI on for the games (2.0.16+ builds), -p gives one AI profile per seat in pod
+# order, and -r rotates that assignment by one seat every game so each deck plays each profile equally: an A/B run is
+#   runner/run-pod.sh -R forge/runtime-snapshot -m on -p Vibefish-MC,Vibefish-MC,Vibefish-Heuristic,Vibefish-Heuristic -r -n 40 -j 2
+# after runner/make-arm-profiles.sh forge/runtime-snapshot.
 #
 # Output: RESULTS_DIR/RUN_ID/{shard-N/run.json, shard-N/games/*.events.jsonl, shard-N.log, rollup.json}
 # Each shard is one JVM (about 4 GB heap, ~1.5 cores while a game runs); keep SHARDS <= cores/1.5.
@@ -15,8 +21,8 @@ ROOT=$(cd "$HERE/.." && pwd)
 RUNTIME="${FORGE_RUNTIME:-$ROOT/forge/runtime}"
 POD="$HERE/benchmark-pod.json"
 
-GAMES=4; SHARDS=1; SEED=$(date -u +%Y%m%d); CLOCK=900; CAP=120; RESULTS="$ROOT/results"; RUN_ID=""; INDEX=""; ONLY=""
-while getopts "n:j:s:c:t:o:i:x:k:" opt; do
+GAMES=4; SHARDS=1; SEED=$(date -u +%Y%m%d); CLOCK=900; CAP=120; RESULTS="$ROOT/results"; RUN_ID=""; INDEX=""; ONLY=""; MC="off"; PROFILES=""; ROTATE=0
+while getopts "n:j:s:c:t:o:i:x:k:R:m:p:r" opt; do
   case $opt in
     n) GAMES=$OPTARG ;;
     j) SHARDS=$OPTARG ;;
@@ -27,24 +33,35 @@ while getopts "n:j:s:c:t:o:i:x:k:" opt; do
     i) RUN_ID=$OPTARG ;;
     x) INDEX=$OPTARG ;;
     k) ONLY=$OPTARG ;;
-    *) echo "usage: $0 [-n GAMES] [-j SHARDS] [-s SEED] [-c CLOCK_S] [-t TURN_CAP] [-o RESULTS_DIR] [-i RUN_ID] [-x INDEX_JSON] [-k SHARD]" >&2; exit 2 ;;
+    R) RUNTIME=$(cd "$OPTARG" && pwd) ;;
+    m) MC=$OPTARG ;;
+    p) PROFILES=$OPTARG ;;
+    r) ROTATE=1 ;;
+    *) echo "usage: $0 [-n GAMES] [-j SHARDS] [-s SEED] [-c CLOCK_S] [-t TURN_CAP] [-o RESULTS_DIR] [-i RUN_ID] [-x INDEX_JSON] [-k SHARD] [-R RUNTIME] [-m MC] [-p PROFILES] [-r]" >&2; exit 2 ;;
   esac
 done
 [ -f "$RUNTIME/VIBEFISH_FORGE_VERSION" ] || { echo "No Forge runtime at $RUNTIME; run forge/fetch-forge.sh" >&2; exit 2; }
 [ "$SHARDS" -ge 1 ] && [ "$GAMES" -ge 1 ] || { echo "GAMES and SHARDS must be >= 1" >&2; exit 2; }
 [ "$SHARDS" -le "$GAMES" ] || SHARDS=$GAMES
 
+export FORGE_RUNTIME="$RUNTIME"
 FORGE_VERSION=$(head -1 "$RUNTIME/VIBEFISH_FORGE_VERSION")
+EXTRA=(--mc "$MC")
+if [ -n "$PROFILES" ]; then
+  IFS=, read -r -a PROFS <<<"$PROFILES"
+  for pr in "${PROFS[@]}"; do EXTRA+=(--profile "$pr"); done
+fi
+[ "$ROTATE" = 1 ] && EXTRA+=(--rotate-profiles)
 POD_NAME=$(jq -r .name "$POD")
 PRECONS="$RUNTIME/$(jq -r .precon_dir "$POD")"
 DECK_ARGS=()
 while IFS= read -r spec; do DECK_ARGS+=(--deck "$spec"); done < <(jq -r '.seats[] | "\(.id)=\(.file)"' "$POD")
-[ -n "$RUN_ID" ] || RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)-${POD_NAME}-${FORGE_VERSION}-s${SEED}"
+[ -n "$RUN_ID" ] || RUN_ID="$(date -u +%Y%m%dT%H%M%SZ)-${POD_NAME}-${FORGE_VERSION}-s${SEED}$([ "$MC" != off ] && echo "-mc$MC")"
 OUT="$RESULTS/$RUN_ID"
 mkdir -p "$OUT"
 
 "$ROOT/controller/build.sh" >&2
-echo "run $RUN_ID: $GAMES game(s) in $SHARDS shard(s), seed $SEED, clock ${CLOCK}s, turn cap $CAP, $(nproc) cpus" >&2
+echo "run $RUN_ID: $GAMES game(s) in $SHARDS shard(s), seed $SEED, clock ${CLOCK}s, turn cap $CAP, mc $MC, profiles ${PROFILES:-default}$([ "$ROTATE" = 1 ] && echo " (rotating)"), runtime $(basename "$RUNTIME"), $(nproc) cpus" >&2
 echo "output: $OUT" >&2
 
 run_shard() {
@@ -56,7 +73,7 @@ run_shard() {
     set +e
     "$ROOT/controller/vibefish-sim.sh" play --out "$dir" --deck-dir "$PRECONS" "${DECK_ARGS[@]}" \
       --games "$n" --start "$start" --seed "$seed" --clock "$CLOCK" --turn-cap "$CAP" \
-      --forge-version "$FORGE_VERSION" >>"$log" 2>&1
+      --forge-version "$FORGE_VERSION" "${EXTRA[@]}" >>"$log" 2>&1
     rc=$?
     set -e
     if [ "$rc" -eq 3 ] && [ -f "$dir/run.json" ]; then

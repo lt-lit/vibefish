@@ -26,11 +26,15 @@ controller/vibefish-sim.sh play --out results/x --deck-dir DIR \
     --deck a=A.dck --deck b=B.dck --deck c=C.dck --deck d=D.dck \
     --games 10 --seed 42 --clock 900 --turn-cap 120 [--profile Default ...]   # JSONL events + run.json
 runner/run-pod.sh -n 20 -j 2 -s 42                     # benchmark pod, 2 shards → results/<run-id>/{shard-*,rollup.json}
+FORGE_CHANNEL=snapshot FORGE_RUNTIME=$PWD/forge/runtime-snapshot forge/fetch-forge.sh   # daily snapshot, side by side
+runner/make-arm-profiles.sh forge/runtime-snapshot     # Vibefish-MC / Vibefish-MCHard / Vibefish-Heuristic AI profiles
+runner/run-pod.sh -R forge/runtime-snapshot -m on -p Vibefish-MC,Vibefish-MC,Vibefish-Heuristic,Vibefish-Heuristic -r -n 40 -j 2 -c 1800
+                                                       # A/B: Flat Monte Carlo vs heuristic, profiles rotate across seats; rollup reports arms
 runner/publish.sh results/<run-id> demo-data           # → demo-data/runs/<run-id>/, index.json, card cache
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```
-Relative paths given to the launcher resolve against the directory you run it from. Bundled Commander precons: `forge/runtime/res/quest/commanderprecons/` (179 decks named `Name [SET] [YEAR].dck`). Forge needs Java 17+ (CI uses Temurin 21). Sim mode does not need card images.
+Relative paths given to the launcher resolve against the directory you run it from. The harness jar is built per Forge jar under `controller/out/<jar-name>/`; the launcher rebuilds it when sources are newer, so do not run it against a runtime while a long run is using that runtime (the running JVM reads classes from the jar being overwritten). `--mc on|max|lite` switches Forge's Flat Monte Carlo AI on (2.0.16+ builds, no-op on 2.0.15); `--profile` once per seat, `--rotate-profiles` shifts the assignment every game. Bundled Commander precons: `forge/runtime/res/quest/commanderprecons/` (179 decks named `Name [SET] [YEAR].dck`). Forge needs Java 17+ (CI uses Temurin 21). Sim mode does not need card images.
 
 ## Forge sim mode notes
 Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never use `-t`/`-p` for Commander:** tournament mode pairs decks 1v1 at 20 life and ignores `-D` for named decks. `-D` must be absolute; quote names with spaces. Per-seat AI profiles: `-a` in sim mode, `--profile` in the harness (`res/ai/*.ai`). Forge's AI prints a `java.util.concurrent.TimeoutException` stack trace when its own decision timeout fires; harmless. Forge's user data is redirected into `forge/runtime/profile/` by the `forge.profile.properties` the fetch script writes.

@@ -37,6 +37,59 @@ def mean(xs):
     return round(statistics.fmean(xs), 2) if xs else None
 
 
+def wilson(wins, n, z=1.96):
+    """95% Wilson score interval for a proportion, as (low, high)."""
+    if n == 0:
+        return None
+    p = wins / n
+    denom = 1 + z * z / n
+    centre = (p + z * z / (2 * n)) / denom
+    half = z * ((p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5) / denom
+    return [round(centre - half, 4), round(centre + half, 4)]
+
+
+def arm_stats(games_out, decks):
+    """Win statistics by AI profile ("arm") when games carry a per-seat profile list.
+
+    Each game has one winner; an arm's game win share is the share of games won by any of its seats, and its expected
+    value under equal strength is the share of seats it held. Per-seat win rate (expected 25% in a 4-player pod) and
+    per-deck splits are reported too.
+    """
+    with_profiles = [g for g in games_out if g.get("profiles")]
+    if not with_profiles:
+        return None
+    arms = {}
+    for g in with_profiles:
+        profs = g["profiles"]
+        n = len(profs)
+        winner = g.get("winner")
+        for seat, prof in enumerate(profs):
+            a = arms.setdefault(prof, {"seat_games": 0, "wins": 0, "games": 0, "expected_share": 0.0, "by_deck": {}})
+            a["seat_games"] += 1
+            a["expected_share"] += 1.0 / n
+            d = a["by_deck"].setdefault(decks[seat]["id"] if seat < len(decks) else str(seat), {"games": 0, "wins": 0})
+            d["games"] += 1
+            if winner == seat:
+                a["wins"] += 1
+                d["wins"] += 1
+        for prof in set(profs):
+            arms[prof]["games"] += 1
+    out = {}
+    for prof, a in arms.items():
+        games = a["games"]
+        out[prof] = {
+            "games": games,
+            "seat_games": a["seat_games"],
+            "wins": a["wins"],
+            "game_win_share": round(a["wins"] / games, 4) if games else None,
+            "game_win_share_ci95": wilson(a["wins"], games),
+            "expected_game_win_share": round(a["expected_share"] / games, 4) if games else None,
+            "seat_win_rate": round(a["wins"] / a["seat_games"], 4) if a["seat_games"] else None,
+            "by_deck": {k: {**v, "win_rate": round(v["wins"] / v["games"], 4) if v["games"] else None} for k, v in a["by_deck"].items()},
+        }
+    return {"games_with_profiles": len(with_profiles), "arms": out}
+
+
 class DeckStats:
     def __init__(self, seat, info, max_turn):
         self.seat = seat
@@ -311,6 +364,10 @@ def main(argv):
         "avg_game_turns": mean([g.get("turns") for g in games_out]),
         "avg_game_seconds": mean([g.get("duration_ms", 0) / 1000 for g in games_out]),
         "decks": [{k: v for k, v in d.items() if k != "cards"} | {"card_count": len(d.get("cards", []))} for d in decks],
+        "mc": runs[0].get("mc"),
+        "mc_available": runs[0].get("mc_available"),
+        "rotate_profiles": runs[0].get("rotate_profiles"),
+        "arms": arm_stats(games_out, decks),
         "deck_stats": deck_summaries,
         "game_summaries": games_out,
     }
@@ -323,6 +380,12 @@ def main(argv):
         print(f"  {d['id']:<18} games {d['games']:>3}  wins {d['wins']:>3}  win% {d['win_rate']*100:5.1f}  "
               f"mull% {d['mulligan_rate']*100:5.1f}  cmdr T{d['commander']['avg_first_cast_turn']}  "
               f"lands@T4 {d['lands_by_turn'][3] if len(d['lands_by_turn']) > 3 else None}", file=sys.stderr)
+    if rollup["arms"]:
+        for prof, a in rollup["arms"]["arms"].items():
+            ci = a["game_win_share_ci95"] or [None, None]
+            print(f"  arm {prof:<20} games {a['games']:>3}  wins {a['wins']:>3}  game win share {a['game_win_share']*100:5.1f}% "
+                  f"(95% {ci[0]*100:.0f}–{ci[1]*100:.0f}%, even = {a['expected_game_win_share']*100:.0f}%)  per seat {a['seat_win_rate']*100:.1f}%",
+                  file=sys.stderr)
 
     if args.index:
         index = load_json(args.index) if os.path.isfile(args.index) else {"runs": []}

@@ -23,15 +23,35 @@ case "$CHANNEL" in
     STAMP="$TAG"
     ;;
   snapshot)
-    # The snapshot tarball carries a build date in its name, so it has to be discovered.
+    # The snapshot tarball carries a build date in its name (forge-installer-2.0.16-SNAPSHOT-11.08.tar.bz2),
+    # so it has to be discovered: through the releases API when it is reachable, otherwise by probing the
+    # download URL for recent dates. FORGE_SNAPSHOT_VERSION overrides the guessed next version.
     API="https://api.github.com/repos/Card-Forge/forge/releases/tags/daily-snapshots"
     AUTH=()
     [ -n "${GITHUB_TOKEN:-}" ] && AUTH=(-H "Authorization: Bearer $GITHUB_TOKEN")
-    JSON=$(curl -fsSL "${AUTH[@]}" -H "Accept: application/vnd.github+json" "$API")
-    ASSET=$(jq -r '.assets[] | select(.name | test("^forge-installer-.*\\.tar\\.bz2$")) | .name' <<<"$JSON" | head -1)
-    [ -n "$ASSET" ] || { echo "No snapshot tarball found at $API" >&2; exit 1; }
-    URL=$(jq -r --arg n "$ASSET" '.assets[] | select(.name == $n) | .browser_download_url' <<<"$JSON")
-    STAMP="snapshot-$(jq -r --arg n "$ASSET" '.assets[] | select(.name == $n) | .updated_at[:10]' <<<"$JSON")"
+    ASSET=""; URL=""; STAMP=""
+    if JSON=$(curl -fsSL "${AUTH[@]}" -H "Accept: application/vnd.github+json" "$API" 2>/dev/null); then
+      ASSET=$(jq -r '.assets[] | select(.name | test("^forge-installer-.*\\.tar\\.bz2$")) | .name' <<<"$JSON" | head -1)
+      if [ -n "$ASSET" ]; then
+        URL=$(jq -r --arg n "$ASSET" '.assets[] | select(.name == $n) | .browser_download_url' <<<"$JSON")
+        STAMP="snapshot-$(jq -r --arg n "$ASSET" '.assets[] | select(.name == $n) | .updated_at[:10]' <<<"$JSON")"
+      fi
+    fi
+    if [ -z "$ASSET" ]; then
+      PINNED="${TAG#forge-}"
+      NEXT="${FORGE_SNAPSHOT_VERSION:-${PINNED%.*}.$(printf '%02d' $((10#${PINNED##*.} + 1)))}"
+      for back in $(seq 0 14); do
+        day=$(date -u -d "-$back day" +%Y-%m-%d)
+        cand="forge-installer-${NEXT}-SNAPSHOT-$(date -u -d "$day" +%m.%d).tar.bz2"
+        cand_url="https://github.com/Card-Forge/forge/releases/download/daily-snapshots/$cand"
+        code=$(curl -sS -o /dev/null -I -w '%{http_code}' "$cand_url" || true)
+        if [ "$code" = "302" ] || [ "$code" = "200" ]; then
+          ASSET="$cand"; URL="$cand_url"; STAMP="snapshot-$day"; break
+        fi
+      done
+    fi
+    [ -n "$ASSET" ] || { echo "No daily snapshot found (API unreachable and no forge-installer-*-SNAPSHOT tarball in the last 14 days)" >&2; exit 1; }
+    echo "Snapshot: $ASSET ($STAMP)"
     ;;
   *) echo "FORGE_CHANNEL must be 'pinned' or 'snapshot' (got '$CHANNEL')" >&2; exit 1 ;;
 esac

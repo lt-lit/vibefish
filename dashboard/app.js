@@ -283,7 +283,8 @@
       el('span', {}, 'Forge ', el('b', { text: rollup.forge_version || '?' })),
       el('span', {}, 'avg game ', el('b', { text: `${num(rollup.avg_game_turns, 0)} turns` }), ` (${num(rollup.avg_game_seconds, 0)} s)`),
       el('span', {}, 'generated ', el('b', { text: (rollup.generated || '').replace('T', ' ').replace('Z', ' UTC') })),
-      rollup.pod ? el('span', {}, 'pod ', el('b', { text: rollup.pod })) : null);
+      rollup.pod ? el('span', {}, 'pod ', el('b', { text: rollup.pod })) : null,
+      rollup.mc && rollup.mc !== 'off' ? el('span', {}, 'Flat Monte Carlo ', el('b', { text: rollup.mc_available === false ? 'requested, unavailable' : rollup.mc })) : null);
     meta.hidden = false;
 
     // deck cards (the KPI row)
@@ -335,6 +336,15 @@
         items: decks.map((d, i) => ({ name: names[i], color: seatColor(d.seat), value: d.win_rate, label: pct(d.win_rate),
           note: `${d.wins} wins, ${d.losses} losses, ${d.draws} draws` })),
         max: 1, format: (v) => pct(v), tableHeader: 'Win rate' }));
+    if (rollup.arms && rollup.arms.arms) {
+      const arms = Object.entries(rollup.arms.arms);
+      chartSec.append(barChart({ title: 'AI arms (A/B)',
+        subtitle: `Share of games won by each AI profile's seats; profiles rotate across seats every game. Even would be ${pct(arms[0][1].expected_game_win_share)}.`,
+        items: arms.map(([name, a], i) => ({ name, color: `var(--s${(i % MAX_SERIES) + 1})`, value: a.game_win_share,
+          label: `${pct(a.game_win_share)}${a.game_win_share_ci95 ? ` (${pct(a.game_win_share_ci95[0])}–${pct(a.game_win_share_ci95[1])})` : ''}`,
+          note: `${a.wins} wins in ${a.games} games · ${pct(a.seat_win_rate, 1)} per seat · by deck: ${Object.entries(a.by_deck).map(([d, v]) => `${shortName((decks.find((x) => x.id === d) || {}).name) || d} ${v.wins}/${v.games}`).join(', ')}` })),
+        max: 1, format: (v) => pct(v), tableHeader: 'Game win share (95% interval)' }));
+    }
     chartSec.hidden = false;
     relayout(true);
 

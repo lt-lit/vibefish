@@ -9,8 +9,9 @@ ROOT=$(cd "$HERE/.." && pwd)
 RUNTIME="${FORGE_RUNTIME:-$ROOT/forge/runtime}"
 JAR=$(compgen -G "$RUNTIME/forge-gui-desktop-*-jar-with-dependencies.jar" | head -1 || true)
 [ -n "$JAR" ] || { echo "Forge runtime not found at $RUNTIME; run forge/fetch-forge.sh first" >&2; exit 2; }
-SIMJAR="$HERE/out/vibefish-sim.jar"
-if [ ! -f "$SIMJAR" ] || [ "$(sha256sum "$JAR" | cut -c1-16)" != "$(cat "$HERE/out/forge-jar.sha" 2>/dev/null)" ] \
+OUT="$HERE/out/$(basename "$JAR" .jar)"
+SIMJAR="$OUT/vibefish-sim.jar"
+if [ ! -f "$SIMJAR" ] || [ "$(sha256sum "$JAR" | cut -c1-16)" != "$(cat "$OUT/forge-jar.sha" 2>/dev/null)" ] \
    || [ -n "$(find "$HERE/src" -name '*.java' -newer "$SIMJAR" 2>/dev/null)" ]; then
   "$HERE/build.sh" >&2
 fi

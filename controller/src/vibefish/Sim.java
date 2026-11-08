@@ -31,6 +31,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import forge.GuiDesktop;
+import forge.ai.AiProfileUtil;
+import forge.ai.LobbyPlayerAi;
 import forge.deck.Deck;
 import forge.deck.io.DeckSerializer;
 import forge.game.Game;
@@ -55,8 +57,8 @@ import forge.util.MyRandom;
  *
  * <pre>
  *   vibefish.Sim play  --out DIR --deck id=file.dck [--deck ...] [--deck-dir DIR] [--games N]
- *                      [--seed S] [--clock SEC] [--turn-cap T] [--profile NAME ...] [--start N]
- *                      [--forge-version TAG]
+ *                      [--seed S] [--clock SEC] [--turn-cap T] [--profile NAME ...] [--rotate-profiles]
+ *                      [--mc off|on|max|lite] [--start N] [--forge-version TAG]
  *   vibefish.Sim check [--deck-dir DIR] [--out FILE] file.dck [file.dck ...]
  * </pre>
  *
@@ -97,7 +99,11 @@ public final class Sim {
 
     static void usage() {
         System.err.println("usage: vibefish.Sim play --out DIR --deck id=file.dck ... [--deck-dir DIR] [--games N] [--seed S]");
-        System.err.println("                         [--clock SEC] [--turn-cap T] [--profile NAME ...] [--start N] [--forge-version TAG]");
+        System.err.println("                         [--clock SEC] [--turn-cap T] [--profile NAME ...] [--rotate-profiles]");
+        System.err.println("                         [--mc off|on|max|lite] [--start N] [--forge-version TAG]");
+        System.err.println("  --profile is given once per seat in deck order; --rotate-profiles shifts the assignment by one seat");
+        System.err.println("  every game, so each deck plays each profile equally (A/B runs). --mc switches Forge's Flat Monte");
+        System.err.println("  Carlo AI on for the game (2.0.16+ builds); a profile with FLAT_MC_ENABLED=false keeps the heuristic AI.");
         System.err.println("       vibefish.Sim check [--deck-dir DIR] [--out FILE] file.dck ...");
     }
 
@@ -144,6 +150,8 @@ public final class Sim {
         Long seedBase = null;
         int clock = 900;
         int turnCap = 120;
+        String mcMode = "off";
+        boolean rotateProfiles = false;
         for (int i = 0; i < args.length; i++) {
             String a = args[i];
             switch (a) {
@@ -157,6 +165,8 @@ public final class Sim {
                 case "--seed": seedBase = Long.parseLong(args[++i]); break;
                 case "--clock": clock = Integer.parseInt(args[++i]); break;
                 case "--turn-cap": turnCap = Integer.parseInt(args[++i]); break;
+                case "--mc": mcMode = args[++i].toLowerCase(); break;
+                case "--rotate-profiles": rotateProfiles = true; break;
                 default:
                     System.err.println("unknown option " + a);
                     usage();
@@ -165,6 +175,10 @@ public final class Sim {
         }
         if (outDir == null || deckArgs.size() < 2) {
             usage();
+            return 2;
+        }
+        if (!mcMode.matches("off|on|max|lite")) {
+            System.err.println("--mc must be off, on, max or lite");
             return 2;
         }
         if (seedBase == null) {
@@ -176,6 +190,21 @@ public final class Sim {
         long t0 = System.currentTimeMillis();
         boot();
         System.err.printf("[vibefish] Forge %s loaded in %d ms%n", BuildInfo.getVersionString(), System.currentTimeMillis() - t0);
+
+        while (profiles.size() < deckArgs.size()) {
+            profiles.add("");
+        }
+        List<String> available = AiProfileUtil.getAvailableProfiles();
+        for (String pr : profiles) {
+            if (!pr.isEmpty() && !available.contains(pr)) {
+                System.err.println("[vibefish] unknown AI profile " + pr + "; available: " + available);
+                return 2;
+            }
+        }
+        boolean mcAvailable = mcMode.equals("off") || hasMonteCarloSwitch();
+        if (!mcAvailable) {
+            System.err.println("[vibefish] this Forge build has no Flat Monte Carlo switch; --mc " + mcMode + " is ignored and the heuristic AI plays");
+        }
 
         GameRules rules = new GameRules(GameType.Commander);
         rules.setAppliedVariants(EnumSet.of(GameType.Commander));
@@ -224,6 +253,9 @@ public final class Sim {
                 "seed_base", seedBase,
                 "clock_s", clock,
                 "turn_cap", turnCap,
+                "mc", mcMode,
+                "mc_available", mcAvailable,
+                "rotate_profiles", rotateProfiles,
                 "games_requested", games,
                 "started", Instant.now().toString(),
                 "decks", deckInfos,
@@ -251,10 +283,21 @@ public final class Sim {
             long seed = seedBase + g;
             String eventsName = String.format("games/game-%03d.events.jsonl", g);
             Path evPath = out.resolve(eventsName);
+            // Profile per seat for this game: the list as given, shifted by one seat per game when rotating,
+            // so that over any block of N games every deck has played every profile equally.
+            List<String> gameProfiles = new ArrayList<>();
+            for (int i = 0; i < seats.size(); i++) {
+                String pr = profiles.get(rotateProfiles ? Math.floorMod(i - (g - 1), seats.size()) : i);
+                gameProfiles.add(pr.isEmpty() ? "Default" : pr);
+                if (seats.get(i).getPlayer() instanceof LobbyPlayerAi lp) {
+                    lp.setAiProfile(pr);
+                }
+            }
             MyRandom.setRandom(new Random(seed));
             Match match = new Match(rules, seats, "Vibefish");
             Game game = match.createGame();
             game.setNoGUIUser();
+            applyMonteCarlo(game, mcMode);
 
             Map<Integer, Integer> seatByPlayerId = new HashMap<>();
             for (Player p : game.getRegisteredPlayers()) {
@@ -267,7 +310,8 @@ public final class Sim {
             try (Writer w = Files.newBufferedWriter(evPath, StandardCharsets.UTF_8)) {
                 logger = new JsonGameLogger(game, w, GSON, seatByPlayerId, turnCap);
                 logger.emit(obj("e", "meta", "game", g, "seed", seed, "vibefish", VERSION,
-                        "forge_version", forgeVersion, "turn_cap", turnCap, "clock_s", clock));
+                        "forge_version", forgeVersion, "turn_cap", turnCap, "clock_s", clock, "mc", mcMode,
+                        "profiles", gameProfiles));
                 game.subscribeToEvents(logger);
                 System.err.printf("[vibefish] game %d/%d seed %d ...%n", g, games, seed);
                 long g0 = System.currentTimeMillis();
@@ -292,6 +336,7 @@ public final class Sim {
                     PlayerOutcome po = p.getOutcome();
                     players.add(obj(
                             "seat", seat,
+                            "profile", gameProfiles.get(seat),
                             "won", !forcedDraw && po != null && po.hasWon(),
                             "lost", p.hasLost(),
                             "reason", p.hasLost() && po != null && po.lossState != null ? po.lossState.name() : (forcedDraw ? "Draw" : null),
@@ -309,7 +354,7 @@ public final class Sim {
 
                 Map<String, Object> summary = obj("index", g, "seed", seed, "events", eventsName,
                         "first_seat", logger.firstSeat(), "turns", turns, "winner", winner, "reason", endReason,
-                        "duration_ms", ms, "players", players);
+                        "duration_ms", ms, "profiles", gameProfiles, "players", players);
                 gameList.add(summary);
                 System.err.printf("[vibefish] game %d done: %s, turn %d, winner %s, %d s%n", g, endReason, turns,
                         winner == null ? "none" : deckInfos.get(winner).get("id"), ms / 1000);
@@ -325,6 +370,37 @@ public final class Sim {
         }
         System.err.printf("[vibefish] run complete: %d game(s) recorded in %s%n", gameList.size(), out);
         return 0;
+    }
+
+    /** Whether this Forge build has the Flat Monte Carlo switch on Game (2.0.16 snapshots and later). */
+    static boolean hasMonteCarloSwitch() {
+        try {
+            Game.class.getField("AI_FLAT_MONTE_CARLO");
+            return true;
+        } catch (NoSuchFieldException e) {
+            return false;
+        }
+    }
+
+    /**
+     * Switches Forge's Flat Monte Carlo AI on for this game. Sim mode's own -mc flag does the same; the fields
+     * are reached by reflection so the harness still compiles against 2.0.15, which has none of them. A seat
+     * whose profile says FLAT_MC_ENABLED=false keeps the heuristic AI regardless.
+     */
+    static void applyMonteCarlo(Game game, String mode) {
+        if ("off".equals(mode)) {
+            return;
+        }
+        try {
+            Game.class.getField("AI_FLAT_MONTE_CARLO").setBoolean(game, true);
+            if ("max".equals(mode)) {
+                Game.class.getField("AI_FLAT_MONTE_CARLO_MAX").setBoolean(game, true);
+            } else if ("lite".equals(mode)) {
+                Game.class.getField("AI_FLAT_MONTE_CARLO_LITE").setBoolean(game, true);
+            }
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            // reported once up front by hasMonteCarloSwitch()
+        }
     }
 
     /** Runs the game on its own thread; after the clock expires the game is declared a draw. */
