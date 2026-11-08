@@ -228,7 +228,7 @@ Phase 0 and 1 are the prototype. Phases 2–4 were re-cut after the prior-art su
 - **Repos:** engine and data split, both public.
 - **Images:** Scryfall hotlinks only. No image files in any repo.
 - **Dashboard stack:** vanilla JS, no build tools, GitHub Pages.
-- **Compute:** local via Claude Code for iteration; GitHub Actions for batch runs. No dedicated server.
+- **Compute:** local via Claude Code for iteration; GitHub Actions for batch runs, started by hand. No dedicated server, no scheduled jobs: Forge releases and upstream AI work are checked manually at the start of a session.
 - **Replays:** from the recorded event stream. Seeds are for reproducing a single game while debugging.
 - **Name:** Vibefish. "MTG"/"Magic" stay out of the name and appear only descriptively.
 
@@ -259,9 +259,9 @@ Forge does the hard part (scripting every new card). Vibefish's job is to track 
 
 **How Forge ships:** a tagged release per major set, named after the set (`forge-2.0.13` "Marvel Super Heroes", `forge-2.0.15` "Reality Fracture", etc.), roughly every 1–2 months, plus a rolling `daily-snapshots` pre-release on the same GitHub Releases page rebuilt every day. New-set card scripts land in snapshots during spoiler season, well before the tagged release. The release asset is a single `forge-installer-<version>.tar.bz2` (~283 MB) with no top-level directory; the snapshot asset carries a build date in its name and must be discovered through the releases API.
 
-**Vibefish update cycle (automated, Claude Code does the merge):**
+**Vibefish update cycle (manual, no scheduled jobs):**
 
-1. **Watch.** A weekly scheduled Actions job hits `https://api.github.com/repos/Card-Forge/forge/releases/latest`. New tag → open a PR bumping `forge/VERSION` and `forge/SHA256SUMS`.
+1. **Watch.** At the start of a session, check `https://github.com/Card-Forge/forge/releases` (and the AI work on master) against `forge/VERSION`. New tag → a commit bumping `forge/VERSION` and `forge/SHA256SUMS` on a branch.
 2. **Rebuild.** CI downloads the new release, verifies the checksum, and recompiles `controller/` against the new jar. Compile errors are the only "conflicts" now; Claude Code fixes them in the PR.
 3. **Regress.** CI runs the frozen benchmark pod for 50 games on the new build and diffs rollup stats against the previous version. Forge AI changes shift baselines — a big swing means "investigate," not "ship."
 4. **Stamp.** Every result file carries `forge_version`. The dashboard segments history by it so pre- and post-upgrade numbers never get averaged together.

@@ -60,6 +60,10 @@ Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never u
 - Scryfall API: https://scryfall.com/docs/api
 - WotC Fan Content Policy: https://company.wizards.com/en/legal/fancontentpolicy
 
+## Session start checklist
+- Check https://github.com/Card-Forge/forge/releases against `forge/VERSION`, and skim recent Card-Forge PRs touching `forge-ai/` (kevlahnota's Flat Monte Carlo series) for anything that changes the AI we measure. No scheduled jobs: this is done by hand.
+- `git log --oneline -5 testing` and `demo-data/index.json` to see what the last session published.
+
 ## Status
 - Phase 0 (spike): done 2026-11-08 — `DESIGN.md` §14.
 - Phase 1 (goldfish): done 2026-11-08 — harness, runner, rollup, resolver, dashboard, workflows; `DESIGN.md` §15.
