@@ -6,10 +6,6 @@ name: pages
 on:
   push:
     branches: [testing]
-    paths:
-      - "dashboard/**"
-      - "demo-data/**"
-      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
