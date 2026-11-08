@@ -355,6 +355,10 @@ public final class Sim {
                 Map<String, Object> summary = obj("index", g, "seed", seed, "events", eventsName,
                         "first_seat", logger.firstSeat(), "turns", turns, "winner", winner, "reason", endReason,
                         "duration_ms", ms, "profiles", gameProfiles, "players", players);
+                String mcStats = monteCarloStats(mcMode);
+                if (mcStats != null) {
+                    summary.put("mc_stats", mcStats);
+                }
                 gameList.add(summary);
                 System.err.printf("[vibefish] game %d done: %s, turn %d, winner %s, %d s%n", g, endReason, turns,
                         winner == null ? "none" : deckInfos.get(winner).get("id"), ms / 1000);
@@ -400,6 +404,25 @@ public final class Sim {
             }
         } catch (NoSuchFieldException | IllegalAccessException e) {
             // reported once up front by hasMonteCarloSwitch()
+        }
+    }
+
+    /**
+     * Forge's own Monte Carlo statistics for the game just played (decision counts, rollout time, cards that
+     * could not be simulated), as the text FlatMonteCarloStats.summary() gives, then reset for the next game.
+     * Null when Monte Carlo is off or the build has no such class (2.0.15).
+     */
+    static String monteCarloStats(String mode) {
+        if ("off".equals(mode)) {
+            return null;
+        }
+        try {
+            Class<?> c = Class.forName("forge.ai.simulation.FlatMonteCarloStats");
+            Object out = c.getMethod("summary").invoke(null);
+            c.getMethod("reset").invoke(null);
+            return out == null ? null : out.toString();
+        } catch (ReflectiveOperationException | RuntimeException e) {
+            return null;
         }
     }
 

@@ -48,6 +48,53 @@ def wilson(wins, n, z=1.96):
     return [round(centre - half, 4), round(centre + half, 4)]
 
 
+def mc_summary(games_out):
+    """Sums Forge's FLATMC-STATS / FLATMC-REASONS lines recorded per game (mc_stats) into one picture of what the
+    Monte Carlo layer did: decisions, how many were settled by rollouts, how often it overrode the heuristic, how
+    often it ran out of time, rollout failures and time per rollout."""
+    import re
+    tot = collections.Counter()
+    ms = []
+    n = 0
+    for g in games_out:
+        txt = g.get("mc_stats")
+        if not txt:
+            continue
+        n += 1
+        for line in txt.splitlines():
+            if line.startswith("FLATMC-STATS"):
+                for k, v in re.findall(r"(\w+)=([0-9.]+)", line):
+                    if k in ("decisions", "byRollouts", "rollouts", "pruned", "failures", "unsimulatableCards"):
+                        tot[k] += int(float(v))
+                    elif k == "avgMs":
+                        ms.append(float(v))
+            elif line.startswith("FLATMC-REASONS"):
+                for k, v in re.findall(r"([\w-]+)=(\d+)", line):
+                    tot["reason:" + k] += int(v)
+            elif line.startswith("FLATMC-POINTS"):
+                for k, v in re.findall(r"(\w+)=(\d+)", line):
+                    if k == "outOfBudget":
+                        tot[k] += int(v)
+    if not n:
+        return None
+    dec = tot["decisions"]
+    return {
+        "games_with_stats": n,
+        "decisions": dec,
+        "by_rollouts": tot["byRollouts"],
+        "overrides": tot["reason:override"],
+        "kept_heuristic": tot["reason:kept-heuristic"],
+        "too_slow": tot["reason:too-slow"],
+        "holds": tot["reason:hold"],
+        "out_of_budget_points": tot["outOfBudget"],
+        "rollouts": tot["rollouts"],
+        "rollout_failures": tot["failures"],
+        "unsimulatable_cards": tot["unsimulatableCards"],
+        "override_rate": round(tot["reason:override"] / dec, 4) if dec else None,
+        "avg_rollout_ms": round(statistics.fmean(ms), 1) if ms else None,
+    }
+
+
 def arm_stats(games_out, decks):
     """Win statistics by AI profile ("arm") when games carry a per-seat profile list.
 
@@ -368,6 +415,7 @@ def main(argv):
         "mc_available": runs[0].get("mc_available"),
         "rotate_profiles": runs[0].get("rotate_profiles"),
         "arms": arm_stats(games_out, decks),
+        "mc_summary": mc_summary(games_out),
         "deck_stats": deck_summaries,
         "game_summaries": games_out,
     }
@@ -380,6 +428,11 @@ def main(argv):
         print(f"  {d['id']:<18} games {d['games']:>3}  wins {d['wins']:>3}  win% {d['win_rate']*100:5.1f}  "
               f"mull% {d['mulligan_rate']*100:5.1f}  cmdr T{d['commander']['avg_first_cast_turn']}  "
               f"lands@T4 {d['lands_by_turn'][3] if len(d['lands_by_turn']) > 3 else None}", file=sys.stderr)
+    if rollup["mc_summary"]:
+        m = rollup["mc_summary"]
+        print(f"  monte carlo: {m['decisions']} decisions in {m['games_with_stats']} games, {m['by_rollouts']} by rollouts, "
+              f"{m['overrides']} overrides ({(m['override_rate'] or 0)*100:.1f}%), {m['too_slow']} too slow, "
+              f"{m['rollout_failures']} failures, {m['avg_rollout_ms']} ms per rollout", file=sys.stderr)
     if rollup["arms"]:
         for prof, a in rollup["arms"]["arms"].items():
             ci = a["game_win_share_ci95"] or [None, None]

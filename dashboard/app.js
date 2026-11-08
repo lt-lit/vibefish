@@ -342,7 +342,8 @@
     if (rollup.arms && rollup.arms.arms) {
       const arms = Object.entries(rollup.arms.arms);
       chartSec.append(barChart({ title: 'AI arms (A/B)',
-        subtitle: `Share of games won by each AI profile's seats; profiles rotate across seats every game. Even would be ${pct(arms[0][1].expected_game_win_share)}.`,
+        subtitle: `Share of games won by each AI profile's seats; profiles rotate across seats every game. Even would be ${pct(arms[0][1].expected_game_win_share)}.`
+          + (rollup.mc_summary ? ` Monte Carlo settled ${rollup.mc_summary.by_rollouts} of ${rollup.mc_summary.decisions} decisions by rollouts and overrode the heuristic ${rollup.mc_summary.overrides} times (${pct(rollup.mc_summary.override_rate, 1)}); ${rollup.mc_summary.too_slow} ran out of time at ${rollup.mc_summary.avg_rollout_ms} ms per rollout.` : ''),
         items: arms.map(([name, a], i) => ({ name, color: `var(--s${(i % MAX_SERIES) + 1})`, value: a.game_win_share,
           label: `${pct(a.game_win_share)}${a.game_win_share_ci95 ? ` (${pct(a.game_win_share_ci95[0])}–${pct(a.game_win_share_ci95[1])})` : ''}`,
           note: `${a.wins} wins in ${a.games} games · ${pct(a.seat_win_rate, 1)} per seat · by deck: ${Object.entries(a.by_deck).map(([d, v]) => `${shortName((decks.find((x) => x.id === d) || {}).name) || d} ${v.wins}/${v.games}`).join(', ')}` })),
