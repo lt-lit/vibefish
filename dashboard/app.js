@@ -227,7 +227,9 @@
   /** Horizontal bars, one per item, colored by the entity (seat). items: [{name, color, value, label, note}] */
   function barChart({ title, subtitle, items, max, format, tableHeader }) {
     return chartFigure(title, subtitle, (W) => {
-      const rowH = 38, m = { t: 8, r: 64, b: 8, l: Math.min(150, Math.round(W * 0.32)) };
+      // right margin fits the longest value label (about 6.8 px per character at 12 px), so labels never leave the chart
+      const longest = Math.max(4, ...items.map((i) => String(i.label || '').length));
+      const rowH = 38, m = { t: 8, r: Math.min(Math.round(W * 0.45), longest * 6.8 + 16), b: 8, l: Math.min(150, Math.round(W * 0.32)) };
       const H = m.t + items.length * rowH + m.b, pw = W - m.l - m.r, th = 20;
       const xmax = max != null ? max : niceMax(Math.max(0, ...items.map((i) => i.value || 0)));
       const root = svg('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': title });
@@ -271,7 +273,7 @@
   }
 
   // ---------- render ----------
-  function renderRun(run, rollup, cards) {
+  function renderRun(run, rollup, cards, scorecard) {
     const decks = rollup.deck_stats || [];
     const names = decks.map((d) => shortName(d.name) || d.id);
     const turns = Array.from({ length: rollup.max_turn || 12 }, (_, i) => turnLabel(i + 1));
@@ -305,7 +307,7 @@
           el('div', { class: 'win' }, pct(d.win_rate), el('small', { text: `${d.wins}/${d.games} games` })),
           el('dl', {},
             el('dt', { text: 'Turns played' }), el('dd', { text: num(d.avg_turns_played) }),
-            el('dt', { text: 'Commander out' }), el('dd', { text: d.commander && d.commander.avg_first_cast_turn != null ? `T${num(d.commander.avg_first_cast_turn)}` : 'never' }),
+            el('dt', { text: 'Cmdr out' }), el('dd', { text: d.commander && d.commander.avg_first_cast_turn != null ? `T${num(d.commander.avg_first_cast_turn)}` : 'never' }),
             el('dt', { text: 'Mulligans' }), el('dd', { text: pct(d.mulligan_rate) }),
             el('dt', { text: 'Opening lands' }), el('dd', { text: num(d.opening_hand_lands_avg) }),
             el('dt', { text: 'Damage dealt' }), el('dd', { text: `${num(d.damage && d.damage.dealt_per_game, 0)}/game` }),
@@ -345,6 +347,9 @@
           note: `${a.wins} wins in ${a.games} games · ${pct(a.seat_win_rate, 1)} per seat · by deck: ${Object.entries(a.by_deck).map(([d, v]) => `${shortName((decks.find((x) => x.id === d) || {}).name) || d} ${v.wins}/${v.games}`).join(', ')}` })),
         max: 1, format: (v) => pct(v), tableHeader: 'Game win share (95% interval)' }));
     }
+    if (scorecard && scorecard.metrics) {
+      chartSec.append(calibrationCard(scorecard, names));
+    }
     chartSec.hidden = false;
     relayout(true);
 
@@ -371,6 +376,24 @@
     gamesSec.replaceChildren(el('h2', { text: `Games (${rows.length})` }),
       dataTable(['Game', 'Seed', 'First seat', 'Turns', 'Winner', 'End', 'Seconds'], rows));
     gamesSec.hidden = false;
+  }
+
+  /** Sim versus human reference numbers (Playgroup.gg), as a table card. */
+  function calibrationCard(sc, names) {
+    const m = sc.metrics;
+    const rows = [];
+    const add = (metric, sim, human, note) => rows.push([metric, sim, human, note || '']);
+    if (m.first_seat_win_rate) add('First seat wins', pct(m.first_seat_win_rate.sim, 1), pct(m.first_seat_win_rate.human, 1), `${m.first_seat_win_rate.sim_games} games; even is ${pct(m.first_seat_win_rate.even)}`);
+    if (m.mulligans_taken) add('Decks that mulligan', pct(m.mulligans_taken.sim_any_mulligan, 1), pct(m.mulligans_taken.human_any_mulligan), `${m.mulligans_taken.sim_seat_games} seat-games`);
+    if (m.opening_hand_lands) add('Lands in kept hand', num(m.opening_hand_lands.sim_mean, 2), num(m.opening_hand_lands.human_mean, 2), `${m.opening_hand_lands.sim_hands} hands`);
+    if (m.rounds_per_game) add('Rounds per game', num(m.rounds_per_game.sim_mean, 1), num(m.rounds_per_game.human_mean, 2), 'a round is one turn for each player');
+    (m.precon_win_rate && m.precon_win_rate.rows || []).forEach((r) => { if (r.human_win_rate != null) add(`${r.deck} win rate`, pct(r.sim_win_rate, 1), pct(r.human_win_rate, 1), `${r.sim_games} sim games vs ${r.human_games} human stock games`); });
+    if (m.precon_win_rate && m.precon_win_rate.spearman_rank_correlation != null) add('Precon rank correlation', String(m.precon_win_rate.spearman_rank_correlation), '1.0', `${m.precon_win_rate.decks_compared} decks; the human table ranks stock precons against mixed tables`);
+    const fig = el('figure', { class: 'chart' },
+      el('figcaption', {}, el('div', {}, el('h3', { text: 'Calibration against human games' }),
+        el('p', { text: `Sim numbers next to Playgroup.gg's tracked Commander games (reference copied ${sc.reference_retrieved || ''}). Likeness, not strength.` }))),
+      el('div', { class: 'table-view' }, dataTable(['Metric', 'Sim', 'Human', 'Note'], rows)));
+    return fig;
   }
 
   function lossLabel(k) {
@@ -403,7 +426,8 @@
       const show = async (run) => {
         status.hidden = false; status.textContent = `Loading ${run.id}…`; status.classList.remove('error');
         const rollup = await loadJson(DATA + run.path);
-        renderRun(run, rollup, cards);
+        const scorecard = await loadJson(DATA + run.path.replace(/rollup\.json$/, 'scorecard.json'), true);
+        renderRun(run, rollup, cards, scorecard);
         status.hidden = true;
         const u = new URL(location.href); u.searchParams.set('run', run.id); history.replaceState(null, '', u);
       };

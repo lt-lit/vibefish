@@ -77,8 +77,8 @@ button:hover { border-color: var(--axis); }
 .deck .cmdr { color: var(--ink-2); font-size: 0.88rem; margin: 2px 0 8px; }
 .deck .win { font-size: 2rem; font-weight: 600; line-height: 1; }
 .deck .win small { font-size: 0.8rem; font-weight: 400; color: var(--ink-2); margin-left: 6px; }
-.deck dl { display: grid; grid-template-columns: 1fr auto; gap: 5px 10px; margin: 10px 0 0; font-size: 0.86rem; align-items: baseline; }
-.deck dt { color: var(--muted); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.deck dl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 10px; margin: 10px 0 0; font-size: 0.86rem; align-items: baseline; }
+.deck dt { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.02em; min-width: 0; overflow-wrap: break-word; }
 .deck dd { margin: 0; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .deck .losses { grid-column: 1 / -1; color: var(--ink-2); font-size: 0.84rem; margin-top: 4px; }
 .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; background: var(--seat); margin-right: 6px; vertical-align: 0; }

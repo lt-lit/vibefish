@@ -30,7 +30,8 @@ FORGE_CHANNEL=snapshot FORGE_RUNTIME=$PWD/forge/runtime-snapshot forge/fetch-for
 runner/make-arm-profiles.sh forge/runtime-snapshot     # Vibefish-MC / Vibefish-MCHard / Vibefish-Heuristic AI profiles
 runner/run-pod.sh -R forge/runtime-snapshot -m on -p Vibefish-MC,Vibefish-MC,Vibefish-Heuristic,Vibefish-Heuristic -r -n 40 -j 2 -c 1800
                                                        # A/B: Flat Monte Carlo vs heuristic, profiles rotate across seats; rollup reports arms
-runner/publish.sh results/<run-id> demo-data           # → demo-data/runs/<run-id>/, index.json, card cache
+runner/publish.sh results/<run-id> demo-data           # → demo-data/runs/<run-id>/, scorecard.json, index.json, card cache
+runner/scorecard.py results/<run-id>/rollup.json       # sim vs Playgroup human references (runner/reference/playgroup-commander.json)
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```

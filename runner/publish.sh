@@ -23,5 +23,6 @@ for shard in "${shards[@]}"; do
   done
 done
 python3 -I "$HERE/rollup.py" "${shards[@]}" --out "$DEST" --run-id "$RUN_ID" --pod "$HERE/benchmark-pod.json" --index "$DATA/index.json"
+python3 -I "$HERE/scorecard.py" "$DEST/rollup.json" --out "$DEST/scorecard.json"
 python3 -I "$HERE/scryfall.py" --cache "$DATA/cards/scryfall-cache.json" --from "$DEST/rollup.json"
 echo "published $RUN_ID -> $DEST ($(du -sh "$DEST" | cut -f1))" >&2

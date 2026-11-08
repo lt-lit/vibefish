@@ -1,0 +1,21 @@
+{
+  "source": "https://playgroup.gg (Commander games tracked in the Playgroup app and Playgroup Live); figures copied by hand from the public pages, not scraped",
+  "retrieved": "2026-11-08",
+  "notes": [
+    "Precon win rates are for stock decklists against whatever the rest of the table played, normalised to a 4-player baseline where 25% is even; a precon needs at least 20 stock games from 10 pilots to be listed.",
+    "Seat win rates come from 257,261 untreated four-player games (turn-order experiment page).",
+    "Mulligan and opening-hand figures come from 189,535 opening hands and 1,608,359 finished games (how-many-lands page); game length is in rounds (each player's turn once)."
+  ],
+  "precon_win_rate": {
+    "Mutant Menace": { "win_rate": 0.1548, "games": 617 },
+    "Blight Curse": { "win_rate": 0.1616, "games": 458 },
+    "Veloci-Ramp-Tor": { "win_rate": 0.2463, "games": 540 },
+    "Squirreled Away": { "win_rate": 0.2115, "games": 494 },
+    "Planeswalker Party": { "win_rate": 0.3354, "games": 199 },
+    "Legends' Legacy": { "win_rate": 0.3194, "games": 90 }
+  },
+  "seat_win_rate": [0.2923, 0.2569, 0.2358, 0.2150],
+  "mulligans_taken": { "0": 0.64, "1": 0.24, "2": 0.09, "3+": 0.03 },
+  "opening_hand_lands": { "1": 0.05, "2": 0.27, "3": 0.41, "4": 0.21, "5": 0.05 },
+  "rounds_per_game": { "mean": 8.75, "median": 9 }
+}
