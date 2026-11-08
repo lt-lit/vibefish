@@ -43,7 +43,7 @@ Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never u
 ## Workflows
 - `phase0.yml`: Forge sim-mode smoke test on push to `forge/**`, `runner/**`.
 - `pod-run.yml` (manual): 4 shards × N games, rollup, optional publish into `demo-data/` on the branch.
-- `pages.yml`: deploys `dashboard/` + `demo-data/` (as `data/`) to GitHub Pages on push to `testing`. Requires Pages to be enabled once in repo settings with source "GitHub Actions"; the first run failed with "Create Pages site failed: Resource not accessible by integration" until that is done.
+- `pages.yml`: deploys `dashboard/` + `demo-data/` (as `data/`) to GitHub Pages on every push to `testing`. One-time repo settings (owner only, the workflow token cannot do either): Pages source "GitHub Actions", and the `github-pages` environment's deployment-branch rule must allow `testing` (it is created allowing only the default branch; the symptom is "Branch testing is not allowed to deploy to github-pages due to environment protection rules"). Workflows that are `workflow_dispatch`-only (`pod-run.yml`) can only be started once they exist on the default branch.
 
 ## Key links
 - Forge AI / sim flags: https://github.com/Card-Forge/forge/wiki/AI
