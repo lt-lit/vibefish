@@ -2,7 +2,7 @@
 
 *Commander deck playtesting for Magic: The Gathering, built on Forge's headless sim mode.*
 
-Status: Phase 0 complete (2026-11-08); Phase 1 next. Companion project to VibeTutor. What changed from v0.1 is listed at the end of §14.
+Status: Phase 0 and Phase 1 complete (2026-11-08); Phase 2 next. Companion project to VibeTutor. Phase 0 findings are in §14, Phase 1 in §15.
 
 ---
 
@@ -34,14 +34,19 @@ Two public repos.
 
 ```
 vibefish/                      (engine — this repo, GPL v3)
-├── forge/                     version pin + checksum, fetch and launch scripts (runtime downloaded, never committed)
-├── runner/                    sim orchestration (bash/python): decks in, JSON out; frozen benchmark pod
-├── controller/                Java compiled against the released Forge jar: sim harness
-│                              (JSON event logger, per-game seeds, turn cap) + PlaybookController
-├── playbook/                  playbook schema + validator + examples
-├── dashboard/                 vanilla JS static site (GitHub Pages)
-├── demo-data/                 results for WotC precons (seed data for public dashboard)
-├── .github/workflows/         reusable sim workflow
+├── VERSION                    Vibefish version: stamped into results, used in the Scryfall User-Agent
+├── forge/                     VERSION + SHA256SUMS pin, fetch-forge.sh, forge.sh (runtime downloaded, never committed)
+├── controller/                Java compiled against the released Forge jar, no fork:
+│   ├── src/vibefish/Sim.java              `play` (games → JSONL events + run.json) and `check` (deck validation)
+│   ├── src/vibefish/JsonGameLogger.java   event-bus subscriber, turn snapshots, turn cap
+│   ├── src/vibefish/DeckCheck.java
+│   └── build.sh, vibefish-sim.sh          javac build, launcher
+├── runner/                    benchmark-pod.json (frozen), run-pod.sh (sharded pod runs), rollup.py,
+│                              scryfall.py (name → image cache), publish.sh (run → data directory)
+├── playbook/                  playbook schema + validator + examples (Phase 2)
+├── dashboard/                 vanilla JS static site: index.html, app.js, style.css
+├── demo-data/                 pod results + card cache the public dashboard reads (layout in §6)
+├── .github/workflows/         phase0.yml (smoke), pod-run.yml (sharded runs, optional publish), pages.yml (deploy)
 └── DESIGN.md
 
 vibefish-data/                 (Andrew's decks — public, separate repo)
@@ -56,7 +61,7 @@ Separation of concerns: engine is generic and reusable by anyone; data repo is o
 
 ### 3.1 Components
 
-**Runner.** Wraps the Forge launcher (Phase 0) and later the harness (Phase 1). Takes a manifest (which decks, how many games, which opponents, which playbooks), runs Forge headless, captures output, writes structured JSON per game and a rollup per run. Always sets Forge's clock (`-c`, we use 900 s; Forge's own default of 120 s declares longer Commander games a draw) and, from Phase 1, a turn cap.
+**Runner.** `runner/run-pod.sh` plays the benchmark pod through the harness in parallel shards (one JVM each, ~4 GB heap and ~1.5 cores while a game runs), resumes a shard after a wall-clock exit, and rolls the shards up; `-k` runs a single shard so CI uses one job per shard. `runner/rollup.py` (Python, stdlib) turns `run.json` plus event streams into `rollup.json` (§6) and maintains `index.json`. `runner/publish.sh` copies a finished run into a data directory with gzipped events and resolves new card names. Any other decks go straight through `vibefish.Sim play` (`--deck id=file.dck`); a manifest-driven runner for the data repo comes with Phase 2. Defaults: clock 900 s (Forge's own 120 s default declares longer Commander games a draw) and a turn cap of 120 Forge turns, i.e. 30 rounds of four.
 
 **Forge integration (no fork).** Forge is consumed as a library. The released desktop jar goes on the classpath and `controller/` provides its own entry point that repeats sim mode's ~100 lines of setup (`FModel.initialize`, `RegisteredPlayer.forCommander`, `Match`, `Game`) and then does what sim mode cannot:
 - subscribes a `JsonGameLogger` to the game's public event bus (`Game.subscribeToEvents`). Events are Java records carrying the data we need: zone changes with from/to zone, casts with host card and targets, turn began with number and owner, life changes, mulligans, land drops, attackers declared, game outcome with each player's `GameLossReason`;
@@ -64,7 +69,9 @@ Separation of concerns: engine is generic and reusable by anyone; data repo is o
 - enforces a turn cap next to Forge's wall-clock cap;
 - streams JSONL while the game runs, so a killed job still yields partial data.
 
-Sim mode in 2.0.15 already has an RNG seed (`-s`), per-seat AI profiles (`-a`) and a clock (`-c`), so nothing is patched. If a needed hook ever turns out to be private, the fallback is a build-time patch, declared here. Phase 0 drives Forge through its stock `sim` entry point; the harness arrives in Phase 1.
+Sim mode in 2.0.15 already has an RNG seed (`-s`), per-seat AI profiles (`-a`) and a clock (`-c`), so nothing is patched. If a needed hook ever turns out to be private, the fallback is a build-time patch, declared here.
+
+Built in Phase 1 as `controller/src/vibefish/`. `Sim.play` boots Forge the way sim mode does (`GuiBase.setInterface(new GuiDesktop())`, `FModel.initialize`), registers seats with `RegisteredPlayer.forCommander`, seeds `MyRandom` per game, creates a fresh `Match` and `Game` per game, subscribes `JsonGameLogger`, and runs the game on a daemon thread under the clock. After a timeout the process exits with code 3 so the stuck game thread cannot affect later games; the runner resumes with `--start`. A capped or timed-out game is recorded as a draw with no winner, whatever Forge marks (its forced game-over flags every survivor as a winner). The logger reads live state from `Game` and `Player` at every turn start (hands, lands, life, zone sizes, commanders in the command zone) and infers the zone a spell was cast from by tracking zone changes. Forge's AI prints a `java.util.concurrent.TimeoutException` stack trace whenever its own per-decision timeout fires; that is noise, the game continues. Boot takes ~6 s; a 4-player precon game 30–140 s. Compile with `controller/build.sh` (javac, release 17, Gson and Guava come from the Forge jar).
 
 **PlaybookController.** Java class extending Forge's `PlayerControllerAi`, created by our own `LobbyPlayer` so Forge itself is untouched. On each decision point:
 1. Check playbook for a matching rule → execute it.
@@ -153,24 +160,62 @@ Measured cost (Forge 2.0.15, stock AI, bundled precon pod, 4-core machine): **98
 
 Conditions use a tiny expression language evaluated against a flat game-state view. Keep it boring and greppable. Open option (§13): reuse Forge's own card-script `Valid`/`Count$` syntax, which the AI already evaluates against live state, instead of inventing one.
 
-## 6. Results schema (sketch)
+## 6. Results schema
 
-Per game: `{ forge_version, pod, seed, seat_order[], decks[], winner, turns, end_reason, players[{deck, seat, loss_reason, life_at_end, turn_eliminated}], events[] }` where events are `{ turn, phase, player, type, card?, from?, to?, targets?, life? }`. `loss_reason` is Forge's `GameLossReason` (`LifeReachedZero`, `CommanderDamage`, `Poisoned`, `Milled`, `SpellEffect`, `Conceded`, `OpponentWon`) plus harness values `TurnCap` and `Timeout`.
+Everything the harness writes is JSON.
 
-Per run rollup, per deck: games, wins, avg turn commander first cast, land-drop rate by turn, mulligan rate, cards never cast, avg turn of death, cause of death (combat/commander damage/combo/poison/decking).
+**Event stream** — `games/game-NNN.events.jsonl`, one object per line; a 4-player game is roughly 700 lines and 130 KB (15–20 KB gzipped). Every line has `e` (type) and `t` (Forge's global turn number, 0 before turn 1). Seats are indices into the run's deck list.
+
+| `e` | fields |
+|---|---|
+| `meta` | game, seed, vibefish, forge_version, turn_cap, clock_s |
+| `game_start` | first_seat |
+| `turn` | seat, own_turn, state[] per seat: alive, life, poison, hand (names), hand_lands, lands, bf, lib, gy, cmd (commanders still in the command zone) |
+| `mulligan` | seat |
+| `land` | seat, card, id |
+| `cast` | seat, card, id, spell (false for activated and triggered abilities), commander, from (zone before the stack), ability (text, abilities only) |
+| `resolve` | card, id, fizzled (spells only) |
+| `zone` | seat (owner), card, id, from, to, token |
+| `life` | seat, from, to |
+| `damage` | seat, amount, combat, infect, source, source_seat, source_commander |
+| `poison` | seat, from, amount, source_seat |
+| `attack` | seat, attacks[] {attacker, defender, defender_seat, planeswalker} |
+| `block` | seat, blocks[] {attacker, blockers[]} |
+| `lost` | seat, reason (Forge `GameLossReason`), life |
+| `cap` | turn_cap (the game is declared a draw) |
+| `outcome` | winner_name, lines (Forge's own outcome text) |
+| `game_end` | winner (seat or null), reason, duration_ms, players[] {seat, won, lost, reason, turn_lost, life, poison, mulligans, turns_played} |
+
+`game_end.reason` is Forge's `GameEndReason` (`AllOpponentsLost`, `WinsGameSpellEffect`, …) or a harness value: `TurnCap`, `Timeout`, `Exception`. Player `reason` is `LifeReachedZero`, `CommanderDamage`, `Poisoned`, `Milled`, `SpellEffect`, `OpponentWon`, `Conceded`, or `Draw` for a capped or timed-out game.
+
+**Run summary** — `run.json` per shard: vibefish, forge_version, forge_build, format, seed_base, clock_s, turn_cap, games_requested, decks[] {seat, id, file, name, commanders, profile, main_count, commander_cards[], cards[] {name, count, type, cmc, land}}, games[] (the `game_end` fields plus index, seed, events path, first_seat, turns).
+
+**Rollup** — `rollup.json` per run, from `runner/rollup.py`: run_id, forge_version, pod, games, completed_games, drawn_games, shards, seeds, clock_s, turn_cap, avg_game_turns, avg_game_seconds, decks[], `deck_stats[]` per seat (games, wins, losses, draws, win_rate, loss_reasons, avg_turns_played, mulligan_rate, avg_mulligans, opening_hand_lands_avg, land_drop_rate[12], lands_by_turn[12], hand_by_turn[12], life_by_turn[12], games_reaching_turn[12] — all indexed by the deck's own turn — commander {first_cast_turns, avg_first_cast_turn, never_cast_games, casts_per_game}, damage {dealt_per_game, taken_per_game, commander_dealt_per_game}, never_cast, drawn_never_cast, cards[] {name, count, type, cmc, land, drawn, cast, played, games_drawn, games_cast}), and `game_summaries[]`.
+
+**Data directory** — what the dashboard reads (`demo-data/` in this repo, the data repo later), written by `runner/publish.sh`:
+
+```
+index.json                      {"runs":[{id, generated, forge_version, pod, games, path}]}
+cards/scryfall-cache.json       name → {id, set, collector_number, scryfall_uri, image_uris{small,normal}, …}
+runs/<run-id>/rollup.json
+runs/<run-id>/shard-N/run.json
+runs/<run-id>/shard-N/games/game-NNN.events.jsonl.gz
+```
+
+Seeds: shard `j` of a run uses `seed + 100000·j`, and game `i` within a shard uses `shard_seed + i`, so any game can be replayed from its `meta` line. Every file carries `forge_version`.
 
 ## 7. Roadmap
 
 | Phase | Deliverable | Done when |
 |---|---|---|
 | 0 Spike | Forge runs 4-player Commander sim headless on a local machine and in Actions | **Done 2026-11-08** (§14): 12/12 local games and 3/3 Actions games completed |
-| 1 Goldfish | Harness (JSON event logger, seeds, turn cap) + runner + rollup + first dashboard | Consistency stats for one deck visible on Pages with card images |
+| 1 Goldfish | Harness (JSON event logger, seeds, turn cap) + runner + rollup + first dashboard | **Done 2026-11-08** (§15): pod stats for four decks with card images at https://lt-lit.github.io/vibefish/ |
 | 2 Pilot | Per-deck AI profile, then PlaybookController v1 (mulligan, priority, hold) | Measurable improvement vs. the Default profile on same deck/pod |
 | 3 Lines | Scripted combo execution + LLM post-mortem loop | Playbook v2 generated from v1 losses beats v1 |
 | 4 Lookahead | Evaluate Forge's flat Monte Carlo AI (upstream, expected in the release after 2.0.15) on the pod; else targeted lookahead for combat/targeting | Net positive on benchmark pod |
 | 5 Eval model | Small learned board evaluator trained on sim data | Stretch |
 
-Phase 0 and 1 are the prototype. Nothing in Phase 2+ starts until Phase 1 runs end-to-end.
+Phase 0 and 1 are the prototype. Phase 2 starts with a per-deck AI profile and the data-repo manifest runner.
 
 ## 8. Decisions made
 
@@ -263,7 +308,7 @@ Forge does the hard part (scripting every new card). Vibefish's job is to track 
 
 - ~~Does Forge's tournament mode seat 4 players in one game, or pair them 1v1?~~ **Answered (Phase 0):** it pairs 1v1 at 20 life even with `-p 4`. Plain mode with four `-d` decks seats all four.
 - ~~Can the Forge AI be given a per-player profile in sim mode, or is it global?~~ **Answered:** yes, `-a` takes one profile per seat in deck order (2.0.15).
-- How much of game state does Forge expose cleanly for the post-mortem serializer? **Mostly answered:** the event bus plus direct reads of `Game`/`Player` in the harness. Still open: whether to log hidden information (hands) per turn for post-mortems.
+- ~~How much of game state does Forge expose cleanly for the post-mortem serializer?~~ **Answered (Phase 1):** the event bus plus direct reads of `Game`/`Player` in the harness; hands are logged at every turn start (it is our own sim, nothing is hidden).
 - Playbook expression language: hand-roll, embed a tiny evaluator, or reuse Forge's `Valid`/`Count$` card-script syntax. Decide in Phase 2.
 - ~~Squirreled Away: play it as shipped (Hazel of the Rootbloom) or swap the commander to Chatterfang?~~ **Answered:** as shipped, Hazel in the command zone. Chatterfang is the product's alternate commander and stays in the 99.
 
@@ -285,3 +330,19 @@ Forge 2.0.15 (release of 28 Sep 2026), Java 21, 4-core / 15 GB container. Script
 Log shape (stock text log, one game ≈ 3,800 lines): `Phase` (~37%), `Mana`, `Add To Stack` / `Resolve Stack`, `Zone Change` (graveyard/exile moves only), `Turn`, `Damage`, `Combat`, `Life`, `Land`, `Mulligan`, `Game Outcome`. Missing: draws, hand contents, the zone a spell was cast from. This is why Phase 1 logs from the event bus instead of parsing text.
 
 Changes from v0.1: dropped the Forge fork/patch (§3.1, §8, §11); four-precon pod (§4.1); measured costs (§4.2); profiles-first pilot and upstream-lookahead evaluation (§3.1, §7); new risks and resolved questions (§9, §13); results schema gains `forge_version`, `seed`, `loss_reason` (§6).
+
+## 15. Phase 1 results (2026-11-08)
+
+Built and verified end to end on the same container as Phase 0, then in Actions.
+
+| Piece | Verified |
+|---|---|
+| Harness `play` | 4-player games through the event bus: ~700 events / 130 KB per game, 30–140 s per game, boot ~6 s; turn cap, clock exit (code 3) and `--start` resume all exercised |
+| Harness `check` | the four pod precons: 100 cards each, no unknown or unsupported cards, Commander-conformant; AI-flagged cards 5/4/1/4 |
+| `run-pod.sh` | 2 shards × 2 games locally, resume path, `-k` single-shard mode |
+| `rollup.py` | per-deck stats over shards; `index.json` upsert |
+| `scryfall.py` | 300 names in 5 requests, split cards via front-face retry, rerun resolves nothing |
+| Dashboard | light, dark and 390 px phone renders with no console errors or broken images; palette validated for four seats (light-mode contrast relief via direct labels and table views) |
+| Workflows | `pod-run.yml` (4 shards + rollup + optional publish), `pages.yml` (dashboard + demo-data) |
+
+Demo data: the first published run is `demo-data/runs/2026-11-08-pod-v1-forge-2.0.15-s20261108` (20 games, 2 shards, seed 20261108); see `demo-data/index.json` for later runs.
