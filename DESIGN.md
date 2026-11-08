@@ -210,19 +210,19 @@ Seeds: shard `j` of a run uses `seed + 100000·j`, and game `i` within a shard u
 |---|---|---|
 | 0 Spike | Forge runs 4-player Commander sim headless on a local machine and in Actions | **Done 2026-11-08** (§14): 12/12 local games and 3/3 Actions games completed |
 | 1 Goldfish | Harness (JSON event logger, seeds, turn cap) + runner + rollup + first dashboard | **Done 2026-11-08** (§15): pod stats for four decks with card images at https://lt-lit.github.io/vibefish/ |
-| 2 Pilot | Per-deck AI profile, then PlaybookController v1 (mulligan, priority, hold) | Measurable improvement vs. the Default profile on same deck/pod |
-| 3 Lines | Scripted combo execution + LLM post-mortem loop | Playbook v2 generated from v1 losses beats v1 |
-| 4 Lookahead | Evaluate Forge's flat Monte Carlo AI (upstream, expected in the release after 2.0.15) on the pod; else targeted lookahead for combat/targeting | Net positive on benchmark pod |
+| 2 Measure | A/B of Forge's Flat Monte Carlo AI against the heuristic AI on the pod (snapshot channel), seat-balanced, with confidence intervals; goldfish mode; calibration scorecard against Playgroup's human data over a large precon round robin; per-deck AI profile experiments | A/B result and scorecard v1 (rank correlation over ≥ 24 precons) on the dashboard |
+| 3 Teach | Per-deck AI data generated from the list: Commander Spellbook + an LLM read produce Forge's combo lines, card roles and key cards; generic lines go upstream | A data-fed deck beats the same deck without data in an A/B |
+| 4 Pilot | PlaybookController only for what data cannot express (hold rules, sequencing); LLM post-mortem loop revising data and playbook from losses | Revision v2 beats v1 in an A/B |
 | 5 Eval model | Small learned board evaluator trained on sim data | Stretch |
 
-Phase 0 and 1 are the prototype. Phase 2 starts with a per-deck AI profile and the data-repo manifest runner.
+Phase 0 and 1 are the prototype. Phases 2–4 were re-cut after the prior-art survey (§16): Forge's own AI now carries the search and the deck knowledge, so Vibefish measures, feeds and calibrates it rather than replacing it. Follow upstream closely (Card-Forge PRs by kevlahnota and the `forge-ai/simulation` package) before building any AI feature here.
 
 ## 8. Decisions made
 
 - **Engine:** Forge. Headless sim mode, Commander format flag, plain multi-deck mode for 4-player pods, GPL, near-complete card coverage.
 - **Forge integration:** library-style harness compiled against the released jar; **no fork, no patches.** Decided after reading sim mode's source: the seed and per-seat profile flags exist, and the event bus gives structured data.
 - **Forge version:** pinned to `forge-2.0.15` (checksum in `forge/SHA256SUMS`) for Phases 0–1. The next bump is the first exercise of the upgrade pipeline (§11).
-- **Pilot strategy:** AI profiles first, PlaybookController for what profiles cannot express, upstream lookahead evaluated before building our own.
+- **Pilot strategy:** measure and feed Forge's AI before replacing any of it: A/B against upstream's Flat Monte Carlo, per-deck data files (combos, roles, key cards) generated from the list, profiles for tuning, and a PlaybookController only for what data cannot express. Track upstream AI work and contribute generic data lines back.
 - **Benchmark pod:** the four precons in §4.1, frozen.
 - **Build tooling:** plain `javac` against the release jar, driven by a shell script. Maven only if the Java grows.
 - **Repos:** engine and data split, both public.
