@@ -56,7 +56,7 @@ Separation of concerns: engine is generic and reusable by anyone; data repo is o
 
 ### 3.1 Components
 
-**Runner.** Wraps the Forge launcher (Phase 0) and later the harness (Phase 1). Takes a manifest (which decks, how many games, which opponents, which playbooks), runs Forge headless, captures output, writes structured JSON per game and a rollup per run. Always sets Forge's clock (`-c`, we use 900 s; Forge's own default of 120 s declares longer Commander games a draw) and, from Phase 1, a turn cap. Game counts are multiples of four so the pod rotation in §4.1 stays balanced.
+**Runner.** Wraps the Forge launcher (Phase 0) and later the harness (Phase 1). Takes a manifest (which decks, how many games, which opponents, which playbooks), runs Forge headless, captures output, writes structured JSON per game and a rollup per run. Always sets Forge's clock (`-c`, we use 900 s; Forge's own default of 120 s declares longer Commander games a draw) and, from Phase 1, a turn cap.
 
 **Forge integration (no fork).** Forge is consumed as a library. The released desktop jar goes on the classpath and `controller/` provides its own entry point that repeats sim mode's ~100 lines of setup (`FModel.initialize`, `RegisteredPlayer.forCommander`, `Match`, `Game`) and then does what sim mode cannot:
 - subscribes a `JsonGameLogger` to the game's public event bus (`Game.subscribeToEvents`). Events are Java records carrying the data we need: zone changes with from/to zone, casts with host card and targets, turn began with number and owner, life changes, mulligans, land drops, attackers declared, game outcome with each player's `GameLossReason`;
@@ -112,7 +112,7 @@ Win rates are meaningless without a fixed opponent pool. The pod is four Forge-b
 
 "AI-flagged" counts cards Forge marks `AI:RemoveDeck:All` (the AI should never pilot them) and `AI:RemoveDeck:Random` (kept out of random decks only). The median bundled precon has 4 "never" cards, so the pod is typical.
 
-Two uses. **Baseline:** the four play each other; expected win share is 25% each and the measured spread is the pod's own power calibration. **Deck under test:** the tested deck takes a seat and the precons rotate out one at a time, so each precon sits out exactly a quarter of the games. Seat order rotates every game. Game counts are therefore multiples of four. "Mirror pods" (your decks vs. each other) stay a secondary view. If the pod ever changes, that is a new pod with a new name and history restarts.
+The four precons play each other in one 4-player game. Expected win share is 25% each; the measured spread is the pod's own power calibration, and every stat in §6 is reported per deck from these games. "Mirror pods" (your decks vs. each other) stay a secondary view. If the pod ever changes, that is a new pod with a new name and history restarts.
 
 ### 4.2 Sample size
 
@@ -265,7 +265,6 @@ Forge does the hard part (scripting every new card). Vibefish's job is to track 
 - ~~Can the Forge AI be given a per-player profile in sim mode, or is it global?~~ **Answered:** yes, `-a` takes one profile per seat in deck order (2.0.15).
 - How much of game state does Forge expose cleanly for the post-mortem serializer? **Mostly answered:** the event bus plus direct reads of `Game`/`Player` in the harness. Still open: whether to log hidden information (hands) per turn for post-mortems.
 - Playbook expression language: hand-roll, embed a tiny evaluator, or reuse Forge's `Valid`/`Count$` card-script syntax. Decide in Phase 2.
-- Pod rotation rule (§4.1, "each precon sits out a quarter of the games"): confirm before Phase 1 results accumulate.
 - ~~Squirreled Away: play it as shipped (Hazel of the Rootbloom) or swap the commander to Chatterfang?~~ **Answered:** as shipped, Hazel in the command zone. Chatterfang is the product's alternate commander and stays in the 99.
 
 ## 14. Phase 0 results (2026-11-08)
@@ -285,4 +284,4 @@ Forge 2.0.15 (release of 28 Sep 2026), Java 21, 4-core / 15 GB container. Script
 
 Log shape (stock text log, one game ≈ 3,800 lines): `Phase` (~37%), `Mana`, `Add To Stack` / `Resolve Stack`, `Zone Change` (graveyard/exile moves only), `Turn`, `Damage`, `Combat`, `Life`, `Land`, `Mulligan`, `Game Outcome`. Missing: draws, hand contents, the zone a spell was cast from. This is why Phase 1 logs from the event bus instead of parsing text.
 
-Changes from v0.1: dropped the Forge fork/patch (§3.1, §8, §11); four-precon pod with rotation rule (§4.1); measured costs (§4.2); profiles-first pilot and upstream-lookahead evaluation (§3.1, §7); new risks and resolved questions (§9, §13); results schema gains `forge_version`, `seed`, `loss_reason` (§6).
+Changes from v0.1: dropped the Forge fork/patch (§3.1, §8, §11); four-precon pod (§4.1); measured costs (§4.2); profiles-first pilot and upstream-lookahead evaluation (§3.1, §7); new risks and resolved questions (§9, §13); results schema gains `forge_version`, `seed`, `loss_reason` (§6).
