@@ -63,7 +63,7 @@ Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never u
 ## Status
 - Phase 0 (spike): done 2026-11-08 — `DESIGN.md` §14.
 - Phase 1 (goldfish): done 2026-11-08 — harness, runner, rollup, resolver, dashboard, workflows; `DESIGN.md` §15.
-- Phase 2 (measure) is next, re-cut after the prior-art survey (`DESIGN.md` §16): A/B Forge's Flat Monte Carlo AI vs the heuristic AI on the pod via the snapshot channel, goldfish mode, and a calibration scorecard against Playgroup's human precon data. Phase 3 feeds Forge's AI per-deck data (combo lines, card roles, key cards) instead of scripting lines ourselves. Check upstream Forge AI work (Card-Forge PRs by kevlahnota, `forge-ai/src/main/java/forge/ai/simulation`) before building any AI feature here.
+- Phase 2 (measure) is under way, re-cut after the prior-art survey (`DESIGN.md` §16); first 40-game Monte Carlo A/B in §17 (55% vs 45%, not yet significant); goldfish mode and the calibration scorecard exist. Plan: A/B Forge's Flat Monte Carlo AI vs the heuristic AI on the pod via the snapshot channel, goldfish mode, and a calibration scorecard against Playgroup's human precon data. Phase 3 feeds Forge's AI per-deck data (combo lines, card roles, key cards) instead of scripting lines ourselves. Check upstream Forge AI work (Card-Forge PRs by kevlahnota, `forge-ai/src/main/java/forge/ai/simulation`) before building any AI feature here.
 
 ## Required README footer
 > Vibefish is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.

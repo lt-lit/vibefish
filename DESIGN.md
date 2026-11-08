@@ -372,5 +372,16 @@ What already exists, and what Vibefish takes from it. Links are in §12 and inli
 2. Adopt Forge's A/B discipline for every pilot claim: arms as AI profiles, blocks alternating seats, hundreds of games, confidence intervals.
 3. A calibration scorecard against Playgroup: precon win-rate rank correlation over a large precon round robin, mulligan rate, opening-hand lands, rounds per game, seat advantage. This is the measurable form of "plays precons at a human level". *Done in v1: `runner/scorecard.py`, shown on the dashboard; the large precon round robin is still to run.*
 4. Phase 3 becomes data generation rather than a line executor: deck → Spellbook → Forge `ai-commander-combos` / `ai-combos` / `ai-card-roles` lines and `KeyCards`, fed to the Flat MC AI; generic lines go upstream.
-5. Benchmark the Flat MC AI on the pod now via `FORGE_CHANNEL=snapshot`, heuristic versus Monte Carlo, since nobody has published Commander numbers for it.
+5. Benchmark the Flat MC AI on the pod now via `FORGE_CHANNEL=snapshot`, heuristic versus Monte Carlo, since nobody has published Commander numbers for it. *First run done, see §17.*
+
+## 17. First A/B: Flat Monte Carlo vs heuristic AI on the pod (2026-11-08)
+
+Run `ab1-pod-v1-snapshot-2026-11-08-mc-vs-heuristic` in `demo-data/`: Forge daily snapshot 2026-11-08 (2.0.16-SNAPSHOT), 40 games in 2 shards, two seats per arm per game with the arm assignment shifted one seat every game, so each deck played 20 games per arm.
+
+| Arm | Game wins | Game win share (95%) | Per seat |
+|---|---|---|---|
+| Vibefish-MC (Flat Monte Carlo, Default budgets) | 22 of 40 | 55% (40–69%) | 27.5% |
+| Vibefish-Heuristic (`FLAT_MC_ENABLED=false`) | 18 of 40 | 45% (31–60%) | 22.5% |
+
+Even would be 50% each. A lean towards Monte Carlo, well inside the interval: by Forge's own benchmark rule of thumb (64 games ≈ ±12 points) this needs a few hundred games before it says anything. Per deck, Monte Carlo won more with Mutant Menace (10 vs 7) and Veloci-Ramp-Tor (9 vs 7), and nothing changed for Blight Curse (1 vs 1) or Squirreled Away (2 vs 3). Games averaged 46 turns and 57 s, no draws; the snapshot's rollouts failed and fell back to the heuristic choice 10 times in 40 games (a `RuntimeException` in the game copy, logged by Forge), which is one thing to report upstream with the seeds. Next: the same A/B at 200+ games in Actions, and `Vibefish-MCHard` as a third arm.
 

@@ -1,0 +1,3898 @@
+{
+  "vibefish": "0.1.0",
+  "forge_version": "snapshot-2026-11-08",
+  "forge_build": "2.0.16-SNAPSHOT-11.08",
+  "format": "Commander",
+  "seed_base": 20361109,
+  "clock_s": 1800,
+  "turn_cap": 120,
+  "mc": "on",
+  "mc_available": true,
+  "rotate_profiles": true,
+  "games_requested": 20,
+  "started": "2026-11-08T19:58:14.116213285Z",
+  "decks": [
+    {
+      "seat": 0,
+      "id": "mutant-menace",
+      "file": "Mutant Menace [PIP] [2024].dck",
+      "name": "Mutant Menace [PIP] [2024]",
+      "commanders": [
+        "The Wise Mothman"
+      ],
+      "profile": "Vibefish-MC",
+      "main_count": 99,
+      "commander_cards": [
+        {
+          "name": "The Wise Mothman",
+          "count": 1,
+          "type": "Legendary Creature - Insect Mutant",
+          "cmc": 4,
+          "land": false
+        }
+      ],
+      "cards": [
+        {
+          "name": "Swamp",
+          "count": 2,
+          "type": "Basic Land - Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Recon Craft Theta",
+          "count": 1,
+          "type": "Artifact - Vehicle",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Talisman of Dominance",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Branching Evolution",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Marcus, Mutant Mayor",
+          "count": 1,
+          "type": "Legendary Creature - Mutant Advisor",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Forest",
+          "count": 3,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Raul, Trouble Shooter",
+          "count": 1,
+          "type": "Legendary Creature - Zombie Mutant Rogue",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Jason Bright, Glowing Prophet",
+          "count": 1,
+          "type": "Legendary Creature - Zombie Mutant Advisor",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Bloatfly Swarm",
+          "count": 1,
+          "type": "Creature - Insect Mutant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Talisman of Resilience",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Path of Ancestry",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Contagion Clasp",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Screeching Scorchbeast",
+          "count": 1,
+          "type": "Creature - Bat Mutant",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Tainted Wood",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Hancock, Ghoulish Mayor",
+          "count": 1,
+          "type": "Legendary Creature - Zombie Mutant Advisor",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Evolving Wilds",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Island",
+          "count": 2,
+          "type": "Basic Land - Island",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Rampant Growth",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Ash Barrens",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Agent Frank Horrigan",
+          "count": 1,
+          "type": "Legendary Creature - Mutant Warrior",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Tireless Tracker",
+          "count": 1,
+          "type": "Creature - Human Scout",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Opulent Palace",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Temple of Deceit",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Find // Finality",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 8,
+          "land": false
+        },
+        {
+          "name": "Alpha Deathclaw",
+          "count": 1,
+          "type": "Creature - Lizard Mutant",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Arcane Signet",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Temple of Malady",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Sunken Hollow",
+          "count": 1,
+          "type": "Land - Island Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Struggle for Project Purity",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Forest",
+          "count": 2,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Piper Wright, Publick Reporter",
+          "count": 1,
+          "type": "Legendary Creature - Human Detective",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Harold and Bob, First Numens",
+          "count": 1,
+          "type": "Legendary Creature - Treefolk Mutant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Feral Ghoul",
+          "count": 1,
+          "type": "Creature - Zombie Mutant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Young Deathclaws",
+          "count": 1,
+          "type": "Creature - Lizard Mutant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Tainted Isle",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Inspiring Call",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Guardian Project",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Exotic Orchard",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Woodland Cemetery",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Lily Bowen, Raging Grandma",
+          "count": 1,
+          "type": "Legendary Creature - Mutant Warrior",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Fraying Sanity",
+          "count": 1,
+          "type": "Enchantment - Aura Curse",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Command Tower",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Hinterland Harbor",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "The Master, Transcendent",
+          "count": 1,
+          "type": "Legendary Artifact Creature - Mutant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Strong, the Brutish Thespian",
+          "count": 1,
+          "type": "Legendary Creature - Mutant Berserker",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Tato Farmer",
+          "count": 1,
+          "type": "Creature - Zombie Mutant Peasant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Mirelurk Queen",
+          "count": 1,
+          "type": "Creature - Crab Mutant",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Farseek",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Overflowing Basin",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Nuka-Nuke Launcher",
+          "count": 1,
+          "type": "Artifact - Equipment",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Terramorphic Expanse",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Corpsejack Menace",
+          "count": 1,
+          "type": "Creature - Fungus",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Fetid Pools",
+          "count": 1,
+          "type": "Land - Island Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Vexing Radgull",
+          "count": 1,
+          "type": "Creature - Bird Mutant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Contaminated Drink",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Glowing One",
+          "count": 1,
+          "type": "Creature - Zombie Mutant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Atomize",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Vault 12: The Necropolis",
+          "count": 1,
+          "type": "Enchantment - Saga",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Cultivate",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Talisman of Curiosity",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Island",
+          "count": 3,
+          "type": "Basic Land - Island",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Inexorable Tide",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Darkwater Catacombs",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Nesting Grounds",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Nuclear Fallout",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Temple of the False God",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Rampaging Yao Guai",
+          "count": 1,
+          "type": "Creature - Bear Mutant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Radstorm",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Viridescent Bog",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Biomass Mutation",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Cathedral Acolyte",
+          "count": 1,
+          "type": "Creature - Human Cleric",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Casualties of War",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Temple of Mystery",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Harmonize",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Lumbering Megasloth",
+          "count": 1,
+          "type": "Creature - Sloth Mutant",
+          "cmc": 12,
+          "land": false
+        },
+        {
+          "name": "Nightkin Ambusher",
+          "count": 1,
+          "type": "Creature - Mutant Warrior",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Putrefy",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Power Fist",
+          "count": 1,
+          "type": "Artifact - Equipment",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Drowned Catacomb",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Swamp",
+          "count": 3,
+          "type": "Basic Land - Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Sol Ring",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Mortuary Mire",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Strength Bobblehead",
+          "count": 1,
+          "type": "Artifact - Bobblehead",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Vault 87: Forced Evolution",
+          "count": 1,
+          "type": "Enchantment - Saga",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Watchful Radstag",
+          "count": 1,
+          "type": "Creature - Elk Mutant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Hardened Scales",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Infesting Radroach",
+          "count": 1,
+          "type": "Creature - Insect Mutant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Winding Constrictor",
+          "count": 1,
+          "type": "Creature - Snake",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Mutational Advantage",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Mariposa Military Base",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        }
+      ]
+    },
+    {
+      "seat": 1,
+      "id": "blight-curse",
+      "file": "Blight Curse [ECC] [2026].dck",
+      "name": "Blight Curse [ECC] [2026]",
+      "commanders": [
+        "Auntie Ool, Cursewretch"
+      ],
+      "profile": "Vibefish-MC",
+      "main_count": 99,
+      "commander_cards": [
+        {
+          "name": "Auntie Ool, Cursewretch",
+          "count": 1,
+          "type": "Legendary Creature - Goblin Warlock",
+          "cmc": 4,
+          "land": false
+        }
+      ],
+      "cards": [
+        {
+          "name": "Arcane Signet",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "The Reaper, King No More",
+          "count": 1,
+          "type": "Legendary Artifact Creature - Scarecrow",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Chimil, the Inner Sun",
+          "count": 1,
+          "type": "Legendary Artifact",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Wickersmith's Tools",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Rakdos Carnarium",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Wickerbough Elder",
+          "count": 1,
+          "type": "Creature - Treefolk Shaman",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Dusk Urchins",
+          "count": 1,
+          "type": "Creature - Ouphe",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Swamp",
+          "count": 8,
+          "type": "Basic Land - Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Liliana, Death Wielder",
+          "count": 1,
+          "type": "Legendary Planeswalker - Liliana",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Blowfly Infestation",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Dragonskull Summit",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Grim Poppet",
+          "count": 1,
+          "type": "Artifact Creature - Scarecrow",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Night's Whisper",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Flourishing Defenses",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Cathartic Reunion",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Fire Covenant",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Soul Snuffers",
+          "count": 1,
+          "type": "Creature - Elemental Shaman",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Commander's Sphere",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Festering Thicket",
+          "count": 1,
+          "type": "Land - Swamp Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Evolving Wilds",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Massacre Girl, Known Killer",
+          "count": 1,
+          "type": "Legendary Creature - Human Assassin",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Vraska, Betrayal's Sting",
+          "count": 1,
+          "type": "Legendary Planeswalker - Vraska",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Kulrath Knight",
+          "count": 1,
+          "type": "Creature - Elemental Knight",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Carnifex Demon",
+          "count": 1,
+          "type": "Creature - Phyrexian Demon",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "The Scorpion God",
+          "count": 1,
+          "type": "Legendary Creature - God",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Sol Ring",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Persist",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Exotic Orchard",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Painful Truths",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Path of Ancestry",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Infernal Grasp",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Archfiend of Ifnir",
+          "count": 1,
+          "type": "Creature - Demon",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Contagion Clasp",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Harmonize",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Vernal Fen",
+          "count": 1,
+          "type": "Land - Swamp Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Assassin's Trophy",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Devoted Druid",
+          "count": 1,
+          "type": "Creature - Elf Druid",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Dread Tiller",
+          "count": 1,
+          "type": "Artifact Creature - Scarecrow",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Puca's Covenant",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Glissa Sunslayer",
+          "count": 1,
+          "type": "Legendary Creature - Phyrexian Zombie Elf",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Midnight Banshee",
+          "count": 1,
+          "type": "Creature - Spirit",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Everlasting Torment",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Eventide's Shadow",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Cinder Glade",
+          "count": 1,
+          "type": "Land - Mountain Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Aberrant Return",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Putrefy",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Hoarder's Greed",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Oft-Nabbed Goat",
+          "count": 1,
+          "type": "Creature - Goat",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Riveteers Overlook",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Terramorphic Expanse",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Golgari Rot Farm",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Cathartic Pyre",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Command Tower",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Sheltered Thicket",
+          "count": 1,
+          "type": "Land - Mountain Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Ignoble Hierarch",
+          "count": 1,
+          "type": "Creature - Goblin Shaman",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Terminate",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Chain Reaction",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Gruul Turf",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Savage Lands",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Burning Curiosity",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Grave Venerations",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Nesting Grounds",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Hapatra, Vizier of Poisons",
+          "count": 1,
+          "type": "Legendary Creature - Human Cleric",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Canyon Slough",
+          "count": 1,
+          "type": "Land - Swamp Mountain",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Mountain",
+          "count": 4,
+          "type": "Basic Land - Mountain",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Ferrafor, Young Yew",
+          "count": 1,
+          "type": "Legendary Creature - Treefolk Druid",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Puppeteer Clique",
+          "count": 1,
+          "type": "Creature - Faerie Wizard",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Skinrender",
+          "count": 1,
+          "type": "Creature - Phyrexian Zombie",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Binding the Old Gods",
+          "count": 1,
+          "type": "Enchantment - Saga",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Evolution Sage",
+          "count": 1,
+          "type": "Creature - Elf Druid",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Village Pillagers",
+          "count": 1,
+          "type": "Creature - Goblin Warrior",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Ifnir Deadlands",
+          "count": 1,
+          "type": "Land - Desert",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Forest",
+          "count": 6,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Rootbound Crag",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Smoldering Marsh",
+          "count": 1,
+          "type": "Land - Swamp Mountain",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Woodland Cemetery",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Channeler Initiate",
+          "count": 1,
+          "type": "Creature - Human Druid",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Lasting Tarfire",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Incremental Blight",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Sinister Gnarlbark",
+          "count": 1,
+          "type": "Creature - Treefolk Warlock",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Necroskitter",
+          "count": 1,
+          "type": "Creature - Elemental",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Grave Titan",
+          "count": 1,
+          "type": "Creature - Giant",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Tree of Perdition",
+          "count": 1,
+          "type": "Creature - Plant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Black Sun's Zenith",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        }
+      ]
+    },
+    {
+      "seat": 2,
+      "id": "veloci-ramp-tor",
+      "file": "Veloci-Ramp-Tor [LCC] [2023].dck",
+      "name": "Veloci-Ramp-Tor [LCC] [2023]",
+      "commanders": [
+        "Pantlaza, Sun-Favored"
+      ],
+      "profile": "Vibefish-Heuristic",
+      "main_count": 99,
+      "commander_cards": [
+        {
+          "name": "Pantlaza, Sun-Favored",
+          "count": 1,
+          "type": "Legendary Creature - Dinosaur",
+          "cmc": 5,
+          "land": false
+        }
+      ],
+      "cards": [
+        {
+          "name": "Bronzebeak Foragers",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Plains",
+          "count": 2,
+          "type": "Basic Land - Plains",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Curious Altisaur",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Canopy Vista",
+          "count": 1,
+          "type": "Land - Forest Plains",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "From the Rubble",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Zacama, Primal Calamity",
+          "count": 1,
+          "type": "Legendary Creature - Elder Dinosaur",
+          "cmc": 9,
+          "land": false
+        },
+        {
+          "name": "Cinder Glade",
+          "count": 1,
+          "type": "Land - Mountain Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Thriving Bluff",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Drover of the Mighty",
+          "count": 1,
+          "type": "Creature - Human Druid",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Mosswort Bridge",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Ripjaw Raptor",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Migration Path",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Kessig Wolf Run",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Bellowing Aegisaur",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Mountain",
+          "count": 2,
+          "type": "Basic Land - Mountain",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Sunfrill Imitator",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Thunderherd Migration",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Runic Armasaur",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Descendants' Path",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Arcane Signet",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Myriad Landscape",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Plains",
+          "count": 2,
+          "type": "Basic Land - Plains",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Forest",
+          "count": 4,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Itzquinth, Firstborn of Gishath",
+          "count": 1,
+          "type": "Legendary Creature - Dinosaur",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Temple of the False God",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Quartzwood Crasher",
+          "count": 1,
+          "type": "Creature - Dinosaur Beast",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Wayta, Trainer Prodigy",
+          "count": 1,
+          "type": "Legendary Creature - Human Warrior",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Scion of Calamity",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Farseek",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Secluded Courtyard",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Exotic Orchard",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Ranging Raptors",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Savage Stomp",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Clifftop Retreat",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Rhythm of the Wild",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Etali, Primal Storm",
+          "count": 1,
+          "type": "Legendary Creature - Elder Dinosaur",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Path of Ancestry",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Rampant Growth",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Otepec Huntmaster",
+          "count": 1,
+          "type": "Creature - Human Shaman",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Apex Altisaur",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 9,
+          "land": false
+        },
+        {
+          "name": "Majestic Heliopterus",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Jungle Shrine",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Wakening Sun's Avatar",
+          "count": 1,
+          "type": "Creature - Dinosaur Avatar",
+          "cmc": 8,
+          "land": false
+        },
+        {
+          "name": "Regal Behemoth",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Terramorphic Expanse",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Arch of Orazca",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Deathgorge Scavenger",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Forest",
+          "count": 4,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Command Tower",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Game Trail",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Kinjalli's Sunwing",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Furycalm Snarl",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Xenagos, God of Revels",
+          "count": 1,
+          "type": "Legendary Enchantment Creature - God",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Raging Swordtooth",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Zetalpa, Primal Dawn",
+          "count": 1,
+          "type": "Legendary Creature - Elder Dinosaur",
+          "cmc": 8,
+          "land": false
+        },
+        {
+          "name": "Temple Altisaur",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Topiary Stomper",
+          "count": 1,
+          "type": "Creature - Plant Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Atzocan Seer",
+          "count": 1,
+          "type": "Creature - Human Druid",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Cultivate",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Shifting Ceratops",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Fortified Village",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Thrashing Brontodon",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Marauding Raptor",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Rogue's Passage",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Thundering Spineback",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Mountain",
+          "count": 2,
+          "type": "Basic Land - Mountain",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Thriving Grove",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Chandra's Ignition",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Verdant Sun's Avatar",
+          "count": 1,
+          "type": "Creature - Dinosaur Avatar",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Sol Ring",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Akroma's Will",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Earthshaker Dreadmaw",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Return of the Wildspeaker",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Progenitor's Icon",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Dinosaur Egg",
+          "count": 1,
+          "type": "Creature - Dinosaur Egg",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Wrathful Raptors",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Thriving Heath",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Wayward Swordtooth",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Raging Regisaur",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Rishkar's Expertise",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Ixalli's Lorekeeper",
+          "count": 1,
+          "type": "Creature - Human Druid",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Regisaur Alpha",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Evolving Wilds",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Lifecrafter's Bestiary",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Path to Exile",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Fiery Confluence",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Generous Gift",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Rampaging Brontodon",
+          "count": 1,
+          "type": "Creature - Dinosaur",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Unclaimed Territory",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        }
+      ]
+    },
+    {
+      "seat": 3,
+      "id": "squirreled-away",
+      "file": "Squirreled Away [BLC] [2024].dck",
+      "name": "Squirreled Away [BLC] [2024]",
+      "commanders": [
+        "Hazel of the Rootbloom"
+      ],
+      "profile": "Vibefish-Heuristic",
+      "main_count": 99,
+      "commander_cards": [
+        {
+          "name": "Hazel of the Rootbloom",
+          "count": 1,
+          "type": "Legendary Creature - Squirrel Druid",
+          "cmc": 4,
+          "land": false
+        }
+      ],
+      "cards": [
+        {
+          "name": "Path of Ancestry",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Ravenous Squirrel",
+          "count": 1,
+          "type": "Creature - Squirrel",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Grim Backwoods",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Plaguecrafter",
+          "count": 1,
+          "type": "Creature - Human Shaman",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Chitterspitter",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Beledros Witherbloom",
+          "count": 1,
+          "type": "Legendary Creature - Elder Dragon",
+          "cmc": 7,
+          "land": false
+        },
+        {
+          "name": "Haywire Mite",
+          "count": 1,
+          "type": "Artifact Creature - Insect",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Swamp",
+          "count": 2,
+          "type": "Basic Land - Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Arasta of the Endless Web",
+          "count": 1,
+          "type": "Legendary Enchantment Creature - Spider",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Llanowar Wastes",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Oran-Rief, the Vastwood",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Tainted Wood",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Nadier's Nightblade",
+          "count": 1,
+          "type": "Creature - Elf Warrior",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Swarmyard Massacre",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Forest",
+          "count": 2,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Viridescent Bog",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Squirrel Sovereign",
+          "count": 1,
+          "type": "Creature - Squirrel Noble",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Woe Strider",
+          "count": 1,
+          "type": "Creature - Horror",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Squirrel Nest",
+          "count": 1,
+          "type": "Enchantment - Aura",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Forest",
+          "count": 3,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Bojuka Bog",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Scurry of Squirrels",
+          "count": 1,
+          "type": "Creature - Squirrel Scout",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Chatterfang, Squirrel General",
+          "count": 1,
+          "type": "Legendary Creature - Squirrel Warrior",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Deadly Dispute",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Skyfisher Spider",
+          "count": 1,
+          "type": "Creature - Spider",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Poison-Tip Archer",
+          "count": 1,
+          "type": "Creature - Elf Archer",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Swamp",
+          "count": 2,
+          "type": "Basic Land - Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Bastion of Remembrance",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Barren Moor",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Rootcast Apprenticeship",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Idol of Oblivion",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Shamanic Revelation",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Talisman of Resilience",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Forest",
+          "count": 2,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "The Odd Acorn Gang",
+          "count": 1,
+          "type": "Legendary Creature - Squirrel Warrior",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Forest",
+          "count": 2,
+          "type": "Basic Land - Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Academy Manufactor",
+          "count": 1,
+          "type": "Artifact Creature - Assembly-Worker",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Second Harvest",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Toski, Bearer of Secrets",
+          "count": 1,
+          "type": "Legendary Creature - Squirrel",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Decree of Pain",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 8,
+          "land": false
+        },
+        {
+          "name": "Exotic Orchard",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Tireless Provisioner",
+          "count": 1,
+          "type": "Creature - Elf Scout",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Hazel's Brewmaster",
+          "count": 1,
+          "type": "Creature - Squirrel Warlock",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Chatterstorm",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Haunted Mire",
+          "count": 1,
+          "type": "Land - Swamp Forest",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Sword of the Squeak",
+          "count": 1,
+          "type": "Artifact - Equipment",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Terramorphic Expanse",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Temple of Malady",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Swamp",
+          "count": 2,
+          "type": "Basic Land - Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Cache Grab",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Evolving Wilds",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Honored Dreyleader",
+          "count": 1,
+          "type": "Creature - Squirrel Warrior",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Wolfwillow Haven",
+          "count": 1,
+          "type": "Enchantment - Aura",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Woodland Cemetery",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Windgrace's Judgment",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Nested Shambler",
+          "count": 1,
+          "type": "Creature - Zombie",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Prosperous Innkeeper",
+          "count": 1,
+          "type": "Creature - Halfling Citizen",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Sol Ring",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Gilded Goose",
+          "count": 1,
+          "type": "Creature - Bird",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Garruk, Cursed Huntsman",
+          "count": 1,
+          "type": "Legendary Planeswalker - Garruk",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Moldervine Reclamation",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Gourmand's Talent",
+          "count": 1,
+          "type": "Enchantment - Class",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Tranquil Thicket",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Necroblossom Snarl",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Swarmyard",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Golgari Signet",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Maskwood Nexus",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Casualties of War",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 6,
+          "land": false
+        },
+        {
+          "name": "Swamp",
+          "count": 2,
+          "type": "Basic Land - Swamp",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Golgari Rot Farm",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Moonstone Eulogist",
+          "count": 1,
+          "type": "Creature - Bat Warlock",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Jungle Hollow",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Twilight Mire",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Insatiable Frugivore",
+          "count": 1,
+          "type": "Creature - Rat Berserker",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Saw in Half",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Skullclamp",
+          "count": 1,
+          "type": "Artifact - Equipment",
+          "cmc": 1,
+          "land": false
+        },
+        {
+          "name": "Beastmaster Ascension",
+          "count": 1,
+          "type": "Enchantment",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Maelstrom Pulse",
+          "count": 1,
+          "type": "Sorcery",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Plumb the Forbidden",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Chittering Witch",
+          "count": 1,
+          "type": "Creature - Human Warlock",
+          "cmc": 4,
+          "land": false
+        },
+        {
+          "name": "Zulaport Cutthroat",
+          "count": 1,
+          "type": "Creature - Human Rogue Ally",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Tear Asunder",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Deep Forest Hermit",
+          "count": 1,
+          "type": "Creature - Elf Druid",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "Command Tower",
+          "count": 1,
+          "type": "Land",
+          "cmc": 0,
+          "land": true
+        },
+        {
+          "name": "Morbid Opportunist",
+          "count": 1,
+          "type": "Creature - Human Rogue",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Putrefy",
+          "count": 1,
+          "type": "Instant",
+          "cmc": 3,
+          "land": false
+        },
+        {
+          "name": "Arcane Signet",
+          "count": 1,
+          "type": "Artifact",
+          "cmc": 2,
+          "land": false
+        },
+        {
+          "name": "Ogre Slumlord",
+          "count": 1,
+          "type": "Creature - Ogre Rogue",
+          "cmc": 5,
+          "land": false
+        },
+        {
+          "name": "End-Raze Forerunners",
+          "count": 1,
+          "type": "Creature - Boar",
+          "cmc": 8,
+          "land": false
+        },
+        {
+          "name": "Binding the Old Gods",
+          "count": 1,
+          "type": "Enchantment - Saga",
+          "cmc": 4,
+          "land": false
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "index": 1,
+      "seed": 20361110,
+      "events": "games/game-001.events.jsonl",
+      "first_seat": 2,
+      "turns": 52,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 118820,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 52,
+          "life": 0,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 50,
+          "life": -4,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 31,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 14
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 52,
+          "life": -11,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "seed": 20361111,
+      "events": "games/game-002.events.jsonl",
+      "first_seat": 3,
+      "turns": 53,
+      "winner": 0,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 63908,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 3,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 15
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 44,
+          "life": -3,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 11
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 49,
+          "life": -15,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 53,
+          "life": -16,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 15
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "seed": 20361112,
+      "events": "games/game-003.events.jsonl",
+      "first_seat": 2,
+      "turns": 53,
+      "winner": 3,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 57915,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 53,
+          "life": -18,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 15
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 48,
+          "life": -1,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 39,
+          "life": -4,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 6,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 16
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "seed": 20361113,
+      "events": "games/game-004.events.jsonl",
+      "first_seat": 3,
+      "turns": 52,
+      "winner": 0,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 57842,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 5,
+          "poison": 0,
+          "mulligans": 2,
+          "turns_played": 15
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 49,
+          "life": 0,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 39,
+          "life": 0,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 52,
+          "life": -35,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 15
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "seed": 20361114,
+      "events": "games/game-005.events.jsonl",
+      "first_seat": 1,
+      "turns": 47,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 61347,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 38,
+          "life": -5,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 34,
+          "life": -1,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 9
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 20,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 15
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 47,
+          "life": -30,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 14
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "seed": 20361115,
+      "events": "games/game-006.events.jsonl",
+      "first_seat": 2,
+      "turns": 34,
+      "winner": 0,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 20912,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 8,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 34,
+          "life": -34,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 27,
+          "life": -3,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 7
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 30,
+          "life": -4,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 8
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "seed": 20361116,
+      "events": "games/game-007.events.jsonl",
+      "first_seat": 1,
+      "turns": 41,
+      "winner": 0,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 37290,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 11,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 11
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 39,
+          "life": -43,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 10
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 36,
+          "life": -33,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 41,
+          "life": -15,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 11
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "seed": 20361117,
+      "events": "games/game-008.events.jsonl",
+      "first_seat": 2,
+      "turns": 46,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 138885,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 44,
+          "life": -73,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 31,
+          "life": -2,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 7
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 24,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 14
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 46,
+          "life": -81,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "seed": 20361118,
+      "events": "games/game-009.events.jsonl",
+      "first_seat": 0,
+      "turns": 42,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 26867,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 36,
+          "life": -2,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 42,
+          "life": -2,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 12
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 20,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 37,
+          "life": -1,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "seed": 20361119,
+      "events": "games/game-010.events.jsonl",
+      "first_seat": 1,
+      "turns": 43,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 32990,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 38,
+          "life": -3,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 41,
+          "life": -22,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 11
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 19,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 43,
+          "life": 0,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 11
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "seed": 20361120,
+      "events": "games/game-011.events.jsonl",
+      "first_seat": 0,
+      "turns": 54,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 72461,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 54,
+          "life": -52,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 15
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 52,
+          "life": -29,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 14
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 51,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 15
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 41,
+          "life": 0,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "seed": 20361121,
+      "events": "games/game-012.events.jsonl",
+      "first_seat": 1,
+      "turns": 46,
+      "winner": 0,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 45053,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 44,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 46,
+          "life": -41,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 44,
+          "life": -10,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 34,
+          "life": -15,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 8
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "seed": 20361122,
+      "events": "games/game-013.events.jsonl",
+      "first_seat": 3,
+      "turns": 35,
+      "winner": 0,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 28607,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 17,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 35,
+          "life": -59,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 30,
+          "life": -4,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 7
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 33,
+          "life": -27,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "seed": 20361123,
+      "events": "games/game-014.events.jsonl",
+      "first_seat": 0,
+      "turns": 48,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 48492,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 43,
+          "life": -13,
+          "poison": 0,
+          "mulligans": 2,
+          "turns_played": 11
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 48,
+          "life": -16,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 22,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 46,
+          "life": -6,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 11
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "seed": 20361124,
+      "events": "games/game-015.events.jsonl",
+      "first_seat": 3,
+      "turns": 53,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 173577,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 48,
+          "life": -25,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 51,
+          "life": -138,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 198,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 14
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 53,
+          "life": -378,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 14
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "seed": 20361125,
+      "events": "games/game-016.events.jsonl",
+      "first_seat": 0,
+      "turns": 53,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 40627,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 49,
+          "life": -19,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 53,
+          "life": -24,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 15
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 35,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 15
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 43,
+          "life": -2,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "seed": 20361126,
+      "events": "games/game-017.events.jsonl",
+      "first_seat": 2,
+      "turns": 43,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 20021,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 31,
+          "life": -2,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 8
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 43,
+          "life": -31,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 12
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 28,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 39,
+          "life": -4,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "seed": 20361127,
+      "events": "games/game-018.events.jsonl",
+      "first_seat": 3,
+      "turns": 42,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 54871,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC",
+        "Vibefish-Heuristic"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 40,
+          "life": -32,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 42,
+          "life": -3,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 11
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 33,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 11
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 40,
+          "life": -2,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 10
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "seed": 20361128,
+      "events": "games/game-019.events.jsonl",
+      "first_seat": 2,
+      "turns": 47,
+      "winner": 2,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 49083,
+      "profiles": [
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 44,
+          "life": 0,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 11
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 39,
+          "life": -3,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 16,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 14
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 47,
+          "life": -2,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 13
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "seed": 20361129,
+      "events": "games/game-020.events.jsonl",
+      "first_seat": 3,
+      "turns": 38,
+      "winner": 0,
+      "reason": "AllOpponentsLost",
+      "duration_ms": 30074,
+      "profiles": [
+        "Vibefish-MC",
+        "Vibefish-Heuristic",
+        "Vibefish-Heuristic",
+        "Vibefish-MC"
+      ],
+      "players": [
+        {
+          "seat": 0,
+          "profile": "Vibefish-MC",
+          "won": true,
+          "lost": false,
+          "reason": null,
+          "turn_lost": null,
+          "life": 9,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 11
+        },
+        {
+          "seat": 1,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 36,
+          "life": -3,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 9
+        },
+        {
+          "seat": 2,
+          "profile": "Vibefish-Heuristic",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 38,
+          "life": -51,
+          "poison": 0,
+          "mulligans": 1,
+          "turns_played": 10
+        },
+        {
+          "seat": 3,
+          "profile": "Vibefish-MC",
+          "won": false,
+          "lost": true,
+          "reason": "LifeReachedZero",
+          "turn_lost": 30,
+          "life": -23,
+          "poison": 0,
+          "mulligans": 0,
+          "turns_played": 8
+        }
+      ]
+    }
+  ],
+  "updated": "2026-11-08T20:17:54.062213068Z"
+}
