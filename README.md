@@ -37,7 +37,7 @@ controller/vibefish-sim.sh play --out results/mine --deck-dir /path/to/decks \
 
 ## Branches
 
-`main` is stable and is what GitHub Pages serves; `testing` is where work integrates first; feature branches merge into `testing`.
+`testing` is where work lands first and is what GitHub Pages serves; `main` is promoted from `testing` when a milestone is accepted; feature branches merge into `testing`.
 
 ## Layout
 

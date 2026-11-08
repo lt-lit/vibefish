@@ -345,4 +345,6 @@ Built and verified end to end on the same container as Phase 0, then in Actions.
 | Dashboard | light, dark and 390 px phone renders with no console errors or broken images; palette validated for four seats (light-mode contrast relief via direct labels and table views) |
 | Workflows | `pod-run.yml` (4 shards + rollup + optional publish), `pages.yml` (dashboard + demo-data; needs Pages enabled once in repo settings with source "GitHub Actions", which the workflow token cannot do itself) |
 
-Demo data: the first published run is `demo-data/runs/2026-11-08-pod-v1-forge-2.0.15-s20261108` (20 games, 2 shards, seed 20261108); see `demo-data/index.json` for later runs.
+Demo data: the first published run is `demo-data/runs/2026-11-08-pod-v1-forge-2.0.15-s20261108`: 20 games in 2 shards (seed 20261108), all 20 decided, no draws or exceptions, 47 turns and 114 s per game on average (16–595 s, two shards sharing 4 cores). Wins: Veloci-Ramp-Tor 8, Mutant Menace 6, Blight Curse 4, Squirreled Away 2; every loss was life reaching zero; commanders first cast on own turn 6–7 on average. The published run is 744 KB including gzipped event logs. `demo-data/index.json` lists later runs.
+
+Branches: `testing` is the change-control branch and what GitHub Pages serves; `main` is promoted from it; feature branches (`claude/*`) merge into `testing`.

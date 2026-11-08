@@ -36,14 +36,14 @@ Relative paths given to the launcher resolve against the directory you run it fr
 Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never use `-t`/`-p` for Commander:** tournament mode pairs decks 1v1 at 20 life and ignores `-D` for named decks. `-D` must be absolute; quote names with spaces. Per-seat AI profiles: `-a` in sim mode, `--profile` in the harness (`res/ai/*.ai`). Forge's AI prints a `java.util.concurrent.TimeoutException` stack trace when its own decision timeout fires; harmless. Forge's user data is redirected into `forge/runtime/profile/` by the `forge.profile.properties` the fetch script writes.
 
 ## Branches
-- `main`: stable. GitHub Pages deploys from here only. Moves by fast-forward or merge from `testing` once a milestone is verified.
-- `testing`: integration. Feature work lands here first; smoke and pod runs happen here, and `pod-run.yml` with publish on this branch commits `demo-data/` here.
-- `claude/*` and other feature branches: day-to-day work, pushed to their own branch; merge into `testing` when a milestone is verified, never straight to `main`.
+- `testing`: change control. Work lands here first and GitHub Pages deploys from here, so the live dashboard shows what is being tested. `pod-run.yml` with publish on this branch commits `demo-data/` here.
+- `main`: stable. Promoted from `testing` by fast-forward or merge when a milestone is accepted; never pushed to directly.
+- `claude/*` and other feature branches: day-to-day work, pushed to their own branch, merged into `testing`.
 
 ## Workflows
 - `phase0.yml`: Forge sim-mode smoke test on push to `forge/**`, `runner/**`.
 - `pod-run.yml` (manual): 4 shards × N games, rollup, optional publish into `demo-data/` on the branch.
-- `pages.yml`: deploys `dashboard/` + `demo-data/` (as `data/`) to GitHub Pages on push to `main`. Requires Pages to be enabled once in repo settings with source "GitHub Actions"; the first run failed with "Create Pages site failed: Resource not accessible by integration" until that is done.
+- `pages.yml`: deploys `dashboard/` + `demo-data/` (as `data/`) to GitHub Pages on push to `testing`. Requires Pages to be enabled once in repo settings with source "GitHub Actions"; the first run failed with "Create Pages site failed: Resource not accessible by integration" until that is done.
 
 ## Key links
 - Forge AI / sim flags: https://github.com/Card-Forge/forge/wiki/AI
