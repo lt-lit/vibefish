@@ -1,6 +1,6 @@
-# Upstream notes (Forge)
+# Forge notes
 
-Things seen in Vibefish runs that belong upstream, with how to reproduce them. Vibefish pins
+Forge behaviour seen in Vibefish runs, with how to reproduce it. Internal reference only: Vibefish does not file Forge issues (DESIGN.md §8). Vibefish pins
 `forge/VERSION`; the Monte Carlo items below are from the daily snapshot (`FORGE_CHANNEL=snapshot`),
 i.e. the Flat Monte Carlo work on master that is not in 2.0.15.
 
@@ -33,7 +33,7 @@ The ab1 games used `--rotate-profiles`; both listed games are game 3 of their sh
 `Vibefish-Heuristic, Vibefish-Heuristic, Vibefish-MC, Vibefish-MC`. At `--mc max` one game also reported `failures=16 unsimulatableCards=11` in
 `FLATMC-STATS`; the harness keeps that block per game in `run.json` as `mc_stats`.
 
-## Observations worth sharing
+## Observations
 
 - With the Default profile budgets (450 ms per decision, 2 s per turn) a four-player precon board affords one or
   two rollouts per decision (about 650 ms each); Monte Carlo overrode the heuristic in about 4% of decisions, and

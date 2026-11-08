@@ -11,6 +11,7 @@ Commander deck playtesting engine built on Forge's headless `sim` mode. Engine o
 - **Scryfall API:** ≥100 ms between requests to `api.scryfall.com`; set `User-Agent: Vibefish/<version>` in scripts (`runner/scryfall.py` does); leave browser UA alone in page JS. Resolve names in batches via `cards/collection`.
 - **Forge:** pinned to the tag in `forge/VERSION` with the checksum in `forge/SHA256SUMS`. Do not float to `latest` or `daily-snapshots` unless `FORGE_CHANNEL=snapshot` is explicitly set. The runtime is downloaded by `forge/fetch-forge.sh` into `forge/runtime/` and is never committed.
 - **No Forge fork.** `controller/` compiles against the released Forge jar and uses public hooks (event bus, `PlayerControllerAi`). Patch Forge only if a hook is private, and record it in `DESIGN.md`.
+- **No upstream filing.** Forge bugs seen in runs are noted in `docs/upstream.md` for our own reference only; this project does not file Forge issues or PRs, so never suggest it.
 - **Always pass a clock** to sim mode (`-c` / `--clock`). Forge's default is 120 s and declares longer games a draw; Commander games routinely exceed it. The harness also caps turns (`--turn-cap`, default 120).
 - **Event schema:** changes to the JSONL events or `run.json` keep `runner/rollup.py` and `DESIGN.md` §6 in sync and bump `VERSION`.
 - **License:** this repo is GPL v3 because `controller/` compiles against Forge. Don't vendor non-GPL-compatible code.
