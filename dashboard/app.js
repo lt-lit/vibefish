@@ -1,5 +1,5 @@
 /* Vibefish dashboard. Vanilla JS, no build step.
- * Data contract (base URL from ?data=, default ./data/):
+ * Data contract (base URL from ?data=; otherwise ./data/ then ../demo-data/, whichever has an index.json):
  *   index.json                 {"runs":[{id, generated, forge_version, pod, games, path}]}
  *   <run.path>                 rollup.json written by runner/rollup.py
  *   cards/scryfall-cache.json  {name: {image_uris:{small,normal}, scryfall_uri, ...}} (optional)
@@ -8,7 +8,8 @@
   'use strict';
 
   const qs = new URLSearchParams(location.search);
-  const DATA = (qs.get('data') || './data').replace(/\/+$/, '') + '/';
+  const DATA_CANDIDATES = qs.get('data') ? [qs.get('data')] : ['./data', '../demo-data'];
+  let DATA = DATA_CANDIDATES[0].replace(/\/+$/, '') + '/';
   const MAX_SERIES = 8;
   const seatColor = (seat) => `var(--s${(seat % MAX_SERIES) + 1})`;
   const SVG = 'http://www.w3.org/2000/svg';
@@ -374,7 +375,13 @@
   async function main() {
     const status = $('#status');
     try {
-      const index = await loadJson(DATA + 'index.json');
+      let index = null;
+      for (const c of DATA_CANDIDATES) {
+        const base = c.replace(/\/+$/, '') + '/';
+        const r = await fetch(base + 'index.json', { cache: 'no-cache' }).catch(() => null);
+        if (r && r.ok) { DATA = base; index = await r.json(); break; }
+      }
+      if (!index) throw new Error(`no index.json under ${DATA_CANDIDATES.join(' or ')}`);
       const runs = (index.runs || []).slice();
       if (!runs.length) throw new Error('index.json lists no runs yet');
       const select = $('#run-select');
