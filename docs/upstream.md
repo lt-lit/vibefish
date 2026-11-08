@@ -25,12 +25,12 @@ choice instead. Seen in 4-player Commander games with the pod precons:
 
 | Message | Where seen |
 |---|---|
-| `java.lang.RuntimeException: Couldn't map The Monarch (756)/...` | ab1 (`results/ab1-pod-v1-snapshot-2026-11-08-mc-vs-heuristic`), 5 times in one game: the Monarch effect card in the command zone does not survive the game copy |
-| `java.lang.RuntimeException: Couldn't map Auntie Ool, Cursewretch (201)/...` | ab1, 5 times in one game: a commander that had left and returned |
+| `java.lang.RuntimeException: Couldn't map The Monarch (756)/...` | ab1, game seed 20461111 (pass `--seed 20461110`), 5 times in that game: the Monarch effect card in the command zone does not survive the game copy |
+| `java.lang.RuntimeException: Couldn't map Auntie Ool, Cursewretch (201)/...` | ab1, game seed 20361111 (pass `--seed 20361110`), 5 times in that game: a commander that had left and returned |
 | `java.lang.NullPointerException: Cannot invoke "forge.game.card.Card.hasRemembered()" because "origCard" is null` | smoke runs, game seeds 778 and 20261110 (`--mc on` and `--mc max`), 5 times each |
 
-The game seeds for the ab1 messages are listed by the run logs (`shard-N.log`, the `[vibefish] game N seed S`
-line before each failure). At `--mc max` one game also reported `failures=16 unsimulatableCards=11` in
+The ab1 games used `--rotate-profiles`; both listed games are game 3 of their shard, where the profile order was
+`Vibefish-Heuristic, Vibefish-Heuristic, Vibefish-MC, Vibefish-MC`. At `--mc max` one game also reported `failures=16 unsimulatableCards=11` in
 `FLATMC-STATS`; the harness keeps that block per game in `run.json` as `mc_stats`.
 
 ## Observations worth sharing
