@@ -190,6 +190,9 @@ public final class JsonGameLogger {
                     for (CardView attacker : byAttacker.keySet()) {
                         List<String> blockers = new ArrayList<>();
                         for (CardView b : byAttacker.get(attacker)) {
+                            if (b == null || b.getId() == attacker.getId()) {
+                                continue; // Forge lists an unblocked attacker as its own blocker
+                            }
                             blockers.add(name(b));
                         }
                         blocks.add(obj("attacker", name(attacker), "blockers", blockers));

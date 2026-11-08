@@ -35,6 +35,7 @@ runner/publish.sh results/<run-id> demo-data           # → demo-data/runs/<run
 runner/scorecard.py results/<run-id>/rollup.json       # sim vs Playgroup human references (runner/reference/playgroup-commander.json)
 runner/goldfish.sh /abs/path/Deck.dck -n 8 -s 42        # deck vs three lands-only do-nothing decks → kill-turn distribution in goldfish.json
 runner/status.py --port 8787                           # live progress page for runs in results/ (ETA, per-shard pace, interim wins by arm); dev tool, nothing written
+runner/playstyle.py results/<run-id> [--by-profile]    # how the seats played, from the event logs: attack frequency/targets, combat damage per turn, mana use, closing speed
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```

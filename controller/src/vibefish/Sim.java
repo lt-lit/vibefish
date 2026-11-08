@@ -65,7 +65,7 @@ import forge.util.MyRandom;
  * Relative paths resolve against $VIBEFISH_CWD when set (the launcher cds into the Forge runtime).
  */
 public final class Sim {
-    public static final String VERSION = "0.1.0";
+    public static final String VERSION = "0.1.1";
     static final Gson GSON = new GsonBuilder().disableHtmlEscaping().serializeNulls().create();
     static final Gson GSON_PRETTY = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
 
