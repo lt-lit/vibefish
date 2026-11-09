@@ -18,6 +18,9 @@ focus seat is given:
     mcdata   mc plus the deck's data and profile
     mcmax    as mc, with Forge's Monte Carlo at desktop strength (--mc max: no time budget, about three times slower)
     mcmaxdata  mcmax plus the deck's data and profile
+    playbook   the deck's playbook (Phase 4: Vibefish's own attack policy and mulligan rule through Forge's controller
+             hooks, --playbook) on the focus seat; no data, Default profile, heuristic opponents
+    playbookdata  playbook plus the deck's data and profile
 
 One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games
 are never replayed. The rollup pairs the arms game by game: wins per arm with Wilson intervals, the paired
@@ -51,6 +54,8 @@ ARMS = {
     "mcdata": {"data": True, "mc": "on", "focus_profile": "deck", "opp_profile": "Vibefish-Heuristic"},
     "mcmax": {"data": False, "mc": "max", "focus_profile": "", "opp_profile": "Vibefish-Heuristic"},
     "mcmaxdata": {"data": True, "mc": "max", "focus_profile": "deck", "opp_profile": "Vibefish-Heuristic"},
+    "playbook": {"data": False, "mc": "off", "focus_profile": "", "opp_profile": "", "playbook": True},
+    "playbookdata": {"data": True, "mc": "off", "focus_profile": "deck", "opp_profile": "", "playbook": True},
 }
 
 
@@ -157,6 +162,8 @@ def cmd_play(args):
                 cmd += ["--profile", focus_profile if sid == args.deck else spec["opp_profile"]]
         if spec["data"]:
             cmd += ["--data", f"{args.deck}={data_file}"]
+        if spec.get("playbook"):
+            cmd += ["--playbook", f"{args.deck}={data_file}"]
         return cmd
 
     def play(item):
@@ -202,6 +209,17 @@ def cmd_play(args):
     return 0
 
 
+def sum_stats(dicts):
+    """Playbook counters summed over the games that have them (None when none do)."""
+    if not dicts:
+        return None
+    out = collections.Counter()
+    for d in dicts:
+        out.update(d)
+    out["games"] = len(dicts)
+    return dict(out)
+
+
 def cmd_rollup(args):
     out = os.path.abspath(args.run_dir)
     meta = lg.load_json(os.path.join(out, "ab.json"))
@@ -223,7 +241,8 @@ def cmd_rollup(args):
                                              "winner_id": seats[gm["winner"]] if gm.get("winner") is not None else None, "turns": gm.get("turns"),
                                              "reason": gm.get("reason"), "duration_ms": gm.get("duration_ms"),
                                              "focus_lost_turn": next((p.get("turn_lost") for p in gm.get("players", []) if p.get("seat") == fs), None),
-                                             "data": (run["decks"][fs].get("data") or {}).get("key_cards_applied"), "ai_lists": run.get("ai_lists")}
+                                             "data": (run["decks"][fs].get("data") or {}).get("key_cards_applied"), "ai_lists": run.get("ai_lists"),
+                                             "playbook_stats": gm.get("playbook_stats")}
         per_arm[arm] = games
     arm_stats = {}
     for arm, games in per_arm.items():
@@ -234,7 +253,8 @@ def cmd_rollup(args):
                           "avg_turns": rl.mean([g["turns"] for g in games.values()]),
                           "avg_seconds": rl.mean([(g["duration_ms"] or 0) / 1000 for g in games.values()]),
                           "avg_turn_lost": rl.mean([g["focus_lost_turn"] for g in games.values() if g["focus_lost_turn"] is not None]),
-                          "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s) for s in range(4)]}
+                          "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s) for s in range(4)],
+                          "playbook": sum_stats([g["playbook_stats"] for g in games.values() if g.get("playbook_stats")])}
     pairs = {}
     arms = meta["arms"]
     if len(arms) >= 2:
@@ -261,7 +281,8 @@ def cmd_rollup(args):
     for arm, s in arm_stats.items():
         ci = s["win_rate_ci95"] or [0, 0]
         print(f"  {arm:<8} {s['wins']:>3}/{s['games']:<3} {(s['win_rate'] or 0) * 100:5.1f}% ({ci[0] * 100:.0f}–{ci[1] * 100:.0f}%)  draws {s['draws']}  "
-              f"turns {s['avg_turns']}  lost at own turn {s['avg_turn_lost']}  wins by seat {s['wins_by_seat']}", file=sys.stderr)
+              f"turns {s['avg_turns']}  lost at own turn {s['avg_turn_lost']}  wins by seat {s['wins_by_seat']}"
+              + (f"  playbook {s['playbook']}" if s.get('playbook') else ""), file=sys.stderr)
     for k, p in pairs.items():
         ci = p["difference_ci95"] or [0, 0]
         print(f"  {k}: {p['pairs']} pairs, difference {(p['difference'] or 0) * 100:+.1f} points (95% {ci[0] * 100:+.0f} to {ci[1] * 100:+.0f}); "

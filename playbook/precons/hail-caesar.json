@@ -51,5 +51,17 @@
   },
   "on": "2026-11-09",
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ },
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "lowest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3
+  },
+  "notes": "Go wide: Caesar's attack trigger wants an attack every turn, and the aristocrats pieces turn trades into cards, Treasure and damage.",
+  "on": "2026-11-09"
  }
 }

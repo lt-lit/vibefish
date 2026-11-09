@@ -50,5 +50,17 @@
   },
   "on": "2026-11-09",
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ },
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "lowest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3
+  },
+  "notes": "Go wide: attack the lowest-life opponent with every creature not needed to survive the strongest opponent's counter-attack, whenever three or more can go. Forge's own attack logic keeps most of the board home (§17); anthems and lifelink tokens reward swinging.",
+  "on": "2026-11-09"
  }
 }

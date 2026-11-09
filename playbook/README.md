@@ -43,3 +43,27 @@ runner/deckdata.py forge-lines playbook/precons/token-triumph.json      # the li
 runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph --runtime forge/runtime-snapshot -j 2
 runner/ab.py rollup results/ab-token-triumph                            # paired: same tables with and without the data
 ```
+
+## `playbook` (Phase 4)
+
+A top-level `playbook` object in the same file holds the decisions Vibefish takes for the seat instead of Forge's AI
+(`controller/src/vibefish/Playbook.java`, applied by `PlaybookController` through Forge's public controller hooks when
+the harness is given `--playbook id=file`). Everything absent stays Forge's. Version 1:
+
+```
+"playbook": {
+  "version": 1,
+  "attack":   {"policy": "go_wide", "target": "lowest_life" | "weakest_board", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3},
+  "mulligan": {"min_lands": 2, "max_lands": 5, "max_mulligans": 2},
+  "notes": "why"
+}
+```
+
+`go_wide` attacks the chosen opponent with every creature that can attack it free of attack taxes, minus a reserve:
+the toughest creatures are kept home, up to `max_reserve`, until the strongest single opponent's possible attack next
+turn is below our life minus `safety_margin` (each kept blocker is assumed to absorb that opponent's biggest attacker).
+With fewer than `min_attackers` able to go, or no legal declaration, Forge decides as usual. The `mulligan` rule keeps a
+hand whose land count is within the range and never mulligans past `max_mulligans`; without it Forge's own mulligan
+logic runs. The harness records the playbook per seat in `run.json` (`decks[].playbook`) and the policy's counters per
+game (`games[].playbook_stats`: `attack_decisions`, `attack_policy`, `attack_fallback`, `attackers_declared`,
+`attackers_reserved`, `mulligan_decisions`, `mulligans_taken`). `runner/ab.py` has `playbook` and `playbookdata` arms.

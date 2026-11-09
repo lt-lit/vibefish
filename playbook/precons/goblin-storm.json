@@ -77,5 +77,17 @@
   },
   "on": "2026-11-09",
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ },
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "lowest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3
+  },
+  "notes": "Go wide with the Goblins: the lords give haste and the token makers refill the board; Impact Tremors and Pashalik Mons make the chump blocks cost the table.",
+  "on": "2026-11-09"
  }
 }

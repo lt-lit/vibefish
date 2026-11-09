@@ -20,7 +20,9 @@ writes playbook/precons/<id>.json with a `generated` block:
     deck_plan   "auto": Forge classifies the deck itself (FLAT_MC_DECK_PLAN); a curated file may force an archetype
     profile     per-seat AI profile overrides (none generated; curated only)
 
-A `curated` block, written by hand, overrides the generated one key by key and is never touched by this script.
+A `curated` block, written by hand, overrides the generated one key by key and is never touched by this script; a
+top-level `playbook` object (Phase 4: the decisions Vibefish takes for the seat, see controller/src/vibefish/Playbook.java)
+is carried over untouched as well.
 The harness applies the effective data to the seat that plays the deck (--data id=file); the stock seats are
 untouched. Standard library only.
 """
@@ -342,6 +344,8 @@ def cmd_generate(args):
             },
             "curated": existing.get("curated") or {},
         }
+        if existing.get("playbook"):
+            data["playbook"] = existing["playbook"]        # Phase 4, hand-written, kept as is
         dump_json(path, data)
         n += 1
         print(f"{d['id']:<26} combos {len(combos)} pairs {len(pairs)} roles {sum(len(v) for v in roles.values()):>2} key {len(key_cards)}"

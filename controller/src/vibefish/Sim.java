@@ -104,6 +104,8 @@ public final class Sim {
         System.err.println("                         [--mc off|on|max|lite] [--start N] [--forge-version TAG] [--data id=deck.json ...]");
         System.err.println("  --data gives one seat its deck's AI data (playbook/precons/<id>.json, see runner/deckdata.py): KeyCards on");
         System.err.println("  the deck, card roles and combos added to Forge's AI lists for the game. Seats without --data are untouched.");
+        System.err.println("  --playbook id=deck.json gives one seat its playbook (the file's playbook object): Vibefish takes the decisions");
+        System.err.println("  it covers (attack policy, mulligan rule) through Forge's controller hooks; the rest stays Forge's AI.");
         System.err.println("  --profile is given once per seat in deck order; --rotate-profiles shifts the assignment by one seat");
         System.err.println("  every game, so each deck plays each profile equally (A/B runs). --mc switches Forge's Flat Monte");
         System.err.println("  Carlo AI on for the game (2.0.16+ builds); a profile with FLAT_MC_ENABLED=false keeps the heuristic AI.");
@@ -156,6 +158,7 @@ public final class Sim {
         String mcMode = "off";
         boolean rotateProfiles = false;
         Map<String, String> dataFiles = new LinkedHashMap<>();
+        Map<String, String> playbookFiles = new LinkedHashMap<>();
         for (int i = 0; i < args.length; i++) {
             String a = args[i];
             switch (a) {
@@ -179,6 +182,16 @@ public final class Sim {
                         return 2;
                     }
                     dataFiles.put(spec.substring(0, eq), spec.substring(eq + 1));
+                    break;
+                }
+                case "--playbook": {
+                    String spec = args[++i];
+                    int eq = spec.indexOf('=');
+                    if (eq <= 0) {
+                        System.err.println("--playbook wants id=file.json");
+                        return 2;
+                    }
+                    playbookFiles.put(spec.substring(0, eq), spec.substring(eq + 1));
                     break;
                 }
                 default:
@@ -242,7 +255,29 @@ public final class Sim {
             }
             String profile = profiles.size() > i ? profiles.get(i) : "";
             RegisteredPlayer rp = RegisteredPlayer.forCommander(deck);
-            rp.setPlayer(GamePlayerUtil.createAiPlayer(id, i, profile));
+            Playbook playbook = null;
+            Map<String, Object> playbookInfo = null;
+            if (playbookFiles.containsKey(id)) {
+                File pf = resolve(playbookFiles.get(id), null);
+                playbook = Playbook.fromDeckFile(JsonParser.parseString(Files.readString(pf.toPath())).getAsJsonObject());
+                if (playbook == null) {
+                    System.err.println("[vibefish] " + pf + " has no playbook object");
+                    return 2;
+                }
+                VibefishLobbyPlayer lp = new VibefishLobbyPlayer(id, null, playbook);
+                lp.setAiProfile(profile.isEmpty() ? "Default" : profile);
+                lp.setAvatarIndex(i);
+                lp.setSleeveIndex(0);
+                rp.setPlayer(lp);
+                playbookInfo = obj("file", pf.getName(), "version", playbook.version, "attack", playbook.attack == null ? null
+                        : obj("policy", playbook.attack.policy, "target", playbook.attack.target, "min_attackers", playbook.attack.minAttackers,
+                              "safety_margin", playbook.attack.safetyMargin, "max_reserve", playbook.attack.maxReserve),
+                        "mulligan", playbook.mulligan == null ? null
+                        : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans));
+                System.err.printf("[vibefish] playbook for %s: %s%n", id, playbook.describe());
+            } else {
+                rp.setPlayer(GamePlayerUtil.createAiPlayer(id, i, profile));
+            }
             seats.add(rp);
 
             List<String> commanders = new ArrayList<>();
@@ -260,6 +295,9 @@ public final class Sim {
             Map<String, Object> info = obj("seat", i, "id", id, "file", f.getName(), "name", deck.getName(),
                     "commanders", commanders, "profile", profile.isEmpty() ? "Default" : profile,
                     "main_count", deck.getMain().countAll(), "commander_cards", commanderCards, "cards", cards);
+            if (playbookInfo != null) {
+                info.put("playbook", playbookInfo);
+            }
             if (dataFiles.containsKey(id)) {
                 File df = resolve(dataFiles.get(id), null);
                 JsonObject data = effectiveData(JsonParser.parseString(Files.readString(df.toPath())).getAsJsonObject());
@@ -331,6 +369,7 @@ public final class Sim {
                 }
             }
             MyRandom.setRandom(new Random(seed));
+            PlaybookController.resetStats();
             Match match = new Match(rules, seats, "Vibefish");
             Game game = match.createGame();
             game.setNoGUIUser();
@@ -395,6 +434,9 @@ public final class Sim {
                 String mcStats = monteCarloStats(mcMode);
                 if (mcStats != null) {
                     summary.put("mc_stats", mcStats);
+                }
+                if (!playbookFiles.isEmpty()) {
+                    summary.put("playbook_stats", PlaybookController.statsSnapshot());
                 }
                 gameList.add(summary);
                 System.err.printf("[vibefish] game %d done: %s, turn %d, winner %s, %d s%n", g, endReason, turns,
