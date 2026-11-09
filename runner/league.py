@@ -27,6 +27,7 @@ import random
 import subprocess
 import sys
 import threading
+import time
 from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -150,8 +151,25 @@ def cmd_play(args):
     lock = threading.Lock()
     failures = []
     launcher = os.path.join(ROOT, "controller", "vibefish-sim.sh")
+    # Forge creates its profile directories the first time it boots in a runtime, and two JVMs doing that at the same
+    # moment race ("cannot create profile directory"). So the first game boots alone: the others wait until its event
+    # stream exists (the harness opens it after boot) or it has exited, then launch in parallel.
+    first_booted = threading.Event()
 
-    def play(g):
+    def launch(g, gdir, cmd, first):
+        proc = subprocess.Popen(cmd, env={**os.environ, "FORGE_RUNTIME": runtime}, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                text=True, errors="replace")
+        if first:
+            events = os.path.join(gdir, "games", "game-001.events.jsonl")
+            while proc.poll() is None and not os.path.exists(events):
+                time.sleep(0.5)
+            first_booted.set()
+        out_text, _ = proc.communicate()
+        return proc.returncode, out_text
+
+    def play(item):
+        order, g = item
+        first = order == 0
         gdir = game_dir(out, args.shard, g["index"])
         cmd = [launcher, "play", "--out", gdir, "--deck-dir", precon_dir]
         for sid in g["seats"]:
@@ -163,23 +181,35 @@ def cmd_play(args):
         if args.dry_run:
             print(" ".join(repr(c) if " " in c else c for c in cmd))
             return
+        if not first:
+            first_booted.wait(timeout=180)
         os.makedirs(gdir, exist_ok=True)
-        t0 = dt.datetime.now()
-        proc = subprocess.run(cmd, env={**os.environ, "FORGE_RUNTIME": runtime}, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                              text=True, errors="replace")
-        ok = proc.returncode == 0 or (proc.returncode == EXIT_TIMEOUT and completed(gdir))
-        secs = (dt.datetime.now() - t0).total_seconds()
+        attempts = 0
+        while True:
+            attempts += 1
+            t0 = dt.datetime.now()
+            rc, out_text = launch(g, gdir, cmd, first and attempts == 1)
+            secs = (dt.datetime.now() - t0).total_seconds()
+            ok = rc == 0 or (rc == EXIT_TIMEOUT and completed(gdir))
+            # a process that dies before it has played anything (boot failure, a transient error) gets one more try
+            if not ok and attempts == 1 and secs < 60 and not completed(gdir):
+                with lock:
+                    with open(log_path, "a", encoding="utf-8") as lf:
+                        lf.write(f"=== {now()} game {g['index']} exited with rc {rc} after {secs:.0f}s, retrying once\n{out_text}\n")
+                time.sleep(2)
+                continue
+            break
         line = f"game {g['index']} (cycle {g['cycle']} round {g['round']} table {g['table']}) {' / '.join(g['seats'])}: " \
-               f"{'ok' if ok else 'FAILED rc ' + str(proc.returncode)} in {secs:.0f}s"
+               f"{'ok' if ok else 'FAILED rc ' + str(rc)} in {secs:.0f}s{' (second attempt)' if attempts > 1 else ''}"
         with lock:
             with open(log_path, "a", encoding="utf-8") as lf:
-                lf.write(f"=== {now()} {line}\n{proc.stdout}\n")
+                lf.write(f"=== {now()} {line}\n{out_text}\n")
             print(line, file=sys.stderr)
             if not ok:
                 failures.append(g["index"])
 
     with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as ex:
-        list(ex.map(play, todo))
+        list(ex.map(play, enumerate(todo)))
     if failures:
         print(f"{len(failures)} game(s) failed: {failures}", file=sys.stderr)
         return 1

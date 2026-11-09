@@ -41,3 +41,7 @@ The ab1 games used `--rotate-profiles`; both listed games are game 3 of their sh
   games took about three times as long. Commander may want its own budget defaults.
 - Forge's AI mulligans far less than people do in Commander (about 20% of hands against Playgroup.gg's 36%) and
   its games run about three rounds longer than human games; see the calibration scorecard on the dashboard.
+- Two Forge processes starting at the same moment in a runtime Forge has never booted before race on creating the
+  profile directories: one of them dies in `FModel.initialize` with `java.lang.RuntimeException: cannot create profile
+  directory: .../profile/decks/planar/` (seen in every shard of the first league run in Actions, where the runtime is
+  fresh). Harmless once the directories exist; `runner/league.py` boots the first game of a shard alone for this reason.
