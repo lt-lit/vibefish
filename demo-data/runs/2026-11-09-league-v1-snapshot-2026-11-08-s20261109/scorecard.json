@@ -1,7 +1,7 @@
 {
  "run_id": "2026-11-09-league-v1-snapshot-2026-11-08-s20261109",
  "kind": "league",
- "games": 2188,
+ "games": 2200,
  "reference": "https://playgroup.gg (Commander games tracked in the Playgroup app and Playgroup Live); figures copied by hand from the public pages, not scraped",
  "reference_retrieved": "2026-11-09",
  "metrics": {
@@ -20,53 +20,53 @@
      "human_games": 199,
      "difference": -0.075,
      "human_tier": "A",
-     "sim_rank": 36.5,
+     "sim_rank": 36.0,
      "human_rank": 1.0
     },
     {
      "deck": "Legends' Legacy",
      "id": "legends-legacy",
-     "sim_win_rate": 0.266,
-     "sim_games": 94,
+     "sim_win_rate": 0.2708,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1871,
-      0.3632
+      0.192,
+      0.3673
      ],
      "human_win_rate": 0.3159,
      "human_games": 91,
-     "difference": -0.0499,
+     "difference": -0.0451,
      "human_tier": "A",
-     "sim_rank": 34.0,
+     "sim_rank": 33.5,
      "human_rank": 2.0
     },
     {
      "deck": "Temur Roar",
      "id": "temur-roar",
-     "sim_win_rate": 0.2828,
-     "sim_games": 99,
+     "sim_win_rate": 0.28,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.2035,
-      0.3784
+      0.2014,
+      0.3749
      ],
      "human_win_rate": 0.3021,
      "human_games": 120,
-     "difference": -0.0193,
+     "difference": -0.0221,
      "human_tier": "A",
-     "sim_rank": 29.0,
+     "sim_rank": 32.0,
      "human_rank": 3.0
     },
     {
      "deck": "Blame Game",
      "id": "blame-game",
-     "sim_win_rate": 0.3617,
-     "sim_games": 94,
+     "sim_win_rate": 0.3646,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.2718,
-      0.4625
+      0.2752,
+      0.4643
      ],
      "human_win_rate": 0.3005,
      "human_games": 94,
-     "difference": 0.0612,
+     "difference": 0.0641,
      "human_tier": "A",
      "sim_rank": 10.0,
      "human_rank": 4.0
@@ -74,17 +74,17 @@
     {
      "deck": "Tricky Terrain",
      "id": "tricky-terrain",
-     "sim_win_rate": 0.1717,
-     "sim_games": 99,
+     "sim_win_rate": 0.18,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.1101,
-      0.2579
+      0.117,
+      0.2667
      ],
      "human_win_rate": 0.2859,
      "human_games": 306,
-     "difference": -0.1142,
+     "difference": -0.1059,
      "human_tier": "B",
-     "sim_rank": 69.0,
+     "sim_rank": 67.5,
      "human_rank": 5.0
     },
     {
@@ -138,17 +138,17 @@
     {
      "deck": "Divine Convocation",
      "id": "divine-convocation",
-     "sim_win_rate": 0.2105,
-     "sim_games": 95,
+     "sim_win_rate": 0.2083,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1406,
-      0.3029
+      0.1391,
+      0.3
      ],
      "human_win_rate": 0.2604,
      "human_games": 48,
-     "difference": -0.0499,
+     "difference": -0.0521,
      "human_tier": "B",
-     "sim_rank": 53.5,
+     "sim_rank": 56.5,
      "human_rank": 10.0
     },
     {
@@ -202,17 +202,17 @@
     {
      "deck": "Miracle Worker",
      "id": "miracle-worker",
-     "sim_win_rate": 0.2447,
-     "sim_games": 94,
+     "sim_win_rate": 0.2396,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1689,
-      0.3405
+      0.1653,
+      0.3339
      ],
      "human_win_rate": 0.2576,
      "human_games": 148,
-     "difference": -0.0129,
+     "difference": -0.018,
      "human_tier": "B",
-     "sim_rank": 40.5,
+     "sim_rank": 42.5,
      "human_rank": 13.0
     },
     {
@@ -244,23 +244,23 @@
      "human_games": 268,
      "difference": -0.0549,
      "human_tier": "B",
-     "sim_rank": 62.0,
+     "sim_rank": 61.5,
      "human_rank": 15.0
     },
     {
      "deck": "Prismari Artistry",
      "id": "prismari-artistry",
-     "sim_win_rate": 0.2737,
-     "sim_games": 95,
+     "sim_win_rate": 0.2812,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1941,
-      0.3708
+      0.2011,
+      0.3783
      ],
      "human_win_rate": 0.2497,
      "human_games": 379,
-     "difference": 0.024,
+     "difference": 0.0315,
      "human_tier": "B",
-     "sim_rank": 32.0,
+     "sim_rank": 29.5,
      "human_rank": 16.0
     },
     {
@@ -276,7 +276,7 @@
      "human_games": 285,
      "difference": 0.0338,
      "human_tier": "B",
-     "sim_rank": 30.5,
+     "sim_rank": 29.5,
      "human_rank": 17.0
     },
     {
@@ -298,15 +298,15 @@
     {
      "deck": "Tinker Time",
      "id": "tinker-time",
-     "sim_win_rate": 0.0714,
-     "sim_games": 98,
+     "sim_win_rate": 0.07,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.035,
-      0.1402
+      0.0343,
+      0.1375
      ],
      "human_win_rate": 0.2431,
      "human_games": 72,
-     "difference": -0.1717,
+     "difference": -0.1731,
      "human_tier": "B",
      "sim_rank": 90.0,
      "human_rank": 19.0
@@ -330,129 +330,129 @@
     {
      "deck": "Explorers of the Deep",
      "id": "explorers-of-the-deep",
-     "sim_win_rate": 0.2842,
-     "sim_games": 95,
+     "sim_win_rate": 0.2812,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.2033,
-      0.3819
+      0.2011,
+      0.3783
      ],
      "human_win_rate": 0.238,
      "human_games": 520,
-     "difference": 0.0462,
+     "difference": 0.0432,
      "human_tier": "B",
-     "sim_rank": 28.0,
+     "sim_rank": 29.5,
      "human_rank": 21.0
     },
     {
      "deck": "Endless Punishment",
      "id": "endless-punishment",
-     "sim_win_rate": 0.5579,
-     "sim_games": 95,
+     "sim_win_rate": 0.5625,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.4577,
-      0.6536
+      0.4628,
+      0.6574
      ],
      "human_win_rate": 0.2379,
      "human_games": 588,
-     "difference": 0.32,
+     "difference": 0.3246,
      "human_tier": "B",
-     "sim_rank": 3.0,
+     "sim_rank": 2.5,
      "human_rank": 22.0
     },
     {
      "deck": "Dance of the Elements",
      "id": "dance-of-the-elements",
-     "sim_win_rate": 0.2553,
-     "sim_games": 94,
+     "sim_win_rate": 0.25,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.178,
-      0.3519
+      0.1741,
+      0.3451
      ],
      "human_win_rate": 0.2352,
      "human_games": 607,
-     "difference": 0.0201,
+     "difference": 0.0148,
      "human_tier": "B",
-     "sim_rank": 38.0,
+     "sim_rank": 38.5,
      "human_rank": 23.0
     },
     {
      "deck": "Jeskai Striker",
      "id": "jeskai-striker",
-     "sim_win_rate": 0.2447,
-     "sim_games": 94,
+     "sim_win_rate": 0.2396,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1689,
-      0.3405
+      0.1653,
+      0.3339
      ],
      "human_win_rate": 0.2348,
      "human_games": 173,
-     "difference": 0.0099,
+     "difference": 0.0048,
      "human_tier": "B",
-     "sim_rank": 40.5,
+     "sim_rank": 42.5,
      "human_rank": 24.0
     },
     {
      "deck": "Jump Scare!",
      "id": "jump-scare",
-     "sim_win_rate": 0.2105,
-     "sim_games": 95,
+     "sim_win_rate": 0.2083,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1406,
-      0.3029
+      0.1391,
+      0.3
      ],
      "human_win_rate": 0.2333,
      "human_games": 269,
-     "difference": -0.0228,
+     "difference": -0.025,
      "human_tier": "B",
-     "sim_rank": 53.5,
+     "sim_rank": 56.5,
      "human_rank": 25.0
     },
     {
      "deck": "Sultai Arisen",
      "id": "sultai-arisen",
-     "sim_win_rate": 0.1515,
-     "sim_games": 99,
+     "sim_win_rate": 0.16,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.094,
-      0.235
+      0.101,
+      0.2442
      ],
      "human_win_rate": 0.2282,
      "human_games": 407,
-     "difference": -0.0767,
+     "difference": -0.0682,
      "human_tier": "C",
-     "sim_rank": 77.0,
+     "sim_rank": 76.0,
      "human_rank": 26.0
     },
     {
      "deck": "Death Toll",
      "id": "death-toll",
-     "sim_win_rate": 0.3263,
-     "sim_games": 95,
+     "sim_win_rate": 0.3229,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.2404,
-      0.4257
+      0.2378,
+      0.4217
      ],
      "human_win_rate": 0.227,
      "human_games": 190,
-     "difference": 0.0993,
+     "difference": 0.0959,
      "human_tier": "C",
-     "sim_rank": 17.5,
+     "sim_rank": 18.5,
      "human_rank": 27.0
     },
     {
      "deck": "Desert Bloom",
      "id": "desert-bloom",
-     "sim_win_rate": 0.2128,
-     "sim_games": 94,
+     "sim_win_rate": 0.2188,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1422,
-      0.3059
+      0.1478,
+      0.3114
      ],
      "human_win_rate": 0.2247,
      "human_games": 168,
-     "difference": -0.0119,
+     "difference": -0.0059,
      "human_tier": "C",
-     "sim_rank": 52.0,
+     "sim_rank": 50.0,
      "human_rank": 28.0
     },
     {
@@ -468,7 +468,7 @@
      "human_games": 164,
      "difference": 0.0475,
      "human_tier": "C",
-     "sim_rank": 33.0,
+     "sim_rank": 33.5,
      "human_rank": 29.0
     },
     {
@@ -490,79 +490,79 @@
     {
      "deck": "Graveyard Overdrive",
      "id": "graveyard-overdrive",
-     "sim_win_rate": 0.3191,
-     "sim_games": 94,
+     "sim_win_rate": 0.3229,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.2336,
-      0.4189
+      0.2378,
+      0.4217
      ],
      "human_win_rate": 0.2218,
      "human_games": 142,
-     "difference": 0.0973,
+     "difference": 0.1011,
      "human_tier": "C",
-     "sim_rank": 20.0,
+     "sim_rank": 18.5,
      "human_rank": 31.0
     },
     {
      "deck": "Peace Offering",
      "id": "peace-offering",
-     "sim_win_rate": 0.2316,
-     "sim_games": 95,
+     "sim_win_rate": 0.2292,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1582,
-      0.3258
+      0.1565,
+      0.3227
      ],
      "human_win_rate": 0.2215,
      "human_games": 574,
-     "difference": 0.0101,
+     "difference": 0.0077,
      "human_tier": "C",
-     "sim_rank": 45.5,
+     "sim_rank": 46.5,
      "human_rank": 32.0
     },
     {
      "deck": "Party Time",
      "id": "party-time",
-     "sim_win_rate": 0.2211,
-     "sim_games": 95,
+     "sim_win_rate": 0.2188,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1494,
-      0.3144
+      0.1478,
+      0.3114
      ],
      "human_win_rate": 0.2197,
      "human_games": 95,
-     "difference": 0.0014,
+     "difference": -0.0009,
      "human_tier": "C",
-     "sim_rank": 48.0,
+     "sim_rank": 50.0,
      "human_rank": 33.0
     },
     {
      "deck": "We Are the Borg",
      "id": "we-are-the-borg",
-     "sim_win_rate": 0.2222,
-     "sim_games": 99,
+     "sim_win_rate": 0.23,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.1516,
-      0.3136
+      0.1584,
+      0.3215
      ],
      "human_win_rate": 0.2188,
      "human_games": 236,
-     "difference": 0.0034,
+     "difference": 0.0112,
      "human_tier": "C",
-     "sim_rank": 47.0,
+     "sim_rank": 45.0,
      "human_rank": 34.0
     },
     {
      "deck": "Calling All Angels",
      "id": "calling-all-angels",
-     "sim_win_rate": 0.6211,
-     "sim_games": 95,
+     "sim_win_rate": 0.625,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.5206,
-      0.7121
+      0.5251,
+      0.7153
      ],
      "human_win_rate": 0.2187,
      "human_games": 655,
-     "difference": 0.4024,
+     "difference": 0.4063,
      "human_tier": "C",
      "sim_rank": 1.0,
      "human_rank": 35.0
@@ -580,7 +580,7 @@
      "human_games": 279,
      "difference": 0.0219,
      "human_tier": "C",
-     "sim_rank": 43.5,
+     "sim_rank": 42.5,
      "human_rank": 36.0
     },
     {
@@ -602,47 +602,47 @@
     {
      "deck": "Revival Trance",
      "id": "revival-trance",
-     "sim_win_rate": 0.3085,
-     "sim_games": 94,
+     "sim_win_rate": 0.3125,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.2242,
-      0.4079
+      0.2285,
+      0.4109
      ],
      "human_win_rate": 0.2166,
      "human_games": 554,
-     "difference": 0.0919,
+     "difference": 0.0959,
      "human_tier": "C",
-     "sim_rank": 24.0,
+     "sim_rank": 22.5,
      "human_rank": 38.0
     },
     {
      "deck": "Eldrazi Incursion",
      "id": "eldrazi-incursion",
-     "sim_win_rate": 0.1702,
-     "sim_games": 94,
+     "sim_win_rate": 0.1667,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1076,
-      0.2587
+      0.1053,
+      0.2537
      ],
      "human_win_rate": 0.2165,
      "human_games": 433,
-     "difference": -0.0463,
+     "difference": -0.0498,
      "human_tier": "C",
-     "sim_rank": 70.0,
+     "sim_rank": 72.5,
      "human_rank": 39.0
     },
     {
      "deck": "Tramplesaurus Rex",
      "id": "tramplesaurus-rex",
-     "sim_win_rate": 0.3636,
-     "sim_games": 99,
+     "sim_win_rate": 0.37,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.2756,
-      0.4618
+      0.2818,
+      0.4678
      ],
      "human_win_rate": 0.2161,
      "human_games": 819,
-     "difference": 0.1475,
+     "difference": 0.1539,
      "human_tier": "C",
      "sim_rank": 9.0,
      "human_rank": 40.0
@@ -660,7 +660,7 @@
      "human_games": 656,
      "difference": 0.107,
      "human_tier": "C",
-     "sim_rank": 19.0,
+     "sim_rank": 18.5,
      "human_rank": 41.0
     },
     {
@@ -692,23 +692,23 @@
      "human_games": 134,
      "difference": 0.0458,
      "human_tier": "C",
-     "sim_rank": 36.5,
+     "sim_rank": 36.0,
      "human_rank": 43.0
     },
     {
      "deck": "Scions & Spellcraft",
      "id": "scions-and-spellcraft",
-     "sim_win_rate": 0.5684,
-     "sim_games": 95,
+     "sim_win_rate": 0.5625,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.4681,
-      0.6634
+      0.4628,
+      0.6574
      ],
      "human_win_rate": 0.2142,
      "human_games": 818,
-     "difference": 0.3542,
+     "difference": 0.3483,
      "human_tier": "C",
-     "sim_rank": 2.0,
+     "sim_rank": 2.5,
      "human_rank": 44.0
     },
     {
@@ -724,23 +724,23 @@
      "human_games": 40,
      "difference": -0.0458,
      "human_tier": "C",
-     "sim_rank": 73.5,
+     "sim_rank": 72.5,
      "human_rank": 45.0
     },
     {
      "deck": "Squirreled Away",
      "id": "squirreled-away",
-     "sim_win_rate": 0.1818,
-     "sim_games": 99,
+     "sim_win_rate": 0.18,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.1182,
-      0.2692
+      0.117,
+      0.2667
      ],
      "human_win_rate": 0.2115,
      "human_games": 494,
-     "difference": -0.0297,
+     "difference": -0.0315,
      "human_tier": "C",
-     "sim_rank": 67.0,
+     "sim_rank": 67.5,
      "human_rank": 46.0
     },
     {
@@ -778,15 +778,15 @@
     {
      "deck": "Goblin Storm",
      "id": "goblin-storm",
-     "sim_win_rate": 0.0526,
-     "sim_games": 95,
+     "sim_win_rate": 0.0521,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.0227,
-      0.1174
+      0.0224,
+      0.1162
      ],
      "human_win_rate": 0.2093,
      "human_games": 218,
-     "difference": -0.1567,
+     "difference": -0.1572,
      "human_tier": "C",
      "sim_rank": 91.0,
      "human_rank": 49.0
@@ -794,17 +794,17 @@
     {
      "deck": "Call for Backup",
      "id": "call-for-backup",
-     "sim_win_rate": 0.3263,
-     "sim_games": 95,
+     "sim_win_rate": 0.3229,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.2404,
-      0.4257
+      0.2378,
+      0.4217
      ],
      "human_win_rate": 0.2083,
      "human_games": 48,
-     "difference": 0.118,
+     "difference": 0.1146,
      "human_tier": "C",
-     "sim_rank": 17.5,
+     "sim_rank": 18.5,
      "human_rank": 50.0
     },
     {
@@ -820,7 +820,7 @@
      "human_games": 200,
      "difference": 0.0008,
      "human_tier": "C",
-     "sim_rank": 57.5,
+     "sim_rank": 56.5,
      "human_rank": 51.0
     },
     {
@@ -836,7 +836,7 @@
      "human_games": 133,
      "difference": -0.0039,
      "human_tier": "C",
-     "sim_rank": 60.5,
+     "sim_rank": 60.0,
      "human_rank": 52.0
     },
     {
@@ -852,7 +852,7 @@
      "human_games": 473,
      "difference": 0.0774,
      "human_tier": "C",
-     "sim_rank": 30.5,
+     "sim_rank": 29.5,
      "human_rank": 53.0
     },
     {
@@ -874,15 +874,15 @@
     {
      "deck": "Wakanda Forever",
      "id": "wakanda-forever",
-     "sim_win_rate": 0.1919,
-     "sim_games": 99,
+     "sim_win_rate": 0.19,
+     "sim_games": 100,
      "sim_win_rate_ci95": [
-      0.1264,
-      0.2804
+      0.1251,
+      0.2778
      ],
      "human_win_rate": 0.2014,
      "human_games": 677,
-     "difference": -0.0095,
+     "difference": -0.0114,
      "human_tier": "C",
      "sim_rank": 63.0,
      "human_rank": 55.0
@@ -890,17 +890,17 @@
     {
      "deck": "Riders of Rohan",
      "id": "riders-of-rohan",
-     "sim_win_rate": 0.2,
-     "sim_games": 95,
+     "sim_win_rate": 0.1979,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1319,
-      0.2914
+      0.1305,
+      0.2886
      ],
      "human_win_rate": 0.2008,
      "human_games": 539,
-     "difference": -0.0008,
+     "difference": -0.0029,
      "human_tier": "C",
-     "sim_rank": 60.5,
+     "sim_rank": 61.5,
      "human_rank": 56.0
     },
     {
@@ -916,7 +916,7 @@
      "human_games": 585,
      "difference": 0.0415,
      "human_tier": "C",
-     "sim_rank": 43.5,
+     "sim_rank": 42.5,
      "human_rank": 57.0
     },
     {
@@ -948,7 +948,7 @@
      "human_games": 221,
      "difference": 0.1157,
      "human_tier": "C",
-     "sim_rank": 22.0,
+     "sim_rank": 22.5,
      "human_rank": 59.0
     },
     {
@@ -980,7 +980,7 @@
      "human_games": 868,
      "difference": -0.028,
      "human_tier": "C",
-     "sim_rank": 73.5,
+     "sim_rank": 72.5,
      "human_rank": 61.0
     },
     {
@@ -1012,7 +1012,7 @@
      "human_games": 142,
      "difference": 0.0155,
      "human_tier": "C",
-     "sim_rank": 57.5,
+     "sim_rank": 56.5,
      "human_rank": 63.0
     },
     {
@@ -1034,15 +1034,15 @@
     {
      "deck": "Blood Rites",
      "id": "blood-rites",
-     "sim_win_rate": 0.3936,
-     "sim_games": 94,
+     "sim_win_rate": 0.3854,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.3009,
-      0.4947
+      0.2943,
+      0.4854
      ],
      "human_win_rate": 0.1902,
      "human_games": 184,
-     "difference": 0.2034,
+     "difference": 0.1952,
      "human_tier": "C",
      "sim_rank": 7.0,
      "human_rank": 65.0
@@ -1076,7 +1076,7 @@
      "human_games": 78,
      "difference": 0.1234,
      "human_tier": "C",
-     "sim_rank": 22.0,
+     "sim_rank": 22.5,
      "human_rank": 66.5
     },
     {
@@ -1092,23 +1092,23 @@
      "human_games": 90,
      "difference": 0.0611,
      "human_tier": "C",
-     "sim_rank": 39.0,
+     "sim_rank": 38.5,
      "human_rank": 68.0
     },
     {
      "deck": "Limit Break",
      "id": "limit-break",
-     "sim_win_rate": 0.1684,
-     "sim_games": 95,
+     "sim_win_rate": 0.1667,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1064,
-      0.2562
+      0.1053,
+      0.2537
      ],
      "human_win_rate": 0.1883,
      "human_games": 806,
-     "difference": -0.0199,
+     "difference": -0.0216,
      "human_tier": "C",
-     "sim_rank": 71.0,
+     "sim_rank": 72.5,
      "human_rank": 69.0
     },
     {
@@ -1124,7 +1124,7 @@
      "human_games": 262,
      "difference": -0.028,
      "human_tier": "C",
-     "sim_rank": 76.0,
+     "sim_rank": 77.0,
      "human_rank": 70.0
     },
     {
@@ -1140,7 +1140,7 @@
      "human_games": 176,
      "difference": 0.1286,
      "human_tier": "C",
-     "sim_rank": 22.0,
+     "sim_rank": 22.5,
      "human_rank": 71.0
     },
     {
@@ -1156,7 +1156,7 @@
      "human_games": 47,
      "difference": -0.0088,
      "human_tier": "D",
-     "sim_rank": 73.5,
+     "sim_rank": 72.5,
      "human_rank": 72.0
     },
     {
@@ -1172,7 +1172,7 @@
      "human_games": 221,
      "difference": 0.033,
      "human_tier": "D",
-     "sim_rank": 57.5,
+     "sim_rank": 56.5,
      "human_rank": 73.0
     },
     {
@@ -1188,7 +1188,7 @@
      "human_games": 200,
      "difference": -0.0867,
      "human_tier": "D",
-     "sim_rank": 88.0,
+     "sim_rank": 87.0,
      "human_rank": 74.0
     },
     {
@@ -1220,21 +1220,21 @@
      "human_games": 614,
      "difference": 0.0402,
      "human_tier": "D",
-     "sim_rank": 55.0,
+     "sim_rank": 53.0,
      "human_rank": 75.5
     },
     {
      "deck": "Counter Intelligence",
      "id": "counter-intelligence",
-     "sim_win_rate": 0.0737,
-     "sim_games": 95,
+     "sim_win_rate": 0.0729,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.0361,
-      0.1444
+      0.0358,
+      0.1429
      ],
      "human_win_rate": 0.1637,
      "human_games": 226,
-     "difference": -0.09,
+     "difference": -0.0908,
      "human_tier": "D",
      "sim_rank": 89.0,
      "human_rank": 77.0
@@ -1268,23 +1268,23 @@
      "human_games": 458,
      "difference": 0.0155,
      "human_tier": "D",
-     "sim_rank": 68.0,
+     "sim_rank": 69.0,
      "human_rank": 79.0
     },
     {
      "deck": "Deadly Disguise",
      "id": "deadly-disguise",
-     "sim_win_rate": 0.0842,
-     "sim_games": 95,
+     "sim_win_rate": 0.0833,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.0433,
-      0.1575
+      0.0428,
+      0.1559
      ],
      "human_win_rate": 0.1554,
      "human_games": 111,
-     "difference": -0.0712,
+     "difference": -0.0721,
      "human_tier": "D",
-     "sim_rank": 86.5,
+     "sim_rank": 87.0,
      "human_rank": 80.0
     },
     {
@@ -1306,17 +1306,17 @@
     {
      "deck": "Mutant Menace",
      "id": "mutant-menace",
-     "sim_win_rate": 0.2316,
-     "sim_games": 95,
+     "sim_win_rate": 0.2292,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1582,
-      0.3258
+      0.1565,
+      0.3227
      ],
      "human_win_rate": 0.1545,
      "human_games": 618,
-     "difference": 0.0771,
+     "difference": 0.0747,
      "human_tier": "D",
-     "sim_rank": 45.5,
+     "sim_rank": 46.5,
      "human_rank": 82.5
     },
     {
@@ -1332,23 +1332,23 @@
      "human_games": 233,
      "difference": 0.0855,
      "human_tier": "D",
-     "sim_rank": 42.0,
+     "sim_rank": 40.0,
      "human_rank": 82.5
     },
     {
      "deck": "Elven Council",
      "id": "elven-council",
-     "sim_win_rate": 0.0842,
-     "sim_games": 95,
+     "sim_win_rate": 0.0833,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.0433,
-      0.1575
+      0.0428,
+      0.1559
      ],
      "human_win_rate": 0.1536,
      "human_games": 140,
-     "difference": -0.0694,
+     "difference": -0.0703,
      "human_tier": "D",
-     "sim_rank": 86.5,
+     "sim_rank": 87.0,
      "human_rank": 84.0
     },
     {
@@ -1364,23 +1364,23 @@
      "human_games": 285,
      "difference": 0.0636,
      "human_tier": "D",
-     "sim_rank": 57.5,
+     "sim_rank": 56.5,
      "human_rank": 85.0
     },
     {
      "deck": "Mind Flayarrgh",
      "id": "mind-flayarrrs",
-     "sim_win_rate": 0.2632,
-     "sim_games": 95,
+     "sim_win_rate": 0.2604,
+     "sim_games": 96,
      "sim_win_rate_ci95": [
-      0.1851,
-      0.3597
+      0.1831,
+      0.3562
      ],
      "human_win_rate": 0.141,
      "human_games": 242,
-     "difference": 0.1222,
+     "difference": 0.1194,
      "human_tier": "D",
-     "sim_rank": 35.0,
+     "sim_rank": 36.0,
      "human_rank": 86.0
     },
     {
@@ -1396,7 +1396,7 @@
      "human_games": 242,
      "difference": 0.0309,
      "human_tier": "D",
-     "sim_rank": 73.5,
+     "sim_rank": 72.5,
      "human_rank": 87.0
     },
     {
@@ -1465,29 +1465,29 @@
     }
    ],
    "decks_compared": 91,
-   "spearman_rank_correlation": 0.271,
-   "pearson_correlation": 0.242,
+   "spearman_rank_correlation": 0.266,
+   "pearson_correlation": 0.246,
    "mean_abs_difference": 0.0811,
-   "sim_sd": 0.1069,
+   "sim_sd": 0.107,
    "human_sd": 0.0429,
    "note": "human rates are stock precons against mixed tables, normalised to a 25% baseline; sim rates are inside this league, so compare the ordering more than the levels",
    "well_measured": {
     "min_human_games": 100,
     "decks_compared": 74,
-    "spearman_rank_correlation": 0.284,
-    "pearson_correlation": 0.253
+    "spearman_rank_correlation": 0.281,
+    "pearson_correlation": 0.257
    }
   },
   "first_seat_win_rate": {
-   "sim": 0.2658,
-   "sim_games": 2163,
+   "sim": 0.2667,
+   "sim_games": 2175,
    "human": 0.2923,
    "even": 0.25,
    "sim_by_seat": [
-    0.2695,
-    0.2436,
+    0.2699,
+    0.2437,
     0.2501,
-    0.2367
+    0.2363
    ],
    "human_by_seat": [
     0.2923,
@@ -1498,10 +1498,10 @@
   },
   "mulligans_taken": {
    "sim": {
-    "0": 0.7671,
-    "1": 0.17,
-    "2": 0.0542,
-    "3+": 0.0087
+    "0": 0.7674,
+    "1": 0.1699,
+    "2": 0.054,
+    "3+": 0.0088
    },
    "human": {
     "0": 0.64,
@@ -1509,17 +1509,17 @@
     "2": 0.09,
     "3+": 0.03
    },
-   "sim_seat_games": 8752,
-   "sim_any_mulligan": 0.2329,
+   "sim_seat_games": 8800,
+   "sim_any_mulligan": 0.2326,
    "human_any_mulligan": 0.36
   },
   "opening_hand_lands": {
    "sim": {
     "0": 0.0003,
     "1": 0.0056,
-    "2": 0.3189,
-    "3": 0.3847,
-    "4": 0.2228,
+    "2": 0.3192,
+    "3": 0.3842,
+    "4": 0.2231,
     "5": 0.0674,
     "6": 0.0002,
     "7": 0.0
@@ -1531,13 +1531,13 @@
     "4": 0.21,
     "5": 0.05
    },
-   "sim_hands": 8752,
+   "sim_hands": 8800,
    "sim_mean": 3.03,
    "human_mean": 2.91
   },
   "rounds_per_game": {
-   "sim_mean": 12.01,
-   "sim_median": 11.8,
+   "sim_mean": 12.0,
+   "sim_median": 11.6,
    "human_mean": 8.75,
    "human_median": 9
   }
