@@ -281,7 +281,7 @@ def cmd_rollup(args):
     for arm, s in arm_stats.items():
         ci = s["win_rate_ci95"] or [0, 0]
         print(f"  {arm:<8} {s['wins']:>3}/{s['games']:<3} {(s['win_rate'] or 0) * 100:5.1f}% ({ci[0] * 100:.0f}–{ci[1] * 100:.0f}%)  draws {s['draws']}  "
-              f"turns {s['avg_turns']}  lost at own turn {s['avg_turn_lost']}  wins by seat {s['wins_by_seat']}"
+              f"turns {s['avg_turns']}  eliminated at game turn {s['avg_turn_lost']}  wins by seat {s['wins_by_seat']}"
               + (f"  playbook {s['playbook']}" if s.get('playbook') else ""), file=sys.stderr)
     for k, p in pairs.items():
         ci = p["difference_ci95"] or [0, 0]

@@ -37,7 +37,7 @@ runner/publish.sh results/<run-id> demo-data           # → demo-data/runs/<run
 runner/scorecard.py results/<run-id>/rollup.json       # sim vs Playgroup human references (runner/reference/playgroup-commander.json)
 runner/goldfish.sh /abs/path/Deck.dck -n 8 -s 42        # deck vs three lands-only do-nothing decks → kill-turn distribution in goldfish.json
 runner/status.py --port 8787                           # live progress page for runs in results/ (ETA, per-shard pace, interim wins by arm); dev tool, nothing written
-runner/playstyle.py results/<run-id> [--by-profile]    # how the seats played, from the event logs: attack frequency/targets, combat damage per turn, mana use, closing speed
+runner/playstyle.py results/<run-id> [--by-profile]    # how the seats played, from the event logs: attack frequency/targets, combat damage per turn, mana use, closing speed; an ab.py run dir splits each arm into focus seat and opponents
 runner/league.py schedule --seed 20261109 --cycles 25  # the precon league schedule: 91 precons, 22 tables a round, 2200 games, every deck in every seat once a cycle
 FORGE_RUNTIME=$PWD/forge/runtime-snapshot runner/league.py play --seed 20261109 --cycles 25 --out results/league-x --shards 20 --shard 1 -j 2
                                                        # one shard of the league locally (110 one-game harness runs); league-run.yml plays all shards in Actions

@@ -75,10 +75,12 @@ public class PlaybookController extends PlayerControllerAi {
     private boolean goWide(Player attacker, Combat combat, Playbook.Attack policy) {
         CardCollection possible = CombatUtil.getPossibleAttackers(attacker);
         if (possible.isEmpty()) {
+            count("attack_no_attackers", 1);
             return false;
         }
         Player defender = chooseDefender(attacker, possible, policy);
         if (defender == null) {
+            count("attack_no_defender", 1);
             return false;
         }
         List<Card> candidates = new ArrayList<>();
@@ -96,6 +98,7 @@ public class PlaybookController extends PlayerControllerAi {
         List<Card> going = new ArrayList<>(candidates);
         going.removeAll(reserve);
         if (going.size() < policy.minAttackers) {
+            count("attack_below_min", 1);
             return false;
         }
         for (Card c : going) {

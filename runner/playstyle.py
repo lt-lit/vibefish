@@ -3,7 +3,9 @@
 attack targeting, combat tempo, mana use and closing speed. Read-only; prints a text report.
 
 Usage: runner/playstyle.py RESULTS_DIR... [--by-profile]
-  RESULTS_DIR   a run dir holding shard-*/run.json and shard-*/games/*.events.jsonl
+  RESULTS_DIR   a run dir holding shard-*/run.json and shard-*/games/*.events.jsonl,
+                or an ab.py run (ab.json, arm-*/g*/run.json): seats are then labelled
+                <arm>/focus (the deck under test) and <arm>/opps (its stock opponents)
   --by-profile  label seats by their AI profile name instead of the arm labels
                 heuristic / mc-on / mc-max (Vibefish-MC* profiles count as Monte Carlo)
 
@@ -37,12 +39,27 @@ games = 0
 
 def bucket(ot): return 'T1-4' if ot <= 4 else 'T5-8' if ot <= 8 else 'T9-12' if ot <= 12 else 'T13+'
 
+def run_dirs(rd):
+    """(directory holding run.json, A/B arm or None): shard-* of a pod or league run, arm-*/g* of an ab.py run."""
+    out = [(d, None) for d in sorted(glob.glob(os.path.join(rd, 'shard-*'))) if os.path.isdir(d)]
+    for arm in sorted(glob.glob(os.path.join(rd, 'arm-*'))):
+        out += [(d, os.path.basename(arm)[4:]) for d in sorted(glob.glob(os.path.join(arm, 'g*'))) if os.path.isdir(d)]
+    return out
+
 for rd in ARGS.runs:
     run_id = os.path.basename(rd.rstrip('/'))
-    for shard in sorted((d for d in glob.glob(os.path.join(rd, 'shard-*')) if os.path.isdir(d))):
+    focus = json.load(open(os.path.join(rd, 'ab.json'))).get('deck') if os.path.exists(os.path.join(rd, 'ab.json')) else None
+    for shard, ab_arm in run_dirs(rd):
+        if not os.path.exists(os.path.join(shard, 'run.json')): continue
         run = json.load(open(os.path.join(shard, 'run.json')))
         cmc = {}; cmdrs = {}
         deck_id = {d['seat']: d['id'] for d in run['decks']}
+        def label(s):   # A/B runs: the arm, split into the deck under test and its three stock opponents
+            if ab_arm and not ARGS.by_profile:
+                return f"{ab_arm}/{'focus' if deck_id[s] == focus else 'opps'}"
+            return label(s)
+        def rkey(s):    # per-deck tables collapse to the same split in A/B runs
+            return label(s) if ab_arm and not ARGS.by_profile else deck_id[s]
         for d in run['decks']:
             for c in d['cards']: cmc[c['name']] = c.get('cmc', 0)
             cmdrs[d['seat']] = set(d['commanders'])
@@ -56,11 +73,11 @@ for rd in ARGS.runs:
             def flush():
                 if cur is None: return
                 s, ot = cur
-                arm0 = arm_of(prof[s], run_id); TEMPO[arm0][bucket(ot)+' turns'] += 1
+                arm0 = label(s); TEMPO[arm0][bucket(ot)+' turns'] += 1
                 TEMPO[arm0][bucket(ot)+' attacked'] += 1 if turn_att['n'] else 0
                 TEMPO[arm0][bucket(ot)+' attackers'] += turn_att['n']; TEMPO[arm0][bucket(ot)+' dmg'] += turn_att['dmg']
                 if ot >= 4 and lands >= 3:
-                    arm = arm_of(prof[s], run_id)
+                    arm = label(s)
                     T[arm][bucket(ot)].append(min(spent / lands, 1.5))
                     IDLE[arm][bucket(ot) + ' turns'] += 1
                     if spent == 0 and hand >= 3: IDLE[arm][bucket(ot) + ' idle'] += 1
@@ -73,7 +90,7 @@ for rd in ARGS.runs:
                     lands = state[s]['lands']; hand = len(state[s].get('hand') or [])
                     if state[s]['life'] <= 10: low_turns[s] += 1
                     for o, x in state.items():
-                        if o != s and x['alive']: EXPO[deck_id[o]] += 1
+                        if o != s and x['alive']: EXPO[rkey(o)] += 1
                 elif et == 'cast' and e.get('spell'):
                     s = e['seat']
                     if cur and s == cur[0]:
@@ -82,7 +99,7 @@ for rd in ARGS.runs:
                             c += 2 * ncmd[s]; ncmd[s] += 1
                         spent += c
                 elif et == 'attack' and state:
-                    s = e['seat']; arm = arm_of(prof[s], run_id)
+                    s = e['seat']; arm = label(s)
                     opp = {o: x for o, x in state.items() if o != s and x['alive']}
                     by = collections.Counter(a['defender_seat'] for a in e['attacks'] if a.get('defender_seat') is not None)
                     turn_att['n'] += sum(by.values())
@@ -93,7 +110,7 @@ for rd in ARGS.runs:
                     if weakest != leader and lifes[0] != lifes[1] and bfs[-1] != bfs[-2]:
                         SPLIT[arm]['n'] += n; SPLIT[arm]['weakest'] += by.get(weakest, 0); SPLIT[arm]['leader'] += by.get(leader, 0)
                     if len(by) == 1: A[arm]['single_target'] += 1
-                    for d, k in by.items(): RECV[deck_id.get(d, '?')] += k
+                    for d, k in by.items(): RECV[rkey(d)] += k
                     def uniq(key, rev):
                         vals = sorted(((x[key], o) for o, x in opp.items()), reverse=rev)
                         return vals[0][1] if vals[0][0] != vals[1][0] else None
@@ -116,33 +133,34 @@ for rd in ARGS.runs:
                         KILL['kills'] += 1
                         if src == winner: KILL['by_winner'] += 1
                         if src == e['seat']: KILL['self'] += 1
-                    LINGER[deck_id[e['seat']]].append(low_turns[e['seat']])
+                    LINGER[rkey(e['seat'])].append(low_turns[e['seat']])
             flush()
             if lost_t:
                 CLOSE['first_loss_t'].append(min(lost_t.values())); CLOSE['end_t'].append(end_t)
                 CLOSE['first_to_end'].append(end_t - min(lost_t.values()))
 
 print(f"games: {games}")
+if not games: sys.exit("no finished games found")
 print("\nATTACK TARGETING (share of attacking creatures sent at the unique opponent who is ...; ties skipped)")
 for arm, c in sorted(A.items()):
-    row = [f"{arm:9s} decl {c['declarations']:5d}  single-target {c['single_target']/c['declarations']:.0%}"]
+    row = [f"{arm:18s} decl {c['declarations']:5d}  single-target {c['single_target']/c['declarations']:.0%}"]
     for k in ('lowest_life', 'highest_life', 'biggest_board', 'smallest_board'):
         row.append(f"{k} {c[k]/c[k+'_n']:.0%}" if c[k+'_n'] else f"{k} n/a")
     print('  ' + '  '.join(row))
 print("  when the lowest-life opponent and the biggest-board opponent are different players:")
 for arm, c in sorted(SPLIT.items()):
-    print(f"    {arm:9s} attackers at weakest {c['weakest']/c['n']:.0%}, at leader {c['leader']/c['n']:.0%}, at the third {1-(c['weakest']+c['leader'])/c['n']:.0%}  (n={c['n']})")
+    print(f"    {arm:18s} attackers at weakest {c['weakest']/c['n']:.0%}, at leader {c['leader']/c['n']:.0%}, at the third {1-(c['weakest']+c['leader'])/c['n']:.0%}  (n={c['n']})")
 print("\nCOMBAT TEMPO per own turn: share of turns with an attack / mean attackers / mean combat damage to players")
 for arm, c in sorted(TEMPO.items()):
-    print('  ' + f"{arm:9s} " + '  '.join(f"{b} {c[b+' attacked']/c[b+' turns']:.0%} / {c[b+' attackers']/c[b+' turns']:.1f} / {c[b+' dmg']/c[b+' turns']:.1f}" for b in ('T1-4','T5-8','T9-12','T13+') if c[b+' turns']))
+    print('  ' + f"{arm:18s} " + '  '.join(f"{b} {c[b+' attacked']/c[b+' turns']:.0%} / {c[b+' attackers']/c[b+' turns']:.1f} / {c[b+' dmg']/c[b+' turns']:.1f}" for b in ('T1-4','T5-8','T9-12','T13+') if c[b+' turns']))
 print("\nATTACKERS RECEIVED per 100 opponent-turns alive, by deck")
 for d in sorted(EXPO): print(f"  {d:16s} {100*RECV[d]/EXPO[d]:5.1f}")
 print("\nMANA USE: mean (cmc cast on own turn / lands), own turns >= 4 with >= 3 lands, 0-cost and abilities not counted")
 for arm, b in sorted(T.items()):
-    print('  ' + f"{arm:9s} " + '  '.join(f"{k} {st.mean(v):.2f} (n={len(v)})" for k, v in sorted(b.items())))
+    print('  ' + f"{arm:18s} " + '  '.join(f"{k} {st.mean(v):.2f} (n={len(v)})" for k, v in sorted(b.items())))
 print("\nIDLE TURNS: own turn with >= 3 lands, >= 3 cards in hand, no spell cast")
 for arm, c in sorted(IDLE.items()):
-    print('  ' + f"{arm:9s} " + '  '.join(f"{k.split()[0]} {c[k.split()[0]+' idle']/c[k]:.0%}" for k in sorted(c) if k.endswith('turns')))
+    print('  ' + f"{arm:18s} " + '  '.join(f"{k.split()[0]} {c[k.split()[0]+' idle']/c[k]:.0%}" for k in sorted(c) if k.endswith('turns')))
 print("\nCLOSING")
 print(f"  first elimination at player-turn {st.mean(CLOSE['first_loss_t']):.1f} (median {st.median(CLOSE['first_loss_t']):.0f}); game ends at {st.mean(CLOSE['end_t']):.1f}; first elimination -> end {st.mean(CLOSE['first_to_end']):.1f} player-turns")
 print(f"  player damage: combat {DMG['combat']/DMG['total']:.0%}, commander {DMG['commander']/DMG['total']:.0%}")
