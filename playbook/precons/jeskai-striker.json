@@ -1,0 +1,57 @@
+{
+ "schema": 1,
+ "deck": "jeskai-striker",
+ "file": "Jeskai Striker [TDC] [2025].dck",
+ "name": "Jeskai Striker",
+ "commanders": [
+  "Shiko and Narset, Unified"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Narset's Reversal",
+   "Expansion // Explosion",
+   "Adaptive Training Post",
+   "Tempest Technique"
+  ],
+  "roles": {
+   "storm_payoff": [
+    "Tempest Technique"
+   ]
+  },
+  "combos": [],
+  "pairs": [
+   {
+    "cards": [
+     "Narset's Reversal",
+     "Expansion // Explosion"
+    ],
+    "produces": [
+     "Infinite magecraft triggers"
+    ],
+    "spellbook": "11-60"
+   },
+   {
+    "cards": [
+     "Adaptive Training Post",
+     "Expansion // Explosion"
+    ],
+    "produces": [
+     "Infinite magecraft triggers"
+    ],
+    "spellbook": "60-6452"
+   }
+  ],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 2,
+   "almost_included": 52,
+   "identity": "URW",
+   "retrieved": "2026-11-09T06:38:30Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {}
+}

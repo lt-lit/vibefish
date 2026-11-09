@@ -1,0 +1,66 @@
+{
+ "schema": 1,
+ "deck": "miracle-worker",
+ "file": "Miracle Worker [DSC] [2024].dck",
+ "name": "Miracle Worker",
+ "commanders": [
+  "Aminatou, Veil Piercer"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Ondu Spiritdancer",
+   "Secret Arcade // Dusty Parlor"
+  ],
+  "roles": {
+   "reanimation_spell": [
+    "Metamorphosis Fanatic"
+   ]
+  },
+  "combos": [
+   {
+    "kind": "win",
+    "name": "Ondu Spiritdancer + Secret Arcade // Dusty Parlor",
+    "slots": [
+     [
+      "Ondu Spiritdancer"
+     ],
+     [
+      "Secret Arcade // Dusty Parlor"
+     ]
+    ],
+    "produces": [
+     "Infinite creature ETB",
+     "Infinite creature tokens"
+    ],
+    "spellbook": "3729-6023"
+   }
+  ],
+  "pairs": [
+   {
+    "cards": [
+     "Ondu Spiritdancer",
+     "Secret Arcade // Dusty Parlor"
+    ],
+    "produces": [
+     "Infinite creature ETB",
+     "Infinite creature tokens"
+    ],
+    "spellbook": "3729-6023"
+   }
+  ],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 1,
+   "almost_included": 19,
+   "identity": "WUB",
+   "retrieved": "2026-11-09T06:37:18Z"
+  },
+  "cards_without_script": [
+   "Arvinox, the Mind Flail"
+  ]
+ },
+ "curated": {}
+}

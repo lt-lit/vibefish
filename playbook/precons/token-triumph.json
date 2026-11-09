@@ -1,0 +1,54 @@
+{
+ "schema": 1,
+ "deck": "token-triumph",
+ "file": "Token Triumph [SCD] [2022].dck",
+ "name": "Token Triumph",
+ "commanders": [
+  "Emmara, Soul of the Accord"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [],
+  "roles": {},
+  "combos": [],
+  "pairs": [],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 0,
+   "almost_included": 4,
+   "identity": "GW",
+   "retrieved": "2026-11-09T06:29:14Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {
+  "notes": "Go-wide tokens with anthems and Overrun. Forge's GO_WIDE plan wants two finishers it can hold until lethal (OVERRUN role) and 16 cheap bodies or token makers, which the deck has. PLAY_AGGRO lets the wide board attack instead of keeping every token home as a blocker (§17: notNeededAsBlockers is relaxed only by PLAY_AGGRO); token abilities are used every time. Key cards order the tutors (Harvest Season and Farhaven fetch lands, so mostly discard protection here) and the Monte Carlo plan.",
+  "key_cards": [
+   "Overrun",
+   "Collective Blessing",
+   "Dictate of Heliod",
+   "Trostani Discordant",
+   "Maja, Bretagard Protector",
+   "Champion of Lambholt",
+   "Verdant Force",
+   "Hornet Queen"
+  ],
+  "roles": {
+   "overrun": [
+    "Overrun",
+    "Collective Blessing",
+    "Dictate of Heliod"
+   ]
+  },
+  "deck_plan": "AGGRO",
+  "profile": {
+   "PLAY_AGGRO": "true",
+   "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+   "TOKEN_GENERATION_ALWAYS_IF_OPP_ATTACKS": "true"
+  },
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ }
+}

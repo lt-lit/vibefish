@@ -23,6 +23,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import java.util.function.Supplier;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -65,7 +66,7 @@ import forge.util.MyRandom;
  * Relative paths resolve against $VIBEFISH_CWD when set (the launcher cds into the Forge runtime).
  */
 public final class Sim {
-    public static final String VERSION = "0.1.1";
+    public static final String VERSION = "0.2.0";
     static final Gson GSON = new GsonBuilder().disableHtmlEscaping().serializeNulls().create();
     static final Gson GSON_PRETTY = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
 
@@ -100,7 +101,9 @@ public final class Sim {
     static void usage() {
         System.err.println("usage: vibefish.Sim play --out DIR --deck id=file.dck ... [--deck-dir DIR] [--games N] [--seed S]");
         System.err.println("                         [--clock SEC] [--turn-cap T] [--profile NAME ...] [--rotate-profiles]");
-        System.err.println("                         [--mc off|on|max|lite] [--start N] [--forge-version TAG]");
+        System.err.println("                         [--mc off|on|max|lite] [--start N] [--forge-version TAG] [--data id=deck.json ...]");
+        System.err.println("  --data gives one seat its deck's AI data (playbook/precons/<id>.json, see runner/deckdata.py): KeyCards on");
+        System.err.println("  the deck, card roles and combos added to Forge's AI lists for the game. Seats without --data are untouched.");
         System.err.println("  --profile is given once per seat in deck order; --rotate-profiles shifts the assignment by one seat");
         System.err.println("  every game, so each deck plays each profile equally (A/B runs). --mc switches Forge's Flat Monte");
         System.err.println("  Carlo AI on for the game (2.0.16+ builds); a profile with FLAT_MC_ENABLED=false keeps the heuristic AI.");
@@ -152,6 +155,7 @@ public final class Sim {
         int turnCap = 120;
         String mcMode = "off";
         boolean rotateProfiles = false;
+        Map<String, String> dataFiles = new LinkedHashMap<>();
         for (int i = 0; i < args.length; i++) {
             String a = args[i];
             switch (a) {
@@ -167,6 +171,16 @@ public final class Sim {
                 case "--turn-cap": turnCap = Integer.parseInt(args[++i]); break;
                 case "--mc": mcMode = args[++i].toLowerCase(); break;
                 case "--rotate-profiles": rotateProfiles = true; break;
+                case "--data": {
+                    String spec = args[++i];
+                    int eq = spec.indexOf('=');
+                    if (eq <= 0) {
+                        System.err.println("--data wants id=file.json");
+                        return 2;
+                    }
+                    dataFiles.put(spec.substring(0, eq), spec.substring(eq + 1));
+                    break;
+                }
                 default:
                     System.err.println("unknown option " + a);
                     usage();
@@ -212,6 +226,9 @@ public final class Sim {
 
         List<RegisteredPlayer> seats = new ArrayList<>();
         List<Map<String, Object>> deckInfos = new ArrayList<>();
+        List<String> roleLines = new ArrayList<>();
+        List<String> comboLines = new ArrayList<>();
+        List<String> pairLines = new ArrayList<>();
         for (int i = 0; i < deckArgs.size(); i++) {
             String spec = deckArgs.get(i);
             int eq = spec.indexOf('=');
@@ -240,9 +257,28 @@ public final class Sim {
             for (PaperCard pc : deck.getCommanders()) {
                 commanderCards.add(cardInfo(pc, 1));
             }
-            deckInfos.add(obj("seat", i, "id", id, "file", f.getName(), "name", deck.getName(),
+            Map<String, Object> info = obj("seat", i, "id", id, "file", f.getName(), "name", deck.getName(),
                     "commanders", commanders, "profile", profile.isEmpty() ? "Default" : profile,
-                    "main_count", deck.getMain().countAll(), "commander_cards", commanderCards, "cards", cards));
+                    "main_count", deck.getMain().countAll(), "commander_cards", commanderCards, "cards", cards);
+            if (dataFiles.containsKey(id)) {
+                File df = resolve(dataFiles.get(id), null);
+                JsonObject data = effectiveData(JsonParser.parseString(Files.readString(df.toPath())).getAsJsonObject());
+                List<String> keyCards = strings(data.get("key_cards"));
+                boolean keyed = applyKeyCards(deck, keyCards);
+                int r0 = roleLines.size(), c0 = comboLines.size(), p0 = pairLines.size();
+                dataLines(data, roleLines, comboLines, pairLines);
+                info.put("data", obj("file", df.getName(), "key_cards", keyed ? keyCards : new ArrayList<String>(),
+                        "key_cards_applied", keyed, "roles", roleLines.size() - r0, "combos", comboLines.size() - c0,
+                        "pairs", pairLines.size() - p0, "deck_plan", data.has("deck_plan") ? data.get("deck_plan").getAsString() : "auto"));
+                System.err.printf("[vibefish] data for %s: %d key cards%s, +%d role lines, +%d combos, +%d pairs%n", id, keyCards.size(),
+                        keyed ? "" : " (this build has no Deck.addKeyCard; not applied)", roleLines.size() - r0, comboLines.size() - c0, pairLines.size() - p0);
+            }
+            deckInfos.add(info);
+        }
+        Map<String, Object> aiLists = null;
+        if (!roleLines.isEmpty() || !comboLines.isEmpty() || !pairLines.isEmpty()) {
+            boolean ok = configureAiLists(roleLines, comboLines, pairLines);
+            aiLists = obj("applied", ok, "roles", roleLines.size(), "combos", comboLines.size(), "pairs", pairLines.size());
         }
 
         Map<String, Object> run = obj(
@@ -256,6 +292,7 @@ public final class Sim {
                 "mc", mcMode,
                 "mc_available", mcAvailable,
                 "rotate_profiles", rotateProfiles,
+                "ai_lists", aiLists,
                 "games_requested", games,
                 "started", Instant.now().toString(),
                 "decks", deckInfos,
@@ -377,6 +414,130 @@ public final class Sim {
     }
 
     /** Whether this Forge build has the Flat Monte Carlo switch on Game (2.0.16 snapshots and later). */
+    /** The deck data file's `curated` block laid over its `generated` block, key by key (runner/deckdata.py). */
+    static JsonObject effectiveData(JsonObject file) {
+        JsonObject out = new JsonObject();
+        for (String block : new String[] {"generated", "curated"}) {
+            if (file.has(block) && file.get(block).isJsonObject()) {
+                for (Map.Entry<String, JsonElement> e : file.getAsJsonObject(block).entrySet()) {
+                    if (!"notes".equals(e.getKey())) {
+                        out.add(e.getKey(), e.getValue());
+                    }
+                }
+            }
+        }
+        return out;
+    }
+
+    static List<String> strings(JsonElement el) {
+        List<String> out = new ArrayList<>();
+        if (el != null && el.isJsonArray()) {
+            for (JsonElement x : el.getAsJsonArray()) {
+                if (x.isJsonPrimitive()) {
+                    out.add(x.getAsString());
+                }
+            }
+        }
+        return out;
+    }
+
+    /** Lines for Forge's ai-card-roles.txt, ai-combos.txt and ai-commander-combos.txt from the data file's roles, combos and pairs. */
+    static void dataLines(JsonObject data, List<String> roles, List<String> combos, List<String> pairs) {
+        if (data.has("roles") && data.get("roles").isJsonObject()) {
+            for (Map.Entry<String, JsonElement> e : data.getAsJsonObject("roles").entrySet()) {
+                List<String> names = strings(e.getValue());
+                if (!names.isEmpty()) {
+                    roles.add(e.getKey() + " | " + String.join(" | ", names));
+                }
+            }
+        }
+        if (data.has("combos") && data.get("combos").isJsonArray()) {
+            for (JsonElement el : data.getAsJsonArray("combos")) {
+                JsonObject c = el.getAsJsonObject();
+                List<String> slots = new ArrayList<>();
+                if (c.has("slots")) {
+                    for (JsonElement slot : c.getAsJsonArray("slots")) {
+                        slots.add(String.join(" / ", strings(slot)));
+                    }
+                }
+                if (slots.size() >= 2) {
+                    combos.add((c.has("kind") ? c.get("kind").getAsString() : "win") + " | " + c.get("name").getAsString() + " | " + String.join(" | ", slots));
+                }
+            }
+        }
+        if (data.has("pairs") && data.get("pairs").isJsonArray()) {
+            for (JsonElement el : data.getAsJsonArray("pairs")) {
+                List<String> cards = strings(el.getAsJsonObject().get("cards"));
+                if (cards.size() == 2) {
+                    pairs.add("early_game | " + cards.get(0) + " | " + cards.get(1));
+                }
+            }
+        }
+    }
+
+    /** Forge deck metadata KeyCards (tutor targets first, protected from discard); by reflection so 2.0.15 still compiles. */
+    static boolean applyKeyCards(Deck deck, List<String> names) {
+        try {
+            java.lang.reflect.Method m = Deck.class.getMethod("addKeyCard", String.class);
+            for (String n : names) {
+                m.invoke(deck, n);
+            }
+            return true;
+        } catch (ReflectiveOperationException | RuntimeException e) {
+            return false;
+        }
+    }
+
+    static List<String> readLines(String path) {
+        try {
+            return new ArrayList<>(Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8));
+        } catch (IOException | RuntimeException e) {
+            return new ArrayList<>();
+        }
+    }
+
+    static List<String> plus(List<String> a, List<String> b) {
+        List<String> out = new ArrayList<>(a);
+        out.addAll(b);
+        return out;
+    }
+
+    /**
+     * Hands Forge's AI its shipped list files plus the seats' data lines, the way FModel configures them at boot
+     * (AiCardLists for card roles and Commander pairs, ComboCatalog for ai-combos), and forgets cached deck plans so
+     * the new lines are read for this game. 2.0.16+ builds only; reflection keeps the harness compiling on 2.0.15.
+     */
+    static boolean configureAiLists(List<String> roles, List<String> combos, List<String> pairs) {
+        try {
+            Class<?> fc = Class.forName("forge.localinstance.properties.ForgeConstants");
+            String rolesFile = (String) fc.getField("AI_CARD_ROLES_FILE").get(null);
+            String bracketFile = (String) fc.getField("COMMANDER_BRACKET_COMBOS_FILE").get(null);
+            String cmdFile = (String) fc.getField("AI_COMMANDER_COMBOS_FILE").get(null);
+            String combosFile = (String) fc.getField("AI_COMBOS_FILE").get(null);
+            Supplier<List<String>> rolesSup = () -> plus(readLines(rolesFile), roles);
+            Supplier<List<String>> bracketSup = () -> readLines(bracketFile);
+            Supplier<List<String>> cmdSup = () -> plus(readLines(cmdFile), pairs);
+            Supplier<List<String>> combosSup = () -> plus(readLines(combosFile), combos);
+            Class<?> lists = Class.forName("forge.ai.simulation.AiCardLists");
+            lists.getMethod("configure", Supplier.class, Supplier[].class).invoke(null, rolesSup, (Object) new Supplier[] {bracketSup, cmdSup});
+            Class<?> cat = Class.forName("forge.ai.simulation.ComboCatalog");
+            cat.getMethod("configure", Supplier.class).invoke(null, combosSup);
+            try {
+                Class<?> dp = Class.forName("forge.ai.simulation.DeckPlan");
+                java.lang.reflect.Field f = dp.getDeclaredField("KNOWN");
+                f.setAccessible(true);
+                ((Map<?, ?>) f.get(null)).clear();
+            } catch (ReflectiveOperationException | RuntimeException ignore) {
+                // older builds cache nothing here
+            }
+            System.err.printf("[vibefish] AI lists configured: +%d role lines, +%d combos, +%d pairs on top of Forge's own%n", roles.size(), combos.size(), pairs.size());
+            return true;
+        } catch (ReflectiveOperationException | RuntimeException e) {
+            System.err.println("[vibefish] this Forge build cannot take AI list data (" + e.getClass().getSimpleName() + "); key cards only");
+            return false;
+        }
+    }
+
     static boolean hasMonteCarloSwitch() {
         try {
             Game.class.getField("AI_FLAT_MONTE_CARLO");

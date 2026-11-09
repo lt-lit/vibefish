@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "deck": "animated-army",
+ "file": "Animated Army [BLC] [2024].dck",
+ "name": "Animated Army",
+ "commanders": [
+  "Bello, Bard of the Brambles"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Kodama of the East Tree",
+   "Gruul Turf",
+   "Rampaging Baloths"
+  ],
+  "roles": {},
+  "combos": [
+   {
+    "kind": "win",
+    "name": "Kodama of the East Tree + Gruul Turf + Rampaging Baloths",
+    "slots": [
+     [
+      "Kodama of the East Tree"
+     ],
+     [
+      "Gruul Turf"
+     ],
+     [
+      "Rampaging Baloths"
+     ]
+    ],
+    "produces": [
+     "Infinite creature tokens",
+     "Infinite creature ETB",
+     "Infinite landfall triggers"
+    ],
+    "spellbook": "573-1479-4488"
+   }
+  ],
+  "pairs": [],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 1,
+   "almost_included": 48,
+   "identity": "RG",
+   "retrieved": "2026-11-09T06:38:08Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {}
+}

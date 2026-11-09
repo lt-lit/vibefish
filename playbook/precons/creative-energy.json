@@ -1,0 +1,164 @@
+{
+ "schema": 1,
+ "deck": "creative-energy",
+ "file": "Creative Energy [M3C] [2024].dck",
+ "name": "Creative Energy",
+ "commanders": [
+  "Satya, Aetherflux Genius"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Gonti's Aether Heart",
+   "Decoction Module",
+   "Whirler Virtuoso",
+   "Lightning Runner",
+   "Cayth, Famed Mechanist",
+   "Aethergeode Miner",
+   "Aetherstorm Roc",
+   "Stone Idol Generator"
+  ],
+  "roles": {},
+  "combos": [
+   {
+    "kind": "win",
+    "name": "Gonti's Aether Heart + Decoction Module + Whirler Virtuoso",
+    "slots": [
+     [
+      "Gonti's Aether Heart"
+     ],
+     [
+      "Decoction Module"
+     ],
+     [
+      "Whirler Virtuoso"
+     ]
+    ],
+    "produces": [
+     "Infinite creature tokens",
+     "Infinite creature ETB"
+    ],
+    "spellbook": "2583-3484-4636"
+   },
+   {
+    "kind": "win",
+    "name": "Satya, Aetherflux Genius + Lightning Runner",
+    "slots": [
+     [
+      "Satya, Aetherflux Genius"
+     ],
+     [
+      "Lightning Runner"
+     ]
+    ],
+    "produces": [
+     "Infinite creature LTB",
+     "Infinite creature ETB",
+     "Infinite creature sacrifice triggers",
+     "Infinite death triggers"
+    ],
+    "spellbook": "4918-5658"
+   },
+   {
+    "kind": "win",
+    "name": "Cayth, Famed Mechanist + Aethergeode Miner + Decoction Module",
+    "slots": [
+     [
+      "Cayth, Famed Mechanist"
+     ],
+     [
+      "Aethergeode Miner"
+     ],
+     [
+      "Decoction Module"
+     ]
+    ],
+    "produces": [
+     "Infinite creature LTB",
+     "Infinite creature ETB",
+     "Infinite creature tokens"
+    ],
+    "spellbook": "3484-4374-5663"
+   },
+   {
+    "kind": "win",
+    "name": "Cayth, Famed Mechanist + Aethergeode Miner + Gonti's Aether Heart",
+    "slots": [
+     [
+      "Cayth, Famed Mechanist"
+     ],
+     [
+      "Aethergeode Miner"
+     ],
+     [
+      "Gonti's Aether Heart"
+     ]
+    ],
+    "produces": [
+     "Infinite creature LTB",
+     "Infinite creature ETB",
+     "Infinite creature tokens"
+    ],
+    "spellbook": "4374-4636-5663"
+   },
+   {
+    "kind": "win",
+    "name": "Cayth, Famed Mechanist + Aethergeode Miner + Aetherstorm Roc",
+    "slots": [
+     [
+      "Cayth, Famed Mechanist"
+     ],
+     [
+      "Aethergeode Miner"
+     ],
+     [
+      "Aetherstorm Roc"
+     ]
+    ],
+    "produces": [
+     "Infinite creature LTB",
+     "Infinite creature ETB",
+     "Infinite creature tokens"
+    ],
+    "spellbook": "3487-4374-5663"
+   }
+  ],
+  "pairs": [
+   {
+    "cards": [
+     "Satya, Aetherflux Genius",
+     "Lightning Runner"
+    ],
+    "produces": [
+     "Infinite creature LTB",
+     "Infinite creature ETB",
+     "Infinite creature sacrifice triggers"
+    ],
+    "spellbook": "4918-5658"
+   },
+   {
+    "cards": [
+     "Lightning Runner",
+     "Stone Idol Generator"
+    ],
+    "produces": [
+     "Infinite combat phases",
+     "Infinite energy counters",
+     "Infinite mana creatures you control can produce"
+    ],
+    "spellbook": "4918-5723"
+   }
+  ],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 9,
+   "almost_included": 68,
+   "identity": "URW",
+   "retrieved": "2026-11-09T06:37:32Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {}
+}

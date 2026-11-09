@@ -1,0 +1,55 @@
+{
+ "schema": 1,
+ "deck": "hail-caesar",
+ "file": "Hail, Caesar [PIP] [2024].dck",
+ "name": "Hail, Caesar",
+ "commanders": [
+  "Caesar, Legion's Emperor"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Luck Bobblehead"
+  ],
+  "roles": {
+   "reanimation_spell": [
+    "Marshal's Anthem"
+   ]
+  },
+  "combos": [],
+  "pairs": [],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 0,
+   "almost_included": 2,
+   "identity": "RWB",
+   "retrieved": "2026-11-09T06:29:17Z"
+  },
+  "cards_without_script": [
+   "V.A.T.S."
+  ]
+ },
+ "curated": {
+  "notes": "Aristocrats go-wide: Caesar sacrifices an attacker-adjacent creature on attack for tokens, cards or damage, so the deck wants to attack every turn with a wide board and keep token makers running (Assemble the Legion, Bastion of Remembrance, Pitiless Plunderer, Skullclamp). PLAY_AGGRO and always-on token abilities are the heuristic levers; Forge's ARISTOCRATS strategy is detected from the commander text on its own. No tutors in the list, so key cards act as discard protection and Monte Carlo plan pieces.",
+  "key_cards": [
+   "Assemble the Legion",
+   "Pitiless Plunderer",
+   "Skullclamp",
+   "Bastion of Remembrance",
+   "Fervent Charge",
+   "Intangible Virtue",
+   "Captain of the Watch",
+   "Elder Arthur Maxson"
+  ],
+  "deck_plan": "AGGRO",
+  "profile": {
+   "PLAY_AGGRO": "true",
+   "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+   "TOKEN_GENERATION_ALWAYS_IF_OPP_ATTACKS": "true"
+  },
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ }
+}

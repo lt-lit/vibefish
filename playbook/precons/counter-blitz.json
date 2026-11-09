@@ -1,0 +1,52 @@
+{
+ "schema": 1,
+ "deck": "counter-blitz",
+ "file": "Counter Blitz [FIC] [2025].dck",
+ "name": "Counter Blitz",
+ "commanders": [
+  "Tidus, Yuna's Guardian"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Gatta and Luzzu",
+   "Hardened Scales",
+   "Walking Ballista"
+  ],
+  "roles": {},
+  "combos": [
+   {
+    "kind": "win",
+    "name": "Gatta and Luzzu + Hardened Scales + Walking Ballista",
+    "slots": [
+     [
+      "Gatta and Luzzu"
+     ],
+     [
+      "Hardened Scales"
+     ],
+     [
+      "Walking Ballista"
+     ]
+    ],
+    "produces": [
+     "Infinite damage",
+     "Infinite +1/+1 counters on a creature"
+    ],
+    "spellbook": "2265-3693-6593"
+   }
+  ],
+  "pairs": [],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 1,
+   "almost_included": 66,
+   "identity": "GWU",
+   "retrieved": "2026-11-09T06:39:11Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {}
+}

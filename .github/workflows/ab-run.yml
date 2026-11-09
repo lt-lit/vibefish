@@ -1,0 +1,135 @@
+name: ab-run
+
+# Paired A/B of per-deck AI data (playbook/precons/<deck>.json): for each deck, the same tables and seeds are played
+# once per arm (stock, data, mc, mcdata), sharded; the rollup job pairs them up per deck. Results are uploaded as
+# artifacts (results/ab-<deck>/rollup.json); nothing is committed.
+on:
+  workflow_dispatch:
+    inputs:
+      decks:
+        description: "Deck ids, comma-separated (ids from runner/precon-league.json)"
+        default: "token-triumph,goblin-storm,tricky-terrain,hail-caesar"
+      games:
+        description: "Tables per deck (each played once per arm)"
+        default: "100"
+      arms:
+        description: "Arms, comma-separated: stock, data, mc, mcdata"
+        default: "stock,data"
+      shards_per_deck:
+        description: "Shard jobs per deck (total jobs = decks x shards, max 20 at once)"
+        default: "5"
+      jobs_per_shard:
+        description: "Games at a time per shard"
+        default: "2"
+      seed:
+        description: "Base seed (blank = today's date)"
+        default: ""
+      forge_channel:
+        description: "Forge build: the pinned release, or the daily-snapshot build below"
+        type: choice
+        options: [pinned, snapshot]
+        default: snapshot
+      forge_snapshot_build:
+        description: "Snapshot build to pin (FORGE_SNAPSHOT_BUILD); must be in forge/SHA256SUMS to be verified"
+        default: "2.0.16-SNAPSHOT-11.08"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ab-run-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  FORGE_CHANNEL: ${{ inputs.forge_channel }}
+  FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_channel == 'snapshot' && inputs.forge_snapshot_build || '' }}
+
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      seed: ${{ steps.vals.outputs.seed }}
+      matrix: ${{ steps.vals.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: vals
+        run: |
+          seed="${{ inputs.seed }}"; [ -n "$seed" ] || seed=$(date -u +%Y%m%d)
+          matrix=$(python3 -c "
+          import json
+          decks=[d.strip() for d in '${{ inputs.decks }}'.split(',') if d.strip()]
+          print(json.dumps([{'deck': d, 'shard': k} for d in decks for k in range(1, int('${{ inputs.shards_per_deck }}') + 1)]))")
+          { echo "seed=$seed"; echo "matrix=$matrix"; } >> "$GITHUB_OUTPUT"
+          echo "seed $seed; matrix $matrix"
+
+  shard:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        include: ${{ fromJSON(needs.prep.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Cache Forge runtime
+        uses: actions/cache@v4
+        with:
+          path: forge/runtime
+          key: forge-runtime-${{ runner.os }}-${{ env.FORGE_CHANNEL }}-${{ env.FORGE_SNAPSHOT_BUILD }}-${{ hashFiles('forge/VERSION', 'forge/SHA256SUMS', 'forge/fetch-forge.sh') }}
+      - run: forge/fetch-forge.sh
+      - name: Arm profiles
+        run: runner/make-arm-profiles.sh forge/runtime
+      - name: Play ${{ matrix.deck }} shard ${{ matrix.shard }}
+        run: |
+          python3 -I runner/ab.py play --deck "${{ matrix.deck }}" --games "${{ inputs.games }}" --seed "${{ needs.prep.outputs.seed }}" \
+            --out "results/ab-${{ matrix.deck }}" --runtime forge/runtime --arms "${{ inputs.arms }}" \
+            --shards "${{ inputs.shards_per_deck }}" --shard "${{ matrix.shard }}" -j "${{ inputs.jobs_per_shard }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ab-${{ matrix.deck }}-${{ matrix.shard }}
+          path: |
+            results/ab-${{ matrix.deck }}/arm-*/
+            results/ab-${{ matrix.deck }}/ab.json
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ab-${{ matrix.deck }}-${{ matrix.shard }}-log
+          path: results/ab-${{ matrix.deck }}/play.log
+          retention-days: 30
+
+  rollup:
+    needs: [prep, shard]
+    if: always() && needs.prep.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: ab-*
+          merge-multiple: false
+          path: artifacts
+      - name: Roll up per deck
+        run: |
+          set -e
+          mkdir -p results
+          for d in $(echo "${{ inputs.decks }}" | tr ',' ' '); do
+            mkdir -p "results/ab-$d"
+            for a in artifacts/ab-$d-[0-9]*; do
+              case "$a" in *-log) continue;; esac
+              cp -rn "$a"/. "results/ab-$d"/
+            done
+            python3 -I runner/ab.py rollup "results/ab-$d"
+          done
+          ls results
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ab-rollups
+          path: results/ab-*/rollup.json

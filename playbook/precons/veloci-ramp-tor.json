@@ -1,0 +1,57 @@
+{
+ "schema": 1,
+ "deck": "veloci-ramp-tor",
+ "file": "Veloci-Ramp-Tor [LCC] [2023].dck",
+ "name": "Veloci-Ramp-Tor",
+ "commanders": [
+  "Pantlaza, Sun-Favored"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Apex Altisaur",
+   "Wrathful Raptors",
+   "Akroma's Will",
+   "Return of the Wildspeaker"
+  ],
+  "roles": {
+   "overrun": [
+    "Return of the Wildspeaker"
+   ]
+  },
+  "combos": [
+   {
+    "kind": "win",
+    "name": "Apex Altisaur + Wrathful Raptors + Akroma's Will",
+    "slots": [
+     [
+      "Apex Altisaur"
+     ],
+     [
+      "Wrathful Raptors"
+     ],
+     [
+      "Akroma's Will"
+     ]
+    ],
+    "produces": [
+     "Destroy all creatures opponents control",
+     "Near-infinite damage"
+    ],
+    "spellbook": "2488-6778-7167"
+   }
+  ],
+  "pairs": [],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 1,
+   "almost_included": 38,
+   "identity": "RGW",
+   "retrieved": "2026-11-09T06:37:52Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {}
+}

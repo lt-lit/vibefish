@@ -1,0 +1,65 @@
+{
+ "schema": 1,
+ "deck": "blight-curse",
+ "file": "Blight Curse [ECC] [2026].dck",
+ "name": "Blight Curse",
+ "commanders": [
+  "Auntie Ool, Cursewretch"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Blowfly Infestation",
+   "Flourishing Defenses",
+   "Hapatra, Vizier of Poisons",
+   "Liliana, Death Wielder"
+  ],
+  "roles": {
+   "mass_payoff": [
+    "Liliana, Death Wielder"
+   ],
+   "big_target": [
+    "Ferrafor, Young Yew",
+    "Grim Poppet"
+   ]
+  },
+  "combos": [],
+  "pairs": [
+   {
+    "cards": [
+     "Blowfly Infestation",
+     "Flourishing Defenses"
+    ],
+    "produces": [
+     "Infinite creature ETB",
+     "Infinite creature LTB",
+     "Infinite death triggers"
+    ],
+    "spellbook": "1084-4994"
+   },
+   {
+    "cards": [
+     "Blowfly Infestation",
+     "Hapatra, Vizier of Poisons"
+    ],
+    "produces": [
+     "Infinite death triggers",
+     "Infinite creature ETB",
+     "Infinite creature LTB"
+    ],
+    "spellbook": "2228-4994"
+   }
+  ],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 2,
+   "almost_included": 40,
+   "identity": "BRG",
+   "retrieved": "2026-11-09T06:37:16Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {}
+}

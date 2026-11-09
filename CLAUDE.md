@@ -12,7 +12,7 @@ Commander deck playtesting engine built on Forge's headless `sim` mode. Engine o
 - **Forge:** pinned to the tag in `forge/VERSION` with the checksum in `forge/SHA256SUMS`. Do not float to `latest` or `daily-snapshots` unless `FORGE_CHANNEL=snapshot` is explicitly set; a snapshot build that published runs depend on is pinned exactly with `FORGE_SNAPSHOT_BUILD=<build>` and its checksum recorded in `forge/SHA256SUMS` (the 2026-11-08 build is). The runtime is downloaded by `forge/fetch-forge.sh` into `forge/runtime/` and is never committed.
 - **No Forge fork.** `controller/` compiles against the released Forge jar and uses public hooks (event bus, `PlayerControllerAi`). Patch Forge only if a hook is private, and record it in `DESIGN.md`.
 - **No upstream filing.** Forge bugs seen in runs are noted in `docs/upstream.md` for our own reference only; this project does not file Forge issues or PRs, so never suggest it.
-- **Per-deck bots, not a general bot.** Custom behaviour reaches a seat only through that seat's playbook and data, written for one specific deck (a precon or a deck from the user's meta). Shared behaviour modules are fine, but they stay inert unless a deck's playbook opts in with its own parameters, and seats without a playbook run stock Forge AI, untouched, as the baseline. We are not building a generalised bot: nothing is switched on for every deck regardless of context, and Forge's default AI is not rewritten.
+- **Per-deck bots, not a general bot.** Custom behaviour reaches a seat only through that seat's playbook and data, written for one specific deck (a precon or a deck from the user's meta). Shared behaviour modules are fine, but they stay inert unless a deck's playbook opts in with its own parameters, and seats without a playbook run stock Forge AI, untouched, as the baseline. We are not building a generalised bot: nothing is switched on for every deck regardless of context, and Forge's default AI is not rewritten. Phase 3 data (`playbook/precons/<id>.json`, DESIGN §19) reaches a seat through the harness `--data` and that seat's profile; Forge's role and combo lists are global for a game, so only lines about the deck's own cards go in.
 - **Always pass a clock** to sim mode (`-c` / `--clock`). Forge's default is 120 s and declares longer games a draw; Commander games routinely exceed it. The harness also caps turns (`--turn-cap`, default 120).
 - **Event schema:** changes to the JSONL events or `run.json` keep `runner/rollup.py` and `DESIGN.md` §6 in sync and bump `VERSION`.
 - **License:** this repo is GPL v3 because `controller/` compiles against Forge. Don't vendor non-GPL-compatible code.
@@ -42,6 +42,11 @@ runner/league.py schedule --seed 20261109 --cycles 25  # the precon league sched
 FORGE_RUNTIME=$PWD/forge/runtime-snapshot runner/league.py play --seed 20261109 --cycles 25 --out results/league-x --shards 20 --shard 1 -j 2
                                                        # one shard of the league locally (110 one-game harness runs); league-run.yml plays all shards in Actions
 runner/league.py rollup results/league-x               # per-deck win rates with Wilson intervals (kind: league); publish.sh and scorecard.py handle league runs
+runner/deckdata.py generate --runtime forge/runtime-snapshot [--deck ID]   # Phase 3 data drafts: playbook/precons/<id>.json (Spellbook + card scripts); curated blocks survive
+runner/deckdata.py forge-lines playbook/precons/token-triumph.json         # the KeyCards, role, combo and pair lines a seat will be given
+controller/vibefish-sim.sh play ... --data token-triumph=playbook/precons/token-triumph.json --profile "" --profile Vibefish-token-triumph ...   # one seat with its data
+runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph --runtime forge/runtime-snapshot -j 2 [--arms stock,data,mc,mcdata]
+runner/ab.py rollup results/ab-token-triumph               # paired A/B: same tables with and without the deck's data; ab-run.yml shards it in Actions
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```
@@ -59,6 +64,7 @@ Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never u
 - `phase0.yml`: Forge sim-mode smoke test on push to `forge/**`, `runner/**`.
 - `pod-run.yml` (manual): 4 shards × N games, rollup, optional publish into `demo-data/` on the branch.
 - `league-run.yml` (manual): the precon league in up to 20 shards (cycles, seed, Forge channel and snapshot build, profile, Monte Carlo as inputs), rollup and scorecard, optional publish of `rollup.json`, `scorecard.json` and `league.json` into `demo-data/` on the branch. Per-game data stays in the run's artifacts.
+- `ab-run.yml` (manual): paired A/Bs of per-deck data for a list of decks (tables, arms, shards per deck), one rollup per deck as artifacts; nothing is committed.
 - Pages: no workflow. The `testing` branch is served as-is; a push there is live within about a minute. Workflows that are `workflow_dispatch`-only (`pod-run.yml`) can only be started once they exist on the default branch.
 
 ## Key links

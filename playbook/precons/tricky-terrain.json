@@ -1,0 +1,51 @@
+{
+ "schema": 1,
+ "deck": "tricky-terrain",
+ "file": "Tricky Terrain [M3C] [2024].dck",
+ "name": "Tricky Terrain",
+ "commanders": [
+  "Omo, Queen of Vesuva"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Jyoti, Moag Ancient"
+  ],
+  "roles": {
+   "overrun": [
+    "Jyoti, Moag Ancient"
+   ]
+  },
+  "combos": [],
+  "pairs": [],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 0,
+   "almost_included": 27,
+   "identity": "GU",
+   "retrieved": "2026-11-09T06:29:12Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {
+  "notes": "Lands matter: Omo's everything counters make lands every land type (Cloudpost, Glimmerpost and the Deserts pay off), landfall creatures finish. Forge's LANDS archetype needs 45% lands and a singleton 99 with 38 lands is 38%, so the plan is forced to LANDS (mana development in the Monte Carlo evaluator). Key cards order the land tutors (Sylvan Scrying, Expedition Map, Hour of Promise) and the creature picks: the Locus pair first, then the landfall payoffs. Dark Depths plus Thespian's Stage is in the deck but Forge's detector wants two Dark Depths, and the AI cannot resolve the Stage line anyway (Thespian's Stage is AI:RemoveDeck), so it is left out. Eight cards carry AI:RemoveDeck:All here; data cannot change how they are played.",
+  "key_cards": [
+   "Cloudpost",
+   "Glimmerpost",
+   "Avenger of Zendikar",
+   "Scute Swarm",
+   "Rampaging Baloths",
+   "Tatyova, Benthic Druid",
+   "Dryad of the Ilysian Grove",
+   "Mana Reflection"
+  ],
+  "deck_plan": "LANDS",
+  "profile": {
+   "HOLD_LAND_DROP_FOR_MAIN2_IF_UNUSED": "0"
+  },
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ }
+}

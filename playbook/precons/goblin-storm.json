@@ -1,0 +1,81 @@
+{
+ "schema": 1,
+ "deck": "goblin-storm",
+ "file": "Goblin Storm [SLD] [2026].dck",
+ "name": "Goblin Storm",
+ "commanders": [
+  "Zada, Hedron Grinder"
+ ],
+ "generated": {
+  "on": "2026-11-09",
+  "by": "runner/deckdata.py (Vibefish 0.2.0)",
+  "key_cards": [
+   "Storm-Kiln Artist",
+   "Haze of Rage",
+   "Empty the Warrens",
+   "Grapeshot",
+   "Spreading Insurrection"
+  ],
+  "roles": {
+   "storm_payoff": [
+    "Empty the Warrens",
+    "Grapeshot",
+    "Haze of Rage",
+    "Spreading Insurrection"
+   ]
+  },
+  "combos": [],
+  "pairs": [
+   {
+    "cards": [
+     "Storm-Kiln Artist",
+     "Haze of Rage"
+    ],
+    "produces": [
+     "Infinite artifact ETB",
+     "Infinite artifact LTB",
+     "Infinite artifact sacrifice triggers"
+    ],
+    "spellbook": "3940-5195"
+   }
+  ],
+  "deck_plan": "auto",
+  "profile": {},
+  "spellbook": {
+   "included": 1,
+   "almost_included": 29,
+   "identity": "R",
+   "retrieved": "2026-11-09T06:29:19Z"
+  },
+  "cards_without_script": []
+ },
+ "curated": {
+  "notes": "Goblin tokens plus a storm shell (Empty the Warrens, Grapeshot, Haze of Rage, Spreading Insurrection are storm payoffs; Battle Hymn, Brightstone Ritual, Seething Song and Mana Geyser the rituals). Forge's STORM plan needs eight cheap rituals and cantrips and the precon has six, so the plan does not fire; the levers left to the heuristic AI are the storm knobs (hold a storm spell until two spells were cast this turn) and the tutor order: Goblin Matron, Goblin Lackey and Conspicuous Snoop fetch Goblins, so the engine Goblins come first. The Storm-Kiln Artist + Haze of Rage pair is Spellbook's; Impact Tremors turns any token burst into damage. Monte Carlo (the mc arms) is where storm sequencing can actually improve.",
+  "key_cards": [
+   "Krenko, Mob Boss",
+   "Impact Tremors",
+   "Goblin Warchief",
+   "Siege-Gang Commander",
+   "Skirk Prospector",
+   "Empty the Warrens",
+   "Grapeshot",
+   "Storm-Kiln Artist"
+  ],
+  "roles": {
+   "storm_payoff": [
+    "Empty the Warrens",
+    "Grapeshot",
+    "Haze of Rage",
+    "Spreading Insurrection"
+   ]
+  },
+  "deck_plan": "COMBO",
+  "profile": {
+   "PLAY_AGGRO": "true",
+   "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+   "MIN_COUNT_FOR_STORM_SPELLS": "2"
+  },
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ }
+}

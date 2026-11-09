@@ -1,0 +1,296 @@
+#!/usr/bin/env python3
+"""Paired A/B for one deck's AI data: the same tables and seeds, with and without the deck's data.
+
+    runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph
+                      [--runtime forge/runtime-snapshot] [--arms stock,data] [-j 2] [--clock 1800] [--turn-cap 120]
+                      [--data playbook/precons/<deck>.json] [--shards K --shard k] [--limit N] [--dry-run]
+    runner/ab.py rollup results/ab-token-triumph
+
+Game i seats the focus deck in seat (i-1) mod 4 with three opponents drawn (seeded) from the rest of the league,
+all stock Forge AI, and plays that table once per arm with the same seed, so the arms differ only in what the
+focus seat is given:
+
+    stock    the deck as Forge ships it: Default profile, no data
+    data     the deck's data file through the harness (--data: KeyCards, card roles, combos, pairs) and a per-deck
+             AI profile Vibefish-<deck>.ai written from Default.ai plus the file's deck_plan and profile overrides
+    mc       Flat Monte Carlo on for the game; the focus seat plays Monte Carlo (Default profile), the opponents keep
+             the heuristic AI (Vibefish-Heuristic, from runner/make-arm-profiles.sh)
+    mcdata   mc plus the deck's data and profile
+
+One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games
+are never replayed. The rollup pairs the arms game by game: wins per arm with Wilson intervals, the paired
+difference with a normal-approximation interval, and the discordant pairs. Standard library only.
+"""
+import argparse
+import collections
+import datetime as dt
+import json
+import os
+import random
+import statistics
+import subprocess
+import sys
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+sys.dont_write_bytecode = True
+sys.path.insert(0, HERE)
+import league as lg          # noqa: E402  (completed, load_json, dump_json, now, EXIT_TIMEOUT)
+import rollup as rl          # noqa: E402  (wilson, mean, VERSION)
+import deckdata as dd        # noqa: E402  (effective)
+
+ARMS = {
+    "stock": {"data": False, "mc": "off", "focus_profile": "", "opp_profile": ""},
+    "data": {"data": True, "mc": "off", "focus_profile": "deck", "opp_profile": ""},
+    "mc": {"data": False, "mc": "on", "focus_profile": "", "opp_profile": "Vibefish-Heuristic"},
+    "mcdata": {"data": True, "mc": "on", "focus_profile": "deck", "opp_profile": "Vibefish-Heuristic"},
+}
+
+
+def schedule(league, deck_id, seed, games):
+    others = sorted(d["id"] for d in league["decks"] if d["id"] != deck_id)
+    out = []
+    for i in range(1, games + 1):
+        rng = random.Random(seed * 31 + i)
+        opps = rng.sample(others, 3)
+        focus_seat = (i - 1) % 4
+        seats = opps[:focus_seat] + [deck_id] + opps[focus_seat:]
+        out.append({"index": i, "seed": seed + i, "focus_seat": focus_seat, "seats": seats})
+    return out
+
+
+def write_deck_profile(runtime, deck_id, eff):
+    """Default.ai plus the data file's deck_plan and profile overrides -> res/ai/Vibefish-<deck>.ai. Returns the name."""
+    ai_dir = os.path.join(runtime, "res", "ai")
+    name = f"Vibefish-{deck_id}"
+    overrides = dict(eff.get("profile") or {})
+    plan = eff.get("deck_plan") or "auto"
+    if plan != "auto":
+        overrides["FLAT_MC_DECK_PLAN"] = str(plan)
+    lines = []
+    with open(os.path.join(ai_dir, "Default.ai"), encoding="utf-8") as f:
+        for line in f:
+            key = line.split("=", 1)[0].strip() if "=" in line and not line.startswith("#") else None
+            if key in overrides:
+                continue
+            lines.append(line.rstrip("\n"))
+    lines.append(f"# Vibefish per-deck overrides for {deck_id}")
+    for k, v in overrides.items():
+        lines.append(f"{k}={v}")
+    with open(os.path.join(ai_dir, name + ".ai"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    return name, overrides
+
+
+def cmd_play(args):
+    league = lg.load_json(args.league)
+    by_id = {d["id"]: d for d in league["decks"]}
+    if args.deck not in by_id:
+        raise SystemExit(f"{args.deck} is not in {args.league}")
+    runtime = os.path.abspath(args.runtime)
+    with open(os.path.join(runtime, "VIBEFISH_FORGE_VERSION"), encoding="utf-8") as f:
+        forge_version = f.readline().strip()
+    precon_dir = os.path.join(runtime, league["precon_dir"])
+    data_file = os.path.abspath(args.data or os.path.join(ROOT, "playbook", "precons", args.deck + ".json"))
+    arms = [a.strip() for a in args.arms.split(",") if a.strip()]
+    for a in arms:
+        if a not in ARMS:
+            raise SystemExit(f"unknown arm {a}; arms: {', '.join(ARMS)}")
+    eff = dd.effective(lg.load_json(data_file)) if any(ARMS[a]["data"] for a in arms) else {}
+    deck_profile, overrides = (write_deck_profile(runtime, args.deck, eff) if eff else ("", {}))
+    if any(ARMS[a]["opp_profile"] == "Vibefish-Heuristic" for a in arms) and not os.path.isfile(os.path.join(runtime, "res", "ai", "Vibefish-Heuristic.ai")):
+        raise SystemExit("the mc arms need Vibefish-Heuristic.ai: run runner/make-arm-profiles.sh " + runtime)
+    games = schedule(league, args.deck, args.seed, args.games)
+    out = os.path.abspath(args.out)
+    os.makedirs(out, exist_ok=True)
+    meta_path = os.path.join(out, "ab.json")
+    if not os.path.isfile(meta_path):
+        lg.dump_json(meta_path, {
+            "vibefish": rl.VERSION, "deck": args.deck, "deck_file": by_id[args.deck]["file"], "league": league["name"],
+            "seed": args.seed, "games": args.games, "arms": arms, "data_file": os.path.relpath(data_file, ROOT),
+            "data_effective": eff, "deck_profile": deck_profile, "profile_overrides": overrides,
+            "forge_version": forge_version, "runtime": os.path.basename(runtime), "clock_s": args.clock, "turn_cap": args.turn_cap,
+            "started": lg.now(),
+        })
+    todo = []
+    k = 0
+    for g in games:                      # a table's arms stay in one shard, so a shard's results pair up on their own
+        k += 1
+        if args.shards > 1 and (k - 1) % args.shards != args.shard - 1:
+            continue
+        for arm in arms:
+            gdir = os.path.join(out, f"arm-{arm}", f"g{g['index']:04d}")
+            if not lg.completed(gdir):
+                todo.append((arm, g, gdir))
+    if args.limit is not None:
+        todo = todo[:args.limit]
+    print(f"A/B {args.deck}: {args.games} tables x {len(arms)} arms ({', '.join(arms)}){f'; shard {args.shard}/{args.shards}' if args.shards > 1 else ''}; "
+          f"{len(todo)} to play with {args.jobs} job(s); seed {args.seed}, runtime {forge_version}, data {os.path.relpath(data_file, ROOT)}"
+          f"{', profile ' + deck_profile + ' ' + json.dumps(overrides) if deck_profile else ''}", file=sys.stderr)
+    if not todo:
+        return 0
+    if not args.dry_run:
+        subprocess.run([os.path.join(ROOT, "controller", "build.sh")], check=True, env={**os.environ, "FORGE_RUNTIME": runtime}, stdout=sys.stderr)
+    launcher = os.path.join(ROOT, "controller", "vibefish-sim.sh")
+    log_path = os.path.join(out, "play.log")
+    lock = threading.Lock()
+    failures = []
+    first_booted = threading.Event()
+
+    def command(arm, g, gdir):
+        spec = ARMS[arm]
+        cmd = [launcher, "play", "--out", gdir, "--deck-dir", precon_dir]
+        for sid in g["seats"]:
+            cmd += ["--deck", f"{sid}={by_id[sid]['file']}"]
+        cmd += ["--games", "1", "--seed", str(g["seed"] - 1), "--clock", str(args.clock), "--turn-cap", str(args.turn_cap),
+                "--forge-version", forge_version, "--mc", spec["mc"]]
+        focus_profile = deck_profile if spec["focus_profile"] == "deck" else spec["focus_profile"]
+        if focus_profile or spec["opp_profile"]:
+            for seat, sid in enumerate(g["seats"]):
+                cmd += ["--profile", focus_profile if sid == args.deck else spec["opp_profile"]]
+        if spec["data"]:
+            cmd += ["--data", f"{args.deck}={data_file}"]
+        return cmd
+
+    def play(item):
+        order, (arm, g, gdir) = item
+        cmd = command(arm, g, gdir)
+        if args.dry_run:
+            print(" ".join(repr(c) if " " in c or not c else c for c in cmd))
+            return
+        first = order == 0
+        if not first:
+            first_booted.wait(timeout=180)
+        os.makedirs(gdir, exist_ok=True)
+        attempts = 0
+        while True:
+            attempts += 1
+            t0 = dt.datetime.now()
+            proc = subprocess.Popen(cmd, env={**os.environ, "FORGE_RUNTIME": runtime}, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, errors="replace")
+            if first and attempts == 1:
+                events = os.path.join(gdir, "games", "game-001.events.jsonl")
+                while proc.poll() is None and not os.path.exists(events):
+                    time.sleep(0.5)
+                first_booted.set()
+            out_text, _ = proc.communicate()
+            secs = (dt.datetime.now() - t0).total_seconds()
+            ok = proc.returncode == 0 or (proc.returncode == lg.EXIT_TIMEOUT and lg.completed(gdir))
+            if not ok and attempts == 1 and secs < 60 and not lg.completed(gdir):
+                time.sleep(2)
+                continue
+            break
+        line = f"{arm} game {g['index']} seat {g['focus_seat'] + 1} vs {' / '.join(s for s in g['seats'] if s != args.deck)}: {'ok' if ok else 'FAILED rc ' + str(proc.returncode)} in {secs:.0f}s"
+        with lock:
+            with open(log_path, "a", encoding="utf-8") as lf:
+                lf.write(f"=== {lg.now()} {line}\n{out_text}\n")
+            print(line, file=sys.stderr)
+            if not ok:
+                failures.append((arm, g["index"]))
+
+    with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as ex:
+        list(ex.map(play, enumerate(todo)))
+    if failures:
+        print(f"{len(failures)} game(s) failed: {failures}", file=sys.stderr)
+        return 1
+    return 0
+
+
+def cmd_rollup(args):
+    out = os.path.abspath(args.run_dir)
+    meta = lg.load_json(os.path.join(out, "ab.json"))
+    deck = meta["deck"]
+    per_arm = {}
+    for arm in meta["arms"]:
+        adir = os.path.join(out, f"arm-{arm}")
+        games = {}
+        if os.path.isdir(adir):
+            for g in sorted(os.listdir(adir)):
+                rj = os.path.join(adir, g, "run.json")
+                if g.startswith("g") and os.path.isfile(rj):
+                    run = lg.load_json(rj)
+                    if run.get("games"):
+                        gm = run["games"][0]
+                        seats = [d["id"] for d in sorted(run["decks"], key=lambda d: d["seat"])]
+                        fs = seats.index(deck)
+                        games[int(g[1:])] = {"index": int(g[1:]), "seed": gm.get("seed"), "seats": seats, "focus_seat": fs, "won": gm.get("winner") == fs,
+                                             "winner_id": seats[gm["winner"]] if gm.get("winner") is not None else None, "turns": gm.get("turns"),
+                                             "reason": gm.get("reason"), "duration_ms": gm.get("duration_ms"),
+                                             "focus_lost_turn": next((p.get("turn_lost") for p in gm.get("players", []) if p.get("seat") == fs), None),
+                                             "data": (run["decks"][fs].get("data") or {}).get("key_cards_applied"), "ai_lists": run.get("ai_lists")}
+        per_arm[arm] = games
+    arm_stats = {}
+    for arm, games in per_arm.items():
+        n = len(games)
+        w = sum(1 for g in games.values() if g["won"])
+        arm_stats[arm] = {"games": n, "wins": w, "win_rate": round(w / n, 4) if n else None, "win_rate_ci95": rl.wilson(w, n),
+                          "draws": sum(1 for g in games.values() if g["winner_id"] is None),
+                          "avg_turns": rl.mean([g["turns"] for g in games.values()]),
+                          "avg_seconds": rl.mean([(g["duration_ms"] or 0) / 1000 for g in games.values()]),
+                          "avg_turn_lost": rl.mean([g["focus_lost_turn"] for g in games.values() if g["focus_lost_turn"] is not None]),
+                          "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s) for s in range(4)]}
+    pairs = {}
+    arms = meta["arms"]
+    if len(arms) >= 2:
+        base, other_arms = arms[0], arms[1:]
+        for arm in other_arms:
+            common = sorted(set(per_arm[base]) & set(per_arm[arm]))
+            d = [int(per_arm[arm][i]["won"]) - int(per_arm[base][i]["won"]) for i in common]
+            n = len(d)
+            both = sum(1 for i in common if per_arm[arm][i]["won"] and per_arm[base][i]["won"])
+            only_arm = sum(1 for x in d if x == 1)
+            only_base = sum(1 for x in d if x == -1)
+            mean = statistics.fmean(d) if n else None
+            se = (statistics.pstdev(d) / (n ** 0.5)) if n > 1 else None
+            pairs[f"{arm}_vs_{base}"] = {"pairs": n, "both_won": both, f"{arm}_only": only_arm, f"{base}_only": only_base,
+                                         "neither": n - both - only_arm - only_base,
+                                         "difference": round(mean, 4) if mean is not None else None,
+                                         "difference_ci95": [round(mean - 1.96 * se, 4), round(mean + 1.96 * se, 4)] if se is not None else None,
+                                         "identical_outcomes": sum(1 for i in common if per_arm[arm][i]["turns"] == per_arm[base][i]["turns"] and per_arm[arm][i]["winner_id"] == per_arm[base][i]["winner_id"])}
+    result = {"vibefish": rl.VERSION, "generated": lg.now(), "kind": "ab", **{k: v for k, v in meta.items() if k != "data_effective"},
+              "data_effective": meta.get("data_effective"), "arm_stats": arm_stats, "paired": pairs,
+              "games": {arm: [g for _, g in sorted(gs.items())] for arm, gs in per_arm.items()}}
+    lg.dump_json(os.path.join(out, "rollup.json"), result)
+    print(f"A/B {deck} ({meta['forge_version']}):", file=sys.stderr)
+    for arm, s in arm_stats.items():
+        ci = s["win_rate_ci95"] or [0, 0]
+        print(f"  {arm:<8} {s['wins']:>3}/{s['games']:<3} {(s['win_rate'] or 0) * 100:5.1f}% ({ci[0] * 100:.0f}–{ci[1] * 100:.0f}%)  draws {s['draws']}  "
+              f"turns {s['avg_turns']}  lost at own turn {s['avg_turn_lost']}  wins by seat {s['wins_by_seat']}", file=sys.stderr)
+    for k, p in pairs.items():
+        ci = p["difference_ci95"] or [0, 0]
+        print(f"  {k}: {p['pairs']} pairs, difference {(p['difference'] or 0) * 100:+.1f} points (95% {ci[0] * 100:+.0f} to {ci[1] * 100:+.0f}); "
+              f"discordant {p[k.split('_vs_')[0] + '_only']} vs {p[k.split('_vs_')[1] + '_only']}; identical outcomes {p['identical_outcomes']}", file=sys.stderr)
+    return 0
+
+
+def main(argv):
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    p = sub.add_parser("play")
+    p.add_argument("--deck", required=True)
+    p.add_argument("--games", type=int, default=40)
+    p.add_argument("--seed", type=int, required=True)
+    p.add_argument("--out", required=True)
+    p.add_argument("--league", default=os.path.join(HERE, "precon-league.json"))
+    p.add_argument("--runtime", default=os.environ.get("FORGE_RUNTIME") or os.path.join(ROOT, "forge", "runtime"))
+    p.add_argument("--data")
+    p.add_argument("--arms", default="stock,data")
+    p.add_argument("-j", "--jobs", type=int, default=1)
+    p.add_argument("--clock", type=int, default=1800)
+    p.add_argument("--turn-cap", type=int, default=120)
+    p.add_argument("--shards", type=int, default=1)
+    p.add_argument("--shard", type=int, default=1)
+    p.add_argument("--limit", type=int)
+    p.add_argument("--dry-run", action="store_true")
+    p.set_defaults(func=cmd_play)
+    r = sub.add_parser("rollup")
+    r.add_argument("run_dir")
+    r.set_defaults(func=cmd_rollup)
+    args = ap.parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

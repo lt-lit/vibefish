@@ -1,0 +1,795 @@
+{
+ "retrieved": "2026-11-09T06:39:16Z",
+ "identity": "UBR",
+ "included": [],
+ "almost_included": [
+  {
+   "id": "513-5034--46",
+   "cards": [
+    "Hullbreaker Horror",
+    "Sol Ring"
+   ],
+   "templates": [
+    "Permanent Castable for {C}"
+   ],
+   "produces": [
+    "Infinite colorless mana",
+    "Infinite storm count"
+   ],
+   "mana": "",
+   "bracket": "E",
+   "popularity": 367141
+  },
+  {
+   "id": "2484-4083",
+   "cards": [
+    "Blasphemous Act",
+    "Repercussion"
+   ],
+   "templates": [],
+   "produces": [
+    "Near-infinite damage to all players"
+   ],
+   "mana": "{8}{R} at most",
+   "bracket": "C",
+   "popularity": 40151
+  },
+  {
+   "id": "542-5034",
+   "cards": [
+    "Tidespout Tyrant",
+    "Sol Ring"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite colorless mana",
+    "Infinite storm count"
+   ],
+   "mana": "{1}",
+   "bracket": "S",
+   "popularity": 38048
+  },
+  {
+   "id": "4508-4869",
+   "cards": [
+    "Malcolm, Keen-Eyed Navigator",
+    "Glint-Horn Buccaneer"
+   ],
+   "templates": [],
+   "produces": [
+    "Near-infinite damage",
+    "Near-infinite self-discard triggers",
+    "Near-infinite draw triggers"
+   ],
+   "mana": "{1}{R}",
+   "bracket": "R",
+   "popularity": 22750
+  },
+  {
+   "id": "1775-2484",
+   "cards": [
+    "Toralf, God of Fury // Toralf's Hammer",
+    "Blasphemous Act"
+   ],
+   "templates": [],
+   "produces": [
+    "Near-infinite damage"
+   ],
+   "mana": "{7}{R} at most",
+   "bracket": "P",
+   "popularity": 22427
+  },
+  {
+   "id": "1823-2484",
+   "cards": [
+    "Fall of Cair Andros",
+    "Blasphemous Act"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite +1/+1 counters on a creature",
+    "Near-infinite damage to creatures"
+   ],
+   "mana": "{7}{R} (at most)",
+   "bracket": "O",
+   "popularity": 14406
+  },
+  {
+   "id": "1548-1692",
+   "cards": [
+    "Port Razer",
+    "Helm of the Host"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite creature tokens with haste",
+    "Infinite damage",
+    "Infinite creature ETB",
+    "Infinite mana creatures you control can produce",
+    "Infinite untap of creatures you control"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 9526
+  },
+  {
+   "id": "282-1548",
+   "cards": [
+    "Delina, Wild Mage",
+    "Port Razer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite mana creatures you control can produce",
+    "Infinite untap of creatures you control"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 7321
+  },
+  {
+   "id": "618-2534",
+   "cards": [
+    "Kiki-Jiki, Mirror Breaker",
+    "Coercive Recruiter"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite creature tokens with haste",
+    "Infinite death triggers",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite creature sacrifice triggers"
+   ],
+   "mana": "",
+   "bracket": "R",
+   "popularity": 5857
+  },
+  {
+   "id": "618-1548",
+   "cards": [
+    "Kiki-Jiki, Mirror Breaker",
+    "Port Razer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite creature tokens with haste",
+    "Infinite damage",
+    "Infinite death triggers",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite mana creatures you control can produce",
+    "Infinite creature sacrifice triggers",
+    "Infinite untap of creatures you control"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 5650
+  },
+  {
+   "id": "2484-7502",
+   "cards": [
+    "Expedited Inheritance",
+    "Blasphemous Act"
+   ],
+   "templates": [],
+   "produces": [
+    "Each player may exile a portion of their library with the ability to play the exiled cards until the end of their next turn",
+    "Exile your library with the ability to play the exiled cards until the end of your next turn"
+   ],
+   "mana": "{7}{R} at most",
+   "bracket": "O",
+   "popularity": 5193
+  },
+  {
+   "id": "276-3011",
+   "cards": [
+    "Heartless Hidetsugu",
+    "Angrath's Marauders"
+   ],
+   "templates": [],
+   "produces": [
+    "Each opponent with an even life total loses the game"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 4799
+  },
+  {
+   "id": "1548-1908",
+   "cards": [
+    "Rionya, Fire Dancer",
+    "Port Razer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite creature tokens with haste",
+    "Infinite damage",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite mana creatures you control can produce",
+    "Infinite untap of creatures you control"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 3993
+  },
+  {
+   "id": "1061-2707",
+   "cards": [
+    "River Song",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{3}{U}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 3086
+  },
+  {
+   "id": "1548-5461",
+   "cards": [
+    "Calamity, Galloping Inferno",
+    "Port Razer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite copies of nonlegendary creatures you control",
+    "Infinite creature tokens",
+    "Infinite creature ETB",
+    "Infinite mana creatures you control can produce",
+    "Infinite untap of creatures you control",
+    "Infinite creature LTB",
+    "Infinite creature sacrifice triggers",
+    "Infinite death triggers"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 2514
+  },
+  {
+   "id": "1548-4702",
+   "cards": [
+    "Port Razer",
+    "Splinter Twin"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite creature tokens with haste",
+    "Infinite damage",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite mana creatures you control can produce",
+    "Infinite untap of creatures you control"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 1758
+  },
+  {
+   "id": "1378-1548",
+   "cards": [
+    "Port Razer",
+    "Mirage Phalanx"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite creature ETB",
+    "Infinite creature LTB"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 1649
+  },
+  {
+   "id": "1061-1692",
+   "cards": [
+    "Timestream Navigator",
+    "Helm of the Host"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U}",
+   "bracket": "R",
+   "popularity": 1550
+  },
+  {
+   "id": "2534-4702",
+   "cards": [
+    "Splinter Twin",
+    "Coercive Recruiter"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite creature tokens with haste",
+    "Infinite creature ETB"
+   ],
+   "mana": "",
+   "bracket": "R",
+   "popularity": 1540
+  },
+  {
+   "id": "1061-2061",
+   "cards": [
+    "Timestream Navigator",
+    "Extravagant Replication"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U}",
+   "bracket": "R",
+   "popularity": 1030
+  },
+  {
+   "id": "1061-4183",
+   "cards": [
+    "Saheeli, the Sun's Brilliance",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U}{U}{R} each turn",
+   "bracket": "R",
+   "popularity": 908
+  },
+  {
+   "id": "618-1061",
+   "cards": [
+    "Kiki-Jiki, Mirror Breaker",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 751
+  },
+  {
+   "id": "4694-4871",
+   "cards": [
+    "Pitiless Plunderer",
+    "March of the Machines"
+   ],
+   "templates": [],
+   "produces": [
+    "Draw the game",
+    "Infinite death triggers",
+    "Infinite creature ETB",
+    "Infinite creature LTB"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 674
+  },
+  {
+   "id": "742-1061",
+   "cards": [
+    "Demonic Consultation",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Exile your library",
+    "Skip your draw steps",
+    "Lock"
+   ],
+   "mana": "{4}{U}{U}{U}{B} the first turn, with {3}{U}{U}{U} each extra turn",
+   "bracket": "R",
+   "popularity": 669
+  },
+  {
+   "id": "1061-2136",
+   "cards": [
+    "Orthion, Hero of Lavabrink",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{3}{U}{U}{R} each turn",
+   "bracket": "R",
+   "popularity": 539
+  },
+  {
+   "id": "1061-3592",
+   "cards": [
+    "Timestream Navigator",
+    "Planar Bridge"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{10}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 469
+  },
+  {
+   "id": "57-1061",
+   "cards": [
+    "Feldon of the Third Path",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{4}{U}{U}{R} each turn",
+   "bracket": "R",
+   "popularity": 462
+  },
+  {
+   "id": "1548-6426",
+   "cards": [
+    "Sandstorm Crasher",
+    "Port Razer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat phases",
+    "Infinite untap of creatures you control",
+    "Infinite mana creatures you control can produce",
+    "Infinite creature ETB",
+    "Infinite creature tokens",
+    "Infinite combat damage"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 449
+  },
+  {
+   "id": "1061-2823",
+   "cards": [
+    "Timestream Navigator",
+    "The Temporal Anchor"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{3}{U}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 430
+  },
+  {
+   "id": "2143-4871",
+   "cards": [
+    "Spawnsire of Ulamog",
+    "Pitiless Plunderer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite death triggers",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite creature sacrifice triggers"
+   ],
+   "mana": "{4}",
+   "bracket": "E",
+   "popularity": 390
+  },
+  {
+   "id": "1061-3337",
+   "cards": [
+    "Fable of the Mirror-Breaker // Reflection of Kiki-Jiki",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{3}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 337
+  },
+  {
+   "id": "1061-6633",
+   "cards": [
+    "Timestream Navigator",
+    "The Fire Crystal"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{6}{U}{U}{R}{R} each turn",
+   "bracket": "R",
+   "popularity": 263
+  },
+  {
+   "id": "1061-7631",
+   "cards": [
+    "Timestream Navigator",
+    "Echocasting Symposium"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{4}{U}{U} the first turn, plus {2}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 255
+  },
+  {
+   "id": "745-1061",
+   "cards": [
+    "Timestream Navigator",
+    "Mirrorhall Mimic // Ghastly Mimicry"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U}",
+   "bracket": "R",
+   "popularity": 220
+  },
+  {
+   "id": "1061-2362",
+   "cards": [
+    "Timestream Navigator",
+    "Endless Evil"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U}",
+   "bracket": "R",
+   "popularity": 220
+  },
+  {
+   "id": "1061-4305",
+   "cards": [
+    "Timestream Navigator",
+    "Followed Footsteps"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U}",
+   "bracket": "R",
+   "popularity": 190
+  },
+  {
+   "id": "1061-1068",
+   "cards": [
+    "Timestream Navigator",
+    "Leveler"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{5} the first turn, with {3}{U}{U}{U} available each other turn",
+   "bracket": "R",
+   "popularity": 180
+  },
+  {
+   "id": "1548-3742",
+   "cards": [
+    "Phantom Steed",
+    "Port Razer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat damage",
+    "Infinite combat phases",
+    "Infinite death triggers",
+    "Infinite creature ETB",
+    "Infinite creature LTB",
+    "Infinite mana creatures you control can produce",
+    "Infinite creature sacrifice triggers",
+    "Infinite untap of creatures you control"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 167
+  },
+  {
+   "id": "1061-4118-5350",
+   "cards": [
+    "Admiral Brass, Unsinkable",
+    "Oriq Loremage",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{2}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 135
+  },
+  {
+   "id": "1061-1799",
+   "cards": [
+    "Timestream Navigator",
+    "Grenzo, Dungeon Warden"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{4}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 99
+  },
+  {
+   "id": "4944-5639",
+   "cards": [
+    "Crackdown Construct",
+    "Arm-Mounted Anchor"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinitely large creature until end of turn"
+   ],
+   "mana": "",
+   "bracket": "O",
+   "popularity": 76
+  },
+  {
+   "id": "1548-7074",
+   "cards": [
+    "Koh, the Face Stealer",
+    "Port Razer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite combat phases",
+    "Infinite untap of creatures you control",
+    "Infinite mana creatures you control can produce",
+    "Infinite combat damage"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 71
+  },
+  {
+   "id": "120-1061",
+   "cards": [
+    "Timestream Navigator",
+    "Planar Portal"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{9}{U}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 64
+  },
+  {
+   "id": "1061-4844-5350",
+   "cards": [
+    "Admiral Brass, Unsinkable",
+    "Cellar Door",
+    "Timestream Navigator"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{5}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 37
+  },
+  {
+   "id": "1061-4899",
+   "cards": [
+    "Timestream Navigator",
+    "Phyrexian Devourer"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite turns",
+    "Lock"
+   ],
+   "mana": "{3}{U}{U}{U} each turn",
+   "bracket": "R",
+   "popularity": 21
+  },
+  {
+   "id": "2534-3358-5631",
+   "cards": [
+    "Hell's Caretaker",
+    "Skeleton Crew",
+    "Coercive Recruiter"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite creature LTB",
+    "Infinite creature ETB",
+    "Infinite creature sacrifice triggers",
+    "Infinite death triggers",
+    "Infinite creature tokens with haste",
+    "Infinite mana creatures you control can produce",
+    "Gain control of all creatures until end of turn",
+    "Return all creature cards from your graveyard to the battlefield",
+    "Infinite untap of creatures you control"
+   ],
+   "mana": "",
+   "bracket": "E",
+   "popularity": 11
+  },
+  {
+   "id": "2904-5639",
+   "cards": [
+    "Cephalid Illusionist",
+    "Arm-Mounted Anchor"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite self-mill"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 9
+  },
+  {
+   "id": "2796-5639",
+   "cards": [
+    "Cephalid Aristocrat",
+    "Arm-Mounted Anchor"
+   ],
+   "templates": [],
+   "produces": [
+    "Infinite self-mill"
+   ],
+   "mana": "",
+   "bracket": "S",
+   "popularity": 7
+  }
+ ],
+ "source": "https://backend.commanderspellbook.com/find-my-combos"
+}
