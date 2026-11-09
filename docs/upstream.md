@@ -45,3 +45,13 @@ The ab1 games used `--rotate-profiles`; both listed games are game 3 of their sh
   profile directories: one of them dies in `FModel.initialize` with `java.lang.RuntimeException: cannot create profile
   directory: .../profile/decks/planar/` (seen in every shard of the first league run in Actions, where the runtime is
   fresh). Harmless once the directories exist; `runner/league.py` boots the first game of a shard alone for this reason.
+- Same seed, different machine, different game in about one game in seven: in the first league run, shard 1 played in
+  Actions and in the Claude Code container (same build, same seeds) agreed on 95 of 110 games; the 15 that diverged
+  were the slow ones (median 200 s against 62 s), where the AI's per-decision timeouts fire (140 `TimeoutException`
+  traces in the shard log). The seed fixes the shuffles, not the AI's time budgets.
+- Two of 2,200 league games ended in an engine error (harness reason `Exception`, recorded as draws), snapshot
+  2026-11-08, Monte Carlo off: game seed 20262124 (Jump Scare! / Grand Larceny / Keen Engineering / Exit from Exile,
+  turn 26) died with `NullPointerException ... Card.getState(CardStateName) is null` in
+  `CopyPermanentEffect.getProtoType` while a copy effect resolved; game seed 20262439 (Deadly Disguise / Call for
+  Backup / Silverquill Influence / Wretched Ranks, turn 40, 190 s in) ran out of the 4 GB heap in
+  `Game.copyLastState` → `CardCopyService.getLKICopy` (last-known-information copies of a large board).
