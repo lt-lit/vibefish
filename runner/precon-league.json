@@ -1,0 +1,1212 @@
+{
+ "name": "league-v1",
+ "status": "frozen",
+ "chosen_on": "2026-11-09",
+ "chosen_with": "snapshot-2026-11-08",
+ "description": "Every Forge-bundled Commander precon that Playgroup.gg ranks by stock win rate (reference copied 2026-11-09). If this list ever changes, that is a new league with a new name and history restarts.",
+ "schedule": "Random 4-player tables (runner/league.py): a cycle is four rounds; the decks, minus 91 mod 4 = 3 byes rotating through the list, are shuffled into four groups, each round seats one deck from every group at every table, and the groups seat shifts by one each round, so every deck sits in every seat once per cycle and meets different opponents every round. 25 cycles = 2200 games, 96 to 100 per deck.",
+ "precon_dir": "res/quest/commanderprecons",
+ "reference": "runner/reference/playgroup-commander.json",
+ "checked": "All 91 decks pass vibefish-sim check on snapshot-2026-11-08: no unknown or unsupported cards, Commander-conformant. ai_never / ai_random count the cards Forge marks AI:RemoveDeck:All / :Random.",
+ "decks": [
+  {
+   "id": "planeswalker-party",
+   "file": "Planeswalker Party [CMM] [2023].dck",
+   "name": "Planeswalker Party",
+   "commanders": [
+    "Commodore Guff"
+   ],
+   "set": "CMM",
+   "year": 2023,
+   "reference_name": "Planeswalker Party",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "tricky-terrain",
+   "file": "Tricky Terrain [M3C] [2024].dck",
+   "name": "Tricky Terrain",
+   "commanders": [
+    "Omo, Queen of Vesuva"
+   ],
+   "set": "M3C",
+   "year": 2024,
+   "reference_name": "Tricky Terrain",
+   "ai_never": 8,
+   "ai_random": 5
+  },
+  {
+   "id": "sultai-arisen",
+   "file": "Sultai Arisen [TDC] [2025].dck",
+   "name": "Sultai Arisen",
+   "commanders": [
+    "Kotis, Sibsig Champion"
+   ],
+   "set": "TDC",
+   "year": 2025,
+   "reference_name": "Sultai Arisen",
+   "ai_never": 5,
+   "ai_random": 4,
+   "note": "Forge ships Kotis, Sibsig Champion in the command zone; Playgroup lists Teval, the Balanced Scale as the face commander. Played as shipped."
+  },
+  {
+   "id": "riveteer-rampage",
+   "file": "Riveteer Rampage [NCC] [2022].dck",
+   "name": "Riveteer Rampage",
+   "commanders": [
+    "Henzie \"Toolbox\" Torre"
+   ],
+   "set": "NCC",
+   "year": 2022,
+   "reference_name": "Riveteers Rampage",
+   "ai_never": 4,
+   "ai_random": 5,
+   "note": "Playgroup lists this deck as \"Riveteers Rampage\""
+  },
+  {
+   "id": "legends-legacy",
+   "file": "Legends' Legacy [DMC] [2022].dck",
+   "name": "Legends' Legacy",
+   "commanders": [
+    "Dihada, Binder of Wills"
+   ],
+   "set": "DMC",
+   "year": 2022,
+   "reference_name": "Legends' Legacy",
+   "ai_never": 2,
+   "ai_random": 7
+  },
+  {
+   "id": "lorehold-spirit",
+   "file": "Lorehold Spirit [SOC] [2026].dck",
+   "name": "Lorehold Spirit",
+   "commanders": [
+    "Quintorius, History Chaser"
+   ],
+   "set": "SOC",
+   "year": 2026,
+   "reference_name": "Lorehold Spirit",
+   "ai_never": 5,
+   "ai_random": 1
+  },
+  {
+   "id": "death-toll",
+   "file": "Death Toll [DSC] [2024].dck",
+   "name": "Death Toll",
+   "commanders": [
+    "Winter, Cynical Opportunist"
+   ],
+   "set": "DSC",
+   "year": 2024,
+   "reference_name": "Death Toll",
+   "ai_never": 2,
+   "ai_random": 1
+  },
+  {
+   "id": "most-wanted",
+   "file": "Most Wanted [OTC] [2024].dck",
+   "name": "Most Wanted",
+   "commanders": [
+    "Olivia, Opulent Outlaw"
+   ],
+   "set": "OTC",
+   "year": 2024,
+   "reference_name": "Most Wanted",
+   "ai_never": 2,
+   "ai_random": 3
+  },
+  {
+   "id": "temur-roar",
+   "file": "Temur Roar [TDC] [2025].dck",
+   "name": "Temur Roar",
+   "commanders": [
+    "Eshki, Temur's Roar"
+   ],
+   "set": "TDC",
+   "year": 2025,
+   "reference_name": "Temur Roar",
+   "ai_never": 1,
+   "ai_random": 2,
+   "note": "Forge ships Eshki, Temur's Roar in the command zone; Playgroup lists Ureni of the Unwritten as the face commander. Played as shipped."
+  },
+  {
+   "id": "multiverse-reforged",
+   "file": "Multiverse Reforged [FRC] [2026].dck",
+   "name": "Multiverse Reforged",
+   "commanders": [
+    "Jace, Multiverse Architect"
+   ],
+   "set": "FRC",
+   "year": 2026,
+   "reference_name": "Multiverse Reforged",
+   "ai_never": 3,
+   "ai_random": 0
+  },
+  {
+   "id": "desert-bloom",
+   "file": "Desert Bloom [OTC] [2024].dck",
+   "name": "Desert Bloom",
+   "commanders": [
+    "Yuma, Proud Protector"
+   ],
+   "set": "OTC",
+   "year": 2024,
+   "reference_name": "Desert Bloom",
+   "ai_never": 6,
+   "ai_random": 4
+  },
+  {
+   "id": "science",
+   "file": "Science! [PIP] [2024].dck",
+   "name": "Science!",
+   "commanders": [
+    "Dr. Madison Li"
+   ],
+   "set": "PIP",
+   "year": 2024,
+   "reference_name": "Science!",
+   "ai_never": 2,
+   "ai_random": 2
+  },
+  {
+   "id": "blame-game",
+   "file": "Blame Game [MKC] [2024].dck",
+   "name": "Blame Game",
+   "commanders": [
+    "Nelly Borca, Impulsive Accuser"
+   ],
+   "set": "MKC",
+   "year": 2024,
+   "reference_name": "Blame Game",
+   "ai_never": 1,
+   "ai_random": 8
+  },
+  {
+   "id": "token-triumph",
+   "file": "Token Triumph [SCD] [2022].dck",
+   "name": "Token Triumph",
+   "commanders": [
+    "Emmara, Soul of the Accord"
+   ],
+   "set": "SCD",
+   "year": 2022,
+   "reference_name": "Token Triumph",
+   "ai_never": 3,
+   "ai_random": 1
+  },
+  {
+   "id": "chaos-incarnate",
+   "file": "Chaos Incarnate [SCD] [2022].dck",
+   "name": "Chaos Incarnate",
+   "commanders": [
+    "Kardur, Doomscourge"
+   ],
+   "set": "SCD",
+   "year": 2022,
+   "reference_name": "Chaos Incarnate",
+   "ai_never": 5,
+   "ai_random": 3
+  },
+  {
+   "id": "landing-party",
+   "file": "Landing Party [TRC] [2026].dck",
+   "name": "Landing Party",
+   "commanders": [
+    "Commander Spock"
+   ],
+   "set": "TRC",
+   "year": 2026,
+   "reference_name": "Landing Party",
+   "ai_never": 3,
+   "ai_random": 2
+  },
+  {
+   "id": "maestros-massacre",
+   "file": "Maestros Massacre [NCC] [2022].dck",
+   "name": "Maestros Massacre",
+   "commanders": [
+    "Anhelo, the Painter"
+   ],
+   "set": "NCC",
+   "year": 2022,
+   "reference_name": "Maestros Massacre",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "enduring-enchantments",
+   "file": "Enduring Enchantments [CMM] [2023].dck",
+   "name": "Enduring Enchantments",
+   "commanders": [
+    "Anikthea, Hand of Erebos"
+   ],
+   "set": "CMM",
+   "year": 2023,
+   "reference_name": "Enduring Enchantments",
+   "ai_never": 2,
+   "ai_random": 6
+  },
+  {
+   "id": "witherbloom-pestilence",
+   "file": "Witherbloom Pestilence [SOC] [2026].dck",
+   "name": "Witherbloom Pestilence",
+   "commanders": [
+    "Dina, Essence Brewer"
+   ],
+   "set": "SOC",
+   "year": 2026,
+   "reference_name": "Witherbloom Pestilence",
+   "ai_never": 3,
+   "ai_random": 1
+  },
+  {
+   "id": "divine-convocation",
+   "file": "Divine Convocation [MOC] [2023].dck",
+   "name": "Divine Convocation",
+   "commanders": [
+    "Kasla, the Broken Halo"
+   ],
+   "set": "MOC",
+   "year": 2023,
+   "reference_name": "Divine Convocation",
+   "ai_never": 2,
+   "ai_random": 1
+  },
+  {
+   "id": "graveyard-overdrive",
+   "file": "Graveyard Overdrive [M3C] [2024].dck",
+   "name": "Graveyard Overdrive",
+   "commanders": [
+    "Disa the Restless"
+   ],
+   "set": "M3C",
+   "year": 2024,
+   "reference_name": "Graveyard Overdrive",
+   "ai_never": 2,
+   "ai_random": 1
+  },
+  {
+   "id": "counter-intelligence",
+   "file": "Counter Intelligence [EOC] [2025].dck",
+   "name": "Counter Intelligence",
+   "commanders": [
+    "Inspirit, Flagship Vessel"
+   ],
+   "set": "EOC",
+   "year": 2025,
+   "reference_name": "Counter Intelligence",
+   "ai_never": 2,
+   "ai_random": 2
+  },
+  {
+   "id": "the-fantastic-four",
+   "file": "The Fantastic Four [MSC] [2026].dck",
+   "name": "The Fantastic Four",
+   "commanders": [
+    "Mister Fantastic"
+   ],
+   "set": "MSC",
+   "year": 2026,
+   "reference_name": "The Fantastic Four",
+   "ai_never": 4,
+   "ai_random": 2
+  },
+  {
+   "id": "peace-offering",
+   "file": "Peace Offering [BLC] [2024].dck",
+   "name": "Peace Offering",
+   "commanders": [
+    "Ms. Bumbleflower"
+   ],
+   "set": "BLC",
+   "year": 2024,
+   "reference_name": "Peace Offering",
+   "ai_never": 6,
+   "ai_random": 2
+  },
+  {
+   "id": "doom-prevails",
+   "file": "Doom Prevails [MSC] [2026].dck",
+   "name": "Doom Prevails",
+   "commanders": [
+    "Doctor Doom, King of Latveria"
+   ],
+   "set": "MSC",
+   "year": 2026,
+   "reference_name": "Doom Prevails",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "quick-draw",
+   "file": "Quick Draw [OTC] [2024].dck",
+   "name": "Quick Draw",
+   "commanders": [
+    "Stella Lee, Wild Card"
+   ],
+   "set": "OTC",
+   "year": 2024,
+   "reference_name": "Quick Draw",
+   "ai_never": 6,
+   "ai_random": 3
+  },
+  {
+   "id": "party-time",
+   "file": "Party Time [CLB] [2022].dck",
+   "name": "Party Time",
+   "commanders": [
+    "Nalia de'Arnise"
+   ],
+   "set": "CLB",
+   "year": 2022,
+   "reference_name": "Party Time",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "blight-curse",
+   "file": "Blight Curse [ECC] [2026].dck",
+   "name": "Blight Curse",
+   "commanders": [
+    "Auntie Ool, Cursewretch"
+   ],
+   "set": "ECC",
+   "year": 2026,
+   "reference_name": "Blight Curse",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "miracle-worker",
+   "file": "Miracle Worker [DSC] [2024].dck",
+   "name": "Miracle Worker",
+   "commanders": [
+    "Aminatou, Veil Piercer"
+   ],
+   "set": "DSC",
+   "year": 2024,
+   "reference_name": "Miracle Worker",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "we-are-the-borg",
+   "file": "We Are the Borg [TRC] [2026].dck",
+   "name": "We Are the Borg",
+   "commanders": [
+    "The Borg Queen"
+   ],
+   "set": "TRC",
+   "year": 2026,
+   "reference_name": "We Are the Borg",
+   "ai_never": 3,
+   "ai_random": 2
+  },
+  {
+   "id": "deadly-disguise",
+   "file": "Deadly Disguise [MKC] [2024].dck",
+   "name": "Deadly Disguise",
+   "commanders": [
+    "Kaust, Eyes of the Glade"
+   ],
+   "set": "MKC",
+   "year": 2024,
+   "reference_name": "Deadly Disguise",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "revenant-recon",
+   "file": "Revenant Recon [MKC] [2024].dck",
+   "name": "Revenant Recon",
+   "commanders": [
+    "Mirko, Obsessive Theorist"
+   ],
+   "set": "MKC",
+   "year": 2024,
+   "reference_name": "Revenant Recon",
+   "ai_never": 3,
+   "ai_random": 2
+  },
+  {
+   "id": "calling-all-angels",
+   "file": "Calling All Angels [FDC] [2026].dck",
+   "name": "Calling All Angels",
+   "commanders": [
+    "Giada, Font of Hope"
+   ],
+   "set": "FDC",
+   "year": 2026,
+   "reference_name": "Calling All Angels",
+   "ai_never": 0,
+   "ai_random": 3
+  },
+  {
+   "id": "reign-of-dragons",
+   "file": "Reign of Dragons [FDC] [2026].dck",
+   "name": "Reign of Dragons",
+   "commanders": [
+    "Lathliss, Dragon Queen"
+   ],
+   "set": "FDC",
+   "year": 2026,
+   "reference_name": "Reign of Dragons",
+   "ai_never": 0,
+   "ai_random": 4
+  },
+  {
+   "id": "creative-energy",
+   "file": "Creative Energy [M3C] [2024].dck",
+   "name": "Creative Energy",
+   "commanders": [
+    "Satya, Aetherflux Genius"
+   ],
+   "set": "M3C",
+   "year": 2024,
+   "reference_name": "Creative Energy",
+   "ai_never": 1,
+   "ai_random": 2
+  },
+  {
+   "id": "abzan-armor",
+   "file": "Abzan Armor [TDC] [2025].dck",
+   "name": "Abzan Armor",
+   "commanders": [
+    "Felothar the Steadfast"
+   ],
+   "set": "TDC",
+   "year": 2025,
+   "reference_name": "Abzan Armor",
+   "ai_never": 3,
+   "ai_random": 1
+  },
+  {
+   "id": "turtle-power",
+   "file": "Turtle Power! [TMC] [2026].dck",
+   "name": "Turtle Power!",
+   "commanders": [
+    "Leonardo, the Balance",
+    "Michelangelo, the Heart"
+   ],
+   "set": "TMC",
+   "year": 2026,
+   "reference_name": "Turtle Power!",
+   "ai_never": 0,
+   "ai_random": 0
+  },
+  {
+   "id": "prismari-artistry",
+   "file": "Prismari Artistry [SOC] [2026].dck",
+   "name": "Prismari Artistry",
+   "commanders": [
+    "Rootha, Mastering the Moment"
+   ],
+   "set": "SOC",
+   "year": 2026,
+   "reference_name": "Prismari Artistry",
+   "ai_never": 1,
+   "ai_random": 2
+  },
+  {
+   "id": "cavalry-charge",
+   "file": "Cavalry Charge [MOC] [2023].dck",
+   "name": "Cavalry Charge",
+   "commanders": [
+    "Sidar Jabari of Zhalfir"
+   ],
+   "set": "MOC",
+   "year": 2023,
+   "reference_name": "Cavalry Charge",
+   "ai_never": 1,
+   "ai_random": 7
+  },
+  {
+   "id": "mutant-menace",
+   "file": "Mutant Menace [PIP] [2024].dck",
+   "name": "Mutant Menace",
+   "commanders": [
+    "The Wise Mothman"
+   ],
+   "set": "PIP",
+   "year": 2024,
+   "reference_name": "Mutant Menace",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "eldrazi-unbound",
+   "file": "Eldrazi Unbound [CMM] [2023].dck",
+   "name": "Eldrazi Unbound",
+   "commanders": [
+    "Zhulodok, Void Gorger"
+   ],
+   "set": "CMM",
+   "year": 2023,
+   "reference_name": "Eldrazi Unbound",
+   "ai_never": 4,
+   "ai_random": 8
+  },
+  {
+   "id": "revival-trance",
+   "file": "Revival Trance [FIC] [2025].dck",
+   "name": "Revival Trance",
+   "commanders": [
+    "Terra, Herald of Hope"
+   ],
+   "set": "FIC",
+   "year": 2025,
+   "reference_name": "Revival Trance",
+   "ai_never": 1,
+   "ai_random": 2
+  },
+  {
+   "id": "elven-council",
+   "file": "Elven Council [LTC] [2023].dck",
+   "name": "Elven Council",
+   "commanders": [
+    "Galadriel, Elven-Queen"
+   ],
+   "set": "LTC",
+   "year": 2023,
+   "reference_name": "Elven Council",
+   "ai_never": 4,
+   "ai_random": 2
+  },
+  {
+   "id": "veloci-ramp-tor",
+   "file": "Veloci-Ramp-Tor [LCC] [2023].dck",
+   "name": "Veloci-Ramp-Tor",
+   "commanders": [
+    "Pantlaza, Sun-Favored"
+   ],
+   "set": "LCC",
+   "year": 2023,
+   "reference_name": "Veloci-Ramp-Tor",
+   "ai_never": 1,
+   "ai_random": 4
+  },
+  {
+   "id": "eldrazi-incursion",
+   "file": "Eldrazi Incursion [M3C] [2024].dck",
+   "name": "Eldrazi Incursion",
+   "commanders": [
+    "Ulalek, Fused Atrocity"
+   ],
+   "set": "M3C",
+   "year": 2024,
+   "reference_name": "Eldrazi Incursion",
+   "ai_never": 2,
+   "ai_random": 6
+  },
+  {
+   "id": "keen-engineering",
+   "file": "Keen Engineering [FDC] [2026].dck",
+   "name": "Keen Engineering",
+   "commanders": [
+    "Sai, Master Thopterist"
+   ],
+   "set": "FDC",
+   "year": 2026,
+   "reference_name": "Keen Engineering",
+   "ai_never": 2,
+   "ai_random": 6
+  },
+  {
+   "id": "tinker-time",
+   "file": "Tinker Time [MOC] [2023].dck",
+   "name": "Tinker Time",
+   "commanders": [
+    "Gimbal, Gremlin Prodigy"
+   ],
+   "set": "MOC",
+   "year": 2023,
+   "reference_name": "Tinker Time",
+   "ai_never": 1,
+   "ai_random": 4
+  },
+  {
+   "id": "tramplesaurus-rex",
+   "file": "Tramplesaurus Rex [FDC] [2026].dck",
+   "name": "Tramplesaurus Rex",
+   "commanders": [
+    "Ghalta, Primal Hunger"
+   ],
+   "set": "FDC",
+   "year": 2026,
+   "reference_name": "Tramplesaurus Rex",
+   "ai_never": 2,
+   "ai_random": 2
+  },
+  {
+   "id": "mind-flayarrrs",
+   "file": "Mind Flayarrrs [CLB] [2022].dck",
+   "name": "Mind Flayarrrs",
+   "commanders": [
+    "Captain N'ghathrod"
+   ],
+   "set": "CLB",
+   "year": 2022,
+   "reference_name": "Mind Flayarrgh",
+   "ai_never": 5,
+   "ai_random": 5,
+   "note": "Playgroup lists this deck as \"Mind Flayarrgh\""
+  },
+  {
+   "id": "cabaretti-cacophony",
+   "file": "Cabaretti Cacophony [NCC] [2022].dck",
+   "name": "Cabaretti Cacophony",
+   "commanders": [
+    "Kitt Kanto, Mayhem Diva"
+   ],
+   "set": "NCC",
+   "year": 2022,
+   "reference_name": "Cabaretti Cacophony",
+   "ai_never": 5,
+   "ai_random": 3
+  },
+  {
+   "id": "animated-army",
+   "file": "Animated Army [BLC] [2024].dck",
+   "name": "Animated Army",
+   "commanders": [
+    "Bello, Bard of the Brambles"
+   ],
+   "set": "BLC",
+   "year": 2024,
+   "reference_name": "Animated Army",
+   "ai_never": 2,
+   "ai_random": 1
+  },
+  {
+   "id": "grand-larceny",
+   "file": "Grand Larceny [OTC] [2024].dck",
+   "name": "Grand Larceny",
+   "commanders": [
+    "Gonti, Canny Acquisitor"
+   ],
+   "set": "OTC",
+   "year": 2024,
+   "reference_name": "Grand Larceny",
+   "ai_never": 2,
+   "ai_random": 0
+  },
+  {
+   "id": "explorers-of-the-deep",
+   "file": "Explorers of the Deep [LCC] [2023].dck",
+   "name": "Explorers of the Deep",
+   "commanders": [
+    "Hakbal of the Surging Soul"
+   ],
+   "set": "LCC",
+   "year": 2023,
+   "reference_name": "Explorers of the Deep",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "hail-caesar",
+   "file": "Hail, Caesar [PIP] [2024].dck",
+   "name": "Hail, Caesar",
+   "commanders": [
+    "Caesar, Legion's Emperor"
+   ],
+   "set": "PIP",
+   "year": 2024,
+   "reference_name": "Hail, Caesar",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "klingon-fury",
+   "file": "Klingon Fury [TRC] [2026].dck",
+   "name": "Klingon Fury",
+   "commanders": [
+    "Worf, Defiant Commander"
+   ],
+   "set": "TRC",
+   "year": 2026,
+   "reference_name": "Klingon Fury",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "endless-punishment",
+   "file": "Endless Punishment [DSC] [2024].dck",
+   "name": "Endless Punishment",
+   "commanders": [
+    "Valgavoth, Harrower of Souls"
+   ],
+   "set": "DSC",
+   "year": 2024,
+   "reference_name": "Endless Punishment",
+   "ai_never": 2,
+   "ai_random": 2
+  },
+  {
+   "id": "exit-from-exile",
+   "file": "Exit from Exile [CLB] [2022].dck",
+   "name": "Exit from Exile",
+   "commanders": [
+    "Faldorn, Dread Wolf Herald"
+   ],
+   "set": "CLB",
+   "year": 2022,
+   "reference_name": "Exit from Exile",
+   "ai_never": 3,
+   "ai_random": 4
+  },
+  {
+   "id": "growing-threat",
+   "file": "Growing Threat [MOC] [2023].dck",
+   "name": "Growing Threat",
+   "commanders": [
+    "Brimaz, Blight of Oreskos"
+   ],
+   "set": "MOC",
+   "year": 2023,
+   "reference_name": "Growing Threat",
+   "ai_never": 3,
+   "ai_random": 2
+  },
+  {
+   "id": "dance-of-the-elements",
+   "file": "Dance of the Elements [ECC] [2026].dck",
+   "name": "Dance of the Elements",
+   "commanders": [
+    "Ashling, the Limitless"
+   ],
+   "set": "ECC",
+   "year": 2026,
+   "reference_name": "Dance of the Elements",
+   "ai_never": 3,
+   "ai_random": 7
+  },
+  {
+   "id": "scions-and-spellcraft",
+   "file": "Scions & Spellcraft [FIC] [2025].dck",
+   "name": "Scions & Spellcraft",
+   "commanders": [
+    "Y'shtola, Night's Blessed"
+   ],
+   "set": "FIC",
+   "year": 2025,
+   "reference_name": "Scions & Spellcraft",
+   "ai_never": 0,
+   "ai_random": 5
+  },
+  {
+   "id": "wretched-ranks",
+   "file": "Wretched Ranks [FDC] [2026].dck",
+   "name": "Wretched Ranks",
+   "commanders": [
+    "Ghoulcaller Gisa"
+   ],
+   "set": "FDC",
+   "year": 2026,
+   "reference_name": "Wretched Ranks",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "jeskai-striker",
+   "file": "Jeskai Striker [TDC] [2025].dck",
+   "name": "Jeskai Striker",
+   "commanders": [
+    "Shiko and Narset, Unified"
+   ],
+   "set": "TDC",
+   "year": 2025,
+   "reference_name": "Jeskai Striker",
+   "ai_never": 2,
+   "ai_random": 2
+  },
+  {
+   "id": "obscura-operation",
+   "file": "Obscura Operation [NCC] [2022].dck",
+   "name": "Obscura Operation",
+   "commanders": [
+    "Kamiz, Obscura Oculus"
+   ],
+   "set": "NCC",
+   "year": 2022,
+   "reference_name": "Obscura Operation",
+   "ai_never": 4,
+   "ai_random": 1
+  },
+  {
+   "id": "bedecked-brokers",
+   "file": "Bedecked Brokers [NCC] [2022].dck",
+   "name": "Bedecked Brokers",
+   "commanders": [
+    "Perrie, the Pulverizer"
+   ],
+   "set": "NCC",
+   "year": 2022,
+   "reference_name": "Bedecked Brokers",
+   "ai_never": 5,
+   "ai_random": 2
+  },
+  {
+   "id": "jump-scare",
+   "file": "Jump Scare! [DSC] [2024].dck",
+   "name": "Jump Scare!",
+   "commanders": [
+    "Zimone, Mystery Unraveler"
+   ],
+   "set": "DSC",
+   "year": 2024,
+   "reference_name": "Jump Scare!",
+   "ai_never": 4,
+   "ai_random": 3
+  },
+  {
+   "id": "squirreled-away",
+   "file": "Squirreled Away [BLC] [2024].dck",
+   "name": "Squirreled Away",
+   "commanders": [
+    "Hazel of the Rootbloom"
+   ],
+   "set": "BLC",
+   "year": 2024,
+   "reference_name": "Squirreled Away",
+   "ai_never": 1,
+   "ai_random": 2,
+   "note": "Chatterfang, Squirrel General is in the 99 as shipped"
+  },
+  {
+   "id": "federation-fleet",
+   "file": "Federation Fleet [TRC] [2026].dck",
+   "name": "Federation Fleet",
+   "commanders": [
+    "Jean-Luc Picard, Luminary"
+   ],
+   "set": "TRC",
+   "year": 2026,
+   "reference_name": "Federation Fleet",
+   "ai_never": 2,
+   "ai_random": 3
+  },
+  {
+   "id": "food-and-fellowship",
+   "file": "Food and Fellowship [LTC] [2023].dck",
+   "name": "Food and Fellowship",
+   "commanders": [
+    "Frodo, Adventurous Hobbit",
+    "Sam, Loyal Attendant"
+   ],
+   "set": "LTC",
+   "year": 2023,
+   "reference_name": "Food and Fellowship",
+   "ai_never": 2,
+   "ai_random": 4
+  },
+  {
+   "id": "goblin-storm",
+   "file": "Goblin Storm [SLD] [2026].dck",
+   "name": "Goblin Storm",
+   "commanders": [
+    "Zada, Hedron Grinder"
+   ],
+   "set": "SLD",
+   "year": 2026,
+   "reference_name": "Goblin Storm",
+   "ai_never": 3,
+   "ai_random": 4
+  },
+  {
+   "id": "call-for-backup",
+   "file": "Call for Backup [MOC] [2023].dck",
+   "name": "Call for Backup",
+   "commanders": [
+    "Bright-Palm, Soul Awakener"
+   ],
+   "set": "MOC",
+   "year": 2023,
+   "reference_name": "Call for Backup",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "mardu-surge",
+   "file": "Mardu Surge [TDC] [2025].dck",
+   "name": "Mardu Surge",
+   "commanders": [
+    "Zurgo Stormrender"
+   ],
+   "set": "TDC",
+   "year": 2025,
+   "reference_name": "Mardu Surge",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "world-shaper",
+   "file": "World Shaper [EOC] [2025].dck",
+   "name": "World Shaper",
+   "commanders": [
+    "Hearthhull, the Worldseed"
+   ],
+   "set": "EOC",
+   "year": 2025,
+   "reference_name": "World Shaper",
+   "ai_never": 5,
+   "ai_random": 3
+  },
+  {
+   "id": "family-matters",
+   "file": "Family Matters [BLC] [2024].dck",
+   "name": "Family Matters",
+   "commanders": [
+    "Zinnia, Valley's Voice"
+   ],
+   "set": "BLC",
+   "year": 2024,
+   "reference_name": "Family Matters",
+   "ai_never": 0,
+   "ai_random": 1
+  },
+  {
+   "id": "draconic-destruction",
+   "file": "Draconic Destruction [SCD] [2022].dck",
+   "name": "Draconic Destruction",
+   "commanders": [
+    "Atarka, World Render"
+   ],
+   "set": "SCD",
+   "year": 2022,
+   "reference_name": "Draconic Destruction",
+   "ai_never": 2,
+   "ai_random": 4
+  },
+  {
+   "id": "wakanda-forever",
+   "file": "Wakanda Forever [MSC] [2026].dck",
+   "name": "Wakanda Forever",
+   "commanders": [
+    "T'Challa, the Black Panther"
+   ],
+   "set": "MSC",
+   "year": 2026,
+   "reference_name": "Wakanda Forever",
+   "ai_never": 4,
+   "ai_random": 2
+  },
+  {
+   "id": "riders-of-rohan",
+   "file": "Riders of Rohan [LTC] [2023].dck",
+   "name": "Riders of Rohan",
+   "commanders": [
+    "Éowyn, Shieldmaiden"
+   ],
+   "set": "LTC",
+   "year": 2023,
+   "reference_name": "Riders of Rohan",
+   "ai_never": 2,
+   "ai_random": 3
+  },
+  {
+   "id": "quandrix-unlimited",
+   "file": "Quandrix Unlimited [SOC] [2026].dck",
+   "name": "Quandrix Unlimited",
+   "commanders": [
+    "Zimone, Infinite Analyst"
+   ],
+   "set": "SOC",
+   "year": 2026,
+   "reference_name": "Quandrix Unlimited",
+   "ai_never": 5,
+   "ai_random": 3
+  },
+  {
+   "id": "deep-clue-sea",
+   "file": "Deep Clue Sea [MKC] [2024].dck",
+   "name": "Deep Clue Sea",
+   "commanders": [
+    "Morska, Undersea Sleuth"
+   ],
+   "set": "MKC",
+   "year": 2024,
+   "reference_name": "Deep Clue Sea",
+   "ai_never": 4,
+   "ai_random": 3
+  },
+  {
+   "id": "grave-danger",
+   "file": "Grave Danger [SCD] [2022].dck",
+   "name": "Grave Danger",
+   "commanders": [
+    "Gisa and Geralf"
+   ],
+   "set": "SCD",
+   "year": 2022,
+   "reference_name": "Grave Danger",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "the-host-of-mordor",
+   "file": "The Host of Mordor [LTC] [2023].dck",
+   "name": "The Host of Mordor",
+   "commanders": [
+    "Sauron, Lord of the Rings"
+   ],
+   "set": "LTC",
+   "year": 2023,
+   "reference_name": "The Hosts of Mordor",
+   "ai_never": 3,
+   "ai_random": 6,
+   "note": "Playgroup lists this deck as \"The Hosts of Mordor\""
+  },
+  {
+   "id": "counter-blitz",
+   "file": "Counter Blitz [FIC] [2025].dck",
+   "name": "Counter Blitz",
+   "commanders": [
+    "Tidus, Yuna's Guardian"
+   ],
+   "set": "FIC",
+   "year": 2025,
+   "reference_name": "Counter Blitz",
+   "ai_never": 1,
+   "ai_random": 5
+  },
+  {
+   "id": "sliver-swarm",
+   "file": "Sliver Swarm [CMM] [2023].dck",
+   "name": "Sliver Swarm",
+   "commanders": [
+    "Sliver Gravemother"
+   ],
+   "set": "CMM",
+   "year": 2023,
+   "reference_name": "Sliver Swarm",
+   "ai_never": 2,
+   "ai_random": 3
+  },
+  {
+   "id": "ahoy-mateys",
+   "file": "Ahoy Mateys [LCC] [2023].dck",
+   "name": "Ahoy Mateys",
+   "commanders": [
+    "Admiral Brass, Unsinkable"
+   ],
+   "set": "LCC",
+   "year": 2023,
+   "reference_name": "Ahoy Mateys",
+   "ai_never": 3,
+   "ai_random": 4
+  },
+  {
+   "id": "silverquill-influence",
+   "file": "Silverquill Influence [SOC] [2026].dck",
+   "name": "Silverquill Influence",
+   "commanders": [
+    "Killian, Decisive Mentor"
+   ],
+   "set": "SOC",
+   "year": 2026,
+   "reference_name": "Silverquill Influence",
+   "ai_never": 4,
+   "ai_random": 1
+  },
+  {
+   "id": "blood-rites",
+   "file": "Blood Rites [LCC] [2023].dck",
+   "name": "Blood Rites",
+   "commanders": [
+    "Clavileño, First of the Blessed"
+   ],
+   "set": "LCC",
+   "year": 2023,
+   "reference_name": "Blood Rites",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "draconic-dissent",
+   "file": "Draconic Dissent [CLB] [2022].dck",
+   "name": "Draconic Dissent",
+   "commanders": [
+    "Firkraag, Cunning Instigator"
+   ],
+   "set": "CLB",
+   "year": 2022,
+   "reference_name": "Draconic Dissent",
+   "ai_never": 3,
+   "ai_random": 5
+  },
+  {
+   "id": "avengers-assemble",
+   "file": "Avengers Assemble [MSC] [2026].dck",
+   "name": "Avengers Assemble",
+   "commanders": [
+    "Captain America, Team Leader"
+   ],
+   "set": "MSC",
+   "year": 2026,
+   "reference_name": "Avengers Assemble",
+   "ai_never": 0,
+   "ai_random": 3
+  },
+  {
+   "id": "painbow",
+   "file": "Painbow [DMC] [2022].dck",
+   "name": "Painbow",
+   "commanders": [
+    "Jared Carthalion"
+   ],
+   "set": "DMC",
+   "year": 2022,
+   "reference_name": "Painbow",
+   "ai_never": 5,
+   "ai_random": 7
+  },
+  {
+   "id": "limit-break",
+   "file": "Limit Break [FIC] [2025].dck",
+   "name": "Limit Break",
+   "commanders": [
+    "Cloud, Ex-SOLDIER"
+   ],
+   "set": "FIC",
+   "year": 2025,
+   "reference_name": "Limit Break",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "scrappy-survivors",
+   "file": "Scrappy Survivors [PIP] [2024].dck",
+   "name": "Scrappy Survivors",
+   "commanders": [
+    "Dogmeat, Ever Loyal"
+   ],
+   "set": "PIP",
+   "year": 2024,
+   "reference_name": "Scrappy Survivors",
+   "ai_never": 4,
+   "ai_random": 2
+  },
+  {
+   "id": "first-flight",
+   "file": "First Flight [SCD] [2022].dck",
+   "name": "First Flight",
+   "commanders": [
+    "Isperia, Supreme Judge"
+   ],
+   "set": "SCD",
+   "year": 2022,
+   "reference_name": "First Flight",
+   "ai_never": 1,
+   "ai_random": 1
+  }
+ ],
+ "unmatched_reference_precons": [
+  {
+   "name": "Everyone's Invited",
+   "set": "Everyone's Invited",
+   "commander": "Morophon, the Boundless",
+   "reason": "no bundled Forge precon"
+  }
+ ]
+}

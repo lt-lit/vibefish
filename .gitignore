@@ -8,3 +8,7 @@ results/
 
 # compiled harness
 controller/out/
+
+# local data override for the dashboard (./data is tried before ../demo-data)
+dashboard/data
+__pycache__/

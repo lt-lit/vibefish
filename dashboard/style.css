@@ -92,7 +92,7 @@ figure.chart figcaption p { margin: 2px 0 0; color: var(--ink-2); font-size: 0.8
 figure.chart .toggle { font-size: 0.8rem; padding: 3px 8px; white-space: nowrap; }
 figure.chart .plot { min-width: 0; }
 figure.chart.wide { grid-column: 1 / -1; }
-figure.calibration .table-view td:last-child, figure.calibration .table-view th:last-child { white-space: normal; text-align: left; color: var(--ink-2); }
+figure.calibration .table-view td:last-child, figure.calibration .table-view th:last-child { white-space: normal; text-align: left; color: var(--ink-2); min-width: 18em; max-width: 34em; }
 figure.chart svg { width: 100%; height: auto; display: block; touch-action: pan-y; }
 .gridline { stroke: var(--grid); stroke-width: 1; }
 .baseline { stroke: var(--axis); stroke-width: 1; }
@@ -127,6 +127,35 @@ figure.chart svg { width: 100%; height: auto; display: block; touch-action: pan-
 .tooltip .tt-row b { font-variant-numeric: tabular-nums; min-width: 3.2em; text-align: right; }
 .tooltip .tt-row .key { display: inline-block; width: 12px; height: 2px; }
 .tooltip .tt-row span { color: var(--ink-2); }
+
+/* League view: headline tiles, the dot plot, the precon table */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; margin-bottom: 22px; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.tile .value { font-size: 1.9rem; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tile .label { font-weight: 600; margin-top: 6px; font-size: 0.92rem; }
+.tile .note { color: var(--ink-2); font-size: 0.82rem; margin-top: 4px; }
+.pt { fill: var(--s1); stroke: var(--surface); stroke-width: 2; }
+.pt.hot { stroke: var(--ink); }
+.ci { stroke: var(--axis); stroke-width: 1; }
+.agree { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 4; }
+.even { stroke: var(--axis); stroke-width: 1; stroke-dasharray: 2 5; opacity: 0.7; }
+.ptlabel { fill: var(--ink-2); font-size: 11.5px; }
+.league { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 22px; }
+.league .head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: flex-start; margin-bottom: 8px; }
+.league .head h2 { margin-bottom: 4px; }
+.league .head .tag { font-size: 0.86rem; max-width: 70ch; }
+.league input[type="search"] { font: inherit; color: var(--ink); background: var(--page); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; min-width: min(100%, 220px); }
+.league th.sortable { cursor: pointer; user-select: none; }
+.league th.sortable:hover { color: var(--ink); }
+.league th.sorted::after { content: " ▾"; }
+.league th.sorted.asc::after { content: " ▴"; }
+.league td.deckcell { text-align: left; white-space: normal; min-width: 200px; }
+.deckcell .row { display: flex; align-items: center; gap: 8px; }
+.deckcell img, .deckcell .noimg { width: 28px; height: 39px; border-radius: 3px; object-fit: cover; background: var(--grid); flex: none; display: block; }
+.deckcell .n { font-weight: 600; color: var(--ink); text-decoration: none; }
+.deckcell a.n:hover { text-decoration: underline; }
+.deckcell .c { color: var(--ink-2); font-size: 0.8rem; }
+.games summary { cursor: pointer; font-weight: 600; }
 
 /* Card lists */
 .cards { display: grid; gap: 14px; margin-bottom: 22px; }

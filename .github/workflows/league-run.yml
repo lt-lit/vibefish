@@ -1,0 +1,158 @@
+name: league-run
+
+# Plays the precon league (runner/precon-league.json) in parallel shards, one Forge game per table, rolls the
+# results up with the calibration scorecard against Playgroup's human precon table and (optionally) publishes
+# them into demo-data/ on the current branch. 25 cycles = 2200 games = 96-100 per deck; 20 shards of 110 games
+# at two games at a time take about 1.5 hours each.
+on:
+  workflow_dispatch:
+    inputs:
+      cycles:
+        description: "Cycles of four rounds (each deck plays four games per cycle, one in every seat)"
+        default: "25"
+      shards:
+        description: "Parallel shard jobs (max 20 on a free plan)"
+        default: "20"
+      jobs_per_shard:
+        description: "Games at a time per shard (a 4-core runner plays two)"
+        default: "2"
+      seed:
+        description: "Base seed (blank = today's date)"
+        default: ""
+      run_id:
+        description: "Run id (blank = league-<date>-<forge>-s<seed>)"
+        default: ""
+      forge_channel:
+        description: "Forge build: the pinned release, or the daily-snapshot build below"
+        type: choice
+        options: [pinned, snapshot]
+        default: snapshot
+      forge_snapshot_build:
+        description: "Snapshot build to pin (FORGE_SNAPSHOT_BUILD); must be in forge/SHA256SUMS to be verified"
+        default: "2.0.16-SNAPSHOT-11.08"
+      profile:
+        description: "AI profile for every seat (blank = Forge's Default)"
+        default: ""
+      mc:
+        description: "Flat Monte Carlo (2.0.16+ builds): off, on, max or lite"
+        default: "off"
+      publish:
+        description: "Commit rollup, scorecard and league.json into demo-data/ on this branch"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: league-run-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  FORGE_CHANNEL: ${{ inputs.forge_channel }}
+  FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_channel == 'snapshot' && inputs.forge_snapshot_build || '' }}
+
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      seed: ${{ steps.vals.outputs.seed }}
+      run_id: ${{ steps.vals.outputs.run_id }}
+      shards: ${{ steps.vals.outputs.shards }}
+      matrix: ${{ steps.vals.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: vals
+        run: |
+          seed="${{ inputs.seed }}"; [ -n "$seed" ] || seed=$(date -u +%Y%m%d)
+          league=$(jq -r .name runner/precon-league.json)
+          if [ "$FORGE_CHANNEL" = snapshot ]; then
+            md="${FORGE_SNAPSHOT_BUILD##*-}"; y=$(date -u +%Y); [[ "$(date -u +%m.%d)" < "$md" ]] && y=$((y - 1))
+            forge="snapshot-$y-${md%.*}-${md#*.}"     # the stamp fetch-forge.sh gives the runtime
+          else forge=$(tr -d '[:space:]' < forge/VERSION); fi
+          run_id="${{ inputs.run_id }}"; [ -n "$run_id" ] || run_id="$(date -u +%Y-%m-%d)-${league}-${forge}-s${seed}"
+          shards="${{ inputs.shards }}"
+          matrix=$(seq 1 "$shards" | jq -cs .)
+          { echo "seed=$seed"; echo "run_id=$run_id"; echo "shards=$shards"; echo "matrix=$matrix"; } >> "$GITHUB_OUTPUT"
+          python3 -I runner/league.py schedule --seed "$seed" --cycles "${{ inputs.cycles }}" --show 0
+          echo "run $run_id: ${{ inputs.cycles }} cycle(s), $shards shard(s), seed $seed, Forge $FORGE_CHANNEL ${FORGE_SNAPSHOT_BUILD}"
+
+  shard:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        shard: ${{ fromJSON(needs.prep.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Cache Forge runtime
+        uses: actions/cache@v4
+        with:
+          path: forge/runtime
+          key: forge-runtime-${{ runner.os }}-${{ env.FORGE_CHANNEL }}-${{ env.FORGE_SNAPSHOT_BUILD }}-${{ hashFiles('forge/VERSION', 'forge/SHA256SUMS', 'forge/fetch-forge.sh') }}
+      - run: forge/fetch-forge.sh
+      - name: Play shard ${{ matrix.shard }}
+        run: |
+          nproc; free -g | head -2; cat forge/runtime/VIBEFISH_FORGE_VERSION
+          python3 -I runner/league.py play --seed "${{ needs.prep.outputs.seed }}" --cycles "${{ inputs.cycles }}" \
+            --out "results/${{ needs.prep.outputs.run_id }}" --runtime forge/runtime \
+            --shards "${{ needs.prep.outputs.shards }}" --shard "${{ matrix.shard }}" -j "${{ inputs.jobs_per_shard }}" \
+            --mc "${{ inputs.mc }}" ${{ inputs.profile && format('--profile "{0}"', inputs.profile) || '' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}
+          path: |
+            results/${{ needs.prep.outputs.run_id }}/shard-${{ matrix.shard }}/
+            results/${{ needs.prep.outputs.run_id }}/league.json
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}-log
+          path: results/${{ needs.prep.outputs.run_id }}/shard-${{ matrix.shard }}.log
+          retention-days: 30
+
+  rollup:
+    needs: [prep, shard]
+    if: always() && needs.prep.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          merge-multiple: true
+          path: results/${{ needs.prep.outputs.run_id }}
+      - name: Roll up and score
+        run: |
+          ls "results/${{ needs.prep.outputs.run_id }}" | head -40
+          python3 -I runner/league.py rollup "results/${{ needs.prep.outputs.run_id }}" --run-id "${{ needs.prep.outputs.run_id }}" \
+            --seed "${{ needs.prep.outputs.seed }}" --cycles "${{ inputs.cycles }}"
+          python3 -I runner/scorecard.py "results/${{ needs.prep.outputs.run_id }}/rollup.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rollup
+          path: |
+            results/${{ needs.prep.outputs.run_id }}/rollup.json
+            results/${{ needs.prep.outputs.run_id }}/scorecard.json
+            results/${{ needs.prep.outputs.run_id }}/league.json
+      - name: Publish into demo-data
+        if: ${{ inputs.publish }}
+        run: |
+          runner/publish.sh "results/${{ needs.prep.outputs.run_id }}" demo-data
+          git config user.name "vibefish-runner"
+          git config user.email "vibefish-runner@users.noreply.github.com"
+          git add demo-data
+          git commit -m "demo-data: ${{ needs.prep.outputs.run_id }} (league, ${{ inputs.cycles }} cycles)" || { echo "nothing to commit"; exit 0; }
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"

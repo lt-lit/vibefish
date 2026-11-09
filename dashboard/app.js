@@ -1,7 +1,9 @@
 /* Vibefish dashboard. Vanilla JS, no build step.
  * Data contract (base URL from ?data=; otherwise ./data/ then ../demo-data/, whichever has an index.json):
  *   index.json                 {"runs":[{id, generated, forge_version, pod, games, path}]}
- *   <run.path>                 rollup.json written by runner/rollup.py
+ *   <run.path>                 rollup.json written by runner/rollup.py (a pod: four decks in fixed seats) or by
+ *                              runner/league.py (kind "league": many decks over random tables; league view below)
+ *   <run dir>/scorecard.json   calibration against Playgroup.gg's human references, from runner/scorecard.py (optional)
  *   cards/scryfall-cache.json  {name: {image_uris:{small,normal}, scryfall_uri, ...}} (optional)
  */
 (() => {
@@ -292,6 +294,8 @@
 
     // deck cards (the KPI row)
     const deckSec = $('#decks');
+    deckSec.className = 'decks';
+    $('#league').hidden = true;
     deckSec.replaceChildren(...decks.map((d, i) => {
       const cmdr = (d.commanders || [])[0];
       const c = cmdr ? cards[cmdr] : null;
@@ -381,21 +385,221 @@
   }
 
   /** Sim versus human reference numbers (Playgroup.gg), as a table card. */
-  function calibrationCard(sc, names) {
+  function calibrationCard(sc, names, withDecks = true) {
     const m = sc.metrics;
     const rows = [];
     const add = (metric, sim, human, note) => rows.push([metric, sim, human, note || '']);
     if (m.first_seat_win_rate) add('First seat wins', pct(m.first_seat_win_rate.sim, 1), pct(m.first_seat_win_rate.human, 1), `${m.first_seat_win_rate.sim_games} games; even is ${pct(m.first_seat_win_rate.even)}`);
+    if (m.first_seat_win_rate && m.first_seat_win_rate.sim_by_seat) add('Win rate by seat 1–4', m.first_seat_win_rate.sim_by_seat.map((v) => num(v * 100, 1)).join(' / ') + '%', (m.first_seat_win_rate.human_by_seat || []).map((v) => num(v * 100, 1)).join(' / ') + '%', 'human seats from 257,261 four-player games');
     if (m.mulligans_taken) add('Decks that mulligan', pct(m.mulligans_taken.sim_any_mulligan, 1), pct(m.mulligans_taken.human_any_mulligan), `${m.mulligans_taken.sim_seat_games} seat-games`);
     if (m.opening_hand_lands) add('Lands in kept hand', num(m.opening_hand_lands.sim_mean, 2), num(m.opening_hand_lands.human_mean, 2), `${m.opening_hand_lands.sim_hands} hands`);
     if (m.rounds_per_game) add('Rounds per game', num(m.rounds_per_game.sim_mean, 1), num(m.rounds_per_game.human_mean, 2), 'a round is one turn for each player');
-    (m.precon_win_rate && m.precon_win_rate.rows || []).forEach((r) => { if (r.human_win_rate != null) add(`${r.deck} win rate`, pct(r.sim_win_rate, 1), pct(r.human_win_rate, 1), `${r.sim_games} sim games vs ${r.human_games} human stock games`); });
+    if (withDecks) (m.precon_win_rate && m.precon_win_rate.rows || []).forEach((r) => { if (r.human_win_rate != null) add(`${r.deck} win rate`, pct(r.sim_win_rate, 1), pct(r.human_win_rate, 1), `${r.sim_games} sim games vs ${r.human_games} human stock games`); });
     if (m.precon_win_rate && m.precon_win_rate.spearman_rank_correlation != null) add('Precon rank correlation', String(m.precon_win_rate.spearman_rank_correlation), '1.0', `${m.precon_win_rate.decks_compared} decks; the human table ranks stock precons against mixed tables`);
+    if (m.precon_win_rate && m.precon_win_rate.mean_abs_difference != null) add('Mean gap in precon win rate', `${(m.precon_win_rate.mean_abs_difference * 100).toFixed(1)} pts`, '0', `spread across precons: sim ${(m.precon_win_rate.sim_sd * 100).toFixed(1)} pts, human ${(m.precon_win_rate.human_sd * 100).toFixed(1)} pts`);
     const fig = el('figure', { class: 'chart wide calibration' },
       el('figcaption', {}, el('div', {}, el('h3', { text: 'Calibration against human games' }),
         el('p', { text: `Sim numbers next to Playgroup.gg's tracked Commander games (reference copied ${sc.reference_retrieved || ''}). Likeness, not strength.` }))),
       el('div', { class: 'table-view' }, dataTable(['Metric', 'Sim', 'Human', 'Note'], rows)));
     return fig;
+  }
+
+
+  // ---------- league view: many precons over random four-player tables ----------
+  const signed = (v, d = 1) => v == null ? '–' : `${v >= 0 ? '+' : '−'}${Math.abs(v * 100).toFixed(d)}`;
+
+  function renderLeague(run, rollup, cards, scorecard) {
+    const L = rollup.league || {};
+    const decks = rollup.deck_stats || [];
+    const byId = new Map(decks.map((d) => [d.id, d]));
+    const label = (id) => { const d = byId.get(id); return d ? (shortName(d.name) || id) : id; };
+    const sc = scorecard && scorecard.metrics ? scorecard.metrics : {};
+    const pw = sc.precon_win_rate || {};
+    const scRows = pw.rows || [];
+    const matched = scRows.filter((r) => r.human_win_rate != null);
+
+    // meta line
+    const meta = $('#meta');
+    meta.replaceChildren(...[
+      el('span', {}, el('b', { text: String(rollup.games) }), ` of ${L.games_scheduled ?? '–'} games · ${rollup.completed_games ?? '–'} decided · ${rollup.drawn_games ?? 0} draws`),
+      el('span', {}, el('b', { text: String(L.decks ?? decks.length) }), ` precons · ${num(L.games_per_deck_avg, 1)} games each`),
+      el('span', {}, 'Forge ', el('b', { text: rollup.forge_version || '?' })),
+      el('span', {}, 'avg game ', el('b', { text: `${num(rollup.avg_game_turns, 0)} turns` }), ` (${num(rollup.avg_game_seconds, 0)} s)`),
+      el('span', {}, 'generated ', el('b', { text: (rollup.generated || '').replace('T', ' ').replace('Z', ' UTC') })),
+      rollup.profile && rollup.profile !== 'Default' ? el('span', {}, 'profile ', el('b', { text: rollup.profile })) : null,
+      rollup.mc && rollup.mc !== 'off' ? el('span', {}, 'Flat Monte Carlo ', el('b', { text: rollup.mc })) : null,
+    ].filter(Boolean));
+    meta.hidden = false;
+
+    // headline tiles
+    const tiles = $('#decks');
+    tiles.className = 'tiles';
+    const tile = (value, title, note) => el('article', { class: 'tile' }, el('div', { class: 'value', text: value }), el('div', { class: 'label', text: title }), note ? el('div', { class: 'note', text: note }) : null);
+    tiles.replaceChildren(
+      tile(pw.spearman_rank_correlation != null ? String(pw.spearman_rank_correlation) : '–', 'Rank correlation with human results',
+        pw.decks_compared ? `Spearman over ${pw.decks_compared} precons: 1.0 is the same order, 0 is no relation${pw.well_measured ? `; ${pw.well_measured.spearman_rank_correlation} over the ${pw.well_measured.decks_compared} with 100+ human games` : ''}` : 'no precon matched the human table'),
+      tile(pw.mean_abs_difference != null ? `${(pw.mean_abs_difference * 100).toFixed(1)} pts` : '–', 'Mean gap in win rate', 'Average absolute difference between a precon\'s sim and human win rate'),
+      tile(pw.sim_sd != null ? `${(pw.sim_sd * 100).toFixed(1)} vs ${(pw.human_sd * 100).toFixed(1)}` : '–', 'Spread of win rates, sim vs human', 'Standard deviation across precons, in points: a wider sim spread means the AI exaggerates deck differences'),
+      tile(sc.rounds_per_game ? `${num(sc.rounds_per_game.sim_mean, 1)} vs ${num(sc.rounds_per_game.human_mean, 2)}` : '–', 'Rounds per game, sim vs human', 'A round is one turn for each player'));
+    tiles.hidden = false;
+
+    // charts: the dot plot and the calibration card
+    charts.length = 0;
+    const chartSec = $('#charts');
+    const points = matched.map((r) => ({ name: r.deck, x: r.human_win_rate, y: r.sim_win_rate, ci: r.sim_win_rate_ci95, games: r.sim_games, humanGames: r.human_games, tier: r.human_tier }));
+    chartSec.replaceChildren();
+    if (points.length) {
+      const fig = scatterChart({ title: 'Sim versus human win rate, one dot per precon',
+        subtitle: `The thin bar is the sim's 95% interval; the dashed diagonal is perfect agreement; the dotted lines mark 25%, an even four-player table. Human rates are Playgroup.gg's stock-precon results (copied ${scorecard.reference_retrieved || ''}).`,
+        points, labelCount: 6 });
+      fig.classList.add('wide');
+      chartSec.append(fig);
+    }
+    if (scorecard && scorecard.metrics) chartSec.append(calibrationCard(scorecard, [], false));
+    chartSec.hidden = false;
+    relayout(true);
+
+    // the precon table
+    leagueTable(scRows, byId, cards, L);
+    $('#cards').hidden = true;
+
+    // games, built when opened
+    const gamesSec = $('#games');
+    const games = rollup.game_summaries || [];
+    const det = el('details', {}, el('summary', { text: `Games (${games.length})` }));
+    let built = false;
+    det.addEventListener('toggle', () => {
+      if (built || !det.open) return;
+      built = true;
+      const rows = games.map((g) => [String(g.game ?? g.index), `${g.cycle ?? '–'}/${g.round ?? '–'}`, String(g.seed ?? ''),
+        (g.seats || []).map((id) => label(id)).join(' · '), g.first_seat != null && g.seats ? label(g.seats[g.first_seat]) : '–',
+        String(g.turns ?? ''), g.winner_id ? label(g.winner_id) : '—', endLabel(g.reason), num((g.duration_ms || 0) / 1000, 0)]);
+      det.append(dataTable(['Game', 'Cycle/round', 'Seed', 'Table (seats 1–4)', 'First seat', 'Turns', 'Winner', 'End', 'Seconds'], rows));
+    });
+    gamesSec.replaceChildren(det);
+    gamesSec.hidden = false;
+  }
+
+  /** Sortable, filterable table of every precon in the league, with the human reference where there is one. */
+  function leagueTable(rows, byId, cards, L) {
+    const sec = $('#league');
+    const cols = [
+      { key: 'human_rank', label: '#', get: (r) => r.human_rank, fmt: (r) => r.human_rank == null ? '–' : String(Math.round(r.human_rank)) },
+      { key: 'deck', label: 'Precon', get: (r) => r.deck, left: true, cell: (r) => deckCell(r, byId, cards) },
+      { key: 'set', label: 'Set', get: (r) => (byId.get(r.id) || {}).set || '', left: true, fmt: (r) => (byId.get(r.id) || {}).set || '' },
+      { key: 'sim_win_rate', label: 'Sim win rate', get: (r) => r.sim_win_rate, fmt: (r) => `${pct(r.sim_win_rate, 1)}${r.sim_win_rate_ci95 ? ` (${pct(r.sim_win_rate_ci95[0])}–${pct(r.sim_win_rate_ci95[1])})` : ''}` },
+      { key: 'sim_games', label: 'Games', get: (r) => r.sim_games, fmt: (r) => String(r.sim_games) },
+      { key: 'human_win_rate', label: 'Human win rate', get: (r) => r.human_win_rate, fmt: (r) => r.human_win_rate == null ? '–' : `${pct(r.human_win_rate, 1)} (${r.human_games})` },
+      { key: 'difference', label: 'Sim − human', get: (r) => r.difference, fmt: (r) => signed(r.difference) },
+      { key: 'human_tier', label: 'Tier', get: (r) => r.human_tier || '', fmt: (r) => r.human_tier || '–' },
+    ];
+    const state = { key: 'human_win_rate', dir: -1, q: '' };
+    const search = el('input', { type: 'search', placeholder: 'Filter precons', 'aria-label': 'Filter precons' });
+    const wrap = el('div', { class: 'table-view' });
+    const draw = () => {
+      const q = state.q.trim().toLowerCase();
+      const col = cols.find((c) => c.key === state.key);
+      const data = rows.filter((r) => !q || [r.deck, ...(byId.get(r.id) || {}).commanders || [], (byId.get(r.id) || {}).set || ''].join(' ').toLowerCase().includes(q))
+        .sort((a, b) => {
+          const va = col.get(a), vb = col.get(b);
+          if (va == null && vb == null) return 0;
+          if (va == null) return 1;
+          if (vb == null) return -1;
+          return (typeof va === 'string' ? va.localeCompare(vb) : va - vb) * state.dir;
+        });
+      const head = el('tr', {}, cols.map((c) => {
+        const th = el('th', { scope: 'col', class: `sortable${c.key === state.key ? ' sorted' : ''}${c.key === state.key && state.dir > 0 ? ' asc' : ''}`, text: c.label, title: 'Sort' });
+        if (c.left) th.style.textAlign = 'left';
+        th.addEventListener('click', () => { if (state.key === c.key) state.dir = -state.dir; else { state.key = c.key; state.dir = c.key === 'deck' || c.key === 'set' || c.key === 'human_rank' ? 1 : -1; } draw(); });
+        return th;
+      }));
+      const body = el('tbody', {}, data.map((r) => el('tr', {}, cols.map((c) => c.cell ? c.cell(r) : el('td', { text: c.fmt(r), style: c.left ? 'text-align:left' : null })))));
+      wrap.replaceChildren(el('table', {}, el('thead', {}, head), body));
+    };
+    search.addEventListener('input', () => { state.q = search.value; draw(); });
+    sec.replaceChildren(
+      el('div', { class: 'head' },
+        el('div', {}, el('h2', { text: `Precons (${rows.length})` }),
+          el('p', { class: 'tag', text: `${L.description || ''} Sim win rates carry a 95% Wilson interval; human rates are stock-precon results on Playgroup.gg with their game counts.` })),
+        search),
+      wrap);
+    draw();
+    sec.hidden = false;
+  }
+
+  function deckCell(r, byId, cards) {
+    const d = byId.get(r.id) || {};
+    const cmdrs = d.commanders || [];
+    const c = cmdrs[0] ? cards[cmdrs[0]] : null;
+    const img = c && c.image_uris && c.image_uris.small
+      ? el('img', { src: c.image_uris.small, alt: cmdrs[0], loading: 'lazy', width: 28, height: 39 })
+      : el('div', { class: 'noimg' });
+    const name = c && c.scryfall_uri ? el('a', { class: 'n', href: c.scryfall_uri, target: '_blank', rel: 'noopener', title: `${cmdrs[0]} on Scryfall`, text: r.deck }) : el('span', { class: 'n', text: r.deck });
+    return el('td', { class: 'deckcell' }, el('div', { class: 'row' }, img, el('div', {}, name, el('div', { class: 'c', text: cmdrs.join(' + ') }))));
+  }
+
+  /** Dot plot: sim win rate against the human one, one dot per precon, the sim's 95% interval as a thin bar. */
+  function scatterChart({ title, subtitle, points, labelCount }) {
+    return chartFigure(title, subtitle, (W) => {
+      const H = Math.max(280, Math.min(520, Math.round(W * 0.7)));
+      const m = { t: 16, r: 28, b: 48, l: 50 };
+      const pw = W - m.l - m.r, ph = H - m.t - m.b;
+      const maxV = niceMax(Math.max(0.3, ...points.flatMap((p) => [p.x, p.ci ? p.ci[1] : p.y])));
+      const sx = (v) => m.l + (v / maxV) * pw, sy = (v) => m.t + ph - (v / maxV) * ph;
+      const root = svg('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': title });
+      const ticks = maxV <= 0.5 ? Math.round(maxV / 0.1) : 4;
+      for (let k = 0; k <= ticks; k++) {
+        const v = (maxV * k) / ticks;
+        root.append(svg('line', { class: k === 0 ? 'baseline' : 'gridline', x1: m.l, x2: m.l + pw, y1: sy(v), y2: sy(v) }));
+        root.append(svg('text', { class: 'tick', x: m.l - 6, y: sy(v) + 4, 'text-anchor': 'end', text: pct(v) }));
+        root.append(svg('line', { class: k === 0 ? 'baseline' : 'gridline', x1: sx(v), x2: sx(v), y1: m.t, y2: m.t + ph }));
+        root.append(svg('text', { class: 'tick', x: sx(v), y: m.t + ph + 16, 'text-anchor': 'middle', text: pct(v) }));
+      }
+      root.append(svg('line', { class: 'even', x1: sx(0.25), x2: sx(0.25), y1: m.t, y2: m.t + ph }));
+      root.append(svg('line', { class: 'even', x1: m.l, x2: m.l + pw, y1: sy(0.25), y2: sy(0.25) }));
+      root.append(svg('line', { class: 'agree', x1: sx(0), y1: sy(0), x2: sx(maxV), y2: sy(maxV) }));
+      root.append(svg('text', { class: 'tick', x: m.l + pw, y: H - 6, 'text-anchor': 'end', text: 'human win rate (Playgroup.gg, stock precons)' }));
+      root.append(svg('text', { class: 'tick', x: 12, y: m.t + ph / 2, 'text-anchor': 'middle', transform: `rotate(-90 12 ${m.t + ph / 2})`, text: 'sim win rate' }));
+      points.forEach((p) => { if (p.ci) root.append(svg('line', { class: 'ci', x1: sx(p.x), x2: sx(p.x), y1: sy(p.ci[0]), y2: sy(p.ci[1]) })); });
+      const dots = points.map((p) => svg('circle', { class: 'pt', cx: sx(p.x), cy: sy(p.y), r: 4.5 }));
+      root.append(...dots);
+      // direct labels for the largest gaps between sim and human; skip a label that would sit on another
+      const placed = [];
+      points.slice().sort((a, b) => Math.abs(b.y - b.x) - Math.abs(a.y - a.x)).slice(0, labelCount || 5).forEach((p) => {
+        let x = sx(p.x) + 8, y = sy(p.y) + 4;
+        const anchorEnd = x + p.name.length * 6.5 > W - 4;
+        if (anchorEnd) x = sx(p.x) - 8;
+        if (placed.some((q) => Math.abs(q.y - y) < 13 && Math.abs(q.x - x) < 140)) return;
+        placed.push({ x, y });
+        root.append(svg('text', { class: 'ptlabel', x, y, 'text-anchor': anchorEnd ? 'end' : 'start', text: p.name }));
+      });
+      const hit = svg('rect', { class: 'hit', x: 0, y: 0, width: W, height: H });
+      root.append(hit);
+      let hot = null;
+      const move = (ev) => {
+        const r = root.getBoundingClientRect();
+        const px = ((ev.clientX - r.left) / r.width) * W, py = ((ev.clientY - r.top) / r.height) * H;
+        let best = null, bd = 20 * 20;
+        points.forEach((p, i) => { const dx = sx(p.x) - px, dy = sy(p.y) - py, d2 = dx * dx + dy * dy; if (d2 < bd) { bd = d2; best = i; } });
+        if (hot != null && hot !== best) dots[hot].classList.remove('hot');
+        hot = best;
+        if (best == null) { hideTip(); return; }
+        dots[best].classList.add('hot');
+        const p = points[best];
+        showTip(ev.clientX, ev.clientY, p.name, [
+          { value: pct(p.y, 1), name: `sim, ${p.games} games${p.ci ? ` (${pct(p.ci[0])}–${pct(p.ci[1])})` : ''}`, color: 'var(--s1)' },
+          { value: pct(p.x, 1), name: `human, ${p.humanGames} stock games${p.tier ? `, tier ${p.tier}` : ''}`, color: 'var(--axis)' },
+          { value: signed(p.y - p.x), name: 'points, sim minus human', color: 'transparent' }]);
+      };
+      const leave = () => { if (hot != null) dots[hot].classList.remove('hot'); hot = null; hideTip(); };
+      hit.addEventListener('pointermove', move);
+      hit.addEventListener('pointerdown', move);
+      hit.addEventListener('pointerleave', leave);
+      const plot = el('div', {}, root);
+      const table = dataTable(['Precon', 'Sim', 'Human', 'Sim − human', 'Sim games', 'Human games'],
+        points.slice().sort((a, b) => b.x - a.x).map((p) => [p.name, pct(p.y, 1), pct(p.x, 1), signed(p.y - p.x), String(p.games), String(p.humanGames)]));
+      return { plot, table };
+    });
   }
 
   function lossLabel(k) {
@@ -429,7 +633,8 @@
         status.hidden = false; status.textContent = `Loading ${run.id}…`; status.classList.remove('error');
         const rollup = await loadJson(DATA + run.path);
         const scorecard = await loadJson(DATA + run.path.replace(/rollup\.json$/, 'scorecard.json'), true);
-        renderRun(run, rollup, cards, scorecard);
+        if (rollup.kind === 'league' || rollup.league) renderLeague(run, rollup, cards, scorecard);
+        else renderRun(run, rollup, cards, scorecard);
         status.hidden = true;
         const u = new URL(location.href); u.searchParams.set('run', run.id); history.replaceState(null, '', u);
       };

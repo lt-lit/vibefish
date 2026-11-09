@@ -9,9 +9,12 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status:** Phase 1 complete. The benchmark pod (four bundled Commander precons) plays itself through a
+**Status:** Phase 2 (measure) under way. The benchmark pod (four bundled Commander precons) plays itself through a
 Java harness that records every game as a JSON event stream; the dashboard shows per-deck win rates,
 mulligans, land drops, commander timing and the cards that never get cast, with card images from Scryfall.
+Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI on the pod, and a precon league
+(91 bundled precons over random four-player tables) scores the sim's precon ranking against the human
+win rates Playgroup.gg publishes for stock precons.
 
 **Dashboard:** https://lt-lit.github.io/vibefish/ — GitHub Pages serves the `testing` branch directly (Settings → Pages → Deploy from a branch → `testing`, root). The repository root redirects to `dashboard/`, which reads `../demo-data/`; `.nojekyll` keeps Pages from processing the files.
 
@@ -24,6 +27,9 @@ forge/fetch-forge.sh                 # download the pinned Forge release, verify
 runner/run-pod.sh -n 8 -j 2 -s 42    # the pod plays 8 games in 2 shards → results/<run-id>/rollup.json
 runner/publish.sh results/<run-id> demo-data   # add the run to the data the dashboard reads
 python3 -m http.server 8000          # open http://localhost:8000/dashboard/?data=../demo-data
+runner/league.py schedule --seed 20261109 --cycles 25          # the precon league: 91 precons, 2200 games
+runner/league.py play --seed 20261109 --cycles 25 --out results/league --shards 20 --shard 1 -j 2
+                                     # one shard of it locally; .github/workflows/league-run.yml plays them all
 ```
 
 Validate and play any Commander decks through the harness directly:
@@ -45,11 +51,11 @@ controller/vibefish-sim.sh play --out results/mine --deck-dir /path/to/decks \
 |---|---|
 | `forge/` | Version pin, checksum, fetch and launch scripts. The runtime is downloaded, never committed. |
 | `controller/` | Java harness compiled against the released Forge jar: `play` records games as JSONL events, `check` validates decks. |
-| `runner/` | The frozen benchmark pod, sharded pod runner, rollup, Scryfall resolver, publish helper. |
+| `runner/` | The frozen benchmark pod and precon league, sharded pod and league runners, rollups, calibration scorecard with the Playgroup.gg references, Scryfall resolver, publish helper. |
 | `dashboard/` | Vanilla JS static site for GitHub Pages. |
 | `demo-data/` | Published pod runs and the card image cache the dashboard reads. |
-| `playbook/` | Playbook schema, validator, examples (Phase 2+). |
-| `.github/workflows/` | Smoke test, sharded pod runs, Pages deployment. |
+| `playbook/` | Playbook schema, validator, examples (Phase 4; not created yet). |
+| `.github/workflows/` | Smoke test, sharded pod runs, sharded league runs. Pages serves the `testing` branch directly. |
 
 ## License and credits
 
