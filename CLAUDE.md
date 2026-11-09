@@ -18,7 +18,7 @@ Commander deck playtesting engine built on Forge's headless `sim` mode. Engine o
 - **License:** this repo is GPL v3 because `controller/` compiles against Forge. Don't vendor non-GPL-compatible code.
 - **Naming:** project is "Vibefish". "MTG" / "Magic: The Gathering" appear only descriptively, never in the product name, repo name, or logos.
 - **Benchmark pod** in `runner/benchmark-pod.json` is frozen. Do not edit it. The **precon league** in `runner/precon-league.json` (`league-v1`, 91 decks) is frozen too: a different deck list is a new league with a new name.
-- **Human references** (`runner/reference/playgroup-commander.json`) are copied from Playgroup.gg's public pages by hand or from one saved page copy, with the retrieval date and the page's CC BY 4.0 licence noted. Nothing in the pipeline fetches playgroup.gg.
+- **Human references** (`runner/reference/playgroup-commander.json`) are copied from Playgroup.gg's public pages by hand or from one saved page copy, with the retrieval date and the page's CC BY 4.0 licence noted (`runner/reference/transcribe-playgroup.py` reads a saved page file). Nothing in the pipeline fetches playgroup.gg.
 
 ## Commands
 ```
