@@ -16,6 +16,8 @@ focus seat is given:
     mc       Flat Monte Carlo on for the game; the focus seat plays Monte Carlo (Default profile), the opponents keep
              the heuristic AI (Vibefish-Heuristic, from runner/make-arm-profiles.sh)
     mcdata   mc plus the deck's data and profile
+    mcmax    as mc, with Forge's Monte Carlo at desktop strength (--mc max: no time budget, about three times slower)
+    mcmaxdata  mcmax plus the deck's data and profile
 
 One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games
 are never replayed. The rollup pairs the arms game by game: wins per arm with Wilson intervals, the paired
@@ -47,6 +49,8 @@ ARMS = {
     "data": {"data": True, "mc": "off", "focus_profile": "deck", "opp_profile": ""},
     "mc": {"data": False, "mc": "on", "focus_profile": "", "opp_profile": "Vibefish-Heuristic"},
     "mcdata": {"data": True, "mc": "on", "focus_profile": "deck", "opp_profile": "Vibefish-Heuristic"},
+    "mcmax": {"data": False, "mc": "max", "focus_profile": "", "opp_profile": "Vibefish-Heuristic"},
+    "mcmaxdata": {"data": True, "mc": "max", "focus_profile": "deck", "opp_profile": "Vibefish-Heuristic"},
 }
 
 
