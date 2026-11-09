@@ -14,7 +14,7 @@ on:
         default: "100"
       arms:
         description: "Arms, comma-separated: stock, data, mc, mcdata"
-        default: "stock,data"
+        default: "stock,data,mc,mcdata"
       shards_per_deck:
         description: "Shard jobs per deck (total jobs = decks x shards, max 20 at once)"
         default: "5"
