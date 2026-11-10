@@ -1,0 +1,1455 @@
+{
+ "vibefish": "0.2.0",
+ "generated": "2026-11-10T00:39:55Z",
+ "kind": "ab",
+ "deck": "tricky-terrain",
+ "deck_file": "Tricky Terrain [M3C] [2024].dck",
+ "league": "league-v1",
+ "seed": 20261112,
+ "games": {
+  "stock": [
+   {
+    "index": 1,
+    "seed": 20261113,
+    "seats": [
+     "tricky-terrain",
+     "scions-and-spellcraft",
+     "obscura-operation",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 136483,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261114,
+    "seats": [
+     "exit-from-exile",
+     "tricky-terrain",
+     "explorers-of-the-deep",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36896,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261115,
+    "seats": [
+     "squirreled-away",
+     "sliver-swarm",
+     "tricky-terrain",
+     "token-triumph"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 60017,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261116,
+    "seats": [
+     "tramplesaurus-rex",
+     "cavalry-charge",
+     "sliver-swarm",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 74395,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261117,
+    "seats": [
+     "tricky-terrain",
+     "the-host-of-mordor",
+     "the-fantastic-four",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38331,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261118,
+    "seats": [
+     "graveyard-overdrive",
+     "tricky-terrain",
+     "maestros-massacre",
+     "grand-larceny"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grand-larceny",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 385154,
+    "focus_lost_turn": 57,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261119,
+    "seats": [
+     "grave-danger",
+     "sliver-swarm",
+     "tricky-terrain",
+     "peace-offering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 55,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 345878,
+    "focus_lost_turn": 55,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261120,
+    "seats": [
+     "klingon-fury",
+     "grave-danger",
+     "ahoy-mateys",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 170261,
+    "focus_lost_turn": 65,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261121,
+    "seats": [
+     "tricky-terrain",
+     "elven-council",
+     "riveteer-rampage",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 87,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 1603884,
+    "focus_lost_turn": 85,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261122,
+    "seats": [
+     "food-and-fellowship",
+     "tricky-terrain",
+     "multiverse-reforged",
+     "animated-army"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "multiverse-reforged",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 174429,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261123,
+    "seats": [
+     "federation-fleet",
+     "tinker-time",
+     "tricky-terrain",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": null,
+    "turns": 79,
+    "reason": "Timeout",
+    "duration_ms": 1800011,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261124,
+    "seats": [
+     "token-triumph",
+     "animated-army",
+     "death-toll",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "token-triumph",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79078,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261125,
+    "seats": [
+     "tricky-terrain",
+     "family-matters",
+     "world-shaper",
+     "scrappy-survivors"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 999081,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261126,
+    "seats": [
+     "riveteer-rampage",
+     "tricky-terrain",
+     "grave-danger",
+     "first-flight"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 235314,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261127,
+    "seats": [
+     "blight-curse",
+     "enduring-enchantments",
+     "tricky-terrain",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 102819,
+    "focus_lost_turn": 66,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261128,
+    "seats": [
+     "graveyard-overdrive",
+     "we-are-the-borg",
+     "desert-bloom",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 300627,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261129,
+    "seats": [
+     "tricky-terrain",
+     "dance-of-the-elements",
+     "planeswalker-party",
+     "peace-offering"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 835733,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261130,
+    "seats": [
+     "jeskai-striker",
+     "tricky-terrain",
+     "landing-party",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 83615,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261131,
+    "seats": [
+     "enduring-enchantments",
+     "death-toll",
+     "tricky-terrain",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 124866,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261132,
+    "seats": [
+     "party-time",
+     "dance-of-the-elements",
+     "riveteer-rampage",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 284269,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "mcmax": [
+   {
+    "index": 1,
+    "seed": 20261113,
+    "seats": [
+     "tricky-terrain",
+     "scions-and-spellcraft",
+     "obscura-operation",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 444869,
+    "focus_lost_turn": 67,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261114,
+    "seats": [
+     "exit-from-exile",
+     "tricky-terrain",
+     "explorers-of-the-deep",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85807,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261115,
+    "seats": [
+     "squirreled-away",
+     "sliver-swarm",
+     "tricky-terrain",
+     "token-triumph"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 95038,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261116,
+    "seats": [
+     "tramplesaurus-rex",
+     "cavalry-charge",
+     "sliver-swarm",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 188857,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261117,
+    "seats": [
+     "tricky-terrain",
+     "the-host-of-mordor",
+     "the-fantastic-four",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 102330,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261118,
+    "seats": [
+     "graveyard-overdrive",
+     "tricky-terrain",
+     "maestros-massacre",
+     "grand-larceny"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 390236,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261119,
+    "seats": [
+     "grave-danger",
+     "sliver-swarm",
+     "tricky-terrain",
+     "peace-offering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 195595,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261120,
+    "seats": [
+     "klingon-fury",
+     "grave-danger",
+     "ahoy-mateys",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 115075,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261121,
+    "seats": [
+     "tricky-terrain",
+     "elven-council",
+     "riveteer-rampage",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 1043164,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261122,
+    "seats": [
+     "food-and-fellowship",
+     "tricky-terrain",
+     "multiverse-reforged",
+     "animated-army"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "multiverse-reforged",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 262017,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261123,
+    "seats": [
+     "federation-fleet",
+     "tinker-time",
+     "tricky-terrain",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 724299,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261124,
+    "seats": [
+     "token-triumph",
+     "animated-army",
+     "death-toll",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 68908,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261125,
+    "seats": [
+     "tricky-terrain",
+     "family-matters",
+     "world-shaper",
+     "scrappy-survivors"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 380460,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261126,
+    "seats": [
+     "riveteer-rampage",
+     "tricky-terrain",
+     "grave-danger",
+     "first-flight"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 350359,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261127,
+    "seats": [
+     "blight-curse",
+     "enduring-enchantments",
+     "tricky-terrain",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 82463,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261128,
+    "seats": [
+     "graveyard-overdrive",
+     "we-are-the-borg",
+     "desert-bloom",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 164298,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261129,
+    "seats": [
+     "tricky-terrain",
+     "dance-of-the-elements",
+     "planeswalker-party",
+     "peace-offering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 49,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 240574,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261130,
+    "seats": [
+     "jeskai-striker",
+     "tricky-terrain",
+     "landing-party",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 89323,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261131,
+    "seats": [
+     "enduring-enchantments",
+     "death-toll",
+     "tricky-terrain",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 319463,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261132,
+    "seats": [
+     "party-time",
+     "dance-of-the-elements",
+     "riveteer-rampage",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 319364,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "mcmaxdata": [
+   {
+    "index": 1,
+    "seed": 20261113,
+    "seats": [
+     "tricky-terrain",
+     "scions-and-spellcraft",
+     "obscura-operation",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 165765,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261114,
+    "seats": [
+     "exit-from-exile",
+     "tricky-terrain",
+     "explorers-of-the-deep",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71851,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261115,
+    "seats": [
+     "squirreled-away",
+     "sliver-swarm",
+     "tricky-terrain",
+     "token-triumph"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 103000,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261116,
+    "seats": [
+     "tramplesaurus-rex",
+     "cavalry-charge",
+     "sliver-swarm",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "sliver-swarm",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 125023,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261117,
+    "seats": [
+     "tricky-terrain",
+     "the-host-of-mordor",
+     "the-fantastic-four",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 160545,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261118,
+    "seats": [
+     "graveyard-overdrive",
+     "tricky-terrain",
+     "maestros-massacre",
+     "grand-larceny"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91171,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261119,
+    "seats": [
+     "grave-danger",
+     "sliver-swarm",
+     "tricky-terrain",
+     "peace-offering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 131320,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261120,
+    "seats": [
+     "klingon-fury",
+     "grave-danger",
+     "ahoy-mateys",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 233340,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261121,
+    "seats": [
+     "tricky-terrain",
+     "elven-council",
+     "riveteer-rampage",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 504980,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261122,
+    "seats": [
+     "food-and-fellowship",
+     "tricky-terrain",
+     "multiverse-reforged",
+     "animated-army"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 1069303,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261123,
+    "seats": [
+     "federation-fleet",
+     "tinker-time",
+     "tricky-terrain",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 500709,
+    "focus_lost_turn": 63,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261124,
+    "seats": [
+     "token-triumph",
+     "animated-army",
+     "death-toll",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 111000,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261125,
+    "seats": [
+     "tricky-terrain",
+     "family-matters",
+     "world-shaper",
+     "scrappy-survivors"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 625039,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261126,
+    "seats": [
+     "riveteer-rampage",
+     "tricky-terrain",
+     "grave-danger",
+     "first-flight"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 403662,
+    "focus_lost_turn": 63,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261127,
+    "seats": [
+     "blight-curse",
+     "enduring-enchantments",
+     "tricky-terrain",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 117409,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261128,
+    "seats": [
+     "graveyard-overdrive",
+     "we-are-the-borg",
+     "desert-bloom",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108931,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261129,
+    "seats": [
+     "tricky-terrain",
+     "dance-of-the-elements",
+     "planeswalker-party",
+     "peace-offering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 210936,
+    "focus_lost_turn": 60,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261130,
+    "seats": [
+     "jeskai-striker",
+     "tricky-terrain",
+     "landing-party",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 172173,
+    "focus_lost_turn": 63,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261131,
+    "seats": [
+     "enduring-enchantments",
+     "death-toll",
+     "tricky-terrain",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "tricky-terrain",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 166152,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261132,
+    "seats": [
+     "party-time",
+     "dance-of-the-elements",
+     "riveteer-rampage",
+     "tricky-terrain"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 824069,
+    "focus_lost_turn": 59,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   }
+  ]
+ },
+ "arms": [
+  "stock",
+  "mcmax",
+  "mcmaxdata"
+ ],
+ "data_file": "playbook/precons/tricky-terrain.json",
+ "deck_profile": "Vibefish-tricky-terrain",
+ "profile_overrides": {
+  "HOLD_LAND_DROP_FOR_MAIN2_IF_UNUSED": "0",
+  "FLAT_MC_DECK_PLAN": "LANDS"
+ },
+ "forge_version": "snapshot-2026-11-08",
+ "runtime": "runtime-fresh",
+ "clock_s": 1800,
+ "turn_cap": 120,
+ "started": "2026-11-09T21:44:38Z",
+ "data_effective": {
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)",
+  "key_cards": [
+   "Cloudpost",
+   "Glimmerpost",
+   "Avenger of Zendikar",
+   "Scute Swarm",
+   "Rampaging Baloths",
+   "Tatyova, Benthic Druid",
+   "Dryad of the Ilysian Grove",
+   "Mana Reflection"
+  ],
+  "roles": {
+   "overrun": [
+    "Jyoti, Moag Ancient"
+   ]
+  },
+  "combos": [],
+  "pairs": [],
+  "deck_plan": "LANDS",
+  "profile": {
+   "HOLD_LAND_DROP_FOR_MAIN2_IF_UNUSED": "0"
+  },
+  "spellbook": {
+   "included": 0,
+   "almost_included": 27,
+   "identity": "GU",
+   "retrieved": "2026-11-09T06:29:12Z"
+  },
+  "cards_without_script": []
+ },
+ "arm_stats": {
+  "stock": {
+   "games": 20,
+   "wins": 4,
+   "win_rate": 0.2,
+   "win_rate_ci95": [
+    0.0807,
+    0.416
+   ],
+   "draws": 1,
+   "avg_turns": 54.55,
+   "avg_seconds": 393.56,
+   "avg_turn_lost": 50.13,
+   "wins_by_seat": [
+    1,
+    2,
+    1,
+    0
+   ],
+   "playbook": null
+  },
+  "mcmax": {
+   "games": 20,
+   "wins": 6,
+   "win_rate": 0.3,
+   "win_rate_ci95": [
+    0.1455,
+    0.519
+   ],
+   "draws": 0,
+   "avg_turns": 49.9,
+   "avg_seconds": 283.12,
+   "avg_turn_lost": 45.43,
+   "wins_by_seat": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "playbook": null
+  },
+  "mcmaxdata": {
+   "games": 20,
+   "wins": 6,
+   "win_rate": 0.3,
+   "win_rate_ci95": [
+    0.1455,
+    0.519
+   ],
+   "draws": 0,
+   "avg_turns": 53.0,
+   "avg_seconds": 294.82,
+   "avg_turn_lost": 47.57,
+   "wins_by_seat": [
+    1,
+    2,
+    1,
+    2
+   ],
+   "playbook": null
+  }
+ },
+ "paired": {
+  "mcmax_vs_stock": {
+   "pairs": 20,
+   "both_won": 1,
+   "mcmax_only": 5,
+   "stock_only": 3,
+   "neither": 11,
+   "difference": 0.1,
+   "difference_ci95": [
+    -0.1737,
+    0.3737
+   ],
+   "identical_outcomes": 0
+  },
+  "mcmaxdata_vs_stock": {
+   "pairs": 20,
+   "both_won": 1,
+   "mcmaxdata_only": 5,
+   "stock_only": 3,
+   "neither": 11,
+   "difference": 0.1,
+   "difference_ci95": [
+    -0.1737,
+    0.3737
+   ],
+   "identical_outcomes": 0
+  }
+ }
+}
