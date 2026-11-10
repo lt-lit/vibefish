@@ -8,5 +8,8 @@ intervals, the paired differences, and every game's seats, seed, winner and leng
 `2026-11-10-ab-v1-pooled/` pools each deck's two seeds into one 200-table measurement (`runner/ab.py pool`, kind `ab-pool`:
 games keyed by run seed and table, the same statistics).
 
+`2026-11-10-ab-v2/` is the CI playbook measurement (`ab-run` #3, DESIGN.md §20: arms stock, playbook, playbookdata on Token Triumph,
+Goblin Storm and Hail, Caesar, seed 20261110).
+
 Dated `*-local/` directories hold 40- to 100-table checks played on a session's machine rather than in Actions, named by
 deck and the arms they ran; the same format, smaller.

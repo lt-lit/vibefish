@@ -1,0 +1,8045 @@
+{
+ "vibefish": "0.2.0",
+ "generated": "2026-11-10T17:23:33Z",
+ "kind": "ab",
+ "deck": "goblin-storm",
+ "deck_file": "Goblin Storm [SLD] [2026].dck",
+ "league": "league-v1",
+ "seed": 20261110,
+ "games": {
+  "stock": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "goblin-storm",
+     "deadly-disguise",
+     "revenant-recon",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 80867,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "lorehold-spirit",
+     "goblin-storm",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 207198,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "goblin-storm",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42286,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "legends-legacy",
+     "scions-and-spellcraft",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51324,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "goblin-storm",
+     "world-shaper",
+     "mardu-surge",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 82014,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "goblin-storm",
+     "science",
+     "miracle-worker"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61669,
+    "focus_lost_turn": 28,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "token-triumph",
+     "quick-draw",
+     "goblin-storm",
+     "tinker-time"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quick-draw",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 76988,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jump-scare",
+     "planeswalker-party",
+     "exit-from-exile",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": null,
+    "turns": 44,
+    "reason": "Timeout",
+    "duration_ms": 1800013,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "goblin-storm",
+     "exit-from-exile",
+     "landing-party",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73888,
+    "focus_lost_turn": 57,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "reign-of-dragons",
+     "goblin-storm",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28475,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "limit-break",
+     "legends-legacy",
+     "goblin-storm",
+     "mutant-menace"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45615,
+    "focus_lost_turn": 27,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "keen-engineering",
+     "landing-party",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 169737,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "goblin-storm",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31720,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "klingon-fury",
+     "goblin-storm",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22770,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "temur-roar",
+     "multiverse-reforged",
+     "goblin-storm",
+     "landing-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 111577,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "tinker-time",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 351768,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "goblin-storm",
+     "chaos-incarnate",
+     "mardu-surge",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26651,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "goblin-storm",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28713,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "goblin-storm",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47472,
+    "focus_lost_turn": 60,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scrappy-survivors",
+     "riders-of-rohan",
+     "desert-bloom",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108111,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "goblin-storm",
+     "silverquill-influence",
+     "quandrix-unlimited",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "silverquill-influence",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57515,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "goblin-storm",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66807,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-host-of-mordor",
+     "calling-all-angels",
+     "goblin-storm",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37683,
+    "focus_lost_turn": 58,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 79,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55204,
+    "focus_lost_turn": 79,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "goblin-storm",
+     "chaos-incarnate",
+     "obscura-operation",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 145315,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "goblin-storm",
+     "scrappy-survivors",
+     "planeswalker-party"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 131605,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "temur-roar",
+     "goblin-storm",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50017,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "riders-of-rohan",
+     "scrappy-survivors",
+     "ahoy-mateys",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22610,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "goblin-storm",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18658,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "scions-and-spellcraft",
+     "goblin-storm",
+     "lorehold-spirit",
+     "tinker-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32611,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "reign-of-dragons",
+     "goblin-storm",
+     "painbow"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72037,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "mardu-surge",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 133665,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "goblin-storm",
+     "quick-draw",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "veloci-ramp-tor",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43980,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "prismari-artistry",
+     "goblin-storm",
+     "enduring-enchantments",
+     "temur-roar"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18523,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jump-scare",
+     "graveyard-overdrive",
+     "goblin-storm",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 24374,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "painbow",
+     "grand-larceny",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 109813,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "goblin-storm",
+     "blood-rites",
+     "creative-energy",
+     "sliver-swarm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29100,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "jeskai-striker",
+     "goblin-storm",
+     "miracle-worker",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39415,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quick-draw",
+     "sultai-arisen",
+     "goblin-storm",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "elven-council",
+    "turns": 70,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 97480,
+    "focus_lost_turn": 63,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riveteer-rampage",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36992,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "goblin-storm",
+     "prismari-artistry",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41193,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "goblin-storm",
+     "token-triumph",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31535,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "jeskai-striker",
+     "elven-council",
+     "goblin-storm",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50960,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "limit-break",
+     "bedecked-brokers",
+     "grave-danger",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 24052,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "goblin-storm",
+     "scions-and-spellcraft",
+     "wretched-ranks",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26803,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "graveyard-overdrive",
+     "goblin-storm",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50259,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "painbow",
+     "goblin-storm",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 122008,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "revenant-recon",
+     "peace-offering",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42877,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "goblin-storm",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31336,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "mardu-surge",
+     "goblin-storm",
+     "cabaretti-cacophony",
+     "grand-larceny"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91239,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "keen-engineering",
+     "obscura-operation",
+     "goblin-storm",
+     "revival-trance"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 438348,
+    "focus_lost_turn": 59,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "party-time",
+     "limit-break",
+     "klingon-fury",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 136725,
+    "focus_lost_turn": 58,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "goblin-storm",
+     "party-time",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43309,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "goblin-storm",
+     "animated-army",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 83424,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "mardu-surge",
+     "avengers-assemble",
+     "goblin-storm",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30015,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grave-danger",
+     "legends-legacy",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 59462,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "goblin-storm",
+     "temur-roar",
+     "lorehold-spirit",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 807542,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "goblin-storm",
+     "tricky-terrain",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31628,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "goblin-storm",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18141,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "obscura-operation",
+     "witherbloom-pestilence",
+     "peace-offering",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 113223,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "goblin-storm",
+     "death-toll",
+     "most-wanted",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 208627,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "goblin-storm",
+     "doom-prevails",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40124,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scrappy-survivors",
+     "painbow",
+     "goblin-storm",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 17580,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58214,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "goblin-storm",
+     "sultai-arisen",
+     "squirreled-away",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35853,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "goblin-storm",
+     "cavalry-charge",
+     "squirreled-away"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 117785,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "tinker-time",
+     "the-host-of-mordor",
+     "goblin-storm",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31946,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "growing-threat",
+     "mardu-surge",
+     "grave-danger",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28585,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "goblin-storm",
+     "graveyard-overdrive",
+     "squirreled-away",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 80,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 155756,
+    "focus_lost_turn": 76,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "landing-party",
+     "goblin-storm",
+     "graveyard-overdrive",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34183,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "science",
+     "goblin-storm",
+     "prismari-artistry"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 187509,
+    "focus_lost_turn": 24,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "mutant-menace",
+     "animated-army",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 64994,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "goblin-storm",
+     "federation-fleet",
+     "token-triumph",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44424,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "goblin-storm",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36605,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "goblin-storm",
+     "silverquill-influence"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54721,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "science",
+     "graveyard-overdrive",
+     "first-flight",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 317242,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "goblin-storm",
+     "blight-curse",
+     "enduring-enchantments",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41297,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "growing-threat",
+     "goblin-storm",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67600,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "prismari-artistry",
+     "goblin-storm",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 16477,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jump-scare",
+     "legends-legacy",
+     "growing-threat",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 76,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 179357,
+    "focus_lost_turn": 74,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "goblin-storm",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 113951,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "peace-offering",
+     "goblin-storm",
+     "dance-of-the-elements",
+     "science"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 50,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 73296,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "most-wanted",
+     "goblin-storm",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "science",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45199,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "legends-legacy",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44112,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "goblin-storm",
+     "jump-scare",
+     "cabaretti-cacophony",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32704,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "obscura-operation",
+     "goblin-storm",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "endless-punishment",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 74633,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "limit-break",
+     "quick-draw",
+     "goblin-storm",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quick-draw",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43741,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43701,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "goblin-storm",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 236077,
+    "focus_lost_turn": 71,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "legends-legacy",
+     "goblin-storm",
+     "hail-caesar",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41450,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revival-trance",
+     "mardu-surge",
+     "goblin-storm",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 88772,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mind-flayarrrs",
+     "jump-scare",
+     "deadly-disguise",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 229322,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "goblin-storm",
+     "painbow",
+     "party-time",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 138223,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "goblin-storm",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46181,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "mutant-menace",
+     "explorers-of-the-deep",
+     "goblin-storm",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32018,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "scions-and-spellcraft",
+     "blame-game",
+     "eldrazi-unbound",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "eldrazi-unbound",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 189729,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "goblin-storm",
+     "tramplesaurus-rex",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 172113,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "science",
+     "goblin-storm",
+     "jeskai-striker",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27319,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "goblin-storm",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67153,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "the-fantastic-four",
+     "blight-curse",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27611,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "playbook": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "goblin-storm",
+     "deadly-disguise",
+     "revenant-recon",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73987,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "lorehold-spirit",
+     "goblin-storm",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 356461,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 10,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "goblin-storm",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41718,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "legends-legacy",
+     "scions-and-spellcraft",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37654,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 22,
+     "attackers_reserved": 1,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "goblin-storm",
+     "world-shaper",
+     "mardu-surge",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44209,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 32,
+     "attackers_reserved": 3,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "goblin-storm",
+     "science",
+     "miracle-worker"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66234,
+    "focus_lost_turn": 28,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 3,
+     "attack_below_min": 3,
+     "attack_fallback": 3
+    }
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "token-triumph",
+     "quick-draw",
+     "goblin-storm",
+     "tinker-time"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quick-draw",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77009,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 7,
+     "attack_fallback": 7
+    }
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jump-scare",
+     "planeswalker-party",
+     "exit-from-exile",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44774,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 6,
+     "attackers_declared": 6,
+     "attackers_reserved": 1,
+     "attack_policy": 2,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "goblin-storm",
+     "exit-from-exile",
+     "landing-party",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 114975,
+    "focus_lost_turn": 66,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 11,
+     "attack_fallback": 11,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "reign-of-dragons",
+     "goblin-storm",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 83,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 764907,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 7,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "limit-break",
+     "legends-legacy",
+     "goblin-storm",
+     "mutant-menace"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45101,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "keen-engineering",
+     "landing-party",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": null,
+    "turns": 47,
+    "reason": "Timeout",
+    "duration_ms": 1800007,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 7,
+     "attack_fallback": 8,
+     "attackers_declared": 7,
+     "attackers_reserved": 0,
+     "attack_policy": 2,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "goblin-storm",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30201,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "klingon-fury",
+     "goblin-storm",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32870,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 11,
+     "attackers_reserved": 1,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "temur-roar",
+     "multiverse-reforged",
+     "goblin-storm",
+     "landing-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 261081,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 7,
+     "attack_fallback": 8,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "tinker-time",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 383893,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 15,
+     "attack_below_min": 10,
+     "attack_fallback": 10,
+     "attackers_declared": 19,
+     "attackers_reserved": 2,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "goblin-storm",
+     "chaos-incarnate",
+     "mardu-surge",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "chaos-incarnate",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22467,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "goblin-storm",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31469,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_invalid": 2,
+     "attack_fallback": 4,
+     "attack_below_min": 2
+    }
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "goblin-storm",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42973,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 6,
+     "attack_fallback": 7,
+     "attackers_declared": 3,
+     "attackers_reserved": 1,
+     "attack_policy": 1,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scrappy-survivors",
+     "riders-of-rohan",
+     "desert-bloom",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 120312,
+    "focus_lost_turn": 55,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attackers_declared": 32,
+     "attackers_reserved": 6,
+     "attack_policy": 5,
+     "attack_below_min": 6,
+     "attack_fallback": 6
+    }
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "goblin-storm",
+     "silverquill-influence",
+     "quandrix-unlimited",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39951,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 4,
+     "attack_fallback": 6,
+     "attack_invalid": 2,
+     "attackers_declared": 9,
+     "attackers_reserved": 2,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "goblin-storm",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 87247,
+    "focus_lost_turn": 64,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 7,
+     "attack_fallback": 8,
+     "attackers_declared": 14,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-host-of-mordor",
+     "calling-all-angels",
+     "goblin-storm",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39000,
+    "focus_lost_turn": 58,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 7,
+     "attack_fallback": 7
+    }
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 79,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58672,
+    "focus_lost_turn": 79,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 15,
+     "attack_below_min": 14,
+     "attack_fallback": 14,
+     "attackers_declared": 3,
+     "attackers_reserved": 1,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "goblin-storm",
+     "chaos-incarnate",
+     "obscura-operation",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52104,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 15,
+     "attackers_reserved": 1,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "goblin-storm",
+     "scrappy-survivors",
+     "planeswalker-party"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 126045,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 8,
+     "attack_fallback": 9,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "temur-roar",
+     "goblin-storm",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52077,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 17,
+     "attackers_reserved": 9,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "riders-of-rohan",
+     "scrappy-survivors",
+     "ahoy-mateys",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27092,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "goblin-storm",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blame-game",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29862,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 9,
+     "attackers_reserved": 1,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "scions-and-spellcraft",
+     "goblin-storm",
+     "lorehold-spirit",
+     "tinker-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35534,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 7,
+     "attack_fallback": 7
+    }
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "reign-of-dragons",
+     "goblin-storm",
+     "painbow"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55507,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 6,
+     "attackers_reserved": 3,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "mardu-surge",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 124220,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 6,
+     "attackers_reserved": 3,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "goblin-storm",
+     "quick-draw",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "veloci-ramp-tor",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21019,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 23,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "prismari-artistry",
+     "goblin-storm",
+     "enduring-enchantments",
+     "temur-roar"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31380,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jump-scare",
+     "graveyard-overdrive",
+     "goblin-storm",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27017,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 4,
+     "attack_fallback": 4
+    }
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "painbow",
+     "grand-larceny",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 116676,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 11,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "goblin-storm",
+     "blood-rites",
+     "creative-energy",
+     "sliver-swarm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29086,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 3,
+     "attack_below_min": 3,
+     "attack_fallback": 3
+    }
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "jeskai-striker",
+     "goblin-storm",
+     "miracle-worker",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38156,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 4,
+     "attack_fallback": 5,
+     "attackers_declared": 23,
+     "attackers_reserved": 1,
+     "attack_policy": 4,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quick-draw",
+     "sultai-arisen",
+     "goblin-storm",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "elven-council",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 64490,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attackers_declared": 27,
+     "attackers_reserved": 0,
+     "attack_policy": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riveteer-rampage",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26655,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "goblin-storm",
+     "prismari-artistry",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51975,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 12,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "goblin-storm",
+     "token-triumph",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37916,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "jeskai-striker",
+     "elven-council",
+     "goblin-storm",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13379,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 36,
+     "attackers_reserved": 1,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "limit-break",
+     "bedecked-brokers",
+     "grave-danger",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27060,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 12,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "goblin-storm",
+     "scions-and-spellcraft",
+     "wretched-ranks",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30954,
+    "focus_lost_turn": 55,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attackers_declared": 16,
+     "attackers_reserved": 2,
+     "attack_policy": 5,
+     "attack_below_min": 6,
+     "attack_fallback": 6
+    }
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "graveyard-overdrive",
+     "goblin-storm",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 53317,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 19,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "painbow",
+     "goblin-storm",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 75646,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 13,
+     "attackers_reserved": 3,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "revenant-recon",
+     "peace-offering",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91335,
+    "focus_lost_turn": 69,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 15,
+     "attack_below_min": 11,
+     "attack_fallback": 12,
+     "attackers_declared": 12,
+     "attackers_reserved": 4,
+     "attack_policy": 3,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "goblin-storm",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29492,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 5,
+     "attack_invalid": 1,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "mardu-surge",
+     "goblin-storm",
+     "cabaretti-cacophony",
+     "grand-larceny"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 60448,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 5,
+     "attack_fallback": 6,
+     "attackers_declared": 35,
+     "attackers_reserved": 3,
+     "attack_policy": 5,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "keen-engineering",
+     "obscura-operation",
+     "goblin-storm",
+     "revival-trance"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63171,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 16,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "party-time",
+     "limit-break",
+     "klingon-fury",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 122329,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 9,
+     "attack_fallback": 10,
+     "attackers_declared": 4,
+     "attackers_reserved": 2,
+     "attack_policy": 1,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "goblin-storm",
+     "party-time",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35285,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "goblin-storm",
+     "animated-army",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42940,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 16,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "mardu-surge",
+     "avengers-assemble",
+     "goblin-storm",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 19810,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 11,
+     "attackers_reserved": 1,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grave-danger",
+     "legends-legacy",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47819,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 8,
+     "attack_fallback": 9,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "goblin-storm",
+     "temur-roar",
+     "lorehold-spirit",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 313863,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 44,
+     "attackers_reserved": 3,
+     "attack_policy": 7
+    }
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "goblin-storm",
+     "tricky-terrain",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31871,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 9,
+     "attack_fallback": 9
+    }
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "goblin-storm",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18778,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 4,
+     "attack_fallback": 4
+    }
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "obscura-operation",
+     "witherbloom-pestilence",
+     "peace-offering",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45037,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 26,
+     "attackers_reserved": 6,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "goblin-storm",
+     "death-toll",
+     "most-wanted",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "most-wanted",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92078,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 25,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "goblin-storm",
+     "doom-prevails",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39100,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 8,
+     "attack_fallback": 8
+    }
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scrappy-survivors",
+     "painbow",
+     "goblin-storm",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23173,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 35,
+     "attackers_reserved": 0,
+     "attack_policy": 8
+    }
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 53847,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 9,
+     "attack_fallback": 9
+    }
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "goblin-storm",
+     "sultai-arisen",
+     "squirreled-away",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30768,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 31,
+     "attackers_reserved": 2,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "goblin-storm",
+     "cavalry-charge",
+     "squirreled-away"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58106,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 19,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "tinker-time",
+     "the-host-of-mordor",
+     "goblin-storm",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32053,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 6,
+     "attack_fallback": 6
+    }
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "growing-threat",
+     "mardu-surge",
+     "grave-danger",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33346,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 25,
+     "attackers_reserved": 4,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "goblin-storm",
+     "graveyard-overdrive",
+     "squirreled-away",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 73,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 102939,
+    "focus_lost_turn": 73,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 11,
+     "attack_fallback": 11,
+     "attackers_declared": 7,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "landing-party",
+     "goblin-storm",
+     "graveyard-overdrive",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33214,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "science",
+     "goblin-storm",
+     "prismari-artistry"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "science",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47421,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 17,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "mutant-menace",
+     "animated-army",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "food-and-fellowship",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 90255,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 8,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "goblin-storm",
+     "federation-fleet",
+     "token-triumph",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40876,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 24,
+     "attackers_reserved": 4,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "goblin-storm",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39365,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 14,
+     "attackers_reserved": 5,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "goblin-storm",
+     "silverquill-influence"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "silverquill-influence",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48687,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 16,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "science",
+     "graveyard-overdrive",
+     "first-flight",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 182425,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "goblin-storm",
+     "blight-curse",
+     "enduring-enchantments",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34610,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 28,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "growing-threat",
+     "goblin-storm",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 122707,
+    "focus_lost_turn": 64,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 15,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 22,
+     "attackers_reserved": 2,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "prismari-artistry",
+     "goblin-storm",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15891,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 4,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jump-scare",
+     "legends-legacy",
+     "growing-threat",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39876,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 16,
+     "attack_below_min": 11,
+     "attack_fallback": 11,
+     "attackers_declared": 17,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "goblin-storm",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57432,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 20,
+     "attackers_reserved": 2,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "peace-offering",
+     "goblin-storm",
+     "dance-of-the-elements",
+     "science"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54333,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 14,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 19,
+     "attackers_reserved": 1,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "most-wanted",
+     "goblin-storm",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "wakanda-forever",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39938,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 14,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "legends-legacy",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34414,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "goblin-storm",
+     "jump-scare",
+     "cabaretti-cacophony",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31848,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 30,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "obscura-operation",
+     "goblin-storm",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "endless-punishment",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44197,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 25,
+     "attackers_reserved": 3,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "limit-break",
+     "quick-draw",
+     "goblin-storm",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "limit-break",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47577,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 14,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38323,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 7,
+     "attackers_reserved": 1,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "goblin-storm",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 141346,
+    "focus_lost_turn": 58,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 5,
+     "attack_fallback": 6,
+     "attackers_declared": 18,
+     "attackers_reserved": 0,
+     "attack_policy": 5,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "legends-legacy",
+     "goblin-storm",
+     "hail-caesar",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38424,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revival-trance",
+     "mardu-surge",
+     "goblin-storm",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70889,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 8,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mind-flayarrrs",
+     "jump-scare",
+     "deadly-disguise",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73569,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "attack_below_min": 4,
+     "attack_fallback": 4
+    }
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "goblin-storm",
+     "painbow",
+     "party-time",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71143,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 32,
+     "attackers_reserved": 2,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "goblin-storm",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39087,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 8,
+     "attack_fallback": 9,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 3,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "mutant-menace",
+     "explorers-of-the-deep",
+     "goblin-storm",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39839,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 5,
+     "attack_fallback": 6,
+     "attackers_declared": 11,
+     "attackers_reserved": 2,
+     "attack_policy": 3,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "scions-and-spellcraft",
+     "blame-game",
+     "eldrazi-unbound",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "eldrazi-unbound",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 131849,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 3,
+     "attackers_reserved": 2,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "goblin-storm",
+     "tramplesaurus-rex",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 234996,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 8,
+     "attack_fallback": 9,
+     "attackers_declared": 10,
+     "attackers_reserved": 8,
+     "attack_policy": 3,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "science",
+     "goblin-storm",
+     "jeskai-striker",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21067,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "goblin-storm",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30685,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "attack_below_min": 3,
+     "attack_fallback": 3
+    }
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "the-fantastic-four",
+     "blight-curse",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33343,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   }
+  ],
+  "playbookdata": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "goblin-storm",
+     "deadly-disguise",
+     "revenant-recon",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 86118,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "lorehold-spirit",
+     "goblin-storm",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 690812,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 17,
+     "attackers_reserved": 7,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "goblin-storm",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38980,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 11,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "legends-legacy",
+     "scions-and-spellcraft",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33623,
+    "focus_lost_turn": 27,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 29,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "goblin-storm",
+     "world-shaper",
+     "mardu-surge",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 93606,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 14,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 23,
+     "attackers_reserved": 1,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "goblin-storm",
+     "science",
+     "miracle-worker"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55116,
+    "focus_lost_turn": 28,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 4,
+     "attack_fallback": 4
+    }
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "token-triumph",
+     "quick-draw",
+     "goblin-storm",
+     "tinker-time"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quick-draw",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 93580,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 8,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jump-scare",
+     "planeswalker-party",
+     "exit-from-exile",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57383,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 8,
+     "attack_fallback": 9,
+     "attackers_declared": 23,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "goblin-storm",
+     "exit-from-exile",
+     "landing-party",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34799,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "reign-of-dragons",
+     "goblin-storm",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 19854,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 13,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "limit-break",
+     "legends-legacy",
+     "goblin-storm",
+     "mutant-menace"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 28,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50689,
+    "focus_lost_turn": 28,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "keen-engineering",
+     "landing-party",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34997,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 5,
+     "attackers_declared": 9,
+     "attackers_reserved": 1,
+     "attack_policy": 2,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "goblin-storm",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33472,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 12,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "klingon-fury",
+     "goblin-storm",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25672,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 17,
+     "attackers_reserved": 4,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "temur-roar",
+     "multiverse-reforged",
+     "goblin-storm",
+     "landing-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72599,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 10,
+     "attack_fallback": 10,
+     "attackers_declared": 5,
+     "attackers_reserved": 1,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "tinker-time",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 233472,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 7,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "goblin-storm",
+     "chaos-incarnate",
+     "mardu-surge",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23138,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 6,
+     "attackers_reserved": 1,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "goblin-storm",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 16361,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {}
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "goblin-storm",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91059,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 2,
+     "attack_fallback": 3,
+     "attackers_declared": 11,
+     "attackers_reserved": 0,
+     "attack_policy": 2,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scrappy-survivors",
+     "riders-of-rohan",
+     "desert-bloom",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67124,
+    "focus_lost_turn": 69,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 16,
+     "attackers_declared": 31,
+     "attackers_reserved": 1,
+     "attack_policy": 7,
+     "attack_below_min": 9,
+     "attack_fallback": 9
+    }
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "goblin-storm",
+     "silverquill-influence",
+     "quandrix-unlimited",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "silverquill-influence",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41196,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 11,
+     "attackers_reserved": 1,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "goblin-storm",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 69423,
+    "focus_lost_turn": 60,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 15,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-host-of-mordor",
+     "calling-all-angels",
+     "goblin-storm",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56695,
+    "focus_lost_turn": 69,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 12,
+     "attack_fallback": 12,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 73,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58412,
+    "focus_lost_turn": 59,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 11,
+     "attack_fallback": 11
+    }
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "goblin-storm",
+     "chaos-incarnate",
+     "obscura-operation",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41001,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 37,
+     "attackers_reserved": 1,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "goblin-storm",
+     "scrappy-survivors",
+     "planeswalker-party"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 131550,
+    "focus_lost_turn": 56,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 5,
+     "attack_fallback": 12,
+     "attack_invalid": 7
+    }
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "temur-roar",
+     "goblin-storm",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": null,
+    "turns": 70,
+    "reason": "Timeout",
+    "duration_ms": 1800015,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 4,
+     "attack_fallback": 4
+    }
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "riders-of-rohan",
+     "scrappy-survivors",
+     "ahoy-mateys",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57220,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "goblin-storm",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blame-game",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58211,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 11,
+     "attack_fallback": 11,
+     "attackers_declared": 4,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "scions-and-spellcraft",
+     "goblin-storm",
+     "lorehold-spirit",
+     "tinker-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72939,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 8,
+     "attack_fallback": 9,
+     "attackers_declared": 4,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "reign-of-dragons",
+     "goblin-storm",
+     "painbow"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 75471,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "mardu-surge",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 120776,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 11,
+     "attackers_reserved": 6,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "goblin-storm",
+     "quick-draw",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 17131,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 16,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "prismari-artistry",
+     "goblin-storm",
+     "enduring-enchantments",
+     "temur-roar"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27201,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jump-scare",
+     "graveyard-overdrive",
+     "goblin-storm",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20737,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attack_below_min": 4,
+     "attack_fallback": 4
+    }
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "painbow",
+     "grand-larceny",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55938,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "goblin-storm",
+     "blood-rites",
+     "creative-energy",
+     "sliver-swarm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44135,
+    "focus_lost_turn": 28,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "jeskai-striker",
+     "goblin-storm",
+     "miracle-worker",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58621,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 5,
+     "attack_fallback": 6,
+     "attackers_declared": 29,
+     "attackers_reserved": 4,
+     "attack_policy": 7,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quick-draw",
+     "sultai-arisen",
+     "goblin-storm",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "sultai-arisen",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56193,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attackers_declared": 38,
+     "attackers_reserved": 1,
+     "attack_policy": 7,
+     "attack_below_min": 6,
+     "attack_fallback": 6
+    }
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riveteer-rampage",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25395,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "goblin-storm",
+     "prismari-artistry",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78589,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 14,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 51,
+     "attackers_reserved": 2,
+     "attack_policy": 8
+    }
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "goblin-storm",
+     "token-triumph",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36735,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "jeskai-striker",
+     "elven-council",
+     "goblin-storm",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12999,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 38,
+     "attackers_reserved": 1,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "limit-break",
+     "bedecked-brokers",
+     "grave-danger",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "limit-break",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49299,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 26,
+     "attackers_reserved": 4,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "goblin-storm",
+     "scions-and-spellcraft",
+     "wretched-ranks",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36939,
+    "focus_lost_turn": 62,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2,
+     "attack_below_min": 7,
+     "attack_fallback": 7
+    }
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "graveyard-overdrive",
+     "goblin-storm",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91189,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 4,
+     "attack_fallback": 5,
+     "attackers_declared": 34,
+     "attackers_reserved": 3,
+     "attack_policy": 6,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "painbow",
+     "goblin-storm",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 115793,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 9,
+     "attackers_reserved": 2,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "revenant-recon",
+     "peace-offering",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41396,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 4,
+     "attack_fallback": 5,
+     "attackers_declared": 27,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "goblin-storm",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34415,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 6,
+     "attack_fallback": 7,
+     "attackers_declared": 11,
+     "attackers_reserved": 0,
+     "attack_policy": 3,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "mardu-surge",
+     "goblin-storm",
+     "cabaretti-cacophony",
+     "grand-larceny"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79351,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 4,
+     "attack_fallback": 5,
+     "attackers_declared": 32,
+     "attackers_reserved": 1,
+     "attack_policy": 4,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "keen-engineering",
+     "obscura-operation",
+     "goblin-storm",
+     "revival-trance"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 76898,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 17,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "party-time",
+     "limit-break",
+     "klingon-fury",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43294,
+    "focus_lost_turn": 22,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 3,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 4,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "goblin-storm",
+     "party-time",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18687,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "goblin-storm",
+     "animated-army",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 60117,
+    "focus_lost_turn": 57,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 14,
+     "attack_below_min": 10,
+     "attack_fallback": 10,
+     "attackers_declared": 16,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "mardu-surge",
+     "avengers-assemble",
+     "goblin-storm",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27700,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 23,
+     "attackers_reserved": 1,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grave-danger",
+     "legends-legacy",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39004,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 6,
+     "attack_fallback": 7,
+     "attackers_declared": 11,
+     "attackers_reserved": 0,
+     "attack_policy": 3,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "goblin-storm",
+     "temur-roar",
+     "lorehold-spirit",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92554,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 18,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "goblin-storm",
+     "tricky-terrain",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26716,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "goblin-storm",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36143,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 11,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "obscura-operation",
+     "witherbloom-pestilence",
+     "peace-offering",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45589,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 9,
+     "attackers_reserved": 2,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "goblin-storm",
+     "death-toll",
+     "most-wanted",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70510,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 6,
+     "attack_fallback": 8,
+     "attack_invalid": 2
+    }
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "goblin-storm",
+     "doom-prevails",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39784,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scrappy-survivors",
+     "painbow",
+     "goblin-storm",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 16075,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 3,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62844,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "goblin-storm",
+     "sultai-arisen",
+     "squirreled-away",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 231691,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 14,
+     "attackers_reserved": 7,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "goblin-storm",
+     "cavalry-charge",
+     "squirreled-away"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 126084,
+    "focus_lost_turn": 55,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 24,
+     "attackers_reserved": 1,
+     "attack_policy": 7
+    }
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "tinker-time",
+     "the-host-of-mordor",
+     "goblin-storm",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37462,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 9,
+     "attackers_reserved": 3,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "growing-threat",
+     "mardu-surge",
+     "grave-danger",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25874,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 27,
+     "attackers_reserved": 5,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "goblin-storm",
+     "graveyard-overdrive",
+     "squirreled-away",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50567,
+    "focus_lost_turn": 63,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "landing-party",
+     "goblin-storm",
+     "graveyard-overdrive",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85791,
+    "focus_lost_turn": 69,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 7,
+     "attack_fallback": 8,
+     "attackers_declared": 13,
+     "attackers_reserved": 3,
+     "attack_policy": 2,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "science",
+     "goblin-storm",
+     "prismari-artistry"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "science",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 119539,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 37,
+     "attackers_reserved": 5,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "mutant-menace",
+     "animated-army",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51752,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 12,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "goblin-storm",
+     "federation-fleet",
+     "token-triumph",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31450,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 14,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "goblin-storm",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 110677,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 8,
+     "attackers_reserved": 4,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "goblin-storm",
+     "silverquill-influence"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 134131,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "science",
+     "graveyard-overdrive",
+     "first-flight",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 88470,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 8,
+     "attack_fallback": 8,
+     "attackers_declared": 21,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "goblin-storm",
+     "blight-curse",
+     "enduring-enchantments",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 166906,
+    "focus_lost_turn": 57,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 12,
+     "attack_below_min": 11,
+     "attack_fallback": 11,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "growing-threat",
+     "goblin-storm",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 608333,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "prismari-artistry",
+     "goblin-storm",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26995,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 19,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jump-scare",
+     "legends-legacy",
+     "growing-threat",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36973,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 13,
+     "attack_below_min": 7,
+     "attack_fallback": 7,
+     "attackers_declared": 21,
+     "attackers_reserved": 0,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "goblin-storm",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 119895,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attackers_declared": 21,
+     "attackers_reserved": 0,
+     "attack_policy": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "peace-offering",
+     "goblin-storm",
+     "dance-of-the-elements",
+     "science"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 38,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 85128,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 6,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "most-wanted",
+     "goblin-storm",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "wakanda-forever",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 84064,
+    "focus_lost_turn": 50,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 8,
+     "attackers_reserved": 3,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "legends-legacy",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "abzan-armor",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29386,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "goblin-storm",
+     "jump-scare",
+     "cabaretti-cacophony",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27612,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "obscura-operation",
+     "goblin-storm",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 60068,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 18,
+     "attackers_reserved": 4,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "limit-break",
+     "quick-draw",
+     "goblin-storm",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "goblin-storm",
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 314757,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 72,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 24479,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 8,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "goblin-storm",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44484,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 2,
+     "attack_fallback": 3,
+     "attackers_declared": 25,
+     "attackers_reserved": 0,
+     "attack_policy": 6,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "legends-legacy",
+     "goblin-storm",
+     "hail-caesar",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30205,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5
+    }
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revival-trance",
+     "mardu-surge",
+     "goblin-storm",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66229,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 7,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mind-flayarrrs",
+     "jump-scare",
+     "deadly-disguise",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 228778,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attackers_declared": 10,
+     "attackers_reserved": 3,
+     "attack_policy": 3,
+     "attack_invalid": 1,
+     "attack_fallback": 6,
+     "attack_below_min": 5
+    }
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "goblin-storm",
+     "painbow",
+     "party-time",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 68927,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 25,
+     "attackers_reserved": 2,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "goblin-storm",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35848,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "mutant-menace",
+     "explorers-of-the-deep",
+     "goblin-storm",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63133,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attack_below_min": 6,
+     "attack_fallback": 7,
+     "attackers_declared": 8,
+     "attackers_reserved": 3,
+     "attack_policy": 2,
+     "attack_invalid": 1
+    }
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "scions-and-spellcraft",
+     "blame-game",
+     "eldrazi-unbound",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79367,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 11,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 9,
+     "attackers_reserved": 1,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "goblin-storm",
+     "tramplesaurus-rex",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 96677,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 10,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "attackers_declared": 4,
+     "attackers_reserved": 2,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "science",
+     "goblin-storm",
+     "jeskai-striker",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15509,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 4,
+     "attackers_declared": 13,
+     "attackers_reserved": 1,
+     "attack_policy": 3,
+     "attack_below_min": 1,
+     "attack_fallback": 1
+    }
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "goblin-storm",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22929,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 9,
+     "attackers_declared": 9,
+     "attackers_reserved": 1,
+     "attack_policy": 3,
+     "attack_below_min": 6,
+     "attack_fallback": 6
+    }
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "the-fantastic-four",
+     "blight-curse",
+     "goblin-storm"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26997,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 1
+    },
+    "playbook_stats": {
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 9,
+     "attackers_reserved": 1,
+     "attack_policy": 3
+    }
+   }
+  ]
+ },
+ "arms": [
+  "stock",
+  "playbook",
+  "playbookdata"
+ ],
+ "data_file": "playbook/precons/goblin-storm.json",
+ "deck_profile": "Vibefish-goblin-storm",
+ "profile_overrides": {
+  "PLAY_AGGRO": "true",
+  "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+  "MIN_COUNT_FOR_STORM_SPELLS": "2",
+  "FLAT_MC_DECK_PLAN": "COMBO"
+ },
+ "forge_version": "snapshot-2026-11-08",
+ "runtime": "runtime",
+ "clock_s": 1800,
+ "turn_cap": 120,
+ "started": "2026-11-10T15:04:57Z",
+ "data_effective": {
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)",
+  "key_cards": [
+   "Krenko, Mob Boss",
+   "Impact Tremors",
+   "Goblin Warchief",
+   "Siege-Gang Commander",
+   "Skirk Prospector",
+   "Empty the Warrens",
+   "Grapeshot",
+   "Storm-Kiln Artist"
+  ],
+  "roles": {
+   "storm_payoff": [
+    "Empty the Warrens",
+    "Grapeshot",
+    "Haze of Rage",
+    "Spreading Insurrection"
+   ]
+  },
+  "combos": [],
+  "pairs": [
+   {
+    "cards": [
+     "Storm-Kiln Artist",
+     "Haze of Rage"
+    ],
+    "produces": [
+     "Infinite artifact ETB",
+     "Infinite artifact LTB",
+     "Infinite artifact sacrifice triggers"
+    ],
+    "spellbook": "3940-5195"
+   }
+  ],
+  "deck_plan": "COMBO",
+  "profile": {
+   "PLAY_AGGRO": "true",
+   "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+   "MIN_COUNT_FOR_STORM_SPELLS": "2"
+  },
+  "spellbook": {
+   "included": 1,
+   "almost_included": 29,
+   "identity": "R",
+   "retrieved": "2026-11-09T06:29:19Z"
+  },
+  "cards_without_script": []
+ },
+ "arm_stats": {
+  "stock": {
+   "games": 100,
+   "wins": 9,
+   "win_rate": 0.09,
+   "win_rate_ci95": [
+    0.0481,
+    0.1623
+   ],
+   "draws": 1,
+   "avg_turns": 47.22,
+   "avg_seconds": 104.53,
+   "avg_turn_lost": 43.4,
+   "wins_by_seat": [
+    2,
+    3,
+    0,
+    4
+   ],
+   "playbook": null
+  },
+  "playbook": {
+   "games": 100,
+   "wins": 8,
+   "win_rate": 0.08,
+   "win_rate_ci95": [
+    0.0411,
+    0.15
+   ],
+   "draws": 1,
+   "avg_turns": 46.21,
+   "avg_seconds": 91.22,
+   "avg_turn_lost": 43.4,
+   "wins_by_seat": [
+    2,
+    1,
+    1,
+    4
+   ],
+   "playbook": {
+    "attack_decisions": 855,
+    "attack_below_min": 568,
+    "attack_fallback": 588,
+    "attackers_declared": 1189,
+    "attackers_reserved": 99,
+    "attack_policy": 267,
+    "attack_invalid": 20,
+    "games": 100
+   }
+  },
+  "playbookdata": {
+   "games": 100,
+   "wins": 8,
+   "win_rate": 0.08,
+   "win_rate_ci95": [
+    0.0411,
+    0.15
+   ],
+   "draws": 1,
+   "avg_turns": 45.9,
+   "avg_seconds": 94.31,
+   "avg_turn_lost": 42.79,
+   "wins_by_seat": [
+    3,
+    2,
+    2,
+    1
+   ],
+   "playbook": {
+    "attack_decisions": 841,
+    "attack_below_min": 540,
+    "attack_fallback": 563,
+    "attackers_declared": 1288,
+    "attackers_reserved": 94,
+    "attack_policy": 278,
+    "attack_invalid": 23,
+    "games": 99
+   }
+  }
+ },
+ "paired": {
+  "playbook_vs_stock": {
+   "pairs": 100,
+   "both_won": 0,
+   "playbook_only": 8,
+   "stock_only": 9,
+   "neither": 83,
+   "difference": -0.01,
+   "difference_ci95": [
+    -0.0908,
+    0.0708
+   ],
+   "identical_outcomes": 20
+  },
+  "playbookdata_vs_stock": {
+   "pairs": 100,
+   "both_won": 1,
+   "playbookdata_only": 7,
+   "stock_only": 8,
+   "neither": 84,
+   "difference": -0.01,
+   "difference_ci95": [
+    -0.0859,
+    0.0659
+   ],
+   "identical_outcomes": 3
+  }
+ }
+}
