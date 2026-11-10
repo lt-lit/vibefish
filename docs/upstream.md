@@ -70,4 +70,6 @@ The ab1 games used `--rotate-profiles`; both listed games are game 3 of their sh
   not stop: snapshot 2026-11-10, goldfish `runner/goldfish.sh "Goblin Storm [SLD] [2026].dck" -s 7000`, game seed 7076
   recast Haze of Rage 39 times and more in one main phase (819 storm copies and as many Treasures by then) and the
   game took 486 s where the others take 4 to 9; every recast is slower than the last. It ended on its own, well
-  inside the 900 s clock, but the same loop at a table would be a candidate for the league's clock draws.
+  inside the 900 s clock, but the same loop at a table would be a candidate for the league's clock draws. Four more
+  in `-s 9000` (game seeds 9001, 9021, 9049 and 9086: 561, 551, 330 and 247 s; 360 casts of Haze of Rage in that
+  block of a hundred stock games).

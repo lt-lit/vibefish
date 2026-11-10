@@ -197,8 +197,26 @@ public class PlaybookController extends PlayerControllerAi {
         return plan;
     }
 
+    /** Lower is attacked first. */
     private static int defenderScore(Player opp, Playbook.Attack policy) {
-        return "weakest_board".equals(policy.target) ? untappedCreatures(opp) * 100 + opp.getLife() : opp.getLife() * 100 + untappedCreatures(opp);
+        switch (policy.target) {
+            case "weakest_board":
+                return untappedCreatures(opp) * 100 + opp.getLife();
+            case "highest_life":
+                return -opp.getLife() * 100 + untappedCreatures(opp);
+            case "biggest_board":
+                return -boardPower(opp) * 100 - opp.getLife();
+            default:
+                return opp.getLife() * 100 + untappedCreatures(opp);
+        }
+    }
+
+    private static int boardPower(Player p) {
+        int n = 0;
+        for (Card c : p.getCreaturesInPlay()) {
+            n += Math.max(0, c.getNetPower());
+        }
+        return n;
     }
 
     /** The opponent to attack: lowest life, or the weakest board, among those at least one candidate can attack. */

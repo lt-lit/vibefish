@@ -20,7 +20,7 @@ public final class Playbook {
      *  strongest opponent's counter-attack, as long as at least {@code minAttackers} can go. */
     public static final class Attack {
         public final String policy;        // go_wide
-        public final String target;        // lowest_life | weakest_board
+        public final String target;        // lowest_life | weakest_board | highest_life | biggest_board
         public final int minAttackers;     // fewer than this: Forge decides
         public final int safetyMargin;     // life to keep above the strongest opponent's possible attack
         public final int maxReserve;       // creatures kept home at most
@@ -29,6 +29,9 @@ public final class Playbook {
         Attack(JsonObject o) {
             policy = str(o, "policy", "go_wide");
             target = str(o, "target", "lowest_life");
+            if (!List.of("lowest_life", "weakest_board", "highest_life", "biggest_board").contains(target)) {
+                throw new IllegalArgumentException("playbook attack target must be lowest_life, weakest_board, highest_life or biggest_board");
+            }
             minAttackers = num(o, "min_attackers", 3);
             safetyMargin = num(o, "safety_margin", 5);
             maxReserve = num(o, "max_reserve", 3);

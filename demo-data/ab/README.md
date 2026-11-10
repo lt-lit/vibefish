@@ -16,3 +16,7 @@ mcmaxdata, seed 20261120), the first run started by `runner/queue/ab-run.json`.
 
 Dated `*-local/` directories hold 40- to 100-table checks played on a session's machine rather than in Actions, named by
 deck and the arms they ran; the same format, smaller.
+
+`2026-11-10-local/goblin-storm-playbook-v2-*.json` are Goblin Storm's playbook version 2 (cast rules, DESIGN.md §21) on the
+same 40 tables with the attack aimed at the lowest life, the highest life and the biggest board; the three share one
+stock arm, and each file's `note` and `attack_target` say which it is. The playbook file ships with the highest life.

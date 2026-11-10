@@ -53,8 +53,8 @@ the harness is given `--playbook id=file`). Everything absent stays Forge's.
 ```
 "playbook": {
   "version": 2,
-  "attack":   {"policy": "go_wide", "target": "lowest_life" | "weakest_board", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3,
-               "spread": false},
+  "attack":   {"policy": "go_wide", "target": "lowest_life" | "weakest_board" | "highest_life" | "biggest_board",
+               "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": false},
   "mulligan": {"min_lands": 2, "max_lands": 5, "max_mulligans": 2},
   "cast":     {"rules": [ ... ], "max_per_turn": 60},
   "notes": "why"
@@ -63,7 +63,8 @@ the harness is given `--playbook id=file`). Everything absent stays Forge's.
 
 ### `attack`
 
-`go_wide` attacks the chosen opponent with every creature that can attack it free of attack taxes, minus a reserve:
+`go_wide` attacks the chosen opponent (`target`: the lowest life, the fewest untapped creatures, the highest life, or
+the most power on the battlefield) with every creature that can attack it free of attack taxes, minus a reserve:
 the toughest creatures are kept home, up to `max_reserve`, until the strongest single opponent's possible attack next
 turn is below our life minus `safety_margin` (each kept blocker is assumed to absorb that opponent's biggest attacker).
 With fewer than `min_attackers` able to go, or no legal declaration, Forge decides as usual. With `spread` the attack

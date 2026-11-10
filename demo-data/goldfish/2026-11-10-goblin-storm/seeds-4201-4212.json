@@ -1,0 +1,518 @@
+{
+ "kind": "goldfish-pair",
+ "generated": "2026-11-10T21:30:19Z",
+ "deck": "goblin-storm",
+ "a": {
+  "run": "gf-goblin-storm-stock",
+  "deck": "goblin-storm",
+  "deck_file": "Goblin Storm [SLD] [2026].dck",
+  "vibefish": "0.2.0",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": null,
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 12,
+  "wins": 12,
+  "not_finished": 0,
+  "kill_turn_mean": 11.5,
+  "kill_turn_sd": 2.714,
+  "kill_turn_median": 10.5,
+  "kill_turn_min": 8,
+  "kill_turn_max": 17,
+  "kill_turn_distribution": {
+   "8": 1,
+   "9": 2,
+   "10": 3,
+   "11": 1,
+   "13": 3,
+   "15": 1,
+   "17": 1
+  },
+  "per_game": [
+   {
+    "seed": 4201,
+    "kill_turn": 17,
+    "game_turns": 61,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 15928
+   },
+   {
+    "seed": 4202,
+    "kill_turn": 11,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6692
+   },
+   {
+    "seed": 4203,
+    "kill_turn": 15,
+    "game_turns": 53,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9720
+   },
+   {
+    "seed": 4204,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4743
+   },
+   {
+    "seed": 4205,
+    "kill_turn": 13,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6864
+   },
+   {
+    "seed": 4206,
+    "kill_turn": 9,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6281
+   },
+   {
+    "seed": 4207,
+    "kill_turn": 8,
+    "game_turns": 27,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 3350
+   },
+   {
+    "seed": 4208,
+    "kill_turn": 9,
+    "game_turns": 30,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5286
+   },
+   {
+    "seed": 4209,
+    "kill_turn": 13,
+    "game_turns": 46,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6878
+   },
+   {
+    "seed": 4210,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5466
+   },
+   {
+    "seed": 4211,
+    "kill_turn": 13,
+    "game_turns": 48,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6158
+   },
+   {
+    "seed": 4212,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4412
+   }
+  ]
+ },
+ "b": {
+  "run": "gs-v5",
+  "deck": "goblin-storm",
+  "deck_file": "Goblin Storm [SLD] [2026].dck",
+  "vibefish": "0.3.0",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": {
+   "file": "goblin-storm.json",
+   "version": 2,
+   "attack": {
+    "policy": "go_wide",
+    "target": "lowest_life",
+    "min_attackers": 3,
+    "safety_margin": 5,
+    "max_reserve": 3,
+    "spread": true
+   },
+   "mulligan": null,
+   "cast": {
+    "rules": [
+     {
+      "play": [
+       "Sol Ring",
+       "Ruby Medallion"
+      ]
+     },
+     {
+      "activate": [
+       "Krenko, Mob Boss"
+      ],
+      "phase": "main1"
+     },
+     {
+      "activate": [
+       "Idol of Oblivion"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "library >= 20"
+      ]
+     },
+     {
+      "play": [
+       "Expedite",
+       "Crimson Wisps",
+       "Renegade Tactics",
+       "Ancestors' Aid"
+      ],
+      "target": "Zada, Hedron Grinder",
+      "when": [
+       "controls Zada, Hedron Grinder",
+       "creatures >= 3",
+       "creatures <= 12",
+       "library >= 40"
+      ],
+      "phase": "main1"
+     },
+     {
+      "play": [
+       "Fists of Flame",
+       "Witch's Mark"
+      ],
+      "target": "Zada, Hedron Grinder",
+      "when": [
+       "controls Zada, Hedron Grinder",
+       "creatures >= 3",
+       "creatures <= 12",
+       "library >= 40"
+      ],
+      "phase": "main1"
+     },
+     {
+      "play": [
+       "Wild Ride"
+      ],
+      "target": "Zada, Hedron Grinder",
+      "when": [
+       "controls Zada, Hedron Grinder",
+       "creatures >= 3"
+      ],
+      "phase": "main1"
+     },
+     {
+      "hold": [
+       "Expedite",
+       "Crimson Wisps",
+       "Renegade Tactics",
+       "Ancestors' Aid",
+       "Fists of Flame",
+       "Witch's Mark",
+       "Wild Ride"
+      ],
+      "until": [
+       "turn >= 12",
+       "library >= 40"
+      ]
+     },
+     {
+      "hold": [
+       "Expedite",
+       "Crimson Wisps",
+       "Renegade Tactics",
+       "Ancestors' Aid",
+       "Fists of Flame",
+       "Witch's Mark",
+       "Wild Ride"
+      ],
+      "until": [
+       "life <= 15",
+       "library >= 40"
+      ]
+     },
+     {
+      "hold": [
+       "Fountainport"
+      ],
+      "ability": "Sacrifice a token"
+     },
+     {
+      "play": [
+       "Battle Hymn"
+      ],
+      "when": [
+       "creatures >= 4",
+       "hand >= 3",
+       "mana <= 2"
+      ],
+      "phase": "main1"
+     },
+     {
+      "play": [
+       "Brightstone Ritual"
+      ],
+      "when": [
+       "type:Goblin >= 4",
+       "hand >= 3",
+       "mana <= 2"
+      ],
+      "phase": "main1"
+     },
+     {
+      "hold": [
+       "Battle Hymn",
+       "Brightstone Ritual"
+      ]
+     },
+     {
+      "play": [
+       "Haze of Rage"
+      ],
+      "when": [
+       "attackers >= 5"
+      ],
+      "phase": "main1",
+      "times": 6
+     },
+     {
+      "hold": [
+       "Haze of Rage"
+      ]
+     },
+     {
+      "play": [
+       "Empty the Warrens"
+      ],
+      "when": [
+       "storm >= 3"
+      ]
+     },
+     {
+      "hold": [
+       "Empty the Warrens"
+      ],
+      "until": [
+       "storm >= 2"
+      ]
+     },
+     {
+      "hold": [
+       "Grapeshot"
+      ],
+      "until": [
+       "storm >= 5"
+      ]
+     },
+     {
+      "play": [
+       "Zada, Hedron Grinder"
+      ],
+      "when": [
+       "creatures >= 2"
+      ]
+     },
+     {
+      "play": [
+       "Krenko, Mob Boss",
+       "Siege-Gang Commander",
+       "Goblin Warchief",
+       "Goblin Chieftain",
+       "Storm-Kiln Artist",
+       "Impact Tremors",
+       "Mogg War Marshal",
+       "Dragon Fodder",
+       "Krenko's Command",
+       "Howlsquad Heavy",
+       "General Kreat, the Boltbringer",
+       "Siege-Gang Lieutenant",
+       "Idol of Oblivion",
+       "Rundvelt Hordemaster",
+       "Goblin Trashmaster",
+       "Searslicer Goblin",
+       "Redcap Gutter-Dweller",
+       "Goblin Lackey",
+       "Skirk Prospector",
+       "Conspicuous Snoop",
+       "Goblin Matron",
+       "Goblin Dark-Dwellers",
+       "Pashalik Mons",
+       "Grenzo, Havoc Raiser",
+       "Frontline Heroism",
+       "Quest for the Goblin Lord",
+       "Faithless Looting"
+      ]
+     },
+     {
+      "activate": [
+       "Skullclamp"
+      ],
+      "ability": "Equip",
+      "target": "Goblin Token",
+      "when": [
+       "not controls Goblin Chieftain",
+       "not controls Rundvelt Hordemaster",
+       "not controls Goblin Trashmaster",
+       "library >= 20"
+      ],
+      "phase": "main2",
+      "times": 2
+     }
+    ]
+   }
+  },
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 12,
+  "wins": 12,
+  "not_finished": 0,
+  "kill_turn_mean": 8.333,
+  "kill_turn_sd": 1.435,
+  "kill_turn_median": 8.5,
+  "kill_turn_min": 6,
+  "kill_turn_max": 11,
+  "kill_turn_distribution": {
+   "6": 1,
+   "7": 3,
+   "8": 2,
+   "9": 4,
+   "10": 1,
+   "11": 1
+  },
+  "per_game": [
+   {
+    "seed": 4201,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 10801
+   },
+   {
+    "seed": 4202,
+    "kill_turn": 9,
+    "game_turns": 30,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6940
+   },
+   {
+    "seed": 4203,
+    "kill_turn": 7,
+    "game_turns": 25,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4766
+   },
+   {
+    "seed": 4204,
+    "kill_turn": 9,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 13034
+   },
+   {
+    "seed": 4205,
+    "kill_turn": 10,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5562
+   },
+   {
+    "seed": 4206,
+    "kill_turn": 7,
+    "game_turns": 25,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4396
+   },
+   {
+    "seed": 4207,
+    "kill_turn": 6,
+    "game_turns": 22,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 3204
+   },
+   {
+    "seed": 4208,
+    "kill_turn": 8,
+    "game_turns": 28,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5273
+   },
+   {
+    "seed": 4209,
+    "kill_turn": 7,
+    "game_turns": 25,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 3716
+   },
+   {
+    "seed": 4210,
+    "kill_turn": 9,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4335
+   },
+   {
+    "seed": 4211,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5810
+   },
+   {
+    "seed": 4212,
+    "kill_turn": 8,
+    "game_turns": 29,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5243
+   }
+  ]
+ },
+ "paired": {
+  "seeds": 12,
+  "not_finished_by_one": 0,
+  "a_minus_b_turns": 3.167,
+  "ci95": [
+   1.849,
+   4.484
+  ],
+  "sd": 2.329,
+  "b_faster": 12,
+  "same": 0,
+  "b_slower": 0
+ }
+}
