@@ -20,3 +20,7 @@ deck and the arms they ran; the same format, smaller.
 `2026-11-10-local/goblin-storm-playbook-v2-*.json` are Goblin Storm's playbook version 2 (cast rules, DESIGN.md §21) on the
 same 40 tables with the attack aimed at the lowest life, the highest life and the biggest board; the three share one
 stock arm, and each file's `note` and `attack_target` say which it is. The playbook file ships with the highest life.
+
+`2026-11-10-ab-v3/` is the CI measurement of Goblin Storm's playbook version 2 (`ab-run` #5, DESIGN.md §21: cast rules and the
+go-wide attack aimed at the highest life; arms stock and playbook, 200 tables, seed 20261140, snapshot 2026-11-10): 40 wins
+against 18, the first difference in this directory whose interval excludes zero.
