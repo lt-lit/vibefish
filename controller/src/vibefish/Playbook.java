@@ -1,5 +1,12 @@
 package vibefish;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -17,6 +24,7 @@ public final class Playbook {
         public final int minAttackers;     // fewer than this: Forge decides
         public final int safetyMargin;     // life to keep above the strongest opponent's possible attack
         public final int maxReserve;       // creatures kept home at most
+        public final boolean spread;       // once a defender is dead through its blockers, the rest attack the next one
 
         Attack(JsonObject o) {
             policy = str(o, "policy", "go_wide");
@@ -24,6 +32,7 @@ public final class Playbook {
             minAttackers = num(o, "min_attackers", 3);
             safetyMargin = num(o, "safety_margin", 5);
             maxReserve = num(o, "max_reserve", 3);
+            spread = o.has("spread") && o.get("spread").isJsonPrimitive() && o.get("spread").getAsBoolean();
         }
     }
 
@@ -40,14 +49,182 @@ public final class Playbook {
         }
     }
 
+    /**
+     * A condition on the seat's own side of the game, written as text so the file stays greppable:
+     * {@code "creatures >= 3"}, {@code "storm >= 4"}, {@code "type:Goblin >= 5"}, {@code "controls Zada, Hedron Grinder"},
+     * {@code "not controls Krenko, Mob Boss"}. The metrics are evaluated by {@link PlaybookController}.
+     */
+    public static final class Cond {
+        /** Everything a comparison may be made on; anything else is a mistake in the file and stops the run. */
+        public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
+                "storm", "drawn", "turn", "life", "mana", "opponents");
+        private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
+        private static final Pattern COMPARE = Pattern.compile("^([a-z_]+|type:[A-Za-z' -]+?)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+)$");
+
+        public final String text;
+        public final String metric;     // null for a controls condition
+        public final String op;
+        public final int value;
+        public final String card;       // controls / not controls: the permanent's name
+        public final boolean negate;
+
+        Cond(String raw) {
+            text = raw.trim();
+            Matcher c = CONTROLS.matcher(text);
+            Matcher m = COMPARE.matcher(text);
+            if (c.matches()) {
+                negate = c.group(1) != null;
+                card = c.group(2).trim();
+                metric = null;
+                op = null;
+                value = 0;
+            } else if (m.matches() && (METRICS.contains(m.group(1)) || m.group(1).startsWith("type:"))) {
+                metric = m.group(1).trim();
+                op = m.group(2);
+                value = Integer.parseInt(m.group(3));
+                card = null;
+                negate = false;
+            } else {
+                throw new IllegalArgumentException("playbook condition not understood: \"" + raw + "\" (use \"<metric> <op> <number>\" with "
+                        + METRICS + " or type:<CreatureType>, or \"[not] controls <card name>\")");
+            }
+        }
+
+        public boolean compare(int actual) {
+            switch (op) {
+                case ">=": return actual >= value;
+                case "<=": return actual <= value;
+                case ">": return actual > value;
+                case "<": return actual < value;
+                case "==": return actual == value;
+                default: return actual != value;
+            }
+        }
+    }
+
+    /**
+     * One cast rule. {@code play}: on the seat's own main phase with an empty stack, cast the first listed card that
+     * is in hand (or the command zone) and affordable, when every {@code when} condition holds; with {@code target}
+     * the spell is aimed at that permanent of ours, without it Forge picks the targets of a spell that needs any; a
+     * card that returns to hand (buyback) is cast at most {@code times} a turn by the rule.
+     * {@code activate}: the same for an activated ability of a listed permanent of ours ({@code ability}: a piece of
+     * its text, when the card has several), at most {@code times} a turn for each permanent. {@code hold}: Forge's
+     * own AI may not cast the listed cards, nor use the activated abilities of the listed permanents of ours (all of
+     * them, or the one {@code ability} quotes), until every {@code until} condition holds (never, with no
+     * {@code until}); a card named by several hold rules is released as soon as one of them is, and a play or
+     * activate rule may still make a held play, which is how "only this way" is written.
+     */
+    public static final class CastRule {
+        public final String kind;           // play | activate | hold
+        public final List<String> cards;
+        public final String target;         // play, activate
+        public final String ability;        // activate, hold: text the ability's description contains (null: any of them)
+        public final int times;             // play: casts of one card name a turn; activate: per permanent a turn (default 1)
+        public final List<Cond> when;       // play, activate: when; hold: until
+        public final String phase;          // play, activate: main (either main phase) | main1 | main2
+        public final int index;             // 1-based position in the file, for the counters
+
+        CastRule(JsonObject o, int index) {
+            this.index = index;
+            String k = null;
+            for (String candidate : List.of("play", "activate", "hold")) {
+                if (o.has(candidate)) {
+                    if (k != null) {
+                        throw new IllegalArgumentException("playbook cast rule " + index + " needs exactly one of \"play\", \"activate\" and \"hold\"");
+                    }
+                    k = candidate;
+                }
+            }
+            if (k == null) {
+                throw new IllegalArgumentException("playbook cast rule " + index + " needs one of \"play\", \"activate\" and \"hold\"");
+            }
+            kind = k;
+            boolean hold = "hold".equals(kind);
+            cards = strings(o.get(kind));
+            if (cards.isEmpty()) {
+                throw new IllegalArgumentException("playbook cast rule " + index + " names no cards");
+            }
+            target = hold ? null : str(o, "target", null);
+            ability = "play".equals(kind) ? null : str(o, "ability", null);
+            times = num(o, "times", 1);
+            phase = hold ? null : str(o, "phase", "main");
+            if (!hold && !List.of("main", "main1", "main2").contains(phase)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1 or main2");
+            }
+            List<Cond> conds = new ArrayList<>();
+            for (String c : strings(o.get(hold ? "until" : "when"))) {
+                conds.add(new Cond(c));
+            }
+            when = Collections.unmodifiableList(conds);
+            if (hold && (o.has("when") || o.has("target"))) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": a hold rule takes \"until\", not \"when\" or \"target\"");
+            }
+            if (!hold && o.has("until")) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": a " + kind + " rule takes \"when\", not \"until\"");
+            }
+        }
+
+        public boolean isPlay() {
+            return "play".equals(kind);
+        }
+
+        public boolean isActivate() {
+            return "activate".equals(kind);
+        }
+
+        public boolean isHold() {
+            return "hold".equals(kind);
+        }
+    }
+
+    /** The cast rules, in the file's order: the first play rule that can cast something does. */
+    public static final class Cast {
+        public final List<CastRule> rules;
+        public final int maxPerTurn;        // plays by rule in one turn before Forge takes over (runaway guard)
+        public final JsonObject source;     // as written, recorded in run.json
+
+        Cast(JsonObject o) {
+            source = o;
+            maxPerTurn = num(o, "max_per_turn", 60);
+            List<CastRule> list = new ArrayList<>();
+            JsonElement r = o.get("rules");
+            if (r != null && r.isJsonArray()) {
+                JsonArray arr = r.getAsJsonArray();
+                for (int i = 0; i < arr.size(); i++) {
+                    list.add(new CastRule(arr.get(i).getAsJsonObject(), i + 1));
+                }
+            }
+            rules = Collections.unmodifiableList(list);
+        }
+
+        /** Every card a rule names (to cast, to hold or to aim at), for checking against the decklist. */
+        public List<String> namedCards() {
+            List<String> names = new ArrayList<>();
+            for (CastRule rule : rules) {
+                names.addAll(rule.cards);
+                if (rule.target != null) {
+                    names.add(rule.target);
+                }
+                for (Cond c : rule.when) {
+                    if (c.card != null) {
+                        names.add(c.card);
+                    }
+                }
+            }
+            return names;
+        }
+    }
+
     public final int version;
     public final Attack attack;
     public final Mulligan mulligan;
+    public final Cast cast;
 
     private Playbook(JsonObject o) {
         version = num(o, "version", 1);
         attack = o.has("attack") && o.get("attack").isJsonObject() ? new Attack(o.getAsJsonObject("attack")) : null;
         mulligan = o.has("mulligan") && o.get("mulligan").isJsonObject() ? new Mulligan(o.getAsJsonObject("mulligan")) : null;
+        cast = o.has("cast") && o.get("cast").isJsonObject() ? new Cast(o.getAsJsonObject("cast")) : null;
     }
 
     /** The playbook in a deck data file, or null when the file has none. */
@@ -63,12 +240,37 @@ public final class Playbook {
         StringBuilder sb = new StringBuilder("v" + version);
         if (attack != null) {
             sb.append(" attack=").append(attack.policy).append('/').append(attack.target)
-              .append(" min=").append(attack.minAttackers).append(" margin=").append(attack.safetyMargin).append(" reserve<=").append(attack.maxReserve);
+              .append(" min=").append(attack.minAttackers).append(" margin=").append(attack.safetyMargin).append(" reserve<=").append(attack.maxReserve)
+              .append(attack.spread ? " spread" : "");
         }
         if (mulligan != null) {
             sb.append(" mulligan=lands ").append(mulligan.minLands).append('-').append(mulligan.maxLands).append(" max ").append(mulligan.maxMulligans);
         }
+        if (cast != null) {
+            int plays = 0, activations = 0, holds = 0;
+            for (CastRule r : cast.rules) {
+                plays += r.isPlay() ? 1 : 0;
+                activations += r.isActivate() ? 1 : 0;
+                holds += r.isHold() ? 1 : 0;
+            }
+            sb.append(" cast=").append(plays).append(" play, ").append(activations).append(" activate, ").append(holds).append(" hold rule(s)");
+        }
         return sb.toString();
+    }
+
+    static List<String> strings(JsonElement e) {
+        List<String> out = new ArrayList<>();
+        if (e == null || e.isJsonNull()) {
+            return out;
+        }
+        if (e.isJsonArray()) {
+            for (JsonElement x : e.getAsJsonArray()) {
+                out.add(x.getAsString());
+            }
+        } else {
+            out.add(e.getAsString());
+        }
+        return out;
     }
 
     static String str(JsonObject o, String k, String d) {

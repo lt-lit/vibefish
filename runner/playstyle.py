@@ -91,7 +91,7 @@ for rd in ARGS.runs:
                     if state[s]['life'] <= 10: low_turns[s] += 1
                     for o, x in state.items():
                         if o != s and x['alive']: EXPO[rkey(o)] += 1
-                elif et == 'cast' and e.get('spell'):
+                elif et == 'cast' and e.get('spell') and not (e.get('copy') or e.get('from') is None):   # copies cost no mana
                     s = e['seat']
                     if cur and s == cur[0]:
                         c = cmc.get(e['card'], 0)

@@ -35,6 +35,7 @@ import forge.game.player.Player;
 import forge.game.player.PlayerOutcome;
 import forge.game.player.PlayerView;
 import forge.game.spellability.SpellAbilityView;
+import forge.game.spellability.StackItemView;
 import forge.game.zone.ZoneType;
 import forge.game.zone.ZoneView;
 
@@ -126,6 +127,34 @@ public final class JsonGameLogger {
                     "card", name(host), "id", host.getId(), "spell", spell, "commander", host.isCommander());
             ZoneType from = zoneByCard.get(host.getId()) == ZoneType.Stack ? prevZoneByCard.get(host.getId()) : zoneByCard.get(host.getId());
             m.put("from", from != null ? from.name() : null);
+            if (spell && from == null) {
+                m.put("copy", true);            // a copy of a spell was never in a zone: not a card played from hand
+            }
+            StackItemView si = e.si();
+            if (si != null) {
+                // The target can sit on a sub-ability (Fists of Flame draws first, then pumps its target).
+                List<String> targets = new ArrayList<>();
+                List<Integer> targetSeats = new ArrayList<>();
+                int depth = 0;
+                for (StackItemView part = si; part != null && depth < 8; part = part.getSubInstance(), depth++) {
+                    if (part.getTargetCards() != null) {
+                        for (CardView t : part.getTargetCards()) {
+                            targets.add(name(t));
+                        }
+                    }
+                    if (part.getTargetPlayers() != null) {
+                        for (PlayerView t : part.getTargetPlayers()) {
+                            targetSeats.add(seat(t));
+                        }
+                    }
+                }
+                if (!targets.isEmpty()) {
+                    m.put("targets", targets);
+                }
+                if (!targetSeats.isEmpty()) {
+                    m.put("target_seats", targetSeats);
+                }
+            }
             if (!spell) {
                 String d = sa.getDescription();
                 m.put("ability", d != null && d.length() > 120 ? d.substring(0, 120) : d);

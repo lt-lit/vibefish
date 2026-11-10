@@ -66,7 +66,7 @@ import forge.util.MyRandom;
  * Relative paths resolve against $VIBEFISH_CWD when set (the launcher cds into the Forge runtime).
  */
 public final class Sim {
-    public static final String VERSION = "0.2.0";
+    public static final String VERSION = "0.3.0";
     static final Gson GSON = new GsonBuilder().disableHtmlEscaping().serializeNulls().create();
     static final Gson GSON_PRETTY = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
 
@@ -259,10 +259,38 @@ public final class Sim {
             Map<String, Object> playbookInfo = null;
             if (playbookFiles.containsKey(id)) {
                 File pf = resolve(playbookFiles.get(id), null);
-                playbook = Playbook.fromDeckFile(JsonParser.parseString(Files.readString(pf.toPath())).getAsJsonObject());
+                try {
+                    playbook = Playbook.fromDeckFile(JsonParser.parseString(Files.readString(pf.toPath())).getAsJsonObject());
+                } catch (IllegalArgumentException e) {
+                    System.err.println("[vibefish] " + pf + ": " + e.getMessage());
+                    return 2;
+                }
                 if (playbook == null) {
                     System.err.println("[vibefish] " + pf + " has no playbook object");
                     return 2;
+                }
+                if (playbook.cast != null) {
+                    // A misspelt card name would switch a rule off without a word; stop instead.
+                    List<String> inDeck = new ArrayList<>();
+                    for (Map.Entry<PaperCard, Integer> e : deck.getMain()) {
+                        inDeck.add(e.getKey().getName());
+                    }
+                    for (PaperCard pc : deck.getCommanders()) {
+                        inDeck.add(pc.getName());
+                    }
+                    List<String> unknown = new ArrayList<>();
+                    for (String name : playbook.cast.namedCards()) {
+                        if (name.endsWith(" Token")) {
+                            continue;                   // a token a rule aims at or counts: Forge names them "<Name> Token"
+                        }
+                        if (!inDeck.contains(name) && !unknown.contains(name)) {
+                            unknown.add(name);
+                        }
+                    }
+                    if (!unknown.isEmpty()) {
+                        System.err.println("[vibefish] " + pf + ": the cast rules name cards that are not in " + f.getName() + ": " + unknown);
+                        return 2;
+                    }
                 }
                 VibefishLobbyPlayer lp = new VibefishLobbyPlayer(id, null, playbook);
                 lp.setAiProfile(profile.isEmpty() ? "Default" : profile);
@@ -271,9 +299,10 @@ public final class Sim {
                 rp.setPlayer(lp);
                 playbookInfo = obj("file", pf.getName(), "version", playbook.version, "attack", playbook.attack == null ? null
                         : obj("policy", playbook.attack.policy, "target", playbook.attack.target, "min_attackers", playbook.attack.minAttackers,
-                              "safety_margin", playbook.attack.safetyMargin, "max_reserve", playbook.attack.maxReserve),
+                              "safety_margin", playbook.attack.safetyMargin, "max_reserve", playbook.attack.maxReserve, "spread", playbook.attack.spread),
                         "mulligan", playbook.mulligan == null ? null
-                        : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans));
+                        : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans),
+                        "cast", playbook.cast == null ? null : playbook.cast.source);
                 System.err.printf("[vibefish] playbook for %s: %s%n", id, playbook.describe());
             } else {
                 rp.setPlayer(GamePlayerUtil.createAiPlayer(id, i, profile));

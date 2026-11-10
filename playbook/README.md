@@ -48,22 +48,89 @@ runner/ab.py rollup results/ab-token-triumph                            # paired
 
 A top-level `playbook` object in the same file holds the decisions Vibefish takes for the seat instead of Forge's AI
 (`controller/src/vibefish/Playbook.java`, applied by `PlaybookController` through Forge's public controller hooks when
-the harness is given `--playbook id=file`). Everything absent stays Forge's. Version 1:
+the harness is given `--playbook id=file`). Everything absent stays Forge's.
 
 ```
 "playbook": {
-  "version": 1,
-  "attack":   {"policy": "go_wide", "target": "lowest_life" | "weakest_board", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3},
+  "version": 2,
+  "attack":   {"policy": "go_wide", "target": "lowest_life" | "weakest_board", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3,
+               "spread": false},
   "mulligan": {"min_lands": 2, "max_lands": 5, "max_mulligans": 2},
+  "cast":     {"rules": [ ... ], "max_per_turn": 60},
   "notes": "why"
 }
 ```
 
+### `attack`
+
 `go_wide` attacks the chosen opponent with every creature that can attack it free of attack taxes, minus a reserve:
 the toughest creatures are kept home, up to `max_reserve`, until the strongest single opponent's possible attack next
 turn is below our life minus `safety_margin` (each kept blocker is assumed to absorb that opponent's biggest attacker).
-With fewer than `min_attackers` able to go, or no legal declaration, Forge decides as usual. The `mulligan` rule keeps a
-hand whose land count is within the range and never mulligans past `max_mulligans`; without it Forge's own mulligan
-logic runs. The harness records the playbook per seat in `run.json` (`decks[].playbook`) and the policy's counters per
-game (`games[].playbook_stats`: `attack_decisions`, `attack_policy`, `attack_fallback`, `attackers_declared`,
-`attackers_reserved`, `mulligan_decisions`, `mulligans_taken`). `runner/ab.py` has `playbook` and `playbookdata` arms.
+With fewer than `min_attackers` able to go, or no legal declaration, Forge decides as usual. With `spread` the attack
+is split: the first defender gets the biggest attackers until it is dead even if each of its untapped creatures blocks
+one of them, and what is left over goes at the next opponent by the same rule; an opponent that cannot be killed this
+turn takes everything still unassigned. Evasion and trample are not counted. The `mulligan` rule keeps a hand whose
+land count is within the range and never mulligans past `max_mulligans`; without it Forge's own mulligan logic runs.
+
+### `cast`: which card, when, aimed at what
+
+The rules are read top to bottom every time the seat has priority in one of its own main phases with nothing on the
+stack, after Forge has made the turn's land drop. The first `play` or `activate` rule that has something to do does
+it, one spell or ability at a time; when none has, the choice is Forge's, minus whatever a `hold` rule keeps back.
+Outside the seat's own main phases only the holds apply.
+
+| rule | does | keys |
+|---|---|---|
+| `{"play": [cards]}` | casts the first listed card that is in hand (or is the commander in the command zone), legal and affordable. Forge's own opinion of the card is not asked, so this is also how a card flagged `AI:RemoveDeck:All` gets cast | `when`, `target`, `phase`, `times` (casts of one card a turn, default 1: only a card that comes back to hand, a buyback spell, can be cast again) |
+| `{"activate": [permanents]}` | uses an activated ability of a listed permanent of ours (mana abilities stay Forge's to tap) | `ability` (a piece of the ability's text, when the card has several), `times` (per permanent per turn, default 1), `when`, `target`, `phase` |
+| `{"hold": [cards]}` | Forge's AI may not cast these cards, from any zone, nor use the activated abilities of these permanents (`ability`: only the one whose text it quotes). A `play` or `activate` rule still may, which is how "only this way" is written. A card named by several hold rules is released as soon as one of them is | `until` (released when all of these hold; never, without it), `ability` |
+
+- `target`: the name of a permanent we control (a token by Forge's name for it, `Goblin Token`). The spell must have
+  exactly one part that takes a target, and it is pointed at that permanent and nothing else. Without `target`, a spell
+  that needs no choice is cast as it is; one that needs targets or an X is cast only if Forge's own logic for the card
+  agrees, since that logic is what picks them.
+- `phase`: `main` (either main phase, the default), `main1` or `main2`.
+- `when` / `until`: a list of conditions, all of which must hold. A condition is text:
+  `"<metric> <op> <number>"` with `>= <= > < == !=`, or `"controls <card name>"` / `"not controls <card name>"`
+  (a permanent of ours on the battlefield).
+
+| metric | counts |
+|---|---|
+| `creatures`, `tokens` | creatures we control; the creature tokens among them |
+| `type:<CreatureType>` | creatures we control of that type (`type:Goblin >= 5`) |
+| `attackers` | our untapped creatures without summoning sickness |
+| `lands`, `hand`, `library`, `life` | lands we control, cards in hand, cards left in our library, our life |
+| `mana` | Forge's estimate of the mana we can still produce this turn |
+| `storm`, `drawn` | spells we have cast this turn, cards we have drawn this turn |
+| `turn` | our own turn number |
+| `opponents` | opponents still in the game |
+
+A rule that names a card that is not in the deck, an unknown metric or a malformed condition stops the harness before
+the first game (exit 2), so a typo cannot switch a rule off quietly. `max_per_turn` caps the plays the rules make in
+one turn (default 60) as a guard against a free loop. A cast that does not go through (Forge could not pay for it after
+all) is not tried again that turn.
+
+The harness records the playbook per seat in `run.json` (`decks[].playbook`, the `cast` object as written) and the
+policy's counters per game (`games[].playbook_stats`): `attack_decisions`, `attack_policy`, `attack_fallback`,
+`attack_spread`, `attackers_declared`, `attackers_reserved`, `mulligan_decisions`, `mulligans_taken`, and for the
+cast rules `cast_decisions` (times the rules were read), `cast_policy` (times one fired), `cast_rule_<n>` (per rule, by
+its position in the file), `cast_hold_vetoes` (a Forge choice that a hold turned down), `cast_hold_stuck` (a hold that
+could only be kept by passing), `cast_failed`, `cast_forge_declined`, `cast_turn_limit`, `cast_errors`.
+`FORGE_JAVA_OPTS=-Dvibefish.trace=true` prints one line per rule decision to the shard log.
+
+### Writing one
+
+The loop is goldfish first, tables second (DESIGN.md §21):
+
+```
+runner/goldfish.sh "$PRECONS/Goblin Storm [SLD] [2026].dck" -n 100 -s 7000 -i gs-stock                                   # stock AI
+runner/goldfish.sh "$PRECONS/Goblin Storm [SLD] [2026].dck" -n 100 -s 7000 -i gs-playbook -P playbook/precons/goblin-storm.json
+runner/hands.py compare results/gs-stock results/gs-playbook      # kill turn by run, paired difference on the same seeds
+runner/hands.py held results/gs-stock                             # the cards the seat sat on with the mana for them unspent
+runner/hands.py game results/gs-playbook/shard-1/games/game-005.events.jsonl    # one game turn by turn: read the slow ones
+runner/ab.py play --deck goblin-storm --arms stock,playbook ...   # then the same deck at real tables
+```
+
+Goldfish measures whether the seat runs its own deck (what it casts, in what order, how fast it kills three opponents
+that do nothing); it says nothing about blocking, removal or being attacked, which is what the tables are for.
+`runner/ab.py` has `playbook` and `playbookdata` arms.

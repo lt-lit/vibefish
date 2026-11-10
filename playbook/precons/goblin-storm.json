@@ -79,15 +79,239 @@
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
  },
  "playbook": {
-  "version": 1,
+  "version": 2,
   "attack": {
    "policy": "go_wide",
    "target": "lowest_life",
    "min_attackers": 3,
    "safety_margin": 5,
-   "max_reserve": 3
+   "max_reserve": 3,
+   "spread": true
   },
-  "notes": "Go wide with the Goblins: the lords give haste and the token makers refill the board; Impact Tremors and Pashalik Mons make the chump blocks cost the table.",
-  "on": "2026-11-09"
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Ruby Medallion"
+     ]
+    },
+    {
+     "activate": [
+      "Krenko, Mob Boss"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3",
+      "creatures <= 12",
+      "library >= 40"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Fists of Flame",
+      "Witch's Mark"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3",
+      "creatures <= 12",
+      "library >= 40"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Wild Ride"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid",
+      "Fists of Flame",
+      "Witch's Mark",
+      "Wild Ride"
+     ],
+     "until": [
+      "turn >= 12",
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid",
+      "Fists of Flame",
+      "Witch's Mark",
+      "Wild Ride"
+     ],
+     "until": [
+      "life <= 15",
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Fountainport"
+     ],
+     "ability": "Sacrifice a token"
+    },
+    {
+     "play": [
+      "Battle Hymn"
+     ],
+     "when": [
+      "creatures >= 4",
+      "hand >= 3",
+      "mana <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Brightstone Ritual"
+     ],
+     "when": [
+      "type:Goblin >= 4",
+      "hand >= 3",
+      "mana <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Battle Hymn",
+      "Brightstone Ritual"
+     ]
+    },
+    {
+     "play": [
+      "Haze of Rage"
+     ],
+     "when": [
+      "attackers >= 5"
+     ],
+     "phase": "main1",
+     "times": 6
+    },
+    {
+     "hold": [
+      "Haze of Rage"
+     ]
+    },
+    {
+     "play": [
+      "Empty the Warrens"
+     ],
+     "when": [
+      "storm >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "Empty the Warrens"
+     ],
+     "until": [
+      "storm >= 2"
+     ]
+    },
+    {
+     "hold": [
+      "Grapeshot"
+     ],
+     "until": [
+      "storm >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Zada, Hedron Grinder"
+     ],
+     "when": [
+      "creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Krenko, Mob Boss",
+      "Siege-Gang Commander",
+      "Goblin Warchief",
+      "Goblin Chieftain",
+      "Storm-Kiln Artist",
+      "Impact Tremors",
+      "Mogg War Marshal",
+      "Dragon Fodder",
+      "Krenko's Command",
+      "Howlsquad Heavy",
+      "General Kreat, the Boltbringer",
+      "Siege-Gang Lieutenant",
+      "Idol of Oblivion",
+      "Rundvelt Hordemaster",
+      "Goblin Trashmaster",
+      "Searslicer Goblin",
+      "Redcap Gutter-Dweller",
+      "Goblin Lackey",
+      "Skirk Prospector",
+      "Conspicuous Snoop",
+      "Goblin Matron",
+      "Goblin Dark-Dwellers",
+      "Pashalik Mons",
+      "Grenzo, Havoc Raiser",
+      "Frontline Heroism",
+      "Quest for the Goblin Lord",
+      "Faithless Looting"
+     ]
+    },
+    {
+     "activate": [
+      "Skullclamp"
+     ],
+     "ability": "Equip",
+     "target": "Goblin Token",
+     "when": [
+      "not controls Goblin Chieftain",
+      "not controls Rundvelt Hordemaster",
+      "not controls Goblin Trashmaster",
+      "library >= 20"
+     ],
+     "phase": "main2",
+     "times": 2
+    }
+   ]
+  },
+  "notes": "Zada copies a spell that targets only her for every other creature we control, so the deck's engine is a board of Goblins, Zada, and a one-mana spell aimed at her: Expedite, Crimson Wisps and Renegade Tactics draw a card for each creature, Ancestors' Aid makes a Treasure for each, Fists of Flame and Witch's Mark draw and pump, Wild Ride pumps and gives haste. Stock Forge aims about a third of these at Zada and sits on the rest (DESIGN.md §21), so they are held for the rules, which cast them at Zada in the first main phase once she has two other creatures, draws first and pump last, and never when the copies would draw most of the library (more than twelve creatures, or under forty cards left: a seat decked itself that way in testing). Krenko, Mob Boss makes his tokens every turn before combat instead of attacking, which stock does twice in a hundred games. The permanents go down in the listed order, best first, whatever Forge thinks of them (Faithless Looting is flagged AI:RemoveDeck:All and stock never casts it). Battle Hymn and Brightstone Ritual wait for a hand to spend them on. Haze of Rage is cast before an attack of five or more, at most six times a turn: with Storm-Kiln Artist it is the deck's infinite combo, and stock recasts it for minutes without attacking. Skullclamp goes on a 1/1 Goblin token after combat while no lord keeps it alive; Idol of Oblivion is tapped whenever a token was made; Fountainport does not eat the tokens. The attack is the go-wide policy with the spread: what the first defender does not need to die goes at the next. A land-count mulligan rule was tried and changed nothing (9.61 against 9.56 turns), so the mulligan stays Forge's. Not written yet: Great Train Heist's extra combat, Past in Flames, Goblin Bombardment and the sacrifice outlets, tutor targets.",
+  "on": "2026-11-10"
  }
 }

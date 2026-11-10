@@ -16,7 +16,7 @@ import os
 import statistics
 import sys
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 
 
 def load_json(path):
@@ -273,7 +273,7 @@ def process_game(game, events_path, stats, game_key, max_turn):
             s = ev.get("seat")
             if s not in own_turn:
                 continue
-            if ev.get("spell"):
+            if ev.get("spell") and not (ev.get("copy") or ev.get("from") is None):   # a copy of a spell is not a card cast
                 cast_cards[s][ev.get("card")] += 1
             if ev.get("commander") and ev.get("from") == "Command":
                 cmd_casts[s] += 1

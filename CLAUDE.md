@@ -36,6 +36,10 @@ runner/run-pod.sh -R forge/runtime-snapshot -m on -p Vibefish-MC,Vibefish-MC,Vib
 runner/publish.sh results/<run-id> demo-data           # → demo-data/runs/<run-id>/, scorecard.json, index.json, card cache
 runner/scorecard.py results/<run-id>/rollup.json       # sim vs Playgroup human references (runner/reference/playgroup-commander.json)
 runner/goldfish.sh /abs/path/Deck.dck -n 8 -s 42        # deck vs three lands-only do-nothing decks → kill-turn distribution in goldfish.json
+runner/goldfish.sh /abs/path/Deck.dck -n 100 -s 7000 -i gs-playbook -P playbook/precons/goblin-storm.json   # the same under its playbook; the same seed without -P is its pair
+runner/hands.py compare results/gs-stock results/gs-playbook [--out pair.json]   # paired kill turns of two goldfish runs on the same seeds
+runner/hands.py held results/<run-id> [--deck ID] [--arm ARM]   # the cards a seat kept in hand with the mana for them unspent; mana left unspent per turn
+runner/hands.py game results/<run-id>/shard-1/games/game-005.events.jsonl [--deck ID]   # one game turn by turn for one seat: hand, casts with targets, abilities, attacks
 runner/status.py --port 8787                           # live progress page for runs in results/ (ETA, per-shard pace, interim wins by arm); dev tool, nothing written
 runner/playstyle.py results/<run-id> [--by-profile]    # how the seats played, from the event logs: attack frequency/targets, combat damage per turn, mana use, closing speed; an ab.py run dir splits each arm into focus seat and opponents
 runner/league.py schedule --seed 20261109 --cycles 25  # the precon league schedule: 91 precons, 22 tables a round, 2200 games, every deck in every seat once a cycle
@@ -45,7 +49,7 @@ runner/league.py rollup results/league-x               # per-deck win rates with
 runner/deckdata.py generate --runtime forge/runtime-snapshot [--deck ID]   # Phase 3 data drafts: playbook/precons/<id>.json (Spellbook + card scripts); curated blocks survive
 runner/deckdata.py forge-lines playbook/precons/token-triumph.json         # the KeyCards, role, combo and pair lines a seat will be given
 controller/vibefish-sim.sh play ... --data token-triumph=playbook/precons/token-triumph.json --profile "" --profile Vibefish-token-triumph ...   # one seat with its data
-controller/vibefish-sim.sh play ... --playbook token-triumph=playbook/precons/token-triumph.json   # one seat under its playbook (PlaybookController: attack policy, mulligan rule)
+controller/vibefish-sim.sh play ... --playbook token-triumph=playbook/precons/token-triumph.json   # one seat under its playbook (PlaybookController: cast rules, attack policy, mulligan rule; FORGE_JAVA_OPTS=-Dvibefish.trace=true logs every rule decision)
 runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph --runtime forge/runtime-snapshot -j 2 [--arms stock,data,mc,mcdata,mcmax,mcmaxdata,playbook,playbookdata]
 runner/ab.py rollup results/ab-token-triumph               # paired A/B: same tables with and without the deck's data; ab-run.yml shards it in Actions
 runner/ab.py pool --out pooled.json demo-data/ab/2026-11-09-ab-v1/tricky-terrain.json results/ab-tricky-terrain/rollup.json   # the same deck and arms played with different seeds, as one measurement (kind: ab-pool)

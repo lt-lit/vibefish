@@ -19,8 +19,8 @@ focus seat is given:
     mcdata   mc plus the deck's data and profile
     mcmax    as mc, with Forge's Monte Carlo at desktop strength (--mc max: no time budget, about three times slower)
     mcmaxdata  mcmax plus the deck's data and profile
-    playbook   the deck's playbook (Phase 4: Vibefish's own attack policy and mulligan rule through Forge's controller
-             hooks, --playbook) on the focus seat; no data, Default profile, heuristic opponents
+    playbook   the deck's playbook (Phase 4: Vibefish's own cast rules, attack policy and mulligan rule through
+             Forge's controller hooks, --playbook) on the focus seat; no data, Default profile, heuristic opponents
     playbookdata  playbook plus the deck's data and profile
 
 One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games

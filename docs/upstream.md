@@ -55,3 +55,19 @@ The ab1 games used `--rotate-profiles`; both listed games are game 3 of their sh
   `CopyPermanentEffect.getProtoType` while a copy effect resolved; game seed 20262439 (Deadly Disguise / Call for
   Backup / Silverquill Influence / Wretched Ranks, turn 40, 190 s in) ran out of the 4 GB heap in
   `Game.copyLastState` → `CardCopyService.getLKICopy` (last-known-information copies of a large board).
+- `AI:RemoveDeck:All` is a play-time filter, not only a deck-building hint: with Flat Monte Carlo off,
+  `AiController.getSpellAbilityToPlay` removes every spell of a flagged card from its candidates before it chooses
+  (read from the bytecode of snapshot 2026-11-10 and of 2.0.15: the `removeIf` predicate calls
+  `ComputerUtilCard.isCardRemAIDeck` and drops the ability unless the Monte Carlo layer is active). So a stock seat
+  never casts those cards: in the league Goblin Storm never cast Goblin Bombardment, Faithless Looting or Past in
+  Flames in 96 games, and 86 of the 91 decks have at least one card they drew and never once cast. A playbook `play`
+  rule casts them (DESIGN.md §21).
+- Forge drops abilities flagged `skip` from its candidates for one decision, records which ones it dropped and clears
+  their flags at the start of the next decision (`AiController.skipped`). A flag set from outside is therefore
+  sometimes cleared before it is read; `PlaybookController.forgeChoice` works around it with one unflagged call when a
+  held play gets through (public methods only).
+- The stock AI finds Storm-Kiln Artist + Haze of Rage (buyback), the one infinite combo in Goblin Storm, and then does
+  not stop: snapshot 2026-11-10, goldfish `runner/goldfish.sh "Goblin Storm [SLD] [2026].dck" -s 7000`, game seed 7076
+  recast Haze of Rage 39 times and more in one main phase (819 storm copies and as many Treasures by then) and the
+  game took 486 s where the others take 4 to 9; every recast is slower than the last. It ended on its own, well
+  inside the 900 s clock, but the same loop at a table would be a candidate for the league's clock draws.

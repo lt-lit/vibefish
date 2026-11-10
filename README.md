@@ -50,12 +50,12 @@ controller/vibefish-sim.sh play --out results/mine --deck-dir /path/to/decks \
 | Path | What |
 |---|---|
 | `forge/` | Version pin, checksum, fetch and launch scripts. The runtime is downloaded, never committed. |
-| `controller/` | Java harness compiled against the released Forge jar: `play` records games as JSONL events, `check` validates decks. |
-| `runner/` | The frozen benchmark pod and precon league, sharded pod and league runners, rollups, calibration scorecard with the Playgroup.gg references, Scryfall resolver, publish helper. |
+| `controller/` | Java harness compiled against the released Forge jar: `play` records games as JSONL events, `check` validates decks, and a seat given a playbook plays under it (`PlaybookController`: cast rules, attack policy, mulligan rule; everything else stays Forge's AI). |
+| `runner/` | The frozen benchmark pod and precon league, sharded pod and league runners, rollups, calibration scorecard with the Playgroup.gg references, goldfish runs, the paired A/B of one deck's bot (`ab.py`), log readers (`playstyle.py`, `hands.py`), Scryfall resolver, publish helper. |
 | `dashboard/` | Vanilla JS static site for GitHub Pages. |
 | `demo-data/` | Published pod runs and the card image cache the dashboard reads. |
-| `playbook/` | Playbook schema, validator, examples (Phase 4; not created yet). |
-| `.github/workflows/` | Smoke test, sharded pod runs, sharded league runs. Pages serves the `testing` branch directly. |
+| `playbook/` | One file per league precon: data for Forge's AI and, for the decks that have one, the playbook (which card to cast when and aimed at what, how to attack). Schema and how to write one in `playbook/README.md`. |
+| `.github/workflows/` | Smoke test, sharded pod runs, sharded league runs, sharded paired A/Bs. Pages serves the `testing` branch directly. |
 
 ## License and credits
 
