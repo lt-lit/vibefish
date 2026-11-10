@@ -48,6 +48,7 @@ controller/vibefish-sim.sh play ... --data token-triumph=playbook/precons/token-
 controller/vibefish-sim.sh play ... --playbook token-triumph=playbook/precons/token-triumph.json   # one seat under its playbook (PlaybookController: attack policy, mulligan rule)
 runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph --runtime forge/runtime-snapshot -j 2 [--arms stock,data,mc,mcdata,mcmax,mcmaxdata,playbook,playbookdata]
 runner/ab.py rollup results/ab-token-triumph               # paired A/B: same tables with and without the deck's data; ab-run.yml shards it in Actions
+runner/ab.py pool --out pooled.json demo-data/ab/2026-11-09-ab-v1/tricky-terrain.json results/ab-tricky-terrain/rollup.json   # the same deck and arms played with different seeds, as one measurement (kind: ab-pool)
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```

@@ -5,6 +5,7 @@
                       [--runtime forge/runtime-snapshot] [--arms stock,data] [-j 2] [--clock 1800] [--turn-cap 120]
                       [--data playbook/precons/<deck>.json] [--shards K --shard k] [--limit N] [--dry-run]
     runner/ab.py rollup results/ab-token-triumph
+    runner/ab.py pool --out pooled.json results/ab-token-triumph/rollup.json demo-data/ab/2026-11-09-ab-v1/token-triumph.json
 
 Game i seats the focus deck in seat (i-1) mod 4 with three opponents drawn (seeded) from the rest of the league,
 all stock Forge AI, and plays that table once per arm with the same seed, so the arms differ only in what the
@@ -220,6 +221,52 @@ def sum_stats(dicts):
     return dict(out)
 
 
+def summarise(arms, per_arm):
+    """Per-arm win statistics and the paired comparison of every other arm with the first, over games keyed the same way in each arm."""
+    arm_stats = {}
+    for arm, games in per_arm.items():
+        n = len(games)
+        w = sum(1 for g in games.values() if g["won"])
+        arm_stats[arm] = {"games": n, "wins": w, "win_rate": round(w / n, 4) if n else None, "win_rate_ci95": rl.wilson(w, n),
+                          "draws": sum(1 for g in games.values() if g["winner_id"] is None),
+                          "avg_turns": rl.mean([g["turns"] for g in games.values()]),
+                          "avg_seconds": rl.mean([(g["duration_ms"] or 0) / 1000 for g in games.values()]),
+                          "avg_turn_lost": rl.mean([g["focus_lost_turn"] for g in games.values() if g["focus_lost_turn"] is not None]),
+                          "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s) for s in range(4)],
+                          "playbook": sum_stats([g["playbook_stats"] for g in games.values() if g.get("playbook_stats")])}
+    pairs = {}
+    if len(arms) >= 2:
+        base, other_arms = arms[0], arms[1:]
+        for arm in other_arms:
+            common = sorted(set(per_arm[base]) & set(per_arm[arm]))
+            d = [int(per_arm[arm][i]["won"]) - int(per_arm[base][i]["won"]) for i in common]
+            n = len(d)
+            both = sum(1 for i in common if per_arm[arm][i]["won"] and per_arm[base][i]["won"])
+            only_arm = sum(1 for x in d if x == 1)
+            only_base = sum(1 for x in d if x == -1)
+            mean = statistics.fmean(d) if n else None
+            se = (statistics.pstdev(d) / (n ** 0.5)) if n > 1 else None
+            pairs[f"{arm}_vs_{base}"] = {"pairs": n, "both_won": both, f"{arm}_only": only_arm, f"{base}_only": only_base,
+                                         "neither": n - both - only_arm - only_base,
+                                         "difference": round(mean, 4) if mean is not None else None,
+                                         "difference_ci95": [round(mean - 1.96 * se, 4), round(mean + 1.96 * se, 4)] if se is not None else None,
+                                         "identical_outcomes": sum(1 for i in common if per_arm[arm][i]["turns"] == per_arm[base][i]["turns"] and per_arm[arm][i]["winner_id"] == per_arm[base][i]["winner_id"])}
+    return arm_stats, pairs
+
+
+def report(deck, forge_version, arm_stats, pairs):
+    print(f"A/B {deck} ({forge_version}):", file=sys.stderr)
+    for arm, s in arm_stats.items():
+        ci = s["win_rate_ci95"] or [0, 0]
+        print(f"  {arm:<8} {s['wins']:>3}/{s['games']:<3} {(s['win_rate'] or 0) * 100:5.1f}% ({ci[0] * 100:.0f}–{ci[1] * 100:.0f}%)  draws {s['draws']}  "
+              f"turns {s['avg_turns']}  eliminated at game turn {s['avg_turn_lost']}  wins by seat {s['wins_by_seat']}"
+              + (f"  playbook {s['playbook']}" if s.get('playbook') else ""), file=sys.stderr)
+    for k, p in pairs.items():
+        ci = p["difference_ci95"] or [0, 0]
+        print(f"  {k}: {p['pairs']} pairs, difference {(p['difference'] or 0) * 100:+.1f} points (95% {ci[0] * 100:+.0f} to {ci[1] * 100:+.0f}); "
+              f"discordant {p[k.split('_vs_')[0] + '_only']} vs {p[k.split('_vs_')[1] + '_only']}; identical outcomes {p['identical_outcomes']}", file=sys.stderr)
+
+
 def cmd_rollup(args):
     out = os.path.abspath(args.run_dir)
     meta = lg.load_json(os.path.join(out, "ab.json"))
@@ -244,49 +291,40 @@ def cmd_rollup(args):
                                              "data": (run["decks"][fs].get("data") or {}).get("key_cards_applied"), "ai_lists": run.get("ai_lists"),
                                              "playbook_stats": gm.get("playbook_stats")}
         per_arm[arm] = games
-    arm_stats = {}
-    for arm, games in per_arm.items():
-        n = len(games)
-        w = sum(1 for g in games.values() if g["won"])
-        arm_stats[arm] = {"games": n, "wins": w, "win_rate": round(w / n, 4) if n else None, "win_rate_ci95": rl.wilson(w, n),
-                          "draws": sum(1 for g in games.values() if g["winner_id"] is None),
-                          "avg_turns": rl.mean([g["turns"] for g in games.values()]),
-                          "avg_seconds": rl.mean([(g["duration_ms"] or 0) / 1000 for g in games.values()]),
-                          "avg_turn_lost": rl.mean([g["focus_lost_turn"] for g in games.values() if g["focus_lost_turn"] is not None]),
-                          "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s) for s in range(4)],
-                          "playbook": sum_stats([g["playbook_stats"] for g in games.values() if g.get("playbook_stats")])}
-    pairs = {}
-    arms = meta["arms"]
-    if len(arms) >= 2:
-        base, other_arms = arms[0], arms[1:]
-        for arm in other_arms:
-            common = sorted(set(per_arm[base]) & set(per_arm[arm]))
-            d = [int(per_arm[arm][i]["won"]) - int(per_arm[base][i]["won"]) for i in common]
-            n = len(d)
-            both = sum(1 for i in common if per_arm[arm][i]["won"] and per_arm[base][i]["won"])
-            only_arm = sum(1 for x in d if x == 1)
-            only_base = sum(1 for x in d if x == -1)
-            mean = statistics.fmean(d) if n else None
-            se = (statistics.pstdev(d) / (n ** 0.5)) if n > 1 else None
-            pairs[f"{arm}_vs_{base}"] = {"pairs": n, "both_won": both, f"{arm}_only": only_arm, f"{base}_only": only_base,
-                                         "neither": n - both - only_arm - only_base,
-                                         "difference": round(mean, 4) if mean is not None else None,
-                                         "difference_ci95": [round(mean - 1.96 * se, 4), round(mean + 1.96 * se, 4)] if se is not None else None,
-                                         "identical_outcomes": sum(1 for i in common if per_arm[arm][i]["turns"] == per_arm[base][i]["turns"] and per_arm[arm][i]["winner_id"] == per_arm[base][i]["winner_id"])}
+    arm_stats, pairs = summarise(meta["arms"], per_arm)
     result = {"vibefish": rl.VERSION, "generated": lg.now(), "kind": "ab", **{k: v for k, v in meta.items() if k != "data_effective"},
               "data_effective": meta.get("data_effective"), "arm_stats": arm_stats, "paired": pairs,
               "games": {arm: [g for _, g in sorted(gs.items())] for arm, gs in per_arm.items()}}
     lg.dump_json(os.path.join(out, "rollup.json"), result)
-    print(f"A/B {deck} ({meta['forge_version']}):", file=sys.stderr)
-    for arm, s in arm_stats.items():
-        ci = s["win_rate_ci95"] or [0, 0]
-        print(f"  {arm:<8} {s['wins']:>3}/{s['games']:<3} {(s['win_rate'] or 0) * 100:5.1f}% ({ci[0] * 100:.0f}–{ci[1] * 100:.0f}%)  draws {s['draws']}  "
-              f"turns {s['avg_turns']}  eliminated at game turn {s['avg_turn_lost']}  wins by seat {s['wins_by_seat']}"
-              + (f"  playbook {s['playbook']}" if s.get('playbook') else ""), file=sys.stderr)
-    for k, p in pairs.items():
-        ci = p["difference_ci95"] or [0, 0]
-        print(f"  {k}: {p['pairs']} pairs, difference {(p['difference'] or 0) * 100:+.1f} points (95% {ci[0] * 100:+.0f} to {ci[1] * 100:+.0f}); "
-              f"discordant {p[k.split('_vs_')[0] + '_only']} vs {p[k.split('_vs_')[1] + '_only']}; identical outcomes {p['identical_outcomes']}", file=sys.stderr)
+    report(deck, meta["forge_version"], arm_stats, pairs)
+    return 0
+
+
+def cmd_pool(args):
+    """Pool rollup.json files of the same deck and arms, played with different seeds, into one measurement: games keyed by (run seed, table)."""
+    rollups = [(p, lg.load_json(p)) for p in args.rollups]
+    deck, arms = rollups[0][1]["deck"], rollups[0][1]["arms"]
+    for p, r in rollups[1:]:
+        if r["deck"] != deck or r["arms"] != arms:
+            raise SystemExit(f"{p}: deck {r['deck']} arms {r['arms']} do not match {rollups[0][0]} ({deck}, {arms})")
+    seeds = [r["seed"] for _, r in rollups]
+    if len(set(seeds)) != len(seeds):
+        raise SystemExit(f"the rollups share a seed ({seeds}): the same tables again, not more of them")
+    per_arm = {arm: {} for arm in arms}
+    for _, r in rollups:
+        for arm in arms:
+            for g in r["games"].get(arm, []):
+                per_arm[arm][(r["seed"], g["index"])] = {**g, "run_seed": r["seed"]}
+    arm_stats, pairs = summarise(arms, per_arm)
+    versions = sorted({r["forge_version"] for _, r in rollups})
+    result = {"vibefish": rl.VERSION, "generated": lg.now(), "kind": "ab-pool", "deck": deck, "deck_file": rollups[0][1].get("deck_file"),
+              "league": rollups[0][1].get("league"), "seeds": seeds, "arms": arms, "forge_version": versions[0] if len(versions) == 1 else versions,
+              "sources": [{"seed": r["seed"], "generated": r.get("generated"), "started": r.get("started"), "games": {a: len(r["games"].get(a, [])) for a in arms}} for _, r in rollups],
+              "arm_stats": arm_stats, "paired": pairs,
+              "games": {arm: [g for _, g in sorted(gs.items())] for arm, gs in per_arm.items()}}
+    if args.out:
+        lg.dump_json(args.out, result)
+    report(deck, result["forge_version"], arm_stats, pairs)
     return 0
 
 
@@ -313,6 +351,10 @@ def main(argv):
     r = sub.add_parser("rollup")
     r.add_argument("run_dir")
     r.set_defaults(func=cmd_rollup)
+    q = sub.add_parser("pool")
+    q.add_argument("rollups", nargs="+", help="rollup.json files of the same deck and arms, different seeds")
+    q.add_argument("--out", help="write the pooled rollup here (kind: ab-pool)")
+    q.set_defaults(func=cmd_pool)
     args = ap.parse_args(argv)
     return args.func(args)
 
