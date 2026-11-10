@@ -11,6 +11,8 @@ import java.util.Set;
 import forge.LobbyPlayer;
 import forge.ai.AiPlayDecision;
 import forge.ai.ComputerUtilAbility;
+import forge.ai.ComputerUtilCard;
+import forge.ai.ComputerUtilCombat;
 import forge.ai.ComputerUtilCost;
 import forge.ai.ComputerUtilMana;
 import forge.ai.PlayerControllerAi;
@@ -69,13 +71,13 @@ public class PlaybookController extends PlayerControllerAi {
     @Override
     public void declareAttackers(Player attacker, Combat combat) {
         Playbook.Attack policy = playbook == null ? null : playbook.attack;
-        if (policy == null || !"go_wide".equals(policy.policy) || attacker != player) {
+        if (policy == null || attacker != player) {
             super.declareAttackers(attacker, combat);
             return;
         }
         count("attack_decisions", 1);
         try {
-            if (goWide(attacker, combat, policy)) {
+            if ("pressure".equals(policy.policy) ? pressure(attacker, combat, policy) : goWide(attacker, combat, policy)) {
                 count("attack_policy", 1);
                 return;
             }
@@ -139,6 +141,272 @@ public class PlaybookController extends PlayerControllerAi {
         count("attackers_declared", going.size());
         count("attackers_reserved", reserve.size());
         return true;
+    }
+
+    // ------------------------------------------------------------------ attack: pressure
+
+    /** One opponent's share of a pressure attack. */
+    private static final class Swing {
+        final Player defender;
+        final List<Card> attackers = new ArrayList<>();
+        int through;            // damage expected to reach the player
+        int losses;             // attackers the defender can kill by blocking
+        Swing(Player defender) {
+            this.defender = defender;
+        }
+    }
+
+    /**
+     * The pressure policy. First the kills: in the playbook's target order, an opponent that is dead even if each of
+     * its blockers stops one of our biggest attackers gets the attackers that takes. Then, with what is left, the
+     * opponent the swing scores best on (the damage that gets through, less {@code damagePerLoss} for every attacker
+     * a blocker can kill; the target order breaks near ties). Against that opponent the attackers no blocker can kill
+     * always go; the others go only together and only if the damage they add is worth the ones that die. Whether a
+     * blocker can block and kill is Forge's own combat arithmetic. True when the policy declared (possibly nobody).
+     */
+    private boolean pressure(Player attacker, Combat combat, Playbook.Attack policy) {
+        CardCollection possible = CombatUtil.getPossibleAttackers(attacker);
+        if (possible.isEmpty()) {
+            count("attack_no_attackers", 1);
+            return false;
+        }
+        killMemo.clear();
+        List<Card> left = new ArrayList<>();
+        for (Card c : possible) {
+            left.add(c);
+        }
+        List<Card> reserve = reserve(attacker, left, policy);
+        left.removeAll(reserve);
+        List<Player> order = new ArrayList<>();
+        for (Player opp : attacker.getOpponents()) {
+            order.add(opp);
+        }
+        order.sort(Comparator.comparingInt((Player opp) -> defenderScore(opp, policy)));
+
+        Map<Card, Player> plan = new LinkedHashMap<>();
+        Set<Player> dead = new HashSet<>();
+        for (Player d : order) {
+            List<Card> killers = lethalOn(left, d, combat);
+            if (killers != null) {
+                for (Card c : killers) {
+                    plan.put(c, d);
+                }
+                left.removeAll(killers);
+                dead.add(d);
+            }
+        }
+        Swing best = null;
+        double bestScore = 0;
+        for (Player d : order) {
+            if (dead.contains(d)) {
+                continue;
+            }
+            Swing s = swing(attacker, left, d, combat, policy);
+            double score = s.through - (double) policy.damagePerLoss * s.losses;
+            if (s.attackers.isEmpty() || score <= 0) {
+                continue;
+            }
+            // an opponent later in the playbook's order has to be clearly the better swing to be preferred
+            if (best == null || score > bestScore * 1.2 + 1) {
+                best = s;
+                bestScore = score;
+            }
+        }
+        if (best != null) {
+            for (Card c : best.attackers) {
+                plan.put(c, best.defender);
+            }
+            count("attack_expected_losses", best.losses);
+        }
+        // Whoever is still home goes wherever no blocker can kill it: at a living opponent first, else as insurance
+        // on a kill. Nothing safe to attack is the only reason to stay back.
+        if (!plan.isEmpty()) {
+            List<Player> anywhere = new ArrayList<>();
+            for (Player d : order) {
+                if (!dead.contains(d)) {
+                    anywhere.add(d);
+                }
+            }
+            for (Player d : order) {
+                if (dead.contains(d)) {
+                    anywhere.add(d);
+                }
+            }
+            for (Card c : left) {
+                if (plan.containsKey(c)) {
+                    continue;
+                }
+                for (Player d : anywhere) {
+                    if (canSwingAt(c, d) && safeFrom(attacker, c, blockersOf(d), combat)) {
+                        plan.put(c, d);
+                        break;
+                    }
+                }
+            }
+        }
+        if (plan.size() < policy.minAttackers) {
+            if (!CombatUtil.validateAttackers(combat)) {
+                count("attack_forced", 1);
+                return false;                           // a creature has to attack: Forge declares, it knows the requirement
+            }
+            count("attack_held", possible.size());
+            count("attack_none", 1);
+            return true;                                // nothing worth sending: nobody attacks
+        }
+        Set<Player> attacked = new HashSet<>();
+        for (Map.Entry<Card, Player> e : plan.entrySet()) {
+            combat.addAttacker(e.getKey(), e.getValue());
+            attacked.add(e.getValue());
+        }
+        if (!CombatUtil.validateAttackers(combat)) {
+            for (Card c : new ArrayList<>(combat.getAttackers())) {
+                combat.removeFromCombat(c);
+            }
+            count("attack_invalid", 1);
+            return false;
+        }
+        if (attacked.size() > 1) {
+            count("attack_spread", 1);
+        }
+        if (!dead.isEmpty()) {
+            count("attack_lethal", dead.size());
+        }
+        count("attackers_declared", plan.size());
+        count("attackers_reserved", reserve.size());
+        count("attack_held", possible.size() - reserve.size() - plan.size());
+        return true;
+    }
+
+    private static List<Card> blockersOf(Player d) {
+        List<Card> blockers = new ArrayList<>();
+        for (Card b : d.getCreaturesInPlay()) {
+            if (CombatUtil.canBlock(b)) {
+                blockers.add(b);
+            }
+        }
+        return blockers;
+    }
+
+    /** No blocker in the list can both block this attacker and kill it. */
+    private boolean safeFrom(Player ai, Card a, List<Card> blockers, Combat combat) {
+        for (Card b : blockers) {
+            if (kills(ai, a, b, combat)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /** Answers of {@link #kills} for the declaration being made: a board of tokens asks the same question many times. */
+    private final Map<String, Boolean> killMemo = new LinkedHashMap<>();
+
+    /**
+     * Whether this blocker can block this attacker and destroy it, by Forge's combat arithmetic on what is on the
+     * battlefield now (power, toughness, first strike, deathtouch, indestructible, protection and the like). Abilities
+     * either side might activate during combat are left out: asking Forge to weigh those costs a mana-payment search
+     * for every pair, which is minutes on a wide board.
+     */
+    private boolean kills(Player ai, Card a, Card b, Combat combat) {
+        String key = a.getName() + "|" + a.getNetPower() + "|" + a.getNetToughness() + "|" + a.getDamage() + "|" + b.getId();
+        Boolean known = killMemo.get(key);
+        if (known == null) {
+            known = CombatUtil.canBlock(a, b) && ComputerUtilCombat.canDestroyAttacker(ai, a, b, combat, true);
+            killMemo.put(key, known);
+        }
+        return known;
+    }
+
+    private boolean canSwingAt(Card c, Player d) {
+        if (!CombatUtil.canAttack(c, d)) {
+            return false;
+        }
+        Cost cost = CombatUtil.getAttackCost(getGame(), c, d);
+        return cost == null || cost.isFree();           // attack taxes: not this policy's to pay
+    }
+
+    /**
+     * The attackers that kill this opponent even if each of its blockers stops one of the biggest of them, or null
+     * when the creatures at hand cannot. Evasion and trample are not counted, so a kill is never claimed too early.
+     */
+    private List<Card> lethalOn(List<Card> left, Player d, Combat combat) {
+        List<Card> able = new ArrayList<>();
+        for (Card c : left) {
+            if (canSwingAt(c, d)) {
+                able.add(c);
+            }
+        }
+        able.sort(Comparator.comparingInt((Card c) -> ComputerUtilCombat.damageIfUnblocked(c, d, combat, false)).reversed());
+        int blockers = blockersOf(d).size();
+        List<Card> sent = new ArrayList<>();
+        int unblocked = 0;
+        for (Card c : able) {
+            sent.add(c);
+            if (sent.size() > blockers) {
+                unblocked += Math.max(0, ComputerUtilCombat.damageIfUnblocked(c, d, combat, false));
+            }
+            if (unblocked >= d.getLife()) {
+                return sent;
+            }
+        }
+        return null;
+    }
+
+    /** What attacking this opponent with the creatures at hand looks like: who goes, what gets through, what dies. */
+    private Swing swing(Player ai, List<Card> left, Player d, Combat combat, Playbook.Attack policy) {
+        Swing s = new Swing(d);
+        List<Card> blockers = blockersOf(d);
+        List<Card> safe = new ArrayList<>();
+        List<Card> risky = new ArrayList<>();
+        Map<Card, List<Card>> killers = new LinkedHashMap<>();
+        for (Card a : left) {
+            if (!canSwingAt(a, d)) {
+                continue;
+            }
+            List<Card> k = new ArrayList<>();
+            for (Card b : blockers) {
+                if (kills(ai, a, b, combat)) {
+                    k.add(b);
+                }
+            }
+            if (k.isEmpty()) {
+                safe.add(a);
+            } else {
+                risky.add(a);
+                killers.put(a, k);
+            }
+        }
+        int safeDamage = 0;
+        for (Card a : safe) {
+            safeDamage += Math.max(0, ComputerUtilCombat.damageIfUnblocked(a, d, combat, false));
+        }
+        // The defender kills what it can, the most valuable attacker first, each blocker once.
+        risky.sort(Comparator.comparingInt((Card a) -> ComputerUtilCard.evaluateCreature(a)).reversed());
+        Set<Card> used = new HashSet<>();
+        int crowdDamage = 0;
+        int victims = 0;
+        for (Card a : risky) {
+            Card killer = null;
+            for (Card b : killers.get(a)) {
+                if (!used.contains(b)) {
+                    killer = b;
+                    break;
+                }
+            }
+            if (killer != null) {
+                used.add(killer);
+                victims++;
+            } else {
+                crowdDamage += Math.max(0, ComputerUtilCombat.damageIfUnblocked(a, d, combat, false));
+            }
+        }
+        s.attackers.addAll(safe);
+        s.through = safeDamage;
+        if (victims < risky.size() && crowdDamage >= policy.damagePerLoss * victims) {
+            s.attackers.addAll(risky);                  // the crowd goes: what gets through is worth what dies
+            s.through += crowdDamage;
+            s.losses = victims;
+        }
+        return s;
     }
 
     /**
@@ -716,11 +984,19 @@ public class PlaybookController extends PlayerControllerAi {
         if (c.card != null) {
             return (controlled(c.card) != null) != c.negate;
         }
-        return c.compare(metric(c.metric));
+        return c.other == null ? c.compare(metric(c.metric)) : c.compare(metric(c.metric), metric(c.other));
     }
 
-    /** The seat's own side of the game as numbers (playbook/README.md lists them). */
+    /** Both sides of the game as numbers (playbook/README.md lists them). */
     private int metric(String name) {
+        if (name.startsWith("hand:")) {
+            List<String> group = playbook.cast.groups.get(name.substring(5));
+            int n = 0;
+            for (Card c : player.getCardsIn(ZoneType.Hand)) {
+                n += group != null && group.contains(c.getName()) ? 1 : 0;
+            }
+            return n;
+        }
         if (name.startsWith("type:")) {
             String type = name.substring(5).trim();
             int n = 0;
@@ -766,6 +1042,36 @@ public class PlaybookController extends PlayerControllerAi {
                 return ComputerUtilMana.getAvailableManaEstimate(player);
             case "opponents":
                 return player.getOpponents().size();
+            case "power":
+                return boardPower(player);
+            case "opp_creatures": {                     // the most creatures any one opponent controls
+                int n = 0;
+                for (Player opp : player.getOpponents()) {
+                    n = Math.max(n, opp.getCreaturesInPlay().size());
+                }
+                return n;
+            }
+            case "opp_power": {                         // the most power any one opponent has on the battlefield
+                int n = 0;
+                for (Player opp : player.getOpponents()) {
+                    n = Math.max(n, boardPower(opp));
+                }
+                return n;
+            }
+            case "opp_life": {                          // the highest life total among the opponents
+                int n = 0;
+                for (Player opp : player.getOpponents()) {
+                    n = Math.max(n, opp.getLife());
+                }
+                return n;
+            }
+            case "threat": {                            // the most damage one opponent could attack us with next turn
+                int n = 0;
+                for (int p : biggestThreat(player)) {
+                    n += p;
+                }
+                return n;
+            }
             default:
                 throw new IllegalArgumentException("unknown playbook metric " + name);
         }

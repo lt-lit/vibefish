@@ -299,7 +299,8 @@ public final class Sim {
                 rp.setPlayer(lp);
                 playbookInfo = obj("file", pf.getName(), "version", playbook.version, "attack", playbook.attack == null ? null
                         : obj("policy", playbook.attack.policy, "target", playbook.attack.target, "min_attackers", playbook.attack.minAttackers,
-                              "safety_margin", playbook.attack.safetyMargin, "max_reserve", playbook.attack.maxReserve, "spread", playbook.attack.spread),
+                              "safety_margin", playbook.attack.safetyMargin, "max_reserve", playbook.attack.maxReserve, "spread", playbook.attack.spread,
+                              "damage_per_loss", playbook.attack.damagePerLoss),
                         "mulligan", playbook.mulligan == null ? null
                         : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans),
                         "cast", playbook.cast == null ? null : playbook.cast.source);

@@ -2,7 +2,7 @@
 """Paired A/B for one deck's AI data: the same tables and seeds, with and without the deck's data.
 
     runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph
-                      [--runtime forge/runtime-snapshot] [--arms stock,data] [-j 2] [--clock 1800] [--turn-cap 120]
+                      [--runtime forge/runtime-snapshot] [--arms stock,data] [-j 2] [--clock 1800] [--turn-cap 120] [--opponents 3]
                       [--data playbook/precons/<deck>.json] [--shards K --shard k] [--limit N] [--dry-run]
     runner/ab.py rollup results/ab-token-triumph
     runner/ab.py pool --out pooled.json results/ab-token-triumph/rollup.json demo-data/ab/2026-11-09-ab-v1/token-triumph.json
@@ -22,6 +22,11 @@ focus seat is given:
     playbook   the deck's playbook (Phase 4: Vibefish's own cast rules, attack policy and mulligan rule through
              Forge's controller hooks, --playbook) on the focus seat; no data, Default profile, heuristic opponents
     playbookdata  playbook plus the deck's data and profile
+
+--opponents 1 makes every table a duel against one league deck (the focus deck alternating between going first and
+second): a game then turns on blocks, removal and the race, not on who the table gangs up on, it is over sooner, and
+around an even win rate a pilot's edge shows in far fewer games. It is the middle instrument between goldfish (no
+opponent at all) and the four-player tables (the exam); DESIGN.md §22.
 
 One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games
 are never replayed. The rollup pairs the arms game by game: wins per arm with Wilson intervals, the paired
@@ -60,13 +65,13 @@ ARMS = {
 }
 
 
-def schedule(league, deck_id, seed, games):
+def schedule(league, deck_id, seed, games, opponents=3):
     others = sorted(d["id"] for d in league["decks"] if d["id"] != deck_id)
     out = []
     for i in range(1, games + 1):
         rng = random.Random(seed * 31 + i)
-        opps = rng.sample(others, 3)
-        focus_seat = (i - 1) % 4
+        opps = rng.sample(others, opponents)
+        focus_seat = (i - 1) % (opponents + 1)
         seats = opps[:focus_seat] + [deck_id] + opps[focus_seat:]
         out.append({"index": i, "seed": seed + i, "focus_seat": focus_seat, "seats": seats})
     return out
@@ -113,14 +118,14 @@ def cmd_play(args):
     deck_profile, overrides = (write_deck_profile(runtime, args.deck, eff) if eff else ("", {}))
     if any(ARMS[a]["opp_profile"] == "Vibefish-Heuristic" for a in arms) and not os.path.isfile(os.path.join(runtime, "res", "ai", "Vibefish-Heuristic.ai")):
         raise SystemExit("the mc arms need Vibefish-Heuristic.ai: run runner/make-arm-profiles.sh " + runtime)
-    games = schedule(league, args.deck, args.seed, args.games)
+    games = schedule(league, args.deck, args.seed, args.games, args.opponents)
     out = os.path.abspath(args.out)
     os.makedirs(out, exist_ok=True)
     meta_path = os.path.join(out, "ab.json")
     if not os.path.isfile(meta_path):
         lg.dump_json(meta_path, {
             "vibefish": rl.VERSION, "deck": args.deck, "deck_file": by_id[args.deck]["file"], "league": league["name"],
-            "seed": args.seed, "games": args.games, "arms": arms, "data_file": os.path.relpath(data_file, ROOT),
+            "seed": args.seed, "games": args.games, "opponents": args.opponents, "arms": arms, "data_file": os.path.relpath(data_file, ROOT),
             "data_effective": eff, "deck_profile": deck_profile, "profile_overrides": overrides,
             "forge_version": forge_version, "runtime": os.path.basename(runtime), "clock_s": args.clock, "turn_cap": args.turn_cap,
             "started": lg.now(),
@@ -232,7 +237,8 @@ def summarise(arms, per_arm):
                           "avg_turns": rl.mean([g["turns"] for g in games.values()]),
                           "avg_seconds": rl.mean([(g["duration_ms"] or 0) / 1000 for g in games.values()]),
                           "avg_turn_lost": rl.mean([g["focus_lost_turn"] for g in games.values() if g["focus_lost_turn"] is not None]),
-                          "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s) for s in range(4)],
+                          "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s)
+                                           for s in range(max([len(g["seats"]) for g in games.values()] or [4]))],
                           "playbook": sum_stats([g["playbook_stats"] for g in games.values() if g.get("playbook_stats")])}
     pairs = {}
     if len(arms) >= 2:
@@ -334,6 +340,8 @@ def main(argv):
     p = sub.add_parser("play")
     p.add_argument("--deck", required=True)
     p.add_argument("--games", type=int, default=40)
+    p.add_argument("--opponents", type=int, default=3, choices=[1, 2, 3],
+                   help="opponents at each table (default 3; 1 plays duels, where each game says more about combat and less about the table)")
     p.add_argument("--seed", type=int, required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--league", default=os.path.join(HERE, "precon-league.json"))

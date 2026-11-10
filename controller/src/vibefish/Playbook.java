@@ -17,22 +17,29 @@ import com.google.gson.JsonObject;
 public final class Playbook {
 
     /** Attack policy. {@code go_wide}: attack the chosen opponent with every creature not needed to survive the
-     *  strongest opponent's counter-attack, as long as at least {@code minAttackers} can go. */
+     *  strongest opponent's counter-attack, as long as at least {@code minAttackers} can go. {@code pressure}: the
+     *  same reserve, but an attacker a blocker would kill stays home unless the damage the swing gets through pays
+     *  for the creatures it loses ({@code damagePerLoss}), and the swing goes at the opponent it scores best on. */
     public static final class Attack {
-        public final String policy;        // go_wide
+        public final String policy;        // go_wide | pressure
         public final String target;        // lowest_life | weakest_board | highest_life | biggest_board
         public final int minAttackers;     // fewer than this: Forge decides
         public final int safetyMargin;     // life to keep above the strongest opponent's possible attack
         public final int maxReserve;       // creatures kept home at most
         public final boolean spread;       // once a defender is dead through its blockers, the rest attack the next one
+        public final int damagePerLoss;    // pressure: damage through that one lost attacker must buy
 
         Attack(JsonObject o) {
             policy = str(o, "policy", "go_wide");
+            if (!List.of("go_wide", "pressure").contains(policy)) {
+                throw new IllegalArgumentException("playbook attack policy must be go_wide or pressure");
+            }
             target = str(o, "target", "lowest_life");
             if (!List.of("lowest_life", "weakest_board", "highest_life", "biggest_board").contains(target)) {
                 throw new IllegalArgumentException("playbook attack target must be lowest_life, weakest_board, highest_life or biggest_board");
             }
-            minAttackers = num(o, "min_attackers", 3);
+            minAttackers = num(o, "min_attackers", "pressure".equals(policy) ? 1 : 3);
+            damagePerLoss = num(o, "damage_per_loss", 3);
             safetyMargin = num(o, "safety_margin", 5);
             maxReserve = num(o, "max_reserve", 3);
             spread = o.has("spread") && o.get("spread").isJsonPrimitive() && o.get("spread").getAsBoolean();
@@ -60,14 +67,17 @@ public final class Playbook {
     public static final class Cond {
         /** Everything a comparison may be made on; anything else is a mistake in the file and stops the run. */
         public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
-                "storm", "drawn", "turn", "life", "mana", "opponents");
+                "storm", "drawn", "turn", "life", "mana", "opponents", "power", "opp_creatures", "opp_power", "opp_life",
+                "threat");
         private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
-        private static final Pattern COMPARE = Pattern.compile("^([a-z_]+|type:[A-Za-z' -]+?)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+)$");
+        private static final Pattern COMPARE = Pattern.compile(
+                "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");
 
         public final String text;
         public final String metric;     // null for a controls condition
         public final String op;
         public final int value;
+        public final String other;      // the metric on the right-hand side, when the comparison is with one, else null
         public final String card;       // controls / not controls: the permanent's name
         public final boolean negate;
 
@@ -81,19 +91,35 @@ public final class Playbook {
                 metric = null;
                 op = null;
                 value = 0;
-            } else if (m.matches() && (METRICS.contains(m.group(1)) || m.group(1).startsWith("type:"))) {
+                other = null;
+            } else if (m.matches() && known(m.group(1)) && (m.group(3).matches("-?\\d+") || METRICS.contains(m.group(3)))) {
                 metric = m.group(1).trim();
                 op = m.group(2);
-                value = Integer.parseInt(m.group(3));
+                boolean number = m.group(3).matches("-?\\d+");
+                value = number ? Integer.parseInt(m.group(3)) : 0;
+                other = number ? null : m.group(3);
                 card = null;
                 negate = false;
             } else {
-                throw new IllegalArgumentException("playbook condition not understood: \"" + raw + "\" (use \"<metric> <op> <number>\" with "
-                        + METRICS + " or type:<CreatureType>, or \"[not] controls <card name>\")");
+                throw new IllegalArgumentException("playbook condition not understood: \"" + raw + "\" (use \"<metric> <op> <number or metric>\" with "
+                        + METRICS + ", type:<CreatureType> or hand:<group>, or \"[not] controls <card name>\")");
             }
         }
 
+        private static boolean known(String metric) {
+            return METRICS.contains(metric) || metric.startsWith("type:") || metric.startsWith("hand:");
+        }
+
+        /** The group a {@code hand:<group>} metric counts, or null. */
+        public String group() {
+            return metric != null && metric.startsWith("hand:") ? metric.substring(5) : null;
+        }
+
         public boolean compare(int actual) {
+            return compare(actual, value);
+        }
+
+        public boolean compare(int actual, int value) {
             switch (op) {
                 case ">=": return actual >= value;
                 case "<=": return actual <= value;
@@ -184,11 +210,19 @@ public final class Playbook {
     public static final class Cast {
         public final List<CastRule> rules;
         public final int maxPerTurn;        // plays by rule in one turn before Forge takes over (runaway guard)
+        public final java.util.Map<String, List<String>> groups;   // named lists of cards, for hand:<group> conditions
         public final JsonObject source;     // as written, recorded in run.json
 
         Cast(JsonObject o) {
             source = o;
             maxPerTurn = num(o, "max_per_turn", 60);
+            java.util.Map<String, List<String>> g = new java.util.LinkedHashMap<>();
+            if (o.has("groups") && o.get("groups").isJsonObject()) {
+                for (java.util.Map.Entry<String, JsonElement> e : o.getAsJsonObject("groups").entrySet()) {
+                    g.put(e.getKey(), Collections.unmodifiableList(strings(e.getValue())));
+                }
+            }
+            groups = Collections.unmodifiableMap(g);
             List<CastRule> list = new ArrayList<>();
             JsonElement r = o.get("rules");
             if (r != null && r.isJsonArray()) {
@@ -198,6 +232,13 @@ public final class Playbook {
                 }
             }
             rules = Collections.unmodifiableList(list);
+            for (CastRule rule : rules) {
+                for (Cond c : rule.when) {
+                    if (c.group() != null && !groups.containsKey(c.group())) {
+                        throw new IllegalArgumentException("playbook cast rule " + rule.index + ": no group \"" + c.group() + "\" in cast.groups");
+                    }
+                }
+            }
         }
 
         /** Every card a rule names (to cast, to hold or to aim at), for checking against the decklist. */
@@ -213,6 +254,9 @@ public final class Playbook {
                         names.add(c.card);
                     }
                 }
+            }
+            for (List<String> g : groups.values()) {
+                names.addAll(g);
             }
             return names;
         }
@@ -244,7 +288,7 @@ public final class Playbook {
         if (attack != null) {
             sb.append(" attack=").append(attack.policy).append('/').append(attack.target)
               .append(" min=").append(attack.minAttackers).append(" margin=").append(attack.safetyMargin).append(" reserve<=").append(attack.maxReserve)
-              .append(attack.spread ? " spread" : "");
+              .append(attack.spread ? " spread" : "").append("pressure".equals(attack.policy) ? " damage/loss>=" + attack.damagePerLoss : "");
         }
         if (mulligan != null) {
             sb.append(" mulligan=lands ").append(mulligan.minLands).append('-').append(mulligan.maxLands).append(" max ").append(mulligan.maxMulligans);

@@ -52,15 +52,16 @@
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
  },
  "playbook": {
-  "version": 1,
+  "version": 2,
   "attack": {
    "policy": "go_wide",
-   "target": "lowest_life",
+   "target": "highest_life",
    "min_attackers": 3,
    "safety_margin": 5,
-   "max_reserve": 3
+   "max_reserve": 3,
+   "spread": true
   },
-  "notes": "Go wide: attack the lowest-life opponent with every creature not needed to survive the strongest opponent's counter-attack, whenever three or more can go. Forge's own attack logic keeps most of the board home (§17); anthems and lifelink tokens reward swinging.",
-  "on": "2026-11-09"
+  "notes": "Go wide: attack with every creature not needed to survive the strongest opponent's counter-attack, whenever three or more can go. Forge's own attack logic keeps most of the board home (§17); anthems and lifelink tokens reward swinging. Version 1 aimed at the lowest life (+6.5 points over 200 tables, a lean, §20). Version 2 aims at the highest life and splits the attack once a defender is dead, which is what turned Goblin Storm's 40 tables from 5 wins to 9 (§21): the lowest-life target kills the players who were also attacking the leader.",
+  "on": "2026-11-10"
  }
 }
