@@ -1,0 +1,12 @@
+{
+  "requested": "2026-11-10T15:20Z",
+  "note": "Tricky Terrain at desktop-strength Monte Carlo, the 100-table check DESIGN §19 asks for; a fresh seed, ten shards so no job runs long.",
+  "decks": "tricky-terrain",
+  "games": "100",
+  "arms": "stock,mcmax,mcmaxdata",
+  "shards_per_deck": "10",
+  "jobs_per_shard": "2",
+  "seed": "20261120",
+  "forge_channel": "snapshot",
+  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.08"
+}

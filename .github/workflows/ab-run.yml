@@ -1,8 +1,12 @@
 name: ab-run
 
 # Paired A/B of per-deck AI data (playbook/precons/<deck>.json): for each deck, the same tables and seeds are played
-# once per arm (stock, data, mc, mcdata), sharded; the rollup job pairs them up per deck. Results are uploaded as
-# artifacts (results/ab-<deck>/rollup.json); nothing is committed.
+# once per arm (stock, data, mc, mcdata, mcmax, mcmaxdata, playbook, playbookdata), sharded; the rollup job pairs them
+# up per deck. Results are uploaded as artifacts (results/ab-<deck>/rollup.json); nothing is committed.
+#
+# Two ways to start a run: Run workflow (the inputs below), or a push to `testing` that changes
+# runner/queue/ab-run.json, whose fields are the same inputs (a new "requested" value is enough to start the same
+# run again). Runs on one branch queue behind each other; a promotion of `testing` to `main` starts nothing.
 on:
   workflow_dispatch:
     inputs:
@@ -32,6 +36,9 @@ on:
       forge_snapshot_build:
         description: "Snapshot build to pin (FORGE_SNAPSHOT_BUILD); must be in forge/SHA256SUMS to be verified"
         default: "2.0.16-SNAPSHOT-11.08"
+  push:
+    branches: [testing]
+    paths: [runner/queue/ab-run.json]
 
 permissions:
   contents: read
@@ -40,27 +47,51 @@ concurrency:
   group: ab-run-${{ github.ref }}
   cancel-in-progress: false
 
-env:
-  FORGE_CHANNEL: ${{ inputs.forge_channel }}
-  FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_channel == 'snapshot' && inputs.forge_snapshot_build || '' }}
-
 jobs:
   prep:
     runs-on: ubuntu-latest
     outputs:
+      decks: ${{ steps.vals.outputs.decks }}
+      games: ${{ steps.vals.outputs.games }}
+      arms: ${{ steps.vals.outputs.arms }}
+      shards_per_deck: ${{ steps.vals.outputs.shards_per_deck }}
+      jobs_per_shard: ${{ steps.vals.outputs.jobs_per_shard }}
       seed: ${{ steps.vals.outputs.seed }}
+      forge_channel: ${{ steps.vals.outputs.forge_channel }}
+      snapshot_build: ${{ steps.vals.outputs.snapshot_build }}
       matrix: ${{ steps.vals.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
       - id: vals
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_DECKS: ${{ inputs.decks }}
+          IN_GAMES: ${{ inputs.games }}
+          IN_ARMS: ${{ inputs.arms }}
+          IN_SHARDS_PER_DECK: ${{ inputs.shards_per_deck }}
+          IN_JOBS_PER_SHARD: ${{ inputs.jobs_per_shard }}
+          IN_SEED: ${{ inputs.seed }}
+          IN_FORGE_CHANNEL: ${{ inputs.forge_channel }}
+          IN_FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_snapshot_build }}
         run: |
-          seed="${{ inputs.seed }}"; [ -n "$seed" ] || seed=$(date -u +%Y%m%d)
-          matrix=$(python3 -c "
-          import json
-          decks=[d.strip() for d in '${{ inputs.decks }}'.split(',') if d.strip()]
-          print(json.dumps([{'deck': d, 'shard': k} for d in decks for k in range(1, int('${{ inputs.shards_per_deck }}') + 1)]))")
-          { echo "seed=$seed"; echo "matrix=$matrix"; } >> "$GITHUB_OUTPUT"
-          echo "seed $seed; matrix $matrix"
+          python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
+          import datetime, json, os
+          vals = {"decks": "token-triumph,goblin-storm,tricky-terrain,hail-caesar", "games": "100", "arms": "stock,data,mc,mcdata",
+                  "shards_per_deck": "5", "jobs_per_shard": "2", "seed": "", "forge_channel": "snapshot",
+                  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.08"}
+          if os.environ["EVENT"] == "push":
+              queued = json.load(open("runner/queue/ab-run.json"))
+              vals.update({k: str(v).strip() for k, v in queued.items() if k in vals})
+          else:
+              vals.update({k: os.environ["IN_" + k.upper()].strip() for k in vals if os.environ.get("IN_" + k.upper(), "").strip()})
+          if not vals["seed"]:
+              vals["seed"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d")
+          decks = [d.strip() for d in vals["decks"].split(",") if d.strip()]
+          for k, v in vals.items():
+              print(f"{k}={v}")
+          print("snapshot_build=" + (vals["forge_snapshot_build"] if vals["forge_channel"] == "snapshot" else ""))
+          print("matrix=" + json.dumps([{"deck": d, "shard": k} for d in decks for k in range(1, int(vals["shards_per_deck"]) + 1)]))
+          PY
 
   shard:
     needs: prep
@@ -71,6 +102,9 @@ jobs:
       max-parallel: 20
       matrix:
         include: ${{ fromJSON(needs.prep.outputs.matrix) }}
+    env:
+      FORGE_CHANNEL: ${{ needs.prep.outputs.forge_channel }}
+      FORGE_SNAPSHOT_BUILD: ${{ needs.prep.outputs.snapshot_build }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v5
@@ -87,9 +121,9 @@ jobs:
         run: runner/make-arm-profiles.sh forge/runtime
       - name: Play ${{ matrix.deck }} shard ${{ matrix.shard }}
         run: |
-          python3 -I runner/ab.py play --deck "${{ matrix.deck }}" --games "${{ inputs.games }}" --seed "${{ needs.prep.outputs.seed }}" \
-            --out "results/ab-${{ matrix.deck }}" --runtime forge/runtime --arms "${{ inputs.arms }}" \
-            --shards "${{ inputs.shards_per_deck }}" --shard "${{ matrix.shard }}" -j "${{ inputs.jobs_per_shard }}"
+          python3 -I runner/ab.py play --deck "${{ matrix.deck }}" --games "${{ needs.prep.outputs.games }}" --seed "${{ needs.prep.outputs.seed }}" \
+            --out "results/ab-${{ matrix.deck }}" --runtime forge/runtime --arms "${{ needs.prep.outputs.arms }}" \
+            --shards "${{ needs.prep.outputs.shards_per_deck }}" --shard "${{ matrix.shard }}" -j "${{ needs.prep.outputs.jobs_per_shard }}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -120,7 +154,7 @@ jobs:
         run: |
           set -e
           mkdir -p results
-          for d in $(echo "${{ inputs.decks }}" | tr ',' ' '); do
+          for d in $(echo "${{ needs.prep.outputs.decks }}" | tr ',' ' '); do
             mkdir -p "results/ab-$d"
             for a in artifacts/ab-$d-[0-9]*; do
               case "$a" in *-log) continue;; esac

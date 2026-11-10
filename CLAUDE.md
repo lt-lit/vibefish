@@ -66,7 +66,7 @@ Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never u
 - `phase0.yml`: Forge sim-mode smoke test on push to `forge/**`, `runner/**`.
 - `pod-run.yml` (manual): 4 shards × N games, rollup, optional publish into `demo-data/` on the branch.
 - `league-run.yml` (manual): the precon league in up to 20 shards (cycles, seed, Forge channel and snapshot build, profile, Monte Carlo as inputs), rollup and scorecard, optional publish of `rollup.json`, `scorecard.json` and `league.json` into `demo-data/` on the branch. Per-game data stays in the run's artifacts.
-- `ab-run.yml` (manual): paired A/Bs of per-deck data for a list of decks (tables, arms, shards per deck), one rollup per deck as artifacts; nothing is committed.
+- `ab-run.yml` (manual, or by commit): paired A/Bs of per-deck data for a list of decks (tables, arms, shards per deck), one rollup per deck as artifacts; nothing is committed. A push to `testing` that changes `runner/queue/ab-run.json` (the same fields as the inputs; a new `requested` value re-runs the same request) starts it without a click, queued behind any run already going on the branch; promoting to `main` starts nothing.
 - Pages: no workflow. The `testing` branch is served as-is; a push there is live within about a minute. Workflows that are `workflow_dispatch`-only (`pod-run.yml`) can only be started once they exist on the default branch.
 
 ## Key links
