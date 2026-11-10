@@ -1,0 +1,9197 @@
+{
+ "vibefish": "0.2.0",
+ "generated": "2026-11-10T08:11:30Z",
+ "kind": "ab",
+ "deck": "token-triumph",
+ "deck_file": "Token Triumph [SCD] [2022].dck",
+ "league": "league-v1",
+ "seed": 20261110,
+ "games": {
+  "stock": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "token-triumph",
+     "deadly-disguise",
+     "reign-of-dragons",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 115800,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "limit-break",
+     "token-triumph",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38772,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29141,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "landing-party",
+     "science",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44128,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "token-triumph",
+     "world-shaper",
+     "maestros-massacre",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "maestros-massacre",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 753398,
+    "focus_lost_turn": 60,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "token-triumph",
+     "riveteer-rampage",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48172,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "tinker-time",
+     "quandrix-unlimited",
+     "token-triumph",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quandrix-unlimited",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 160164,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jeskai-striker",
+     "peace-offering",
+     "exit-from-exile",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35201,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "token-triumph",
+     "exit-from-exile",
+     "klingon-fury",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 150079,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "quick-draw",
+     "token-triumph",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 129857,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "legends-legacy",
+     "landing-party",
+     "token-triumph",
+     "multiverse-reforged"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 146469,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "jump-scare",
+     "klingon-fury",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 31,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 22847,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "token-triumph",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39223,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "keen-engineering",
+     "token-triumph",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 100501,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "sultai-arisen",
+     "most-wanted",
+     "token-triumph",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "most-wanted",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72591,
+    "focus_lost_turn": 26,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "the-host-of-mordor",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 150718,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "maestros-massacre",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 112081,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "token-triumph",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30051,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "token-triumph",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 100282,
+    "focus_lost_turn": 67,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scions-and-spellcraft",
+     "revival-trance",
+     "desert-bloom",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 182999,
+    "focus_lost_turn": 55,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "token-triumph",
+     "scrappy-survivors",
+     "prismari-artistry",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47109,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "token-triumph",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77200,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-fantastic-four",
+     "calling-all-angels",
+     "token-triumph",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 60542,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 70,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92482,
+    "focus_lost_turn": 64,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "mutant-menace",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38575,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "token-triumph",
+     "scions-and-spellcraft",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 343084,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "sultai-arisen",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "sultai-arisen",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 458039,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "revival-trance",
+     "scions-and-spellcraft",
+     "ahoy-mateys",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54177,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "token-triumph",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20225,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "science",
+     "token-triumph",
+     "limit-break",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "science",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 107618,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "quick-draw",
+     "token-triumph",
+     "obscura-operation"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27199,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "maestros-massacre",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "counter-blitz",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 323140,
+    "focus_lost_turn": 65,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "token-triumph",
+     "quandrix-unlimited",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "veloci-ramp-tor",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56659,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "planeswalker-party",
+     "token-triumph",
+     "enduring-enchantments",
+     "sultai-arisen"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "sultai-arisen",
+    "turns": 80,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 325166,
+    "focus_lost_turn": 80,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jeskai-striker",
+     "grave-danger",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30945,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "obscura-operation",
+     "goblin-storm",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98017,
+    "focus_lost_turn": 57,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "token-triumph",
+     "blood-rites",
+     "creative-energy",
+     "silverquill-influence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "creative-energy",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40423,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "hail-caesar",
+     "token-triumph",
+     "mind-flayarrrs",
+     "mardu-surge"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43678,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quandrix-unlimited",
+     "squirreled-away",
+     "token-triumph",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "elven-council",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62168,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riders-of-rohan",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62011,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "token-triumph",
+     "planeswalker-party",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66331,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "token-triumph",
+     "tinker-time",
+     "revival-trance"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28675,
+    "focus_lost_turn": 28,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "hail-caesar",
+     "elven-council",
+     "token-triumph",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23077,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "legends-legacy",
+     "bedecked-brokers",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54620,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "token-triumph",
+     "science",
+     "wretched-ranks",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 94521,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "token-triumph",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85724,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "obscura-operation",
+     "token-triumph",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49757,
+    "focus_lost_turn": 26,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "reign-of-dragons",
+     "party-time",
+     "cabaretti-cacophony",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62821,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "token-triumph",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91390,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "maestros-massacre",
+     "token-triumph",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 75948,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "jump-scare",
+     "mutant-menace",
+     "token-triumph",
+     "revenant-recon"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 1324535,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "painbow",
+     "legends-legacy",
+     "keen-engineering",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79053,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "token-triumph",
+     "painbow",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 128085,
+    "focus_lost_turn": 67,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "token-triumph",
+     "animated-army",
+     "the-fantastic-four"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49069,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "maestros-massacre",
+     "avengers-assemble",
+     "token-triumph",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28448,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63998,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "token-triumph",
+     "sultai-arisen",
+     "limit-break",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55847,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "token-triumph",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26789,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "token-triumph",
+     "keen-engineering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 82111,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "mutant-menace",
+     "witherbloom-pestilence",
+     "party-time",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 103765,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "token-triumph",
+     "death-toll",
+     "miracle-worker",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62582,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "token-triumph",
+     "doom-prevails",
+     "party-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31973,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scions-and-spellcraft",
+     "obscura-operation",
+     "token-triumph",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43527,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62701,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "token-triumph",
+     "squirreled-away",
+     "sliver-swarm",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "sliver-swarm",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35187,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "token-triumph",
+     "cavalry-charge",
+     "sliver-swarm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "sliver-swarm",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78861,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "the-host-of-mordor",
+     "the-fantastic-four",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54477,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "maestros-massacre",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "grand-larceny",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 181953,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "token-triumph",
+     "grave-danger",
+     "sliver-swarm",
+     "peace-offering"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91050,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "klingon-fury",
+     "token-triumph",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 64487,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "riveteer-rampage",
+     "token-triumph",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 80698,
+    "focus_lost_turn": 58,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "multiverse-reforged",
+     "animated-army",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 140329,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "token-triumph",
+     "federation-fleet",
+     "tinker-time",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37523,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "token-triumph",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 93256,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "token-triumph",
+     "scrappy-survivors"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 221383,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "riveteer-rampage",
+     "grave-danger",
+     "first-flight",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 127693,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "token-triumph",
+     "blight-curse",
+     "enduring-enchantments",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 65274,
+    "focus_lost_turn": 61,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "token-triumph",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71541,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "planeswalker-party",
+     "token-triumph",
+     "peace-offering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 83,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 317583,
+    "focus_lost_turn": 70,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jeskai-striker",
+     "landing-party",
+     "graveyard-overdrive",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46832,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "token-triumph",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73315,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "party-time",
+     "token-triumph",
+     "dance-of-the-elements",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42433,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "miracle-worker",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 64983,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77968,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "token-triumph",
+     "jeskai-striker",
+     "cabaretti-cacophony",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70675,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "mutant-menace",
+     "token-triumph",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "endless-punishment",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 101829,
+    "focus_lost_turn": 57,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "legends-legacy",
+     "quandrix-unlimited",
+     "token-triumph",
+     "limit-break"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quandrix-unlimited",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 96800,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37218,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "token-triumph",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 99378,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "landing-party",
+     "token-triumph",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 146870,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revenant-recon",
+     "maestros-massacre",
+     "token-triumph",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 118610,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mardu-surge",
+     "jeskai-striker",
+     "deadly-disguise",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 142028,
+    "focus_lost_turn": 60,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "token-triumph",
+     "obscura-operation",
+     "painbow",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46210,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "token-triumph",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51788,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "multiverse-reforged",
+     "explorers-of-the-deep",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 211795,
+    "focus_lost_turn": 62,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "science",
+     "blame-game",
+     "eldrazi-unbound",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "blame-game",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73208,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "token-triumph",
+     "tramplesaurus-rex",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 19651,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "riveteer-rampage",
+     "token-triumph",
+     "hail-caesar",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "hail-caesar",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 65712,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "token-triumph",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43788,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "temur-roar",
+     "blight-curse",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34374,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "data": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "token-triumph",
+     "deadly-disguise",
+     "reign-of-dragons",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 83123,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "limit-break",
+     "token-triumph",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44042,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21673,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "landing-party",
+     "science",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78180,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "token-triumph",
+     "world-shaper",
+     "maestros-massacre",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 543943,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "token-triumph",
+     "riveteer-rampage",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85800,
+    "focus_lost_turn": 27,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "tinker-time",
+     "quandrix-unlimited",
+     "token-triumph",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quandrix-unlimited",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91229,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jeskai-striker",
+     "peace-offering",
+     "exit-from-exile",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 89896,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "token-triumph",
+     "exit-from-exile",
+     "klingon-fury",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49453,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "quick-draw",
+     "token-triumph",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47879,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "legends-legacy",
+     "landing-party",
+     "token-triumph",
+     "multiverse-reforged"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 135175,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "jump-scare",
+     "klingon-fury",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 35,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 32345,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "token-triumph",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70617,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "keen-engineering",
+     "token-triumph",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54105,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "sultai-arisen",
+     "most-wanted",
+     "token-triumph",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39347,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "the-host-of-mordor",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 59747,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "maestros-massacre",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "maestros-massacre",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92808,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "token-triumph",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20623,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "token-triumph",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 84262,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scions-and-spellcraft",
+     "revival-trance",
+     "desert-bloom",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61491,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "token-triumph",
+     "scrappy-survivors",
+     "prismari-artistry",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32803,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "token-triumph",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35703,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-fantastic-four",
+     "calling-all-angels",
+     "token-triumph",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47208,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55247,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "mutant-menace",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "chaos-incarnate",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50440,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "token-triumph",
+     "scions-and-spellcraft",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 140644,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "sultai-arisen",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 114210,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "revival-trance",
+     "scions-and-spellcraft",
+     "ahoy-mateys",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41747,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "token-triumph",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20357,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "science",
+     "token-triumph",
+     "limit-break",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98836,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "quick-draw",
+     "token-triumph",
+     "obscura-operation"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43233,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "maestros-massacre",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 79,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 168216,
+    "focus_lost_turn": 77,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "token-triumph",
+     "quandrix-unlimited",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63973,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "planeswalker-party",
+     "token-triumph",
+     "enduring-enchantments",
+     "sultai-arisen"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "sultai-arisen",
+    "turns": 68,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 74394,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jeskai-striker",
+     "grave-danger",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32106,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "obscura-operation",
+     "goblin-storm",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71072,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "token-triumph",
+     "blood-rites",
+     "creative-energy",
+     "silverquill-influence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41540,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "hail-caesar",
+     "token-triumph",
+     "mind-flayarrrs",
+     "mardu-surge"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 17344,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quandrix-unlimited",
+     "squirreled-away",
+     "token-triumph",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49540,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riders-of-rohan",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 177239,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "token-triumph",
+     "planeswalker-party",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45318,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "token-triumph",
+     "tinker-time",
+     "revival-trance"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38917,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "hail-caesar",
+     "elven-council",
+     "token-triumph",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13979,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "legends-legacy",
+     "bedecked-brokers",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45196,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "token-triumph",
+     "science",
+     "wretched-ranks",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 94815,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "token-triumph",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70181,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "obscura-operation",
+     "token-triumph",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34564,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "reign-of-dragons",
+     "party-time",
+     "cabaretti-cacophony",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 28,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25288,
+    "focus_lost_turn": 27,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "token-triumph",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34462,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "maestros-massacre",
+     "token-triumph",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 172004,
+    "focus_lost_turn": 64,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "jump-scare",
+     "mutant-menace",
+     "token-triumph",
+     "revenant-recon"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 296594,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "painbow",
+     "legends-legacy",
+     "keen-engineering",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73360,
+    "focus_lost_turn": 65,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "token-triumph",
+     "painbow",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41949,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "token-triumph",
+     "animated-army",
+     "the-fantastic-four"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46009,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "maestros-massacre",
+     "avengers-assemble",
+     "token-triumph",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28080,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "grand-larceny",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 119526,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "token-triumph",
+     "sultai-arisen",
+     "limit-break",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36557,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "token-triumph",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28862,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "token-triumph",
+     "keen-engineering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 80907,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "mutant-menace",
+     "witherbloom-pestilence",
+     "party-time",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70697,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "token-triumph",
+     "death-toll",
+     "miracle-worker",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30323,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "token-triumph",
+     "doom-prevails",
+     "party-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41661,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scions-and-spellcraft",
+     "obscura-operation",
+     "token-triumph",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35434,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 45,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 47707,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "token-triumph",
+     "squirreled-away",
+     "sliver-swarm",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "sliver-swarm",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46133,
+    "focus_lost_turn": 26,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "token-triumph",
+     "cavalry-charge",
+     "sliver-swarm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 154622,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "the-host-of-mordor",
+     "the-fantastic-four",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29264,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "maestros-massacre",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "maestros-massacre",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48427,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "token-triumph",
+     "grave-danger",
+     "sliver-swarm",
+     "peace-offering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 140451,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "klingon-fury",
+     "token-triumph",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71428,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "riveteer-rampage",
+     "token-triumph",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73878,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "multiverse-reforged",
+     "animated-army",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 646575,
+    "focus_lost_turn": 53,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "token-triumph",
+     "federation-fleet",
+     "tinker-time",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "eldrazi-unbound",
+    "turns": 79,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 80194,
+    "focus_lost_turn": 66,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "token-triumph",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 429244,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "token-triumph",
+     "scrappy-survivors"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 138530,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "riveteer-rampage",
+     "grave-danger",
+     "first-flight",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 173752,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "token-triumph",
+     "blight-curse",
+     "enduring-enchantments",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33813,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "token-triumph",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 90464,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "planeswalker-party",
+     "token-triumph",
+     "peace-offering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61336,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jeskai-striker",
+     "landing-party",
+     "graveyard-overdrive",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54111,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "token-triumph",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 150170,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "party-time",
+     "token-triumph",
+     "dance-of-the-elements",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 100516,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "miracle-worker",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": null,
+    "turns": 58,
+    "reason": "Draw",
+    "duration_ms": 800312,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 138408,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "token-triumph",
+     "jeskai-striker",
+     "cabaretti-cacophony",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56796,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "mutant-menace",
+     "token-triumph",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34875,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "legends-legacy",
+     "quandrix-unlimited",
+     "token-triumph",
+     "limit-break"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35063,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25111,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "token-triumph",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 286564,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "landing-party",
+     "token-triumph",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 97386,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revenant-recon",
+     "maestros-massacre",
+     "token-triumph",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 134697,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mardu-surge",
+     "jeskai-striker",
+     "deadly-disguise",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58848,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "token-triumph",
+     "obscura-operation",
+     "painbow",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73342,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "token-triumph",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35864,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "multiverse-reforged",
+     "explorers-of-the-deep",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 81498,
+    "focus_lost_turn": 55,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "science",
+     "blame-game",
+     "eldrazi-unbound",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "blame-game",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 100704,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "token-triumph",
+     "tramplesaurus-rex",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18863,
+    "focus_lost_turn": 21,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "riveteer-rampage",
+     "token-triumph",
+     "hail-caesar",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40259,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "token-triumph",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35372,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "temur-roar",
+     "blight-curse",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39346,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   }
+  ],
+  "mc": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "token-triumph",
+     "deadly-disguise",
+     "reign-of-dragons",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85626,
+    "focus_lost_turn": 62,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "limit-break",
+     "token-triumph",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39256,
+    "focus_lost_turn": 26,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36792,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "landing-party",
+     "science",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41963,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "token-triumph",
+     "world-shaper",
+     "maestros-massacre",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 383191,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "token-triumph",
+     "riveteer-rampage",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62741,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "tinker-time",
+     "quandrix-unlimited",
+     "token-triumph",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "tinker-time",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 99916,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jeskai-striker",
+     "peace-offering",
+     "exit-from-exile",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 82,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 156365,
+    "focus_lost_turn": 73,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "token-triumph",
+     "exit-from-exile",
+     "klingon-fury",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 484229,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "quick-draw",
+     "token-triumph",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40546,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "legends-legacy",
+     "landing-party",
+     "token-triumph",
+     "multiverse-reforged"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "multiverse-reforged",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108761,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "jump-scare",
+     "klingon-fury",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 27,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 19077,
+    "focus_lost_turn": 27,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "token-triumph",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48958,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "keen-engineering",
+     "token-triumph",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 189889,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "sultai-arisen",
+     "most-wanted",
+     "token-triumph",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67050,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "the-host-of-mordor",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 87126,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "maestros-massacre",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36046,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "token-triumph",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18641,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "token-triumph",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57437,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scions-and-spellcraft",
+     "revival-trance",
+     "desert-bloom",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 105019,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "token-triumph",
+     "scrappy-survivors",
+     "prismari-artistry",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 53519,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "token-triumph",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52840,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-fantastic-four",
+     "calling-all-angels",
+     "token-triumph",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34092,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85320,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "mutant-menace",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "chaos-incarnate",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56042,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "token-triumph",
+     "scions-and-spellcraft",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 369506,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "sultai-arisen",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 452961,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "revival-trance",
+     "scions-and-spellcraft",
+     "ahoy-mateys",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54025,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "token-triumph",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 90718,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "science",
+     "token-triumph",
+     "limit-break",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "limit-break",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61370,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "quick-draw",
+     "token-triumph",
+     "obscura-operation"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 177352,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "maestros-massacre",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70618,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "token-triumph",
+     "quandrix-unlimited",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30814,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "planeswalker-party",
+     "token-triumph",
+     "enduring-enchantments",
+     "sultai-arisen"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 87,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 257267,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jeskai-striker",
+     "grave-danger",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26289,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "obscura-operation",
+     "goblin-storm",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 95522,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "token-triumph",
+     "blood-rites",
+     "creative-energy",
+     "silverquill-influence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42526,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "hail-caesar",
+     "token-triumph",
+     "mind-flayarrrs",
+     "mardu-surge"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45420,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quandrix-unlimited",
+     "squirreled-away",
+     "token-triumph",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78395,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riders-of-rohan",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46507,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "token-triumph",
+     "planeswalker-party",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 118143,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "token-triumph",
+     "tinker-time",
+     "revival-trance"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29164,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "hail-caesar",
+     "elven-council",
+     "token-triumph",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21892,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "legends-legacy",
+     "bedecked-brokers",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54012,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "token-triumph",
+     "science",
+     "wretched-ranks",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 148752,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "token-triumph",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 128085,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "obscura-operation",
+     "token-triumph",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54794,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "reign-of-dragons",
+     "party-time",
+     "cabaretti-cacophony",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55054,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "token-triumph",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36297,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "maestros-massacre",
+     "token-triumph",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 147079,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "jump-scare",
+     "mutant-menace",
+     "token-triumph",
+     "revenant-recon"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 468602,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "painbow",
+     "legends-legacy",
+     "keen-engineering",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 73,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 297803,
+    "focus_lost_turn": 66,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "token-triumph",
+     "painbow",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 74620,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "token-triumph",
+     "animated-army",
+     "the-fantastic-four"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51856,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "maestros-massacre",
+     "avengers-assemble",
+     "token-triumph",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36622,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54286,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "token-triumph",
+     "sultai-arisen",
+     "limit-break",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "limit-break",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 394791,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "token-triumph",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39240,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "token-triumph",
+     "keen-engineering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 88133,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "mutant-menace",
+     "witherbloom-pestilence",
+     "party-time",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 204467,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "token-triumph",
+     "death-toll",
+     "miracle-worker",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47691,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "token-triumph",
+     "doom-prevails",
+     "party-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43148,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scions-and-spellcraft",
+     "obscura-operation",
+     "token-triumph",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47371,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 64446,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "token-triumph",
+     "squirreled-away",
+     "sliver-swarm",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "sliver-swarm",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 59108,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "token-triumph",
+     "cavalry-charge",
+     "sliver-swarm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 172749,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "the-host-of-mordor",
+     "the-fantastic-four",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 74248,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "maestros-massacre",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63260,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "token-triumph",
+     "grave-danger",
+     "sliver-swarm",
+     "peace-offering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91689,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "klingon-fury",
+     "token-triumph",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 105205,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "riveteer-rampage",
+     "token-triumph",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50646,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "multiverse-reforged",
+     "animated-army",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "food-and-fellowship",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 147102,
+    "focus_lost_turn": 63,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "token-triumph",
+     "federation-fleet",
+     "tinker-time",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85460,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "token-triumph",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 371794,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "token-triumph",
+     "scrappy-survivors"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 213666,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "riveteer-rampage",
+     "grave-danger",
+     "first-flight",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73791,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "token-triumph",
+     "blight-curse",
+     "enduring-enchantments",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66844,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "token-triumph",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 492414,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "planeswalker-party",
+     "token-triumph",
+     "peace-offering"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 155785,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jeskai-striker",
+     "landing-party",
+     "graveyard-overdrive",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 97536,
+    "focus_lost_turn": 55,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "token-triumph",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 152283,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "party-time",
+     "token-triumph",
+     "dance-of-the-elements",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42323,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "miracle-worker",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47608,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 112684,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "token-triumph",
+     "jeskai-striker",
+     "cabaretti-cacophony",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 119868,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "mutant-menace",
+     "token-triumph",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "endless-punishment",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 223476,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "legends-legacy",
+     "quandrix-unlimited",
+     "token-triumph",
+     "limit-break"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quandrix-unlimited",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47160,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27595,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "token-triumph",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 802949,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "landing-party",
+     "token-triumph",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 267837,
+    "focus_lost_turn": 64,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revenant-recon",
+     "maestros-massacre",
+     "token-triumph",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 189462,
+    "focus_lost_turn": 63,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mardu-surge",
+     "jeskai-striker",
+     "deadly-disguise",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67669,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "token-triumph",
+     "obscura-operation",
+     "painbow",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 181847,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "token-triumph",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 59314,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "multiverse-reforged",
+     "explorers-of-the-deep",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 110844,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "science",
+     "blame-game",
+     "eldrazi-unbound",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "eldrazi-unbound",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91279,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "token-triumph",
+     "tramplesaurus-rex",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22111,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "riveteer-rampage",
+     "token-triumph",
+     "hail-caesar",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66273,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "token-triumph",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28385,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "temur-roar",
+     "blight-curse",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44703,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "mcdata": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "token-triumph",
+     "deadly-disguise",
+     "reign-of-dragons",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72388,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "limit-break",
+     "token-triumph",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51092,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 68,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 75603,
+    "focus_lost_turn": 68,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "landing-party",
+     "science",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42653,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "token-triumph",
+     "world-shaper",
+     "maestros-massacre",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 257414,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "token-triumph",
+     "riveteer-rampage",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 152523,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "tinker-time",
+     "quandrix-unlimited",
+     "token-triumph",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 258279,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jeskai-striker",
+     "peace-offering",
+     "exit-from-exile",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 134901,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "token-triumph",
+     "exit-from-exile",
+     "klingon-fury",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61058,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "quick-draw",
+     "token-triumph",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 631262,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "legends-legacy",
+     "landing-party",
+     "token-triumph",
+     "multiverse-reforged"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52536,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "jump-scare",
+     "klingon-fury",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 31,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 26167,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "token-triumph",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 106436,
+    "focus_lost_turn": 62,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "keen-engineering",
+     "token-triumph",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "abzan-armor",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 74723,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "sultai-arisen",
+     "most-wanted",
+     "token-triumph",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 182290,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "the-host-of-mordor",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 215965,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "maestros-massacre",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "maestros-massacre",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48973,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "token-triumph",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54373,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "token-triumph",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 168649,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scions-and-spellcraft",
+     "revival-trance",
+     "desert-bloom",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 253927,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "token-triumph",
+     "scrappy-survivors",
+     "prismari-artistry",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50378,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "token-triumph",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67605,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-fantastic-four",
+     "calling-all-angels",
+     "token-triumph",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 78,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72079,
+    "focus_lost_turn": 56,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 145362,
+    "focus_lost_turn": 55,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "token-triumph",
+     "chaos-incarnate",
+     "mutant-menace",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67520,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "token-triumph",
+     "scions-and-spellcraft",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 87645,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "sultai-arisen",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "sultai-arisen",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 118329,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "revival-trance",
+     "scions-and-spellcraft",
+     "ahoy-mateys",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35212,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "token-triumph",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38975,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "science",
+     "token-triumph",
+     "limit-break",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 359306,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "quick-draw",
+     "token-triumph",
+     "obscura-operation"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 64694,
+    "focus_lost_turn": 61,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "maestros-massacre",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 122415,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "token-triumph",
+     "quandrix-unlimited",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37436,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "planeswalker-party",
+     "token-triumph",
+     "enduring-enchantments",
+     "sultai-arisen"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 85,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 270739,
+    "focus_lost_turn": 78,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jeskai-striker",
+     "grave-danger",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25866,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "obscura-operation",
+     "goblin-storm",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57298,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "token-triumph",
+     "blood-rites",
+     "creative-energy",
+     "silverquill-influence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "creative-energy",
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36903,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "hail-caesar",
+     "token-triumph",
+     "mind-flayarrrs",
+     "mardu-surge"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 206458,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quandrix-unlimited",
+     "squirreled-away",
+     "token-triumph",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quandrix-unlimited",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 115393,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riders-of-rohan",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49551,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "token-triumph",
+     "planeswalker-party",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56960,
+    "focus_lost_turn": 27,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "token-triumph",
+     "tinker-time",
+     "revival-trance"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43098,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "hail-caesar",
+     "elven-council",
+     "token-triumph",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23150,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "legends-legacy",
+     "bedecked-brokers",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70719,
+    "focus_lost_turn": 28,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "token-triumph",
+     "science",
+     "wretched-ranks",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 113630,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "token-triumph",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 124240,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "obscura-operation",
+     "token-triumph",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46076,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "reign-of-dragons",
+     "party-time",
+     "cabaretti-cacophony",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 112586,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "token-triumph",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37066,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "maestros-massacre",
+     "token-triumph",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 207054,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "jump-scare",
+     "mutant-menace",
+     "token-triumph",
+     "revenant-recon"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 1017450,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "painbow",
+     "legends-legacy",
+     "keen-engineering",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 107344,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "token-triumph",
+     "painbow",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 126590,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "token-triumph",
+     "animated-army",
+     "the-fantastic-four"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50883,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "maestros-massacre",
+     "avengers-assemble",
+     "token-triumph",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 72,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 95657,
+    "focus_lost_turn": 69,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92676,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "token-triumph",
+     "sultai-arisen",
+     "limit-break",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "limit-break",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38233,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "token-triumph",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34064,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "token-triumph",
+     "keen-engineering"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37914,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "mutant-menace",
+     "witherbloom-pestilence",
+     "party-time",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77741,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "token-triumph",
+     "death-toll",
+     "miracle-worker",
+     "mutant-menace"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92810,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "token-triumph",
+     "doom-prevails",
+     "party-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33511,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scions-and-spellcraft",
+     "obscura-operation",
+     "token-triumph",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62799,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51650,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "token-triumph",
+     "squirreled-away",
+     "sliver-swarm",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "sliver-swarm",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72507,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "token-triumph",
+     "cavalry-charge",
+     "sliver-swarm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71484,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "the-host-of-mordor",
+     "the-fantastic-four",
+     "token-triumph",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 73798,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "maestros-massacre",
+     "grand-larceny",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45569,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "token-triumph",
+     "grave-danger",
+     "sliver-swarm",
+     "peace-offering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "sliver-swarm",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72160,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "klingon-fury",
+     "token-triumph",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 151452,
+    "focus_lost_turn": 62,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "riveteer-rampage",
+     "token-triumph",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63692,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "multiverse-reforged",
+     "animated-army",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "multiverse-reforged",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 871366,
+    "focus_lost_turn": 56,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "token-triumph",
+     "federation-fleet",
+     "tinker-time",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36412,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "token-triumph",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 94490,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "token-triumph",
+     "scrappy-survivors"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 138662,
+    "focus_lost_turn": 50,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "riveteer-rampage",
+     "grave-danger",
+     "first-flight",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 172873,
+    "focus_lost_turn": 28,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "token-triumph",
+     "blight-curse",
+     "enduring-enchantments",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 59323,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "token-triumph",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 274400,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "planeswalker-party",
+     "token-triumph",
+     "peace-offering"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 240572,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jeskai-striker",
+     "landing-party",
+     "graveyard-overdrive",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77956,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "token-triumph",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 113336,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "party-time",
+     "token-triumph",
+     "dance-of-the-elements",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70388,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "miracle-worker",
+     "token-triumph",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51970,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "landing-party",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "abzan-armor",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91715,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "token-triumph",
+     "jeskai-striker",
+     "cabaretti-cacophony",
+     "keen-engineering"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 104034,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "mutant-menace",
+     "token-triumph",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39894,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "legends-legacy",
+     "quandrix-unlimited",
+     "token-triumph",
+     "limit-break"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 65773,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32390,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "token-triumph",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91417,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "landing-party",
+     "token-triumph",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 165349,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revenant-recon",
+     "maestros-massacre",
+     "token-triumph",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 234404,
+    "focus_lost_turn": 66,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mardu-surge",
+     "jeskai-striker",
+     "deadly-disguise",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 73,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 138640,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "token-triumph",
+     "obscura-operation",
+     "painbow",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "token-triumph",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 75185,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "token-triumph",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41560,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "multiverse-reforged",
+     "explorers-of-the-deep",
+     "token-triumph",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 129821,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "science",
+     "blame-game",
+     "eldrazi-unbound",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "eldrazi-unbound",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 121603,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "token-triumph",
+     "tramplesaurus-rex",
+     "reign-of-dragons",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18780,
+    "focus_lost_turn": 21,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "riveteer-rampage",
+     "token-triumph",
+     "hail-caesar",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "hail-caesar",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 59373,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "token-triumph",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38716,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "temur-roar",
+     "blight-curse",
+     "token-triumph"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 68438,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   }
+  ]
+ },
+ "arms": [
+  "stock",
+  "data",
+  "mc",
+  "mcdata"
+ ],
+ "data_file": "playbook/precons/token-triumph.json",
+ "deck_profile": "Vibefish-token-triumph",
+ "profile_overrides": {
+  "PLAY_AGGRO": "true",
+  "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+  "TOKEN_GENERATION_ALWAYS_IF_OPP_ATTACKS": "true",
+  "FLAT_MC_DECK_PLAN": "AGGRO"
+ },
+ "forge_version": "snapshot-2026-11-08",
+ "runtime": "runtime",
+ "clock_s": 1800,
+ "turn_cap": 120,
+ "started": "2026-11-10T05:26:17Z",
+ "data_effective": {
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)",
+  "key_cards": [
+   "Overrun",
+   "Collective Blessing",
+   "Dictate of Heliod",
+   "Trostani Discordant",
+   "Maja, Bretagard Protector",
+   "Champion of Lambholt",
+   "Verdant Force",
+   "Hornet Queen"
+  ],
+  "roles": {
+   "overrun": [
+    "Overrun",
+    "Collective Blessing",
+    "Dictate of Heliod"
+   ]
+  },
+  "combos": [],
+  "pairs": [],
+  "deck_plan": "AGGRO",
+  "profile": {
+   "PLAY_AGGRO": "true",
+   "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+   "TOKEN_GENERATION_ALWAYS_IF_OPP_ATTACKS": "true"
+  },
+  "spellbook": {
+   "included": 0,
+   "almost_included": 4,
+   "identity": "GW",
+   "retrieved": "2026-11-09T06:29:14Z"
+  },
+  "cards_without_script": []
+ },
+ "arm_stats": {
+  "stock": {
+   "games": 100,
+   "wins": 21,
+   "win_rate": 0.21,
+   "win_rate_ci95": [
+    0.1417,
+    0.2998
+   ],
+   "draws": 0,
+   "avg_turns": 47.93,
+   "avg_seconds": 109.33,
+   "avg_turn_lost": 43.66,
+   "wins_by_seat": [
+    10,
+    4,
+    4,
+    3
+   ],
+   "playbook": null
+  },
+  "data": {
+   "games": 100,
+   "wins": 24,
+   "win_rate": 0.24,
+   "win_rate_ci95": [
+    0.1669,
+    0.3323
+   ],
+   "draws": 1,
+   "avg_turns": 46.51,
+   "avg_seconds": 93.3,
+   "avg_turn_lost": 41.67,
+   "wins_by_seat": [
+    6,
+    4,
+    10,
+    4
+   ],
+   "playbook": null
+  },
+  "mc": {
+   "games": 100,
+   "wins": 17,
+   "win_rate": 0.17,
+   "win_rate_ci95": [
+    0.1089,
+    0.2555
+   ],
+   "draws": 0,
+   "avg_turns": 47.47,
+   "avg_seconds": 120.83,
+   "avg_turn_lost": 40.76,
+   "wins_by_seat": [
+    3,
+    5,
+    6,
+    3
+   ],
+   "playbook": null
+  },
+  "mcdata": {
+   "games": 100,
+   "wins": 25,
+   "win_rate": 0.25,
+   "win_rate_ci95": [
+    0.1755,
+    0.343
+   ],
+   "draws": 0,
+   "avg_turns": 47.57,
+   "avg_seconds": 119.74,
+   "avg_turn_lost": 42.83,
+   "wins_by_seat": [
+    9,
+    4,
+    7,
+    5
+   ],
+   "playbook": null
+  }
+ },
+ "paired": {
+  "data_vs_stock": {
+   "pairs": 100,
+   "both_won": 8,
+   "data_only": 16,
+   "stock_only": 13,
+   "neither": 63,
+   "difference": 0.03,
+   "difference_ci95": [
+    -0.0754,
+    0.1354
+   ],
+   "identical_outcomes": 7
+  },
+  "mc_vs_stock": {
+   "pairs": 100,
+   "both_won": 6,
+   "mc_only": 11,
+   "stock_only": 15,
+   "neither": 68,
+   "difference": -0.04,
+   "difference_ci95": [
+    -0.1396,
+    0.0596
+   ],
+   "identical_outcomes": 4
+  },
+  "mcdata_vs_stock": {
+   "pairs": 100,
+   "both_won": 10,
+   "mcdata_only": 15,
+   "stock_only": 11,
+   "neither": 64,
+   "difference": 0.04,
+   "difference_ci95": [
+    -0.0596,
+    0.1396
+   ],
+   "identical_outcomes": 4
+  }
+ }
+}

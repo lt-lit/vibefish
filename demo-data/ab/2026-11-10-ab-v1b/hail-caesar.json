@@ -1,0 +1,9197 @@
+{
+ "vibefish": "0.2.0",
+ "generated": "2026-11-10T08:11:30Z",
+ "kind": "ab",
+ "deck": "hail-caesar",
+ "deck_file": "Hail, Caesar [PIP] [2024].dck",
+ "league": "league-v1",
+ "seed": 20261110,
+ "games": {
+  "stock": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "hail-caesar",
+     "deadly-disguise",
+     "revenant-recon",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 129961,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "lorehold-spirit",
+     "hail-caesar",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 190184,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38148,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "legends-legacy",
+     "scions-and-spellcraft",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48615,
+    "focus_lost_turn": 59,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "hail-caesar",
+     "world-shaper",
+     "mardu-surge",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 117560,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "hail-caesar",
+     "science",
+     "miracle-worker"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 194160,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "token-triumph",
+     "quick-draw",
+     "hail-caesar",
+     "tinker-time"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "token-triumph",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78425,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jump-scare",
+     "planeswalker-party",
+     "exit-from-exile",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 138386,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "hail-caesar",
+     "exit-from-exile",
+     "landing-party",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56333,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "reign-of-dragons",
+     "hail-caesar",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45669,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "limit-break",
+     "legends-legacy",
+     "hail-caesar",
+     "mutant-menace"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 230887,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "keen-engineering",
+     "landing-party",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 42,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 46547,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "hail-caesar",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108094,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "klingon-fury",
+     "hail-caesar",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "abzan-armor",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26070,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "temur-roar",
+     "multiverse-reforged",
+     "hail-caesar",
+     "landing-party"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31009,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "tinker-time",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 272378,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "mardu-surge",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27715,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20191,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "hail-caesar",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 621874,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scrappy-survivors",
+     "riders-of-rohan",
+     "desert-bloom",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 84403,
+    "focus_lost_turn": 58,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "hail-caesar",
+     "silverquill-influence",
+     "quandrix-unlimited",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "silverquill-influence",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35216,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "hail-caesar",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 68,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72619,
+    "focus_lost_turn": 68,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-host-of-mordor",
+     "calling-all-angels",
+     "hail-caesar",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 72,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 104661,
+    "focus_lost_turn": 72,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31001,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "obscura-operation",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 68,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58023,
+    "focus_lost_turn": 66,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "hail-caesar",
+     "scrappy-survivors",
+     "planeswalker-party"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26066,
+    "focus_lost_turn": 27,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "temur-roar",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31289,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "riders-of-rohan",
+     "scrappy-survivors",
+     "ahoy-mateys",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34032,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "hail-caesar",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blame-game",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63899,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "scions-and-spellcraft",
+     "hail-caesar",
+     "lorehold-spirit",
+     "tinker-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46009,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "reign-of-dragons",
+     "hail-caesar",
+     "painbow"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91254,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "mardu-surge",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63901,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "hail-caesar",
+     "quick-draw",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "veloci-ramp-tor",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61018,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "prismari-artistry",
+     "hail-caesar",
+     "enduring-enchantments",
+     "temur-roar"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23341,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jump-scare",
+     "grave-danger",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21803,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "painbow",
+     "goblin-storm",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 105692,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "hail-caesar",
+     "blood-rites",
+     "creative-energy",
+     "sliver-swarm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 95848,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "jeskai-striker",
+     "hail-caesar",
+     "miracle-worker",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 128385,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quick-draw",
+     "sultai-arisen",
+     "hail-caesar",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 74,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 82460,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riveteer-rampage",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 88068,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "hail-caesar",
+     "prismari-artistry",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 65421,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "hail-caesar",
+     "token-triumph",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18193,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "jeskai-striker",
+     "elven-council",
+     "hail-caesar",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77650,
+    "focus_lost_turn": 63,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "limit-break",
+     "bedecked-brokers",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71230,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "hail-caesar",
+     "scions-and-spellcraft",
+     "wretched-ranks",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25952,
+    "focus_lost_turn": 28,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "hail-caesar",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 121913,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "painbow",
+     "hail-caesar",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 167326,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "revenant-recon",
+     "peace-offering",
+     "cabaretti-cacophony",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77950,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "hail-caesar",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45660,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "mardu-surge",
+     "hail-caesar",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39640,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "keen-engineering",
+     "obscura-operation",
+     "hail-caesar",
+     "revival-trance"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45734,
+    "focus_lost_turn": 26,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "party-time",
+     "limit-break",
+     "klingon-fury",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 99290,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "hail-caesar",
+     "party-time",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78723,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "hail-caesar",
+     "animated-army",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77933,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "mardu-surge",
+     "avengers-assemble",
+     "hail-caesar",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35891,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 257069,
+    "focus_lost_turn": 58,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "hail-caesar",
+     "temur-roar",
+     "lorehold-spirit",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 168774,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41016,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "hail-caesar",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15409,
+    "focus_lost_turn": 23,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "obscura-operation",
+     "witherbloom-pestilence",
+     "peace-offering",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 100406,
+    "focus_lost_turn": 57,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "hail-caesar",
+     "death-toll",
+     "most-wanted",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 142548,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "hail-caesar",
+     "doom-prevails",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31034,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scrappy-survivors",
+     "painbow",
+     "hail-caesar",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30466,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42595,
+    "focus_lost_turn": 32,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "hail-caesar",
+     "sultai-arisen",
+     "squirreled-away",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56942,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "hail-caesar",
+     "cavalry-charge",
+     "squirreled-away"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 80771,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "tinker-time",
+     "the-host-of-mordor",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57459,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "mardu-surge",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70171,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "hail-caesar",
+     "grave-danger",
+     "squirreled-away",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 90,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 124225,
+    "focus_lost_turn": 84,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "landing-party",
+     "hail-caesar",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25240,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "science",
+     "hail-caesar",
+     "prismari-artistry"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "elven-council",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79383,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "mutant-menace",
+     "animated-army",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58278,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "hail-caesar",
+     "federation-fleet",
+     "token-triumph",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "token-triumph",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 82134,
+    "focus_lost_turn": 69,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "hail-caesar",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 155171,
+    "focus_lost_turn": 63,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "hail-caesar",
+     "silverquill-influence"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30069,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "science",
+     "grave-danger",
+     "first-flight",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34513,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "hail-caesar",
+     "blight-curse",
+     "enduring-enchantments",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 74,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77399,
+    "focus_lost_turn": 74,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "hail-caesar",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 197880,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "prismari-artistry",
+     "hail-caesar",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42191,
+    "focus_lost_turn": 63,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jump-scare",
+     "legends-legacy",
+     "graveyard-overdrive",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57531,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "hail-caesar",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92778,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "peace-offering",
+     "hail-caesar",
+     "dance-of-the-elements",
+     "science"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56173,
+    "focus_lost_turn": 66,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "most-wanted",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "most-wanted",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 186512,
+    "focus_lost_turn": 57,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39760,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "hail-caesar",
+     "jump-scare",
+     "cabaretti-cacophony",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26249,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "obscura-operation",
+     "hail-caesar",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 76792,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "limit-break",
+     "quick-draw",
+     "hail-caesar",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 121491,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40851,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "hail-caesar",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32021,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "legends-legacy",
+     "hail-caesar",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 87576,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revival-trance",
+     "mardu-surge",
+     "hail-caesar",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 118031,
+    "focus_lost_turn": 62,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mind-flayarrrs",
+     "jump-scare",
+     "deadly-disguise",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 53179,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "hail-caesar",
+     "painbow",
+     "party-time",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 318979,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "hail-caesar",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 16115,
+    "focus_lost_turn": 42,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "mutant-menace",
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30456,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "scions-and-spellcraft",
+     "blame-game",
+     "eldrazi-unbound",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 174572,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26013,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "science",
+     "hail-caesar",
+     "jeskai-striker",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36874,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "hail-caesar",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 16893,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "the-fantastic-four",
+     "blight-curse",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38509,
+    "focus_lost_turn": 64,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "data": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "hail-caesar",
+     "deadly-disguise",
+     "revenant-recon",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 81935,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "lorehold-spirit",
+     "hail-caesar",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 272713,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30748,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "legends-legacy",
+     "scions-and-spellcraft",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 84125,
+    "focus_lost_turn": 62,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "hail-caesar",
+     "world-shaper",
+     "mardu-surge",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36186,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "hail-caesar",
+     "science",
+     "miracle-worker"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40605,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "token-triumph",
+     "quick-draw",
+     "hail-caesar",
+     "tinker-time"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "token-triumph",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61810,
+    "focus_lost_turn": 61,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jump-scare",
+     "planeswalker-party",
+     "exit-from-exile",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 689824,
+    "focus_lost_turn": 62,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "hail-caesar",
+     "exit-from-exile",
+     "landing-party",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98291,
+    "focus_lost_turn": 55,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "reign-of-dragons",
+     "hail-caesar",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 83458,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "limit-break",
+     "legends-legacy",
+     "hail-caesar",
+     "mutant-menace"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "limit-break",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50024,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "keen-engineering",
+     "landing-party",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 74,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 107409,
+    "focus_lost_turn": 74,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "hail-caesar",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "dance-of-the-elements",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77575,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "klingon-fury",
+     "hail-caesar",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37961,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "temur-roar",
+     "multiverse-reforged",
+     "hail-caesar",
+     "landing-party"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 141701,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "tinker-time",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 133136,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "mardu-surge",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37541,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43750,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "hail-caesar",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42195,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scrappy-survivors",
+     "riders-of-rohan",
+     "desert-bloom",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23760,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "hail-caesar",
+     "silverquill-influence",
+     "quandrix-unlimited",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "quandrix-unlimited",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38244,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "hail-caesar",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57721,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-host-of-mordor",
+     "calling-all-angels",
+     "hail-caesar",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "creative-energy",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 139576,
+    "focus_lost_turn": 56,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91703,
+    "focus_lost_turn": 71,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "obscura-operation",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26634,
+    "focus_lost_turn": 56,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "hail-caesar",
+     "scrappy-survivors",
+     "planeswalker-party"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 203809,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "temur-roar",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36603,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "riders-of-rohan",
+     "scrappy-survivors",
+     "ahoy-mateys",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36357,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "hail-caesar",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blame-game",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79675,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "scions-and-spellcraft",
+     "hail-caesar",
+     "lorehold-spirit",
+     "tinker-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35847,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "reign-of-dragons",
+     "hail-caesar",
+     "painbow"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49212,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "mardu-surge",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 106064,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "hail-caesar",
+     "quick-draw",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "veloci-ramp-tor",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48778,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "prismari-artistry",
+     "hail-caesar",
+     "enduring-enchantments",
+     "temur-roar"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30958,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jump-scare",
+     "grave-danger",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25951,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "painbow",
+     "goblin-storm",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 43840,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "hail-caesar",
+     "blood-rites",
+     "creative-energy",
+     "sliver-swarm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 97760,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "jeskai-striker",
+     "hail-caesar",
+     "miracle-worker",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": null,
+    "turns": 71,
+    "reason": "Timeout",
+    "duration_ms": 1800011,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quick-draw",
+     "sultai-arisen",
+     "hail-caesar",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "sultai-arisen",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48323,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riveteer-rampage",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 102389,
+    "focus_lost_turn": 59,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "hail-caesar",
+     "prismari-artistry",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63865,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "hail-caesar",
+     "token-triumph",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 17977,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "jeskai-striker",
+     "elven-council",
+     "hail-caesar",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28469,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "limit-break",
+     "bedecked-brokers",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "limit-break",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28852,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "hail-caesar",
+     "scions-and-spellcraft",
+     "wretched-ranks",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29815,
+    "focus_lost_turn": 28,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "hail-caesar",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48684,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "painbow",
+     "hail-caesar",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48583,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "revenant-recon",
+     "peace-offering",
+     "cabaretti-cacophony",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 88455,
+    "focus_lost_turn": 59,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "hail-caesar",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22975,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "mardu-surge",
+     "hail-caesar",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52419,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "keen-engineering",
+     "obscura-operation",
+     "hail-caesar",
+     "revival-trance"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85600,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "party-time",
+     "limit-break",
+     "klingon-fury",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 510464,
+    "focus_lost_turn": 55,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "hail-caesar",
+     "party-time",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35277,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "hail-caesar",
+     "animated-army",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 67609,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "mardu-surge",
+     "avengers-assemble",
+     "hail-caesar",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 89650,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 68847,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "hail-caesar",
+     "temur-roar",
+     "lorehold-spirit",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 154109,
+    "focus_lost_turn": 63,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 173899,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "hail-caesar",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21567,
+    "focus_lost_turn": 28,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "obscura-operation",
+     "witherbloom-pestilence",
+     "peace-offering",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33598,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "hail-caesar",
+     "death-toll",
+     "most-wanted",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 244855,
+    "focus_lost_turn": 57,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "hail-caesar",
+     "doom-prevails",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27150,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scrappy-survivors",
+     "painbow",
+     "hail-caesar",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35409,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 51,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 50186,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "hail-caesar",
+     "sultai-arisen",
+     "squirreled-away",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "squirreled-away",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 76746,
+    "focus_lost_turn": 61,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "hail-caesar",
+     "cavalry-charge",
+     "squirreled-away"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 573546,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "tinker-time",
+     "the-host-of-mordor",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31145,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "mardu-surge",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 65846,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "hail-caesar",
+     "grave-danger",
+     "squirreled-away",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32935,
+    "focus_lost_turn": 50,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "landing-party",
+     "hail-caesar",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 150582,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "science",
+     "hail-caesar",
+     "prismari-artistry"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 74177,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "mutant-menace",
+     "animated-army",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "food-and-fellowship",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71233,
+    "focus_lost_turn": 59,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "hail-caesar",
+     "federation-fleet",
+     "token-triumph",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "eldrazi-unbound",
+    "turns": 88,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 120197,
+    "focus_lost_turn": 84,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "hail-caesar",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 286927,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "hail-caesar",
+     "silverquill-influence"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 394221,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "science",
+     "grave-danger",
+     "first-flight",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66555,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "hail-caesar",
+     "blight-curse",
+     "enduring-enchantments",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": null,
+    "turns": 58,
+    "reason": "Draw",
+    "duration_ms": 77957,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "hail-caesar",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 99328,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "prismari-artistry",
+     "hail-caesar",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44745,
+    "focus_lost_turn": 35,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jump-scare",
+     "legends-legacy",
+     "graveyard-overdrive",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30637,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "hail-caesar",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 187192,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "peace-offering",
+     "hail-caesar",
+     "dance-of-the-elements",
+     "science"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "peace-offering",
+    "turns": 76,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 242543,
+    "focus_lost_turn": 76,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "most-wanted",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "wakanda-forever",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47854,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20889,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "hail-caesar",
+     "jump-scare",
+     "cabaretti-cacophony",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35450,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "obscura-operation",
+     "hail-caesar",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "endless-punishment",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52126,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "limit-break",
+     "quick-draw",
+     "hail-caesar",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 139722,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98942,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "hail-caesar",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37168,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "legends-legacy",
+     "hail-caesar",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 814044,
+    "focus_lost_turn": 55,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revival-trance",
+     "mardu-surge",
+     "hail-caesar",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 377870,
+    "focus_lost_turn": 69,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mind-flayarrrs",
+     "jump-scare",
+     "deadly-disguise",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44500,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "hail-caesar",
+     "painbow",
+     "party-time",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 161749,
+    "focus_lost_turn": 32,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "hail-caesar",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26563,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "mutant-menace",
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31120,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "scions-and-spellcraft",
+     "blame-game",
+     "eldrazi-unbound",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 75,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 154246,
+    "focus_lost_turn": 75,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27471,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "science",
+     "hail-caesar",
+     "jeskai-striker",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58527,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "hail-caesar",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 29607,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "the-fantastic-four",
+     "blight-curse",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18457,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   }
+  ],
+  "mc": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "hail-caesar",
+     "deadly-disguise",
+     "revenant-recon",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 87691,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "lorehold-spirit",
+     "hail-caesar",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 135614,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45360,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "legends-legacy",
+     "scions-and-spellcraft",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36395,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "hail-caesar",
+     "world-shaper",
+     "mardu-surge",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77557,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "hail-caesar",
+     "science",
+     "miracle-worker"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 99514,
+    "focus_lost_turn": 59,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "token-triumph",
+     "quick-draw",
+     "hail-caesar",
+     "tinker-time"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108766,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jump-scare",
+     "planeswalker-party",
+     "exit-from-exile",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "planeswalker-party",
+    "turns": 68,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 159161,
+    "focus_lost_turn": 66,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "hail-caesar",
+     "exit-from-exile",
+     "landing-party",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49865,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "reign-of-dragons",
+     "hail-caesar",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47388,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "limit-break",
+     "legends-legacy",
+     "hail-caesar",
+     "mutant-menace"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45221,
+    "focus_lost_turn": 27,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "keen-engineering",
+     "landing-party",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 39,
+    "reason": "WinsGameSpellEffect",
+    "duration_ms": 38131,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "hail-caesar",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79429,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "klingon-fury",
+     "hail-caesar",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44873,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "temur-roar",
+     "multiverse-reforged",
+     "hail-caesar",
+     "landing-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": null,
+    "turns": 41,
+    "reason": "Draw",
+    "duration_ms": 335213,
+    "focus_lost_turn": 39,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "tinker-time",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 238387,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "mardu-surge",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26701,
+    "focus_lost_turn": 40,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56873,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "hail-caesar",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78131,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scrappy-survivors",
+     "riders-of-rohan",
+     "desert-bloom",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 275639,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "hail-caesar",
+     "silverquill-influence",
+     "quandrix-unlimited",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "quandrix-unlimited",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31107,
+    "focus_lost_turn": 25,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "hail-caesar",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 87,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 265136,
+    "focus_lost_turn": 87,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-host-of-mordor",
+     "calling-all-angels",
+     "hail-caesar",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98190,
+    "focus_lost_turn": 57,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 70,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 69862,
+    "focus_lost_turn": 54,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "obscura-operation",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108228,
+    "focus_lost_turn": 62,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "hail-caesar",
+     "scrappy-survivors",
+     "planeswalker-party"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79306,
+    "focus_lost_turn": 50,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "temur-roar",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26078,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "riders-of-rohan",
+     "scrappy-survivors",
+     "ahoy-mateys",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34144,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "hail-caesar",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41543,
+    "focus_lost_turn": 49,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "scions-and-spellcraft",
+     "hail-caesar",
+     "lorehold-spirit",
+     "tinker-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 236648,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "reign-of-dragons",
+     "hail-caesar",
+     "painbow"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 100857,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "mardu-surge",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 132847,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "hail-caesar",
+     "quick-draw",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50227,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "prismari-artistry",
+     "hail-caesar",
+     "enduring-enchantments",
+     "temur-roar"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 69027,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jump-scare",
+     "grave-danger",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25837,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "painbow",
+     "goblin-storm",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "goblin-storm",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 101190,
+    "focus_lost_turn": 43,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "hail-caesar",
+     "blood-rites",
+     "creative-energy",
+     "sliver-swarm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 272034,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "jeskai-striker",
+     "hail-caesar",
+     "miracle-worker",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 105130,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quick-draw",
+     "sultai-arisen",
+     "hail-caesar",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "sultai-arisen",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 137596,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riveteer-rampage",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25228,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "hail-caesar",
+     "prismari-artistry",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 125855,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "hail-caesar",
+     "token-triumph",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27960,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "jeskai-striker",
+     "elven-council",
+     "hail-caesar",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46367,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "limit-break",
+     "bedecked-brokers",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38190,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "hail-caesar",
+     "scions-and-spellcraft",
+     "wretched-ranks",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45785,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "hail-caesar",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 114462,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "painbow",
+     "hail-caesar",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 64817,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "revenant-recon",
+     "peace-offering",
+     "cabaretti-cacophony",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 82988,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "hail-caesar",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37982,
+    "focus_lost_turn": 60,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "mardu-surge",
+     "hail-caesar",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 53953,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "keen-engineering",
+     "obscura-operation",
+     "hail-caesar",
+     "revival-trance"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79581,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "party-time",
+     "limit-break",
+     "klingon-fury",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "party-time",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 137998,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "hail-caesar",
+     "party-time",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39165,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "hail-caesar",
+     "animated-army",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 123016,
+    "focus_lost_turn": 60,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "mardu-surge",
+     "avengers-assemble",
+     "hail-caesar",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25193,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "wakanda-forever",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36991,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "hail-caesar",
+     "temur-roar",
+     "lorehold-spirit",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 456068,
+    "focus_lost_turn": 62,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45306,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "hail-caesar",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42389,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "obscura-operation",
+     "witherbloom-pestilence",
+     "peace-offering",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79949,
+    "focus_lost_turn": 37,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "hail-caesar",
+     "death-toll",
+     "most-wanted",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 128972,
+    "focus_lost_turn": 41,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "hail-caesar",
+     "doom-prevails",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32717,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scrappy-survivors",
+     "painbow",
+     "hail-caesar",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 79975,
+    "focus_lost_turn": 62,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62260,
+    "focus_lost_turn": 46,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "hail-caesar",
+     "sultai-arisen",
+     "squirreled-away",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 67,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 199646,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "hail-caesar",
+     "cavalry-charge",
+     "squirreled-away"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 62000,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "tinker-time",
+     "the-host-of-mordor",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39857,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "mardu-surge",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "grand-larceny",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98472,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "hail-caesar",
+     "grave-danger",
+     "squirreled-away",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44240,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "landing-party",
+     "hail-caesar",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46783,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "science",
+     "hail-caesar",
+     "prismari-artistry"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "elven-council",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 165823,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "mutant-menace",
+     "animated-army",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 105515,
+    "focus_lost_turn": 55,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "hail-caesar",
+     "federation-fleet",
+     "token-triumph",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 92,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 186596,
+    "focus_lost_turn": 76,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "hail-caesar",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38376,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "hail-caesar",
+     "silverquill-influence"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "silverquill-influence",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 843121,
+    "focus_lost_turn": 35,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "science",
+     "grave-danger",
+     "first-flight",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98578,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "hail-caesar",
+     "blight-curse",
+     "enduring-enchantments",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 71251,
+    "focus_lost_turn": 52,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "hail-caesar",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 63,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 168423,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "prismari-artistry",
+     "hail-caesar",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108861,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jump-scare",
+     "legends-legacy",
+     "graveyard-overdrive",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37159,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "hail-caesar",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 125355,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "peace-offering",
+     "hail-caesar",
+     "dance-of-the-elements",
+     "science"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 64,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 143450,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "most-wanted",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 68543,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 36923,
+    "focus_lost_turn": 44,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "hail-caesar",
+     "jump-scare",
+     "cabaretti-cacophony",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51236,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "obscura-operation",
+     "hail-caesar",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 70194,
+    "focus_lost_turn": 45,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "limit-break",
+     "quick-draw",
+     "hail-caesar",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "quick-draw",
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22356,
+    "focus_lost_turn": 34,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 71,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 111265,
+    "focus_lost_turn": 71,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "hail-caesar",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98762,
+    "focus_lost_turn": 69,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "legends-legacy",
+     "hail-caesar",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 151849,
+    "focus_lost_turn": 53,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revival-trance",
+     "mardu-surge",
+     "hail-caesar",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50535,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mind-flayarrrs",
+     "jump-scare",
+     "deadly-disguise",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mind-flayarrrs",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41506,
+    "focus_lost_turn": 30,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "hail-caesar",
+     "painbow",
+     "party-time",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 265176,
+    "focus_lost_turn": 51,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "hail-caesar",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "doom-prevails",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20975,
+    "focus_lost_turn": 38,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "mutant-menace",
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38951,
+    "focus_lost_turn": 36,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "scions-and-spellcraft",
+     "blame-game",
+     "eldrazi-unbound",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 198672,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44090,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "science",
+     "hail-caesar",
+     "jeskai-striker",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40085,
+    "focus_lost_turn": 47,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "hail-caesar",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-dissent",
+    "turns": 61,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31824,
+    "focus_lost_turn": 56,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "the-fantastic-four",
+     "blight-curse",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33039,
+    "focus_lost_turn": 48,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "mcdata": [
+   {
+    "index": 1,
+    "seed": 20261111,
+    "seats": [
+     "hail-caesar",
+     "deadly-disguise",
+     "revenant-recon",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 112937,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261112,
+    "seats": [
+     "lorehold-spirit",
+     "hail-caesar",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 396412,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261113,
+    "seats": [
+     "draconic-destruction",
+     "turtle-power",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 57367,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261114,
+    "seats": [
+     "calling-all-angels",
+     "legends-legacy",
+     "scions-and-spellcraft",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51348,
+    "focus_lost_turn": 57,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261115,
+    "seats": [
+     "hail-caesar",
+     "world-shaper",
+     "mardu-surge",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 403061,
+    "focus_lost_turn": 57,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261116,
+    "seats": [
+     "blood-rites",
+     "hail-caesar",
+     "science",
+     "miracle-worker"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 49368,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261117,
+    "seats": [
+     "token-triumph",
+     "quick-draw",
+     "hail-caesar",
+     "tinker-time"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "token-triumph",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56718,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261118,
+    "seats": [
+     "jump-scare",
+     "planeswalker-party",
+     "exit-from-exile",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 128363,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261119,
+    "seats": [
+     "hail-caesar",
+     "exit-from-exile",
+     "landing-party",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 66772,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261120,
+    "seats": [
+     "reign-of-dragons",
+     "hail-caesar",
+     "first-flight",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 45281,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261121,
+    "seats": [
+     "limit-break",
+     "legends-legacy",
+     "hail-caesar",
+     "mutant-menace"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 148478,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261122,
+    "seats": [
+     "deep-clue-sea",
+     "keen-engineering",
+     "landing-party",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 84,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 199294,
+    "focus_lost_turn": 79,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261123,
+    "seats": [
+     "hail-caesar",
+     "dance-of-the-elements",
+     "ahoy-mateys",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 69,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 108711,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261124,
+    "seats": [
+     "klingon-fury",
+     "hail-caesar",
+     "creative-energy",
+     "abzan-armor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38374,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261125,
+    "seats": [
+     "temur-roar",
+     "multiverse-reforged",
+     "hail-caesar",
+     "landing-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 48440,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261126,
+    "seats": [
+     "tricky-terrain",
+     "we-are-the-borg",
+     "tinker-time",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 380863,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261127,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "mardu-surge",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31047,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261128,
+    "seats": [
+     "draconic-dissent",
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "wretched-ranks"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 77599,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261129,
+    "seats": [
+     "avengers-assemble",
+     "we-are-the-borg",
+     "hail-caesar",
+     "blight-curse"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 75,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 122846,
+    "focus_lost_turn": 75,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261130,
+    "seats": [
+     "scrappy-survivors",
+     "riders-of-rohan",
+     "desert-bloom",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42874,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261131,
+    "seats": [
+     "hail-caesar",
+     "silverquill-influence",
+     "quandrix-unlimited",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27772,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261132,
+    "seats": [
+     "counter-intelligence",
+     "hail-caesar",
+     "witherbloom-pestilence",
+     "blood-rites"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 51114,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261133,
+    "seats": [
+     "the-host-of-mordor",
+     "calling-all-angels",
+     "hail-caesar",
+     "creative-energy"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "the-host-of-mordor",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 247304,
+    "focus_lost_turn": 66,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261134,
+    "seats": [
+     "death-toll",
+     "desert-bloom",
+     "world-shaper",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "world-shaper",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41816,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261135,
+    "seats": [
+     "hail-caesar",
+     "chaos-incarnate",
+     "obscura-operation",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34585,
+    "focus_lost_turn": 54,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261136,
+    "seats": [
+     "death-toll",
+     "hail-caesar",
+     "scrappy-survivors",
+     "planeswalker-party"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scrappy-survivors",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 113181,
+    "focus_lost_turn": 63,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261137,
+    "seats": [
+     "we-are-the-borg",
+     "temur-roar",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30777,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261138,
+    "seats": [
+     "riders-of-rohan",
+     "scrappy-survivors",
+     "ahoy-mateys",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "riders-of-rohan",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 47650,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261139,
+    "seats": [
+     "hail-caesar",
+     "blame-game",
+     "ahoy-mateys",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 32026,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261140,
+    "seats": [
+     "scions-and-spellcraft",
+     "hail-caesar",
+     "lorehold-spirit",
+     "tinker-time"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38157,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261141,
+    "seats": [
+     "blood-rites",
+     "reign-of-dragons",
+     "hail-caesar",
+     "painbow"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 58315,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261142,
+    "seats": [
+     "counter-blitz",
+     "death-toll",
+     "mardu-surge",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 123973,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261143,
+    "seats": [
+     "hail-caesar",
+     "quick-draw",
+     "draconic-destruction",
+     "veloci-ramp-tor"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 59252,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261144,
+    "seats": [
+     "prismari-artistry",
+     "hail-caesar",
+     "enduring-enchantments",
+     "temur-roar"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "temur-roar",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 46024,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261145,
+    "seats": [
+     "jump-scare",
+     "grave-danger",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 59,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 81010,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261146,
+    "seats": [
+     "wretched-ranks",
+     "painbow",
+     "goblin-storm",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "goblin-storm",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 136454,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261147,
+    "seats": [
+     "hail-caesar",
+     "blood-rites",
+     "creative-energy",
+     "sliver-swarm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 63691,
+    "focus_lost_turn": 30,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261148,
+    "seats": [
+     "jeskai-striker",
+     "hail-caesar",
+     "miracle-worker",
+     "mind-flayarrrs"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "miracle-worker",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 110526,
+    "focus_lost_turn": 52,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261149,
+    "seats": [
+     "quick-draw",
+     "sultai-arisen",
+     "hail-caesar",
+     "elven-council"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "elven-council",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 175477,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261150,
+    "seats": [
+     "desert-bloom",
+     "draconic-destruction",
+     "riveteer-rampage",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52402,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261151,
+    "seats": [
+     "hail-caesar",
+     "prismari-artistry",
+     "we-are-the-borg",
+     "counter-intelligence"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 103174,
+    "focus_lost_turn": 38,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261152,
+    "seats": [
+     "calling-all-angels",
+     "hail-caesar",
+     "token-triumph",
+     "riders-of-rohan"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22992,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261153,
+    "seats": [
+     "jeskai-striker",
+     "elven-council",
+     "hail-caesar",
+     "blood-rites"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "blood-rites",
+    "turns": 41,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 35039,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261154,
+    "seats": [
+     "limit-break",
+     "bedecked-brokers",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 45,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40419,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261155,
+    "seats": [
+     "hail-caesar",
+     "scions-and-spellcraft",
+     "wretched-ranks",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 44147,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261156,
+    "seats": [
+     "grave-danger",
+     "hail-caesar",
+     "cavalry-charge",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 118366,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261157,
+    "seats": [
+     "cabaretti-cacophony",
+     "painbow",
+     "hail-caesar",
+     "grave-danger"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85047,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261158,
+    "seats": [
+     "revenant-recon",
+     "peace-offering",
+     "cabaretti-cacophony",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "revenant-recon",
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 55467,
+    "focus_lost_turn": 29,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261159,
+    "seats": [
+     "hail-caesar",
+     "doom-prevails",
+     "animated-army",
+     "draconic-destruction"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 61907,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261160,
+    "seats": [
+     "mardu-surge",
+     "hail-caesar",
+     "cabaretti-cacophony",
+     "goblin-storm"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50292,
+    "focus_lost_turn": 55,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261161,
+    "seats": [
+     "keen-engineering",
+     "obscura-operation",
+     "hail-caesar",
+     "revival-trance"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "keen-engineering",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 90142,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261162,
+    "seats": [
+     "party-time",
+     "limit-break",
+     "klingon-fury",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 110670,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261163,
+    "seats": [
+     "hail-caesar",
+     "party-time",
+     "first-flight",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37248,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261164,
+    "seats": [
+     "exit-from-exile",
+     "hail-caesar",
+     "animated-army",
+     "the-host-of-mordor"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38575,
+    "focus_lost_turn": 47,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261165,
+    "seats": [
+     "mardu-surge",
+     "avengers-assemble",
+     "hail-caesar",
+     "first-flight"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26440,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261166,
+    "seats": [
+     "wakanda-forever",
+     "grand-larceny",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 60,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 98993,
+    "focus_lost_turn": 60,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261167,
+    "seats": [
+     "hail-caesar",
+     "temur-roar",
+     "lorehold-spirit",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 484177,
+    "focus_lost_turn": 31,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261168,
+    "seats": [
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "tricky-terrain",
+     "grave-danger"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 171476,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261169,
+    "seats": [
+     "we-are-the-borg",
+     "draconic-dissent",
+     "hail-caesar",
+     "klingon-fury"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30014,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261170,
+    "seats": [
+     "obscura-operation",
+     "witherbloom-pestilence",
+     "peace-offering",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "obscura-operation",
+    "turns": 43,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 150205,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 61,
+    "seed": 20261171,
+    "seats": [
+     "hail-caesar",
+     "death-toll",
+     "most-wanted",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 50,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 78435,
+    "focus_lost_turn": 37,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 62,
+    "seed": 20261172,
+    "seats": [
+     "witherbloom-pestilence",
+     "hail-caesar",
+     "doom-prevails",
+     "peace-offering"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42194,
+    "focus_lost_turn": 57,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 63,
+    "seed": 20261173,
+    "seats": [
+     "scrappy-survivors",
+     "painbow",
+     "hail-caesar",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91099,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 64,
+    "seed": 20261174,
+    "seats": [
+     "exit-from-exile",
+     "explorers-of-the-deep",
+     "wretched-ranks",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39449,
+    "focus_lost_turn": 41,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 65,
+    "seed": 20261175,
+    "seats": [
+     "hail-caesar",
+     "sultai-arisen",
+     "squirreled-away",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 66,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 137719,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 66,
+    "seed": 20261176,
+    "seats": [
+     "tricky-terrain",
+     "hail-caesar",
+     "cavalry-charge",
+     "squirreled-away"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 94838,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 67,
+    "seed": 20261177,
+    "seats": [
+     "tinker-time",
+     "the-host-of-mordor",
+     "hail-caesar",
+     "draconic-destruction"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "draconic-destruction",
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34046,
+    "focus_lost_turn": 40,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 68,
+    "seed": 20261178,
+    "seats": [
+     "graveyard-overdrive",
+     "mardu-surge",
+     "grand-larceny",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 87821,
+    "focus_lost_turn": 53,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 69,
+    "seed": 20261179,
+    "seats": [
+     "hail-caesar",
+     "grave-danger",
+     "squirreled-away",
+     "planeswalker-party"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "grave-danger",
+    "turns": 72,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 120422,
+    "focus_lost_turn": 61,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 70,
+    "seed": 20261180,
+    "seats": [
+     "landing-party",
+     "hail-caesar",
+     "grave-danger",
+     "ahoy-mateys"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "landing-party",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 220509,
+    "focus_lost_turn": 53,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 71,
+    "seed": 20261181,
+    "seats": [
+     "elven-council",
+     "science",
+     "hail-caesar",
+     "prismari-artistry"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 62,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 305498,
+    "focus_lost_turn": 58,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 72,
+    "seed": 20261182,
+    "seats": [
+     "food-and-fellowship",
+     "mutant-menace",
+     "animated-army",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 1527068,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 73,
+    "seed": 20261183,
+    "seats": [
+     "hail-caesar",
+     "federation-fleet",
+     "token-triumph",
+     "eldrazi-unbound"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "federation-fleet",
+    "turns": 76,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 87189,
+    "focus_lost_turn": 64,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 74,
+    "seed": 20261184,
+    "seats": [
+     "tramplesaurus-rex",
+     "hail-caesar",
+     "animated-army",
+     "death-toll"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 56235,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 75,
+    "seed": 20261185,
+    "seats": [
+     "family-matters",
+     "world-shaper",
+     "hail-caesar",
+     "silverquill-influence"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 131367,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 76,
+    "seed": 20261186,
+    "seats": [
+     "science",
+     "grave-danger",
+     "first-flight",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "first-flight",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 53474,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 77,
+    "seed": 20261187,
+    "seats": [
+     "hail-caesar",
+     "blight-curse",
+     "enduring-enchantments",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31071,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 78,
+    "seed": 20261188,
+    "seats": [
+     "graveyard-overdrive",
+     "hail-caesar",
+     "we-are-the-borg",
+     "desert-bloom"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 78,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 530082,
+    "focus_lost_turn": 78,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 79,
+    "seed": 20261189,
+    "seats": [
+     "dance-of-the-elements",
+     "prismari-artistry",
+     "hail-caesar",
+     "planeswalker-party"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": null,
+    "turns": 61,
+    "reason": "Timeout",
+    "duration_ms": 1800012,
+    "focus_lost_turn": 34,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 80,
+    "seed": 20261190,
+    "seats": [
+     "jump-scare",
+     "legends-legacy",
+     "graveyard-overdrive",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 72,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 50250,
+    "focus_lost_turn": 65,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 81,
+    "seed": 20261191,
+    "seats": [
+     "hail-caesar",
+     "enduring-enchantments",
+     "death-toll",
+     "deadly-disguise"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deadly-disguise",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 90534,
+    "focus_lost_turn": 45,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 82,
+    "seed": 20261192,
+    "seats": [
+     "peace-offering",
+     "hail-caesar",
+     "dance-of-the-elements",
+     "science"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 54303,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 83,
+    "seed": 20261193,
+    "seats": [
+     "wakanda-forever",
+     "most-wanted",
+     "hail-caesar",
+     "science"
+    ],
+    "focus_seat": 2,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 56,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 60944,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 84,
+    "seed": 20261194,
+    "seats": [
+     "abzan-armor",
+     "world-shaper",
+     "legends-legacy",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "legends-legacy",
+    "turns": 55,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 33704,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 85,
+    "seed": 20261195,
+    "seats": [
+     "hail-caesar",
+     "jump-scare",
+     "cabaretti-cacophony",
+     "klingon-fury"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "klingon-fury",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28637,
+    "focus_lost_turn": 46,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 86,
+    "seed": 20261196,
+    "seats": [
+     "obscura-operation",
+     "hail-caesar",
+     "endless-punishment",
+     "federation-fleet"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "endless-punishment",
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 72975,
+    "focus_lost_turn": 49,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 87,
+    "seed": 20261197,
+    "seats": [
+     "limit-break",
+     "quick-draw",
+     "hail-caesar",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85286,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 88,
+    "seed": 20261198,
+    "seats": [
+     "tricky-terrain",
+     "cavalry-charge",
+     "draconic-dissent",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "cavalry-charge",
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 85666,
+    "focus_lost_turn": 39,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 89,
+    "seed": 20261199,
+    "seats": [
+     "hail-caesar",
+     "counter-intelligence",
+     "dance-of-the-elements",
+     "turtle-power"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "turtle-power",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38279,
+    "focus_lost_turn": 42,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 90,
+    "seed": 20261200,
+    "seats": [
+     "legends-legacy",
+     "hail-caesar",
+     "growing-threat",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 1228949,
+    "focus_lost_turn": 51,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 91,
+    "seed": 20261201,
+    "seats": [
+     "revival-trance",
+     "mardu-surge",
+     "hail-caesar",
+     "dance-of-the-elements"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 157065,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 92,
+    "seed": 20261202,
+    "seats": [
+     "mind-flayarrrs",
+     "jump-scare",
+     "deadly-disguise",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "jump-scare",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 92673,
+    "focus_lost_turn": 43,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 93,
+    "seed": 20261203,
+    "seats": [
+     "hail-caesar",
+     "painbow",
+     "party-time",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 526446,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 94,
+    "seed": 20261204,
+    "seats": [
+     "bedecked-brokers",
+     "hail-caesar",
+     "doom-prevails",
+     "witherbloom-pestilence"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "hail-caesar",
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18593,
+    "focus_lost_turn": null,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 95,
+    "seed": 20261205,
+    "seats": [
+     "mutant-menace",
+     "explorers-of-the-deep",
+     "hail-caesar",
+     "deadly-disguise"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "mutant-menace",
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39090,
+    "focus_lost_turn": 36,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 96,
+    "seed": 20261206,
+    "seats": [
+     "scions-and-spellcraft",
+     "blame-game",
+     "eldrazi-unbound",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "scions-and-spellcraft",
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 97314,
+    "focus_lost_turn": 48,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 97,
+    "seed": 20261207,
+    "seats": [
+     "hail-caesar",
+     "tramplesaurus-rex",
+     "revenant-recon",
+     "explorers-of-the-deep"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "explorers-of-the-deep",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28303,
+    "focus_lost_turn": 25,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 98,
+    "seed": 20261208,
+    "seats": [
+     "science",
+     "hail-caesar",
+     "jeskai-striker",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 53,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 42242,
+    "focus_lost_turn": 33,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 99,
+    "seed": 20261209,
+    "seats": [
+     "ahoy-mateys",
+     "federation-fleet",
+     "hail-caesar",
+     "draconic-dissent"
+    ],
+    "focus_seat": 2,
+    "won": false,
+    "winner_id": "ahoy-mateys",
+    "turns": 70,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 52712,
+    "focus_lost_turn": 62,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   },
+   {
+    "index": 100,
+    "seed": 20261210,
+    "seats": [
+     "abzan-armor",
+     "the-fantastic-four",
+     "blight-curse",
+     "hail-caesar"
+    ],
+    "focus_seat": 3,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 44,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31476,
+    "focus_lost_turn": 44,
+    "data": true,
+    "ai_lists": {
+     "applied": true,
+     "roles": 1,
+     "combos": 0,
+     "pairs": 0
+    },
+    "playbook_stats": null
+   }
+  ]
+ },
+ "arms": [
+  "stock",
+  "data",
+  "mc",
+  "mcdata"
+ ],
+ "data_file": "playbook/precons/hail-caesar.json",
+ "deck_profile": "Vibefish-hail-caesar",
+ "profile_overrides": {
+  "PLAY_AGGRO": "true",
+  "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+  "TOKEN_GENERATION_ALWAYS_IF_OPP_ATTACKS": "true",
+  "FLAT_MC_DECK_PLAN": "AGGRO"
+ },
+ "forge_version": "snapshot-2026-11-08",
+ "runtime": "runtime",
+ "clock_s": 1800,
+ "turn_cap": 120,
+ "started": "2026-11-10T05:26:17Z",
+ "data_effective": {
+  "on": "2026-11-09",
+  "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)",
+  "key_cards": [
+   "Assemble the Legion",
+   "Pitiless Plunderer",
+   "Skullclamp",
+   "Bastion of Remembrance",
+   "Fervent Charge",
+   "Intangible Virtue",
+   "Captain of the Watch",
+   "Elder Arthur Maxson"
+  ],
+  "roles": {
+   "reanimation_spell": [
+    "Marshal's Anthem"
+   ]
+  },
+  "combos": [],
+  "pairs": [],
+  "deck_plan": "AGGRO",
+  "profile": {
+   "PLAY_AGGRO": "true",
+   "TOKEN_GENERATION_ABILITY_CHANCE": "100",
+   "TOKEN_GENERATION_ALWAYS_IF_OPP_ATTACKS": "true"
+  },
+  "spellbook": {
+   "included": 0,
+   "almost_included": 2,
+   "identity": "RWB",
+   "retrieved": "2026-11-09T06:29:17Z"
+  },
+  "cards_without_script": [
+   "V.A.T.S."
+  ]
+ },
+ "arm_stats": {
+  "stock": {
+   "games": 100,
+   "wins": 12,
+   "win_rate": 0.12,
+   "win_rate_ci95": [
+    0.07,
+    0.1981
+   ],
+   "draws": 0,
+   "avg_turns": 49.99,
+   "avg_seconds": 84.68,
+   "avg_turn_lost": 46.09,
+   "wins_by_seat": [
+    4,
+    3,
+    4,
+    1
+   ],
+   "playbook": null
+  },
+  "data": {
+   "games": 100,
+   "wins": 9,
+   "win_rate": 0.09,
+   "win_rate_ci95": [
+    0.0481,
+    0.1623
+   ],
+   "draws": 2,
+   "avg_turns": 50.28,
+   "avg_seconds": 121.05,
+   "avg_turn_lost": 45.42,
+   "wins_by_seat": [
+    0,
+    6,
+    3,
+    0
+   ],
+   "playbook": null
+  },
+  "mc": {
+   "games": 100,
+   "wins": 15,
+   "win_rate": 0.15,
+   "win_rate_ci95": [
+    0.0931,
+    0.2328
+   ],
+   "draws": 1,
+   "avg_turns": 51.01,
+   "avg_seconds": 100.44,
+   "avg_turn_lost": 44.75,
+   "wins_by_seat": [
+    4,
+    5,
+    3,
+    3
+   ],
+   "playbook": null
+  },
+  "mcdata": {
+   "games": 100,
+   "wins": 14,
+   "win_rate": 0.14,
+   "win_rate_ci95": [
+    0.0853,
+    0.2214
+   ],
+   "draws": 1,
+   "avg_turns": 50.6,
+   "avg_seconds": 143.76,
+   "avg_turn_lost": 44.95,
+   "wins_by_seat": [
+    3,
+    5,
+    3,
+    3
+   ],
+   "playbook": null
+  }
+ },
+ "paired": {
+  "data_vs_stock": {
+   "pairs": 100,
+   "both_won": 4,
+   "data_only": 5,
+   "stock_only": 8,
+   "neither": 83,
+   "difference": -0.03,
+   "difference_ci95": [
+    -0.1004,
+    0.0404
+   ],
+   "identical_outcomes": 5
+  },
+  "mc_vs_stock": {
+   "pairs": 100,
+   "both_won": 1,
+   "mc_only": 14,
+   "stock_only": 11,
+   "neither": 74,
+   "difference": 0.03,
+   "difference_ci95": [
+    -0.0678,
+    0.1278
+   ],
+   "identical_outcomes": 0
+  },
+  "mcdata_vs_stock": {
+   "pairs": 100,
+   "both_won": 1,
+   "mcdata_only": 13,
+   "stock_only": 11,
+   "neither": 75,
+   "difference": 0.02,
+   "difference_ci95": [
+    -0.0759,
+    0.1159
+   ],
+   "identical_outcomes": 1
+  }
+ }
+}
