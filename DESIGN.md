@@ -780,3 +780,52 @@ A stock table takes as long on either: 49.0 game turns over those 1,040 games on
 **A tool that had stopped working.** `runner/playstyle.py` on a pod or league run (anything but an A/B directory) recursed until Python stopped it: the helper that labels a seat called itself where it should have called `arm_of`, since the commit that taught it A/B runs. Fixed here; the A/B path, the only one used since, was not affected.
 
 **What it says.** (1) The four bots are confirmed: each wins 7.5 to 15 points more than stock on tables that did not choose its file, and each sits within five points of where people have the deck, at a table of three stock seats. (2) That is the whole of the claim. The rules play the deck's own plan; the numbers that would show a seat reading the table (spells aimed at opponents, blocks, mulligans, how it dies and what it dies holding) are stock's, unchanged. §22's list of what the rules cannot do is the list of what the bots do not do. (3) A table of bots is a different game from a table with one: four rounds shorter, and decided by who races best. Nothing chosen against stock opponents has been tested there, and no deck's win rate among bots has been measured at all, in Actions or anywhere. That measurement, several bots at one table judged against people's ordering of the same decks, is the one the bots exist for.
+
+## 24. Bots among bots (2026-11-11)
+
+**Why.** Until here a bot was judged at tables of three stock seats (§19 to §23). The owner's objection, the day §23 was written: the bots are not for beating a table of stock AI. The aim is a pilot that plays its deck as a competent person would; stock opponents do not punish what people punish, a seat can hardly play like a person against them, and a result at their table says little about whether it does. §23 had already found the other half of that: at stock tables the playbook seats aim no more spells at opponents than stock, block no more and die in one swing holding castable cards, and none of it costs them a win. From here on bots are judged among bots.
+
+**The instruments.**
+- `league-run` takes a league file and starts from `runner/queue/league-run.json` (it read only the 91-deck list and needed a click). `runner/leagues/bots-v1.json` is the four decks with a shipped playbook as one table, frozen; a fifth bot makes `bots-v2`. With `playbooks` every seat is under its playbook. `league.json` records the league file, so the rollup and `publish.sh` find the list.
+- `runner/ab.py --pool FILE --opponent-playbooks` (the `pool` and `opponent_playbooks` fields of `ab-run`): the paired A/B as before, the deck under stock AI and under its playbook on the same tables, with the three opponents drawn from the pool and each under its shipped playbook. The stock arm stays as the control: the same deck in the same seat, without which there is no saying what the rules did.
+- `runner/playstyle.py` reads league runs and has `--by-deck`: tempo, placing from first out to winner, kills and damage for each deck.
+- A limit met on the way: `playbook_stats` are one static map in `PlaybookController`, summed over every playbook seat of a game, and the rule numbers of different playbooks collide. At a table of bots the counters say nothing about one seat. Not fixed here (it changes `run.json`).
+
+**No human data for this exact table.** The reference has each precon's win rate with its stock list against whatever else sat at the table (§16): nothing head to head, nothing by pod. Playgroup's page for a precon (Tricky Terrain's, read by hand on 2026-11-11) shows the set ranking, the decklist and what people change, and no matchups; four precons from four products of 2022 to 2026 will seldom have met anyway. So the yardstick for this table is derived, each deck's figure rescaled so that the four sum to 100%, which assumes that strength against the field carries over to this pod: Tricky Terrain 29.3%, Token Triumph 27.2%, Hail, Caesar 22.1%, Goblin Storm 21.4%. Beside it stand the table-level figures of people's games (8.75 rounds, the starting player winning 29.2%, a mulligan in 36% of a player's games).
+
+**Results: the four bots at one table (`league-run` #2: `bots-v1` with every seat under its shipped playbook, 50 cycles = 200 games, each deck in every seat 50 times, seed 20261190, the 11-10 build, five shards, 53 minutes; published as `demo-data/runs/2026-11-11-bots-v1-snapshot-2026-11-10-s20261190-bots/`, the dashboard's league view).** Every game was decided.
+
+| Deck | wins of 200 | win rate (95%) | people's share of this table | first out / second / third | opponents killed a game | attackers received per 100 opponent turns |
+|---|---|---|---|---|---|---|
+| Token Triumph | 92 | 46.0% (39 to 53%) | 27.2% | 39 / 41 / 28 | 1.21 | 89 |
+| Tricky Terrain | 44 | 22.0% (17 to 28%) | 29.3% | 47 / 53 / 56 | 0.46 | 53 |
+| Goblin Storm | 32 | 16.0% (12 to 22%) | 21.4% | 68 / 58 / 42 | 0.66 | 54 |
+| Hail, Caesar | 32 | 16.0% (12 to 22%) | 22.1% | 46 / 48 / 74 | 0.67 | 72 |
+
+The standings are not people's. Token Triumph takes 46% of the games where people's figures give it 27% (chi-square of the four counts against the rescaled shares: 35.7 on 3 degrees of freedom, where 7.8 is the 5% line), and the other three are each five to seven points under theirs. The spread of win rates is 12.4 points against people's 3.3 for these four: wider than the stock league's two and a half times (§18), not narrower. The table does not leave Token Triumph alone to do it. Every bot sends 80 to 89% of its attackers at the highest life, Token Triumph's lifelink Soldiers keep it there, and it receives the most attackers of the four; it also deals the most damage (90 a game) and strikes the last blow in 46 to 53% of each other deck's losses.
+
+The shape of the game is nearer people's than a stock table's and still not theirs. 41.3 game turns (95% 39.9 to 42.6), 10.3 rounds by turns over four and 11.6 by the winner's own turns, where people play 8.75 and the same seats under stock 13.5 (§23; its twenty local games had 9.75); 72 of the 200 games are over within nine rounds. The starting player wins 28.5% (people 29.2%). A seat takes a mulligan in 21.5% of its games (people 36%): the mulligan is Forge's. Kept hands hold 3.05 lands (2.91).
+
+**What the bots hold while they lose.** The same logs, for the cards in these decks that answer a board: the deck's games in which the card was seen in its hand, the games in which it was cast, and its losses with the card in hand at the start of its last own turn.
+
+| Deck (losses) | card | seen | cast | in hand at a loss |
+|---|---|---|---|---|
+| Hail, Caesar (168) | Ruinous Ultimatum | 36 | 8 | 18 |
+| | Martial Coup | 41 | 11 | 21 |
+| | Hour of Reckoning | 35 | 10 | 22 |
+| | Vault 75: Middle School | 38 | 16 | 18 |
+| Token Triumph (108) | Hour of Reckoning | 51 | 8 | 21 |
+| | Citywide Bust | 48 | 19 | 11 |
+| Tricky Terrain (156) | Oblivion Stone | 68 | 2 | 42 |
+| | Curse of the Swine | 57 | 2 | 39 |
+| | Summary Dismissal | 51 | 3 | 27 |
+| | Beast Within | 38 | 36 | 2 |
+| | Pongify | 62 | 45 | 11 |
+| | Evacuation | 42 | 36 | 2 |
+| Goblin Storm (168) | Blasphemous Act | 30 | 16 | 5 |
+
+One rule in the four playbooks names any of these: Tricky Terrain's "Beast Within or Pongify when an opponent threatens seven or more", and those two are the cards that get cast. The rest are Forge's to decide, and Forge mostly keeps them: Ruinous Ultimatum, which destroys every nonland permanent the opponents have and nothing of ours, was cast in 8 of the 36 games Hail, Caesar saw it; Oblivion Stone and Curse of the Swine, which Forge's AI is told never to cast (§21), in 2 of 68 and 2 of 57, and Tricky Terrain lost 42 and 39 games with them in hand. Against a deck that wins by going wide, these are the cards a person plays.
+
+**What it says.** (1) Judged among each other the four bots are not yet the four decks people play: one of them wins nearly half the games. (2) The likely reason is the one §23 measured from the other side. A table where nobody answers a board belongs to the deck that builds the widest one with lifelink behind it, and the answers were in hand: this is a reading of the table above, not yet a result, and the test of it is a candidate that casts them, judged at these tables. (3) The proactive half does carry over: a table of bots plays a game three rounds shorter than the same seats under stock and one and a half longer than people's, and the starting player wins as often as people's does. (4) So for the shipped four, "plays its deck as a competent person would" now means the reactive half: what to answer, when, and with which card. It could not be seen at stock tables, where a seat that never answers still wins its share, and it is the first thing these tables show.
+
+**In flight when this was written.** `ab-run` #18: each of the four at 200 tables of the other three bots, its own seat under stock AI and under its playbook, seed 20261200 (does a playbook earn its place when the table is competent). And the next batch, four decks started the same day, one agent a deck on the session's machine: candidates for Counter Intelligence, Food and Fellowship, Planeswalker Party and Deep Clue Sea, goldfished against stock on seeds none of them had seen, to be judged at tables of bots.

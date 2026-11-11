@@ -1,0 +1,153 @@
+{
+ "run_id": "2026-11-11-bots-v1-snapshot-2026-11-10-s20261190-bots",
+ "kind": "league",
+ "games": 200,
+ "reference": "https://playgroup.gg (Commander games tracked in the Playgroup app and Playgroup Live); figures copied by hand from the public pages, not scraped",
+ "reference_retrieved": "2026-11-09",
+ "metrics": {
+  "precon_win_rate": {
+   "rows": [
+    {
+     "deck": "Tricky Terrain",
+     "id": "tricky-terrain",
+     "sim_win_rate": 0.22,
+     "sim_games": 200,
+     "sim_win_rate_ci95": [
+      0.1682,
+      0.2824
+     ],
+     "human_win_rate": 0.2859,
+     "human_games": 306,
+     "difference": -0.0659,
+     "human_tier": "B",
+     "sim_rank": 2.0,
+     "human_rank": 1.0
+    },
+    {
+     "deck": "Token Triumph",
+     "id": "token-triumph",
+     "sim_win_rate": 0.46,
+     "sim_games": 200,
+     "sim_win_rate_ci95": [
+      0.3923,
+      0.5292
+     ],
+     "human_win_rate": 0.2652,
+     "human_games": 197,
+     "difference": 0.1948,
+     "human_tier": "B",
+     "sim_rank": 1.0,
+     "human_rank": 2.0
+    },
+    {
+     "deck": "Hail, Caesar",
+     "id": "hail-caesar",
+     "sim_win_rate": 0.16,
+     "sim_games": 200,
+     "sim_win_rate_ci95": [
+      0.1157,
+      0.2171
+     ],
+     "human_win_rate": 0.2152,
+     "human_games": 320,
+     "difference": -0.0552,
+     "human_tier": "C",
+     "sim_rank": 3.5,
+     "human_rank": 3.0
+    },
+    {
+     "deck": "Goblin Storm",
+     "id": "goblin-storm",
+     "sim_win_rate": 0.16,
+     "sim_games": 200,
+     "sim_win_rate_ci95": [
+      0.1157,
+      0.2171
+     ],
+     "human_win_rate": 0.2093,
+     "human_games": 218,
+     "difference": -0.0493,
+     "human_tier": "C",
+     "sim_rank": 3.5,
+     "human_rank": 4.0
+    }
+   ],
+   "decks_compared": 4,
+   "spearman_rank_correlation": 0.738,
+   "pearson_correlation": 0.553,
+   "mean_abs_difference": 0.0913,
+   "sim_sd": 0.1237,
+   "human_sd": 0.0326,
+   "note": "human rates are stock precons against mixed tables, normalised to a 25% baseline; sim rates are inside this league, so compare the ordering more than the levels",
+   "well_measured": {
+    "min_human_games": 100,
+    "decks_compared": 4,
+    "spearman_rank_correlation": 0.738,
+    "pearson_correlation": 0.553
+   }
+  },
+  "first_seat_win_rate": {
+   "sim": 0.285,
+   "sim_games": 200,
+   "human": 0.2923,
+   "even": 0.25,
+   "sim_by_seat": [
+    0.25,
+    0.255,
+    0.23,
+    0.265
+   ],
+   "human_by_seat": [
+    0.2923,
+    0.2569,
+    0.2358,
+    0.215
+   ]
+  },
+  "mulligans_taken": {
+   "sim": {
+    "0": 0.785,
+    "1": 0.1588,
+    "2": 0.0488,
+    "3+": 0.0075
+   },
+   "human": {
+    "0": 0.64,
+    "1": 0.24,
+    "2": 0.09,
+    "3+": 0.03
+   },
+   "sim_seat_games": 800,
+   "sim_any_mulligan": 0.215,
+   "human_any_mulligan": 0.36
+  },
+  "opening_hand_lands": {
+   "sim": {
+    "0": 0.0,
+    "1": 0.0138,
+    "2": 0.3088,
+    "3": 0.3775,
+    "4": 0.21,
+    "5": 0.09,
+    "6": 0.0,
+    "7": 0.0
+   },
+   "human": {
+    "1": 0.05,
+    "2": 0.27,
+    "3": 0.41,
+    "4": 0.21,
+    "5": 0.05
+   },
+   "sim_hands": 800,
+   "sim_mean": 3.05,
+   "human_mean": 2.91
+  },
+  "rounds_per_game": {
+   "sim_mean": 10.32,
+   "sim_median": 9.8,
+   "human_mean": 8.75,
+   "human_median": 9
+  }
+ }
+}

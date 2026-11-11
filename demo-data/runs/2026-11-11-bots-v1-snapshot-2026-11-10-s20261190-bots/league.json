@@ -1,0 +1,38 @@
+{
+ "vibefish": "0.3.1",
+ "league": {
+  "name": "bots-v1",
+  "status": "frozen",
+  "chosen_on": "2026-11-11",
+  "chosen_with": "snapshot-2026-11-10",
+  "description": "The four precons that have a shipped playbook on 2026-11-11 (Goblin Storm, Token Triumph, Hail, Caesar, Tricky Terrain), as one table: a league of the bot decks alone, to see how the bots play each other. Played with league.py play --playbooks every seat is under its playbook; without it the same table is all stock. If this list ever changes (a fifth bot), that is a new league with a new name.",
+  "schedule": "runner/league.py: four decks are one table. A cycle is four games, the seat order shifting by one each game and reshuffled each cycle, so every deck sits in every seat once per cycle. 50 cycles = 200 games, 200 per deck.",
+  "precon_dir": "res/quest/commanderprecons",
+  "reference": "runner/reference/playgroup-commander.json",
+  "checked": "The four decks are league-v1 decks (runner/precon-league.json): same files, same checks."
+ },
+ "deck_ids": [
+  "goblin-storm",
+  "hail-caesar",
+  "token-triumph",
+  "tricky-terrain"
+ ],
+ "league_file": "runner/leagues/bots-v1.json",
+ "seed": 20261190,
+ "cycles": 50,
+ "shards": 5,
+ "games_scheduled": 200,
+ "forge_version": "snapshot-2026-11-10",
+ "runtime": "runtime",
+ "clock_s": 1800,
+ "turn_cap": 120,
+ "mc": "off",
+ "profile": "Default",
+ "playbooks": [
+  "goblin-storm",
+  "hail-caesar",
+  "token-triumph",
+  "tricky-terrain"
+ ],
+ "started": "2026-11-11T20:05:42Z"
+}
