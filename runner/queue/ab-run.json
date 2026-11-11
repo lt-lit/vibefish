@@ -1,6 +1,6 @@
 {
   "requested": "2026-11-11T21:20Z",
-  "note": "The batch of 2026-11-11 at the new exam: four candidates, each at 200 tables whose three opponents are drawn from the four bot decks (runner/leagues/bots-v1.json), every opponent under its shipped playbook; the candidate's deck once under stock AI and once under the candidate. Counter Intelligence (charge), Deep Clue Sea (sleuth), Food and Fellowship (eat), Planeswalker Party (guff). The second request plays Planeswalker Party's sibling with Forge's own attack on the same tables (playbook arm only; ab.py join pairs it with the first request's stock arm). Seed 20261210.",
+  "note": "The request of ab-run #18 again. #18 was created at 20:21 UTC and never started: an hour later it was still queued with no jobs, like the two smoke-test runs of the same push, while runs created later played (GitHub's side; the Pages builds of that push and the next failed at startup). The request: each of the four shipped bots at 200 tables whose three opponents are the other three bots, each under its shipped playbook; the deck's own seat once under stock AI and once under its playbook. Does a playbook still earn its place when the table is competent. Seed 20261200 for all four. The batch's candidates are ab-run #19 (the request before this one, commit 1f0d7cb: counter-intelligence@charge, deep-clue-sea@sleuth, food-and-fellowship@eat, planeswalker-party@guff and @guff-forgeattack, seed 20261210).",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,14 +11,9 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "counter-intelligence@charge,deep-clue-sea@sleuth,food-and-fellowship@eat,planeswalker-party@guff",
+      "decks": "goblin-storm,token-triumph,hail-caesar,tricky-terrain",
       "arms": "stock,playbook",
-      "seed": "20261210"
-    },
-    {
-      "decks": "planeswalker-party@guff-forgeattack",
-      "arms": "playbook",
-      "seed": "20261210"
+      "seed": "20261200"
     }
   ]
 }
