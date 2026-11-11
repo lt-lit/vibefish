@@ -237,9 +237,8 @@ def cmd_abilities(args):
                     for name in on.values():
                         if known.get(name):
                             turns_on[name] += 1
-                elif (e['e'] == 'cast' and e.get('seat') == seat and not e.get('spell') and e.get('from') == 'Battlefield'
-                      and ACTIVATION.match(e.get('ability') or '')):
-                    used[e['card']] += 1
+                elif e['e'] == 'cast' and e.get('seat') == seat and not e.get('spell') and ACTIVATION.match(e.get('ability') or ''):
+                    used[e['card']] += 1                # whatever zone it is logged from: a sacrifice cost has moved it by then
     if not games:
         sys.exit('no games found (check the directory, --deck and --arm)')
     print(f"{games} games. Permanents of the deck with an activated ability (mana abilities aside): own turns on the battlefield, times used\n")

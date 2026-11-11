@@ -6,7 +6,10 @@ name: ab-run
 #
 # Two ways to start a run: Run workflow (the inputs below), or a push to `testing` that changes
 # runner/queue/ab-run.json, whose fields are the same inputs (a new "requested" value is enough to start the same
-# run again). Runs on one branch queue behind each other; a promotion of `testing` to `main` starts nothing.
+# run again). The queue file may also hold a list, "runs": [{decks, arms, seed, games, ...}, ...]: several requests
+# played as one workflow run, each with its own arms and seed (fields a request leaves out come from the top level),
+# so candidates that pair with different earlier runs do not wait for each other. Runs on one branch queue behind
+# each other; a promotion of `testing` to `main` starts nothing.
 on:
   workflow_dispatch:
     inputs:
@@ -54,13 +57,7 @@ jobs:
   prep:
     runs-on: ubuntu-latest
     outputs:
-      decks: ${{ steps.vals.outputs.decks }}
-      games: ${{ steps.vals.outputs.games }}
-      arms: ${{ steps.vals.outputs.arms }}
-      shards_per_deck: ${{ steps.vals.outputs.shards_per_deck }}
-      jobs_per_shard: ${{ steps.vals.outputs.jobs_per_shard }}
-      opponents: ${{ steps.vals.outputs.opponents }}
-      seed: ${{ steps.vals.outputs.seed }}
+      entries: ${{ steps.vals.outputs.entries }}
       forge_channel: ${{ steps.vals.outputs.forge_channel }}
       snapshot_build: ${{ steps.vals.outputs.snapshot_build }}
       matrix: ${{ steps.vals.outputs.matrix }}
@@ -80,28 +77,39 @@ jobs:
           IN_FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_snapshot_build }}
         run: |
           python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
-          import datetime, json, os
+          import datetime, json, os, sys
           vals = {"decks": "token-triumph,goblin-storm,tricky-terrain,hail-caesar", "games": "100", "arms": "stock,data,mc,mcdata",
                   "shards_per_deck": "5", "jobs_per_shard": "2", "opponents": "3", "seed": "", "forge_channel": "snapshot",
                   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.08"}
+          runs = [{}]
           if os.environ["EVENT"] == "push":
               queued = json.load(open("runner/queue/ab-run.json"))
               vals.update({k: str(v).strip() for k, v in queued.items() if k in vals})
+              if isinstance(queued.get("runs"), list) and queued["runs"]:
+                  runs = queued["runs"]
           else:
               vals.update({k: os.environ["IN_" + k.upper()].strip() for k in vals if os.environ.get("IN_" + k.upper(), "").strip()})
-          if not vals["seed"]:
-              vals["seed"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d")
-          decks = [d.strip() for d in vals["decks"].split(",") if d.strip()]
-          for k, v in vals.items():
-              print(f"{k}={v}")
+          today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d")
+          print(f"forge_channel={vals['forge_channel']}")
           print("snapshot_build=" + (vals["forge_snapshot_build"] if vals["forge_channel"] == "snapshot" else ""))
+          # Each request: its own decks, arms, seed, tables and shards; what it leaves out comes from the top level.
           # "deck@variant" plays the deck with playbook/variants/<deck>-<variant>.json in place of its own file, so
           # several candidate playbooks can be measured side by side without any of them being the shipped one.
-          matrix = []
-          for entry in decks:
-              deck, _, variant = entry.partition("@")
-              data = f"playbook/variants/{deck}-{variant}.json" if variant else ""
-              matrix += [{"entry": entry, "deck": deck, "data": data, "shard": k} for k in range(1, int(vals["shards_per_deck"]) + 1)]
+          matrix, entries = [], []
+          for run in runs:
+              r = dict(vals)
+              r.update({k: str(v).strip() for k, v in run.items() if k in vals and k not in ("forge_channel", "forge_snapshot_build")})
+              seed = r["seed"] or today
+              for entry in [d.strip() for d in r["decks"].split(",") if d.strip()]:
+                  if entry in entries:
+                      sys.exit(f"{entry} is requested twice: one request per deck or candidate in a run")
+                  entries.append(entry)
+                  deck, _, variant = entry.partition("@")
+                  data = f"playbook/variants/{deck}-{variant}.json" if variant else ""
+                  matrix += [{"entry": entry, "deck": deck, "data": data, "shard": k, "shards": r["shards_per_deck"], "arms": r["arms"],
+                              "games": r["games"], "seed": seed, "opponents": r["opponents"], "jobs": r["jobs_per_shard"]}
+                             for k in range(1, int(r["shards_per_deck"]) + 1)]
+          print("entries=" + ",".join(entries))
           print("matrix=" + json.dumps(matrix))
           PY
 
@@ -135,10 +143,10 @@ jobs:
         run: |
           DATA=()
           if [ -n "${{ matrix.data }}" ]; then DATA=(--data "${{ matrix.data }}"); fi
-          python3 -I runner/ab.py play --deck "${{ matrix.deck }}" --games "${{ needs.prep.outputs.games }}" --seed "${{ needs.prep.outputs.seed }}" \
-            --out "results/ab-${{ matrix.entry }}" --runtime forge/runtime --arms "${{ needs.prep.outputs.arms }}" \
-            --shards "${{ needs.prep.outputs.shards_per_deck }}" --shard "${{ matrix.shard }}" -j "${{ needs.prep.outputs.jobs_per_shard }}" \
-            --opponents "${{ needs.prep.outputs.opponents }}" "${DATA[@]}"
+          python3 -I runner/ab.py play --deck "${{ matrix.deck }}" --games "${{ matrix.games }}" --seed "${{ matrix.seed }}" \
+            --out "results/ab-${{ matrix.entry }}" --runtime forge/runtime --arms "${{ matrix.arms }}" \
+            --shards "${{ matrix.shards }}" --shard "${{ matrix.shard }}" -j "${{ matrix.jobs }}" \
+            --opponents "${{ matrix.opponents }}" "${DATA[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -169,7 +177,7 @@ jobs:
         run: |
           set -e
           mkdir -p results
-          for d in $(echo "${{ needs.prep.outputs.decks }}" | tr ',' ' '); do
+          for d in $(echo "${{ needs.prep.outputs.entries }}" | tr ',' ' '); do
             mkdir -p "results/ab-$d"
             for a in artifacts/ab-$d-[0-9]*; do
               case "$a" in *-log) continue;; esac

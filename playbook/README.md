@@ -197,7 +197,7 @@ Candidate playbooks that are not the deck's shipped one: `variants/<deck>-<name>
 says what it is a variant of). `runner/ab.py --data playbook/variants/<deck>-<name>.json` plays one locally, and the
 `ab-run` workflow takes `deck@name` in its deck list, so several candidates can be measured side by side on the same
 tables before one of them replaces the playbook in `precons/`. A variant carries no deck data: the data arms need the
-deck's own file. `<deck>-draft.json` is the output of `runner/playbook.py draft`.
+deck's own file, unless the variant brings a `curated` block of its own (key cards for the tutors, say), which the `playbookdata` arm then reads from the same file. `<deck>-draft.json` is the output of `runner/playbook.py draft`.
 
 A candidate needs only its own arm when the tables have been played before: run it with `--arms playbook` on the seed
 of an earlier run, and `runner/ab.py join` lines its games up with that run's stock arm table by table

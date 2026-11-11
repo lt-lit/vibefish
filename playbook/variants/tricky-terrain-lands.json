@@ -3,9 +3,9 @@
  "deck": "tricky-terrain",
  "variant": "lands",
  "of": "playbook/precons/tricky-terrain.json",
- "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. The playbook arm reads only the playbook object; the playbookdata arm also reads the curated block (key cards for the tutors).",
  "playbook": {
-  "version": 3,
+  "version": 4,
   "attack": {
    "policy": "pressure",
    "target": "highest_life",
@@ -15,6 +15,13 @@
   },
   "cast": {
    "rules": [
+    {
+     "activate": [
+      "Thespian's Stage"
+     ],
+     "ability": "becomes a copy",
+     "target": "Dark Depths"
+    },
     {
      "play": [
       "Sol Ring",
@@ -116,7 +123,7 @@
     }
    ]
   },
-  "notes": "Curated from the draft: the rocks and Growth Spiral, Omo at once (stock Forge casts its three-mana commander around turn six), the cards that find lands, then the landfall payoffs, which go down before the turn's land so the land triggers them (before_land), the ramp sorceries, and the big creatures (stock sits on its six-drops with seven lands). Version 2 adds the X spells as mana sinks, last in line so they take what the turn leaves: Hydroid Krasis for four or more, Finale of Revelation for four to nine with an empty hand and a library to draw from, Nissa for three or more. Forge's AI kept all three in hand through version 1's games with the mana for them unspent. Version 3 takes Seer's Sundial's landfall trigger (pay two, draw a card) when the hand is three cards or fewer: Forge's AI turned it down 51 times in version 2's forty goldfish games. Left to Forge: Aggressive Biomancy and Drown in Dreams (aimed X spells), Terastodon, Acidic Slime and Skullwinder (aimed as they enter), the instants, Treasure Cruise (delve), and four cards its AI never casts (Curse of the Swine, Beast Within, Summary Dismissal, Oblivion Stone) plus Mirage Mirror and Magus of the Candelabra, which need activations no rule makes yet. Pressure attack, highest life first. Goldfish, 40 seeds (8001-8040): version 1 killed in 10.77 turns and version 2 in 10.64 (39 of 40 finished); stock's first four games took 14, 15, 14 and 14.",
+  "notes": "Curated from the draft: the rocks and Growth Spiral, Omo at once (stock Forge casts its three-mana commander around turn six), the cards that find lands, then the landfall payoffs, which go down before the turn's land so the land triggers them (before_land), the ramp sorceries, and the big creatures (stock sits on its six-drops with seven lands). Version 2 adds the X spells as mana sinks, last in line so they take what the turn leaves: Hydroid Krasis for four or more, Finale of Revelation for four to nine with an empty hand and a library to draw from, Nissa for three or more. Forge's AI kept all three in hand through version 1's games with the mana for them unspent. Version 3 takes Seer's Sundial's landfall trigger (pay two, draw a card) when the hand is three cards or fewer: Forge's AI turned it down 51 times in version 2's forty goldfish games. Version 4 makes the deck's two-land combo, first of all rules: Thespian's Stage becomes a copy of Dark Depths (a copy with no ice counters is sacrificed for Marit Lage, 20/20 flying and indestructible); stock Forge had the Stage in play for 75 turns of forty games and never used it. Left to Forge: Aggressive Biomancy and Drown in Dreams (aimed X spells), Terastodon, Acidic Slime and Skullwinder (aimed as they enter), the instants, Treasure Cruise (delve), and four cards its AI never casts (Curse of the Swine, Beast Within, Summary Dismissal, Oblivion Stone) plus Mirage Mirror and Magus of the Candelabra, which need activations no rule makes yet. Pressure attack, highest life first. Goldfish, 40 seeds (8001-8040): version 1 killed in 10.77 turns and version 2 in 10.64 (39 of 40 finished); stock's first four games took 14, 15, 14 and 14.",
   "on": "2026-11-11",
   "triggers": [
    {
@@ -128,6 +135,19 @@
      "library >= 20"
     ]
    }
+  ]
+ },
+ "curated": {
+  "notes": "Read only by the playbookdata arm (runner/ab.py: --data and --playbook on the same file). Key cards order what Forge's AI tutors for: the two lands of the Marit Lage line first, which the playbook's first rule then makes, then the Locus pair and the landfall payoffs as in the deck's own data file.",
+  "key_cards": [
+   "Dark Depths",
+   "Thespian's Stage",
+   "Cloudpost",
+   "Glimmerpost",
+   "Avenger of Zendikar",
+   "Scute Swarm",
+   "Rampaging Baloths",
+   "Tatyova, Benthic Druid"
   ]
  }
 }
