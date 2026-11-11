@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-11T03:35Z",
-  "note": "Three requests in one run. Goblin Storm: the shipped attack with Zada held until she can be aimed at, on run #5's tables (its stock and version-2 arms are the pair). Token Triumph: the shipped version 3 plus Mentor of the Meek's trigger and the unused token makers as mana sinks, on run #6's tables (run #8's cast arm is the pair). Tricky Terrain: its first playbook (version 5: commander at once, landfall before the land, X spells, the Marit Lage line, removal when threatened) against stock on new tables, with and without key cards for the tutors.",
+  "requested": "2026-11-11T03:55Z",
+  "note": "Four requests in one run. Goblin Storm: the shipped attack with Zada held until she can be aimed at, on run #5's tables. Token Triumph: the shipped version 3 plus Mentor of the Meek's trigger and the unused token makers as mana sinks, on run #6's tables. Tricky Terrain: its first playbook under the go-wide attack against stock on new tables, with and without key cards for the tutors, and the same rules under the pressure attack on the same tables.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -19,8 +19,13 @@
       "seed": "20261141"
     },
     {
-      "decks": "tricky-terrain@lands",
+      "decks": "tricky-terrain@lands-wide",
       "arms": "stock,playbook,playbookdata",
+      "seed": "20261142"
+    },
+    {
+      "decks": "tricky-terrain@lands",
+      "arms": "playbook",
       "seed": "20261142"
     }
   ]
