@@ -57,7 +57,7 @@ for rd in ARGS.runs:
         def label(s):   # A/B runs: the arm, split into the deck under test and its three stock opponents
             if ab_arm and not ARGS.by_profile:
                 return f"{ab_arm}/{'focus' if deck_id[s] == focus else 'opps'}"
-            return label(s)
+            return arm_of(prof[s], run_id)
         def rkey(s):    # per-deck tables collapse to the same split in A/B runs
             return label(s) if ab_arm and not ARGS.by_profile else deck_id[s]
         for d in run['decks']:
