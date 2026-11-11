@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-11T08:04:31Z",
+ "generated": "2026-11-11T08:16:52Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -54,14 +54,14 @@
     "exact_p": 0.0
    },
    "goldfish": {
-    "source": "demo-data/goldfish/2026-11-10-goblin-storm/seeds-9001-9100-as-shipped.json",
+    "source": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json",
     "games": 100,
     "stock_kill_turn": 11.4,
-    "bot_kill_turn": 9.25,
-    "faster_by": 2.15,
+    "bot_kill_turn": 9.2,
+    "faster_by": 2.2,
     "faster_by_ci95": [
-     1.837,
-     2.463
+     1.88,
+     2.52
     ],
     "seeds_paired": 100
    }
@@ -228,14 +228,14 @@
     "exact_p": 0.0133
    },
    "goldfish": {
-    "source": "demo-data/goldfish/2026-11-11/tricky-terrain-seeds-8001-8040.json",
+    "source": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",
     "games": 40,
     "stock_kill_turn": 13.394,
-    "bot_kill_turn": 10.641,
-    "faster_by": 2.938,
+    "bot_kill_turn": 10.974,
+    "faster_by": 2.5,
     "faster_by_ci95": [
-     2.291,
-     3.584
+     1.764,
+     3.236
     ],
     "seeds_paired": 32
    }
