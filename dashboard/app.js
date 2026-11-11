@@ -397,11 +397,11 @@
     if (m.opening_hand_lands) add('Lands in kept hand', num(m.opening_hand_lands.sim_mean, 2), num(m.opening_hand_lands.human_mean, 2), `${m.opening_hand_lands.sim_hands} hands`);
     if (m.rounds_per_game) add('Rounds per game', num(m.rounds_per_game.sim_mean, 1), num(m.rounds_per_game.human_mean, 2), 'a round is one turn for each player');
     if (withDecks) (m.precon_win_rate && m.precon_win_rate.rows || []).forEach((r) => { if (r.human_win_rate != null) add(`${r.deck} win rate`, pct(r.sim_win_rate, 1), pct(r.human_win_rate, 1), `${r.sim_games} sim games vs ${r.human_games} human stock games`); });
-    if (m.precon_win_rate && m.precon_win_rate.spearman_rank_correlation != null) add('Precon rank correlation', String(m.precon_win_rate.spearman_rank_correlation), '1.0', `${m.precon_win_rate.decks_compared} decks; the human table ranks stock precons against mixed tables`);
+    if (m.precon_win_rate && m.precon_win_rate.spearman_rank_correlation != null) add('Precon rank correlation', String(m.precon_win_rate.spearman_rank_correlation), '0.66 at best', `${m.precon_win_rate.decks_compared} decks; the human table ranks stock precons against unknown decks and a typical rate in it is good to about five points, so a second sample of it would agree with it at about 0.45`);
     if (m.precon_win_rate && m.precon_win_rate.mean_abs_difference != null) add('Mean gap in precon win rate', `${(m.precon_win_rate.mean_abs_difference * 100).toFixed(1)} pts`, '0', `spread across precons: sim ${(m.precon_win_rate.sim_sd * 100).toFixed(1)} pts, human ${(m.precon_win_rate.human_sd * 100).toFixed(1)} pts`);
     const fig = el('figure', { class: 'chart wide calibration' },
       el('figcaption', {}, el('div', {}, el('h3', { text: 'Calibration against human games' }),
-        el('p', { text: `Sim numbers next to Playgroup.gg's tracked Commander games (reference copied ${sc.reference_retrieved || ''}). Likeness, not strength.` }))),
+        el('p', { text: `Sim numbers next to Playgroup.gg's tracked Commander games (reference copied ${sc.reference_retrieved || ''}). Likeness, not strength. The human figures are over the tables people track, against unknown decks: context, not a target.` }))),
       el('div', { class: 'table-view' }, dataTable(['Metric', 'Sim', 'Human', 'Note'], rows)));
     return fig;
   }
@@ -439,7 +439,7 @@
     const tile = (value, title, note) => el('article', { class: 'tile' }, el('div', { class: 'value', text: value }), el('div', { class: 'label', text: title }), note ? el('div', { class: 'note', text: note }) : null);
     tiles.replaceChildren(
       tile(pw.spearman_rank_correlation != null ? String(pw.spearman_rank_correlation) : '–', 'Rank correlation with human results',
-        pw.decks_compared ? `Spearman over ${pw.decks_compared} precons: 1.0 is the same order, 0 is no relation${pw.well_measured ? `; ${pw.well_measured.spearman_rank_correlation} over the ${pw.well_measured.decks_compared} with 100+ human games` : ''}` : 'no precon matched the human table'),
+        pw.decks_compared ? `Spearman over ${pw.decks_compared} precons: 1.0 would be the same order, 0 no relation; the human table is noisy itself (a second sample of its size would agree with it at about 0.45, a perfect simulator at about 0.66)${pw.well_measured ? `; ${pw.well_measured.spearman_rank_correlation} over the ${pw.well_measured.decks_compared} with 100+ human games` : ''}` : 'no precon matched the human table'),
       tile(pw.mean_abs_difference != null ? `${(pw.mean_abs_difference * 100).toFixed(1)} pts` : '–', 'Mean gap in win rate', 'Average absolute difference between a precon\'s sim and human win rate'),
       tile(pw.sim_sd != null ? `${(pw.sim_sd * 100).toFixed(1)} vs ${(pw.human_sd * 100).toFixed(1)}` : '–', 'Spread of win rates, sim vs human', 'Standard deviation across precons, in points: a wider sim spread means the AI exaggerates deck differences'),
       tile(sc.rounds_per_game ? `${num(sc.rounds_per_game.sim_mean, 1)} vs ${num(sc.rounds_per_game.human_mean, 2)}` : '–', 'Rounds per game, sim vs human', 'A round is one turn for each player'));
@@ -615,7 +615,6 @@
       const ci = t && t.difference_ci95;
       return [
         `${b.name} · ${(b.commanders || []).join(' / ')}`,
-        b.human && b.human.win_rate != null ? pct(b.human.win_rate, 1) : '–',
         t ? rate(t.stock) : '–',
         t ? rate(t.bot) : '–',
         t ? `${signed(t.difference)}${ci ? ` (${signed(ci[0], 0)} to ${signed(ci[1], 0)})` : ''}` : '–',
@@ -626,8 +625,8 @@
     sec.replaceChildren(
       el('div', { class: 'head' }, el('div', {},
         el('h2', { text: 'Per-deck bots' }),
-        el('p', { class: 'tag', text: 'One deck in the seat, played twice at the same four-player tables: by Forge\'s stock AI and under the deck\'s own playbook (which card to cast when, which trigger to take, whom to attack). Win rates are of 200 tables unless the count says otherwise; the difference is in points with its 95% interval. Goldfish is the deck\'s kill turn against three opponents that do nothing, stock then playbook.' }))),
-      el('div', { class: 'table-view' }, dataTable(['Deck', 'People', 'Stock AI', 'With playbook', 'Difference', 'Goldfish turns', 'Status'], rows)),
+        el('p', { class: 'tag', text: 'One deck in the seat, played twice at the same four-player tables: by Forge\'s stock AI and under the deck\'s own playbook (which card to cast when, which trigger to take, whom to attack). Win rates are of 200 tables unless the count says otherwise; the difference is in points with its 95% interval. Goldfish is the deck\'s kill turn against three opponents that do nothing, stock then playbook. The other three seats at these tables are Forge\'s stock AI, so a row says what the playbook adds over Forge\'s AI with the same deck, not how the deck would do against people.' }))),
+      el('div', { class: 'table-view' }, dataTable(['Deck', 'Stock AI', 'With playbook', 'Difference', 'Goldfish turns', 'Status'], rows)),
       el('ul', { class: 'bot-notes' }, bots.filter((b) => b.summary).map((b) => el('li', {}, el('strong', { text: `${b.name}: ` }), b.summary))));
     sec.hidden = false;
   }
