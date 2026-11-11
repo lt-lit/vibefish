@@ -1,17 +1,22 @@
 {
-  "requested": "2026-11-11T16:30Z",
-  "note": "A small check after the fetch script and checksum file changed (which changes the Actions cache key): the runners must fetch the 11-10 runtime from this repository's archive. Goblin Storm, stock against its shipped playbook, 40 tables in two shards.",
-  "games": "40",
-  "shards_per_deck": "2",
+  "requested": "2026-11-11T16:55Z",
+  "note": "Two confirming runs in one workflow run: each deck's shipped playbook against stock on 200 tables whose opponents it has not met (seeds ten or more from every earlier run of the deck). Token Triumph version 3 was the best of three candidates on run #6's tables (67 wins against stock's 43). Goblin Storm version 3 (version 2 plus the Zada hold) was chosen over version 2 on run #5's tables (48 wins against 40, stock 18). Whatever these say is the figure for the shipped file.",
+  "games": "200",
+  "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
   "runs": [
     {
+      "decks": "token-triumph",
+      "arms": "stock,playbook",
+      "seed": "20261160"
+    },
+    {
       "decks": "goblin-storm",
       "arms": "stock,playbook",
-      "seed": "20261146"
+      "seed": "20261170"
     }
   ]
 }
