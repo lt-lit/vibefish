@@ -12,12 +12,22 @@ name: forge-archive
 # ({"requested": "...", "builds": "2.0.16-SNAPSHOT-11.10,2.0.16-SNAPSHOT-11.08"}). It commits nothing: the checksum
 # it prints (and uploads next to the archive) is added to forge/SHA256SUMS by hand, which is what switches
 # forge/fetch-forge.sh over to the archive.
+#
+# An archive that is already on the release is kept as it is: published runs are pinned to its checksum, and a second
+# pack of the same build need not be byte-identical (directory times differ). Running the workflow again for an
+# archived build therefore only refreshes the release notes and, when the Actions cache no longer has the runtime,
+# downloads the archive and verifies it against forge/SHA256SUMS on the way. "replace": true in the queue file (or the
+# input) overwrites an archive; forge/SHA256SUMS must then be given the new checksum in the same breath.
 on:
   workflow_dispatch:
     inputs:
       builds:
         description: "Snapshot builds to archive, comma-separated (e.g. 2.0.16-SNAPSHOT-11.10)"
         required: true
+      replace:
+        description: "Overwrite an archive that is already on the release (then update forge/SHA256SUMS)"
+        type: boolean
+        default: false
   push:
     branches: [testing]
     paths: [runner/queue/forge-archive.json]
@@ -30,23 +40,30 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.vals.outputs.matrix }}
+      replace: ${{ steps.vals.outputs.replace }}
     steps:
       - uses: actions/checkout@v4
       - id: vals
         env:
           EVENT: ${{ github.event_name }}
           IN_BUILDS: ${{ inputs.builds }}
+          IN_REPLACE: ${{ inputs.replace }}
         run: |
+          set -o pipefail   # a refused request fails this step with its message, not the next job with an empty matrix
           python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
           import json, os, re
           builds = os.environ.get("IN_BUILDS", "")
+          replace = os.environ.get("IN_REPLACE", "") == "true"
           if os.environ["EVENT"] == "push":
-              builds = str(json.load(open("runner/queue/forge-archive.json")).get("builds", ""))
+              q = json.load(open("runner/queue/forge-archive.json"))
+              builds = str(q.get("builds", ""))
+              replace = q.get("replace") is True
           names = [b.strip() for b in builds.split(",") if b.strip()]
           bad = [b for b in names if not re.fullmatch(r"[0-9.]+-SNAPSHOT-[0-9]{2}\.[0-9]{2}", b)]
           if bad or not names:
               raise SystemExit(f"builds must look like 2.0.16-SNAPSHOT-11.10 (got {builds!r})")
           print("matrix=" + json.dumps(names))
+          print("replace=" + ("true" if replace else "false"))
           PY
 
   archive:
@@ -69,7 +86,7 @@ jobs:
           key: forge-runtime-${{ runner.os }}-snapshot-${{ matrix.build }}-${{ hashFiles('forge/VERSION', 'forge/SHA256SUMS', 'forge/fetch-forge.sh') }}
           restore-keys: |
             forge-runtime-${{ runner.os }}-snapshot-${{ matrix.build }}-
-      - name: Or from upstream, while the tarball is still there
+      - name: Or fetched (this repository's archive when forge/SHA256SUMS lists it, else upstream while the tarball is there)
         run: forge/fetch-forge.sh
       - name: Pack
         id: pack
@@ -95,6 +112,7 @@ jobs:
       - name: Attach to the release forge-runtimes
         env:
           GH_TOKEN: ${{ github.token }}
+          REPLACE: ${{ needs.prep.outputs.replace }}
         run: |
           set -euo pipefail
           name="${{ steps.pack.outputs.name }}"
@@ -119,5 +137,18 @@ jobs:
           else
             gh release create forge-runtimes --title "Forge runtimes (archived builds)" --notes-file notes.md --prerelease --target "${{ github.sha }}"
           fi
-          gh release upload forge-runtimes "$name" "$name.sha256" "forge-runtime-${stamp}.info.txt" --clobber
+          # An archive already on the release stays as it is unless replace was asked for: forge/SHA256SUMS pins it.
+          have=$(gh release view forge-runtimes --json assets --jq '.assets[].name')
+          if grep -qxF "$name" <<<"$have" && [ "$REPLACE" != "true" ]; then
+            old=$(gh release download forge-runtimes -p "$name.sha256" -O - 2>/dev/null | cut -d' ' -f1 || true)
+            new=$(cut -d' ' -f1 "$name.sha256")
+            if [ "$old" = "$new" ]; then
+              echo "::notice::$name is already on the release and this pack is identical (sha256 $new): kept"
+            else
+              echo "::notice::$name is already on the release (sha256 ${old:-unknown}) and is kept. This run's pack has sha256 $new; a second pack of the same build can differ in directory times. Ask for replace to overwrite it, and update forge/SHA256SUMS."
+            fi
+          else
+            gh release upload forge-runtimes "$name" "$name.sha256" "forge-runtime-${stamp}.info.txt" --clobber
+            echo "::notice::$name uploaded, sha256 $(cut -d' ' -f1 "$name.sha256"): add it to forge/SHA256SUMS"
+          fi
           gh release view forge-runtimes --json assets --jq '.assets[] | "\(.name) \(.size)"'

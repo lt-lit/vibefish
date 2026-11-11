@@ -1,7 +1,19 @@
 # runner/queue
 
-Run requests for the Actions workflows, so a run can be started by a commit instead of a click. A push to `testing`
-that changes `ab-run.json` starts `ab-run.yml` with the file's fields as its inputs (the same names and defaults as
-the Run workflow form; a new `requested` value is enough to run the same request again). Runs on the branch queue
-behind each other, and promoting `testing` to `main` starts nothing. `note` says what the run is for and is ignored
-by the workflow. The last request stays in the file as the record of what was asked for.
+Run requests for the Actions workflows, so a run can be started by a commit instead of a click. `note` says what a
+request is for and is ignored by the workflows; the last request stays in each file as the record of what was asked
+for. Promoting `testing` to `main` starts nothing.
+
+`ab-run.json`: a push to `testing` that changes it starts `ab-run.yml` with the file's fields as its inputs (the same
+names and defaults as the Run workflow form; a new `requested` value is enough to run the same request again).
+`"runs": [{"decks": ..., "arms": ..., "seed": ...}, ...]` holds several requests played as one workflow run, each
+with its own decks, arms and seed, the top-level fields as defaults. A deck written `deck@name` plays the candidate
+`playbook/variants/<deck>-<name>.json`; a candidate played with `arms: playbook` on the seed of an earlier run pairs
+with that run's stock arm (`runner/ab.py join`). Runs do not wait for each other: each push starts its run at once.
+Seeds: a deck's runs are kept ten seeds apart, because nearby seeds draw the same opponents (`runner/ab.py`, Seeds),
+and a confirming run gets a seed of its own.
+
+`forge-archive.json`: a push to `testing` that changes it starts `forge-archive.yml` for the snapshot `builds` named
+there (comma-separated). An archive that is already on the release `forge-runtimes` is kept as it is; `"replace": true`
+overwrites it, and `forge/SHA256SUMS` then needs the new checksum at once, because every pinned fetch verifies
+against it.

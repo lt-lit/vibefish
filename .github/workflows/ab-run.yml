@@ -78,6 +78,7 @@ jobs:
           IN_FORGE_CHANNEL: ${{ inputs.forge_channel }}
           IN_FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_snapshot_build }}
         run: |
+          set -o pipefail   # a refused request fails this step with its message, not the next job with an empty matrix
           python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
           import datetime, json, os, sys
           vals = {"decks": "token-triumph,goblin-storm,tricky-terrain,hail-caesar", "games": "100", "arms": "stock,data,mc,mcdata",

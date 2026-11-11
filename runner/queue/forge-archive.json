@@ -1,5 +1,5 @@
 {
-  "requested": "2026-11-11T16:20Z",
-  "note": "The two snapshot builds published runs depend on: 11-08 (the league, the first A/Bs) and 11-10 (everything since the cast rules). Upstream no longer has either. Packed again without the AI profile files Vibefish's runners had added to the cached runtimes.",
+  "requested": "2026-11-11T16:55Z",
+  "note": "The two snapshot builds published runs depend on: 11-08 (the league, the first A/Bs) and 11-10 (everything since the cast rules). Both are on the release and stay as they are (an archive is replaced only with \"replace\": true); this request refreshes the release notes, which still said upstream keeps a build for one day. Upstream holds one snapshot at a time: 11-08 is gone there, 11-10 was still there on 2026-11-11 16:16 UTC.",
   "builds": "2.0.16-SNAPSHOT-11.10,2.0.16-SNAPSHOT-11.08"
 }
