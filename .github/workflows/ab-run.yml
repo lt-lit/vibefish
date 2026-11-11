@@ -30,6 +30,13 @@ on:
       opponents:
         description: "Opponents at each table: 3 (four-player tables, the default) or 1 (duels: a faster read on combat, blind to table politics)"
         default: "3"
+      pool:
+        description: "Deck list to draw the opponents from (blank = the 91-deck league); runner/leagues/bots-v1.json is the decks with a shipped playbook"
+        default: ""
+      opponent_playbooks:
+        description: "Seat every opponent that has a shipped playbook under it (with the pool above: tables of bots, not of stock AI)"
+        type: boolean
+        default: false
       seed:
         description: "Base seed (blank = today's date)"
         default: ""
@@ -74,16 +81,18 @@ jobs:
           IN_SHARDS_PER_DECK: ${{ inputs.shards_per_deck }}
           IN_JOBS_PER_SHARD: ${{ inputs.jobs_per_shard }}
           IN_OPPONENTS: ${{ inputs.opponents }}
+          IN_POOL: ${{ inputs.pool }}
+          IN_OPPONENT_PLAYBOOKS: ${{ inputs.opponent_playbooks }}
           IN_SEED: ${{ inputs.seed }}
           IN_FORGE_CHANNEL: ${{ inputs.forge_channel }}
           IN_FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_snapshot_build }}
         run: |
           set -o pipefail   # a refused request fails this step with its message, not the next job with an empty matrix
           python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
-          import datetime, json, os, sys
+          import datetime, json, os, re, sys
           vals = {"decks": "token-triumph,goblin-storm,tricky-terrain,hail-caesar", "games": "100", "arms": "stock,data,mc,mcdata",
                   "shards_per_deck": "5", "jobs_per_shard": "2", "opponents": "3", "seed": "", "forge_channel": "snapshot",
-                  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10"}
+                  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10", "pool": "", "opponent_playbooks": "false"}
           runs = [{}]
           if os.environ["EVENT"] == "push":
               queued = json.load(open("runner/queue/ab-run.json"))
@@ -103,6 +112,12 @@ jobs:
               r = dict(vals)
               r.update({k: str(v).strip() for k, v in run.items() if k in vals and k not in ("forge_channel", "forge_snapshot_build")})
               seed = r["seed"] or today
+              # The opponents: drawn from the league (stock AI), or from `pool` (a deck list under runner/), and with
+              # opponent_playbooks every opponent that has a shipped playbook plays under it: a table of bots.
+              if r["pool"] and (not re.fullmatch(r"runner/[A-Za-z0-9_./-]+\.json", r["pool"]) or ".." in r["pool"] or not os.path.isfile(r["pool"])):
+                  sys.exit(f"pool must be a deck list under runner/ (got {r['pool']!r})")
+              if r["opponent_playbooks"].lower() not in ("true", "false"):
+                  sys.exit(f"opponent_playbooks must be true or false (got {r['opponent_playbooks']!r})")
               for entry in [d.strip() for d in r["decks"].split(",") if d.strip()]:
                   if entry in entries:
                       sys.exit(f"{entry} is requested twice: one request per deck or candidate in a run")
@@ -110,7 +125,8 @@ jobs:
                   deck, _, variant = entry.partition("@")
                   data = f"playbook/variants/{deck}-{variant}.json" if variant else ""
                   matrix += [{"entry": entry, "deck": deck, "data": data, "shard": k, "shards": r["shards_per_deck"], "arms": r["arms"],
-                              "games": r["games"], "seed": seed, "opponents": r["opponents"], "jobs": r["jobs_per_shard"]}
+                              "games": r["games"], "seed": seed, "opponents": r["opponents"], "jobs": r["jobs_per_shard"],
+                              "pool": r["pool"], "opp_playbooks": r["opponent_playbooks"].lower() == "true"}
                              for k in range(1, int(r["shards_per_deck"]) + 1)]
           print("entries=" + ",".join(entries))
           print("matrix=" + json.dumps(matrix))
@@ -146,6 +162,8 @@ jobs:
         run: |
           DATA=()
           if [ -n "${{ matrix.data }}" ]; then DATA=(--data "${{ matrix.data }}"); fi
+          if [ -n "${{ matrix.pool }}" ]; then DATA+=(--pool "${{ matrix.pool }}"); fi
+          if [ "${{ matrix.opp_playbooks }}" = "true" ]; then DATA+=(--opponent-playbooks); fi
           python3 -I runner/ab.py play --deck "${{ matrix.deck }}" --games "${{ matrix.games }}" --seed "${{ matrix.seed }}" \
             --out "results/ab-${{ matrix.entry }}" --runtime forge/runtime --arms "${{ matrix.arms }}" \
             --shards "${{ matrix.shards }}" --shard "${{ matrix.shard }}" -j "${{ matrix.jobs }}" \

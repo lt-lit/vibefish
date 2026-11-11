@@ -4,13 +4,19 @@
     runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph
                       [--runtime forge/runtime-snapshot] [--arms stock,data] [-j 2] [--clock 1800] [--turn-cap 120] [--opponents 3]
                       [--data playbook/precons/<deck>.json] [--shards K --shard k] [--limit N] [--dry-run]
+                      [--pool runner/leagues/bots-v1.json] [--opponent-playbooks]
     runner/ab.py rollup results/ab-token-triumph
     runner/ab.py pool --out pooled.json results/ab-token-triumph/rollup.json demo-data/ab/2026-11-09-ab-v1/token-triumph.json
     runner/ab.py join --out joined.json [--against v2] stock=run5/rollup.json:stock v2=run5/rollup.json:playbook pressure=run7/rollup.json
 
 Game i seats the focus deck in seat (i-1) mod 4 with three opponents drawn (seeded) from the rest of the league,
 all stock Forge AI, and plays that table once per arm with the same seed, so the arms differ only in what the
-focus seat is given:
+focus seat is given. That was the exam until 2026-11-11. Since then the opponents can be the bots:
+--pool FILE draws them from another deck list (runner/leagues/bots-v1.json, the decks that have a shipped
+playbook) and --opponent-playbooks seats every opponent that has a shipped playbook
+(playbook/precons/<id>.json) under it, in every arm. The arms still differ only in the focus seat, so `stock`
+against `playbook` at such tables asks whether the deck's playbook helps among competent pilots, not among
+stock ones (DESIGN.md §24). The arms:
 
     stock    the deck as Forge ships it: Default profile, no data
     data     the deck's data file through the harness (--data: KeyCards, card roles, combos, pairs) and a per-deck
@@ -78,8 +84,11 @@ ARMS = {
 }
 
 
-def schedule(league, deck_id, seed, games, opponents=3):
-    others = sorted(d["id"] for d in league["decks"] if d["id"] != deck_id)
+def schedule(league, deck_id, seed, games, opponents=3, pool=None):
+    """The tables of a run. Opponents come from `pool` (a deck list) when one is given, else from the league."""
+    others = sorted(d["id"] for d in (pool or league)["decks"] if d["id"] != deck_id)
+    if len(others) < opponents:
+        raise SystemExit(f"{len(others)} deck(s) to draw {opponents} opponent(s) from")
     out = []
     for i in range(1, games + 1):
         rng = random.Random(seed * 31 + i)
@@ -90,7 +99,7 @@ def schedule(league, deck_id, seed, games, opponents=3):
     return out
 
 
-def near_seed_runs(deck_id, seed, games, opponents, base=None):
+def near_seed_runs(deck_id, seed, games, opponents, base=None, pool=None):
     """Published runs of this deck (rollups under demo-data/ab) on another seed that share opponent draws with this
     request: [(seed, shared tables, a rollup's path)]. The draw of table i is seeded with seed*31 + i (schedule)."""
     mine = {seed * 31 + i for i in range(1, games + 1)}
@@ -107,6 +116,8 @@ def near_seed_runs(deck_id, seed, games, opponents, base=None):
             if not isinstance(r, dict) or r.get("deck") != deck_id or not isinstance(r.get("seed"), int) or r["seed"] == seed:
                 continue
             if r.get("opponents", 3) != opponents or not isinstance(r.get("games"), dict) or r["seed"] in found:
+                continue
+            if r.get("pool") != pool:           # another opponent pool is another draw
                 continue
             tables = max((g.get("index", 0) for arm in r["games"].values() for g in arm), default=0)
             shared = len(mine & {r["seed"] * 31 + i for i in range(1, tables + 1)})
@@ -156,8 +167,18 @@ def cmd_play(args):
     deck_profile, overrides = (write_deck_profile(runtime, args.deck, eff) if eff else ("", {}))
     if any(ARMS[a]["opp_profile"] == "Vibefish-Heuristic" for a in arms) and not os.path.isfile(os.path.join(runtime, "res", "ai", "Vibefish-Heuristic.ai")):
         raise SystemExit("the mc arms need Vibefish-Heuristic.ai: run runner/make-arm-profiles.sh " + runtime)
-    games = schedule(league, args.deck, args.seed, args.games, args.opponents)
-    for other, shared, path in near_seed_runs(args.deck, args.seed, args.games, args.opponents):
+    pool = lg.load_json(args.pool) if args.pool else None
+    if pool:
+        by_id = {**{d["id"]: d for d in pool["decks"]}, **by_id}
+    games = schedule(league, args.deck, args.seed, args.games, args.opponents, pool)
+    # --opponent-playbooks: an opponent that has a shipped playbook plays under it, in every arm
+    opp_playbooks = {}
+    if args.opponent_playbooks:
+        for sid in sorted({s for g in games for s in g["seats"] if s != args.deck}):
+            pf = os.path.join(ROOT, "playbook", "precons", sid + ".json")
+            if os.path.isfile(pf) and isinstance(lg.load_json(pf).get("playbook"), dict):
+                opp_playbooks[sid] = pf
+    for other, shared, path in near_seed_runs(args.deck, args.seed, args.games, args.opponents, pool=pool["name"] if pool else None):
         print(f"ab.py: note: {shared} of these {args.games} tables draw the same opponents as {args.deck}'s run on seed {other} ({path}): "
               f"the draw of table i is seeded with seed*31 + i. Other seats and shuffles, so other games, but not fresh opponents; "
               f"keep a deck's runs ten seeds apart.", file=sys.stderr)
@@ -168,6 +189,8 @@ def cmd_play(args):
         lg.dump_json(meta_path, {
             "vibefish": rl.VERSION, "deck": args.deck, "deck_file": by_id[args.deck]["file"], "league": league["name"],
             "seed": args.seed, "games": args.games, "opponents": args.opponents, "arms": arms, "data_file": os.path.relpath(data_file, ROOT),
+            "pool": pool["name"] if pool else None, "pool_file": os.path.relpath(os.path.abspath(args.pool), ROOT) if pool else None,
+            "opponent_playbooks": sorted(opp_playbooks),
             "data_effective": eff, "deck_profile": deck_profile, "profile_overrides": overrides,
             "forge_version": forge_version, "runtime": os.path.basename(runtime), "clock_s": args.clock, "turn_cap": args.turn_cap,
             "started": lg.now(),
@@ -186,6 +209,7 @@ def cmd_play(args):
         todo = todo[:args.limit]
     print(f"A/B {args.deck}: {args.games} tables x {len(arms)} arms ({', '.join(arms)}){f'; shard {args.shard}/{args.shards}' if args.shards > 1 else ''}; "
           f"{len(todo)} to play with {args.jobs} job(s); seed {args.seed}, runtime {forge_version}, data {os.path.relpath(data_file, ROOT)}"
+          f"{'; opponents from ' + pool['name'] if pool else ''}{'; ' + str(len(opp_playbooks)) + ' opponent deck(s) under their playbook' if args.opponent_playbooks else ''}"
           f"{', profile ' + deck_profile + ' ' + json.dumps(overrides) if deck_profile else ''}", file=sys.stderr)
     if not todo:
         return 0
@@ -212,6 +236,9 @@ def cmd_play(args):
             cmd += ["--data", f"{args.deck}={data_file}"]
         if spec.get("playbook"):
             cmd += ["--playbook", f"{args.deck}={data_file}"]
+        for sid in g["seats"]:
+            if sid != args.deck and sid in opp_playbooks:
+                cmd += ["--playbook", f"{sid}={opp_playbooks[sid]}"]
         return cmd
 
     def play(item):
@@ -400,7 +427,8 @@ def cmd_join(args):
             raise SystemExit(f"{path} has no arm {arm} (it has {list(r['games'])})")
         if first is None:
             first = r
-        elif (r["deck"], r["seed"], r.get("opponents", 3)) != (first["deck"], first["seed"], first.get("opponents", 3)):
+        elif (r["deck"], r["seed"], r.get("opponents", 3), r.get("pool"), r.get("opponent_playbooks") or []) != \
+                (first["deck"], first["seed"], first.get("opponents", 3), first.get("pool"), first.get("opponent_playbooks") or []):
             raise SystemExit(f"{path}: deck {r['deck']} seed {r['seed']} is not the tables of {first['deck']} seed {first['seed']}")
         games = {g["index"]: g for g in r["games"][arm]}
         for other in per_arm.values():                      # the same table index must seat the same decks
@@ -452,6 +480,9 @@ def main(argv):
     p.add_argument("--shard", type=int, default=1)
     p.add_argument("--limit", type=int)
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--pool", help="a deck list to draw the opponents from instead of the league (runner/leagues/bots-v1.json: the bot decks)")
+    p.add_argument("--opponent-playbooks", action="store_true",
+                   help="every opponent that has a shipped playbook (playbook/precons/<id>.json) plays under it, in every arm")
     p.set_defaults(func=cmd_play)
     r = sub.add_parser("rollup")
     r.add_argument("run_dir")

@@ -12,6 +12,9 @@ with its own decks, arms and seed, the top-level fields as defaults. A deck writ
 with that run's stock arm (`runner/ab.py join`). Runs do not wait for each other: each push starts its run at once.
 Seeds: a deck's runs are kept ten seeds apart, because nearby seeds draw the same opponents (`runner/ab.py`, Seeds),
 and a confirming run gets a seed of its own.
+`pool` (a deck list under `runner/`, such as `runner/leagues/bots-v1.json`) draws the opponents from that list instead of
+the 91-deck league, and `"opponent_playbooks": true` seats every opponent that has a shipped playbook under it, in every
+arm: together they make the tables tables of bots, the exam since 2026-11-11. Both may be set at the top level or per request.
 
 `league-run.json`: a push to `testing` that changes it starts `league-run.yml` with the file's fields as its inputs
 (`league`, `cycles`, `shards`, `jobs_per_shard`, `seed`, `run_id`, `forge_channel`, `forge_snapshot_build`, `profile`, `mc`,

@@ -1,22 +1,19 @@
 {
-  "requested": "2026-11-11T16:55Z",
-  "note": "Two confirming runs in one workflow run: each deck's shipped playbook against stock on 200 tables whose opponents it has not met (seeds ten or more from every earlier run of the deck). Token Triumph version 3 was the best of three candidates on run #6's tables (67 wins against stock's 43). Goblin Storm version 3 (version 2 plus the Zada hold) was chosen over version 2 on run #5's tables (48 wins against 40, stock 18). Whatever these say is the figure for the shipped file.",
+  "requested": "2026-11-11T20:25Z",
+  "note": "The first run of the new exam (the owner, 2026-11-11: bots are judged among bots, not among stock AI). Each of the four shipped bots at 200 tables whose three opponents are the other three bots, each under its shipped playbook: once with the deck's own seat under stock AI and once under its playbook. What it asks: does a playbook still earn its place when the table is competent, or did it only beat stock tables. Seed 20261200 for all four (other decks, so other tables).",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
+  "pool": "runner/leagues/bots-v1.json",
+  "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "token-triumph",
+      "decks": "goblin-storm,token-triumph,hail-caesar,tricky-terrain",
       "arms": "stock,playbook",
-      "seed": "20261160"
-    },
-    {
-      "decks": "goblin-storm",
-      "arms": "stock,playbook",
-      "seed": "20261170"
+      "seed": "20261200"
     }
   ]
 }

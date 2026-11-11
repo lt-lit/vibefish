@@ -176,7 +176,8 @@ runner/hands.py held results/gs-stock                             # the cards th
 runner/hands.py game results/gs-playbook/shard-1/games/game-005.events.jsonl    # one game turn by turn: read the slow ones
 runner/hands.py abilities results/gs-stock --runtime forge/runtime-snapshot         # activated abilities the seat had in play and how often it used them
 runner/ab.py play --deck goblin-storm --arms stock,playbook --opponents 1 --games 60 ...   # duels: blockers, removal and the race, ten seconds a game
-runner/ab.py play --deck goblin-storm --arms stock,playbook ...   # then the same deck at real tables
+runner/ab.py play --deck goblin-storm --arms stock,playbook ...   # then the same deck at real tables (three stock opponents: the exam until 2026-11-11)
+runner/ab.py play --deck goblin-storm --arms stock,playbook --pool runner/leagues/bots-v1.json --opponent-playbooks ...   # the exam now: the opponents are the bot decks, each under its shipped playbook
 ```
 
 `runner/playbook.py draft` sorts the deck's cards by what their scripts say they are (mana, the commander, team pumps,

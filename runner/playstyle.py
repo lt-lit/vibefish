@@ -2,12 +2,15 @@
 """How the bots play after the mulligan, read from the JSONL event logs of finished runs:
 attack targeting, combat tempo, mana use and closing speed. Read-only; prints a text report.
 
-Usage: runner/playstyle.py RESULTS_DIR... [--by-profile]
+Usage: runner/playstyle.py RESULTS_DIR... [--by-profile | --by-deck]
   RESULTS_DIR   a run dir holding shard-*/run.json and shard-*/games/*.events.jsonl,
+                a league run (shard-*/g*/run.json, one game a directory),
                 or an ab.py run (ab.json, arm-*/g*/run.json): seats are then labelled
                 <arm>/focus (the deck under test) and <arm>/opps (its stock opponents)
   --by-profile  label seats by their AI profile name instead of the arm labels
                 heuristic / mc-on / mc-max (Vibefish-MC* profiles count as Monte Carlo)
+  --by-deck     label seats by deck id, and add each deck's placing (first out to winner)
+                and kills: the read for a small league such as runner/leagues/bots-v1.json
 
 Mana use is approximate: mana value of spells cast on the seat's own turn over lands in play,
 abilities and X not counted. Block events before harness 0.1.1 overstate blocking (DESIGN.md §6)
@@ -17,6 +20,7 @@ import argparse, json, sys, glob, os, collections, statistics as st
 ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 ap.add_argument('runs', nargs='+', metavar='RESULTS_DIR')
 ap.add_argument('--by-profile', action='store_true')
+ap.add_argument('--by-deck', action='store_true')
 ARGS = ap.parse_args()
 
 def arm_of(profile, run_id):
@@ -34,6 +38,7 @@ CLOSE = collections.defaultdict(list); DMG = collections.Counter(); KILL = colle
 LINGER = collections.defaultdict(list)
 SPLIT = collections.defaultdict(lambda: collections.Counter())
 TEMPO = collections.defaultdict(lambda: collections.Counter())
+PLACE = collections.defaultdict(lambda: collections.Counter()); KILLBY = collections.Counter(); DEALT = collections.Counter(); SEATG = collections.Counter()
 BLK = collections.Counter()
 games = 0
 
@@ -41,7 +46,11 @@ def bucket(ot): return 'T1-4' if ot <= 4 else 'T5-8' if ot <= 8 else 'T9-12' if 
 
 def run_dirs(rd):
     """(directory holding run.json, A/B arm or None): shard-* of a pod or league run, arm-*/g* of an ab.py run."""
-    out = [(d, None) for d in sorted(glob.glob(os.path.join(rd, 'shard-*'))) if os.path.isdir(d)]
+    out = []
+    for d in sorted(glob.glob(os.path.join(rd, 'shard-*'))):
+        if not os.path.isdir(d): continue
+        if os.path.exists(os.path.join(d, 'run.json')): out.append((d, None))
+        else: out += [(g, None) for g in sorted(glob.glob(os.path.join(d, 'g*'))) if os.path.isdir(g)]   # a league run
     for arm in sorted(glob.glob(os.path.join(rd, 'arm-*'))):
         out += [(d, os.path.basename(arm)[4:]) for d in sorted(glob.glob(os.path.join(arm, 'g*'))) if os.path.isdir(d)]
     return out
@@ -55,6 +64,8 @@ for rd in ARGS.runs:
         cmc = {}; cmdrs = {}
         deck_id = {d['seat']: d['id'] for d in run['decks']}
         def label(s):   # A/B runs: the arm, split into the deck under test and its three stock opponents
+            if ARGS.by_deck:
+                return deck_id[s]
             if ab_arm and not ARGS.by_profile:
                 return f"{ab_arm}/{'focus' if deck_id[s] == focus else 'opps'}"
             return arm_of(prof[s], run_id)
@@ -123,6 +134,7 @@ for rd in ARGS.runs:
                 elif et == 'damage':
                     DMG['total'] += e['amount']
                     if e.get('combat') and cur and e.get('source_seat') == cur[0]: turn_att['dmg'] += e['amount']
+                    if e.get('source_seat') is not None and e.get('source_seat') != e['seat']: DEALT[rkey(e['source_seat'])] += e['amount']
                     if e.get('combat'): DMG['combat'] += e['amount']
                     if e.get('source_commander'): DMG['commander'] += e['amount']
                     last_dmg_src[e['seat']] = e.get('source_seat')
@@ -133,8 +145,13 @@ for rd in ARGS.runs:
                         KILL['kills'] += 1
                         if src == winner: KILL['by_winner'] += 1
                         if src == e['seat']: KILL['self'] += 1
+                        else: KILLBY[rkey(src)] += 1
                     LINGER[rkey(e['seat'])].append(low_turns[e['seat']])
             flush()
+            for s in deck_id: SEATG[rkey(s)] += 1
+            for place, (s, _) in enumerate(sorted(lost_t.items(), key=lambda kv: kv[1])):
+                PLACE[rkey(s)]['out_%d' % (place + 1)] += 1
+            if winner is not None: PLACE[rkey(winner)]['won'] += 1
             if lost_t:
                 CLOSE['first_loss_t'].append(min(lost_t.values())); CLOSE['end_t'].append(end_t)
                 CLOSE['first_to_end'].append(end_t - min(lost_t.values()))
@@ -165,4 +182,9 @@ print("\nCLOSING")
 print(f"  first elimination at player-turn {st.mean(CLOSE['first_loss_t']):.1f} (median {st.median(CLOSE['first_loss_t']):.0f}); game ends at {st.mean(CLOSE['end_t']):.1f}; first elimination -> end {st.mean(CLOSE['first_to_end']):.1f} player-turns")
 print(f"  player damage: combat {DMG['combat']/DMG['total']:.0%}, commander {DMG['commander']/DMG['total']:.0%}")
 print(f"  life-zero eliminations {KILL['kills']}: dealt by the eventual winner {KILL['by_winner']/KILL['kills']:.0%}, self-inflicted {KILL['self']/KILL['kills']:.0%}")
+if ARGS.by_deck:
+    print("\nPLACING by deck: games / won / out first / second / third; opponents killed and damage dealt to players a game")
+    for d in sorted(SEATG):
+        c = PLACE[d]; n = SEATG[d]
+        print(f"  {d:18s} {n:4d} / {c['won']:3d} ({c['won']/n:.0%}) / {c['out_1']:3d} / {c['out_2']:3d} / {c['out_3']:3d}   kills {KILLBY[d]/n:.2f}  damage {DEALT[d]/n:.1f}")
 print("  own turns spent at <= 10 life before dying, by deck: " + ', '.join(f"{d} {st.mean(v):.1f}" for d, v in sorted(LINGER.items())))
