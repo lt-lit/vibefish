@@ -26,6 +26,7 @@ import forge.game.phase.PhaseHandler;
 import forge.game.phase.PhaseType;
 import forge.game.player.Player;
 import forge.game.spellability.SpellAbility;
+import forge.game.trigger.WrappedAbility;
 import forge.game.zone.ZoneType;
 
 /**
@@ -1082,6 +1083,59 @@ public class PlaybookController extends PlayerControllerAi {
             default:
                 throw new IllegalArgumentException("unknown playbook metric " + name);
         }
+    }
+
+    // ------------------------------------------------------------------ triggers
+
+    /**
+     * An optional trigger of ours: the first trigger rule that names the card and whose conditions hold answers; with
+     * none, Forge's AI does. Forge asks at resolution, after the trigger's targets are chosen, and pays the cost of an
+     * accepted trigger itself (it sacrifices its lowest-rated creature, for one), so a rule's conditions should make
+     * sure the price is one the deck wants to pay.
+     */
+    @Override
+    public boolean confirmTrigger(WrappedAbility wrapper) {
+        Playbook.TriggerRule rule = null;
+        try {
+            rule = triggerRule(wrapper);
+        } catch (RuntimeException e) {
+            count("trigger_errors", 1);
+            System.err.println("[vibefish] playbook trigger rule failed, Forge answers: " + e);
+        }
+        if (rule == null) {
+            return super.confirmTrigger(wrapper);
+        }
+        count("trigger_decisions", 1);
+        count(rule.accept ? "trigger_accepted" : "trigger_declined", 1);
+        count("trigger_rule_" + rule.index, 1);
+        trace("trigger rule " + rule.index + (rule.accept ? " accepts " : " declines ") + wrapper.getHostCard().getName());
+        return rule.accept;
+    }
+
+    private Playbook.TriggerRule triggerRule(WrappedAbility wrapper) {
+        if (playbook == null || playbook.triggers.isEmpty() || wrapper.getHostCard() == null || wrapper.isMandatory()) {
+            return null;
+        }
+        String name = wrapper.getHostCard().getName();
+        String text = null;
+        for (Playbook.TriggerRule rule : playbook.triggers) {
+            if (!rule.cards.contains(name)) {
+                continue;
+            }
+            if (rule.ability != null) {
+                if (text == null) {
+                    text = String.valueOf(wrapper.getStackDescription()) + " " + String.valueOf(wrapper.getDescription());
+                    text = text.toLowerCase(java.util.Locale.ROOT);
+                }
+                if (!text.contains(rule.ability.toLowerCase(java.util.Locale.ROOT))) {
+                    continue;
+                }
+            }
+            if (allHold(rule.when)) {
+                return rule;
+            }
+        }
+        return null;
     }
 
     // ------------------------------------------------------------------ mulligan

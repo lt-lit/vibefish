@@ -262,16 +262,84 @@ public final class Playbook {
         }
     }
 
+    /**
+     * One trigger rule: the seat's answer when Forge asks whether to use an optional ("you may") trigger of a listed
+     * card of ours. {@code accept}: yes, {@code decline}: no, when every {@code when} condition holds; the first rule
+     * that names the card and whose conditions hold answers, and Forge's own AI answers when none does.
+     * {@code ability} narrows a rule to the trigger whose text contains it, for a card with several. What an accepted
+     * trigger then costs and does (what is sacrificed, the modes, the targets) is still chosen by Forge.
+     */
+    public static final class TriggerRule {
+        public final boolean accept;
+        public final List<String> cards;
+        public final String ability;        // text the trigger's description contains (null: any trigger of the card)
+        public final List<Cond> when;
+        public final int index;             // 1-based position in the file, for the counters
+
+        TriggerRule(JsonObject o, int index) {
+            this.index = index;
+            if (o.has("accept") == o.has("decline")) {
+                throw new IllegalArgumentException("playbook trigger rule " + index + " needs exactly one of \"accept\" and \"decline\"");
+            }
+            accept = o.has("accept");
+            cards = strings(o.get(accept ? "accept" : "decline"));
+            if (cards.isEmpty()) {
+                throw new IllegalArgumentException("playbook trigger rule " + index + " names no cards");
+            }
+            ability = str(o, "ability", null);
+            List<Cond> conds = new ArrayList<>();
+            for (String c : strings(o.get("when"))) {
+                conds.add(new Cond(c));
+            }
+            when = Collections.unmodifiableList(conds);
+        }
+    }
+
     public final int version;
     public final Attack attack;
     public final Mulligan mulligan;
     public final Cast cast;
+    public final List<TriggerRule> triggers;    // empty when the playbook has none
+    public final JsonElement triggersSource;    // as written, recorded in run.json (null when none)
 
     private Playbook(JsonObject o) {
         version = num(o, "version", 1);
         attack = o.has("attack") && o.get("attack").isJsonObject() ? new Attack(o.getAsJsonObject("attack")) : null;
         mulligan = o.has("mulligan") && o.get("mulligan").isJsonObject() ? new Mulligan(o.getAsJsonObject("mulligan")) : null;
         cast = o.has("cast") && o.get("cast").isJsonObject() ? new Cast(o.getAsJsonObject("cast")) : null;
+        List<TriggerRule> list = new ArrayList<>();
+        if (o.has("triggers") && o.get("triggers").isJsonArray()) {
+            JsonArray arr = o.getAsJsonArray("triggers");
+            for (int i = 0; i < arr.size(); i++) {
+                list.add(new TriggerRule(arr.get(i).getAsJsonObject(), i + 1));
+            }
+        }
+        triggers = Collections.unmodifiableList(list);
+        triggersSource = list.isEmpty() ? null : o.get("triggers");
+        for (TriggerRule rule : triggers) {
+            for (Cond c : rule.when) {
+                if (c.group() != null && (cast == null || !cast.groups.containsKey(c.group()))) {
+                    throw new IllegalArgumentException("playbook trigger rule " + rule.index + ": no group \"" + c.group() + "\" in cast.groups");
+                }
+            }
+        }
+    }
+
+    /** Every card the rules name (to cast, hold, aim at, or answer a trigger for), for checking against the decklist. */
+    public List<String> namedCards() {
+        List<String> names = new ArrayList<>();
+        if (cast != null) {
+            names.addAll(cast.namedCards());
+        }
+        for (TriggerRule rule : triggers) {
+            names.addAll(rule.cards);
+            for (Cond c : rule.when) {
+                if (c.card != null) {
+                    names.add(c.card);
+                }
+            }
+        }
+        return names;
     }
 
     /** The playbook in a deck data file, or null when the file has none. */
@@ -301,6 +369,9 @@ public final class Playbook {
                 holds += r.isHold() ? 1 : 0;
             }
             sb.append(" cast=").append(plays).append(" play, ").append(activations).append(" activate, ").append(holds).append(" hold rule(s)");
+        }
+        if (!triggers.isEmpty()) {
+            sb.append(" triggers=").append(triggers.size()).append(" rule(s)");
         }
         return sb.toString();
     }

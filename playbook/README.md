@@ -57,6 +57,7 @@ the harness is given `--playbook id=file`). Everything absent stays Forge's.
                "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": false, "damage_per_loss": 3},
   "mulligan": {"min_lands": 2, "max_lands": 5, "max_mulligans": 2},
   "cast":     {"rules": [ ... ], "max_per_turn": 60},
+  "triggers": [ ... ],
   "notes": "why"
 }
 ```
@@ -137,6 +138,28 @@ cast rules `cast_decisions` (times the rules were read), `cast_policy` (times on
 its position in the file), `cast_hold_vetoes` (a Forge choice that a hold turned down), `cast_hold_stuck` (a hold that
 could only be kept by passing), `cast_failed`, `cast_forge_declined`, `cast_turn_limit`, `cast_errors`.
 `FORGE_JAVA_OPTS=-Dvibefish.trace=true` prints one line per rule decision to the shard log.
+
+### `triggers`: the seat's answer to "you may"
+
+Forge's AI turns down most optional triggers whose price it cannot value: stock Hail, Caesar pays for its commander's
+attack trigger (sacrifice another creature for two attacking Soldiers and a burn equal to its tokens) on fewer than a
+third of its attacks. A trigger rule answers for the deck:
+
+```
+"triggers": [
+  {"accept":  ["Caesar, Legion's Emperor"], "when": ["tokens >= 1"]},
+  {"decline": ["Some Card"], "ability": "a piece of the trigger's text", "when": ["life <= 10"]}
+]
+```
+
+When Forge asks whether to use an optional trigger of a listed card of ours, the first rule that names the card and
+whose `when` conditions all hold answers (`accept`: yes, `decline`: no); with none, Forge's AI answers as before.
+`ability` narrows a rule to the trigger whose text contains it. The conditions are the cast rules' (a `hand:<group>`
+condition counts a group from `cast.groups`). What an accepted trigger costs and does is still chosen by Forge: it
+sacrifices its lowest-rated creature and picks the modes and targets, so the conditions are where the file says the
+price is right (`tokens >= 1`: there is a token to give up). Mandatory triggers are never asked about. Counters:
+`trigger_decisions`, `trigger_accepted`, `trigger_declined`, `trigger_rule_<n>`, `trigger_errors`; the rules are
+recorded in `run.json` under `decks[].playbook.triggers`.
 
 ### Writing one
 

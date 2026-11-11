@@ -1,13 +1,13 @@
 {
-  "requested": "2026-11-11T00:28Z",
-  "note": "Four candidate playbooks for Goblin Storm on the 200 tables of run #5 (same seed, so each pairs with that run's stock and version-2 arms): the pressure attack at two settings, pressure with two rules for a lost board, pressure with Zada held until she can be aimed at. Playbook arm only.",
-  "decks": "goblin-storm@pressure3,goblin-storm@pressure2,goblin-storm@table,goblin-storm@zadahold",
+  "requested": "2026-11-11T01:30Z",
+  "note": "Token Triumph's cast rules at four-player tables, three candidates on the 200 tables of run #6 (same seed, so each pairs with that run's stock and attack-only arms): the rules under the go-wide attack, under the pressure attack, and with everything but the anthems cast after combat. Playbook arm only.",
+  "decks": "token-triumph@cast,token-triumph@castpressure,token-triumph@castafter",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
-  "seed": "20261140",
+  "seed": "20261141",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10"
 }

@@ -112,6 +112,8 @@ class CardScripts:
         n = self.index.get(self.key(name.replace("//", "/")))     # split and double-faced cards: wear_tear.txt
         if not n:
             n = self.index.get(self.key(name.split("//")[0]))      # a face name alone
+        if not n:
+            n = self.index.get(self.key(name.replace(".", "")))    # V.A.T.S. is vats.txt
         if not n:                                                    # adventure cards: murderous_rider_swift_end.txt
             k = self.key(name.split("//")[0]) + "_"
             cands = sorted((x for x in self.index if x.startswith(k)), key=len)

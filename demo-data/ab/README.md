@@ -24,3 +24,9 @@ stock arm, and each file's `note` and `attack_target` say which it is. The playb
 `2026-11-10-ab-v3/` is the CI measurement of Goblin Storm's playbook version 2 (`ab-run` #5, DESIGN.md §21: cast rules and the
 go-wide attack aimed at the highest life; arms stock and playbook, 200 tables, seed 20261140, snapshot 2026-11-10): 40 wins
 against 18, the first difference in this directory whose interval excludes zero.
+
+`2026-11-11-ab-v4/` is the leader-first attack alone on the two other go-wide decks (`ab-run` #6, DESIGN.md §22: Token Triumph and
+Hail, Caesar under playbooks that hold an attack policy and nothing else, go-wide aimed at the highest life with the split; arms
+stock and playbook, 200 tables each, seed 20261141, snapshot 2026-11-10): Token Triumph 39 wins against stock's 43, Hail, Caesar 32
+against 34. Whom the seat attacks does not move either deck by itself. The stock arms are the baseline that the cast-rule
+variants of both decks are paired with (same seed, playbook arm only).

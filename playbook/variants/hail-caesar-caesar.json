@@ -1,0 +1,121 @@
+{
+ "schema": 1,
+ "deck": "hail-caesar",
+ "variant": "caesar",
+ "of": "playbook/precons/hail-caesar.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 3,
+  "attack": {
+   "policy": "pressure",
+   "target": "highest_life",
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "damage_per_loss": 3
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Conviction",
+      "Talisman of Hierarchy",
+      "Talisman of Indulgence"
+     ]
+    },
+    {
+     "play": [
+      "Caesar, Legion's Emperor"
+     ],
+     "when": [
+      "creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Heroic Reinforcements"
+     ],
+     "when": [
+      "attackers >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Heroic Reinforcements"
+     ],
+     "until": [
+      "attackers >= 3",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Wasteland Raider"
+     ],
+     "when": [
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Assemble the Legion",
+      "Intangible Virtue",
+      "Captain of the Watch",
+      "Fervent Charge",
+      "Marshal's Anthem",
+      "Elder Arthur Maxson",
+      "Bastion of Remembrance",
+      "Vault 11: Voter's Dilemma",
+      "Battle of Hoover Dam",
+      "White Glove Gourmand",
+      "Securitron Squadron",
+      "Gary Clone",
+      "Powder Ganger",
+      "Thrill-Kill Disciple",
+      "Ruthless Radrat",
+      "Kellogg, Dangerous Mind",
+      "Paladin Elizabeth Taggerdy",
+      "Craig Boone, Novac Guard",
+      "Desdemona, Freedom's Edge",
+      "Rose, Cutthroat Raider",
+      "Colonel Autumn",
+      "Overseer of Vault 76",
+      "Sierra, Nuka's Biggest Fan",
+      "Keeper of the Accord",
+      "MacCready, Lamplight Mayor",
+      "Butch DeLoria, Tunnel Snake",
+      "Aradesh, the Founder",
+      "ED-E, Lonesome Eyebot",
+      "Impassioned Orator",
+      "General's Enforcer",
+      "Boomer Scrapper",
+      "Morbid Opportunist",
+      "Pitiless Plunderer",
+      "Legate Lanius, Caesar's Ace",
+      "Mr. House, President and CEO",
+      "Charisma Bobblehead",
+      "Luck Bobblehead",
+      "Black Market",
+      "Survivor's Med Kit",
+      "Yes Man, Personal Securitron",
+      "Skullclamp"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Caesar, Legion's Emperor"
+    ],
+    "when": [
+     "tokens >= 1"
+    ]
+   }
+  ],
+  "notes": "Cast rules: the mana rocks first; Caesar as soon as there is another creature for his trigger; Heroic Reinforcements only before combat with three attackers to pump; Wasteland Raider only when the opponents have creatures to give up (everyone sacrifices); then the engines and anthems (Marshal's Anthem among them: Forge's AI never casts it, AI:RemoveDeck:All) and the creatures. The removal, the sweepers, the X spells and the instants stay Forge's. Trigger rule: Caesar's attack trigger (sacrifice another creature: two attacking Soldiers and a burn equal to our tokens, Forge picks those two modes) is taken whenever there is a token to give up; stock Forge pays for it on under a third of its attacks. Goldfish, same seeds: 10.82 turns.",
+  "on": "2026-11-11"
+ }
+}

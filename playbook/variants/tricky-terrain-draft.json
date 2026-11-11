@@ -1,0 +1,184 @@
+{
+ "schema": 1,
+ "deck": "tricky-terrain",
+ "variant": "draft",
+ "of": "playbook/precons/tricky-terrain.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Poison Dart Frog",
+      "Chromatic Lantern",
+      "Hour of Promise"
+     ]
+    },
+    {
+     "play": [
+      "Omo, Queen of Vesuva"
+     ]
+    },
+    {
+     "play": [
+      "Expedition Map",
+      "Copy Land",
+      "Mirage Mirror",
+      "Propaganda",
+      "Desert Warfare",
+      "Seer's Sundial",
+      "Vivien Reid",
+      "Mana Reflection"
+     ]
+    },
+    {
+     "play": [
+      "Apex Devastator",
+      "Avenger of Zendikar",
+      "Hydra Broodmaster",
+      "Rampaging Baloths",
+      "Tatyova, Benthic Druid",
+      "Jyoti, Moag Ancient",
+      "Dryad of the Ilysian Grove",
+      "Elvish Rejuvenator",
+      "Rampant Frogantua",
+      "Ramunap Excavator",
+      "Sage of the Maze",
+      "Scute Swarm",
+      "Uro, Titan of Nature's Wrath",
+      "Floriferous Vinewall",
+      "Fog Bank",
+      "Satyr Wayfinder",
+      "Wonderscape Sage",
+      "Magus of the Candelabra"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize",
+      "Urban Evolution",
+      "Treasure Cruise"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Nissa, Steward of Elements",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Acidic Slime",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Hydroid Krasis",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Skullwinder",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Terastodon",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Ulvenwald Hydra",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Aggressive Biomancy",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Curse of the Swine",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Finale of Revelation",
+    "why": "X in its cost"
+   },
+   {
+    "card": "March from Velis Vel",
+    "why": "aimed"
+   },
+   {
+    "card": "Replication Technique",
+    "why": "aimed"
+   },
+   {
+    "card": "Sylvan Scrying",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Arcane Denial",
+    "why": "instant"
+   },
+   {
+    "card": "Beast Within",
+    "why": "instant"
+   },
+   {
+    "card": "Drown in Dreams",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Eureka Moment",
+    "why": "instant"
+   },
+   {
+    "card": "Evacuation",
+    "why": "instant"
+   },
+   {
+    "card": "Growth Spiral",
+    "why": "instant"
+   },
+   {
+    "card": "Pongify",
+    "why": "instant"
+   },
+   {
+    "card": "Summary Dismissal",
+    "why": "instant"
+   },
+   {
+    "card": "Oblivion Stone",
+    "why": "sweeping or symmetrical"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Curse of the Swine",
+   "Beast Within",
+   "Summary Dismissal",
+   "Oblivion Stone"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Magus of the Candelabra",
+   "Mirage Mirror"
+  ],
+  "optional_triggers": [
+   "Avenger of Zendikar",
+   "Elvish Rejuvenator",
+   "Floriferous Vinewall",
+   "Rampant Frogantua",
+   "Satyr Wayfinder",
+   "Terastodon",
+   "Ulvenwald Hydra",
+   "Uro, Titan of Nature's Wrath",
+   "Seer's Sundial"
+  ]
+ }
+}

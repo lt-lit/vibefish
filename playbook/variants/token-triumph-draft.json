@@ -1,0 +1,194 @@
+{
+ "schema": 1,
+ "deck": "token-triumph",
+ "variant": "draft",
+ "of": "playbook/precons/token-triumph.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Avacyn's Pilgrim",
+      "Jaspera Sentinel",
+      "Sol Ring",
+      "Arcane Signet",
+      "Leafkin Druid",
+      "Talisman of Unity",
+      "Commander's Sphere",
+      "Harvest Season",
+      "Nissa's Expedition"
+     ]
+    },
+    {
+     "play": [
+      "Emmara, Soul of the Accord"
+     ]
+    },
+    {
+     "play": [
+      "Overrun",
+      "Camaraderie"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Overrun",
+      "Camaraderie"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Dawn of Hope",
+      "Idol of Oblivion",
+      "Ajani, Caller of the Pride",
+      "Overwhelming Instinct",
+      "Commander's Insignia",
+      "Felidar Retreat",
+      "Slate of Ancestry",
+      "Valor in Akros",
+      "Dictate of Heliod",
+      "Collective Blessing"
+     ]
+    },
+    {
+     "play": [
+      "Verdant Force",
+      "Hornet Queen",
+      "Thunderfoot Baloth",
+      "Loyal Guardian",
+      "Maja, Bretagard Protector",
+      "Sporemound",
+      "Citanul Hierophants",
+      "Nullmage Shepherd",
+      "Voice of Many",
+      "Champion of Lambholt",
+      "Dauntless Escort",
+      "Farhaven Elf",
+      "Hornet Nest",
+      "Mentor of the Meek",
+      "Jade Mage",
+      "Scavenging Ooze",
+      "Selesnya Evangel",
+      "Selesnya Guildmage"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize",
+      "Collective Unconscious"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Aura Mutation",
+    "why": "instant"
+   },
+   {
+    "card": "Citywide Bust",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Conclave Tribunal",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Curse of Bounty",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Devouring Light",
+    "why": "instant"
+   },
+   {
+    "card": "Eternal Witness",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Great Oak Guardian",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Hour of Reckoning",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Karametra's Favor",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "March of the Multitudes",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Path to Exile",
+    "why": "instant"
+   },
+   {
+    "card": "Presence of Gond",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Reclamation Sage",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Rishkar, Peema Renegade",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Rootborn Defenses",
+    "why": "instant"
+   },
+   {
+    "card": "Scatter the Seeds",
+    "why": "instant"
+   },
+   {
+    "card": "Sylvan Reclamation",
+    "why": "instant"
+   },
+   {
+    "card": "Trostani Discordant",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "White Sun's Zenith",
+    "why": "X in its cost"
+   }
+  ],
+  "never_cast_by_forge": [],
+  "cast_by_rule_though_flagged": [
+   "Dauntless Escort",
+   "Nullmage Shepherd",
+   "Slate of Ancestry"
+  ],
+  "optional_triggers": [
+   "Dawn of Hope",
+   "Eternal Witness",
+   "Farhaven Elf",
+   "Great Oak Guardian",
+   "Mentor of the Meek",
+   "Reclamation Sage"
+  ]
+ }
+}

@@ -1,0 +1,199 @@
+{
+ "schema": 1,
+ "deck": "hail-caesar",
+ "variant": "draft",
+ "of": "playbook/precons/hail-caesar.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Conviction",
+      "Talisman of Hierarchy",
+      "Talisman of Indulgence",
+      "Charisma Bobblehead",
+      "Luck Bobblehead"
+     ]
+    },
+    {
+     "play": [
+      "Caesar, Legion's Emperor"
+     ]
+    },
+    {
+     "play": [
+      "Heroic Reinforcements"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Heroic Reinforcements"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Survivor's Med Kit",
+      "Intangible Virtue",
+      "Bastion of Remembrance",
+      "Wild Wasteland",
+      "Battle of Hoover Dam",
+      "Fervent Charge",
+      "Assemble the Legion",
+      "Black Market",
+      "Stolen Strategy"
+     ]
+    },
+    {
+     "play": [
+      "Captain of the Watch",
+      "Desdemona, Freedom's Edge",
+      "Keeper of the Accord",
+      "Pitiless Plunderer",
+      "Rose, Cutthroat Raider",
+      "Sierra, Nuka's Biggest Fan",
+      "White Glove Gourmand",
+      "Aradesh, the Founder",
+      "Boomer Scrapper",
+      "Colonel Autumn",
+      "Craig Boone, Novac Guard",
+      "ED-E, Lonesome Eyebot",
+      "Elder Arthur Maxson",
+      "Kellogg, Dangerous Mind",
+      "Morbid Opportunist",
+      "Mr. House, President and CEO",
+      "Overseer of Vault 76",
+      "Paladin Elizabeth Taggerdy",
+      "Ruthless Radrat",
+      "Thrill-Kill Disciple",
+      "Yes Man, Personal Securitron",
+      "Butch DeLoria, Tunnel Snake",
+      "Gary Clone",
+      "General's Enforcer",
+      "Impassioned Orator",
+      "MacCready, Lamplight Mayor",
+      "Securitron Squadron"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Legate Lanius, Caesar's Ace",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Mysterious Stranger",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Powder Ganger",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Wasteland Raider",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Anguished Unmaking",
+    "why": "instant"
+   },
+   {
+    "card": "Deadly Dispute",
+    "why": "instant"
+   },
+   {
+    "card": "Entrapment Maneuver",
+    "why": "instant"
+   },
+   {
+    "card": "Lethal Scheme",
+    "why": "instant"
+   },
+   {
+    "card": "Secure the Wastes",
+    "why": "X in its cost"
+   },
+   {
+    "card": "V.A.T.S.",
+    "why": "instant"
+   },
+   {
+    "card": "Wear // Tear",
+    "why": "instant"
+   },
+   {
+    "card": "Hour of Reckoning",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Martial Coup",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Ruinous Ultimatum",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "The Nipton Lottery",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Vault 11: Voter's Dilemma",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Vault 75: Middle School",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Marshal's Anthem",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Skullclamp",
+    "why": "aura or equipment"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Marshal's Anthem"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Caesar, Legion's Emperor",
+   "Aradesh, the Founder",
+   "Overseer of Vault 76",
+   "Rose, Cutthroat Raider",
+   "Paladin Elizabeth Taggerdy",
+   "Boomer Scrapper",
+   "Colonel Autumn",
+   "Desdemona, Freedom's Edge",
+   "Gary Clone",
+   "Keeper of the Accord",
+   "Mysterious Stranger",
+   "Powder Ganger",
+   "Securitron Squadron",
+   "Thrill-Kill Disciple",
+   "Wasteland Raider",
+   "Marshal's Anthem",
+   "Stolen Strategy",
+   "Wild Wasteland"
+  ]
+ }
+}

@@ -1,0 +1,222 @@
+{
+ "schema": 1,
+ "deck": "goblin-storm",
+ "variant": "draft",
+ "of": "playbook/precons/goblin-storm.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Skirk Prospector",
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Zada, Hedron Grinder"
+     ]
+    },
+    {
+     "play": [
+      "Haze of Rage"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Haze of Rage"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Quest for the Goblin Lord",
+      "Goblin Bombardment",
+      "Idol of Oblivion",
+      "Impact Tremors",
+      "Ruby Medallion",
+      "Boggart Shenanigans",
+      "Frontline Heroism",
+      "Throne of Eldraine"
+     ]
+    },
+    {
+     "play": [
+      "Siege-Gang Commander",
+      "Goblin Trashmaster",
+      "Krenko, Mob Boss",
+      "Redcap Gutter-Dweller",
+      "Roaming Throne",
+      "Siege-Gang Lieutenant",
+      "Storm-Kiln Artist",
+      "Broadside Bombardiers",
+      "Gempalm Incinerator",
+      "General Kreat, the Boltbringer",
+      "Goblin Chieftain",
+      "Goblin Matron",
+      "Goblin Warchief",
+      "Howlsquad Heavy",
+      "Pashalik Mons",
+      "Conspicuous Snoop",
+      "Dragon Fodder",
+      "Grenzo, Havoc Raiser",
+      "Krenko's Command",
+      "Mogg War Marshal",
+      "Rundvelt Hordemaster",
+      "Searslicer Goblin",
+      "Goblin Bushwhacker",
+      "Goblin Lackey",
+      "Impulsive Pilferer"
+     ]
+    },
+    {
+     "play": [
+      "Faithless Looting"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Ancestors' Aid",
+    "why": "instant"
+   },
+   {
+    "card": "Battle Hymn",
+    "why": "instant"
+   },
+   {
+    "card": "Brightstone Ritual",
+    "why": "instant"
+   },
+   {
+    "card": "Chaos Warp",
+    "why": "instant"
+   },
+   {
+    "card": "Crimson Wisps",
+    "why": "instant"
+   },
+   {
+    "card": "Expedite",
+    "why": "instant"
+   },
+   {
+    "card": "Fists of Flame",
+    "why": "instant"
+   },
+   {
+    "card": "Great Train Heist",
+    "why": "instant"
+   },
+   {
+    "card": "Sazacap's Brew",
+    "why": "instant"
+   },
+   {
+    "card": "Seething Song",
+    "why": "instant"
+   },
+   {
+    "card": "Skullclamp",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Swiftfoot Boots",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Blasphemous Act",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Daring Discovery",
+    "why": "aimed"
+   },
+   {
+    "card": "Empty the Warrens",
+    "why": "storm"
+   },
+   {
+    "card": "Glimpse the Impossible",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Goblin Negotiation",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Grapeshot",
+    "why": "aimed"
+   },
+   {
+    "card": "Mana Geyser",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Past in Flames",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Renegade Tactics",
+    "why": "aimed"
+   },
+   {
+    "card": "Spreading Insurrection",
+    "why": "aimed"
+   },
+   {
+    "card": "Vandalblast",
+    "why": "aimed"
+   },
+   {
+    "card": "Wild Ride",
+    "why": "aimed"
+   },
+   {
+    "card": "Witch's Mark",
+    "why": "aimed"
+   },
+   {
+    "card": "Goblin Dark-Dwellers",
+    "why": "aimed when it enters"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Past in Flames"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Faithless Looting",
+   "Goblin Bombardment"
+  ],
+  "optional_triggers": [
+   "Gempalm Incinerator",
+   "Goblin Bushwhacker",
+   "Goblin Dark-Dwellers",
+   "Goblin Lackey",
+   "Goblin Matron",
+   "Grenzo, Havoc Raiser",
+   "Redcap Gutter-Dweller",
+   "Rundvelt Hordemaster",
+   "Boggart Shenanigans",
+   "Quest for the Goblin Lord"
+  ]
+ }
+}

@@ -66,7 +66,7 @@ import forge.util.MyRandom;
  * Relative paths resolve against $VIBEFISH_CWD when set (the launcher cds into the Forge runtime).
  */
 public final class Sim {
-    public static final String VERSION = "0.3.0";
+    public static final String VERSION = "0.3.1";
     static final Gson GSON = new GsonBuilder().disableHtmlEscaping().serializeNulls().create();
     static final Gson GSON_PRETTY = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
 
@@ -269,7 +269,7 @@ public final class Sim {
                     System.err.println("[vibefish] " + pf + " has no playbook object");
                     return 2;
                 }
-                if (playbook.cast != null) {
+                if (playbook.cast != null || !playbook.triggers.isEmpty()) {
                     // A misspelt card name would switch a rule off without a word; stop instead.
                     List<String> inDeck = new ArrayList<>();
                     for (Map.Entry<PaperCard, Integer> e : deck.getMain()) {
@@ -279,7 +279,7 @@ public final class Sim {
                         inDeck.add(pc.getName());
                     }
                     List<String> unknown = new ArrayList<>();
-                    for (String name : playbook.cast.namedCards()) {
+                    for (String name : playbook.namedCards()) {
                         if (name.endsWith(" Token")) {
                             continue;                   // a token a rule aims at or counts: Forge names them "<Name> Token"
                         }
@@ -288,7 +288,7 @@ public final class Sim {
                         }
                     }
                     if (!unknown.isEmpty()) {
-                        System.err.println("[vibefish] " + pf + ": the cast rules name cards that are not in " + f.getName() + ": " + unknown);
+                        System.err.println("[vibefish] " + pf + ": the rules name cards that are not in " + f.getName() + ": " + unknown);
                         return 2;
                     }
                 }
@@ -303,7 +303,8 @@ public final class Sim {
                               "damage_per_loss", playbook.attack.damagePerLoss),
                         "mulligan", playbook.mulligan == null ? null
                         : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans),
-                        "cast", playbook.cast == null ? null : playbook.cast.source);
+                        "cast", playbook.cast == null ? null : playbook.cast.source,
+                        "triggers", playbook.triggersSource);
                 System.err.printf("[vibefish] playbook for %s: %s%n", id, playbook.describe());
             } else {
                 rp.setPlayer(GamePlayerUtil.createAiPlayer(id, i, profile));
