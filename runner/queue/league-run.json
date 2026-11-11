@@ -1,0 +1,13 @@
+{
+  "requested": "2026-11-11T20:10Z",
+  "note": "The four shipped bots at one table (runner/leagues/bots-v1.json), every seat under its shipped playbook: 50 cycles = 200 games, each deck 200 games and in every seat 50 times. The first run in Actions that seats more than one bot; twenty local games on the session's machine came before it (DESIGN.md section 23). What it is for: who wins among the bots against people's figures for the same four decks, and how long the game takes. Artifacts only; published by hand once looked at.",
+  "league": "runner/leagues/bots-v1.json",
+  "cycles": "50",
+  "shards": "5",
+  "jobs_per_shard": "2",
+  "seed": "20261190",
+  "forge_channel": "snapshot",
+  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
+  "playbooks": true,
+  "publish": false
+}

@@ -1,0 +1,65 @@
+{
+ "name": "bots-v1",
+ "status": "frozen",
+ "chosen_on": "2026-11-11",
+ "chosen_with": "snapshot-2026-11-10",
+ "description": "The four precons that have a shipped playbook on 2026-11-11 (Goblin Storm, Token Triumph, Hail, Caesar, Tricky Terrain), as one table: a league of the bot decks alone, to see how the bots play each other. Played with league.py play --playbooks every seat is under its playbook; without it the same table is all stock. If this list ever changes (a fifth bot), that is a new league with a new name.",
+ "schedule": "runner/league.py: four decks are one table. A cycle is four games, the seat order shifting by one each game and reshuffled each cycle, so every deck sits in every seat once per cycle. 50 cycles = 200 games, 200 per deck.",
+ "precon_dir": "res/quest/commanderprecons",
+ "reference": "runner/reference/playgroup-commander.json",
+ "checked": "The four decks are league-v1 decks (runner/precon-league.json): same files, same checks.",
+ "decks": [
+  {
+   "id": "goblin-storm",
+   "file": "Goblin Storm [SLD] [2026].dck",
+   "name": "Goblin Storm",
+   "commanders": [
+    "Zada, Hedron Grinder"
+   ],
+   "set": "SLD",
+   "year": 2026,
+   "reference_name": "Goblin Storm",
+   "ai_never": 3,
+   "ai_random": 4
+  },
+  {
+   "id": "token-triumph",
+   "file": "Token Triumph [SCD] [2022].dck",
+   "name": "Token Triumph",
+   "commanders": [
+    "Emmara, Soul of the Accord"
+   ],
+   "set": "SCD",
+   "year": 2022,
+   "reference_name": "Token Triumph",
+   "ai_never": 3,
+   "ai_random": 1
+  },
+  {
+   "id": "hail-caesar",
+   "file": "Hail, Caesar [PIP] [2024].dck",
+   "name": "Hail, Caesar",
+   "commanders": [
+    "Caesar, Legion's Emperor"
+   ],
+   "set": "PIP",
+   "year": 2024,
+   "reference_name": "Hail, Caesar",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "tricky-terrain",
+   "file": "Tricky Terrain [M3C] [2024].dck",
+   "name": "Tricky Terrain",
+   "commanders": [
+    "Omo, Queen of Vesuva"
+   ],
+   "set": "M3C",
+   "year": 2024,
+   "reference_name": "Tricky Terrain",
+   "ai_never": 8,
+   "ai_random": 5
+  }
+ ]
+}

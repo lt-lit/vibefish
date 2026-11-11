@@ -139,6 +139,7 @@ def cmd_play(args):
     os.makedirs(out, exist_ok=True)
     meta = {
         "vibefish": rl.VERSION, "league": {k: v for k, v in league.items() if k != "decks"}, "deck_ids": sorted(by_id),
+        "league_file": os.path.relpath(os.path.abspath(args.league), ROOT),   # so a rollup of another league finds its list
         "seed": args.seed, "cycles": args.cycles, "shards": args.shards, "games_scheduled": len(games),
         "forge_version": forge_version, "runtime": os.path.basename(runtime), "clock_s": args.clock, "turn_cap": args.turn_cap,
         "mc": args.mc, "profile": args.profile or "Default", "playbooks": sorted(playbooks), "started": now(),
@@ -240,6 +241,8 @@ def cmd_rollup(args):
         league = load_json(args.league)
     elif meta and "decks" in meta.get("league", {}):
         league = meta["league"]
+    elif meta and meta.get("league_file") and os.path.isfile(os.path.join(ROOT, meta["league_file"])):
+        league = load_json(os.path.join(ROOT, meta["league_file"]))    # the list the run was played from (a file in this repo)
     else:
         league = load_json(os.path.join(ROOT, "runner", "precon-league.json"))
         if meta and meta["league"].get("name") != league.get("name"):

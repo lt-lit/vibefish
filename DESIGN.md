@@ -222,7 +222,7 @@ runs/<run-id>/rollup.json
 runs/<run-id>/scorecard.json
 runs/<run-id>/shard-N/run.json                          pod runs only
 runs/<run-id>/shard-N/games/game-NNN.events.jsonl.gz    pod runs only
-runs/<run-id>/league.json                               league runs: seed, cycles, shards, runtime, deck ids (the schedule is derived)
+runs/<run-id>/league.json                               league runs: seed, cycles, shards, runtime, deck ids, league_file (the schedule is derived)
 ```
 
 Seeds: shard `j` of a pod run uses `seed + 100000·j`, and game `i` within a shard uses `shard_seed + i`, so any game can be replayed from its `meta` line; league game `i` uses `seed + i + 1` with the seats listed in its summary. Every file carries `forge_version`.
