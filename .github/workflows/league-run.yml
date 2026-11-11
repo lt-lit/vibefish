@@ -36,6 +36,10 @@ on:
       mc:
         description: "Flat Monte Carlo (2.0.16+ builds): off, on, max or lite"
         default: "off"
+      playbooks:
+        description: "Play every deck that has a shipped playbook (playbook/precons/<id>.json) under it; the other seats stay stock"
+        type: boolean
+        default: false
       publish:
         description: "Commit rollup, scorecard and league.json into demo-data/ on this branch"
         type: boolean
@@ -70,7 +74,7 @@ jobs:
             md="${FORGE_SNAPSHOT_BUILD##*-}"; y=$(date -u +%Y); [[ "$(date -u +%m.%d)" < "$md" ]] && y=$((y - 1))
             forge="snapshot-$y-${md%.*}-${md#*.}"     # the stamp fetch-forge.sh gives the runtime
           else forge=$(tr -d '[:space:]' < forge/VERSION); fi
-          run_id="${{ inputs.run_id }}"; [ -n "$run_id" ] || run_id="$(date -u +%Y-%m-%d)-${league}-${forge}-s${seed}"
+          run_id="${{ inputs.run_id }}"; [ -n "$run_id" ] || run_id="$(date -u +%Y-%m-%d)-${league}-${forge}-s${seed}${{ inputs.playbooks && '-bots' || '' }}"
           shards="${{ inputs.shards }}"
           matrix=$(seq 1 "$shards" | jq -cs .)
           { echo "seed=$seed"; echo "run_id=$run_id"; echo "shards=$shards"; echo "matrix=$matrix"; } >> "$GITHUB_OUTPUT"
@@ -104,7 +108,7 @@ jobs:
           python3 -I runner/league.py play --seed "${{ needs.prep.outputs.seed }}" --cycles "${{ inputs.cycles }}" \
             --out "results/${{ needs.prep.outputs.run_id }}" --runtime forge/runtime \
             --shards "${{ needs.prep.outputs.shards }}" --shard "${{ matrix.shard }}" -j "${{ inputs.jobs_per_shard }}" \
-            --mc "${{ inputs.mc }}" ${{ inputs.profile && format('--profile "{0}"', inputs.profile) || '' }}
+            --mc "${{ inputs.mc }}" ${{ inputs.profile && format('--profile "{0}"', inputs.profile) || '' }} ${{ inputs.playbooks && '--playbooks' || '' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

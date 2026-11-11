@@ -4,7 +4,7 @@
     runner/league.py schedule --league runner/precon-league.json --seed S --cycles C [--shards K --shard k]
     runner/league.py play     --league runner/precon-league.json --seed S --cycles C --out results/RUN_ID
                               [--runtime forge/runtime-snapshot] [--shards K --shard k] [-j JOBS] [--clock 1800]
-                              [--turn-cap 120] [--mc off|on|max|lite] [--profile NAME] [--limit N] [--dry-run]
+                              [--turn-cap 120] [--mc off|on|max|lite] [--profile NAME] [--playbooks] [--limit N] [--dry-run]
     runner/league.py rollup   results/RUN_ID [--out DIR] [--league ... --seed S --cycles C] [--index demo-data/index.json] [--max-turn 12]
 
 The schedule is a pure function of the league file, the seed and the number of cycles. A cycle is four rounds:
@@ -122,6 +122,14 @@ def cmd_play(args):
     if missing:
         raise SystemExit(f"{len(missing)} league deck file(s) not in {precon_dir}: {missing[:5]}{' ...' if len(missing) > 5 else ''}")
     by_id = {d["id"]: d for d in league["decks"]}
+    # --playbooks: a deck that has a shipped playbook (the playbook object in playbook/precons/<id>.json) is played
+    # under it in whatever seat it sits; every other seat stays stock Forge AI.
+    playbooks = {}
+    if args.playbooks:
+        for d in league["decks"]:
+            pf = os.path.join(ROOT, "playbook", "precons", d["id"] + ".json")
+            if os.path.isfile(pf) and isinstance(load_json(pf).get("playbook"), dict):
+                playbooks[d["id"]] = pf
     games = schedule(league, args.seed, args.cycles)
     mine = shard_games(games, args.shards, args.shard)
     todo = [g for g in mine if not completed(game_dir(args.out, args.shard, g["index"]))]
@@ -133,7 +141,7 @@ def cmd_play(args):
         "vibefish": rl.VERSION, "league": {k: v for k, v in league.items() if k != "decks"}, "deck_ids": sorted(by_id),
         "seed": args.seed, "cycles": args.cycles, "shards": args.shards, "games_scheduled": len(games),
         "forge_version": forge_version, "runtime": os.path.basename(runtime), "clock_s": args.clock, "turn_cap": args.turn_cap,
-        "mc": args.mc, "profile": args.profile or "Default", "started": now(),
+        "mc": args.mc, "profile": args.profile or "Default", "playbooks": sorted(playbooks), "started": now(),
     }
     for path in (os.path.join(out, "league.json"), os.path.join(out, f"shard-{args.shard}", "league.json")):
         if not os.path.isfile(path):
@@ -178,6 +186,9 @@ def cmd_play(args):
                 "--forge-version", forge_version, "--mc", args.mc]
         if args.profile:
             cmd += ["--profile", args.profile] * 4
+        for sid in g["seats"]:
+            if sid in playbooks:
+                cmd += ["--playbook", f"{sid}={playbooks[sid]}"]
         if args.dry_run:
             print(" ".join(repr(c) if " " in c else c for c in cmd))
             return
@@ -339,6 +350,7 @@ def cmd_rollup(args):
         "mc": first_run.get("mc"),
         "mc_available": first_run.get("mc_available"),
         "profile": (meta or {}).get("profile") or (first_run["decks"][0].get("profile") if first_run.get("decks") else None),
+        "playbooks": (meta or {}).get("playbooks") or [],     # deck ids played under their shipped playbook (league.py play --playbooks)
         "deck_stats": deck_stats,
         "game_summaries": games_out,
     }
@@ -415,6 +427,8 @@ def main(argv):
     p.add_argument("--turn-cap", type=int, default=120)
     p.add_argument("--mc", default="off", choices=["off", "on", "max", "lite"])
     p.add_argument("--profile", default="", help="AI profile for every seat (default: Forge's Default)")
+    p.add_argument("--playbooks", action="store_true",
+                   help="play every deck that has a shipped playbook (playbook/precons/<id>.json) under it; the other seats stay stock")
     p.add_argument("--limit", type=int, help="play at most N games of this shard (smoke tests)")
     p.add_argument("--dry-run", action="store_true")
     p.set_defaults(func=cmd_play)

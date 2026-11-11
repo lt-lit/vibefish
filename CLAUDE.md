@@ -47,6 +47,7 @@ runner/league.py schedule --seed 20261109 --cycles 25  # the precon league sched
 FORGE_RUNTIME=$PWD/forge/runtime-snapshot runner/league.py play --seed 20261109 --cycles 25 --out results/league-x --shards 20 --shard 1 -j 2
                                                        # one shard of the league locally (110 one-game harness runs); league-run.yml plays all shards in Actions
 runner/league.py rollup results/league-x               # per-deck win rates with Wilson intervals (kind: league); publish.sh and scorecard.py handle league runs
+runner/league.py play ... --playbooks                  # the same league with every deck that has a shipped playbook (playbook/precons/<id>.json) played under it; other seats stay stock (league-run.yml input `playbooks`)
 runner/deckdata.py generate --runtime forge/runtime-snapshot [--deck ID]   # Phase 3 data drafts: playbook/precons/<id>.json (Spellbook + card scripts); curated blocks survive
 runner/deckdata.py forge-lines playbook/precons/token-triumph.json         # the KeyCards, role, combo and pair lines a seat will be given
 controller/vibefish-sim.sh play ... --data token-triumph=playbook/precons/token-triumph.json --profile "" --profile Vibefish-token-triumph ...   # one seat with its data
