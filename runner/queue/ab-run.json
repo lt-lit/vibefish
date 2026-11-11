@@ -1,13 +1,27 @@
 {
-  "requested": "2026-11-11T02:08Z",
-  "note": "Hail, Caesar's rules at four-player tables, four candidates on the 200 tables of run #6 (same seed, so each pairs with that run's stock and attack-only arms): the cast rules under the go-wide attack; the same with Caesar's attack trigger accepted always; accepted only with a token to give up; and accepted always under the pressure attack. Playbook arm only.",
-  "decks": "hail-caesar@cast-wide,hail-caesar@caesar-wide,hail-caesar@caesar-tok-wide,hail-caesar@caesar-any",
+  "requested": "2026-11-11T03:35Z",
+  "note": "Three requests in one run. Goblin Storm: the shipped attack with Zada held until she can be aimed at, on run #5's tables (its stock and version-2 arms are the pair). Token Triumph: the shipped version 3 plus Mentor of the Meek's trigger and the unused token makers as mana sinks, on run #6's tables (run #8's cast arm is the pair). Tricky Terrain: its first playbook (version 5: commander at once, landfall before the land, X spells, the Marit Lage line, removal when threatened) against stock on new tables, with and without key cards for the tutors.",
   "games": "200",
-  "arms": "playbook",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
-  "seed": "20261141",
   "forge_channel": "snapshot",
-  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10"
+  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
+  "runs": [
+    {
+      "decks": "goblin-storm@zadawide",
+      "arms": "playbook",
+      "seed": "20261140"
+    },
+    {
+      "decks": "token-triumph@cast2",
+      "arms": "playbook",
+      "seed": "20261141"
+    },
+    {
+      "decks": "tricky-terrain@lands",
+      "arms": "stock,playbook,playbookdata",
+      "seed": "20261142"
+    }
+  ]
 }

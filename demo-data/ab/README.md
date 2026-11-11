@@ -39,3 +39,9 @@ can be aimed at, on top of pressure, 39. Every candidate beats stock's 18; none 
 `2026-11-11-local/` are checks on the session's machine, each a join of arms that share one stock arm: Goblin Storm at 40 tables
 under five attack settings and in 60 duels, Token Triumph's three cast-rule candidates in 60 duels, Hail, Caesar's two trigger-rule
 candidates in 60 duels (`runner/ab.py --opponents 1`).
+
+`2026-11-11-ab-v6/token-triumph.json` joins Token Triumph's three cast-rule candidates (`ab-run` #8, playbook arm only) with run #6's
+stock and attack-only arms on the same 200 tables: the cast rules under the go-wide attack win 67 where stock wins 43 (+12.0 points,
+47 discordant pairs against 23, exact test 0.006), under the pressure attack 60, with everything but the anthems cast after
+combat 58. The first became the deck's shipped playbook (version 3).
+
