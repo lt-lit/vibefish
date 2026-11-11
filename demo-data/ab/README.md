@@ -61,4 +61,4 @@ deck's first playbook on 200 new tables with a stock arm of its own (seed 202611
 had not seen (seed 20261143): 42 wins against stock's 27, +7.5 points (37 discordant pairs against 22, exact test 0.07);
 `hail-caesar-pooled.json` pools it with the tables that chose it (`ab.py pool`: 93 against 61 of 400, exact test 0.004).
 `quick-draw.json` is Quick Draw's first candidate against stock (seed 20261144): 38 wins against 31, +3.5 points, exact test 0.42.
-
+`science.json` (`ab-run` #14, seed 20261145) is Science!'s candidate against stock: 15 wins against 14.
