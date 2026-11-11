@@ -6,7 +6,7 @@
 #   FORGE_CHANNEL=snapshot FORGE_SNAPSHOT_BUILD=2.0.16-SNAPSHOT-11.08 forge/fetch-forge.sh   # one exact snapshot build
 #   forge/fetch-forge.sh --force                  # rebuild the runtime even if it is current
 #
-# Forge's daily-snapshots release keeps a build for one day. A snapshot build that published runs depend on is kept
+# Forge's daily-snapshots release keeps only its newest build. A snapshot build that published runs depend on is kept
 # as an assembled runtime on this repository's release `forge-runtimes` (.github/workflows/forge-archive.yml); when
 # forge/SHA256SUMS lists that archive (forge-runtime-snapshot-YYYY-MM-DD.tar.gz), a pinned FORGE_SNAPSHOT_BUILD is
 # fetched from there instead, checksum-verified. FORGE_MIRROR overrides the download location.
@@ -91,7 +91,8 @@ fi
 mkdir -p "$DL"
 
 # A pinned snapshot build with an archive of its runtime on this repository's release: that is the copy to use
-# (upstream keeps the build for a day). The archive is the runtime as assembled below, minus Forge's profile.
+# (upstream keeps a build only until the next one replaces it). The archive is the runtime as assembled below,
+# minus Forge's profile.
 MIRROR_ASSET="forge-runtime-${STAMP}.tar.gz"
 if [ "$CHANNEL" = snapshot ] && [ -n "${FORGE_SNAPSHOT_BUILD:-}" ] && grep -q " $MIRROR_ASSET\$" "$HERE/SHA256SUMS"; then
   MIRROR="${FORGE_MIRROR:-https://github.com/lt-lit/vibefish/releases/download/forge-runtimes}"

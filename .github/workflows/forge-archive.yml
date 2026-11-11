@@ -1,8 +1,8 @@
 name: forge-archive
 
-# A durable copy of the Forge runtimes that published runs depend on. Forge's `daily-snapshots` release keeps one
-# day's tarball, so a snapshot build can be fetched from upstream only on the day it was built; after that the only
-# copy is the Actions cache, which GitHub drops after a week without use. This workflow takes a build's runtime as
+# A durable copy of the Forge runtimes that published runs depend on. Forge's `daily-snapshots` release holds one
+# tarball at a time, so a snapshot build can be fetched from upstream only until the next snapshot replaces it;
+# after that the only copy is the Actions cache, which GitHub drops after a week without use. This workflow takes a build's runtime as
 # forge/fetch-forge.sh assembled it (from the cache, or from upstream while the tarball is still there), packs it
 # and attaches it to this repository's release `forge-runtimes`, where forge/fetch-forge.sh finds it again by name
 # and checksum (forge/SHA256SUMS). Forge is GPL v3: each archive carries Forge's LICENSE.txt and build.txt, and the
@@ -101,7 +101,7 @@ jobs:
           stamp="${{ steps.pack.outputs.stamp }}"
           cat > notes.md <<'NOTES'
           Archived Forge runtimes: the trimmed headless runtime that `forge/fetch-forge.sh` assembles from a Forge build, kept
-          here because published Vibefish runs depend on it and Forge's `daily-snapshots` release keeps a build for one day.
+          here because published Vibefish runs depend on it and Forge's `daily-snapshots` release keeps only its newest build.
           `forge/fetch-forge.sh` downloads an archive from here when `forge/SHA256SUMS` lists it.
 
           Forge is free software under the GNU General Public License v3: https://github.com/Card-Forge/forge. These are
