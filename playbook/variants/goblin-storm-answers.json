@@ -21,10 +21,21 @@
       "Goblin Bombardment"
      ],
      "when": [
+      "opponents == 1",
       "opp_life <= 5",
       "creatures >= opp_life"
      ],
      "times": 60
+    },
+    {
+     "play": [
+      "Goblin Bombardment"
+     ],
+     "when": [
+      "opponents == 1",
+      "opp_life <= 5",
+      "creatures >= opp_life"
+     ]
     },
     {
      "play": [
@@ -177,14 +188,6 @@
      "hold": [
       "Battle Hymn",
       "Brightstone Ritual"
-     ]
-    },
-    {
-     "play": [
-      "Grapeshot"
-     ],
-     "when": [
-      "storm >= 5"
      ]
     },
     {
