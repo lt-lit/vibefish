@@ -77,8 +77,10 @@ jobs:
           set -euo pipefail
           stamp=$(head -1 forge/runtime/VIBEFISH_FORGE_VERSION)
           name="forge-runtime-${stamp}.tar.gz"
-          # The runtime as forge/fetch-forge.sh assembles it, without what Forge wrote into its profile while running.
-          tar -C forge --sort=name --owner=0 --group=0 --numeric-owner --exclude='runtime/profile/*' -czf "$name" runtime
+          # The runtime as forge/fetch-forge.sh assembles it: without what Forge wrote into its profile while running,
+          # and without the AI profiles Vibefish's own runners add to res/ai (they are written again when needed).
+          tar -C forge --sort=name --owner=0 --group=0 --numeric-owner --exclude='runtime/profile/*' \
+            --exclude='runtime/res/ai/Vibefish-*.ai' -czf "$name" runtime
           sha256sum "$name" | tee "$name.sha256"
           {
             echo "archive:        $name"
