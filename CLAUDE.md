@@ -6,7 +6,7 @@ Read `DESIGN.md` first. This file is the short version plus hard constraints.
 Commander deck playtesting engine built on Forge's headless `sim` mode. Engine only — decks, playbooks and results live in a separate data repo and are passed in by path. `demo-data/` holds the public pod results the dashboard shows.
 
 ## Hard constraints
-- **Dashboard:** vanilla JS, no build step, no TypeScript, no frameworks. Must work on GitHub Pages and on a phone browser. It reads only the data contract in `DESIGN.md` §6 (`index.json`, `rollup.json`, `cards/scryfall-cache.json`).
+- **Dashboard:** vanilla JS, no build step, no TypeScript, no frameworks. Must work on GitHub Pages and on a phone browser. It reads only the data contract in `DESIGN.md` §6 (`index.json`, `rollup.json`, `cards/scryfall-cache.json`, and the optional `bots.json`).
 - **Images:** never commit card image files. Hotlink `cards.scryfall.io` URLs from the cache only; `small` and `normal` only, never cropped art.
 - **Scryfall API:** ≥100 ms between requests to `api.scryfall.com`; set `User-Agent: Vibefish/<version>` in scripts (`runner/scryfall.py` does); leave browser UA alone in page JS. Resolve names in batches via `cards/collection`.
 - **Forge:** pinned to the tag in `forge/VERSION` with the checksum in `forge/SHA256SUMS`. Do not float to `latest` or `daily-snapshots` unless `FORGE_CHANNEL=snapshot` is explicitly set; a snapshot build that published runs depend on is pinned exactly with `FORGE_SNAPSHOT_BUILD=<build>` and its checksum recorded in `forge/SHA256SUMS` (the 2026-11-08 build is). The runtime is downloaded by `forge/fetch-forge.sh` into `forge/runtime/` and is never committed. Forge's `daily-snapshots` release keeps one day's tarball: on 2026-11-10 the 11-08 and 11-09 files already answered 404, so a pinned snapshot can only be fetched on the day it was built. The 11-08 runtime now exists only in the Actions cache, whose key hashes `forge/VERSION`, `forge/SHA256SUMS` and `forge/fetch-forge.sh`: do not edit those three files until the user has decided where a durable copy lives (open since 2026-11-10).
@@ -59,6 +59,7 @@ runner/ab.py play --deck hail-caesar --opponents 1 --games 60 --seed 20261152 --
                                                        # duels (one opponent, ten seconds a game): the middle instrument; --data with a variant file plays a candidate playbook
 runner/ab.py join --out joined.json --against v2 stock=run5.json:stock v2=run5.json:playbook pressure3=run7.json   # arms of different runs on the same tables (same deck and seed) as one measurement (kind: ab-join)
 runner/playbook.py draft --deck hail-caesar --runtime forge/runtime-snapshot   # a first set of cast rules read off Forge's card scripts -> playbook/variants/<deck>-draft.json (roles: the sorting alone)
+runner/bots.py                                         # playbook/bots.json (which decks have a bot and where their measurements are) -> demo-data/bots.json, the dashboard's per-deck bots table
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```

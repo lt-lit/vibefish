@@ -180,3 +180,8 @@ figure.chart svg { width: 100%; height: auto; display: block; touch-action: pan-
   .deck .art img, .deck .art .noimg { height: 100px; }
   .deck .win { font-size: 1.6rem; }
 }
+
+/* per-deck bots: the table reuses .league and .table-view; the notes under it wrap */
+#bots .table-view td:last-child, #bots .table-view th:last-child { white-space: normal; text-align: left; color: var(--ink-2); min-width: 9rem; }
+.bot-notes { margin: 10px 0 0; padding-left: 1.1rem; color: var(--ink-2); font-size: 0.86rem; }
+.bot-notes li { margin: 2px 0; }

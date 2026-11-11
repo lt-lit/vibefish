@@ -5,6 +5,8 @@
  *                              runner/league.py (kind "league": many decks over random tables; league view below)
  *   <run dir>/scorecard.json   calibration against Playgroup.gg's human references, from runner/scorecard.py (optional)
  *   cards/scryfall-cache.json  {name: {image_uris:{small,normal}, scryfall_uri, ...}} (optional)
+ *   bots.json                  the decks with a per-deck bot: stock against playbook on the same tables, goldfish kill
+ *                              turns, the human win rate; from runner/bots.py (optional; shown above every run)
  */
 (() => {
   'use strict';
@@ -602,6 +604,34 @@
     });
   }
 
+  // ---------- bots: the decks that have a per-deck playbook, stock against playbook on the same tables ----------
+  function renderBots(data) {
+    const sec = $('#bots');
+    const bots = data.bots || [];
+    if (!bots.length) return;
+    const rate = (a) => a ? `${pct(a.win_rate, 1)} (${a.wins}/${a.games})` : '–';
+    const rows = bots.map((b) => {
+      const t = b.tables, g = b.goldfish;
+      const ci = t && t.difference_ci95;
+      return [
+        `${b.name} · ${(b.commanders || []).join(' / ')}`,
+        b.human && b.human.win_rate != null ? pct(b.human.win_rate, 1) : '–',
+        t ? rate(t.stock) : '–',
+        t ? rate(t.bot) : '–',
+        t ? `${signed(t.difference)}${ci ? ` (${signed(ci[0], 0)} to ${signed(ci[1], 0)})` : ''}` : '–',
+        g ? `${num(g.stock_kill_turn)} → ${num(g.bot_kill_turn)}` : '–',
+        b.status || '',
+      ];
+    });
+    sec.replaceChildren(
+      el('div', { class: 'head' }, el('div', {},
+        el('h2', { text: 'Per-deck bots' }),
+        el('p', { class: 'tag', text: 'One deck in the seat, played twice at the same four-player tables: by Forge\'s stock AI and under the deck\'s own playbook (which card to cast when, which trigger to take, whom to attack). Win rates are of 200 tables unless the count says otherwise; the difference is in points with its 95% interval. Goldfish is the deck\'s kill turn against three opponents that do nothing, stock then playbook.' }))),
+      el('div', { class: 'table-view' }, dataTable(['Deck', 'People', 'Stock AI', 'With playbook', 'Difference', 'Goldfish turns', 'Status'], rows)),
+      el('ul', { class: 'bot-notes' }, bots.filter((b) => b.summary).map((b) => el('li', {}, el('strong', { text: `${b.name}: ` }), b.summary))));
+    sec.hidden = false;
+  }
+
   function lossLabel(k) {
     return ({ LifeReachedZero: 'life', CommanderDamage: 'commander damage', Poisoned: 'poison', Milled: 'decking',
       SpellEffect: 'spell effect', OpponentWon: 'opponent win con', Conceded: 'concession', Draw: 'draw', Unknown: 'unknown' })[k] || k;
@@ -629,6 +659,8 @@
       let current = runs.find((r) => r.id === wanted) || runs[0];
       select.value = current.id;
       const cards = (await loadJson(DATA + 'cards/scryfall-cache.json', true)) || {};
+      const bots = await loadJson(DATA + 'bots.json', true).catch(() => null);
+      if (bots) renderBots(bots);
       const show = async (run) => {
         status.hidden = false; status.textContent = `Loading ${run.id}…`; status.classList.remove('error');
         const rollup = await loadJson(DATA + run.path);

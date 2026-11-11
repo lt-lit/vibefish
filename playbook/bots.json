@@ -1,0 +1,59 @@
+{
+ "schema": 1,
+ "about": "The decks that have a per-deck bot or a candidate for one, and where each one's measurements are. runner/bots.py turns this into demo-data/bots.json for the dashboard. Edited by hand when a playbook ships or a run comes in.",
+ "bots": [
+  {
+   "deck": "goblin-storm",
+   "status": "shipped",
+   "playbook": "playbook/precons/goblin-storm.json",
+   "summary": "Aims its single-target spells at Zada, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v5/goblin-storm.json",
+    "stock": "stock",
+    "bot": "v2",
+    "run": "ab-run #5"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-10-goblin-storm/seeds-9001-9100-as-shipped.json"
+  },
+  {
+   "deck": "token-triumph",
+   "status": "shipped",
+   "playbook": "playbook/precons/token-triumph.json",
+   "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v6/token-triumph.json",
+    "stock": "stock",
+    "bot": "cast",
+    "run": "ab-run #8 on #6's tables"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json"
+  },
+  {
+   "deck": "hail-caesar",
+   "status": "shipped, confirming run queued",
+   "playbook": "playbook/precons/hail-caesar.json",
+   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge declines it two times in three).",
+   "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v7/hail-caesar.json",
+    "stock": "stock",
+    "bot": "caesar_tok_wide",
+    "run": "ab-run #9 on #6's tables, best of four candidates"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json"
+  },
+  {
+   "deck": "tricky-terrain",
+   "status": "candidate, at the tables",
+   "playbook": "playbook/variants/tricky-terrain-lands-wide.json",
+   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
+   "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-seeds-8001-8040.json"
+  },
+  {
+   "deck": "quick-draw",
+   "status": "candidate, at the tables",
+   "playbook": "playbook/variants/quick-draw-spells.json",
+   "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
+   "goldfish": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json"
+  }
+ ]
+}

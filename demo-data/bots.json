@@ -1,0 +1,240 @@
+{
+ "vibefish": "0.3.1",
+ "generated": "2026-11-11T06:51:25Z",
+ "kind": "bots",
+ "reference": {
+  "source": "Playgroup.gg",
+  "retrieved": "2026-11-09",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ "bots": [
+  {
+   "deck": "goblin-storm",
+   "name": "Goblin Storm",
+   "commanders": [
+    "Zada, Hedron Grinder"
+   ],
+   "status": "shipped",
+   "playbook": "playbook/precons/goblin-storm.json",
+   "summary": "Aims its single-target spells at Zada, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
+   "human": {
+    "win_rate": 0.2093,
+    "games": 218
+   },
+   "tables": {
+    "run": "ab-run #5",
+    "seed": 20261140,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-11-ab-v5/goblin-storm.json",
+    "stock": {
+     "games": 200,
+     "wins": 18,
+     "win_rate": 0.09,
+     "win_rate_ci95": [
+      0.0577,
+      0.1378
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 40,
+     "win_rate": 0.2,
+     "win_rate_ci95": [
+      0.1505,
+      0.2609
+     ]
+    },
+    "difference": 0.11,
+    "difference_ci95": [
+     0.0468,
+     0.1732
+    ],
+    "bot_only": 33,
+    "stock_only": 11,
+    "exact_p": 0.0013
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-10-goblin-storm/seeds-9001-9100-as-shipped.json",
+    "games": 100,
+    "stock_kill_turn": 11.4,
+    "bot_kill_turn": 9.25,
+    "faster_by": 2.15,
+    "faster_by_ci95": [
+     1.837,
+     2.463
+    ],
+    "seeds_paired": 100
+   }
+  },
+  {
+   "deck": "token-triumph",
+   "name": "Token Triumph",
+   "commanders": [
+    "Emmara, Soul of the Accord"
+   ],
+   "status": "shipped",
+   "playbook": "playbook/precons/token-triumph.json",
+   "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
+   "human": {
+    "win_rate": 0.2652,
+    "games": 197
+   },
+   "tables": {
+    "run": "ab-run #8 on #6's tables",
+    "seed": 20261141,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-11-ab-v6/token-triumph.json",
+    "stock": {
+     "games": 200,
+     "wins": 43,
+     "win_rate": 0.215,
+     "win_rate_ci95": [
+      0.1637,
+      0.277
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 67,
+     "win_rate": 0.335,
+     "win_rate_ci95": [
+      0.2732,
+      0.403
+     ]
+    },
+    "difference": 0.12,
+    "difference_ci95": [
+     0.0397,
+     0.2003
+    ],
+    "bot_only": 47,
+    "stock_only": 23,
+    "exact_p": 0.0056
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json",
+    "games": 40,
+    "stock_kill_turn": 10.375,
+    "bot_kill_turn": 9.05,
+    "faster_by": 1.325,
+    "faster_by_ci95": [
+     1.024,
+     1.626
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "hail-caesar",
+   "name": "Hail, Caesar",
+   "commanders": [
+    "Caesar, Legion's Emperor"
+   ],
+   "status": "shipped, confirming run queued",
+   "playbook": "playbook/precons/hail-caesar.json",
+   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge declines it two times in three).",
+   "human": {
+    "win_rate": 0.2152,
+    "games": 320
+   },
+   "tables": {
+    "run": "ab-run #9 on #6's tables, best of four candidates",
+    "seed": 20261141,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-11-ab-v7/hail-caesar.json",
+    "stock": {
+     "games": 200,
+     "wins": 34,
+     "win_rate": 0.17,
+     "win_rate_ci95": [
+      0.1243,
+      0.2282
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 51,
+     "win_rate": 0.255,
+     "win_rate_ci95": [
+      0.1996,
+      0.3196
+     ]
+    },
+    "difference": 0.085,
+    "difference_ci95": [
+     0.012,
+     0.158
+    ],
+    "bot_only": 37,
+    "stock_only": 20,
+    "exact_p": 0.0331
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
+    "games": 40,
+    "stock_kill_turn": 12.475,
+    "bot_kill_turn": 11.075,
+    "faster_by": 1.4,
+    "faster_by_ci95": [
+     0.93,
+     1.87
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "tricky-terrain",
+   "name": "Tricky Terrain",
+   "commanders": [
+    "Omo, Queen of Vesuva"
+   ],
+   "status": "candidate, at the tables",
+   "playbook": "playbook/variants/tricky-terrain-lands-wide.json",
+   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
+   "human": {
+    "win_rate": 0.2859,
+    "games": 306
+   },
+   "tables": null,
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-11/tricky-terrain-seeds-8001-8040.json",
+    "games": 40,
+    "stock_kill_turn": 13.394,
+    "bot_kill_turn": 10.641,
+    "faster_by": 2.938,
+    "faster_by_ci95": [
+     2.291,
+     3.584
+    ],
+    "seeds_paired": 32
+   }
+  },
+  {
+   "deck": "quick-draw",
+   "name": "Quick Draw",
+   "commanders": [
+    "Stella Lee, Wild Card"
+   ],
+   "status": "candidate, at the tables",
+   "playbook": "playbook/variants/quick-draw-spells.json",
+   "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
+   "human": {
+    "win_rate": 0.2585,
+    "games": 133
+   },
+   "tables": null,
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json",
+    "games": 40,
+    "stock_kill_turn": 13.718,
+    "bot_kill_turn": 11.718,
+    "faster_by": 1.974,
+    "faster_by_ci95": [
+     1.385,
+     2.563
+    ],
+    "seeds_paired": 38
+   }
+  }
+ ]
+}
