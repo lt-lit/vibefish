@@ -107,6 +107,7 @@ Outside the seat's own main phases only the holds apply.
   agrees, since that logic is what picks them.
 - `phase`: `main` (either main phase, the default), `main1` or `main2`.
 - `before_land` (play, activate): `true` tries the rule before the turn's land is played as well, while a land can still be played. The rules otherwise run after the land drop, since they all want the mana; a landfall deck wants its payoffs down first so the land triggers them (`{"play": ["Tatyova, Benthic Druid", "Scute Swarm"], "before_land": true}`). Counter: `cast_before_land`.
+- `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:
   `"<metric> <op> <number>"` with `>= <= > < == !=`, `"<metric> <op> <metric>"` (`"opp_power > power"`), or
   `"controls <card name>"` / `"not controls <card name>"` (a permanent of ours on the battlefield).

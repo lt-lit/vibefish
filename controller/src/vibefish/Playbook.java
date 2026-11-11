@@ -139,7 +139,9 @@ public final class Playbook {
      * {@code activate}: the same for an activated ability of a listed permanent of ours ({@code ability}: a piece of
      * its text, when the card has several), at most {@code times} a turn for each permanent. A play or activate rule
      * marked {@code before_land} is also tried before the turn's land is played, when a land could still be played,
-     * which is how a landfall deck says "the payoff first, then the land". {@code hold}: Forge's
+     * which is how a landfall deck says "the payoff first, then the land". With {@code x} a rule casts an untargeted
+     * spell that has X in its cost for as much as the mana left pays for ({@code "max"}) or at most the number given,
+     * and not at all below {@code x_min}; without it X spells are cast only when Forge's own logic would. {@code hold}: Forge's
      * own AI may not cast the listed cards, nor use the activated abilities of the listed permanents of ours (all of
      * them, or the one {@code ability} quotes), until every {@code until} condition holds (never, with no
      * {@code until}); a card named by several hold rules is released as soon as one of them is, and a play or
@@ -154,6 +156,8 @@ public final class Playbook {
         public final List<Cond> when;       // play, activate: when; hold: until
         public final String phase;          // play, activate: main (either main phase) | main1 | main2
         public final boolean beforeLand;    // play, activate: tried before the turn's land is played (landfall first)
+        public final int x;                 // play, activate: the most X the rule pays (-1: X is Forge's; "max": all the mana left)
+        public final int xMin;              // ... and the least X worth casting for (default 1)
         public final int index;             // 1-based position in the file, for the counters
 
         CastRule(JsonObject o, int index) {
@@ -181,6 +185,19 @@ public final class Playbook {
             times = num(o, "times", 1);
             phase = hold ? null : str(o, "phase", "main");
             beforeLand = !hold && o.has("before_land") && o.get("before_land").isJsonPrimitive() && o.get("before_land").getAsBoolean();
+            if (!hold && o.has("x") && o.get("x").isJsonPrimitive()) {
+                String xs = o.get("x").getAsString().trim();
+                if (!xs.equals("max") && !xs.matches("\\d+")) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": x must be a number or \"max\"");
+                }
+                x = xs.equals("max") ? Integer.MAX_VALUE : Integer.parseInt(xs);
+            } else {
+                x = -1;
+            }
+            xMin = num(o, "x_min", 1);
+            if (hold && (o.has("x") || o.has("x_min") || o.has("before_land"))) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": a hold rule takes no \"x\", \"x_min\" or \"before_land\"");
+            }
             if (!hold && !List.of("main", "main1", "main2").contains(phase)) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1 or main2");
             }

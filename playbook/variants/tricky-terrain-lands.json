@@ -5,7 +5,7 @@
  "of": "playbook/precons/tricky-terrain.json",
  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
  "playbook": {
-  "version": 1,
+  "version": 3,
   "attack": {
    "policy": "pressure",
    "target": "highest_life",
@@ -88,10 +88,46 @@
      "when": [
       "library >= 20"
      ]
+    },
+    {
+     "play": [
+      "Hydroid Krasis"
+     ],
+     "x": "max",
+     "x_min": 4
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Nissa, Steward of Elements"
+     ],
+     "x": "max",
+     "x_min": 3
     }
    ]
   },
-  "notes": "First curated candidate, from the draft: the rocks and Growth Spiral, Omo at once (stock Forge casts its three-mana commander around turn six), the cards that find lands, then the landfall payoffs, which go down before the turn's land so the land triggers them (before_land), the ramp sorceries, and the big creatures (stock sits on its six-drops with seven lands). Left to Forge: the X spells (Hydroid Krasis, Finale of Revelation, Aggressive Biomancy, Nissa), Terastodon, Acidic Slime and Skullwinder (aimed as they enter), the instants, Treasure Cruise (delve), and four cards its AI never casts (Curse of the Swine, Beast Within, Summary Dismissal, Oblivion Stone) plus Mirage Mirror and Magus of the Candelabra, which need activations no rule makes yet. Pressure attack, highest life first.",
-  "on": "2026-11-11"
+  "notes": "Curated from the draft: the rocks and Growth Spiral, Omo at once (stock Forge casts its three-mana commander around turn six), the cards that find lands, then the landfall payoffs, which go down before the turn's land so the land triggers them (before_land), the ramp sorceries, and the big creatures (stock sits on its six-drops with seven lands). Version 2 adds the X spells as mana sinks, last in line so they take what the turn leaves: Hydroid Krasis for four or more, Finale of Revelation for four to nine with an empty hand and a library to draw from, Nissa for three or more. Forge's AI kept all three in hand through version 1's games with the mana for them unspent. Version 3 takes Seer's Sundial's landfall trigger (pay two, draw a card) when the hand is three cards or fewer: Forge's AI turned it down 51 times in version 2's forty goldfish games. Left to Forge: Aggressive Biomancy and Drown in Dreams (aimed X spells), Terastodon, Acidic Slime and Skullwinder (aimed as they enter), the instants, Treasure Cruise (delve), and four cards its AI never casts (Curse of the Swine, Beast Within, Summary Dismissal, Oblivion Stone) plus Mirage Mirror and Magus of the Candelabra, which need activations no rule makes yet. Pressure attack, highest life first. Goldfish, 40 seeds (8001-8040): version 1 killed in 10.77 turns and version 2 in 10.64 (39 of 40 finished); stock's first four games took 14, 15, 14 and 14.",
+  "on": "2026-11-11",
+  "triggers": [
+   {
+    "accept": [
+     "Seer's Sundial"
+    ],
+    "when": [
+     "hand <= 3",
+     "library >= 20"
+    ]
+   }
+  ]
  }
 }

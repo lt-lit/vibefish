@@ -836,7 +836,7 @@ public class PlaybookController extends PlayerControllerAi {
                         if (!c.getName().equals(name) || castActivations.getOrDefault(c.getId(), 0) >= rule.times) {
                             continue;
                         }
-                        SpellAbility sa = activatable(c, rule.ability, target);
+                        SpellAbility sa = activatable(c, rule.ability, target, rule);
                         if (sa != null) {
                             castActivations.merge(c.getId(), 1, Integer::sum);
                             castPlays++;
@@ -855,7 +855,7 @@ public class PlaybookController extends PlayerControllerAi {
                     if (!c.getName().equals(name) || castTried.contains(c.getId())) {
                         continue;
                     }
-                    SpellAbility sa = playable(c, target);
+                    SpellAbility sa = playable(c, target, rule);
                     if (sa != null) {
                         castPendingId = c.getId();
                         castPendingSpells = spells;
@@ -889,7 +889,7 @@ public class PlaybookController extends PlayerControllerAi {
      * nothing else; without one, a spell that needs no choices is cast as it is, and one that needs targets or an X
      * is cast only if Forge's own logic will play it, since that logic is what chooses them.
      */
-    private SpellAbility playable(Card card, Card target) {
+    private SpellAbility playable(Card card, Card target, Playbook.CastRule rule) {
         List<SpellAbility> spells = new ArrayList<>();
         for (SpellAbility sa : card.getAllPossibleAbilities(player, true)) {
             if (sa.isSpell() && sa.getAlternativeCost() == null) {
@@ -900,7 +900,7 @@ public class PlaybookController extends PlayerControllerAi {
             return null;
         }
         for (SpellAbility sa : ComputerUtilAbility.getOriginalAndAltCostAbilities(spells, player)) {
-            if (sa.isSpell() && sa.getAlternativeCost() == null && ready(sa, target)) {
+            if (sa.isSpell() && sa.getAlternativeCost() == null && ready(sa, target, rule)) {
                 return sa;
             }
         }
@@ -908,7 +908,7 @@ public class PlaybookController extends PlayerControllerAi {
     }
 
     /** An activated ability of the permanent that can be used now (mana abilities are Forge's to tap), or null. */
-    private SpellAbility activatable(Card card, String text, Card target) {
+    private SpellAbility activatable(Card card, String text, Card target, Playbook.CastRule rule) {
         String want = text == null ? null : text.toLowerCase();
         for (SpellAbility sa : card.getAllPossibleAbilities(player, true)) {
             if (!sa.isActivatedAbility() || sa.isManaAbility()) {
@@ -918,7 +918,7 @@ public class PlaybookController extends PlayerControllerAi {
             if (want != null && (d == null || !d.toLowerCase().contains(want))) {
                 continue;
             }
-            if (ready(sa, target)) {
+            if (ready(sa, target, rule)) {
                 return sa;
             }
         }
@@ -926,12 +926,13 @@ public class PlaybookController extends PlayerControllerAi {
     }
 
     /** Legal now, aimed (by the rule's target, or by Forge's own logic when the ability needs choices) and affordable. */
-    private boolean ready(SpellAbility sa, Card target) {
+    private boolean ready(SpellAbility sa, Card target, Playbook.CastRule rule) {
         sa.setActivatingPlayer(player);
         if (!sa.canPlay()) {
             return false;
         }
         SpellAbility aimed = null;
+        SpellAbility paidX = null;
         if (target != null) {
             // The rule aims at one permanent, so the spell must have exactly one part that takes a target (the spell
             // itself, or the sub-ability that does: Fists of Flame draws first and pumps its target second).
@@ -956,16 +957,38 @@ public class PlaybookController extends PlayerControllerAi {
                 aimed.resetTargets();
                 return false;
             }
-        } else if (sa.usesTargeting() || subTargets(sa) || sa.costHasManaX()) {
-            castRetargeted = true;                      // Forge's logic chooses the targets afresh
+        }
+        boolean hasX = sa.costHasManaX();
+        if (hasX && rule.x >= 0 && (target != null || (!sa.usesTargeting() && !subTargets(sa)))) {
+            // The rule names X: all the mana the rest of the cost leaves (Forge's own count), capped by the rule.
+            castRetargeted = true;
+            SpellAbility root = sa.getRootAbility();
+            int x = Math.min(ComputerUtilCost.setMaxXValue(sa, player, false), rule.x);
+            if (x < Math.max(rule.xMin, 0)) {
+                root.setXManaCostPaid(null);
+                if (aimed != null) {
+                    aimed.resetTargets();
+                }
+                return false;
+            }
+            root.setXManaCostPaid(x);
+            paidX = root;
+        } else if (target == null && (sa.usesTargeting() || subTargets(sa) || hasX)) {
+            castRetargeted = true;                      // Forge's logic chooses the targets (and X) afresh
             if (getAi().canPlaySa(sa) != AiPlayDecision.WillPlay) {
                 count("cast_forge_declined", 1);
                 return false;
             }
+        } else if (hasX) {
+            aimed.resetTargets();                       // aimed by the rule, but X is nobody's choice: not cast for nothing
+            return false;
         }
         if (!ComputerUtilCost.canPayCost(sa, player, false)) {
             if (aimed != null) {
                 aimed.resetTargets();
+            }
+            if (paidX != null) {
+                paidX.setXManaCostPaid(null);
             }
             return false;
         }
