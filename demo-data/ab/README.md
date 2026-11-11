@@ -57,3 +57,8 @@ be aimed at, joined with run #5's arms on its tables (48 wins, version 2's 40, s
 deck's first playbook on 200 new tables with a stock arm of its own (seed 20261142): stock 30 wins, the playbook under go-wide 48
 (+9.0 points, 33 discordant pairs against 15, exact test 0.013), 50 with key cards for the tutors, 37 under the pressure attack.
 
+`2026-11-11-ab-v9/` holds `ab-run` #15. `hail-caesar.json` is the confirming run of Hail, Caesar's shipped playbook on 200 tables it
+had not seen (seed 20261143): 42 wins against stock's 27, +7.5 points (37 discordant pairs against 22, exact test 0.07);
+`hail-caesar-pooled.json` pools it with the tables that chose it (`ab.py pool`: 93 against 61 of 400, exact test 0.004).
+`quick-draw.json` is Quick Draw's first candidate against stock (seed 20261144): 38 wins against 31, +3.5 points, exact test 0.42.
+

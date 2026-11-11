@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-11T08:16:52Z",
+ "generated": "2026-11-11T08:46:25Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -130,7 +130,7 @@
    "commanders": [
     "Caesar, Legion's Emperor"
    ],
-   "status": "shipped, confirming run playing",
+   "status": "shipped (confirmed on new tables)",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge declines it two times in three).",
    "human": {
@@ -138,36 +138,36 @@
     "games": 320
    },
    "tables": {
-    "run": "ab-run #9 on #6's tables, best of four candidates",
-    "seed": 20261141,
+    "run": "ab-run #15, the confirming run on tables it had not seen",
+    "seed": 20261143,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v7/hail-caesar.json",
+    "source": "demo-data/ab/2026-11-11-ab-v9/hail-caesar.json",
     "stock": {
      "games": 200,
-     "wins": 34,
-     "win_rate": 0.17,
+     "wins": 27,
+     "win_rate": 0.135,
      "win_rate_ci95": [
-      0.1243,
-      0.2282
+      0.0945,
+      0.1893
      ]
     },
     "bot": {
      "games": 200,
-     "wins": 51,
-     "win_rate": 0.255,
+     "wins": 42,
+     "win_rate": 0.21,
      "win_rate_ci95": [
-      0.1996,
-      0.3196
+      0.1593,
+      0.2716
      ]
     },
-    "difference": 0.085,
+    "difference": 0.075,
     "difference_ci95": [
-     0.012,
-     0.158
+     0.0004,
+     0.1496
     ],
     "bot_only": 37,
-    "stock_only": 20,
-    "exact_p": 0.0331
+    "stock_only": 22,
+    "exact_p": 0.0674
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
@@ -246,14 +246,45 @@
    "commanders": [
     "Stella Lee, Wild Card"
    ],
-   "status": "candidate, at the tables",
+   "status": "candidate, not shipped: a lean at the tables",
    "playbook": "playbook/variants/quick-draw-spells.json",
    "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
    "human": {
     "win_rate": 0.2585,
     "games": 133
    },
-   "tables": null,
+   "tables": {
+    "run": "ab-run #15",
+    "seed": 20261144,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-11-ab-v9/quick-draw.json",
+    "stock": {
+     "games": 200,
+     "wins": 31,
+     "win_rate": 0.155,
+     "win_rate_ci95": [
+      0.1114,
+      0.2116
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 38,
+     "win_rate": 0.19,
+     "win_rate_ci95": [
+      0.1417,
+      0.25
+     ]
+    },
+    "difference": 0.035,
+    "difference_ci95": [
+     -0.0375,
+     0.1075
+    ],
+    "bot_only": 31,
+    "stock_only": 24,
+    "exact_p": 0.4188
+   },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json",
     "games": 40,
