@@ -68,7 +68,7 @@ public final class Playbook {
         /** Everything a comparison may be made on; anything else is a mistake in the file and stops the run. */
         public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
                 "storm", "drawn", "turn", "life", "mana", "opponents", "power", "opp_creatures", "opp_power", "opp_life",
-                "threat");
+                "threat", "main");
         private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
         private static final Pattern COMPARE = Pattern.compile(
                 "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");

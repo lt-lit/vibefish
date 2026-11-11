@@ -53,8 +53,8 @@ the harness is given `--playbook id=file`). Everything absent stays Forge's.
 ```
 "playbook": {
   "version": 2,
-  "attack":   {"policy": "go_wide", "target": "lowest_life" | "weakest_board" | "highest_life" | "biggest_board",
-               "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": false},
+  "attack":   {"policy": "go_wide" | "pressure", "target": "lowest_life" | "weakest_board" | "highest_life" | "biggest_board",
+               "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": false, "damage_per_loss": 3},
   "mulligan": {"min_lands": 2, "max_lands": 5, "max_mulligans": 2},
   "cast":     {"rules": [ ... ], "max_per_turn": 60},
   "notes": "why"
@@ -70,8 +70,22 @@ turn is below our life minus `safety_margin` (each kept blocker is assumed to ab
 With fewer than `min_attackers` able to go, or no legal declaration, Forge decides as usual. With `spread` the attack
 is split: the first defender gets the biggest attackers until it is dead even if each of its untapped creatures blocks
 one of them, and what is left over goes at the next opponent by the same rule; an opponent that cannot be killed this
-turn takes everything still unassigned. Evasion and trample are not counted. The `mulligan` rule keeps a hand whose
-land count is within the range and never mulligans past `max_mulligans`; without it Forge's own mulligan logic runs.
+turn takes everything still unassigned. Evasion and trample are not counted.
+
+`pressure` keeps the same reserve and adds the blockers. First the kills: in `target` order, an opponent that is dead
+even if each of its blockers stops one of our biggest attackers gets the attackers that takes. Then, with what is left,
+the opponent the swing scores best on (damage that gets through, less `damage_per_loss` for every attacker a blocker
+can kill; `target` order breaks near ties). Against that opponent the attackers no blocker can kill always go, and the
+others go only together and only if the damage they add is at least `damage_per_loss` times the creatures the defender
+can kill. Anything left at home goes wherever it is safe. Whether a blocker can block and kill an attacker is Forge's
+own combat arithmetic on the battlefield as it stands (abilities that might be activated during combat are not
+weighed). A turn on which nothing is worth sending is a turn without an attack, unless a creature has to attack, when
+Forge declares. `min_attackers` defaults to 1 for this policy; `spread` is not used (the kills split the attack).
+Against no blockers it plays exactly as `go_wide` with `spread`. Counters: `attack_none`, `attack_held`,
+`attack_lethal`, `attack_expected_losses`, `attack_forced`.
+
+The `mulligan` rule keeps a hand whose land count is within the range and never mulligans past `max_mulligans`;
+without it Forge's own mulligan logic runs.
 
 ### `cast`: which card, when, aimed at what
 
@@ -92,8 +106,8 @@ Outside the seat's own main phases only the holds apply.
   agrees, since that logic is what picks them.
 - `phase`: `main` (either main phase, the default), `main1` or `main2`.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:
-  `"<metric> <op> <number>"` with `>= <= > < == !=`, or `"controls <card name>"` / `"not controls <card name>"`
-  (a permanent of ours on the battlefield).
+  `"<metric> <op> <number>"` with `>= <= > < == !=`, `"<metric> <op> <metric>"` (`"opp_power > power"`), or
+  `"controls <card name>"` / `"not controls <card name>"` (a permanent of ours on the battlefield).
 
 | metric | counts |
 |---|---|
@@ -104,7 +118,12 @@ Outside the seat's own main phases only the holds apply.
 | `mana` | Forge's estimate of the mana we can still produce this turn |
 | `storm`, `drawn` | spells we have cast this turn, cards we have drawn this turn |
 | `turn` | our own turn number |
+| `main` | 1 in our first main phase, 2 in our second, 0 at any other time (`"main == 2"` keeps a card for after combat) |
 | `opponents` | opponents still in the game |
+| `power` | total power of our creatures |
+| `opp_creatures`, `opp_power`, `opp_life` | the most creatures, the most total power, the highest life any one opponent has |
+| `threat` | the most damage one opponent could attack us with next turn |
+| `hand:<group>` | cards in hand from a named list: `"cast": {"groups": {"zada_spells": ["Expedite", ...]}, "rules": [...]}`, then `"hand:zada_spells >= 1"` |
 
 A rule that names a card that is not in the deck, an unknown metric or a malformed condition stops the harness before
 the first game (exit 2), so a typo cannot switch a rule off quietly. `max_per_turn` caps the plays the rules make in

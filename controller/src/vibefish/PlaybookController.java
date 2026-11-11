@@ -1042,6 +1042,13 @@ public class PlaybookController extends PlayerControllerAi {
                 return ComputerUtilMana.getAvailableManaEstimate(player);
             case "opponents":
                 return player.getOpponents().size();
+            case "main": {                              // 1 in our first main phase, 2 in our second, 0 at any other time
+                PhaseHandler ph = getGame().getPhaseHandler();
+                if (!ph.isPlayerTurn(player)) {
+                    return 0;
+                }
+                return ph.is(PhaseType.MAIN1) ? 1 : ph.is(PhaseType.MAIN2) ? 2 : 0;
+            }
             case "power":
                 return boardPower(player);
             case "opp_creatures": {                     // the most creatures any one opponent controls
