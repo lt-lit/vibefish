@@ -40,7 +40,7 @@ on:
         default: snapshot
       forge_snapshot_build:
         description: "Snapshot build to pin (FORGE_SNAPSHOT_BUILD); must be in forge/SHA256SUMS to be verified"
-        default: "2.0.16-SNAPSHOT-11.08"
+        default: "2.0.16-SNAPSHOT-11.10"
   push:
     branches: [testing]
     paths: [runner/queue/ab-run.json]
@@ -82,7 +82,7 @@ jobs:
           import datetime, json, os, sys
           vals = {"decks": "token-triumph,goblin-storm,tricky-terrain,hail-caesar", "games": "100", "arms": "stock,data,mc,mcdata",
                   "shards_per_deck": "5", "jobs_per_shard": "2", "opponents": "3", "seed": "", "forge_channel": "snapshot",
-                  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.08"}
+                  "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10"}
           runs = [{}]
           if os.environ["EVENT"] == "push":
               queued = json.load(open("runner/queue/ab-run.json"))

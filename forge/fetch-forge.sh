@@ -6,6 +6,11 @@
 #   FORGE_CHANNEL=snapshot FORGE_SNAPSHOT_BUILD=2.0.16-SNAPSHOT-11.08 forge/fetch-forge.sh   # one exact snapshot build
 #   forge/fetch-forge.sh --force                  # rebuild the runtime even if it is current
 #
+# Forge's daily-snapshots release keeps a build for one day. A snapshot build that published runs depend on is kept
+# as an assembled runtime on this repository's release `forge-runtimes` (.github/workflows/forge-archive.yml); when
+# forge/SHA256SUMS lists that archive (forge-runtime-snapshot-YYYY-MM-DD.tar.gz), a pinned FORGE_SNAPSHOT_BUILD is
+# fetched from there instead, checksum-verified. FORGE_MIRROR overrides the download location.
+#
 # Nothing here is committed: forge/dl/ and forge/runtime/ are gitignored.
 set -euo pipefail
 
@@ -37,6 +42,9 @@ case "$CHANNEL" in
       year=$(date -u +%Y)
       [[ "$(date -u +%m.%d)" < "$md" ]] && year=$((year - 1))
       STAMP="snapshot-${year}-${md%.*}-${md#*.}"
+      # An archived build says which year it was: the newest archive listed for that month and day.
+      ARCHIVED=$(sed -n "s/^[0-9a-f]\{64\}  forge-runtime-\(snapshot-[0-9]\{4\}-${md%.*}-${md#*.}\)\.tar\.gz\$/\1/p" "$HERE/SHA256SUMS" | sort | tail -1)
+      [ -n "$ARCHIVED" ] && STAMP="$ARCHIVED"
     else
       API="https://api.github.com/repos/Card-Forge/forge/releases/tags/daily-snapshots"
       AUTH=()
@@ -81,6 +89,37 @@ if [ -e "$RUNTIME" ] && [ ! -f "$RUNTIME/VIBEFISH_FORGE_VERSION" ] && [ -n "$(ls
 fi
 
 mkdir -p "$DL"
+
+# A pinned snapshot build with an archive of its runtime on this repository's release: that is the copy to use
+# (upstream keeps the build for a day). The archive is the runtime as assembled below, minus Forge's profile.
+MIRROR_ASSET="forge-runtime-${STAMP}.tar.gz"
+if [ "$CHANNEL" = snapshot ] && [ -n "${FORGE_SNAPSHOT_BUILD:-}" ] && grep -q " $MIRROR_ASSET\$" "$HERE/SHA256SUMS"; then
+  MIRROR="${FORGE_MIRROR:-https://github.com/lt-lit/vibefish/releases/download/forge-runtimes}"
+  ARCHIVE="$DL/$MIRROR_ASSET"
+  if [ ! -s "$ARCHIVE" ]; then
+    echo "Downloading $MIRROR/$MIRROR_ASSET"
+    curl -fL --retry 3 --retry-delay 5 -o "$ARCHIVE.part" "$MIRROR/$MIRROR_ASSET"
+    mv "$ARCHIVE.part" "$ARCHIVE"
+  fi
+  echo "Verifying checksum against forge/SHA256SUMS"
+  (cd "$DL" && grep " $MIRROR_ASSET\$" "$HERE/SHA256SUMS" | sha256sum -c -)
+  echo "Extracting"
+  STAGE=$(mktemp -d "$DL/stage.XXXXXX")
+  tar -xzf "$ARCHIVE" -C "$STAGE"
+  [ "$(head -1 "$STAGE/runtime/VIBEFISH_FORGE_VERSION" 2>/dev/null)" = "$STAMP" ] \
+    || { echo "$MIRROR_ASSET does not hold the runtime $STAMP" >&2; exit 1; }
+  mkdir -p "$STAGE/runtime/profile/user" "$STAGE/runtime/profile/cache" "$STAGE/runtime/profile/decks"
+  if [ -e "$RUNTIME" ]; then
+    OLD=$(mktemp -d "$DL/old.XXXXXX")
+    mv "$RUNTIME" "$OLD/runtime"
+    rm -rf "${OLD:?}"
+  fi
+  mv "$STAGE/runtime" "$RUNTIME"
+  rmdir "$STAGE"
+  echo "Forge runtime ready: $STAMP ($(sed -n 2p "$RUNTIME/VIBEFISH_FORGE_VERSION")), from this repository's archive, $(du -sh "$RUNTIME" | cut -f1) at $RUNTIME"
+  exit 0
+fi
+
 TARBALL="$DL/$ASSET"
 if [ ! -s "$TARBALL" ]; then
   echo "Downloading $URL"
