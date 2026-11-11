@@ -1,0 +1,127 @@
+{
+ "schema": 1,
+ "deck": "science",
+ "variant": "lab",
+ "of": "playbook/precons/science.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Steel Overseer"
+     ],
+     "ability": "+1/+1 counter",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Brotherhood Scribe"
+     ],
+     "ability": "energy counter",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Arcade Gannon"
+     ],
+     "ability": "Draw a card",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Dr. Madison Li"
+     ],
+     "ability": "Draw a card"
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Mind Stone",
+      "Talisman of Conviction",
+      "Talisman of Creativity",
+      "Talisman of Progress",
+      "Thought Vessel",
+      "Endurance Bobblehead",
+      "Intelligence Bobblehead"
+     ]
+    },
+    {
+     "play": [
+      "Dr. Madison Li"
+     ]
+    },
+    {
+     "play": [
+      "Wayfarer's Bauble",
+      "Automated Assembly Line",
+      "Expert-Level Safe",
+      "Brotherhood Vertibird",
+      "C.A.M.P.",
+      "Nuka-Cola Vending Machine",
+      "Mystic Forge",
+      "Panharmonicon",
+      "Vault 112: Sadistic Simulation",
+      "Vault 13: Dweller's Journey",
+      "The Prydwen, Steel Flagship"
+     ]
+    },
+    {
+     "play": [
+      "Behemoth of Vault 0",
+      "Liberty Prime, Recharged",
+      "Sentinel Sarah Lyons",
+      "Sentry Bot",
+      "Synth Infiltrator",
+      "Arcade Gannon",
+      "Robobrain War Mind",
+      "Solemn Simulacrum",
+      "Whirler Rogue",
+      "James, Wandering Dad",
+      "Nick Valentine, Private Eye",
+      "Paladin Danse, Steel Maverick",
+      "Rex, Cyber-Hound",
+      "Synth Eradicator",
+      "Assaultron Dominator",
+      "Brotherhood Scribe",
+      "Curie, Emergent Intelligence",
+      "Loyal Apprentice",
+      "Red Death, Shipwrecker",
+      "Steel Overseer"
+     ]
+    },
+    {
+     "play": [
+      "One with the Machine"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Science! (Dr. Madison Li: energy from artifact spells). From the draft (rocks, the commander, engines, creatures dearest first) plus the tap abilities stock Forge leaves idle: in twelve stock goldfish games Steel Overseer was in play for 19 turns, Arcade Gannon for 28 and Brotherhood Scribe for 13, and none was used once. They are used every first main phase (counters and the Scribe's team pump before combat, Gannon's loot), and Madison Li draws a card whenever she has three energy. Go-wide attack from two attackers up, the highest life first. Version 2 spends the energy: the pay-energy triggers of Assaultron Dominator, Sentry Bot, Robobrain War Mind, T-45 Power Armor and The Motherlode are taken whenever Forge asks; its AI declined them 233 times in version 1's forty goldfish games (the Dominator's alone 112 times).",
+  "on": "2026-11-11",
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 2,
+   "safety_margin": 5,
+   "max_reserve": 2,
+   "spread": true
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Assaultron Dominator",
+     "Sentry Bot",
+     "Robobrain War Mind",
+     "T-45 Power Armor",
+     "The Motherlode, Excavator"
+    ]
+   }
+  ]
+ }
+}

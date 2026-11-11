@@ -45,3 +45,9 @@ stock and attack-only arms on the same 200 tables: the cast rules under the go-w
 47 discordant pairs against 23, exact test 0.006), under the pressure attack 60, with everything but the anthems cast after
 combat 58. The first became the deck's shipped playbook (version 3).
 
+`2026-11-11-ab-v7/hail-caesar.json` joins Hail, Caesar's four candidates (`ab-run` #9, playbook arm only) with run #6's stock and
+attack-only arms on the same 200 tables: stock wins 34; the cast rules under the go-wide attack 41; with Caesar's attack trigger
+taken every time 44, and 45 under the pressure attack; with the trigger taken only when there is a token to give up 51 (+8.5
+points, 37 discordant pairs against 20, exact test 0.03). The last became the deck's shipped playbook (version 3), pending a
+confirming run on new tables.
+

@@ -1,0 +1,182 @@
+{
+ "schema": 1,
+ "deck": "science",
+ "variant": "draft",
+ "of": "playbook/precons/science.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Mind Stone",
+      "Talisman of Conviction",
+      "Talisman of Creativity",
+      "Talisman of Progress",
+      "Thought Vessel",
+      "Endurance Bobblehead",
+      "Intelligence Bobblehead"
+     ]
+    },
+    {
+     "play": [
+      "Dr. Madison Li"
+     ]
+    },
+    {
+     "play": [
+      "Wayfarer's Bauble",
+      "Automated Assembly Line",
+      "Expert-Level Safe",
+      "Brotherhood Vertibird",
+      "C.A.M.P.",
+      "Nuka-Cola Vending Machine",
+      "Mystic Forge",
+      "Panharmonicon",
+      "Vault 112: Sadistic Simulation",
+      "Vault 13: Dweller's Journey",
+      "The Prydwen, Steel Flagship"
+     ]
+    },
+    {
+     "play": [
+      "Behemoth of Vault 0",
+      "Liberty Prime, Recharged",
+      "Sentinel Sarah Lyons",
+      "Sentry Bot",
+      "Synth Infiltrator",
+      "Arcade Gannon",
+      "Robobrain War Mind",
+      "Solemn Simulacrum",
+      "Whirler Rogue",
+      "James, Wandering Dad",
+      "Nick Valentine, Private Eye",
+      "Paladin Danse, Steel Maverick",
+      "Rex, Cyber-Hound",
+      "Synth Eradicator",
+      "Assaultron Dominator",
+      "Brotherhood Scribe",
+      "Curie, Emergent Intelligence",
+      "Loyal Apprentice",
+      "Red Death, Shipwrecker",
+      "Steel Overseer"
+     ]
+    },
+    {
+     "play": [
+      "One with the Machine"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Shaun, Father of Synths",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Elder Owyn Lyons",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "The Motherlode, Excavator",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Plasma Caster",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Everflowing Chalice",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Lightning Greaves",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Overencumbered",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Nerd Rage",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Mechanized Production",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Bottle-Cap Blast",
+    "why": "instant"
+   },
+   {
+    "card": "Electrosiphon",
+    "why": "instant"
+   },
+   {
+    "card": "Crush Contraband",
+    "why": "instant"
+   },
+   {
+    "card": "Dispatch",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Swords to Plowshares",
+    "why": "instant"
+   },
+   {
+    "card": "Glimmer of Genius",
+    "why": "instant"
+   },
+   {
+    "card": "Thirst for Knowledge",
+    "why": "instant"
+   },
+   {
+    "card": "Unexpected Windfall",
+    "why": "instant"
+   },
+   {
+    "card": "Austere Command",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Open the Vaults",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Wake the Past",
+    "why": "sweeping or symmetrical"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Dispatch"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Solemn Simulacrum",
+   "Sentry Bot",
+   "Nick Valentine, Private Eye",
+   "Assaultron Dominator",
+   "Synth Eradicator",
+   "Shaun, Father of Synths",
+   "Robobrain War Mind",
+   "Behemoth of Vault 0",
+   "The Motherlode, Excavator",
+   "C.A.M.P."
+  ]
+ }
+}
