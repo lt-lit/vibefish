@@ -1,0 +1,3010 @@
+{
+ "vibefish": "0.3.1",
+ "generated": "2026-11-11T04:44:57Z",
+ "kind": "ab-join",
+ "deck": "quick-draw",
+ "deck_file": "Quick Draw [OTC] [2024].dck",
+ "league": "league-v1",
+ "seed": 20261154,
+ "opponents": 1,
+ "arms": [
+  "stock",
+  "spells"
+ ],
+ "forge_version": "snapshot-2026-11-10",
+ "sources": [
+  {
+   "arm": "stock",
+   "from": "duel-qd-spells/rollup.json",
+   "source_arm": "stock",
+   "data_file": "playbook/variants/quick-draw-spells.json",
+   "generated": "2026-11-11T04:44:37Z",
+   "forge_version": "snapshot-2026-11-10",
+   "vibefish": "0.3.1"
+  },
+  {
+   "arm": "spells",
+   "from": "duel-qd-spells/rollup.json",
+   "source_arm": "playbook",
+   "data_file": "playbook/variants/quick-draw-spells.json",
+   "generated": "2026-11-11T04:44:37Z",
+   "forge_version": "snapshot-2026-11-10",
+   "vibefish": "0.3.1"
+  }
+ ],
+ "note": "Quick Draw in 60 duels on the session's machine (seed 20261154): stock and the candidate playbook/variants/quick-draw-spells.json.",
+ "arm_stats": {
+  "stock": {
+   "games": 60,
+   "wins": 14,
+   "win_rate": 0.2333,
+   "win_rate_ci95": [
+    0.1444,
+    0.3544
+   ],
+   "draws": 0,
+   "avg_turns": 20.62,
+   "avg_seconds": 23.41,
+   "avg_turn_lost": 20.22,
+   "wins_by_seat": [
+    7,
+    7
+   ],
+   "playbook": null
+  },
+  "spells": {
+   "games": 60,
+   "wins": 17,
+   "win_rate": 0.2833,
+   "win_rate_ci95": [
+    0.1851,
+    0.4077
+   ],
+   "draws": 0,
+   "avg_turns": 19.23,
+   "avg_seconds": 24.51,
+   "avg_turn_lost": 18.51,
+   "wins_by_seat": [
+    6,
+    11
+   ],
+   "playbook": {
+    "cast_decisions": 1998,
+    "cast_rule_1": 99,
+    "cast_policy": 717,
+    "cast_rule_2": 132,
+    "attack_decisions": 347,
+    "attack_below_min": 154,
+    "attack_fallback": 154,
+    "cast_rule_6": 9,
+    "cast_rule_3": 289,
+    "cast_rule_4": 180,
+    "attackers_declared": 744,
+    "attackers_reserved": 56,
+    "attack_policy": 193,
+    "cast_rule_7": 5,
+    "cast_rule_5": 3,
+    "games": 60
+   }
+  }
+ },
+ "paired": {
+  "spells_vs_stock": {
+   "pairs": 60,
+   "both_won": 12,
+   "spells_only": 5,
+   "stock_only": 2,
+   "neither": 41,
+   "exact_p": 0.4531,
+   "difference": 0.05,
+   "difference_ci95": [
+    -0.0355,
+    0.1355
+   ],
+   "identical_outcomes": 20
+  }
+ },
+ "games": {
+  "stock": [
+   {
+    "index": 1,
+    "seed": 20261155,
+    "seats": [
+     "quick-draw",
+     "animated-army"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27347,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 2,
+    "seed": 20261156,
+    "seats": [
+     "dance-of-the-elements",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23285,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 3,
+    "seed": 20261157,
+    "seats": [
+     "quick-draw",
+     "avengers-assemble"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18020,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 4,
+    "seed": 20261158,
+    "seats": [
+     "witherbloom-pestilence",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 23,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 19882,
+    "focus_lost_turn": 23,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 5,
+    "seed": 20261159,
+    "seats": [
+     "quick-draw",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41372,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 6,
+    "seed": 20261160,
+    "seats": [
+     "death-toll",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14111,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 7,
+    "seed": 20261161,
+    "seats": [
+     "quick-draw",
+     "animated-army"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 14,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14950,
+    "focus_lost_turn": 14,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 8,
+    "seed": 20261162,
+    "seats": [
+     "death-toll",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28154,
+    "focus_lost_turn": 33,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 9,
+    "seed": 20261163,
+    "seats": [
+     "quick-draw",
+     "family-matters"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31889,
+    "focus_lost_turn": 27,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 10,
+    "seed": 20261164,
+    "seats": [
+     "family-matters",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 22,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18569,
+    "focus_lost_turn": 22,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 11,
+    "seed": 20261165,
+    "seats": [
+     "quick-draw",
+     "death-toll"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 24717,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 12,
+    "seed": 20261166,
+    "seats": [
+     "death-toll",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15012,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 13,
+    "seed": 20261167,
+    "seats": [
+     "quick-draw",
+     "we-are-the-borg"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23955,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 14,
+    "seed": 20261168,
+    "seats": [
+     "painbow",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "painbow",
+    "turns": 28,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38094,
+    "focus_lost_turn": 28,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 15,
+    "seed": 20261169,
+    "seats": [
+     "quick-draw",
+     "miracle-worker"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14971,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 16,
+    "seed": 20261170,
+    "seats": [
+     "the-fantastic-four",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18444,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 17,
+    "seed": 20261171,
+    "seats": [
+     "quick-draw",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 14,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15189,
+    "focus_lost_turn": 14,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 18,
+    "seed": 20261172,
+    "seats": [
+     "avengers-assemble",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14029,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 19,
+    "seed": 20261173,
+    "seats": [
+     "quick-draw",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 28,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25588,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 20,
+    "seed": 20261174,
+    "seats": [
+     "tinker-time",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tinker-time",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 19354,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 21,
+    "seed": 20261175,
+    "seats": [
+     "quick-draw",
+     "we-are-the-borg"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 82137,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 22,
+    "seed": 20261176,
+    "seats": [
+     "counter-blitz",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "counter-blitz",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13959,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 23,
+    "seed": 20261177,
+    "seats": [
+     "quick-draw",
+     "hail-caesar"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "hail-caesar",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13133,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 24,
+    "seed": 20261178,
+    "seats": [
+     "revival-trance",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12903,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 25,
+    "seed": 20261179,
+    "seats": [
+     "quick-draw",
+     "goblin-storm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "goblin-storm",
+    "turns": 13,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14948,
+    "focus_lost_turn": 13,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 26,
+    "seed": 20261180,
+    "seats": [
+     "graveyard-overdrive",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18086,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 27,
+    "seed": 20261181,
+    "seats": [
+     "quick-draw",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15211,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 28,
+    "seed": 20261182,
+    "seats": [
+     "eldrazi-incursion",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "eldrazi-incursion",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15835,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 29,
+    "seed": 20261183,
+    "seats": [
+     "quick-draw",
+     "desert-bloom"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14357,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 30,
+    "seed": 20261184,
+    "seats": [
+     "jump-scare",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 22,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21159,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 31,
+    "seed": 20261185,
+    "seats": [
+     "quick-draw",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 23,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27432,
+    "focus_lost_turn": 23,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 32,
+    "seed": 20261186,
+    "seats": [
+     "animated-army",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12612,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 33,
+    "seed": 20261187,
+    "seats": [
+     "quick-draw",
+     "death-toll"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 11,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 10038,
+    "focus_lost_turn": 11,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 34,
+    "seed": 20261188,
+    "seats": [
+     "cabaretti-cacophony",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31330,
+    "focus_lost_turn": 29,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 35,
+    "seed": 20261189,
+    "seats": [
+     "quick-draw",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12340,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 36,
+    "seed": 20261190,
+    "seats": [
+     "legends-legacy",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 22,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 39939,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 37,
+    "seed": 20261191,
+    "seats": [
+     "quick-draw",
+     "hail-caesar"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "hail-caesar",
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27116,
+    "focus_lost_turn": 27,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 38,
+    "seed": 20261192,
+    "seats": [
+     "divine-convocation",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 28,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25986,
+    "focus_lost_turn": 28,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 39,
+    "seed": 20261193,
+    "seats": [
+     "quick-draw",
+     "most-wanted"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "most-wanted",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20578,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 40,
+    "seed": 20261194,
+    "seats": [
+     "reign-of-dragons",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 24,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22596,
+    "focus_lost_turn": 24,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 41,
+    "seed": 20261195,
+    "seats": [
+     "quick-draw",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14398,
+    "focus_lost_turn": 26,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 42,
+    "seed": 20261196,
+    "seats": [
+     "family-matters",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20877,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 43,
+    "seed": 20261197,
+    "seats": [
+     "quick-draw",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "bedecked-brokers",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15772,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 44,
+    "seed": 20261198,
+    "seats": [
+     "wretched-ranks",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 11435,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 45,
+    "seed": 20261199,
+    "seats": [
+     "quick-draw",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 16945,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 46,
+    "seed": 20261200,
+    "seats": [
+     "exit-from-exile",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20532,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 47,
+    "seed": 20261201,
+    "seats": [
+     "quick-draw",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 23,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15986,
+    "focus_lost_turn": 23,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 48,
+    "seed": 20261202,
+    "seats": [
+     "tricky-terrain",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 27371,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 49,
+    "seed": 20261203,
+    "seats": [
+     "quick-draw",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 31,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38456,
+    "focus_lost_turn": 31,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 50,
+    "seed": 20261204,
+    "seats": [
+     "call-for-backup",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "call-for-backup",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22095,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 51,
+    "seed": 20261205,
+    "seats": [
+     "quick-draw",
+     "landing-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 24,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18156,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 52,
+    "seed": 20261206,
+    "seats": [
+     "calling-all-angels",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 11,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 7610,
+    "focus_lost_turn": 11,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 53,
+    "seed": 20261207,
+    "seats": [
+     "quick-draw",
+     "jeskai-striker"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 23,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 30097,
+    "focus_lost_turn": 23,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 54,
+    "seed": 20261208,
+    "seats": [
+     "token-triumph",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 21943,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 55,
+    "seed": 20261209,
+    "seats": [
+     "quick-draw",
+     "deep-clue-sea"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 11760,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 56,
+    "seed": 20261210,
+    "seats": [
+     "enduring-enchantments",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 23,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 122927,
+    "focus_lost_turn": 23,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 57,
+    "seed": 20261211,
+    "seats": [
+     "quick-draw",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 29,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 38512,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 58,
+    "seed": 20261212,
+    "seats": [
+     "mardu-surge",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 24,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18353,
+    "focus_lost_turn": 24,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 59,
+    "seed": 20261213,
+    "seats": [
+     "quick-draw",
+     "blight-curse"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 11983,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   },
+   {
+    "index": 60,
+    "seed": 20261214,
+    "seats": [
+     "exit-from-exile",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 15,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20645,
+    "focus_lost_turn": 15,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": null
+   }
+  ],
+  "spells": [
+   {
+    "index": 1,
+    "seed": 20261155,
+    "seats": [
+     "quick-draw",
+     "animated-army"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23571,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 32,
+     "cast_rule_1": 4,
+     "cast_policy": 13,
+     "cast_rule_2": 2,
+     "attack_decisions": 4,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "cast_rule_6": 1,
+     "cast_rule_3": 4,
+     "cast_rule_4": 2
+    }
+   },
+   {
+    "index": 2,
+    "seed": 20261156,
+    "seats": [
+     "dance-of-the-elements",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23005,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 38,
+     "cast_rule_1": 3,
+     "cast_policy": 12,
+     "cast_rule_4": 2,
+     "cast_rule_2": 2,
+     "cast_rule_3": 5,
+     "attack_decisions": 4,
+     "attackers_declared": 22,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 3,
+    "seed": 20261157,
+    "seats": [
+     "quick-draw",
+     "avengers-assemble"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "avengers-assemble",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15582,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 21,
+     "cast_rule_2": 1,
+     "cast_policy": 5,
+     "cast_rule_3": 4,
+     "attack_decisions": 5,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 7,
+     "attackers_reserved": 2,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 4,
+    "seed": 20261158,
+    "seats": [
+     "witherbloom-pestilence",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "witherbloom-pestilence",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 200490,
+    "focus_lost_turn": 26,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 51,
+     "cast_rule_1": 2,
+     "cast_policy": 21,
+     "cast_rule_3": 9,
+     "cast_rule_2": 4,
+     "attack_decisions": 11,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "attackers_declared": 35,
+     "attackers_reserved": 10,
+     "attack_policy": 6,
+     "cast_rule_4": 5,
+     "cast_rule_7": 1
+    }
+   },
+   {
+    "index": 5,
+    "seed": 20261159,
+    "seats": [
+     "quick-draw",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28015,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 24,
+     "cast_rule_1": 1,
+     "cast_policy": 8,
+     "cast_rule_2": 2,
+     "cast_rule_3": 3,
+     "attack_decisions": 5,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 3,
+     "cast_rule_4": 2
+    }
+   },
+   {
+    "index": 6,
+    "seed": 20261160,
+    "seats": [
+     "death-toll",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15816,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 39,
+     "cast_rule_1": 2,
+     "cast_policy": 14,
+     "cast_rule_3": 5,
+     "attack_decisions": 8,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "cast_rule_2": 3,
+     "attackers_declared": 41,
+     "attackers_reserved": 0,
+     "attack_policy": 7,
+     "cast_rule_4": 4
+    }
+   },
+   {
+    "index": 7,
+    "seed": 20261161,
+    "seats": [
+     "quick-draw",
+     "animated-army"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 14,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12650,
+    "focus_lost_turn": 14,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 26,
+     "cast_rule_4": 4,
+     "cast_policy": 8,
+     "cast_rule_2": 2,
+     "cast_rule_3": 2,
+     "attack_decisions": 4,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 12,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 8,
+    "seed": 20261162,
+    "seats": [
+     "death-toll",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 22,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15853,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 37,
+     "cast_rule_4": 3,
+     "cast_policy": 16,
+     "cast_rule_3": 8,
+     "cast_rule_2": 3,
+     "attack_decisions": 7,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 18,
+     "attackers_reserved": 4,
+     "attack_policy": 6,
+     "cast_rule_1": 1,
+     "cast_rule_6": 1
+    }
+   },
+   {
+    "index": 9,
+    "seed": 20261163,
+    "seats": [
+     "quick-draw",
+     "family-matters"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28046,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 39,
+     "cast_rule_4": 5,
+     "cast_policy": 14,
+     "cast_rule_2": 2,
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "cast_rule_1": 2,
+     "attackers_declared": 7,
+     "attackers_reserved": 1,
+     "attack_policy": 3,
+     "cast_rule_3": 3,
+     "cast_rule_6": 1,
+     "cast_rule_7": 1
+    }
+   },
+   {
+    "index": 10,
+    "seed": 20261164,
+    "seats": [
+     "family-matters",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14669,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 26,
+     "cast_rule_3": 4,
+     "cast_policy": 8,
+     "attack_decisions": 7,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_2": 2,
+     "cast_rule_4": 2,
+     "attackers_declared": 21,
+     "attackers_reserved": 1,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 11,
+    "seed": 20261165,
+    "seats": [
+     "quick-draw",
+     "death-toll"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12976,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 23,
+     "cast_rule_3": 2,
+     "cast_policy": 6,
+     "cast_rule_2": 2,
+     "attack_decisions": 6,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 8,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "cast_rule_4": 1,
+     "cast_rule_1": 1
+    }
+   },
+   {
+    "index": 12,
+    "seed": 20261166,
+    "seats": [
+     "death-toll",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14413,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 28,
+     "cast_rule_4": 3,
+     "cast_policy": 10,
+     "cast_rule_1": 2,
+     "cast_rule_2": 1,
+     "cast_rule_3": 4,
+     "attack_decisions": 5,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 11,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 13,
+    "seed": 20261167,
+    "seats": [
+     "quick-draw",
+     "we-are-the-borg"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26260,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 37,
+     "cast_rule_1": 3,
+     "cast_policy": 14,
+     "cast_rule_3": 6,
+     "cast_rule_2": 2,
+     "attack_decisions": 8,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 49,
+     "attackers_reserved": 3,
+     "attack_policy": 7,
+     "cast_rule_4": 2,
+     "cast_rule_6": 1
+    }
+   },
+   {
+    "index": 14,
+    "seed": 20261168,
+    "seats": [
+     "painbow",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 40438,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 43,
+     "cast_rule_1": 2,
+     "cast_policy": 22,
+     "cast_rule_2": 3,
+     "cast_rule_4": 8,
+     "cast_rule_3": 8,
+     "attack_decisions": 7,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 18,
+     "attackers_reserved": 0,
+     "attack_policy": 6,
+     "cast_rule_7": 1
+    }
+   },
+   {
+    "index": 15,
+    "seed": 20261169,
+    "seats": [
+     "quick-draw",
+     "miracle-worker"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13620,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 29,
+     "cast_rule_4": 4,
+     "cast_policy": 7,
+     "cast_rule_3": 2,
+     "attack_decisions": 7,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_2": 1,
+     "attackers_declared": 31,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 16,
+    "seed": 20261170,
+    "seats": [
+     "the-fantastic-four",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "the-fantastic-four",
+    "turns": 28,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 34860,
+    "focus_lost_turn": 28,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 66,
+     "cast_rule_1": 4,
+     "cast_policy": 26,
+     "cast_rule_2": 6,
+     "cast_rule_3": 9,
+     "cast_rule_4": 7,
+     "attack_decisions": 8,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 20,
+     "attackers_reserved": 8,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 17,
+    "seed": 20261171,
+    "seats": [
+     "quick-draw",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 14,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13399,
+    "focus_lost_turn": 14,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 21,
+     "cast_rule_3": 4,
+     "cast_policy": 7,
+     "cast_rule_2": 2,
+     "attack_decisions": 5,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "attackers_declared": 2,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "cast_rule_1": 1
+    }
+   },
+   {
+    "index": 18,
+    "seed": 20261172,
+    "seats": [
+     "avengers-assemble",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 32,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 25012,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 66,
+     "cast_rule_4": 7,
+     "cast_policy": 23,
+     "cast_rule_2": 5,
+     "cast_rule_3": 7,
+     "attack_decisions": 11,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "cast_rule_1": 3,
+     "attackers_declared": 17,
+     "attackers_reserved": 3,
+     "attack_policy": 5,
+     "cast_rule_5": 1
+    }
+   },
+   {
+    "index": 19,
+    "seed": 20261173,
+    "seats": [
+     "quick-draw",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20917,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 39,
+     "cast_rule_3": 9,
+     "cast_policy": 19,
+     "cast_rule_1": 3,
+     "cast_rule_2": 2,
+     "attack_decisions": 5,
+     "attackers_declared": 38,
+     "attackers_reserved": 0,
+     "attack_policy": 5,
+     "cast_rule_4": 5
+    }
+   },
+   {
+    "index": 20,
+    "seed": 20261174,
+    "seats": [
+     "tinker-time",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tinker-time",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23789,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 24,
+     "cast_rule_3": 5,
+     "cast_policy": 8,
+     "attack_decisions": 7,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "cast_rule_2": 2,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "cast_rule_1": 1
+    }
+   },
+   {
+    "index": 21,
+    "seed": 20261175,
+    "seats": [
+     "quick-draw",
+     "we-are-the-borg"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "we-are-the-borg",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 91788,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 35,
+     "cast_rule_1": 2,
+     "cast_policy": 14,
+     "cast_rule_2": 4,
+     "cast_rule_3": 4,
+     "attack_decisions": 6,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "cast_rule_4": 4,
+     "attackers_declared": 5,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 22,
+    "seed": 20261176,
+    "seats": [
+     "counter-blitz",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "counter-blitz",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15704,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 33,
+     "cast_rule_3": 7,
+     "cast_policy": 11,
+     "cast_rule_2": 2,
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "cast_rule_4": 2
+    }
+   },
+   {
+    "index": 23,
+    "seed": 20261177,
+    "seats": [
+     "quick-draw",
+     "hail-caesar"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "hail-caesar",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12225,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 32,
+     "cast_rule_4": 3,
+     "cast_policy": 12,
+     "cast_rule_3": 3,
+     "cast_rule_1": 2,
+     "attack_decisions": 5,
+     "attackers_declared": 9,
+     "attackers_reserved": 2,
+     "attack_policy": 4,
+     "cast_rule_2": 3,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "cast_rule_6": 1
+    }
+   },
+   {
+    "index": 24,
+    "seed": 20261178,
+    "seats": [
+     "revival-trance",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "revival-trance",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 16659,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 28,
+     "cast_rule_2": 3,
+     "cast_policy": 10,
+     "attack_decisions": 4,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "cast_rule_3": 3,
+     "cast_rule_4": 3,
+     "cast_rule_1": 1,
+     "attackers_declared": 2,
+     "attackers_reserved": 2,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 25,
+    "seed": 20261179,
+    "seats": [
+     "quick-draw",
+     "goblin-storm"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "goblin-storm",
+    "turns": 11,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 10899,
+    "focus_lost_turn": 11,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 16,
+     "cast_rule_3": 2,
+     "cast_policy": 6,
+     "cast_rule_1": 2,
+     "attack_decisions": 3,
+     "attackers_declared": 2,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "cast_rule_4": 1,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_2": 1
+    }
+   },
+   {
+    "index": 26,
+    "seed": 20261180,
+    "seats": [
+     "graveyard-overdrive",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20596,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 35,
+     "cast_rule_3": 5,
+     "cast_policy": 15,
+     "cast_rule_4": 5,
+     "cast_rule_2": 1,
+     "attack_decisions": 6,
+     "attackers_declared": 29,
+     "attackers_reserved": 0,
+     "attack_policy": 6,
+     "cast_rule_7": 1,
+     "cast_rule_1": 3
+    }
+   },
+   {
+    "index": 27,
+    "seed": 20261181,
+    "seats": [
+     "quick-draw",
+     "cabaretti-cacophony"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14359,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 24,
+     "cast_rule_3": 3,
+     "cast_policy": 6,
+     "cast_rule_4": 1,
+     "attack_decisions": 7,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "cast_rule_2": 2,
+     "attackers_declared": 23,
+     "attackers_reserved": 0,
+     "attack_policy": 6
+    }
+   },
+   {
+    "index": 28,
+    "seed": 20261182,
+    "seats": [
+     "eldrazi-incursion",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12057,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 27,
+     "cast_rule_4": 2,
+     "cast_policy": 8,
+     "cast_rule_2": 1,
+     "cast_rule_3": 5,
+     "attack_decisions": 6,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 29,
+    "seed": 20261183,
+    "seats": [
+     "quick-draw",
+     "desert-bloom"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "desert-bloom",
+    "turns": 14,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13811,
+    "focus_lost_turn": 14,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 21,
+     "cast_rule_4": 2,
+     "cast_policy": 7,
+     "cast_rule_3": 4,
+     "cast_rule_2": 1,
+     "attack_decisions": 3,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 30,
+    "seed": 20261184,
+    "seats": [
+     "jump-scare",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31668,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 60,
+     "cast_rule_1": 4,
+     "cast_policy": 23,
+     "cast_rule_2": 3,
+     "attack_decisions": 10,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_4": 7,
+     "attackers_declared": 51,
+     "attackers_reserved": 6,
+     "attack_policy": 8,
+     "cast_rule_3": 7,
+     "cast_rule_7": 1,
+     "cast_rule_5": 1
+    }
+   },
+   {
+    "index": 31,
+    "seed": 20261185,
+    "seats": [
+     "quick-draw",
+     "graveyard-overdrive"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "graveyard-overdrive",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 20678,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 35,
+     "cast_rule_4": 2,
+     "cast_policy": 10,
+     "cast_rule_3": 3,
+     "attack_decisions": 7,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "cast_rule_2": 2,
+     "cast_rule_6": 1,
+     "attackers_declared": 7,
+     "attackers_reserved": 0,
+     "attack_policy": 3,
+     "cast_rule_1": 2
+    }
+   },
+   {
+    "index": 32,
+    "seed": 20261186,
+    "seats": [
+     "animated-army",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "animated-army",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14107,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 26,
+     "cast_rule_3": 4,
+     "cast_policy": 9,
+     "attack_decisions": 4,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_2": 2,
+     "attackers_declared": 4,
+     "attackers_reserved": 0,
+     "attack_policy": 2,
+     "cast_rule_1": 1,
+     "cast_rule_4": 2
+    }
+   },
+   {
+    "index": 33,
+    "seed": 20261187,
+    "seats": [
+     "quick-draw",
+     "death-toll"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "death-toll",
+    "turns": 11,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 10518,
+    "focus_lost_turn": 11,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 11,
+     "attack_decisions": 3,
+     "attack_below_min": 3,
+     "attack_fallback": 3
+    }
+   },
+   {
+    "index": 34,
+    "seed": 20261188,
+    "seats": [
+     "cabaretti-cacophony",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "cabaretti-cacophony",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 26848,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 28,
+     "cast_rule_2": 2,
+     "cast_policy": 10,
+     "cast_rule_3": 5,
+     "attack_decisions": 6,
+     "attackers_declared": 19,
+     "attackers_reserved": 2,
+     "attack_policy": 6,
+     "cast_rule_1": 1,
+     "cast_rule_4": 2
+    }
+   },
+   {
+    "index": 35,
+    "seed": 20261189,
+    "seats": [
+     "quick-draw",
+     "prismari-artistry"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "prismari-artistry",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 14545,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 28,
+     "cast_rule_4": 3,
+     "cast_policy": 12,
+     "cast_rule_1": 4,
+     "cast_rule_2": 1,
+     "cast_rule_3": 4,
+     "attack_decisions": 2,
+     "attack_below_min": 1,
+     "attack_fallback": 1,
+     "attackers_declared": 2,
+     "attackers_reserved": 2,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 36,
+    "seed": 20261190,
+    "seats": [
+     "legends-legacy",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 41979,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 42,
+     "cast_rule_2": 1,
+     "cast_policy": 18,
+     "attack_decisions": 7,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_3": 10,
+     "cast_rule_1": 3,
+     "attackers_declared": 19,
+     "attackers_reserved": 4,
+     "attack_policy": 5,
+     "cast_rule_4": 4
+    }
+   },
+   {
+    "index": 37,
+    "seed": 20261191,
+    "seats": [
+     "quick-draw",
+     "hail-caesar"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "hail-caesar",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23797,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 36,
+     "cast_rule_1": 3,
+     "cast_policy": 13,
+     "cast_rule_4": 4,
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "cast_rule_2": 2,
+     "cast_rule_3": 4
+    }
+   },
+   {
+    "index": 38,
+    "seed": 20261192,
+    "seats": [
+     "divine-convocation",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 17662,
+    "focus_lost_turn": 18,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 30,
+     "cast_rule_1": 2,
+     "cast_policy": 12,
+     "cast_rule_3": 5,
+     "cast_rule_4": 2,
+     "attack_decisions": 6,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "cast_rule_2": 3,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 3
+    }
+   },
+   {
+    "index": 39,
+    "seed": 20261193,
+    "seats": [
+     "quick-draw",
+     "most-wanted"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "most-wanted",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23136,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 25,
+     "cast_rule_3": 1,
+     "cast_policy": 6,
+     "cast_rule_2": 1,
+     "attack_decisions": 5,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "cast_rule_4": 2,
+     "attackers_declared": 4,
+     "attackers_reserved": 0,
+     "attack_policy": 2,
+     "cast_rule_1": 2
+    }
+   },
+   {
+    "index": 40,
+    "seed": 20261194,
+    "seats": [
+     "reign-of-dragons",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "reign-of-dragons",
+    "turns": 24,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 37730,
+    "focus_lost_turn": 24,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 44,
+     "cast_rule_1": 2,
+     "cast_policy": 17,
+     "cast_rule_3": 8,
+     "attack_decisions": 10,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "cast_rule_2": 3,
+     "attackers_declared": 14,
+     "attackers_reserved": 4,
+     "attack_policy": 6,
+     "cast_rule_4": 4
+    }
+   },
+   {
+    "index": 41,
+    "seed": 20261195,
+    "seats": [
+     "quick-draw",
+     "tramplesaurus-rex"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "tramplesaurus-rex",
+    "turns": 26,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15499,
+    "focus_lost_turn": 26,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 35,
+     "cast_rule_3": 3,
+     "cast_policy": 9,
+     "cast_rule_2": 2,
+     "cast_rule_4": 1,
+     "attack_decisions": 10,
+     "attack_below_min": 9,
+     "attack_fallback": 9,
+     "cast_rule_1": 2,
+     "cast_rule_6": 1,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 42,
+    "seed": 20261196,
+    "seats": [
+     "family-matters",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "family-matters",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 31664,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 35,
+     "cast_rule_3": 8,
+     "cast_policy": 14,
+     "cast_rule_4": 4,
+     "cast_rule_2": 1,
+     "attack_decisions": 5,
+     "attack_below_min": 4,
+     "attack_fallback": 4,
+     "cast_rule_1": 1,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 43,
+    "seed": 20261197,
+    "seats": [
+     "quick-draw",
+     "bedecked-brokers"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22360,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 56,
+     "cast_rule_1": 4,
+     "cast_policy": 24,
+     "cast_rule_3": 9,
+     "cast_rule_2": 3,
+     "attack_decisions": 7,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "cast_rule_4": 8,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 44,
+    "seed": 20261198,
+    "seats": [
+     "wretched-ranks",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "wretched-ranks",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15939,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 37,
+     "cast_rule_1": 2,
+     "cast_policy": 10,
+     "cast_rule_2": 2,
+     "cast_rule_3": 6,
+     "attack_decisions": 6,
+     "attackers_declared": 9,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "attack_below_min": 2,
+     "attack_fallback": 2
+    }
+   },
+   {
+    "index": 45,
+    "seed": 20261199,
+    "seats": [
+     "quick-draw",
+     "obscura-operation"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22134,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 44,
+     "cast_rule_4": 5,
+     "cast_policy": 19,
+     "cast_rule_1": 3,
+     "cast_rule_2": 2,
+     "cast_rule_3": 8,
+     "attack_decisions": 7,
+     "attackers_declared": 32,
+     "attackers_reserved": 0,
+     "attack_policy": 7,
+     "cast_rule_5": 1
+    }
+   },
+   {
+    "index": 46,
+    "seed": 20261200,
+    "seats": [
+     "exit-from-exile",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 19,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 24328,
+    "focus_lost_turn": 19,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 30,
+     "cast_rule_1": 1,
+     "cast_policy": 12,
+     "cast_rule_2": 4,
+     "cast_rule_4": 4,
+     "attack_decisions": 4,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_3": 3,
+     "attackers_declared": 4,
+     "attackers_reserved": 0,
+     "attack_policy": 2
+    }
+   },
+   {
+    "index": 47,
+    "seed": 20261201,
+    "seats": [
+     "quick-draw",
+     "riveteer-rampage"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "riveteer-rampage",
+    "turns": 23,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18396,
+    "focus_lost_turn": 23,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 34,
+     "cast_rule_1": 2,
+     "cast_policy": 12,
+     "cast_rule_3": 5,
+     "cast_rule_2": 3,
+     "cast_rule_4": 1,
+     "cast_rule_6": 1,
+     "attack_decisions": 2,
+     "attack_below_min": 2,
+     "attack_fallback": 2
+    }
+   },
+   {
+    "index": 48,
+    "seed": 20261202,
+    "seats": [
+     "tricky-terrain",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "tricky-terrain",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 24892,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 27,
+     "cast_rule_3": 3,
+     "cast_policy": 10,
+     "attack_decisions": 5,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "cast_rule_1": 1,
+     "attackers_declared": 5,
+     "attackers_reserved": 0,
+     "attack_policy": 2,
+     "cast_rule_2": 1,
+     "cast_rule_4": 4,
+     "cast_rule_6": 1
+    }
+   },
+   {
+    "index": 49,
+    "seed": 20261203,
+    "seats": [
+     "quick-draw",
+     "divine-convocation"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "divine-convocation",
+    "turns": 17,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 13315,
+    "focus_lost_turn": 17,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 28,
+     "cast_rule_4": 4,
+     "cast_policy": 11,
+     "cast_rule_3": 3,
+     "cast_rule_2": 3,
+     "attack_decisions": 3,
+     "attackers_declared": 6,
+     "attackers_reserved": 1,
+     "attack_policy": 3,
+     "cast_rule_1": 1
+    }
+   },
+   {
+    "index": 50,
+    "seed": 20261204,
+    "seats": [
+     "call-for-backup",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "call-for-backup",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 22047,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 37,
+     "cast_rule_1": 2,
+     "cast_policy": 12,
+     "cast_rule_4": 2,
+     "cast_rule_2": 2,
+     "cast_rule_3": 6,
+     "attack_decisions": 6,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 16,
+     "attackers_reserved": 1,
+     "attack_policy": 4
+    }
+   },
+   {
+    "index": 51,
+    "seed": 20261205,
+    "seats": [
+     "quick-draw",
+     "landing-party"
+    ],
+    "focus_seat": 0,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 18,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18732,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 38,
+     "cast_rule_2": 2,
+     "cast_policy": 15,
+     "cast_rule_3": 7,
+     "attack_decisions": 6,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "attackers_declared": 15,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "cast_rule_4": 5,
+     "cast_rule_1": 1
+    }
+   },
+   {
+    "index": 52,
+    "seed": 20261206,
+    "seats": [
+     "calling-all-angels",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "calling-all-angels",
+    "turns": 11,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 8508,
+    "focus_lost_turn": 11,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 13,
+     "cast_rule_3": 3,
+     "cast_policy": 3,
+     "attack_decisions": 2,
+     "attack_below_min": 2,
+     "attack_fallback": 2
+    }
+   },
+   {
+    "index": 53,
+    "seed": 20261207,
+    "seats": [
+     "quick-draw",
+     "jeskai-striker"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "jeskai-striker",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28875,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 34,
+     "cast_rule_4": 4,
+     "cast_policy": 14,
+     "cast_rule_2": 4,
+     "cast_rule_1": 2,
+     "cast_rule_3": 4,
+     "attack_decisions": 4,
+     "attack_below_min": 3,
+     "attack_fallback": 3,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 54,
+    "seed": 20261208,
+    "seats": [
+     "token-triumph",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": true,
+    "winner_id": "quick-draw",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 28676,
+    "focus_lost_turn": null,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 37,
+     "cast_rule_4": 2,
+     "cast_policy": 12,
+     "cast_rule_2": 3,
+     "cast_rule_3": 5,
+     "attack_decisions": 7,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_1": 2,
+     "attackers_declared": 33,
+     "attackers_reserved": 0,
+     "attack_policy": 5
+    }
+   },
+   {
+    "index": 55,
+    "seed": 20261209,
+    "seats": [
+     "quick-draw",
+     "deep-clue-sea"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "deep-clue-sea",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12534,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 23,
+     "cast_rule_4": 1,
+     "cast_policy": 6,
+     "cast_rule_2": 3,
+     "cast_rule_3": 2
+    }
+   },
+   {
+    "index": 56,
+    "seed": 20261210,
+    "seats": [
+     "enduring-enchantments",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "enduring-enchantments",
+    "turns": 21,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 23502,
+    "focus_lost_turn": 21,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 37,
+     "cast_rule_4": 5,
+     "cast_policy": 14,
+     "cast_rule_2": 2,
+     "attack_decisions": 7,
+     "attack_below_min": 6,
+     "attack_fallback": 6,
+     "cast_rule_3": 5,
+     "cast_rule_1": 2,
+     "attackers_declared": 3,
+     "attackers_reserved": 0,
+     "attack_policy": 1
+    }
+   },
+   {
+    "index": 57,
+    "seed": 20261211,
+    "seats": [
+     "quick-draw",
+     "lorehold-spirit"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "lorehold-spirit",
+    "turns": 20,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 18130,
+    "focus_lost_turn": 20,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 32,
+     "cast_rule_4": 1,
+     "cast_policy": 11,
+     "cast_rule_3": 7,
+     "attack_decisions": 8,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "cast_rule_1": 1,
+     "attackers_declared": 6,
+     "attackers_reserved": 0,
+     "attack_policy": 3,
+     "cast_rule_2": 2
+    }
+   },
+   {
+    "index": 58,
+    "seed": 20261212,
+    "seats": [
+     "mardu-surge",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "mardu-surge",
+    "turns": 24,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 19179,
+    "focus_lost_turn": 24,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 41,
+     "cast_rule_3": 5,
+     "cast_policy": 13,
+     "cast_rule_2": 2,
+     "attack_decisions": 6,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "cast_rule_1": 1,
+     "attackers_declared": 2,
+     "attackers_reserved": 0,
+     "attack_policy": 1,
+     "cast_rule_4": 5
+    }
+   },
+   {
+    "index": 59,
+    "seed": 20261213,
+    "seats": [
+     "quick-draw",
+     "blight-curse"
+    ],
+    "focus_seat": 0,
+    "won": false,
+    "winner_id": "blight-curse",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 15209,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 31,
+     "cast_rule_3": 4,
+     "cast_policy": 9,
+     "cast_rule_2": 3,
+     "attack_decisions": 6,
+     "attack_below_min": 2,
+     "attack_fallback": 2,
+     "cast_rule_4": 1,
+     "attackers_declared": 15,
+     "attackers_reserved": 0,
+     "attack_policy": 4,
+     "cast_rule_1": 1
+    }
+   },
+   {
+    "index": 60,
+    "seed": 20261214,
+    "seats": [
+     "exit-from-exile",
+     "quick-draw"
+    ],
+    "focus_seat": 1,
+    "won": false,
+    "winner_id": "exit-from-exile",
+    "turns": 16,
+    "reason": "AllOpponentsLost",
+    "duration_ms": 12827,
+    "focus_lost_turn": 16,
+    "data": null,
+    "ai_lists": null,
+    "playbook_stats": {
+     "cast_decisions": 24,
+     "cast_rule_1": 1,
+     "cast_policy": 7,
+     "cast_rule_2": 1,
+     "attack_decisions": 5,
+     "attack_below_min": 5,
+     "attack_fallback": 5,
+     "cast_rule_3": 3,
+     "cast_rule_4": 2
+    }
+   }
+  ]
+ }
+}
