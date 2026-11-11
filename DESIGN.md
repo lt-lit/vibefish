@@ -676,7 +676,7 @@ Duels say something goldfish cannot (60 duels, seed 20261153; `demo-data/ab/2026
 | Token Triumph | +0.05 (−0.35 to +0.46), two games unfinished | +1.21 (+0.84 to +1.58) |
 | Hail, Caesar | +0.23 (−0.28 to +0.73) | +2.15 (+1.79 to +2.51) |
 | Tricky Terrain (27 games) | +1.18 (+0.26 to +2.11) | |
-| Quick Draw | +0.97 (+0.44 to +1.51) | +1.0 |
+| Quick Draw | +0.97 (+0.44 to +1.51) | +1.10 (+0.60 to +1.60) |
 | Science! | −0.23 (−0.67 to +0.22) | |
 | Tinker Time | +0.53 (+0.23 to +0.82) | |
 
