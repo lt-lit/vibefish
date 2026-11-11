@@ -29,6 +29,13 @@ second): a game then turns on blocks, removal and the race, not on who the table
 around an even win rate a pilot's edge shows in far fewer games. It is the middle instrument between goldfish (no
 opponent at all) and the four-player tables (the exam); DESIGN.md §22.
 
+Seeds: table i's opponents are drawn with seed*31 + i and its game is played on seed + i. Two runs of one deck whose
+seeds are close therefore draw the same opponents for some of their tables (200-table runs do while the seeds are
+fewer than seven apart: seeds two apart share 138 of 200 draws), in other seats and with other shuffles. They are
+other games, and where it was measured nothing carried over (DESIGN.md §22, Hail, Caesar's confirming run), but
+they are not fresh draws of opponents: keep a deck's runs ten seeds apart. `play` says so when demo-data/ab holds a
+run of the deck on a nearby seed.
+
 One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games
 are never replayed. The rollup pairs the arms game by game: wins per arm with Wilson intervals, the paired
 difference with a normal-approximation interval, the discordant pairs and an exact two-sided test that they split
@@ -83,6 +90,31 @@ def schedule(league, deck_id, seed, games, opponents=3):
     return out
 
 
+def near_seed_runs(deck_id, seed, games, opponents, base=None):
+    """Published runs of this deck (rollups under demo-data/ab) on another seed that share opponent draws with this
+    request: [(seed, shared tables, a rollup's path)]. The draw of table i is seeded with seed*31 + i (schedule)."""
+    mine = {seed * 31 + i for i in range(1, games + 1)}
+    found = {}
+    for dirpath, _dirs, files in sorted(os.walk(base or os.path.join(ROOT, "demo-data", "ab"))):
+        for name in sorted(files):
+            if not name.endswith(".json"):
+                continue
+            path = os.path.join(dirpath, name)
+            try:
+                r = lg.load_json(path)
+            except (OSError, ValueError):
+                continue
+            if not isinstance(r, dict) or r.get("deck") != deck_id or not isinstance(r.get("seed"), int) or r["seed"] == seed:
+                continue
+            if r.get("opponents", 3) != opponents or not isinstance(r.get("games"), dict) or r["seed"] in found:
+                continue
+            tables = max((g.get("index", 0) for arm in r["games"].values() for g in arm), default=0)
+            shared = len(mine & {r["seed"] * 31 + i for i in range(1, tables + 1)})
+            if shared:
+                found[r["seed"]] = (shared, os.path.relpath(path, ROOT))
+    return sorted((s, n, p) for s, (n, p) in found.items())
+
+
 def write_deck_profile(runtime, deck_id, eff):
     """Default.ai plus the data file's deck_plan and profile overrides -> res/ai/Vibefish-<deck>.ai. Returns the name."""
     ai_dir = os.path.join(runtime, "res", "ai")
@@ -125,6 +157,10 @@ def cmd_play(args):
     if any(ARMS[a]["opp_profile"] == "Vibefish-Heuristic" for a in arms) and not os.path.isfile(os.path.join(runtime, "res", "ai", "Vibefish-Heuristic.ai")):
         raise SystemExit("the mc arms need Vibefish-Heuristic.ai: run runner/make-arm-profiles.sh " + runtime)
     games = schedule(league, args.deck, args.seed, args.games, args.opponents)
+    for other, shared, path in near_seed_runs(args.deck, args.seed, args.games, args.opponents):
+        print(f"ab.py: note: {shared} of these {args.games} tables draw the same opponents as {args.deck}'s run on seed {other} ({path}): "
+              f"the draw of table i is seeded with seed*31 + i. Other seats and shuffles, so other games, but not fresh opponents; "
+              f"keep a deck's runs ten seeds apart.", file=sys.stderr)
     out = os.path.abspath(args.out)
     os.makedirs(out, exist_ok=True)
     meta_path = os.path.join(out, "ab.json")
