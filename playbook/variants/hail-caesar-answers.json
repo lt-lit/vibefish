@@ -1,0 +1,218 @@
+{
+ "schema": 1,
+ "deck": "hail-caesar",
+ "variant": "answers",
+ "of": "playbook/precons/hail-caesar.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 4,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Ruinous Ultimatum"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Ruinous Ultimatum"
+     ],
+     "when": [
+      "threat >= 12"
+     ]
+    },
+    {
+     "play": [
+      "Martial Coup",
+      "The Nipton Lottery",
+      "Vault 75: Middle School",
+      "Hour of Reckoning"
+     ],
+     "x": "max",
+     "x_min": 5,
+     "when": [
+      "threat >= life",
+      "opp_power > power",
+      "creatures <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Martial Coup",
+      "The Nipton Lottery"
+     ],
+     "x": "max",
+     "x_min": 5,
+     "when": [
+      "threat >= 30",
+      "opp_power > power",
+      "creatures <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Martial Coup"
+     ],
+     "x": "max",
+     "x_min": 5,
+     "when": [
+      "creatures <= 1",
+      "opp_creatures >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Vault 75: Middle School"
+     ],
+     "when": [
+      "not controls Caesar, Legion's Emperor",
+      "threat >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Vault 75: Middle School"
+     ],
+     "when": [
+      "threat >= 25"
+     ]
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "creatures <= 2",
+      "opp_creatures >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= creatures",
+      "opp_creatures >= 5"
+     ]
+    },
+    {
+     "hold": [
+      "Martial Coup",
+      "Vault 75: Middle School"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Conviction",
+      "Talisman of Hierarchy",
+      "Talisman of Indulgence"
+     ]
+    },
+    {
+     "play": [
+      "Caesar, Legion's Emperor"
+     ],
+     "when": [
+      "creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Heroic Reinforcements"
+     ],
+     "when": [
+      "attackers >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Heroic Reinforcements"
+     ],
+     "until": [
+      "attackers >= 3",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Wasteland Raider"
+     ],
+     "when": [
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Assemble the Legion",
+      "Intangible Virtue",
+      "Captain of the Watch",
+      "Fervent Charge",
+      "Marshal's Anthem",
+      "Elder Arthur Maxson",
+      "Bastion of Remembrance",
+      "Vault 11: Voter's Dilemma",
+      "Battle of Hoover Dam",
+      "White Glove Gourmand",
+      "Securitron Squadron",
+      "Gary Clone",
+      "Powder Ganger",
+      "Thrill-Kill Disciple",
+      "Ruthless Radrat",
+      "Kellogg, Dangerous Mind",
+      "Paladin Elizabeth Taggerdy",
+      "Craig Boone, Novac Guard",
+      "Desdemona, Freedom's Edge",
+      "Rose, Cutthroat Raider",
+      "Colonel Autumn",
+      "Overseer of Vault 76",
+      "Sierra, Nuka's Biggest Fan",
+      "Keeper of the Accord",
+      "MacCready, Lamplight Mayor",
+      "Butch DeLoria, Tunnel Snake",
+      "Aradesh, the Founder",
+      "ED-E, Lonesome Eyebot",
+      "Impassioned Orator",
+      "General's Enforcer",
+      "Boomer Scrapper",
+      "Morbid Opportunist",
+      "Pitiless Plunderer",
+      "Legate Lanius, Caesar's Ace",
+      "Mr. House, President and CEO",
+      "Charisma Bobblehead",
+      "Luck Bobblehead",
+      "Black Market",
+      "Survivor's Med Kit",
+      "Yes Man, Personal Securitron",
+      "Skullclamp"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Caesar, Legion's Emperor"
+    ],
+    "when": [
+     "tokens >= 1"
+    ]
+   }
+  ],
+  "notes": "Version 4 = the shipped version 3 (attack, trigger rule and its six cast rules, unchanged and in their order) with eight rules in front of them for the deck's board wipes, which version 3 left to Forge. Written from the 200 games of the bot league (league-run #2, seed 20261190), where the seat lost 168: it held Ruinous Ultimatum in 35 games and cast it in 7, Martial Coup 41 and 11 (ten of the eleven for one to four Soldiers, once as the wipe), Hour of Reckoning 34 and 9, Vault 75 38 and 16 (Caesar exiled by it in 12 of the 16), The Nipton Lottery 33 and 8. On its last own turn of a loss it had three or four creatures and 9 to 17 life against a board of ten to fourteen creatures, Token Triumph's in 11 or 12 losses of 20. Rules 1-2, Ruinous Ultimatum (one-sided, so as soon as it can be paid for and there is a board to take): an opponent with four creatures, or one that could hit us for 12. RRWWWBB is the limit, not the rule: with the card in hand and seven lands the colours were there on 35 of 63 turns. Rule 3, the emergency: an opponent could kill us next turn (threat >= life), has more power than we do, and our own board is small (power <= 10, five creatures at most): Martial Coup for X of five or more, else The Nipton Lottery, else Vault 75, else Hour of Reckoning. The small-board condition is what separates the league's losses from its wins: a lethal threat from a stronger board stood on some own turn in 86% of the losses and 84% of the wins, with a small board of ours in 67% and 22%. Rule 4: the same two full wipes before it is lethal, at threat >= 25. Rules 5-6, Vault 75 (chapter I exiles power 4 or more, Caesar included): with Caesar off the battlefield at threat >= 15, with him on it at 25; by the damage the league's creatures dealt, a board of 20 power holds a median of four to five creatures of power 4 or more. It goes before Caesar's own rule so that he is cast after chapter I. Rule 7, Hour of Reckoning as a play of its own when we have three creatures or fewer and an opponent has five: at such turns the opponents held 6.8 nontoken creatures to our 1.6. Rule 8 holds Martial Coup and Vault 75 for the rules above. The thresholds on threat and power were set on estimates from the logs (base power, or what a creature of that name last hit for), not on the engine's own numbers. Left to Forge as before: V.A.T.S., Lethal Scheme, Anguished Unmaking, Wear // Tear (it casts them in 15 to 98% of the games it draws them, aimed by its own logic) and Entrapment Maneuver (an instant for an opponent's attack: no rule can reach it). A candidate: not played at 200 tables yet.",
+  "on": "2026-11-11"
+ }
+}
