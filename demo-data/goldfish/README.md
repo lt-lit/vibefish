@@ -26,3 +26,14 @@ seven stock games and one playbook game not finished: the turn cap, and for one 
 Quick Draw (`quick-draw-spells.json`; 11.72 turns against 13.72) was added the same day, the fifth deck with a candidate.
 `hail-caesar-shipped-seeds-6001-6040.json` is Hail, Caesar's playbook as it shipped (version 3: the trigger only with a token, go-wide): 11.07 turns against 12.47.
 `goblin-storm-v3-seeds-9001-9100.json` and `tricky-terrain-shipped-seeds-8001-8040.json` are the two playbooks as they shipped on 2026-11-11 (Goblin Storm version 3 with the Zada hold: 9.20 turns against 11.40 on the block of 100 seeds; Tricky Terrain under go-wide: 10.97 against 13.39).
+
+The batch of 2026-11-11 (DESIGN.md §24), four decks written at once, each validated on 40 seeds its rules had not seen:
+`counter-intelligence-seeds-2101-2140.json` (`playbook/variants/counter-intelligence-charge.json`: 11.62 turns against 13.45) and
+`counter-intelligence-draft-seeds-2101-2140.json` (the mechanical draft on the same seeds: 13.40, nothing);
+`deep-clue-sea-seeds-3201-3240.json` (`deep-clue-sea-sleuth.json`: 9.70 against 12.57; stock casts Farewell on its own board in 12 of the 40);
+`food-and-fellowship-seeds-2401-2440.json` (`food-and-fellowship-eat.json`: 10.30 against 11.38);
+`planeswalker-party-seeds-2701-2740.json` (`planeswalker-party-guff.json`: 10.65 against 13.07) and
+`planeswalker-party-forge-attack-seeds-2701-2740.json` (the same rules with Forge's own attack: 11.32). In these files the
+playbook's `file` is the name of the copy that was played; the rules are those of the variant named here (checked rule for rule).
+Goldfish flatters a planeswalker deck in particular: nobody attacks its planeswalkers.
+Seed blocks used by this batch: 2001 to 2140, 2301 to 2440, 2601 to 2740, 3101 to 3240 (audit, tuning, validation).

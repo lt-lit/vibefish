@@ -1,0 +1,177 @@
+{
+ "schema": 1,
+ "deck": "food-and-fellowship",
+ "variant": "draft",
+ "of": "playbook/precons/food-and-fellowship.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Birds of Paradise",
+      "Gilded Goose",
+      "Sol Ring",
+      "Arcane Signet",
+      "Prize Pig",
+      "Chromatic Lantern",
+      "Commander's Sphere",
+      "Pristine Talisman",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "Frodo, Adventurous Hobbit",
+      "Sam, Loyal Attendant"
+     ]
+    },
+    {
+     "play": [
+      "Dawn of Hope",
+      "Hithlain Rope",
+      "Of Herbs and Stewed Rabbit",
+      "Assemble the Entmoot",
+      "Trading Post",
+      "Well of Lost Dreams",
+      "Call for Unity",
+      "Sanguine Bond"
+     ]
+    },
+    {
+     "play": [
+      "Eagles of the North",
+      "Generous Ent",
+      "Orchard Strider",
+      "Gwaihir, Greatest of the Eagles",
+      "Landroval, Horizon Witness",
+      "Motivated Pony",
+      "Butterbur, Bree Innkeeper",
+      "Mirkwood Bats",
+      "Treebeard, Gracious Host",
+      "Bilbo, Birthday Celebrant",
+      "Lobelia, Defender of Bag End",
+      "Mentor of the Meek",
+      "Rapacious Guest",
+      "Rosie Cotton of South Lane",
+      "Savvy Hunter",
+      "The Gaffer",
+      "Tireless Provisioner",
+      "Feasting Hobbit",
+      "Gollum, Obsessed Stalker",
+      "Prosperous Innkeeper",
+      "Shire Shirriff",
+      "Essence Warden"
+     ]
+    },
+    {
+     "play": [
+      "Night's Whisper",
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Anguished Unmaking",
+    "why": "instant"
+   },
+   {
+    "card": "Banquet Guests",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Crypt Incursion",
+    "why": "instant"
+   },
+   {
+    "card": "Dusk // Dawn",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Farmer Cotton",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Farseek",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Fell the Mighty",
+    "why": "aimed"
+   },
+   {
+    "card": "Field-Tested Frying Pan",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Fumigate",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Go for the Throat",
+    "why": "instant"
+   },
+   {
+    "card": "Great Oak Guardian",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Merry, Warden of Isengard",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Mortify",
+    "why": "instant"
+   },
+   {
+    "card": "Path to Exile",
+    "why": "instant"
+   },
+   {
+    "card": "Pippin, Warden of Isengard",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Revive the Shire",
+    "why": "aimed"
+   },
+   {
+    "card": "Swords to Plowshares",
+    "why": "instant"
+   },
+   {
+    "card": "Toxic Deluge",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Woodfall Primus",
+    "why": "aimed when it enters"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Toxic Deluge"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Trading Post"
+  ],
+  "optional_triggers": [
+   "Dawn of Hope",
+   "Great Oak Guardian",
+   "Lobelia, Defender of Bag End",
+   "Mentor of the Meek",
+   "Shire Shirriff",
+   "Well of Lost Dreams"
+  ]
+ }
+}

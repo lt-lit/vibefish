@@ -1,0 +1,302 @@
+{
+ "schema": 1,
+ "deck": "counter-intelligence",
+ "variant": "charge",
+ "of": "playbook/precons/counter-intelligence.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Titan Forge"
+     ],
+     "ability": "Create a 9/9"
+    },
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet"
+     ],
+     "when": [
+      "turn <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Etherium Sculptor",
+      "Enthusiastic Mechanaut",
+      "Steel Overseer",
+      "Gavel of the Righteous"
+     ]
+    },
+    {
+     "play": [
+      "Inspirit, Flagship Vessel"
+     ]
+    },
+    {
+     "play": [
+      "Cyberdrive Awakener"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Cyberdrive Awakener"
+     ],
+     "until": [
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Depthshaker Titan"
+     ],
+     "phase": "main1",
+     "when": [
+      "turn >= 9",
+      "attackers >= 4"
+     ]
+    },
+    {
+     "hold": [
+      "Depthshaker Titan"
+     ],
+     "until": [
+      "turn >= 9",
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "hold": [
+      "Ripples of Potential"
+     ],
+     "until": [
+      "main == 2"
+     ]
+    },
+    {
+     "play": [
+      "Kappa Cannoneer",
+      "Threefold Thunderhulk",
+      "Thought Monitor",
+      "Alibou, Ancient Witness",
+      "Lux Artillery",
+      "Kilo, Apogee Mind",
+      "Titan Forge",
+      "Jhoira, Weatherlight Captain",
+      "Uthros Research Craft",
+      "Angel of the Ruins",
+      "Tekuthal, Inquiry Dominus",
+      "Surge Conductor",
+      "Coretapper",
+      "Solar Array",
+      "Golem Foundry",
+      "Insight Engine",
+      "Long-Range Sensor",
+      "Cloud Key",
+      "Crystalline Crawler",
+      "Chrome Host Seedshark",
+      "Patrolling Peacemaker",
+      "Thrummingbird",
+      "Emry, Lurker of the Loch"
+     ]
+    },
+    {
+     "play": [
+      "Tezzeret's Gambit",
+      "Thirst for Knowledge",
+      "Experimental Augury"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Titan Forge"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Gavel of the Righteous"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Long-Range Sensor"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Golem Foundry"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Darksteel Reactor"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Insight Engine"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Inspirit, Flagship Vessel"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Empowered Autogenerator"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Astral Cornucopia"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Everflowing Chalice"
+    },
+    {
+     "activate": [
+      "Steel Overseer"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Insight Engine"
+     ],
+     "phase": "main2",
+     "when": [
+      "hand <= 5",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Universal Surveillance",
+      "Pull from Tomorrow"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "phase": "main2",
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Karn's Bastion"
+     ],
+     "ability": "Proliferate"
+    },
+    {
+     "activate": [
+      "Karn's Bastion"
+     ],
+     "ability": "Proliferate",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Titan Forge"
+     ],
+     "ability": "Put a charge counter",
+     "phase": "main2"
+    },
+    {
+     "play": [
+      "Phyrexian Metamorph",
+      "Mindless Automaton",
+      "Etched Oracle",
+      "Empowered Autogenerator",
+      "Darksteel Reactor",
+      "Lux Cannon",
+      "Arcane Signet",
+      "Pentad Prism",
+      "Moxite Refinery",
+      "Soul-Guide Lantern"
+     ],
+     "phase": "main2"
+    },
+    {
+     "hold": [
+      "Phyrexian Metamorph",
+      "Mindless Automaton",
+      "Etched Oracle",
+      "Empowered Autogenerator",
+      "Darksteel Reactor",
+      "Lux Cannon",
+      "Arcane Signet",
+      "Pentad Prism",
+      "Moxite Refinery",
+      "Soul-Guide Lantern"
+     ],
+     "until": [
+      "main == 2"
+     ]
+    },
+    {
+     "play": [
+      "Hangarback Walker"
+     ],
+     "x": "max",
+     "x_min": 1,
+     "phase": "main2"
+    },
+    {
+     "play": [
+      "Astral Cornucopia"
+     ],
+     "x": "max",
+     "x_min": 1,
+     "phase": "main2"
+    }
+   ]
+  },
+  "notes": "Counter Intelligence (Inspirit, Flagship Vessel: charge counters and +1/+1 counters on artifacts). In goldfish stock Forge leaves 41% to 49% of this deck's mana unspent, casts Inspirit on turn 6.4 on average, never taps Steel Overseer or Coretapper (0 uses in 24 and 32 turns on the battlefield: it attacks with them), never casts Cyberdrive Awakener or Angel of the Ruins and sits on Threefold Thunderhulk for turns with the mana for it. The rules, in order: Titan Forge makes its 9/9 as soon as it has three counters; Sol Ring, Arcane Signet on the first four turns, the two cost reducers, Steel Overseer and Gavel of the Righteous first; Inspirit at once (Forge's own logic then stations it after combat with every creature left untapped, which is why creatures are cast before combat); Cyberdrive Awakener only in the first main phase, where its enter trigger turns every other artifact into a 4/4 attacker; Depthshaker Titan only from turn 9 with four attackers, because Forge aims its enter trigger at Titan Forge, Insight Engine or Inspirit and sacrifices it at the end of the turn; Ripples of Potential only after combat (Forge cast it before combat and phased its own attackers out); the payoffs in a fixed order, dearest first (Kappa Cannoneer, Thunderhulk, Thought Monitor, Alibou, Lux Artillery, Kilo, Titan Forge, Jhoira, Uthros and the rest); the draw spells while the library has twenty cards; Coretapper taps every turn for Titan Forge, else the Gavel, Long-Range Sensor, Golem Foundry, Darksteel Reactor, Insight Engine, Inspirit, then the mana artifacts; Steel Overseer taps every turn before combat. After combat, with what is left: Insight Engine (hand of five or fewer, library of thirty or more), the X draw spells on a hand of three or fewer, Karn's Bastion (held otherwise: Forge activates it at upkeep ahead of the turn's spells), a charge counter on Titan Forge, then the cards that do least against a goldfish (Phyrexian Metamorph, Mindless Automaton, Etched Oracle, Empowered Autogenerator, Darksteel Reactor, Lux Cannon, the small artifacts), kept out of the first main phase so that Forge's own equip of the Gavel gets the mana first, and Hangarback Walker and Astral Cornucopia for all the mana that remains. No trigger rules: Forge accepts Darksteel Reactor's and Golem Foundry's optional triggers every time (45 of 45 traced). Not expressible, and the deck's largest gap: Inspirit's own STATION 1+ trigger (a +1/+1 counter or two charge counters on another artifact at each combat) never reaches the stack under Forge's AI, stock or playbook (0 times in 48 games with 98 station activations: the AI has no targeting for it and the trigger is dropped), and no rule can aim a trigger. Goldfish: written on seeds 2001 to 2012 (stock 12.58 turns, this file 10.42). On the 40 seeds not looked at before the rules were final (2101 to 2140) stock kills in 13.45 turns and this file in 11.62, 1.82 turns faster (95% +1.23 to +2.42; faster in 29, the same in 6, slower in 5; all 80 games finished). The mechanical draft (counter-intelligence-draft.json) on the same 40 seeds: 13.40 turns, +0.05 over stock (95% -0.46 to +0.56), so this file is 1.77 turns faster than the draft (95% +1.37 to +2.18). Not played at tables yet.",
+  "on": "2026-11-11"
+ }
+}

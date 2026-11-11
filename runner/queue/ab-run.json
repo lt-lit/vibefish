@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-11T20:25Z",
-  "note": "The first run of the new exam (the owner, 2026-11-11: bots are judged among bots, not among stock AI). Each of the four shipped bots at 200 tables whose three opponents are the other three bots, each under its shipped playbook: once with the deck's own seat under stock AI and once under its playbook. What it asks: does a playbook still earn its place when the table is competent, or did it only beat stock tables. Seed 20261200 for all four (other decks, so other tables).",
+  "requested": "2026-11-11T21:20Z",
+  "note": "The batch of 2026-11-11 at the new exam: four candidates, each at 200 tables whose three opponents are drawn from the four bot decks (runner/leagues/bots-v1.json), every opponent under its shipped playbook; the candidate's deck once under stock AI and once under the candidate. Counter Intelligence (charge), Deep Clue Sea (sleuth), Food and Fellowship (eat), Planeswalker Party (guff). The second request plays Planeswalker Party's sibling with Forge's own attack on the same tables (playbook arm only; ab.py join pairs it with the first request's stock arm). Seed 20261210.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,9 +11,14 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "goblin-storm,token-triumph,hail-caesar,tricky-terrain",
+      "decks": "counter-intelligence@charge,deep-clue-sea@sleuth,food-and-fellowship@eat,planeswalker-party@guff",
       "arms": "stock,playbook",
-      "seed": "20261200"
+      "seed": "20261210"
+    },
+    {
+      "decks": "planeswalker-party@guff-forgeattack",
+      "arms": "playbook",
+      "seed": "20261210"
     }
   ]
 }

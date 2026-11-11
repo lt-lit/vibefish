@@ -1,0 +1,1051 @@
+{
+ "kind": "goldfish-pair",
+ "generated": "2026-11-11T20:57:09Z",
+ "deck": "deep-clue-sea",
+ "a": {
+  "run": "val-stock",
+  "deck": "deep-clue-sea",
+  "deck_file": "Deep Clue Sea [MKC] [2024].dck",
+  "vibefish": "0.3.1",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": null,
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 40,
+  "wins": 40,
+  "not_finished": 0,
+  "kill_turn_mean": 12.575,
+  "kill_turn_sd": 2.363,
+  "kill_turn_median": 12.0,
+  "kill_turn_min": 8,
+  "kill_turn_max": 19,
+  "kill_turn_distribution": {
+   "8": 1,
+   "9": 1,
+   "10": 5,
+   "11": 8,
+   "12": 7,
+   "13": 7,
+   "14": 1,
+   "15": 5,
+   "16": 3,
+   "17": 1,
+   "19": 1
+  },
+  "per_game": [
+   {
+    "seed": 3201,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 12129
+   },
+   {
+    "seed": 3202,
+    "kill_turn": 13,
+    "game_turns": 48,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 14494
+   },
+   {
+    "seed": 3203,
+    "kill_turn": 13,
+    "game_turns": 46,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7650
+   },
+   {
+    "seed": 3204,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5929
+   },
+   {
+    "seed": 3205,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6153
+   },
+   {
+    "seed": 3206,
+    "kill_turn": 14,
+    "game_turns": 52,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 8873
+   },
+   {
+    "seed": 3207,
+    "kill_turn": 10,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5018
+   },
+   {
+    "seed": 3208,
+    "kill_turn": 17,
+    "game_turns": 60,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 28906
+   },
+   {
+    "seed": 3209,
+    "kill_turn": 15,
+    "game_turns": 53,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 60418
+   },
+   {
+    "seed": 3210,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 4685
+   },
+   {
+    "seed": 3211,
+    "kill_turn": 9,
+    "game_turns": 30,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 12551
+   },
+   {
+    "seed": 3212,
+    "kill_turn": 13,
+    "game_turns": 48,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7398
+   },
+   {
+    "seed": 3213,
+    "kill_turn": 19,
+    "game_turns": 72,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 37641
+   },
+   {
+    "seed": 3214,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 1,
+    "duration_ms": 5875
+   },
+   {
+    "seed": 3215,
+    "kill_turn": 15,
+    "game_turns": 55,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 33029
+   },
+   {
+    "seed": 3216,
+    "kill_turn": 15,
+    "game_turns": 57,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 12551
+   },
+   {
+    "seed": 3217,
+    "kill_turn": 13,
+    "game_turns": 45,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8441
+   },
+   {
+    "seed": 3218,
+    "kill_turn": 12,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8035
+   },
+   {
+    "seed": 3219,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6276
+   },
+   {
+    "seed": 3220,
+    "kill_turn": 12,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8242
+   },
+   {
+    "seed": 3221,
+    "kill_turn": 12,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8774
+   },
+   {
+    "seed": 3222,
+    "kill_turn": 15,
+    "game_turns": 56,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 12285
+   },
+   {
+    "seed": 3223,
+    "kill_turn": 15,
+    "game_turns": 54,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7037
+   },
+   {
+    "seed": 3224,
+    "kill_turn": 16,
+    "game_turns": 57,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 14219
+   },
+   {
+    "seed": 3225,
+    "kill_turn": 12,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6261
+   },
+   {
+    "seed": 3226,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5559
+   },
+   {
+    "seed": 3227,
+    "kill_turn": 11,
+    "game_turns": 41,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5954
+   },
+   {
+    "seed": 3228,
+    "kill_turn": 16,
+    "game_turns": 59,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 11731
+   },
+   {
+    "seed": 3229,
+    "kill_turn": 13,
+    "game_turns": 48,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7162
+   },
+   {
+    "seed": 3230,
+    "kill_turn": 13,
+    "game_turns": 48,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7901
+   },
+   {
+    "seed": 3231,
+    "kill_turn": 12,
+    "game_turns": 45,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6669
+   },
+   {
+    "seed": 3232,
+    "kill_turn": 8,
+    "game_turns": 29,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 3463
+   },
+   {
+    "seed": 3233,
+    "kill_turn": 13,
+    "game_turns": 47,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 11825
+   },
+   {
+    "seed": 3234,
+    "kill_turn": 16,
+    "game_turns": 58,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 14022
+   },
+   {
+    "seed": 3235,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6642
+   },
+   {
+    "seed": 3236,
+    "kill_turn": 12,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 18397
+   },
+   {
+    "seed": 3237,
+    "kill_turn": 11,
+    "game_turns": 41,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 21881
+   },
+   {
+    "seed": 3238,
+    "kill_turn": 12,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6581
+   },
+   {
+    "seed": 3239,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 1,
+    "duration_ms": 4776
+   },
+   {
+    "seed": 3240,
+    "kill_turn": 11,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6329
+   }
+  ]
+ },
+ "b": {
+  "run": "val-playbook",
+  "deck": "deep-clue-sea",
+  "deck_file": "Deep Clue Sea [MKC] [2024].dck",
+  "vibefish": "0.3.1",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": {
+   "file": "deep-clue-sea-sleuth.json",
+   "version": 1,
+   "attack": {
+    "policy": "go_wide",
+    "target": "highest_life",
+    "min_attackers": 3,
+    "safety_margin": 5,
+    "max_reserve": 3,
+    "spread": true,
+    "damage_per_loss": 3
+   },
+   "mulligan": null,
+   "cast": {
+    "rules": [
+     {
+      "hold": [
+       "Farewell"
+      ],
+      "until": [
+       "opp_power > power",
+       "opp_creatures >= 3"
+      ]
+     },
+     {
+      "hold": [
+       "Lonis, Cryptozoologist"
+      ],
+      "ability": "reveals the top"
+     },
+     {
+      "hold": [
+       "Tezzeret, Betrayer of Flesh"
+      ],
+      "ability": "emblem"
+     },
+     {
+      "play": [
+       "Sol Ring"
+      ]
+     },
+     {
+      "play": [
+       "Arcane Signet",
+       "Talisman of Unity",
+       "Talisman of Curiosity",
+       "Talisman of Progress",
+       "Simic Signet",
+       "Azorius Signet"
+      ],
+      "when": [
+       "turn <= 5"
+      ]
+     },
+     {
+      "play": [
+       "Morska, Undersea Sleuth"
+      ]
+     },
+     {
+      "activate": [
+       "Krosan Verge"
+      ],
+      "ability": "Search your library",
+      "when": [
+       "lands <= 7"
+      ]
+     },
+     {
+      "play": [
+       "Mechanized Production"
+      ],
+      "target": "Clue Token"
+     },
+     {
+      "hold": [
+       "Mechanized Production"
+      ]
+     },
+     {
+      "activate": [
+       "Selvala, Explorer Returned"
+      ],
+      "phase": "main1",
+      "when": [
+       "library >= 20"
+      ]
+     },
+     {
+      "activate": [
+       "Idol of Oblivion"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "library >= 20"
+      ]
+     },
+     {
+      "play": [
+       "On the Trail"
+      ],
+      "when": [
+       "turn <= 5"
+      ]
+     },
+     {
+      "play": [
+       "Tangletrove Kelp",
+       "Selvala, Explorer Returned",
+       "Idol of Oblivion",
+       "Jolrael, Mwonvuli Recluse",
+       "Detective of the Month",
+       "Alandra, Sky Dreamer",
+       "Ethereal Investigator",
+       "Tezzeret, Betrayer of Flesh",
+       "Knowledge Is Power",
+       "Chulane, Teller of Tales",
+       "Thought Monitor"
+      ]
+     },
+     {
+      "activate": [
+       "Clue Token"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "drawn <= 1",
+       "library >= 20",
+       "not controls Bennie Bracks, Zoologist",
+       "not controls Chulane, Teller of Tales",
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     },
+     {
+      "activate": [
+       "Jolrael, Mwonvuli Recluse"
+      ],
+      "ability": "base power and toughness",
+      "phase": "main1",
+      "when": [
+       "attackers >= 4",
+       "hand >= 7"
+      ]
+     },
+     {
+      "activate": [
+       "Clue Token"
+      ],
+      "ability": "Draw a card",
+      "phase": "main1",
+      "when": [
+       "controls Knowledge Is Power",
+       "attackers >= 6",
+       "library >= 20",
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     },
+     {
+      "play": [
+       "Bennie Bracks, Zoologist"
+      ],
+      "when": [
+       "attackers == 0"
+      ]
+     },
+     {
+      "play": [
+       "Koma, Cosmos Serpent",
+       "Hornet Queen",
+       "Adrix and Nev, Twincasters",
+       "Psychosis Crawler",
+       "Kappa Cannoneer",
+       "Shimmer Dragon",
+       "Junk Winder",
+       "Teferi's Ageless Insight",
+       "Academy Manufactor",
+       "Nadir Kraken",
+       "Erdwal Illuminator",
+       "Tireless Tracker",
+       "Lonis, Cryptozoologist",
+       "Ongoing Investigation",
+       "Wavesifter",
+       "Innocuous Researcher",
+       "Sophia, Dogged Detective",
+       "Merchant of Truth",
+       "Whirler Rogue",
+       "Nettlecyst",
+       "Ulvenwald Mysteries",
+       "Serene Sleuth",
+       "Armed with Proof",
+       "Inspiring Statuary",
+       "Graf Mole",
+       "Killer Service",
+       "Wilderness Reclamation",
+       "Aerial Extortionist",
+       "On the Trail",
+       "Arcane Signet",
+       "Talisman of Unity",
+       "Talisman of Curiosity",
+       "Talisman of Progress",
+       "Simic Signet",
+       "Azorius Signet",
+       "Search the Premises",
+       "Magnifying Glass",
+       "Ransom Note",
+       "Follow the Bodies"
+      ]
+     },
+     {
+      "play": [
+       "Hydroid Krasis"
+      ],
+      "x": "max",
+      "x_min": 4
+     },
+     {
+      "play": [
+       "Finale of Revelation"
+      ],
+      "x": 9,
+      "x_min": 4,
+      "when": [
+       "hand <= 3",
+       "library >= 30"
+      ]
+     },
+     {
+      "activate": [
+       "Clue Token"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "drawn <= 1",
+       "library >= 20",
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     },
+     {
+      "activate": [
+       "Clue Token"
+      ],
+      "ability": "Draw a card",
+      "phase": "main1",
+      "when": [
+       "controls Knowledge Is Power",
+       "attackers >= 4",
+       "library >= 20",
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     },
+     {
+      "activate": [
+       "Clue Token"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "controls Psychosis Crawler",
+       "library >= 20",
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     },
+     {
+      "activate": [
+       "Clue Token"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "hand <= 2",
+       "library >= 20",
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     },
+     {
+      "hold": [
+       "Clue Token"
+      ],
+      "ability": "Draw a card",
+      "until": [
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     },
+     {
+      "hold": [
+       "Sophia, Dogged Detective"
+      ],
+      "ability": "counter on each Dog",
+      "until": [
+       "not controls Tangletrove Kelp",
+       "not controls Mechanized Production"
+      ]
+     }
+    ]
+   },
+   "triggers": [
+    {
+     "accept": [
+      "Nadir Kraken"
+     ]
+    },
+    {
+     "accept": [
+      "Killer Service"
+     ],
+     "when": [
+      "controls Food Token"
+     ]
+    }
+   ]
+  },
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 40,
+  "wins": 40,
+  "not_finished": 0,
+  "kill_turn_mean": 9.7,
+  "kill_turn_sd": 1.285,
+  "kill_turn_median": 10.0,
+  "kill_turn_min": 7,
+  "kill_turn_max": 14,
+  "kill_turn_distribution": {
+   "7": 1,
+   "8": 5,
+   "9": 12,
+   "10": 13,
+   "11": 7,
+   "12": 1,
+   "14": 1
+  },
+  "per_game": [
+   {
+    "seed": 3201,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9099
+   },
+   {
+    "seed": 3202,
+    "kill_turn": 10,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 13546
+   },
+   {
+    "seed": 3203,
+    "kill_turn": 11,
+    "game_turns": 38,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 5416
+   },
+   {
+    "seed": 3204,
+    "kill_turn": 11,
+    "game_turns": 41,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8896
+   },
+   {
+    "seed": 3205,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5611
+   },
+   {
+    "seed": 3206,
+    "kill_turn": 9,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6293
+   },
+   {
+    "seed": 3207,
+    "kill_turn": 8,
+    "game_turns": 28,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4485
+   },
+   {
+    "seed": 3208,
+    "kill_turn": 12,
+    "game_turns": 44,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 10049
+   },
+   {
+    "seed": 3209,
+    "kill_turn": 9,
+    "game_turns": 36,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 12320
+   },
+   {
+    "seed": 3210,
+    "kill_turn": 9,
+    "game_turns": 36,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 4416
+   },
+   {
+    "seed": 3211,
+    "kill_turn": 8,
+    "game_turns": 28,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4196
+   },
+   {
+    "seed": 3212,
+    "kill_turn": 11,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6656
+   },
+   {
+    "seed": 3213,
+    "kill_turn": 14,
+    "game_turns": 55,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 12737
+   },
+   {
+    "seed": 3214,
+    "kill_turn": 9,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5031
+   },
+   {
+    "seed": 3215,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 14873
+   },
+   {
+    "seed": 3216,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7339
+   },
+   {
+    "seed": 3217,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7311
+   },
+   {
+    "seed": 3218,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7222
+   },
+   {
+    "seed": 3219,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4897
+   },
+   {
+    "seed": 3220,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7271
+   },
+   {
+    "seed": 3221,
+    "kill_turn": 11,
+    "game_turns": 41,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7302
+   },
+   {
+    "seed": 3222,
+    "kill_turn": 7,
+    "game_turns": 27,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 3383
+   },
+   {
+    "seed": 3223,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5663
+   },
+   {
+    "seed": 3224,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6112
+   },
+   {
+    "seed": 3225,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4624
+   },
+   {
+    "seed": 3226,
+    "kill_turn": 8,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 4469
+   },
+   {
+    "seed": 3227,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5467
+   },
+   {
+    "seed": 3228,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5303
+   },
+   {
+    "seed": 3229,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5656
+   },
+   {
+    "seed": 3230,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5950
+   },
+   {
+    "seed": 3231,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4741
+   },
+   {
+    "seed": 3232,
+    "kill_turn": 8,
+    "game_turns": 29,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 3772
+   },
+   {
+    "seed": 3233,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6365
+   },
+   {
+    "seed": 3234,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5168
+   },
+   {
+    "seed": 3235,
+    "kill_turn": 8,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4835
+   },
+   {
+    "seed": 3236,
+    "kill_turn": 9,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4122
+   },
+   {
+    "seed": 3237,
+    "kill_turn": 9,
+    "game_turns": 34,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 0,
+    "duration_ms": 6204
+   },
+   {
+    "seed": 3238,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6958
+   },
+   {
+    "seed": 3239,
+    "kill_turn": 9,
+    "game_turns": 36,
+    "reason": "WinsGameSpellEffect",
+    "mulligans": 1,
+    "duration_ms": 4594
+   },
+   {
+    "seed": 3240,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8425
+   }
+  ]
+ },
+ "paired": {
+  "seeds": 40,
+  "not_finished_by_one": 0,
+  "a_minus_b_turns": 2.875,
+  "ci95": [
+   2.243,
+   3.507
+  ],
+  "sd": 2.04,
+  "b_faster": 36,
+  "same": 3,
+  "b_slower": 1
+ }
+}

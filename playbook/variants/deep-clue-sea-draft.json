@@ -1,0 +1,163 @@
+{
+ "schema": 1,
+ "deck": "deep-clue-sea",
+ "variant": "draft",
+ "of": "playbook/precons/deep-clue-sea.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Azorius Signet",
+      "Simic Signet",
+      "Talisman of Curiosity",
+      "Talisman of Progress",
+      "Talisman of Unity",
+      "Magnifying Glass"
+     ]
+    },
+    {
+     "play": [
+      "Morska, Undersea Sleuth"
+     ]
+    },
+    {
+     "play": [
+      "Ransom Note",
+      "Idol of Oblivion",
+      "On the Trail",
+      "Ongoing Investigation",
+      "Armed with Proof",
+      "Inspiring Statuary",
+      "Killer Service",
+      "Ulvenwald Mysteries",
+      "Search the Premises",
+      "Teferi's Ageless Insight",
+      "Tezzeret, Betrayer of Flesh",
+      "Wilderness Reclamation",
+      "Knowledge Is Power"
+     ]
+    },
+    {
+     "play": [
+      "Hornet Queen",
+      "Koma, Cosmos Serpent",
+      "Tangletrove Kelp",
+      "Thought Monitor",
+      "Esix, Fractal Bloom",
+      "Kappa Cannoneer",
+      "Shimmer Dragon",
+      "Chulane, Teller of Tales",
+      "Wavesifter",
+      "Adrix and Nev, Twincasters",
+      "Alandra, Sky Dreamer",
+      "Bennie Bracks, Zoologist",
+      "Ethereal Investigator",
+      "Innocuous Researcher",
+      "Merchant of Truth",
+      "Sophia, Dogged Detective",
+      "Whirler Rogue",
+      "Academy Manufactor",
+      "Detective of the Month",
+      "Graf Mole",
+      "Nadir Kraken",
+      "Selvala, Explorer Returned",
+      "Tireless Tracker",
+      "Erdwal Illuminator",
+      "Jolrael, Mwonvuli Recluse",
+      "Lonis, Cryptozoologist",
+      "Serene Sleuth"
+     ]
+    },
+    {
+     "play": [
+      "Follow the Bodies"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Aerial Extortionist",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Hydroid Krasis",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Junk Winder",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Psychosis Crawler",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Farewell",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Finale of Revelation",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Fumigate",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Organic Extinction",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Confirm Suspicions",
+    "why": "instant"
+   },
+   {
+    "card": "Disorder in the Court",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Swords to Plowshares",
+    "why": "instant"
+   },
+   {
+    "card": "Mechanized Production",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Nettlecyst",
+    "why": "its script says when (NeedsToPlay)"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Psychosis Crawler"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Esix, Fractal Bloom",
+   "Jolrael, Mwonvuli Recluse",
+   "Selvala, Explorer Returned"
+  ],
+  "optional_triggers": [
+   "Chulane, Teller of Tales",
+   "Innocuous Researcher",
+   "Lonis, Cryptozoologist",
+   "Nadir Kraken",
+   "Wavesifter",
+   "Killer Service",
+   "On the Trail"
+  ]
+ }
+}

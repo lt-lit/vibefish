@@ -1,0 +1,193 @@
+{
+ "schema": 1,
+ "deck": "planeswalker-party",
+ "variant": "guff-forgeattack",
+ "of": "playbook/variants/planeswalker-party-guff.json",
+ "about": "The guff candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read. Goldfish only so far.",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Commodore Guff"
+     ]
+    },
+    {
+     "hold": [
+      "Commodore Guff"
+     ],
+     "ability": "You draw X cards",
+     "until": [
+      "turn >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Fellwar Stone",
+      "Talisman of Conviction",
+      "Talisman of Creativity",
+      "Talisman of Progress",
+      "Boros Signet",
+      "Azorius Signet",
+      "Izzet Signet",
+      "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "hold": [
+      "Silent Arbiter",
+      "Promise of Loyalty"
+     ],
+     "until": [
+      "opp_power > power"
+     ]
+    },
+    {
+     "hold": [
+      "Chandra, Legacy of Fire"
+     ],
+     "ability": "Remove a loyalty counter from each",
+     "until": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Repeated Reverberation"
+     ],
+     "when": [
+      "controls Chandra, Awakened Inferno"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Repeated Reverberation"
+     ],
+     "when": [
+      "controls Elspeth, Sun's Champion"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Chandra, Awakened Inferno"
+     ],
+     "ability": "At the beginning of your upkeep, this emblem deals 1 damage",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "+2/+2 and have flying",
+     "when": [
+      "creatures >= 6"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "three 1/1 white Soldier",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Gideon Jura"
+     ],
+     "ability": "becomes a 6/6",
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Elspeth, Sun's Champion",
+      "Chandra, Awakened Inferno",
+      "Gideon Jura",
+      "Sarkhan the Masterless",
+      "Chandra, Legacy of Fire",
+      "Jaya's Phoenix",
+      "Ajani Steadfast",
+      "Deploy the Gatewatch",
+      "Vronos, Masked Inquisitor",
+      "Chandra, Torch of Defiance",
+      "Leori, Sparktouched Hunter",
+      "Narset of the Ancient Way",
+      "Jace, Architect of Thought",
+      "Nahiri, the Harbinger",
+      "Saheeli, Sublime Artificer",
+      "Oath of Gideon",
+      "Jace Beleren",
+      "Narset, Parter of Veils",
+      "Jace, Mirror Mage",
+      "The Wanderer",
+      "Teyo, Geometric Tactician"
+     ]
+    },
+    {
+     "play": [
+      "Oath of Teferi"
+     ],
+     "when": [
+      "controls Commodore Guff"
+     ]
+    },
+    {
+     "play": [
+      "The Chain Veil"
+     ],
+     "when": [
+      "controls Commodore Guff",
+      "mana >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Narset, Enlightened Master",
+      "Kazuul, Tyrant of the Cliffs",
+      "Flux Channeler",
+      "Thrummingbird",
+      "Grateful Apparition",
+      "Oath of Jace",
+      "Mangara, the Diplomat",
+      "Cartographer's Hawk",
+      "Honor-Worn Shaku",
+      "Gatewatch Beacon",
+      "Sparkshaper Visionary",
+      "Oreskos Explorer"
+     ]
+    },
+    {
+     "activate": [
+      "The Chain Veil"
+     ],
+     "when": [
+      "mana >= 4"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Gatewatch Beacon"
+    ]
+   },
+   {
+    "accept": [
+     "Jaya's Phoenix"
+    ]
+   }
+  ],
+  "notes": "The cast and trigger rules of planeswalker-party-guff.json (its notes say why each exists) without the go-wide attack: Forge declares the attacks. Why it exists: the go-wide policy sends every creature that can attack, which here means the Wizards that pay for planeswalkers, the tokens that would block for them and planeswalkers that Sarkhan or Sparkshaper Visionary turned into creatures; against three opponents that do nothing this is free, at a table it may not be, and goldfish cannot say. Goldfish on the 40 validation seeds (2701-2740): 11.32 turns against stock's 13.07, 1.75 faster (95% +0.89 to +2.61; faster in 26, the same in 9, slower in 5), and 0.68 slower than the go-wide file (95% 0.44 to 0.91). Played after the rules had been changed once on these seeds (the hold on Chandra, Legacy of Fire's 0 under 40 cards, added because this arm lost seed 2707 to an empty library without it; the other 39 games are the same with and without the hold). Not played at tables.",
+  "on": "2026-11-11"
+ }
+}

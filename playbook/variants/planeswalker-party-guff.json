@@ -1,0 +1,201 @@
+{
+ "schema": 1,
+ "deck": "planeswalker-party",
+ "variant": "guff",
+ "of": "playbook/precons/planeswalker-party.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck has no data file of its own yet. Goldfish only so far: not played at tables.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Commodore Guff"
+     ]
+    },
+    {
+     "hold": [
+      "Commodore Guff"
+     ],
+     "ability": "You draw X cards",
+     "until": [
+      "turn >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Fellwar Stone",
+      "Talisman of Conviction",
+      "Talisman of Creativity",
+      "Talisman of Progress",
+      "Boros Signet",
+      "Azorius Signet",
+      "Izzet Signet",
+      "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "hold": [
+      "Silent Arbiter",
+      "Promise of Loyalty"
+     ],
+     "until": [
+      "opp_power > power"
+     ]
+    },
+    {
+     "hold": [
+      "Chandra, Legacy of Fire"
+     ],
+     "ability": "Remove a loyalty counter from each",
+     "until": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Repeated Reverberation"
+     ],
+     "when": [
+      "controls Chandra, Awakened Inferno"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Repeated Reverberation"
+     ],
+     "when": [
+      "controls Elspeth, Sun's Champion"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Chandra, Awakened Inferno"
+     ],
+     "ability": "At the beginning of your upkeep, this emblem deals 1 damage",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "+2/+2 and have flying",
+     "when": [
+      "creatures >= 6"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "three 1/1 white Soldier",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Gideon Jura"
+     ],
+     "ability": "becomes a 6/6",
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Elspeth, Sun's Champion",
+      "Chandra, Awakened Inferno",
+      "Gideon Jura",
+      "Sarkhan the Masterless",
+      "Chandra, Legacy of Fire",
+      "Jaya's Phoenix",
+      "Ajani Steadfast",
+      "Deploy the Gatewatch",
+      "Vronos, Masked Inquisitor",
+      "Chandra, Torch of Defiance",
+      "Leori, Sparktouched Hunter",
+      "Narset of the Ancient Way",
+      "Jace, Architect of Thought",
+      "Nahiri, the Harbinger",
+      "Saheeli, Sublime Artificer",
+      "Oath of Gideon",
+      "Jace Beleren",
+      "Narset, Parter of Veils",
+      "Jace, Mirror Mage",
+      "The Wanderer",
+      "Teyo, Geometric Tactician"
+     ]
+    },
+    {
+     "play": [
+      "Oath of Teferi"
+     ],
+     "when": [
+      "controls Commodore Guff"
+     ]
+    },
+    {
+     "play": [
+      "The Chain Veil"
+     ],
+     "when": [
+      "controls Commodore Guff",
+      "mana >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Narset, Enlightened Master",
+      "Kazuul, Tyrant of the Cliffs",
+      "Flux Channeler",
+      "Thrummingbird",
+      "Grateful Apparition",
+      "Oath of Jace",
+      "Mangara, the Diplomat",
+      "Cartographer's Hawk",
+      "Honor-Worn Shaku",
+      "Gatewatch Beacon",
+      "Sparkshaper Visionary",
+      "Oreskos Explorer"
+     ]
+    },
+    {
+     "activate": [
+      "The Chain Veil"
+     ],
+     "when": [
+      "mana >= 4"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Gatewatch Beacon"
+    ]
+   },
+   {
+    "accept": [
+     "Jaya's Phoenix"
+    ]
+   }
+  ],
+  "notes": "Planeswalker Party (Commodore Guff: +1 makes a Wizard that taps for red for planeswalker spells, -3 draws X and deals X to each opponent, X the planeswalkers; at the end step another planeswalker gets a loyalty counter). Stock Forge AI already uses a loyalty ability on three planeswalker-turns in four (nine in ten leaving out The Wanderer, Teyo, Saheeli and Gideon, whose abilities it never uses) and its choices are mostly sound, so the rules leave them alone and take what is around them. What stock does (12 audit games, seeds 2601-2612, and the 40 stock validation games in brackets): Guff first cast on its turn 7.9 (6.9) and not at all in 1 (2) games, 22% (23%) of the mana unspent; over the 52 games Gideon Jura, The Chain Veil and Oreskos Explorer are never cast (AI:RemoveDeck:All; in hand in 14, 14 and 13 games), Repeated Reverberation once (in hand in 22), Gideon's and Teyo's abilities are never used, and Promise of Loyalty (21 games) and Silent Arbiter (13) are cast against empty boards: the first sacrifices the seat's own creatures, the second caps its own attack at one creature. The rules: Sol Ring, Guff as soon as he can be paid for (turn 4.3 on average in validation, every game), the other rocks; Guff's -3 is kept from Forge before turn 5 (with Guff out on turn 3 or 4 Forge spent it the turn he arrived for one card, six times in the first twelve games under these rules); Silent Arbiter and Promise of Loyalty are held until an opponent has more power on the battlefield than the seat; Chandra, Legacy of Fire's 0 (a card off the library for every loyalty counter Forge chooses to remove) is held under 40 cards in the library; Repeated Reverberation is cast first thing when Chandra, Awakened Inferno or Elspeth is out, and the rules then activate Chandra's +2, Elspeth's -7 with six creatures or her +1, so its two copies land there (times 3 covers Oath of Teferi and The Chain Veil); Gideon Jura's 0 before combat every turn; the planeswalkers in a fixed order with Jaya's Phoenix, Ajani and Leori among them and Deploy the Gatewatch; Oath of Teferi with Guff out; The Chain Veil once eight mana are available, used after the turn's casts when four mana are left, after which Forge activates its planeswalkers again; then the creatures and the last rocks. The Gatewatch Beacon's and Jaya's Phoenix's optional triggers are accepted (Forge declined no optional trigger in any traced game). Every other loyalty ability stays Forge's: an activate rule does drive a loyalty ability (named by a piece of its text), but a condition can neither read loyalty nor count planeswalkers, so a minus ability cannot be timed by rule unless its cost is the guard (Elspeth's -7). Attack: go-wide at the highest life with the split. Goldfish, 40 validation seeds not looked at before the rules were final (2701-2740): stock 13.07 turns, this file 10.65, 2.42 turns faster on the 40 seeds both finish (95% +1.57 to +3.28; faster in 32, the same in 4, slower in 4). The hold on Chandra's 0 was added after the validation games had been seen: with the same cast rules under Forge's own attack one validation game was lost on turn 11 to an empty library (Forge took a counter off every planeswalker twice a turn under Oath of Teferi, 31 and 24 cards in its last two turns; stock itself ended one validation game with 12 cards left). The 40 games of this file replay with the same kill turn on every seed with the hold in, so the number above is not moved by it. The same cast rules with Forge's own attack (planeswalker-party-guff-forgeattack.json): 11.32 turns, 1.75 faster than stock (95% +0.89 to +2.61), so about 1.7 turns of the gain are the cast rules and 0.7 the attack. On the 12 audit seeds the rules were written on: stock 12.67, the last tuning version 10.00. Tried and dropped: Forge of Heroes at Guff the turn he arrives (never fired), cheap engines first until turn 5 (fired once), a rule for Mobilized District (stock uses it), and keeping loyalty abilities for the second main phase so that Jaya's Phoenix and Leori copy them (the same kill turn on all 12 audit seeds). A goldfish table flatters this deck: nobody attacks its planeswalkers, 81% of the damage is combat damage that no one blocks, 19% of all damage by Wizard tokens alone. Not played at tables.",
+  "on": "2026-11-11"
+ }
+}

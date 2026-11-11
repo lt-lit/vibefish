@@ -1,0 +1,253 @@
+{
+ "schema": 1,
+ "deck": "food-and-fellowship",
+ "variant": "eat",
+ "of": "playbook/precons/food-and-fellowship.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file. Goldfish only so far: not played at tables.",
+ "playbook": {
+  "version": 5,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "groups": {
+    "cheap": [
+     "Sol Ring",
+     "Birds of Paradise",
+     "Gilded Goose",
+     "Essence Warden",
+     "Arcane Signet",
+     "Prize Pig",
+     "Farseek",
+     "Gollum, Obsessed Stalker",
+     "Pippin, Warden of Isengard",
+     "Prosperous Innkeeper",
+     "Shire Shirriff",
+     "Night's Whisper",
+     "Merry, Warden of Isengard",
+     "Rosie Cotton of South Lane",
+     "The Gaffer",
+     "Rapacious Guest",
+     "Savvy Hunter",
+     "Bilbo, Birthday Celebrant",
+     "Lobelia, Defender of Bag End",
+     "Tireless Provisioner",
+     "Field-Tested Frying Pan",
+     "Of Herbs and Stewed Rabbit",
+     "Mentor of the Meek",
+     "Cultivate",
+     "Chromatic Lantern",
+     "Pristine Talisman",
+     "Commander's Sphere",
+     "Treebeard, Gracious Host",
+     "Mirkwood Bats",
+     "Butterbur, Bree Innkeeper",
+     "Harmonize"
+    ]
+   },
+   "rules": [
+    {
+     "play": [
+      "Sam, Loyal Attendant",
+      "Frodo, Adventurous Hobbit"
+     ]
+    },
+    {
+     "play": [
+      "Banquet Guests"
+     ],
+     "x": "max",
+     "x_min": 4
+    },
+    {
+     "play": [
+      "Feasting Hobbit"
+     ],
+     "when": [
+      "controls Food Token"
+     ]
+    },
+    {
+     "hold": [
+      "Feasting Hobbit"
+     ]
+    },
+    {
+     "activate": [
+      "Food Token"
+     ],
+     "phase": "main1",
+     "when": [
+      "controls Frodo, Adventurous Hobbit",
+      "attackers >= 1",
+      "storm == 0"
+     ]
+    },
+    {
+     "activate": [
+      "Food Token"
+     ],
+     "phase": "main1",
+     "when": [
+      "controls Treebeard, Gracious Host"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Birds of Paradise",
+      "Gilded Goose",
+      "Arcane Signet",
+      "Prize Pig",
+      "Farseek"
+     ],
+     "when": [
+      "turn <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Treebeard, Gracious Host",
+      "Call for Unity",
+      "Gwaihir, Greatest of the Eagles",
+      "Motivated Pony",
+      "Assemble the Entmoot",
+      "Mirkwood Bats",
+      "Sanguine Bond",
+      "Gollum, Obsessed Stalker",
+      "Orchard Strider",
+      "Generous Ent",
+      "Eagles of the North",
+      "Landroval, Horizon Witness",
+      "Harmonize",
+      "Butterbur, Bree Innkeeper",
+      "Merry, Warden of Isengard",
+      "Rosie Cotton of South Lane",
+      "The Gaffer",
+      "Rapacious Guest",
+      "Savvy Hunter",
+      "Tireless Provisioner",
+      "Bilbo, Birthday Celebrant",
+      "Lobelia, Defender of Bag End",
+      "Field-Tested Frying Pan",
+      "Of Herbs and Stewed Rabbit",
+      "Mentor of the Meek",
+      "Cultivate",
+      "Chromatic Lantern",
+      "Pristine Talisman",
+      "Commander's Sphere",
+      "Pippin, Warden of Isengard",
+      "Prosperous Innkeeper",
+      "Night's Whisper",
+      "Dawn of Hope",
+      "Shire Shirriff",
+      "Arcane Signet",
+      "Prize Pig",
+      "Farseek",
+      "Essence Warden",
+      "Sol Ring",
+      "Birds of Paradise",
+      "Gilded Goose"
+     ]
+    },
+    {
+     "play": [
+      "Great Oak Guardian"
+     ],
+     "phase": "main1",
+     "when": [
+      "attackers >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Farmer Cotton"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "Banquet Guests"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "Well of Lost Dreams"
+     ],
+     "when": [
+      "lands >= 8"
+     ]
+    },
+    {
+     "hold": [
+      "Well of Lost Dreams"
+     ],
+     "until": [
+      "lands >= 8"
+     ]
+    },
+    {
+     "hold": [
+      "Assemble the Entmoot"
+     ],
+     "ability": "Treefolk"
+    },
+    {
+     "activate": [
+      "Food Token"
+     ],
+     "phase": "main2",
+     "when": [
+      "controls Assemble the Entmoot",
+      "controls Sam, Loyal Attendant"
+     ]
+    },
+    {
+     "activate": [
+      "Assemble the Entmoot"
+     ],
+     "phase": "main2",
+     "when": [
+      "controls Sam, Loyal Attendant",
+      "not controls Food Token"
+     ]
+    },
+    {
+     "hold": [
+      "Savvy Hunter"
+     ],
+     "ability": "Draw a card"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Dawn of Hope"
+    ],
+    "when": [
+     "hand:cheap >= 1",
+     "mana <= 5"
+    ]
+   },
+   {
+    "decline": [
+     "Dawn of Hope"
+    ],
+    "when": [
+     "hand >= 6"
+    ]
+   }
+  ],
+  "notes": "Food and Fellowship (partners Frodo and Sam). Sam makes a Food at every combat and Foods cost {1} to eat while he is out; Frodo's attack makes the Ring tempt whenever three life was gained that turn. Stock Forge never eats a Food on its own turn (none in 52 goldfish games, and Frodo's trigger once), casts Frodo on turn 5.6 and sacrifices Assemble the Entmoot on an opponent's turn for three 0/0 Treefolk. The rules, by position: the commanders as soon as they can be paid for, Sam first (1); Banquet Guests before anything else once X is 4 (2); Feasting Hobbit whenever there is a Food to devour and never without one (3, 4); then, before any other spell of the turn, the Foods are eaten when Frodo is out, so that his attack tempts (5: every Food on the table, the format cannot say one), and at any time with Treebeard out (6); cheap mana in the first four turns (7); the list, engines first and the rest dearest first (8); Great Oak Guardian before an attack of four (9); Farmer Cotton and Banquet Guests for the mana that is left (10, 11); Well of Lost Dreams only from eight lands, because Forge pays three mana for cards on every Food through a number choice no trigger rule is asked about (12, 13); Assemble the Entmoot is kept from Forge and sacrificed after combat once Sam's new Food has been eaten, for three Treefolk of the life gained that turn (14 to 16); Savvy Hunter does not trade two Foods for a card (17). Dawn of Hope's draw is declined while a cheap spell is in hand with five mana or less left, or with six cards in hand. Attack: go-wide at the highest life with the split. Written from twelve stock games (seeds 2301 to 2312), five versions played there: 10.33, 10.17, 10.25, 10.33 and this one 9.92 turns against stock's 12.17. Goldfish on a block not looked at before the rules were final (seeds 2401 to 2440, 40 games each, all finished): 10.30 turns against stock's 11.38, 1.07 turns faster (95% +0.67 to +1.48; faster in 26, the same in 12, slower in 2). There the seat eats 384 Foods, the Ring tempts 5.6 times a game from turn 5.4, and its life on turn 8 is 54 against stock's 42. Tried and dropped: a rule for Lobelia (Forge picks the mode, mostly the free card), Pippin making a Food when there is none (it fired again after the Food was eaten), the Hobbit only after combat (it sat in hand). What the format cannot say: one Food a turn, Frodo as the Ring-bearer (Forge names Sam in half the games, which loses Frodo's card), Lobelia's mode, the X of Well of Lost Dreams. Trading Post and Toxic Deluge (flagged, never cast by Forge) are left uncast. Not played at tables.",
+  "on": "2026-11-11"
+ }
+}

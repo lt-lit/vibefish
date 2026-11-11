@@ -1,0 +1,161 @@
+{
+ "schema": 1,
+ "deck": "planeswalker-party",
+ "variant": "draft",
+ "of": "playbook/precons/planeswalker-party.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Azorius Signet",
+      "Boros Signet",
+      "Fellwar Stone",
+      "Izzet Signet",
+      "Talisman of Conviction",
+      "Talisman of Creativity",
+      "Talisman of Progress",
+      "Gatewatch Beacon",
+      "Honor-Worn Shaku"
+     ]
+    },
+    {
+     "play": [
+      "Commodore Guff"
+     ]
+    },
+    {
+     "play": [
+      "Wayfarer's Bauble",
+      "Jace Beleren",
+      "Jace, Mirror Mage",
+      "Narset, Parter of Veils",
+      "Oath of Gideon",
+      "Oath of Jace",
+      "Saheeli, Sublime Artificer",
+      "Teyo, Geometric Tactician",
+      "Ajani Steadfast",
+      "Chandra, Torch of Defiance",
+      "Jace, Architect of Thought",
+      "Nahiri, the Harbinger",
+      "Narset of the Ancient Way",
+      "The Wanderer",
+      "Chandra, Legacy of Fire",
+      "Gideon Jura",
+      "Norn's Annex",
+      "Sarkhan the Masterless",
+      "Vronos, Masked Inquisitor",
+      "Chandra, Awakened Inferno"
+     ]
+    },
+    {
+     "play": [
+      "Narset, Enlightened Master",
+      "Jaya's Phoenix",
+      "Kazuul, Tyrant of the Cliffs",
+      "Mangara, the Diplomat",
+      "Silent Arbiter",
+      "Flux Channeler",
+      "Leori, Sparktouched Hunter",
+      "Sparkshaper Visionary",
+      "Wall of Denial",
+      "Cartographer's Hawk",
+      "Fog Bank",
+      "Grateful Apparition",
+      "Onakke Oathkeeper",
+      "Oreskos Explorer",
+      "Thrummingbird"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Blasphemous Act",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Deepglow Skate",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Deploy the Gatewatch",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Elspeth, Sun's Champion",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Guff Rewrites History",
+    "why": "instant"
+   },
+   {
+    "card": "Nevinyrral's Disk",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Oath of Teferi",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Path to Exile",
+    "why": "instant"
+   },
+   {
+    "card": "Promise of Loyalty",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Repeated Reverberation",
+    "why": "instant"
+   },
+   {
+    "card": "Semester's End",
+    "why": "instant"
+   },
+   {
+    "card": "Spark Double",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Swords to Plowshares",
+    "why": "instant"
+   },
+   {
+    "card": "The Chain Veil",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Urza's Ruinous Blast",
+    "why": "sweeping or symmetrical"
+   }
+  ],
+  "never_cast_by_forge": [
+   "The Chain Veil"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Gideon Jura",
+   "Oreskos Explorer"
+  ],
+  "optional_triggers": [
+   "Cartographer's Hawk",
+   "Chandra, Legacy of Fire",
+   "Gatewatch Beacon",
+   "Jaya's Phoenix",
+   "Leori, Sparktouched Hunter",
+   "Narset, Enlightened Master",
+   "Oath of Teferi",
+   "The Chain Veil"
+  ]
+ }
+}
