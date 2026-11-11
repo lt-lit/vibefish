@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-11T07:40Z",
-  "note": "Science!: its first candidate playbook (the idle tap abilities and the energy triggers as rules; a third of a turn faster than stock in goldfish) against stock on 200 tables. Waits behind run #11's last shard.",
+  "requested": "2026-11-11T07:45Z",
+  "note": "Two requests in one run. Hail, Caesar: confirming run for its shipped playbook version 3 (the best of four candidates on run #6's tables), stock against playbook on 200 tables it has not seen. Quick Draw: a fifth deck's first playbook (the spell payoffs first, then every cheap spell; two turns faster than stock in goldfish) against stock on 200 tables.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -9,9 +9,14 @@
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
   "runs": [
     {
-      "decks": "science@lab",
+      "decks": "hail-caesar",
       "arms": "stock,playbook",
-      "seed": "20261145"
+      "seed": "20261143"
+    },
+    {
+      "decks": "quick-draw@spells",
+      "arms": "stock,playbook",
+      "seed": "20261144"
     }
   ]
 }

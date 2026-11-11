@@ -8,8 +8,7 @@ name: ab-run
 # runner/queue/ab-run.json, whose fields are the same inputs (a new "requested" value is enough to start the same
 # run again). The queue file may also hold a list, "runs": [{decks, arms, seed, games, ...}, ...]: several requests
 # played as one workflow run, each with its own arms and seed (fields a request leaves out come from the top level),
-# so candidates that pair with different earlier runs do not wait for each other. Runs on one branch queue behind
-# each other; a promotion of `testing` to `main` starts nothing.
+# so candidates that pair with different earlier runs go together. A promotion of `testing` to `main` starts nothing.
 on:
   workflow_dispatch:
     inputs:
@@ -49,8 +48,11 @@ on:
 permissions:
   contents: read
 
+# Runs do not wait for each other: every request starts when it is pushed, and GitHub's own limit on concurrent
+# jobs is what paces them. (Until 2026-11-11 they queued per branch, one running and one waiting, and one slow last
+# shard held up everything behind it.)
 concurrency:
-  group: ab-run-${{ github.ref }}
+  group: ab-run-${{ github.run_id }}
   cancel-in-progress: false
 
 jobs:
