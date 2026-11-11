@@ -40,6 +40,7 @@ runner/goldfish.sh /abs/path/Deck.dck -n 100 -s 7000 -i gs-playbook -P playbook/
 runner/hands.py compare results/gs-stock results/gs-playbook [--out pair.json]   # paired kill turns of two goldfish runs on the same seeds
 runner/hands.py held results/<run-id> [--deck ID] [--arm ARM]   # the cards a seat kept in hand with the mana for them unspent; mana left unspent per turn
 runner/hands.py game results/<run-id>/shard-1/games/game-005.events.jsonl [--deck ID]   # one game turn by turn for one seat: hand, casts with targets, abilities, attacks
+runner/hands.py abilities results/<run-id> [--deck ID] [--arm ARM] --runtime forge/runtime-snapshot   # the deck's permanents with an activated ability: turns on the battlefield and times used (the zeros are where an activate rule comes from)
 runner/status.py --port 8787                           # live progress page for runs in results/ (ETA, per-shard pace, interim wins by arm); dev tool, nothing written
 runner/playstyle.py results/<run-id> [--by-profile]    # how the seats played, from the event logs: attack frequency/targets, combat damage per turn, mana use, closing speed; an ab.py run dir splits each arm into focus seat and opponents
 runner/league.py schedule --seed 20261109 --cycles 25  # the precon league schedule: 91 precons, 22 tables a round, 2200 games, every deck in every seat once a cycle

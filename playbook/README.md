@@ -174,6 +174,7 @@ runner/goldfish.sh "$PRECONS/Goblin Storm [SLD] [2026].dck" -n 100 -s 7000 -i gs
 runner/hands.py compare results/gs-stock results/gs-playbook      # kill turn by run, paired difference on the same seeds
 runner/hands.py held results/gs-stock                             # the cards the seat sat on with the mana for them unspent
 runner/hands.py game results/gs-playbook/shard-1/games/game-005.events.jsonl    # one game turn by turn: read the slow ones
+runner/hands.py abilities results/gs-stock --runtime forge/runtime-snapshot         # activated abilities the seat had in play and how often it used them
 runner/ab.py play --deck goblin-storm --arms stock,playbook --opponents 1 --games 60 ...   # duels: blockers, removal and the race, ten seconds a game
 runner/ab.py play --deck goblin-storm --arms stock,playbook ...   # then the same deck at real tables
 ```

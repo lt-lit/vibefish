@@ -9,6 +9,11 @@
       over all games of the runs: how much of its mana the seat left unspent, and the cards it kept in
       hand on turns when the unspent mana would have paid for them.
 
+  runner/hands.py abilities RESULTS_DIR... [--deck ID] [--arm ARM] [--runtime forge/runtime-snapshot]
+      the deck's permanents that have an activated ability (mana abilities aside, read from Forge's card
+      scripts): the turns each spent on the seat's battlefield and how often the ability was used. The
+      ones at zero are where an activate rule comes from.
+
   runner/hands.py compare RESULTS_A RESULTS_B [--deck ID] [--out FILE.json]
       two goldfish runs of one deck on the same seeds (runner/goldfish.sh with and without -P): kill
       turn by run, and the paired difference with its 95% interval. --out keeps the comparison as a
@@ -22,7 +27,7 @@ Mana is approximate, as in playstyle.py: lands in play (with the turn's land dro
 value of the spells cast that turn. Rituals, mana rocks, Treasures, cost reducers, activated abilities,
 X and colour are not counted, so "unspent" is an upper bound for a deck with other mana sinks, and a
 card counts as kept only when it was in hand at the start of two consecutive turns of the seat."""
-import argparse, collections, datetime, glob, gzip, json, math, os, signal, statistics as st, sys
+import argparse, collections, datetime, glob, gzip, json, math, os, re, signal, statistics as st, sys
 
 
 def open_events(path):
@@ -187,6 +192,62 @@ def cmd_held(args):
         print(f"{h:>5} {seen[c]:>8}  {cmc_of[c]:>2}  {c}")
 
 
+# ------------------------------------------------------------------------------------------- abilities
+
+ACTIVATION = re.compile(r'^[^.]{1,90}?: ')     # "cost: effect" at the start of the text; a trigger's text starts with When/Whenever/At
+
+
+def activated_abilities(card):
+    """Short descriptions of a card's activated abilities that are not mana abilities, from its Forge script."""
+    out = []
+    for line in card['abilities']:
+        if not line.startswith('A:AB$') or re.match(r'A:AB\$ Mana(Reflected)? ', line):
+            continue
+        m = re.search(r'SpellDescription\$ ([^|]*)', line)
+        cost = re.search(r'Cost\$ ([^|]*)', line)
+        out.append(((cost.group(1).strip() + ': ') if cost else '') + (m.group(1).strip() if m else line[5:40]))
+    for k in card['keywords']:
+        if k.split(':')[0] in ('Equip', 'Crew', 'Outlast', 'Level up', 'Fortify', 'Reconfigure'):
+            out.append(k.replace(':', ' '))
+    return out
+
+
+def cmd_abilities(args):
+    """The seat's permanents that have an activated ability: own turns on the battlefield, and how often it was used."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import deckdata
+    scripts = deckdata.CardScripts(args.runtime)
+    known = {}
+    turns_on = collections.Counter(); used = collections.Counter(); games = 0
+    for rd in args.runs:
+        for run, seat, g, path, _arm in games_of(rd, args.deck, args.arm):
+            games += 1
+            for c in run['decks'][seat]['cards'] + run['decks'][seat].get('commander_cards', []):
+                if c['name'] not in known:
+                    card = scripts.get(c['name'])
+                    known[c['name']] = activated_abilities(card) if card else []
+            on = {}
+            for e in read_events(path):
+                if e['e'] == 'zone' and e.get('seat') == seat and not e.get('token'):
+                    if e.get('to') == 'Battlefield':
+                        on[e['id']] = e['card']
+                    elif e.get('from') == 'Battlefield':
+                        on.pop(e['id'], None)
+                elif e['e'] == 'turn' and e['seat'] == seat:
+                    for name in on.values():
+                        if known.get(name):
+                            turns_on[name] += 1
+                elif (e['e'] == 'cast' and e.get('seat') == seat and not e.get('spell') and e.get('from') == 'Battlefield'
+                      and ACTIVATION.match(e.get('ability') or '')):
+                    used[e['card']] += 1
+    if not games:
+        sys.exit('no games found (check the directory, --deck and --arm)')
+    print(f"{games} games. Permanents of the deck with an activated ability (mana abilities aside): own turns on the battlefield, times used\n")
+    print(f"{'turns':>6} {'used':>5}  card: ability")
+    for name in sorted(turns_on, key=lambda n: (used[n] / turns_on[n], -turns_on[n])):
+        print(f"{turns_on[name]:>6} {used[name]:>5}  {name}: {' / '.join(a[:70] for a in known[name])[:150]}")
+
+
 # ------------------------------------------------------------------------------------------- compare
 
 def kill_turns(rd, deck, meta=None):
@@ -265,9 +326,11 @@ def main():
     g = sub.add_parser('game'); g.add_argument('events'); g.add_argument('--deck'); g.add_argument('--seat', type=int)
     h = sub.add_parser('held'); h.add_argument('runs', nargs='+', metavar='RESULTS_DIR'); h.add_argument('--deck'); h.add_argument('--arm')
     h.add_argument('--from-turn', type=int, default=3); h.add_argument('--top', type=int, default=30)
+    a = sub.add_parser('abilities'); a.add_argument('runs', nargs='+', metavar='RESULTS_DIR'); a.add_argument('--deck'); a.add_argument('--arm')
+    a.add_argument('--runtime', default=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'forge', 'runtime-snapshot'))
     c = sub.add_parser('compare'); c.add_argument('a'); c.add_argument('b'); c.add_argument('--deck'); c.add_argument('--out')
     args = ap.parse_args()
-    {'game': cmd_game, 'held': cmd_held, 'compare': cmd_compare}[args.cmd](args)
+    {'game': cmd_game, 'held': cmd_held, 'abilities': cmd_abilities, 'compare': cmd_compare}[args.cmd](args)
 
 
 if __name__ == '__main__':

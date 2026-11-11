@@ -1,0 +1,184 @@
+{
+ "schema": 1,
+ "deck": "tinker-time",
+ "variant": "draft",
+ "of": "playbook/precons/tinker-time.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Gilded Goose",
+      "Sol Ring",
+      "Arcane Signet",
+      "Fractured Powerstone",
+      "Gruul Signet",
+      "Izzet Signet",
+      "Simic Signet",
+      "Replicating Ring",
+      "Skyclave Relic",
+      "Path of the Animist"
+     ]
+    },
+    {
+     "play": [
+      "Gimbal, Gremlin Prodigy"
+     ]
+    },
+    {
+     "play": [
+      "Combine Chrysalis",
+      "Ghirapur Aether Grid",
+      "Inspiring Statuary",
+      "Saheeli, Sublime Artificer",
+      "Ichor Elixir",
+      "Thopter Spy Network",
+      "Aid from the Cowl"
+     ]
+    },
+    {
+     "play": [
+      "Brass's Bounty",
+      "Hellkite Igniter",
+      "Workshop Elders",
+      "Sharding Sphinx",
+      "Shimmer Dragon",
+      "Thopter Assembly",
+      "Cutthroat Negotiator",
+      "Everquill Phoenix",
+      "Pia and Kiran Nalaar",
+      "Rashmi and Ragavan",
+      "Sandsteppe War Riders",
+      "Schema Thief",
+      "Vedalken Humiliator",
+      "Whirler Rogue",
+      "Academy Manufactor",
+      "Feldon of the Third Path",
+      "Master of Etherium",
+      "Pain Distributor",
+      "Tireless Provisioner",
+      "Tireless Tracker"
+     ]
+    },
+    {
+     "play": [
+      "Reverse Engineer",
+      "Thoughtcast"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Bloodforged Battle-Axe",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Chaos Warp",
+    "why": "instant"
+   },
+   {
+    "card": "Crack Open",
+    "why": "aimed"
+   },
+   {
+    "card": "Curse of Opulence",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Echo Storm",
+    "why": "aimed"
+   },
+   {
+    "card": "Fiery Confluence",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Hedron Detonator",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Imprisoned in the Moon",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Junk Winder",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Masterful Replication",
+    "why": "instant"
+   },
+   {
+    "card": "Perplexing Test",
+    "why": "instant"
+   },
+   {
+    "card": "Reality Shift",
+    "why": "instant"
+   },
+   {
+    "card": "Rise and Shine",
+    "why": "aimed"
+   },
+   {
+    "card": "Root Out",
+    "why": "aimed"
+   },
+   {
+    "card": "Saheeli's Artistry",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Spell Swindle",
+    "why": "instant"
+   },
+   {
+    "card": "Spine of Ish Sah",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Stroke of Genius",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Struggle // Survive",
+    "why": "instant"
+   },
+   {
+    "card": "Vampires' Vengeance",
+    "why": "instant"
+   },
+   {
+    "card": "Weirding Wood",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Dance with Calamity",
+    "why": "sorcery of no drafted kind"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Masterful Replication"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Aid from the Cowl",
+   "Echo Storm",
+   "Hedron Detonator",
+   "Rashmi and Ragavan",
+   "Sharding Sphinx",
+   "Workshop Elders"
+  ]
+ }
+}
