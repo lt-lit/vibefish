@@ -1,0 +1,183 @@
+{
+ "schema": 1,
+ "deck": "counter-intelligence",
+ "variant": "draft",
+ "of": "playbook/precons/counter-intelligence.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Solar Array"
+     ]
+    },
+    {
+     "play": [
+      "Inspirit, Flagship Vessel"
+     ]
+    },
+    {
+     "play": [
+      "Moxite Refinery",
+      "Cloud Key",
+      "Golem Foundry",
+      "Insight Engine",
+      "Long-Range Sensor",
+      "Resourceful Defense",
+      "Titan Forge",
+      "Uthros Research Craft",
+      "Darksteel Reactor",
+      "Empowered Autogenerator",
+      "Lux Artillery",
+      "Lux Cannon"
+     ]
+    },
+    {
+     "play": [
+      "Thought Monitor",
+      "Threefold Thunderhulk",
+      "Cyberdrive Awakener",
+      "Kappa Cannoneer",
+      "Alibou, Ancient Witness",
+      "Crystalline Crawler",
+      "Jhoira, Weatherlight Captain",
+      "Mindless Automaton",
+      "Phyrexian Metamorph",
+      "Tekuthal, Inquiry Dominus",
+      "Chrome Host Seedshark",
+      "Emry, Lurker of the Loch",
+      "Kilo, Apogee Mind",
+      "Patrolling Peacemaker",
+      "Surge Conductor",
+      "Coretapper",
+      "Enthusiastic Mechanaut",
+      "Etherium Sculptor",
+      "Steel Overseer",
+      "Thrummingbird"
+     ]
+    },
+    {
+     "play": [
+      "Tezzeret's Gambit"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Gavel of the Righteous",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Astral Cornucopia",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Pentad Prism",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Everflowing Chalice",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Soul-Guide Lantern",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Depthshaker Titan",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Angel of the Ruins",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Deepglow Skate",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Hangarback Walker",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Etched Oracle",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Swan Song",
+    "why": "instant"
+   },
+   {
+    "card": "Chaos Warp",
+    "why": "instant"
+   },
+   {
+    "card": "Pull from Tomorrow",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Ripples of Potential",
+    "why": "instant"
+   },
+   {
+    "card": "Swords to Plowshares",
+    "why": "instant"
+   },
+   {
+    "card": "Thirst for Knowledge",
+    "why": "instant"
+   },
+   {
+    "card": "Dispatch",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Experimental Augury",
+    "why": "instant"
+   },
+   {
+    "card": "Fumigate",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Organic Extinction",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Universal Surveillance",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Chain Reaction",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Wake the Past",
+    "why": "sweeping or symmetrical"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Swan Song",
+   "Dispatch"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Darksteel Reactor",
+   "Golem Foundry",
+   "Emry, Lurker of the Loch"
+  ]
+ }
+}
