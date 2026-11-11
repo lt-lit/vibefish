@@ -1,0 +1,121 @@
+name: forge-archive
+
+# A durable copy of the Forge runtimes that published runs depend on. Forge's `daily-snapshots` release keeps one
+# day's tarball, so a snapshot build can be fetched from upstream only on the day it was built; after that the only
+# copy is the Actions cache, which GitHub drops after a week without use. This workflow takes a build's runtime as
+# forge/fetch-forge.sh assembled it (from the cache, or from upstream while the tarball is still there), packs it
+# and attaches it to this repository's release `forge-runtimes`, where forge/fetch-forge.sh finds it again by name
+# and checksum (forge/SHA256SUMS). Forge is GPL v3: each archive carries Forge's LICENSE.txt and build.txt, and the
+# release notes say where the source is.
+#
+# Start it with Run workflow, or by a push to `testing` that changes runner/queue/forge-archive.json
+# ({"requested": "...", "builds": "2.0.16-SNAPSHOT-11.10,2.0.16-SNAPSHOT-11.08"}). It commits nothing: the checksum
+# it prints (and uploads next to the archive) is added to forge/SHA256SUMS by hand, which is what switches
+# forge/fetch-forge.sh over to the archive.
+on:
+  workflow_dispatch:
+    inputs:
+      builds:
+        description: "Snapshot builds to archive, comma-separated (e.g. 2.0.16-SNAPSHOT-11.10)"
+        required: true
+  push:
+    branches: [testing]
+    paths: [runner/queue/forge-archive.json]
+
+permissions:
+  contents: write
+
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.vals.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: vals
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_BUILDS: ${{ inputs.builds }}
+        run: |
+          python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
+          import json, os, re
+          builds = os.environ.get("IN_BUILDS", "")
+          if os.environ["EVENT"] == "push":
+              builds = str(json.load(open("runner/queue/forge-archive.json")).get("builds", ""))
+          names = [b.strip() for b in builds.split(",") if b.strip()]
+          bad = [b for b in names if not re.fullmatch(r"[0-9.]+-SNAPSHOT-[0-9]{2}\.[0-9]{2}", b)]
+          if bad or not names:
+              raise SystemExit(f"builds must look like 2.0.16-SNAPSHOT-11.10 (got {builds!r})")
+          print("matrix=" + json.dumps(names))
+          PY
+
+  archive:
+    needs: prep
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1          # one release, uploaded to in turn
+      matrix:
+        build: ${{ fromJSON(needs.prep.outputs.matrix) }}
+    env:
+      FORGE_CHANNEL: snapshot
+      FORGE_SNAPSHOT_BUILD: ${{ matrix.build }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Runtime from the Actions cache
+        uses: actions/cache/restore@v4
+        with:
+          path: forge/runtime
+          key: forge-runtime-${{ runner.os }}-snapshot-${{ matrix.build }}-${{ hashFiles('forge/VERSION', 'forge/SHA256SUMS', 'forge/fetch-forge.sh') }}
+          restore-keys: |
+            forge-runtime-${{ runner.os }}-snapshot-${{ matrix.build }}-
+      - name: Or from upstream, while the tarball is still there
+        run: forge/fetch-forge.sh
+      - name: Pack
+        id: pack
+        run: |
+          set -euo pipefail
+          stamp=$(head -1 forge/runtime/VIBEFISH_FORGE_VERSION)
+          name="forge-runtime-${stamp}.tar.gz"
+          # The runtime as forge/fetch-forge.sh assembles it, without what Forge wrote into its profile while running.
+          tar -C forge --sort=name --owner=0 --group=0 --numeric-owner --exclude='runtime/profile/*' -czf "$name" runtime
+          sha256sum "$name" | tee "$name.sha256"
+          {
+            echo "archive:        $name"
+            echo "sha256:         $(cut -d' ' -f1 "$name.sha256")"
+            echo "forge build:    ${{ matrix.build }} (runtime stamp $stamp)"
+            echo "build.txt:      $(tr -d '\r' < forge/runtime/build.txt | head -1)"
+            echo "upstream sha256 of the installer tarball it was assembled from: $(sed -n 3p forge/runtime/VIBEFISH_FORGE_VERSION)"
+            echo "source:         https://github.com/Card-Forge/forge (GPL v3), branch master as of the build time above"
+          } | tee "forge-runtime-${stamp}.info.txt"
+          ls -la "$name"
+          { echo "name=$name"; echo "stamp=$stamp"; } >> "$GITHUB_OUTPUT"
+      - name: Attach to the release forge-runtimes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          name="${{ steps.pack.outputs.name }}"
+          stamp="${{ steps.pack.outputs.stamp }}"
+          cat > notes.md <<'NOTES'
+          Archived Forge runtimes: the trimmed headless runtime that `forge/fetch-forge.sh` assembles from a Forge build, kept
+          here because published Vibefish runs depend on it and Forge's `daily-snapshots` release keeps a build for one day.
+          `forge/fetch-forge.sh` downloads an archive from here when `forge/SHA256SUMS` lists it.
+
+          Forge is free software under the GNU General Public License v3: https://github.com/Card-Forge/forge. These are
+          Forge's own builds, unmodified apart from the removal of files headless play does not need (the list is in
+          `forge/fetch-forge.sh`). Each archive carries Forge's `LICENSE.txt` and `build.txt` (the build time), and the
+          `.info.txt` beside it names the build; the corresponding source is the `master` branch of
+          https://github.com/Card-Forge/forge as of that time.
+
+          Not a Vibefish release. Vibefish is unofficial Fan Content permitted under the Fan Content Policy. Not
+          approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast.
+          ©Wizards of the Coast LLC.
+          NOTES
+          if gh release view forge-runtimes >/dev/null 2>&1; then
+            gh release edit forge-runtimes --notes-file notes.md
+          else
+            gh release create forge-runtimes --title "Forge runtimes (archived builds)" --notes-file notes.md --prerelease --target "${{ github.sha }}"
+          fi
+          gh release upload forge-runtimes "$name" "$name.sha256" "forge-runtime-${stamp}.info.txt" --clobber
+          gh release view forge-runtimes --json assets --jq '.assets[] | "\(.name) \(.size)"'
