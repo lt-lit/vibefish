@@ -17,3 +17,9 @@ the lowest life; `seeds-9001-9100-as-shipped.json` is the untouched block again 
 life, the playbook file as it ships (DESIGN.md §21 has why). The stock runs of the last two were played before
 the harness version stamp moved to 0.3.0 (they say 0.2.0); nothing that changed since touches a seat without a
 playbook.
+
+`2026-11-11/`: the three other first bots, stock against the candidate playbook each went to the tables with (DESIGN.md
+§22), snapshot 2026-11-10, 40 games a run: Hail, Caesar (`playbook/variants/hail-caesar-caesar-any.json`: cast rules, pressure
+attack, Caesar's attack trigger accepted every time; 10.10 turns against 12.47), Token Triumph
+(`token-triumph-cast.json`; 9.05 against 10.38), Tricky Terrain (`tricky-terrain-lands.json`, version 3; 10.64 against 13.39, with
+seven stock games and one playbook game cut off by the clock).
