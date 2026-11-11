@@ -137,7 +137,9 @@ public final class Playbook {
      * the spell is aimed at that permanent of ours, without it Forge picks the targets of a spell that needs any; a
      * card that returns to hand (buyback) is cast at most {@code times} a turn by the rule.
      * {@code activate}: the same for an activated ability of a listed permanent of ours ({@code ability}: a piece of
-     * its text, when the card has several), at most {@code times} a turn for each permanent. {@code hold}: Forge's
+     * its text, when the card has several), at most {@code times} a turn for each permanent. A play or activate rule
+     * marked {@code before_land} is also tried before the turn's land is played, when a land could still be played,
+     * which is how a landfall deck says "the payoff first, then the land". {@code hold}: Forge's
      * own AI may not cast the listed cards, nor use the activated abilities of the listed permanents of ours (all of
      * them, or the one {@code ability} quotes), until every {@code until} condition holds (never, with no
      * {@code until}); a card named by several hold rules is released as soon as one of them is, and a play or
@@ -151,6 +153,7 @@ public final class Playbook {
         public final int times;             // play: casts of one card name a turn; activate: per permanent a turn (default 1)
         public final List<Cond> when;       // play, activate: when; hold: until
         public final String phase;          // play, activate: main (either main phase) | main1 | main2
+        public final boolean beforeLand;    // play, activate: tried before the turn's land is played (landfall first)
         public final int index;             // 1-based position in the file, for the counters
 
         CastRule(JsonObject o, int index) {
@@ -177,6 +180,7 @@ public final class Playbook {
             ability = "play".equals(kind) ? null : str(o, "ability", null);
             times = num(o, "times", 1);
             phase = hold ? null : str(o, "phase", "main");
+            beforeLand = !hold && o.has("before_land") && o.get("before_land").isJsonPrimitive() && o.get("before_land").getAsBoolean();
             if (!hold && !List.of("main", "main1", "main2").contains(phase)) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1 or main2");
             }
@@ -212,6 +216,7 @@ public final class Playbook {
         public final int maxPerTurn;        // plays by rule in one turn before Forge takes over (runaway guard)
         public final java.util.Map<String, List<String>> groups;   // named lists of cards, for hand:<group> conditions
         public final JsonObject source;     // as written, recorded in run.json
+        public final boolean hasBeforeLand; // some rule is tried before the land drop
 
         Cast(JsonObject o) {
             source = o;
@@ -232,6 +237,11 @@ public final class Playbook {
                 }
             }
             rules = Collections.unmodifiableList(list);
+            boolean early = false;
+            for (CastRule rule : rules) {
+                early |= rule.beforeLand;
+            }
+            hasBeforeLand = early;
             for (CastRule rule : rules) {
                 for (Cond c : rule.when) {
                     if (c.group() != null && !groups.containsKey(c.group())) {

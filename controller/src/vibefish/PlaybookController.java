@@ -606,6 +606,24 @@ public class PlaybookController extends PlayerControllerAi {
         boolean asked = false;
         CardCollection lands = ComputerUtilAbility.getAvailableLandsToPlay(game, player);
         if (lands != null && !lands.isEmpty()) {
+            if (cast.hasBeforeLand) {
+                // A landfall deck's payoffs go down before the land that would trigger them.
+                SpellAbility early = null;
+                castRetargeted = false;
+                try {
+                    early = castByRule(cast, ph, true);
+                } catch (RuntimeException e) {
+                    count("cast_errors", 1);
+                }
+                if (early != null) {
+                    count("cast_decisions", 1);
+                    count("cast_policy", 1);
+                    count("cast_before_land", 1);
+                    List<SpellAbility> one = new ArrayList<>();
+                    one.add(early);
+                    return one;
+                }
+            }
             forge = forgeChoice(cast);                  // the land drop first: every rule below wants the mana
             asked = true;
             if (forge != null && !forge.isEmpty() && forge.get(0).isLandAbility()) {
@@ -616,7 +634,7 @@ public class PlaybookController extends PlayerControllerAi {
         SpellAbility pick = null;
         castRetargeted = false;
         try {
-            pick = castByRule(cast, ph);
+            pick = castByRule(cast, ph, false);
         } catch (RuntimeException e) {
             count("cast_errors", 1);
         }
@@ -775,8 +793,8 @@ public class PlaybookController extends PlayerControllerAi {
         return cards;
     }
 
-    /** The first play rule that has something to cast right now, or null. */
-    private SpellAbility castByRule(Playbook.Cast cast, PhaseHandler ph) {
+    /** The first play rule that has something to cast right now, or null; with {@code beforeLandOnly}, among the rules marked before_land. */
+    private SpellAbility castByRule(Playbook.Cast cast, PhaseHandler ph, boolean beforeLandOnly) {
         int turn = ph.getTurn();
         int spells = player.getSpellsCastThisTurn();
         if (turn != castTurn) {
@@ -802,7 +820,7 @@ public class PlaybookController extends PlayerControllerAi {
         }
         List<Card> cards = castable();
         for (Playbook.CastRule rule : cast.rules) {
-            if (rule.isHold() || !phaseFits(rule, ph) || !allHold(rule.when)) {
+            if (rule.isHold() || (beforeLandOnly && !rule.beforeLand) || !phaseFits(rule, ph) || !allHold(rule.when)) {
                 continue;
             }
             Card target = null;
@@ -1103,7 +1121,11 @@ public class PlaybookController extends PlayerControllerAi {
             System.err.println("[vibefish] playbook trigger rule failed, Forge answers: " + e);
         }
         if (rule == null) {
-            return super.confirmTrigger(wrapper);
+            boolean forge = super.confirmTrigger(wrapper);
+            if (TRACE && !forge && !wrapper.isMandatory() && wrapper.getHostCard() != null) {
+                trace("Forge declines the optional trigger of " + wrapper.getHostCard().getName());    // a candidate for a trigger rule
+            }
+            return forge;
         }
         count("trigger_decisions", 1);
         count(rule.accept ? "trigger_accepted" : "trigger_declined", 1);

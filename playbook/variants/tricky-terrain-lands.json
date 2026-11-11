@@ -1,0 +1,97 @@
+{
+ "schema": 1,
+ "deck": "tricky-terrain",
+ "variant": "lands",
+ "of": "playbook/precons/tricky-terrain.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "pressure",
+   "target": "highest_life",
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "damage_per_loss": 3
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Poison Dart Frog",
+      "Growth Spiral",
+      "Chromatic Lantern"
+     ]
+    },
+    {
+     "play": [
+      "Omo, Queen of Vesuva"
+     ]
+    },
+    {
+     "play": [
+      "Dryad of the Ilysian Grove",
+      "Satyr Wayfinder",
+      "Floriferous Vinewall",
+      "Elvish Rejuvenator",
+      "Sylvan Scrying",
+      "Expedition Map"
+     ]
+    },
+    {
+     "activate": [
+      "Expedition Map"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "play": [
+      "Tatyova, Benthic Druid",
+      "Scute Swarm",
+      "Rampaging Baloths",
+      "Avenger of Zendikar",
+      "Seer's Sundial"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Hour of Promise",
+      "Urban Evolution",
+      "Eureka Moment"
+     ]
+    },
+    {
+     "play": [
+      "Apex Devastator",
+      "Mana Reflection",
+      "Hydra Broodmaster",
+      "Ulvenwald Hydra",
+      "Jyoti, Moag Ancient",
+      "Vivien Reid",
+      "Uro, Titan of Nature's Wrath",
+      "Rampant Frogantua",
+      "Sage of the Maze",
+      "Ramunap Excavator",
+      "Wonderscape Sage",
+      "Desert Warfare",
+      "Propaganda",
+      "Copy Land",
+      "Fog Bank"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "First curated candidate, from the draft: the rocks and Growth Spiral, Omo at once (stock Forge casts its three-mana commander around turn six), the cards that find lands, then the landfall payoffs, which go down before the turn's land so the land triggers them (before_land), the ramp sorceries, and the big creatures (stock sits on its six-drops with seven lands). Left to Forge: the X spells (Hydroid Krasis, Finale of Revelation, Aggressive Biomancy, Nissa), Terastodon, Acidic Slime and Skullwinder (aimed as they enter), the instants, Treasure Cruise (delve), and four cards its AI never casts (Curse of the Swine, Beast Within, Summary Dismissal, Oblivion Stone) plus Mirage Mirror and Magus of the Candelabra, which need activations no rule makes yet. Pressure attack, highest life first.",
+  "on": "2026-11-11"
+ }
+}

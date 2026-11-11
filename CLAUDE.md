@@ -53,6 +53,10 @@ controller/vibefish-sim.sh play ... --playbook token-triumph=playbook/precons/to
 runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph --runtime forge/runtime-snapshot -j 2 [--arms stock,data,mc,mcdata,mcmax,mcmaxdata,playbook,playbookdata]
 runner/ab.py rollup results/ab-token-triumph               # paired A/B: same tables with and without the deck's data; ab-run.yml shards it in Actions
 runner/ab.py pool --out pooled.json demo-data/ab/2026-11-09-ab-v1/tricky-terrain.json results/ab-tricky-terrain/rollup.json   # the same deck and arms played with different seeds, as one measurement (kind: ab-pool)
+runner/ab.py play --deck hail-caesar --opponents 1 --games 60 --seed 20261152 --out results/duel-hc --runtime forge/runtime-snapshot -j 2 --arms stock,playbook --data playbook/variants/hail-caesar-caesar-any.json
+                                                       # duels (one opponent, ten seconds a game): the middle instrument; --data with a variant file plays a candidate playbook
+runner/ab.py join --out joined.json --against v2 stock=run5.json:stock v2=run5.json:playbook pressure3=run7.json   # arms of different runs on the same tables (same deck and seed) as one measurement (kind: ab-join)
+runner/playbook.py draft --deck hail-caesar --runtime forge/runtime-snapshot   # a first set of cast rules read off Forge's card scripts -> playbook/variants/<deck>-draft.json (roles: the sorting alone)
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```
@@ -70,7 +74,7 @@ Four `-d` decks in plain mode = one 4-player game (confirmed Phase 0). **Never u
 - `phase0.yml`: Forge sim-mode smoke test on push to `forge/**`, `runner/**`.
 - `pod-run.yml` (manual): 4 shards × N games, rollup, optional publish into `demo-data/` on the branch.
 - `league-run.yml` (manual): the precon league in up to 20 shards (cycles, seed, Forge channel and snapshot build, profile, Monte Carlo as inputs), rollup and scorecard, optional publish of `rollup.json`, `scorecard.json` and `league.json` into `demo-data/` on the branch. Per-game data stays in the run's artifacts.
-- `ab-run.yml` (manual, or by commit): paired A/Bs of per-deck data for a list of decks (tables, arms, shards per deck), one rollup per deck as artifacts; nothing is committed. A push to `testing` that changes `runner/queue/ab-run.json` (the same fields as the inputs; a new `requested` value re-runs the same request) starts it without a click, queued behind any run already going on the branch; promoting to `main` starts nothing.
+- `ab-run.yml` (manual, or by commit): paired A/Bs of per-deck data for a list of decks (tables, arms, shards per deck, `opponents` 1 for duels), one rollup per deck as artifacts; nothing is committed. A deck written `deck@name` plays the candidate playbook `playbook/variants/<deck>-<name>.json`; a candidate run with `arms: playbook` on the seed of an earlier run pairs with that run's stock arm (`ab.py join`). The branch runs one request at a time with at most one waiting, and a newer waiting request replaces an older one, so queue the next only once the last has started. A push to `testing` that changes `runner/queue/ab-run.json` (the same fields as the inputs; a new `requested` value re-runs the same request) starts it without a click, queued behind any run already going on the branch; promoting to `main` starts nothing.
 - Pages: no workflow. The `testing` branch is served as-is; a push there is live within about a minute. Workflows that are `workflow_dispatch`-only (`pod-run.yml`) can only be started once they exist on the default branch.
 
 ## Key links

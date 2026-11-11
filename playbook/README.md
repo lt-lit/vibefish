@@ -106,6 +106,7 @@ Outside the seat's own main phases only the holds apply.
   that needs no choice is cast as it is; one that needs targets or an X is cast only if Forge's own logic for the card
   agrees, since that logic is what picks them.
 - `phase`: `main` (either main phase, the default), `main1` or `main2`.
+- `before_land` (play, activate): `true` tries the rule before the turn's land is played as well, while a land can still be played. The rules otherwise run after the land drop, since they all want the mana; a landfall deck wants its payoffs down first so the land triggers them (`{"play": ["Tatyova, Benthic Druid", "Scute Swarm"], "before_land": true}`). Counter: `cast_before_land`.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:
   `"<metric> <op> <number>"` with `>= <= > < == !=`, `"<metric> <op> <metric>"` (`"opp_power > power"`), or
   `"controls <card name>"` / `"not controls <card name>"` (a permanent of ours on the battlefield).
@@ -163,16 +164,26 @@ recorded in `run.json` under `decks[].playbook.triggers`.
 
 ### Writing one
 
-The loop is goldfish first, tables second (DESIGN.md §21):
+The loop is goldfish first, then duels, then tables (DESIGN.md §21, §22):
 
 ```
+runner/playbook.py draft --deck goblin-storm --runtime forge/runtime-snapshot    # a first set of cast rules from Forge's card scripts -> variants/goblin-storm-draft.json
 runner/goldfish.sh "$PRECONS/Goblin Storm [SLD] [2026].dck" -n 100 -s 7000 -i gs-stock                                   # stock AI
 runner/goldfish.sh "$PRECONS/Goblin Storm [SLD] [2026].dck" -n 100 -s 7000 -i gs-playbook -P playbook/precons/goblin-storm.json
 runner/hands.py compare results/gs-stock results/gs-playbook      # kill turn by run, paired difference on the same seeds
 runner/hands.py held results/gs-stock                             # the cards the seat sat on with the mana for them unspent
 runner/hands.py game results/gs-playbook/shard-1/games/game-005.events.jsonl    # one game turn by turn: read the slow ones
+runner/ab.py play --deck goblin-storm --arms stock,playbook --opponents 1 --games 60 ...   # duels: blockers, removal and the race, ten seconds a game
 runner/ab.py play --deck goblin-storm --arms stock,playbook ...   # then the same deck at real tables
 ```
+
+`runner/playbook.py draft` sorts the deck's cards by what their scripts say they are (mana, the commander, team pumps,
+engines, creatures, card draw) and writes the cast rules every playbook here began with, as a variant file; it lists
+what it left to Forge and why, the cards Forge's AI will never cast by itself, and the deck's optional triggers.
+`runner/playbook.py roles --deck ID` prints the sorting alone. A draft is a starting point: the deck's own lines (what
+its commander wants, what to hold for which moment, which trigger to take) are written by reading its slow games.
+With `FORGE_JAVA_OPTS=-Dvibefish.trace=true` the shard log also names every optional trigger Forge's AI turned down
+on the playbook seat, which is where a trigger rule comes from.
 
 Goldfish measures whether the seat runs its own deck (what it casts, in what order, how fast it kills three opponents
 that do nothing); it says nothing about blocking, removal or being attacked, which is what the tables are for.
@@ -184,4 +195,8 @@ Candidate playbooks that are not the deck's shipped one: `variants/<deck>-<name>
 says what it is a variant of). `runner/ab.py --data playbook/variants/<deck>-<name>.json` plays one locally, and the
 `ab-run` workflow takes `deck@name` in its deck list, so several candidates can be measured side by side on the same
 tables before one of them replaces the playbook in `precons/`. A variant carries no deck data: the data arms need the
-deck's own file.
+deck's own file. `<deck>-draft.json` is the output of `runner/playbook.py draft`.
+
+A candidate needs only its own arm when the tables have been played before: run it with `--arms playbook` on the seed
+of an earlier run, and `runner/ab.py join` lines its games up with that run's stock arm table by table
+(`runner/ab.py join --out joined.json --against v2 stock=run5.json:stock v2=run5.json:playbook pressure=run7.json`).

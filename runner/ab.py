@@ -6,6 +6,7 @@
                       [--data playbook/precons/<deck>.json] [--shards K --shard k] [--limit N] [--dry-run]
     runner/ab.py rollup results/ab-token-triumph
     runner/ab.py pool --out pooled.json results/ab-token-triumph/rollup.json demo-data/ab/2026-11-09-ab-v1/token-triumph.json
+    runner/ab.py join --out joined.json [--against v2] stock=run5/rollup.json:stock v2=run5/rollup.json:playbook pressure=run7/rollup.json
 
 Game i seats the focus deck in seat (i-1) mod 4 with three opponents drawn (seeded) from the rest of the league,
 all stock Forge AI, and plays that table once per arm with the same seed, so the arms differ only in what the
@@ -30,12 +31,17 @@ opponent at all) and the four-player tables (the exam); DESIGN.md §22.
 
 One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games
 are never replayed. The rollup pairs the arms game by game: wins per arm with Wilson intervals, the paired
-difference with a normal-approximation interval, and the discordant pairs. Standard library only.
+difference with a normal-approximation interval, the discordant pairs and an exact two-sided test that they split
+evenly. `pool` adds up the same arms played with different seeds; `join` lines up arms from different runs of the
+same tables (same deck and seed: a later run that played only a candidate's arm against an earlier run's stock
+arm), each under a name given on the command line, every arm paired with the first and with each --against arm
+(kind "ab-join"). Standard library only.
 """
 import argparse
 import collections
 import datetime as dt
 import json
+import math
 import os
 import random
 import statistics
@@ -226,6 +232,15 @@ def sum_stats(dicts):
     return dict(out)
 
 
+def sign_test(a, b):
+    """Two-sided exact test that the discordant pairs split evenly (a tables won only by one arm, b only by the other)."""
+    n = a + b
+    if n == 0:
+        return None
+    probs = [math.comb(n, k) / 2 ** n for k in range(n + 1)]
+    return round(min(1.0, sum(q for q in probs if q <= probs[a] * (1 + 1e-9))), 4)
+
+
 def summarise(arms, per_arm):
     """Per-arm win statistics and the paired comparison of every other arm with the first, over games keyed the same way in each arm."""
     arm_stats = {}
@@ -253,7 +268,7 @@ def summarise(arms, per_arm):
             mean = statistics.fmean(d) if n else None
             se = (statistics.pstdev(d) / (n ** 0.5)) if n > 1 else None
             pairs[f"{arm}_vs_{base}"] = {"pairs": n, "both_won": both, f"{arm}_only": only_arm, f"{base}_only": only_base,
-                                         "neither": n - both - only_arm - only_base,
+                                         "neither": n - both - only_arm - only_base, "exact_p": sign_test(only_arm, only_base),
                                          "difference": round(mean, 4) if mean is not None else None,
                                          "difference_ci95": [round(mean - 1.96 * se, 4), round(mean + 1.96 * se, 4)] if se is not None else None,
                                          "identical_outcomes": sum(1 for i in common if per_arm[arm][i]["turns"] == per_arm[base][i]["turns"] and per_arm[arm][i]["winner_id"] == per_arm[base][i]["winner_id"])}
@@ -270,7 +285,8 @@ def report(deck, forge_version, arm_stats, pairs):
     for k, p in pairs.items():
         ci = p["difference_ci95"] or [0, 0]
         print(f"  {k}: {p['pairs']} pairs, difference {(p['difference'] or 0) * 100:+.1f} points (95% {ci[0] * 100:+.0f} to {ci[1] * 100:+.0f}); "
-              f"discordant {p[k.split('_vs_')[0] + '_only']} vs {p[k.split('_vs_')[1] + '_only']}; identical outcomes {p['identical_outcomes']}", file=sys.stderr)
+              f"discordant {p[k.split('_vs_')[0] + '_only']} vs {p[k.split('_vs_')[1] + '_only']}"
+              + (f" (exact test {p['exact_p']})" if p.get('exact_p') is not None else "") + f"; identical outcomes {p['identical_outcomes']}", file=sys.stderr)
 
 
 def cmd_rollup(args):
@@ -334,6 +350,51 @@ def cmd_pool(args):
     return 0
 
 
+def cmd_join(args):
+    """Arms of several rollups of one deck on the same tables (same seed) as one measurement, each under a name of its own."""
+    per_arm, sources, first = {}, [], None
+    for spec in args.arms:
+        name, _, rest = spec.partition("=")
+        path, _, arm = rest.partition(":")
+        if not name or not path:
+            raise SystemExit(f"{spec}: write NAME=ROLLUP.json[:ARM]")
+        r = lg.load_json(path)
+        arm = arm or (r["arms"][0] if len(r["arms"]) == 1 else "playbook")
+        if arm not in r["games"]:
+            raise SystemExit(f"{path} has no arm {arm} (it has {list(r['games'])})")
+        if first is None:
+            first = r
+        elif (r["deck"], r["seed"], r.get("opponents", 3)) != (first["deck"], first["seed"], first.get("opponents", 3)):
+            raise SystemExit(f"{path}: deck {r['deck']} seed {r['seed']} is not the tables of {first['deck']} seed {first['seed']}")
+        games = {g["index"]: g for g in r["games"][arm]}
+        for other in per_arm.values():                      # the same table index must seat the same decks
+            for i in set(games) & set(other):
+                if games[i]["seats"] != other[i]["seats"]:
+                    raise SystemExit(f"{path}: table {i} seats {games[i]['seats']}, another arm has {other[i]['seats']}")
+        if name in per_arm:
+            raise SystemExit(f"two arms named {name}")
+        per_arm[name] = games
+        sources.append({"arm": name, "from": os.path.basename(os.path.dirname(os.path.abspath(path))) + "/" + os.path.basename(path), "source_arm": arm,
+                        "data_file": r.get("data_file"), "generated": r.get("generated"), "forge_version": r.get("forge_version"), "vibefish": r.get("vibefish")})
+    names = list(per_arm)
+    arm_stats, pairs = summarise(names, per_arm)
+    for base in args.against or []:
+        if base not in per_arm:
+            raise SystemExit(f"--against {base}: no such arm among {names}")
+        _, more = summarise([base] + [n for n in names if n != base and n != names[0]], per_arm)
+        pairs.update(more)
+    versions = sorted({x["forge_version"] for x in sources if x["forge_version"]})
+    result = {"vibefish": rl.VERSION, "generated": lg.now(), "kind": "ab-join", "deck": first["deck"], "deck_file": first.get("deck_file"),
+              "league": first.get("league"), "seed": first["seed"], "opponents": first.get("opponents", 3), "arms": names,
+              "forge_version": versions[0] if len(versions) == 1 else versions, "sources": sources, "note": args.note,
+              "arm_stats": arm_stats, "paired": pairs,
+              "games": {arm: [g for _, g in sorted(gs.items())] for arm, gs in per_arm.items()}}
+    if args.out:
+        lg.dump_json(args.out, result)
+    report(first["deck"], result["forge_version"], arm_stats, pairs)
+    return 0
+
+
 def main(argv):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -363,6 +424,12 @@ def main(argv):
     q.add_argument("rollups", nargs="+", help="rollup.json files of the same deck and arms, different seeds")
     q.add_argument("--out", help="write the pooled rollup here (kind: ab-pool)")
     q.set_defaults(func=cmd_pool)
+    j = sub.add_parser("join")
+    j.add_argument("--out")
+    j.add_argument("--against", action="append", help="also pair the later arms with this one (the first arm is always a base)")
+    j.add_argument("--note")
+    j.add_argument("arms", nargs="+", metavar="NAME=ROLLUP.json[:ARM]")
+    j.set_defaults(func=cmd_join)
     args = ap.parse_args(argv)
     return args.func(args)
 

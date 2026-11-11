@@ -30,3 +30,12 @@ Hail, Caesar under playbooks that hold an attack policy and nothing else, go-wid
 stock and playbook, 200 tables each, seed 20261141, snapshot 2026-11-10): Token Triumph 39 wins against stock's 43, Hail, Caesar 32
 against 34. Whom the seat attacks does not move either deck by itself. The stock arms are the baseline that the cast-rule
 variants of both decks are paired with (same seed, playbook arm only).
+
+`2026-11-11-ab-v5/goblin-storm.json` joins four candidates for Goblin Storm (`ab-run` #7, playbook arm only) with run #5's stock and
+version-2 arms on the same 200 tables (`runner/ab.py join`, kind `ab-join`, DESIGN.md §22): the pressure attack wins 32 (damage per
+loss 3) and 28 (2) where the shipped go-wide attack wins 40; two rules for a lost board on top of pressure, 28; Zada held until she
+can be aimed at, on top of pressure, 39. Every candidate beats stock's 18; none beats the shipped file.
+
+`2026-11-11-local/` are checks on the session's machine, each a join of arms that share one stock arm: Goblin Storm at 40 tables
+under five attack settings and in 60 duels, Token Triumph's three cast-rule candidates in 60 duels, Hail, Caesar's two trigger-rule
+candidates in 60 duels (`runner/ab.py --opponents 1`).
