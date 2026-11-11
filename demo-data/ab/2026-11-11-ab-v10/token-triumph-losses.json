@@ -1,0 +1,1023 @@
+{
+ "kind": "ab-losses",
+ "deck": "token-triumph",
+ "seed": 20261160,
+ "opponents": 3,
+ "forge_version": "snapshot-2026-11-10",
+ "arms": {
+  "playbook": {
+   "games": 200,
+   "wins": 56,
+   "draws": 1,
+   "losses": 144,
+   "game_turns": 44.62,
+   "winner_own_turns": 12.75,
+   "out_first": 73,
+   "out_second": 30,
+   "out_third": 41,
+   "lost_on_game_turn": 40.03,
+   "lost_on_own_turn": 10.38,
+   "last_turn": {
+    "life": 13.75,
+    "lands": 8.01,
+    "permanents": 15.0,
+    "nonland_cards_in_hand": 2.92,
+    "of_them_castable": 2.64,
+    "losses_with_a_castable_card": 0.847
+   },
+   "last_blow": {
+    "damage": 30.63,
+    "top_opponent_share": 0.95,
+    "one_opponent_did_80pct": 0.885
+   },
+   "per_game": {
+    "spells": 14.87,
+    "spells_aimed_at_opponents": 0.9,
+    "attackers_at_seat": 15.36,
+    "own_creatures_lost_on_own_turns": 3.92,
+    "damage_dealt": 62.64,
+    "damage_taken": 54.87,
+    "opponents_killed": 0.78
+   },
+   "blocked_share": 0.164,
+   "games_with_a_mulligan": 0.225,
+   "held_castable": [
+    [
+     "Harvest Season",
+     25
+    ],
+    [
+     "White Sun's Zenith",
+     24
+    ],
+    [
+     "Ajani, Caller of the Pride",
+     17
+    ],
+    [
+     "Overrun",
+     17
+    ],
+    [
+     "Citywide Bust",
+     14
+    ],
+    [
+     "Loyal Guardian",
+     14
+    ],
+    [
+     "March of the Multitudes",
+     13
+    ],
+    [
+     "Scatter the Seeds",
+     13
+    ],
+    [
+     "Sporemound",
+     12
+    ],
+    [
+     "Slate of Ancestry",
+     11
+    ],
+    [
+     "Nissa's Expedition",
+     10
+    ],
+    [
+     "Camaraderie",
+     10
+    ],
+    [
+     "Hour of Reckoning",
+     10
+    ],
+    [
+     "Scavenging Ooze",
+     9
+    ],
+    [
+     "Hornet Nest",
+     9
+    ],
+    [
+     "Aura Mutation",
+     9
+    ],
+    [
+     "Reclamation Sage",
+     8
+    ],
+    [
+     "Harmonize",
+     8
+    ],
+    [
+     "Devouring Light",
+     8
+    ],
+    [
+     "Collective Blessing",
+     7
+    ],
+    [
+     "Citanul Hierophants",
+     6
+    ],
+    [
+     "Commander's Sphere",
+     6
+    ],
+    [
+     "Farhaven Elf",
+     6
+    ],
+    [
+     "Maja, Bretagard Protector",
+     6
+    ],
+    [
+     "Dauntless Escort",
+     6
+    ],
+    [
+     "Eternal Witness",
+     6
+    ],
+    [
+     "Nullmage Shepherd",
+     6
+    ],
+    [
+     "Collective Unconscious",
+     6
+    ],
+    [
+     "Sylvan Reclamation",
+     5
+    ],
+    [
+     "Felidar Retreat",
+     5
+    ],
+    [
+     "Voice of Many",
+     5
+    ],
+    [
+     "Rishkar, Peema Renegade",
+     5
+    ],
+    [
+     "Conclave Tribunal",
+     5
+    ],
+    [
+     "Rootborn Defenses",
+     4
+    ],
+    [
+     "Great Oak Guardian",
+     4
+    ],
+    [
+     "Curse of Bounty",
+     4
+    ],
+    [
+     "Valor in Akros",
+     4
+    ],
+    [
+     "Hornet Queen",
+     4
+    ],
+    [
+     "Overwhelming Instinct",
+     3
+    ],
+    [
+     "Mentor of the Meek",
+     3
+    ],
+    [
+     "Selesnya Guildmage",
+     3
+    ],
+    [
+     "Trostani Discordant",
+     3
+    ],
+    [
+     "Jade Mage",
+     3
+    ],
+    [
+     "Karametra's Favor",
+     3
+    ],
+    [
+     "Champion of Lambholt",
+     3
+    ],
+    [
+     "Verdant Force",
+     3
+    ],
+    [
+     "Presence of Gond",
+     2
+    ],
+    [
+     "Idol of Oblivion",
+     2
+    ],
+    [
+     "Arcane Signet",
+     2
+    ],
+    [
+     "Thunderfoot Baloth",
+     2
+    ],
+    [
+     "Dictate of Heliod",
+     2
+    ],
+    [
+     "Dawn of Hope",
+     1
+    ],
+    [
+     "Commander's Insignia",
+     1
+    ],
+    [
+     "Leafkin Druid",
+     1
+    ],
+    [
+     "Avacyn's Pilgrim",
+     1
+    ],
+    [
+     "Path to Exile",
+     1
+    ]
+   ],
+   "held": [
+    [
+     "Harvest Season",
+     25
+    ],
+    [
+     "White Sun's Zenith",
+     24
+    ],
+    [
+     "Overrun",
+     19
+    ],
+    [
+     "Ajani, Caller of the Pride",
+     17
+    ],
+    [
+     "Citywide Bust",
+     14
+    ],
+    [
+     "Loyal Guardian",
+     14
+    ],
+    [
+     "March of the Multitudes",
+     13
+    ],
+    [
+     "Scatter the Seeds",
+     13
+    ],
+    [
+     "Sporemound",
+     12
+    ],
+    [
+     "Hour of Reckoning",
+     12
+    ],
+    [
+     "Slate of Ancestry",
+     12
+    ],
+    [
+     "Nissa's Expedition",
+     11
+    ],
+    [
+     "Camaraderie",
+     11
+    ],
+    [
+     "Collective Unconscious",
+     11
+    ],
+    [
+     "Verdant Force",
+     10
+    ],
+    [
+     "Collective Blessing",
+     10
+    ],
+    [
+     "Hornet Queen",
+     9
+    ],
+    [
+     "Scavenging Ooze",
+     9
+    ],
+    [
+     "Hornet Nest",
+     9
+    ],
+    [
+     "Aura Mutation",
+     9
+    ],
+    [
+     "Reclamation Sage",
+     8
+    ],
+    [
+     "Harmonize",
+     8
+    ],
+    [
+     "Maja, Bretagard Protector",
+     8
+    ],
+    [
+     "Devouring Light",
+     8
+    ],
+    [
+     "Great Oak Guardian",
+     8
+    ],
+    [
+     "Nullmage Shepherd",
+     7
+    ],
+    [
+     "Sylvan Reclamation",
+     6
+    ],
+    [
+     "Citanul Hierophants",
+     6
+    ],
+    [
+     "Commander's Sphere",
+     6
+    ],
+    [
+     "Farhaven Elf",
+     6
+    ],
+    [
+     "Dauntless Escort",
+     6
+    ],
+    [
+     "Eternal Witness",
+     6
+    ],
+    [
+     "Felidar Retreat",
+     5
+    ],
+    [
+     "Voice of Many",
+     5
+    ],
+    [
+     "Rishkar, Peema Renegade",
+     5
+    ],
+    [
+     "Conclave Tribunal",
+     5
+    ],
+    [
+     "Valor in Akros",
+     5
+    ],
+    [
+     "Rootborn Defenses",
+     4
+    ],
+    [
+     "Curse of Bounty",
+     4
+    ],
+    [
+     "Thunderfoot Baloth",
+     4
+    ],
+    [
+     "Dictate of Heliod",
+     4
+    ],
+    [
+     "Overwhelming Instinct",
+     3
+    ],
+    [
+     "Mentor of the Meek",
+     3
+    ],
+    [
+     "Selesnya Guildmage",
+     3
+    ],
+    [
+     "Trostani Discordant",
+     3
+    ],
+    [
+     "Jade Mage",
+     3
+    ],
+    [
+     "Karametra's Favor",
+     3
+    ],
+    [
+     "Champion of Lambholt",
+     3
+    ],
+    [
+     "Presence of Gond",
+     2
+    ],
+    [
+     "Idol of Oblivion",
+     2
+    ],
+    [
+     "Arcane Signet",
+     2
+    ],
+    [
+     "Dawn of Hope",
+     1
+    ],
+    [
+     "Commander's Insignia",
+     1
+    ],
+    [
+     "Leafkin Druid",
+     1
+    ],
+    [
+     "Avacyn's Pilgrim",
+     1
+    ],
+    [
+     "Path to Exile",
+     1
+    ]
+   ],
+   "aimed_spells": [
+    [
+     "Sylvan Reclamation",
+     48
+    ],
+    [
+     "Aura Mutation",
+     43
+    ],
+    [
+     "Curse of Bounty",
+     42
+    ],
+    [
+     "Path to Exile",
+     25
+    ],
+    [
+     "Devouring Light",
+     22
+    ]
+   ]
+  },
+  "stock": {
+   "games": 200,
+   "wins": 35,
+   "draws": 1,
+   "losses": 164,
+   "game_turns": 46.61,
+   "winner_own_turns": 13.49,
+   "out_first": 73,
+   "out_second": 56,
+   "out_third": 35,
+   "lost_on_game_turn": 41.59,
+   "lost_on_own_turn": 10.84,
+   "last_turn": {
+    "life": 10.91,
+    "lands": 8.43,
+    "permanents": 14.88,
+    "nonland_cards_in_hand": 2.29,
+    "of_them_castable": 1.99,
+    "losses_with_a_castable_card": 0.823
+   },
+   "last_blow": {
+    "damage": 29.94,
+    "top_opponent_share": 0.95,
+    "one_opponent_did_80pct": 0.891
+   },
+   "per_game": {
+    "spells": 13.36,
+    "spells_aimed_at_opponents": 0.86,
+    "attackers_at_seat": 15.93,
+    "own_creatures_lost_on_own_turns": 1.78,
+    "damage_dealt": 48.53,
+    "damage_taken": 52.43,
+    "opponents_killed": 0.58
+   },
+   "blocked_share": 0.192,
+   "games_with_a_mulligan": 0.225,
+   "held_castable": [
+    [
+     "Nullmage Shepherd",
+     27
+    ],
+    [
+     "Slate of Ancestry",
+     25
+    ],
+    [
+     "Harvest Season",
+     25
+    ],
+    [
+     "Dauntless Escort",
+     23
+    ],
+    [
+     "White Sun's Zenith",
+     15
+    ],
+    [
+     "March of the Multitudes",
+     10
+    ],
+    [
+     "Champion of Lambholt",
+     8
+    ],
+    [
+     "Farhaven Elf",
+     8
+    ],
+    [
+     "Citywide Bust",
+     8
+    ],
+    [
+     "Thunderfoot Baloth",
+     7
+    ],
+    [
+     "Commander's Insignia",
+     7
+    ],
+    [
+     "Voice of Many",
+     7
+    ],
+    [
+     "Scatter the Seeds",
+     7
+    ],
+    [
+     "Aura Mutation",
+     7
+    ],
+    [
+     "Overrun",
+     7
+    ],
+    [
+     "Collective Unconscious",
+     7
+    ],
+    [
+     "Felidar Retreat",
+     7
+    ],
+    [
+     "Commander's Sphere",
+     6
+    ],
+    [
+     "Ajani, Caller of the Pride",
+     6
+    ],
+    [
+     "Hornet Nest",
+     6
+    ],
+    [
+     "Overwhelming Instinct",
+     6
+    ],
+    [
+     "Harmonize",
+     6
+    ],
+    [
+     "Valor in Akros",
+     6
+    ],
+    [
+     "Scavenging Ooze",
+     6
+    ],
+    [
+     "Maja, Bretagard Protector",
+     5
+    ],
+    [
+     "Idol of Oblivion",
+     5
+    ],
+    [
+     "Trostani Discordant",
+     5
+    ],
+    [
+     "Hour of Reckoning",
+     5
+    ],
+    [
+     "Dawn of Hope",
+     5
+    ],
+    [
+     "Reclamation Sage",
+     4
+    ],
+    [
+     "Rishkar, Peema Renegade",
+     4
+    ],
+    [
+     "Leafkin Druid",
+     4
+    ],
+    [
+     "Selesnya Guildmage",
+     4
+    ],
+    [
+     "Talisman of Unity",
+     3
+    ],
+    [
+     "Mentor of the Meek",
+     3
+    ],
+    [
+     "Karametra's Favor",
+     3
+    ],
+    [
+     "Sylvan Reclamation",
+     3
+    ],
+    [
+     "Loyal Guardian",
+     3
+    ],
+    [
+     "Presence of Gond",
+     2
+    ],
+    [
+     "Curse of Bounty",
+     2
+    ],
+    [
+     "Conclave Tribunal",
+     2
+    ],
+    [
+     "Rootborn Defenses",
+     2
+    ],
+    [
+     "Arcane Signet",
+     2
+    ],
+    [
+     "Selesnya Evangel",
+     2
+    ],
+    [
+     "Devouring Light",
+     2
+    ],
+    [
+     "Sporemound",
+     2
+    ],
+    [
+     "Jaspera Sentinel",
+     2
+    ],
+    [
+     "Collective Blessing",
+     1
+    ],
+    [
+     "Citanul Hierophants",
+     1
+    ],
+    [
+     "Eternal Witness",
+     1
+    ],
+    [
+     "Emmara, Soul of the Accord",
+     1
+    ],
+    [
+     "Verdant Force",
+     1
+    ],
+    [
+     "Nissa's Expedition",
+     1
+    ]
+   ],
+   "held": [
+    [
+     "Nullmage Shepherd",
+     27
+    ],
+    [
+     "Slate of Ancestry",
+     26
+    ],
+    [
+     "Harvest Season",
+     25
+    ],
+    [
+     "Dauntless Escort",
+     23
+    ],
+    [
+     "Verdant Force",
+     15
+    ],
+    [
+     "White Sun's Zenith",
+     15
+    ],
+    [
+     "March of the Multitudes",
+     10
+    ],
+    [
+     "Overrun",
+     10
+    ],
+    [
+     "Collective Unconscious",
+     10
+    ],
+    [
+     "Hour of Reckoning",
+     9
+    ],
+    [
+     "Thunderfoot Baloth",
+     8
+    ],
+    [
+     "Voice of Many",
+     8
+    ],
+    [
+     "Scatter the Seeds",
+     8
+    ],
+    [
+     "Champion of Lambholt",
+     8
+    ],
+    [
+     "Farhaven Elf",
+     8
+    ],
+    [
+     "Citywide Bust",
+     8
+    ],
+    [
+     "Commander's Insignia",
+     7
+    ],
+    [
+     "Hornet Queen",
+     7
+    ],
+    [
+     "Aura Mutation",
+     7
+    ],
+    [
+     "Felidar Retreat",
+     7
+    ],
+    [
+     "Valor in Akros",
+     7
+    ],
+    [
+     "Maja, Bretagard Protector",
+     6
+    ],
+    [
+     "Commander's Sphere",
+     6
+    ],
+    [
+     "Trostani Discordant",
+     6
+    ],
+    [
+     "Ajani, Caller of the Pride",
+     6
+    ],
+    [
+     "Hornet Nest",
+     6
+    ],
+    [
+     "Overwhelming Instinct",
+     6
+    ],
+    [
+     "Harmonize",
+     6
+    ],
+    [
+     "Scavenging Ooze",
+     6
+    ],
+    [
+     "Idol of Oblivion",
+     5
+    ],
+    [
+     "Dawn of Hope",
+     5
+    ],
+    [
+     "Reclamation Sage",
+     4
+    ],
+    [
+     "Rishkar, Peema Renegade",
+     4
+    ],
+    [
+     "Sporemound",
+     4
+    ],
+    [
+     "Loyal Guardian",
+     4
+    ],
+    [
+     "Leafkin Druid",
+     4
+    ],
+    [
+     "Selesnya Guildmage",
+     4
+    ],
+    [
+     "Collective Blessing",
+     3
+    ],
+    [
+     "Talisman of Unity",
+     3
+    ],
+    [
+     "Camaraderie",
+     3
+    ],
+    [
+     "Mentor of the Meek",
+     3
+    ],
+    [
+     "Karametra's Favor",
+     3
+    ],
+    [
+     "Conclave Tribunal",
+     3
+    ],
+    [
+     "Sylvan Reclamation",
+     3
+    ],
+    [
+     "Presence of Gond",
+     2
+    ],
+    [
+     "Curse of Bounty",
+     2
+    ],
+    [
+     "Rootborn Defenses",
+     2
+    ],
+    [
+     "Arcane Signet",
+     2
+    ],
+    [
+     "Selesnya Evangel",
+     2
+    ],
+    [
+     "Devouring Light",
+     2
+    ],
+    [
+     "Jaspera Sentinel",
+     2
+    ],
+    [
+     "Citanul Hierophants",
+     1
+    ],
+    [
+     "Great Oak Guardian",
+     1
+    ],
+    [
+     "Dictate of Heliod",
+     1
+    ],
+    [
+     "Eternal Witness",
+     1
+    ],
+    [
+     "Emmara, Soul of the Accord",
+     1
+    ],
+    [
+     "Nissa's Expedition",
+     1
+    ]
+   ],
+   "aimed_spells": [
+    [
+     "Curse of Bounty",
+     50
+    ],
+    [
+     "Sylvan Reclamation",
+     39
+    ],
+    [
+     "Aura Mutation",
+     37
+    ],
+    [
+     "Path to Exile",
+     28
+    ],
+    [
+     "Devouring Light",
+     18
+    ]
+   ]
+  }
+ }
+}

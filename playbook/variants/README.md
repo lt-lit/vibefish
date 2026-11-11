@@ -13,7 +13,7 @@ it came from, kept as the record of what was measured.
 | `goblin-storm-pressure3.json` | measured, not shipped | run #5 tables: 32 wins (shipped v2 40, stock 18) |
 | `goblin-storm-table.json` | measured, not shipped | run #5 tables: 28 wins; the lost-board rules cost four wins |
 | `goblin-storm-zadahold.json` | measured, not shipped | run #5 tables: 39 wins; the Zada hold is worth seven on top of pressure |
-| `goblin-storm-zadawide.json` | SHIPPED as goblin-storm version 3 | run #5 tables: 48 wins (v2 40, stock 18); a lean over v2, exact test 0.27 |
+| `goblin-storm-zadawide.json` | SHIPPED as goblin-storm version 3 | run #5 tables: 48 wins (v2 40, stock 18); a lean over v2, exact test 0.27. Confirmed on tables of its own (run #17): 48 against stock's 18 again |
 | `hail-caesar-caesar.json` | goldfish and duels | trigger with a token, pressure: 10.82 turns; 33 of 60 duels (stock 22) |
 | `hail-caesar-caesar-any.json` | measured, not shipped | trigger always, pressure: run #6 tables 45 wins (stock 34) |
 | `hail-caesar-caesar-tok-wide.json` | SHIPPED as hail-caesar version 3 | run #6 tables 51 wins (stock 34); confirmed in a second run of new games, 42 against 27 |
@@ -26,7 +26,7 @@ it came from, kept as the record of what was measured.
 | `science-draft.json` | draft | goldfish 0.23 turns slower than stock |
 | `science-lab.json` | measured, not shipped | goldfish +0.35 turns; 200 tables 15 wins against stock 14 |
 | `tinker-time-draft.json` | draft | goldfish +0.53 turns over stock; nothing more found without opponents |
-| `token-triumph-cast.json` | SHIPPED as token-triumph version 3 | run #6 tables: 67 wins (stock 43) |
+| `token-triumph-cast.json` | SHIPPED as token-triumph version 3 | run #6 tables: 67 wins (stock 43). Confirmed on tables of its own (run #17): 56 against stock's 35 |
 | `token-triumph-cast2.json` | measured, not shipped | 66 wins against the shipped 67: nothing |
 | `token-triumph-castafter.json` | measured, not shipped | 58 wins |
 | `token-triumph-castpressure.json` | measured, not shipped | 60 wins |

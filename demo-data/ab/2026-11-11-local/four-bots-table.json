@@ -1,0 +1,543 @@
+{
+ "kind": "table-pair",
+ "generated": "2026-11-11T18:21:07Z",
+ "about": "One table of the four decks that have a shipped playbook, played on the same seeds twice on a session's machine: every seat stock Forge AI (stock), and every seat under its shipped playbook (bots). A local check of how a table of bots plays, not an A/B of one deck: nothing here is a win rate with an interval worth quoting. DESIGN.md section 23.",
+ "vibefish": "0.3.1",
+ "forge_version": "snapshot-2026-11-10",
+ "forge_build": "2.0.16-SNAPSHOT-11.10",
+ "clock_s": 1800,
+ "turn_cap": 120,
+ "seed_base": 20261180,
+ "seat_order": [
+  "goblin-storm",
+  "token-triumph",
+  "hail-caesar",
+  "tricky-terrain"
+ ],
+ "playbooks": {
+  "goblin-storm": {
+   "file": "playbook/precons/goblin-storm.json",
+   "version": 3
+  },
+  "token-triumph": {
+   "file": "playbook/precons/token-triumph.json",
+   "version": 3
+  },
+  "hail-caesar": {
+   "file": "playbook/precons/hail-caesar.json",
+   "version": 3
+  },
+  "tricky-terrain": {
+   "file": "playbook/precons/tricky-terrain.json",
+   "version": 5
+  }
+ },
+ "games_at_a_time": 2,
+ "command": "controller/vibefish-sim.sh play --deck goblin-storm=... --deck token-triumph=... --deck hail-caesar=... --deck tricky-terrain=... --games 20 --seed 20261180 --clock 1800 --turn-cap 120 [--playbook <id>=playbook/precons/<id>.json for each seat]",
+ "not_played": "stock games 8 to 10 (seeds 20261188 to 20261190): game 8 was stopped by hand at game turn 47 after eleven minutes (one side at 112 permanents, every decision of Forge's AI timing out); the bots arm's second shard (other seat order, seeds from 20361181) was stopped in its first game, Tricky Terrain's Scute Swarm at more than a thousand copies (docs/upstream.md). Stock game 5 ended on the 1800 s clock and game 6 was declared a draw by Forge; both count as games here and as draws.",
+ "rounds": "game turns over four, the scorecard's measure (runner/scorecard.py); winner_own_turns is the winner's own turn count at the end",
+ "stock": {
+  "games": 17,
+  "decided": 15,
+  "draws": 2,
+  "turns_mean": 54.18,
+  "turns_median": 53,
+  "turns_sd": 16.24,
+  "turns_ci95": [
+   46.46,
+   61.9
+  ],
+  "rounds_mean": 13.54,
+  "rounds_ci95": [
+   11.62,
+   15.47
+  ],
+  "rounds_median": 13.25,
+  "winner_own_turns_mean": 16.0,
+  "first_elimination_turn_mean": 42.24,
+  "seconds_mean": 296.7,
+  "seconds_median": 118,
+  "games_at_or_under_9_rounds": 2,
+  "wins": {
+   "goblin-storm": 3,
+   "hail-caesar": 5,
+   "token-triumph": 4,
+   "tricky-terrain": 3
+  },
+  "seat_mulligans_per_game": 1.0
+ },
+ "bots": {
+  "games": 20,
+  "decided": 20,
+  "draws": 0,
+  "turns_mean": 39.0,
+  "turns_median": 36.5,
+  "turns_sd": 7.31,
+  "turns_ci95": [
+   35.8,
+   42.2
+  ],
+  "rounds_mean": 9.75,
+  "rounds_ci95": [
+   8.95,
+   10.55
+  ],
+  "rounds_median": 9.125,
+  "winner_own_turns_mean": 11.05,
+  "first_elimination_turn_mean": 33.15,
+  "seconds_mean": 44.5,
+  "seconds_median": 28.0,
+  "games_at_or_under_9_rounds": 10,
+  "wins": {
+   "goblin-storm": 3,
+   "hail-caesar": 6,
+   "token-triumph": 8,
+   "tricky-terrain": 3
+  },
+  "seat_mulligans_per_game": 0.85
+ },
+ "paired": {
+  "seeds": 17,
+  "stock_turns_mean": 54.18,
+  "bots_turns_mean": 37.94,
+  "difference_turns_mean": 16.24,
+  "difference_turns_ci95": [
+   9.27,
+   23.2
+  ],
+  "bots_shorter": 16,
+  "same": 0,
+  "bots_longer": 1,
+  "same_winner": 6
+ },
+ "games": {
+  "stock": [
+   {
+    "seed": 20261181,
+    "turns": 52,
+    "reason": "AllOpponentsLost",
+    "winner": "goblin-storm",
+    "winner_own_turns": 14,
+    "first_elimination_turn": 46,
+    "seconds": 283,
+    "first_seat": "hail-caesar",
+    "mulligans": 2,
+    "process": "a"
+   },
+   {
+    "seed": 20261182,
+    "turns": 78,
+    "reason": "AllOpponentsLost",
+    "winner": "tricky-terrain",
+    "winner_own_turns": 23,
+    "first_elimination_turn": 62,
+    "seconds": 51,
+    "first_seat": "tricky-terrain",
+    "mulligans": 2,
+    "process": "a"
+   },
+   {
+    "seed": 20261183,
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 11,
+    "first_elimination_turn": 30,
+    "seconds": 142,
+    "first_seat": "goblin-storm",
+    "mulligans": 1,
+    "process": "a"
+   },
+   {
+    "seed": 20261184,
+    "turns": 70,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 21,
+    "first_elimination_turn": 43,
+    "seconds": 60,
+    "first_seat": "goblin-storm",
+    "mulligans": 0,
+    "process": "a"
+   },
+   {
+    "seed": 20261185,
+    "turns": 53,
+    "reason": "Timeout",
+    "winner": null,
+    "winner_own_turns": null,
+    "first_elimination_turn": 46,
+    "seconds": 1800,
+    "first_seat": "token-triumph",
+    "mulligans": 1,
+    "process": "a"
+   },
+   {
+    "seed": 20261186,
+    "turns": 37,
+    "reason": "Draw",
+    "winner": null,
+    "winner_own_turns": null,
+    "first_elimination_turn": 37,
+    "seconds": 784,
+    "first_seat": "tricky-terrain",
+    "mulligans": 0,
+    "process": "a"
+   },
+   {
+    "seed": 20261187,
+    "turns": 58,
+    "reason": "AllOpponentsLost",
+    "winner": "tricky-terrain",
+    "winner_own_turns": 16,
+    "first_elimination_turn": 53,
+    "seconds": 329,
+    "first_seat": "tricky-terrain",
+    "mulligans": 1,
+    "process": "a"
+   },
+   {
+    "seed": 20261191,
+    "turns": 51,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 15,
+    "first_elimination_turn": 37,
+    "seconds": 675,
+    "first_seat": "hail-caesar",
+    "mulligans": 1,
+    "process": "b"
+   },
+   {
+    "seed": 20261192,
+    "turns": 80,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 25,
+    "first_elimination_turn": 40,
+    "seconds": 118,
+    "first_seat": "hail-caesar",
+    "mulligans": 0,
+    "process": "b"
+   },
+   {
+    "seed": 20261193,
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 11,
+    "first_elimination_turn": 31,
+    "seconds": 41,
+    "first_seat": "tricky-terrain",
+    "mulligans": 1,
+    "process": "b"
+   },
+   {
+    "seed": 20261194,
+    "turns": 57,
+    "reason": "AllOpponentsLost",
+    "winner": "goblin-storm",
+    "winner_own_turns": 18,
+    "first_elimination_turn": 36,
+    "seconds": 59,
+    "first_seat": "token-triumph",
+    "mulligans": 1,
+    "process": "b"
+   },
+   {
+    "seed": 20261195,
+    "turns": 30,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 9,
+    "first_elimination_turn": 25,
+    "seconds": 28,
+    "first_seat": "token-triumph",
+    "mulligans": 2,
+    "process": "b"
+   },
+   {
+    "seed": 20261196,
+    "turns": 35,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 10,
+    "first_elimination_turn": 32,
+    "seconds": 38,
+    "first_seat": "token-triumph",
+    "mulligans": 1,
+    "process": "b"
+   },
+   {
+    "seed": 20261197,
+    "turns": 68,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 19,
+    "first_elimination_turn": 55,
+    "seconds": 246,
+    "first_seat": "hail-caesar",
+    "mulligans": 0,
+    "process": "b"
+   },
+   {
+    "seed": 20261198,
+    "turns": 73,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 21,
+    "first_elimination_turn": 47,
+    "seconds": 50,
+    "first_seat": "goblin-storm",
+    "mulligans": 2,
+    "process": "b"
+   },
+   {
+    "seed": 20261199,
+    "turns": 38,
+    "reason": "AllOpponentsLost",
+    "winner": "goblin-storm",
+    "winner_own_turns": 10,
+    "first_elimination_turn": 38,
+    "seconds": 46,
+    "first_seat": "goblin-storm",
+    "mulligans": 1,
+    "process": "b"
+   },
+   {
+    "seed": 20261200,
+    "turns": 65,
+    "reason": "AllOpponentsLost",
+    "winner": "tricky-terrain",
+    "winner_own_turns": 17,
+    "first_elimination_turn": 60,
+    "seconds": 294,
+    "first_seat": "goblin-storm",
+    "mulligans": 1,
+    "process": "b"
+   }
+  ],
+  "bots": [
+   {
+    "seed": 20261181,
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "winner": "tricky-terrain",
+    "winner_own_turns": 13,
+    "first_elimination_turn": 39,
+    "seconds": 215,
+    "first_seat": "hail-caesar",
+    "mulligans": 2
+   },
+   {
+    "seed": 20261182,
+    "turns": 39,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 12,
+    "first_elimination_turn": 28,
+    "seconds": 27,
+    "first_seat": "tricky-terrain",
+    "mulligans": 2
+   },
+   {
+    "seed": 20261183,
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 9,
+    "first_elimination_turn": 30,
+    "seconds": 24,
+    "first_seat": "goblin-storm",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261184,
+    "turns": 42,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 12,
+    "first_elimination_turn": 34,
+    "seconds": 45,
+    "first_seat": "goblin-storm",
+    "mulligans": 0
+   },
+   {
+    "seed": 20261185,
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 9,
+    "first_elimination_turn": 30,
+    "seconds": 21,
+    "first_seat": "token-triumph",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261186,
+    "turns": 33,
+    "reason": "AllOpponentsLost",
+    "winner": "tricky-terrain",
+    "winner_own_turns": 9,
+    "first_elimination_turn": 33,
+    "seconds": 69,
+    "first_seat": "tricky-terrain",
+    "mulligans": 0
+   },
+   {
+    "seed": 20261187,
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 10,
+    "first_elimination_turn": 31,
+    "seconds": 38,
+    "first_seat": "tricky-terrain",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261188,
+    "turns": 40,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 11,
+    "first_elimination_turn": 35,
+    "seconds": 51,
+    "first_seat": "tricky-terrain",
+    "mulligans": 0
+   },
+   {
+    "seed": 20261189,
+    "turns": 48,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 13,
+    "first_elimination_turn": 41,
+    "seconds": 55,
+    "first_seat": "goblin-storm",
+    "mulligans": 0
+   },
+   {
+    "seed": 20261190,
+    "turns": 47,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 12,
+    "first_elimination_turn": 42,
+    "seconds": 24,
+    "first_seat": "hail-caesar",
+    "mulligans": 0
+   },
+   {
+    "seed": 20261191,
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 10,
+    "first_elimination_turn": 33,
+    "seconds": 28,
+    "first_seat": "hail-caesar",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261192,
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "winner": "goblin-storm",
+    "winner_own_turns": 10,
+    "first_elimination_turn": 27,
+    "seconds": 28,
+    "first_seat": "hail-caesar",
+    "mulligans": 0
+   },
+   {
+    "seed": 20261193,
+    "turns": 36,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 11,
+    "first_elimination_turn": 27,
+    "seconds": 28,
+    "first_seat": "tricky-terrain",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261194,
+    "turns": 46,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 13,
+    "first_elimination_turn": 41,
+    "seconds": 55,
+    "first_seat": "token-triumph",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261195,
+    "turns": 37,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 12,
+    "first_elimination_turn": 25,
+    "seconds": 22,
+    "first_seat": "token-triumph",
+    "mulligans": 2
+   },
+   {
+    "seed": 20261196,
+    "turns": 34,
+    "reason": "AllOpponentsLost",
+    "winner": "token-triumph",
+    "winner_own_turns": 11,
+    "first_elimination_turn": 25,
+    "seconds": 27,
+    "first_seat": "token-triumph",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261197,
+    "turns": 54,
+    "reason": "AllOpponentsLost",
+    "winner": "tricky-terrain",
+    "winner_own_turns": 15,
+    "first_elimination_turn": 48,
+    "seconds": 72,
+    "first_seat": "hail-caesar",
+    "mulligans": 0
+   },
+   {
+    "seed": 20261198,
+    "turns": 49,
+    "reason": "AllOpponentsLost",
+    "winner": "hail-caesar",
+    "winner_own_turns": 13,
+    "first_elimination_turn": 44,
+    "seconds": 38,
+    "first_seat": "goblin-storm",
+    "mulligans": 2
+   },
+   {
+    "seed": 20261199,
+    "turns": 28,
+    "reason": "AllOpponentsLost",
+    "winner": "goblin-storm",
+    "winner_own_turns": 8,
+    "first_elimination_turn": 25,
+    "seconds": 13,
+    "first_seat": "goblin-storm",
+    "mulligans": 1
+   },
+   {
+    "seed": 20261200,
+    "turns": 27,
+    "reason": "AllOpponentsLost",
+    "winner": "goblin-storm",
+    "winner_own_turns": 8,
+    "first_elimination_turn": 25,
+    "seconds": 11,
+    "first_seat": "goblin-storm",
+    "mulligans": 1
+   }
+  ]
+ }
+}

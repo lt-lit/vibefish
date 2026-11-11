@@ -4,27 +4,27 @@
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped (v3, picked on these tables; v2's figure on tables of its own is 20.0%; v3's own run is queued)",
+   "status": "shipped (v3, confirmed on tables of its own)",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "tables": {
-    "file": "demo-data/ab/2026-11-11-ab-v8/goblin-storm.json",
+    "file": "demo-data/ab/2026-11-11-ab-v10/goblin-storm.json",
     "stock": "stock",
-    "bot": "zadawide",
-    "run": "ab-run #11 on #5's tables"
+    "bot": "playbook",
+    "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (48 against stock's 18 on the tables that chose it, the same count)"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json"
   },
   {
    "deck": "token-triumph",
-   "status": "shipped (the best of three candidates on these tables; a run of its own is queued)",
+   "status": "shipped (v3, confirmed on tables of its own)",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
    "tables": {
-    "file": "demo-data/ab/2026-11-11-ab-v6/token-triumph.json",
+    "file": "demo-data/ab/2026-11-11-ab-v10/token-triumph.json",
     "stock": "stock",
-    "bot": "cast",
-    "run": "ab-run #8 on #6's tables"
+    "bot": "playbook",
+    "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (67 against stock's 43 on the tables that chose it)"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json"
   },

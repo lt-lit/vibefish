@@ -105,6 +105,11 @@ All on the heuristic AI (Monte Carlo off). The trace that names declined trigger
   `ComputerUtilCard.getBestRemovalTargetAI` -> `evaluateBoardPosition` -> `predictNextCombat` on every decision, each
   decision thread about a second old. Tricky Terrain's table games crawl too (`ab-run` #11: its last shard took three
   hours, and 27 of the deck's 800 games were draws); whether for the same reason has not been looked into.
+- One cause of Tricky Terrain's crawl, seen once (2026-11-11, the four bots at one table, seed 20361181, DESIGN.md
+  §22): Scute Swarm. The playbook seat went from 8 lands to 20 in one turn with the Swarm in play; 384 copies entered
+  on game turn 38 and 710 more on its next turn. With more than a thousand creatures on one side the game did not
+  leave that turn in ten minutes (19 decision timeouts in the log, the last inside `ComputerUtilMana.sortManaAbilities`)
+  and was stopped by hand. The seat was about to win; left alone, such a game ends on the clock and counts as a draw.
 - Stock Tricky Terrain fails to kill three do-nothing opponents in seven of forty goldfish games
   (`runner/goldfish.sh "Tricky Terrain [M3C] [2024].dck" -s 8000`: six stop at the turn cap of twenty rounds, one on
   the 900 s clock). Why has not been looked into.

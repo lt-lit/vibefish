@@ -1,0 +1,1135 @@
+{
+ "kind": "ab-losses",
+ "deck": "goblin-storm",
+ "seed": 20261170,
+ "opponents": 3,
+ "forge_version": "snapshot-2026-11-10",
+ "arms": {
+  "playbook": {
+   "games": 200,
+   "wins": 48,
+   "draws": 2,
+   "losses": 152,
+   "game_turns": 43.52,
+   "winner_own_turns": 12.42,
+   "out_first": 32,
+   "out_second": 41,
+   "out_third": 79,
+   "lost_on_game_turn": 41.73,
+   "lost_on_own_turn": 11.06,
+   "last_turn": {
+    "life": 13.03,
+    "lands": 7.2,
+    "permanents": 12.34,
+    "nonland_cards_in_hand": 3.36,
+    "of_them_castable": 3.24,
+    "losses_with_a_castable_card": 0.921
+   },
+   "last_blow": {
+    "damage": 34.08,
+    "top_opponent_share": 0.99,
+    "one_opponent_did_80pct": 0.972
+   },
+   "per_game": {
+    "spells": 16.07,
+    "spells_aimed_at_opponents": 0.77,
+    "attackers_at_seat": 11.88,
+    "own_creatures_lost_on_own_turns": 9.22,
+    "damage_dealt": 54.2,
+    "damage_taken": 47.16,
+    "opponents_killed": 0.73
+   },
+   "blocked_share": 0.146,
+   "games_with_a_mulligan": 0.18,
+   "held_castable": [
+    [
+     "Grapeshot",
+     42
+    ],
+    [
+     "Goblin Bombardment",
+     30
+    ],
+    [
+     "Haze of Rage",
+     28
+    ],
+    [
+     "Empty the Warrens",
+     27
+    ],
+    [
+     "Battle Hymn",
+     24
+    ],
+    [
+     "Great Train Heist",
+     23
+    ],
+    [
+     "Past in Flames",
+     17
+    ],
+    [
+     "Throne of Eldraine",
+     15
+    ],
+    [
+     "Mana Geyser",
+     14
+    ],
+    [
+     "Goblin Negotiation",
+     14
+    ],
+    [
+     "Brightstone Ritual",
+     14
+    ],
+    [
+     "Gempalm Incinerator",
+     12
+    ],
+    [
+     "Glimpse the Impossible",
+     11
+    ],
+    [
+     "Witch's Mark",
+     10
+    ],
+    [
+     "Seething Song",
+     10
+    ],
+    [
+     "Sazacap's Brew",
+     10
+    ],
+    [
+     "Daring Discovery",
+     9
+    ],
+    [
+     "Crimson Wisps",
+     9
+    ],
+    [
+     "Goblin Dark-Dwellers",
+     8
+    ],
+    [
+     "Boggart Shenanigans",
+     8
+    ],
+    [
+     "Roaming Throne",
+     8
+    ],
+    [
+     "Spreading Insurrection",
+     8
+    ],
+    [
+     "Vandalblast",
+     7
+    ],
+    [
+     "Siege-Gang Lieutenant",
+     7
+    ],
+    [
+     "Renegade Tactics",
+     7
+    ],
+    [
+     "Goblin Trashmaster",
+     7
+    ],
+    [
+     "Ancestors' Aid",
+     7
+    ],
+    [
+     "Howlsquad Heavy",
+     6
+    ],
+    [
+     "Frontline Heroism",
+     6
+    ],
+    [
+     "Fists of Flame",
+     6
+    ],
+    [
+     "Goblin Matron",
+     6
+    ],
+    [
+     "Expedite",
+     6
+    ],
+    [
+     "Impulsive Pilferer",
+     5
+    ],
+    [
+     "Krenko, Mob Boss",
+     5
+    ],
+    [
+     "Goblin Lackey",
+     5
+    ],
+    [
+     "Broadside Bombardiers",
+     4
+    ],
+    [
+     "Redcap Gutter-Dweller",
+     4
+    ],
+    [
+     "Searslicer Goblin",
+     4
+    ],
+    [
+     "Grenzo, Havoc Raiser",
+     4
+    ],
+    [
+     "Blasphemous Act",
+     4
+    ],
+    [
+     "Wild Ride",
+     4
+    ],
+    [
+     "Conspicuous Snoop",
+     3
+    ],
+    [
+     "General Kreat, the Boltbringer",
+     3
+    ],
+    [
+     "Siege-Gang Commander",
+     3
+    ],
+    [
+     "Pashalik Mons",
+     3
+    ],
+    [
+     "Zada, Hedron Grinder",
+     3
+    ],
+    [
+     "Skullclamp",
+     2
+    ],
+    [
+     "Goblin Chieftain",
+     2
+    ],
+    [
+     "Chaos Warp",
+     2
+    ],
+    [
+     "Rundvelt Hordemaster",
+     2
+    ],
+    [
+     "Swiftfoot Boots",
+     2
+    ],
+    [
+     "Faithless Looting",
+     2
+    ],
+    [
+     "Mogg War Marshal",
+     2
+    ],
+    [
+     "Quest for the Goblin Lord",
+     2
+    ],
+    [
+     "Goblin Bushwhacker",
+     2
+    ],
+    [
+     "Ruby Medallion",
+     1
+    ],
+    [
+     "Skirk Prospector",
+     1
+    ],
+    [
+     "Idol of Oblivion",
+     1
+    ],
+    [
+     "Impact Tremors",
+     1
+    ],
+    [
+     "Goblin Warchief",
+     1
+    ]
+   ],
+   "held": [
+    [
+     "Grapeshot",
+     42
+    ],
+    [
+     "Goblin Bombardment",
+     30
+    ],
+    [
+     "Haze of Rage",
+     28
+    ],
+    [
+     "Empty the Warrens",
+     27
+    ],
+    [
+     "Battle Hymn",
+     24
+    ],
+    [
+     "Great Train Heist",
+     23
+    ],
+    [
+     "Throne of Eldraine",
+     18
+    ],
+    [
+     "Past in Flames",
+     17
+    ],
+    [
+     "Mana Geyser",
+     14
+    ],
+    [
+     "Goblin Negotiation",
+     14
+    ],
+    [
+     "Brightstone Ritual",
+     14
+    ],
+    [
+     "Gempalm Incinerator",
+     12
+    ],
+    [
+     "Blasphemous Act",
+     11
+    ],
+    [
+     "Glimpse the Impossible",
+     11
+    ],
+    [
+     "Goblin Dark-Dwellers",
+     10
+    ],
+    [
+     "Witch's Mark",
+     10
+    ],
+    [
+     "Seething Song",
+     10
+    ],
+    [
+     "Sazacap's Brew",
+     10
+    ],
+    [
+     "Roaming Throne",
+     10
+    ],
+    [
+     "Daring Discovery",
+     9
+    ],
+    [
+     "Crimson Wisps",
+     9
+    ],
+    [
+     "Boggart Shenanigans",
+     8
+    ],
+    [
+     "Spreading Insurrection",
+     8
+    ],
+    [
+     "Vandalblast",
+     7
+    ],
+    [
+     "Siege-Gang Lieutenant",
+     7
+    ],
+    [
+     "Renegade Tactics",
+     7
+    ],
+    [
+     "Goblin Trashmaster",
+     7
+    ],
+    [
+     "Ancestors' Aid",
+     7
+    ],
+    [
+     "Goblin Matron",
+     7
+    ],
+    [
+     "Krenko, Mob Boss",
+     6
+    ],
+    [
+     "Howlsquad Heavy",
+     6
+    ],
+    [
+     "Frontline Heroism",
+     6
+    ],
+    [
+     "Fists of Flame",
+     6
+    ],
+    [
+     "Expedite",
+     6
+    ],
+    [
+     "Impulsive Pilferer",
+     5
+    ],
+    [
+     "Goblin Lackey",
+     5
+    ],
+    [
+     "Broadside Bombardiers",
+     4
+    ],
+    [
+     "Siege-Gang Commander",
+     4
+    ],
+    [
+     "Redcap Gutter-Dweller",
+     4
+    ],
+    [
+     "Searslicer Goblin",
+     4
+    ],
+    [
+     "Grenzo, Havoc Raiser",
+     4
+    ],
+    [
+     "Wild Ride",
+     4
+    ],
+    [
+     "Conspicuous Snoop",
+     3
+    ],
+    [
+     "General Kreat, the Boltbringer",
+     3
+    ],
+    [
+     "Pashalik Mons",
+     3
+    ],
+    [
+     "Zada, Hedron Grinder",
+     3
+    ],
+    [
+     "Skullclamp",
+     2
+    ],
+    [
+     "Goblin Chieftain",
+     2
+    ],
+    [
+     "Chaos Warp",
+     2
+    ],
+    [
+     "Rundvelt Hordemaster",
+     2
+    ],
+    [
+     "Swiftfoot Boots",
+     2
+    ],
+    [
+     "Faithless Looting",
+     2
+    ],
+    [
+     "Mogg War Marshal",
+     2
+    ],
+    [
+     "Quest for the Goblin Lord",
+     2
+    ],
+    [
+     "Goblin Bushwhacker",
+     2
+    ],
+    [
+     "Ruby Medallion",
+     1
+    ],
+    [
+     "Skirk Prospector",
+     1
+    ],
+    [
+     "Idol of Oblivion",
+     1
+    ],
+    [
+     "Impact Tremors",
+     1
+    ],
+    [
+     "Goblin Warchief",
+     1
+    ]
+   ],
+   "aimed_spells": [
+    [
+     "Chaos Warp",
+     37
+    ],
+    [
+     "Vandalblast",
+     32
+    ],
+    [
+     "Daring Discovery",
+     30
+    ],
+    [
+     "Goblin Negotiation",
+     23
+    ],
+    [
+     "Spreading Insurrection",
+     20
+    ],
+    [
+     "Renegade Tactics",
+     5
+    ],
+    [
+     "Grapeshot",
+     3
+    ],
+    [
+     "Maestros Charm",
+     1
+    ],
+    [
+     "Wild Ride",
+     1
+    ],
+    [
+     "Baral's Expertise",
+     1
+    ]
+   ]
+  },
+  "stock": {
+   "games": 200,
+   "wins": 18,
+   "draws": 3,
+   "losses": 180,
+   "game_turns": 46.23,
+   "winner_own_turns": 13.15,
+   "out_first": 51,
+   "out_second": 51,
+   "out_third": 78,
+   "lost_on_game_turn": 43.31,
+   "lost_on_own_turn": 11.42,
+   "last_turn": {
+    "life": 12.64,
+    "lands": 7.08,
+    "permanents": 19.03,
+    "nonland_cards_in_hand": 2.93,
+    "of_them_castable": 2.81,
+    "losses_with_a_castable_card": 0.933
+   },
+   "last_blow": {
+    "damage": 33.77,
+    "top_opponent_share": 0.96,
+    "one_opponent_did_80pct": 0.913
+   },
+   "per_game": {
+    "spells": 14.71,
+    "spells_aimed_at_opponents": 0.96,
+    "attackers_at_seat": 13.14,
+    "own_creatures_lost_on_own_turns": 6.08,
+    "damage_dealt": 29.82,
+    "damage_taken": 52.95,
+    "opponents_killed": 0.47
+   },
+   "blocked_share": 0.21,
+   "games_with_a_mulligan": 0.18,
+   "held_castable": [
+    [
+     "Witch's Mark",
+     40
+    ],
+    [
+     "Goblin Bombardment",
+     37
+    ],
+    [
+     "Faithless Looting",
+     37
+    ],
+    [
+     "Past in Flames",
+     34
+    ],
+    [
+     "Crimson Wisps",
+     34
+    ],
+    [
+     "Haze of Rage",
+     33
+    ],
+    [
+     "Goblin Dark-Dwellers",
+     27
+    ],
+    [
+     "Expedite",
+     23
+    ],
+    [
+     "Great Train Heist",
+     18
+    ],
+    [
+     "Ancestors' Aid",
+     18
+    ],
+    [
+     "Grapeshot",
+     16
+    ],
+    [
+     "Empty the Warrens",
+     11
+    ],
+    [
+     "Goblin Negotiation",
+     11
+    ],
+    [
+     "Throne of Eldraine",
+     10
+    ],
+    [
+     "Storm-Kiln Artist",
+     8
+    ],
+    [
+     "Spreading Insurrection",
+     8
+    ],
+    [
+     "Frontline Heroism",
+     7
+    ],
+    [
+     "Dragon Fodder",
+     7
+    ],
+    [
+     "Wild Ride",
+     7
+    ],
+    [
+     "Goblin Matron",
+     7
+    ],
+    [
+     "General Kreat, the Boltbringer",
+     7
+    ],
+    [
+     "Boggart Shenanigans",
+     6
+    ],
+    [
+     "Grenzo, Havoc Raiser",
+     6
+    ],
+    [
+     "Seething Song",
+     5
+    ],
+    [
+     "Renegade Tactics",
+     5
+    ],
+    [
+     "Sazacap's Brew",
+     5
+    ],
+    [
+     "Searslicer Goblin",
+     5
+    ],
+    [
+     "Vandalblast",
+     5
+    ],
+    [
+     "Impact Tremors",
+     5
+    ],
+    [
+     "Zada, Hedron Grinder",
+     4
+    ],
+    [
+     "Krenko's Command",
+     4
+    ],
+    [
+     "Glimpse the Impossible",
+     3
+    ],
+    [
+     "Mana Geyser",
+     3
+    ],
+    [
+     "Pashalik Mons",
+     3
+    ],
+    [
+     "Ruby Medallion",
+     3
+    ],
+    [
+     "Idol of Oblivion",
+     3
+    ],
+    [
+     "Howlsquad Heavy",
+     3
+    ],
+    [
+     "Siege-Gang Lieutenant",
+     3
+    ],
+    [
+     "Rundvelt Hordemaster",
+     2
+    ],
+    [
+     "Skirk Prospector",
+     2
+    ],
+    [
+     "Impulsive Pilferer",
+     2
+    ],
+    [
+     "Sol Ring",
+     2
+    ],
+    [
+     "Quest for the Goblin Lord",
+     2
+    ],
+    [
+     "Goblin Lackey",
+     2
+    ],
+    [
+     "Swiftfoot Boots",
+     2
+    ],
+    [
+     "Redcap Gutter-Dweller",
+     2
+    ],
+    [
+     "Brightstone Ritual",
+     2
+    ],
+    [
+     "Broadside Bombardiers",
+     2
+    ],
+    [
+     "Battle Hymn",
+     2
+    ],
+    [
+     "Siege-Gang Commander",
+     2
+    ],
+    [
+     "Conspicuous Snoop",
+     2
+    ],
+    [
+     "Daring Discovery",
+     1
+    ],
+    [
+     "Gempalm Incinerator",
+     1
+    ],
+    [
+     "Mogg War Marshal",
+     1
+    ],
+    [
+     "Blasphemous Act",
+     1
+    ],
+    [
+     "Goblin Warchief",
+     1
+    ],
+    [
+     "Goblin Trashmaster",
+     1
+    ],
+    [
+     "Fists of Flame",
+     1
+    ],
+    [
+     "Chaos Warp",
+     1
+    ],
+    [
+     "Goblin Chieftain",
+     1
+    ]
+   ],
+   "held": [
+    [
+     "Witch's Mark",
+     40
+    ],
+    [
+     "Goblin Bombardment",
+     37
+    ],
+    [
+     "Faithless Looting",
+     37
+    ],
+    [
+     "Past in Flames",
+     35
+    ],
+    [
+     "Crimson Wisps",
+     34
+    ],
+    [
+     "Haze of Rage",
+     33
+    ],
+    [
+     "Goblin Dark-Dwellers",
+     30
+    ],
+    [
+     "Expedite",
+     23
+    ],
+    [
+     "Great Train Heist",
+     18
+    ],
+    [
+     "Ancestors' Aid",
+     18
+    ],
+    [
+     "Grapeshot",
+     16
+    ],
+    [
+     "Throne of Eldraine",
+     14
+    ],
+    [
+     "Empty the Warrens",
+     13
+    ],
+    [
+     "Goblin Negotiation",
+     11
+    ],
+    [
+     "Storm-Kiln Artist",
+     9
+    ],
+    [
+     "Spreading Insurrection",
+     8
+    ],
+    [
+     "Frontline Heroism",
+     7
+    ],
+    [
+     "Dragon Fodder",
+     7
+    ],
+    [
+     "Wild Ride",
+     7
+    ],
+    [
+     "Goblin Matron",
+     7
+    ],
+    [
+     "General Kreat, the Boltbringer",
+     7
+    ],
+    [
+     "Boggart Shenanigans",
+     6
+    ],
+    [
+     "Grenzo, Havoc Raiser",
+     6
+    ],
+    [
+     "Seething Song",
+     5
+    ],
+    [
+     "Renegade Tactics",
+     5
+    ],
+    [
+     "Siege-Gang Commander",
+     5
+    ],
+    [
+     "Sazacap's Brew",
+     5
+    ],
+    [
+     "Searslicer Goblin",
+     5
+    ],
+    [
+     "Vandalblast",
+     5
+    ],
+    [
+     "Impact Tremors",
+     5
+    ],
+    [
+     "Zada, Hedron Grinder",
+     4
+    ],
+    [
+     "Mana Geyser",
+     4
+    ],
+    [
+     "Krenko's Command",
+     4
+    ],
+    [
+     "Siege-Gang Lieutenant",
+     4
+    ],
+    [
+     "Glimpse the Impossible",
+     3
+    ],
+    [
+     "Blasphemous Act",
+     3
+    ],
+    [
+     "Pashalik Mons",
+     3
+    ],
+    [
+     "Ruby Medallion",
+     3
+    ],
+    [
+     "Idol of Oblivion",
+     3
+    ],
+    [
+     "Howlsquad Heavy",
+     3
+    ],
+    [
+     "Rundvelt Hordemaster",
+     2
+    ],
+    [
+     "Skirk Prospector",
+     2
+    ],
+    [
+     "Impulsive Pilferer",
+     2
+    ],
+    [
+     "Sol Ring",
+     2
+    ],
+    [
+     "Daring Discovery",
+     2
+    ],
+    [
+     "Quest for the Goblin Lord",
+     2
+    ],
+    [
+     "Goblin Lackey",
+     2
+    ],
+    [
+     "Swiftfoot Boots",
+     2
+    ],
+    [
+     "Redcap Gutter-Dweller",
+     2
+    ],
+    [
+     "Brightstone Ritual",
+     2
+    ],
+    [
+     "Krenko, Mob Boss",
+     2
+    ],
+    [
+     "Broadside Bombardiers",
+     2
+    ],
+    [
+     "Battle Hymn",
+     2
+    ],
+    [
+     "Conspicuous Snoop",
+     2
+    ],
+    [
+     "Gempalm Incinerator",
+     1
+    ],
+    [
+     "Mogg War Marshal",
+     1
+    ],
+    [
+     "Goblin Warchief",
+     1
+    ],
+    [
+     "Goblin Trashmaster",
+     1
+    ],
+    [
+     "Fists of Flame",
+     1
+    ],
+    [
+     "Chaos Warp",
+     1
+    ],
+    [
+     "Goblin Chieftain",
+     1
+    ]
+   ],
+   "aimed_spells": [
+    [
+     "Chaos Warp",
+     32
+    ],
+    [
+     "Daring Discovery",
+     31
+    ],
+    [
+     "Renegade Tactics",
+     31
+    ],
+    [
+     "Spreading Insurrection",
+     29
+    ],
+    [
+     "Goblin Negotiation",
+     28
+    ],
+    [
+     "Vandalblast",
+     24
+    ],
+    [
+     "Grapeshot",
+     15
+    ],
+    [
+     "Wild Ride",
+     2
+    ],
+    [
+     "Swords to Plowshares",
+     1
+    ]
+   ]
+  }
+ }
+}

@@ -70,3 +70,19 @@ than a measurement: the first run after `forge/fetch-forge.sh` learned to fetch 
 release `forge-runtimes`. Both shards missed the Actions cache, downloaded the 11-10 archive, verified it and played: stock 4
 wins of 40, Goblin Storm's shipped playbook (version 3) 8 (6 discordant pairs against 2). Fourteen of its tables seat the
 opponents of a run #5 table (the seeds are six apart).
+
+`2026-11-11-ab-v10/` holds `ab-run` #17, the confirming runs of the two shipped playbooks whose figures had come from the tables
+that chose them, each against stock on 200 tables whose opponents the deck had not met (seeds ten and more from every earlier run of
+the deck). `token-triumph.json` (seed 20261160): 56 wins against stock's 35, 28.0% against 17.5%, +10.5 points (38 discordant pairs
+against 17, exact test 0.0065); it had been +12.0 where it was chosen. `goblin-storm.json` (seed 20261170): version 3 wins 48 against
+stock's 18, 24.0% against 9.0%, +15.0 points (42 against 12, exact test 0.0001), the same count as on the tables that chose it over
+version 2. `token-triumph-losses.json` and `goblin-storm-losses.json` are `runner/losses.py` on the same games (kind `ab-losses`):
+for the seat under test in each arm, whether it was the first or the last out, its hand and board on its last own turn, who dealt
+the last blow, the spells it aimed at opponents and the attackers it blocked (DESIGN.md §23). The per-game logs they were read
+from are the run's shard artifacts (90 days).
+
+`2026-11-11-local/four-bots-table.json` is not an A/B and not in the format above (kind `table-pair`): one table of the four decks
+that have a shipped playbook, played on a session's machine on the same seeds (20261181 to 20261200) with every seat under its
+playbook (20 games) and with every seat stock (17 games; three not played, and two of the 17 draws). The bots' games average 39.0
+turns against 54.2 (9.75 rounds against 13.5 by turns over four; people 8.75). It measures how long a table of bots takes and says
+nothing about who wins (DESIGN.md §23).

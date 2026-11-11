@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-11T16:52:51Z",
+ "generated": "2026-11-11T18:16:29Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -14,7 +14,7 @@
    "commanders": [
     "Zada, Hedron Grinder"
    ],
-   "status": "shipped (v3, picked on these tables; v2's figure on tables of its own is 20.0%; v3's own run is queued)",
+   "status": "shipped (v3, confirmed on tables of its own)",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "human": {
@@ -22,10 +22,10 @@
     "games": 218
    },
    "tables": {
-    "run": "ab-run #11 on #5's tables",
-    "seed": 20261140,
+    "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (48 against stock's 18 on the tables that chose it, the same count)",
+    "seed": 20261170,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v8/goblin-storm.json",
+    "source": "demo-data/ab/2026-11-11-ab-v10/goblin-storm.json",
     "stock": {
      "games": 200,
      "wins": 18,
@@ -46,12 +46,12 @@
     },
     "difference": 0.15,
     "difference_ci95": [
-     0.0839,
-     0.2161
+     0.0811,
+     0.2189
     ],
-    "bot_only": 40,
-    "stock_only": 10,
-    "exact_p": 0.0
+    "bot_only": 42,
+    "stock_only": 12,
+    "exact_p": 0.0001
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json",
@@ -72,7 +72,7 @@
    "commanders": [
     "Emmara, Soul of the Accord"
    ],
-   "status": "shipped (the best of three candidates on these tables; a run of its own is queued)",
+   "status": "shipped (v3, confirmed on tables of its own)",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
    "human": {
@@ -80,36 +80,36 @@
     "games": 197
    },
    "tables": {
-    "run": "ab-run #8 on #6's tables",
-    "seed": 20261141,
+    "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (67 against stock's 43 on the tables that chose it)",
+    "seed": 20261160,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v6/token-triumph.json",
+    "source": "demo-data/ab/2026-11-11-ab-v10/token-triumph.json",
     "stock": {
      "games": 200,
-     "wins": 43,
-     "win_rate": 0.215,
+     "wins": 35,
+     "win_rate": 0.175,
      "win_rate_ci95": [
-      0.1637,
-      0.277
+      0.1286,
+      0.2336
      ]
     },
     "bot": {
      "games": 200,
-     "wins": 67,
-     "win_rate": 0.335,
+     "wins": 56,
+     "win_rate": 0.28,
      "win_rate_ci95": [
-      0.2732,
-      0.403
+      0.2224,
+      0.3459
      ]
     },
-    "difference": 0.12,
+    "difference": 0.105,
     "difference_ci95": [
-     0.0397,
-     0.2003
+     0.0338,
+     0.1762
     ],
-    "bot_only": 47,
-    "stock_only": 23,
-    "exact_p": 0.0056
+    "bot_only": 38,
+    "stock_only": 17,
+    "exact_p": 0.0065
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json",
