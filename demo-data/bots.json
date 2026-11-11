@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-11T09:06:26Z",
+ "generated": "2026-11-11T16:52:51Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -14,7 +14,7 @@
    "commanders": [
     "Zada, Hedron Grinder"
    ],
-   "status": "shipped (v3, picked on these tables; v2's confirmed figure is 20.0%)",
+   "status": "shipped (v3, picked on these tables; v2's figure on tables of its own is 20.0%; v3's own run is queued)",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "human": {
@@ -72,7 +72,7 @@
    "commanders": [
     "Emmara, Soul of the Accord"
    ],
-   "status": "shipped",
+   "status": "shipped (the best of three candidates on these tables; a run of its own is queued)",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
    "human": {
@@ -130,15 +130,15 @@
    "commanders": [
     "Caesar, Legion's Emperor"
    ],
-   "status": "shipped (confirmed on new tables)",
+   "status": "shipped (confirmed in a second run)",
    "playbook": "playbook/precons/hail-caesar.json",
-   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge declines it two times in three).",
+   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five).",
    "human": {
     "win_rate": 0.2152,
     "games": 320
    },
    "tables": {
-    "run": "ab-run #15, the confirming run on tables it had not seen",
+    "run": "ab-run #15, the confirming run: 200 new games (138 of the opponent trios recur from the tables that chose it)",
     "seed": 20261143,
     "forge_version": "snapshot-2026-11-10",
     "source": "demo-data/ab/2026-11-11-ab-v9/hail-caesar.json",

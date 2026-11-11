@@ -22,7 +22,7 @@ playbook.
 §22), snapshot 2026-11-10, 40 games a run: Hail, Caesar (`playbook/variants/hail-caesar-caesar-any.json`: cast rules, pressure
 attack, Caesar's attack trigger accepted every time; 10.10 turns against 12.47), Token Triumph
 (`token-triumph-cast.json`; 9.05 against 10.38), Tricky Terrain (`tricky-terrain-lands.json`, version 3; 10.64 against 13.39, with
-seven stock games and one playbook game cut off by the clock).
+seven stock games and one playbook game not finished: the turn cap, and for one stock game the clock).
 Quick Draw (`quick-draw-spells.json`; 11.72 turns against 13.72) was added the same day, the fifth deck with a candidate.
 `hail-caesar-shipped-seeds-6001-6040.json` is Hail, Caesar's playbook as it shipped (version 3: the trigger only with a token, go-wide): 11.07 turns against 12.47.
 `goblin-storm-v3-seeds-9001-9100.json` and `tricky-terrain-shipped-seeds-8001-8040.json` are the two playbooks as they shipped on 2026-11-11 (Goblin Storm version 3 with the Zada hold: 9.20 turns against 11.40 on the block of 100 seeds; Tricky Terrain under go-wide: 10.97 against 13.39).

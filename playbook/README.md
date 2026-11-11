@@ -145,7 +145,7 @@ could only be kept by passing), `cast_failed`, `cast_forge_declined`, `cast_turn
 
 Forge's AI turns down most optional triggers whose price it cannot value: stock Hail, Caesar pays for its commander's
 attack trigger (sacrifice another creature for two attacking Soldiers and a burn equal to its tokens) on fewer than a
-third of its attacks. A trigger rule answers for the deck:
+fifth of its attacks. A trigger rule answers for the deck:
 
 ```
 "triggers": [
@@ -202,3 +202,8 @@ deck's own file, unless the variant brings a `curated` block of its own (key car
 A candidate needs only its own arm when the tables have been played before: run it with `--arms playbook` on the seed
 of an earlier run, and `runner/ab.py join` lines its games up with that run's stock arm table by table
 (`runner/ab.py join --out joined.json --against v2 stock=run5.json:stock v2=run5.json:playbook pressure=run7.json`).
+
+A file chosen among several on the same tables owes a confirming run: stock against it alone, on a seed of its own
+ten or more from every seed the deck has been played on (nearby seeds draw the same opponents; `runner/ab.py`, Seeds).
+`variants/README.md` lists every candidate here and what came of it; keep it current, so that no dead end is
+measured twice.

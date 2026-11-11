@@ -73,3 +73,38 @@ The ab1 games used `--rotate-profiles`; both listed games are game 3 of their sh
   inside the 900 s clock, but the same loop at a table would be a candidate for the league's clock draws. Four more
   in `-s 9000` (game seeds 9001, 9021, 9049 and 9086: 561, 551, 330 and 247 s; 360 casts of Haze of Rage in that
   block of a hundred stock games).
+
+## Seen while building the per-deck bots (snapshot 2026-11-10, 2026-11-11)
+
+All on the heuristic AI (Monte Carlo off). The trace that names declined triggers is
+`FORGE_JAVA_OPTS=-Dvibefish.trace=true` on a seat with a playbook; the unused abilities come from
+`runner/hands.py abilities` (DESIGN.md §22).
+
+- Optional triggers with a price are mostly declined. `WrappedAbility.resolve` asks `PlayerControllerAi.confirmTrigger`,
+  which asks the trigger's own logic whether it would play the effect as a spell (`ImmediateTriggerAi` and friends),
+  and the answer is usually no. Caesar, Legion's Emperor ("whenever you attack, you may sacrifice another creature;
+  when you do, choose two"): paid on 47 of 264 attacks in forty stock goldfish games of Hail, Caesar. Seer's Sundial
+  (landfall, pay {2}: draw): declined 51 times in forty games of Tricky Terrain. Mentor of the Meek (pay {1}: draw):
+  declined 7 times in ten games of Token Triumph. Science!'s pay-energy triggers (Assaultron Dominator, Sentry Bot,
+  Robobrain War Mind, T-45 Power Armor, The Motherlode): declined 233 times in forty games, the Dominator's 112.
+  A playbook's `triggers` rule answers instead.
+- Free tap abilities are left unused for whole games: Steel Overseer (0 uses in 19 turns in play), Arcade Gannon
+  (0 in 28), Brotherhood Scribe (0 in 13) in Science!; Crystalline Crawler, Coretapper and Empowered Autogenerator
+  in Counter Intelligence; Vitu-Ghazi (one use in 53 turns) and Selesnya Evangel (none in 19) in Token Triumph.
+- Thespian's Stage was in play for 75 turns of forty Tricky Terrain games and Forge's AI never activated it (the
+  seat had a playbook, but no rule of it named the Stage), so the deck's Dark Depths line does not happen by itself.
+  Activated by a rule with Dark Depths as the target, the engine does the rest: the legend rule keeps the copy, the
+  copy has no ice counters and is sacrificed, Marit Lage arrives.
+- X spells with no good AI logic stay in hand with the mana for them unspent (Hydroid Krasis, Finale of Revelation,
+  Nissa, Steward of Elements in Tricky Terrain); cards flagged `AI:RemoveDeck:All` are never cast at all, which
+  includes most of that deck's answers (Beast Within, Curse of the Swine, Oblivion Stone, Summary Dismissal).
+- A three-mana commander cast on turn six: stock Tricky Terrain holds Omo, Queen of Vesuva and three six-drops with
+  seven lands in play (game seed 8001 of `runner/goldfish.sh "Tricky Terrain [M3C] [2024].dck" -s 8000`).
+- A wide board can make the stock AI's decisions time out one after another, and the game crawls: Token Triumph
+  against Blame Game in duels (seed 20261151, table 18) ran past 1,400 s with the stock seat inside
+  `ComputerUtilCard.getBestRemovalTargetAI` -> `evaluateBoardPosition` -> `predictNextCombat` on every decision, each
+  decision thread about a second old. Tricky Terrain's table games crawl too (`ab-run` #11: its last shard took three
+  hours, and 27 of the deck's 800 games were draws); whether for the same reason has not been looked into.
+- Stock Tricky Terrain fails to kill three do-nothing opponents in seven of forty goldfish games
+  (`runner/goldfish.sh "Tricky Terrain [M3C] [2024].dck" -s 8000`: six stop at the turn cap of twenty rounds, one on
+  the 900 s clock). Why has not been looked into.

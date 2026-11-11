@@ -4,7 +4,7 @@
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped (v3, picked on these tables; v2's confirmed figure is 20.0%)",
+   "status": "shipped (v3, picked on these tables; v2's figure on tables of its own is 20.0%; v3's own run is queued)",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "tables": {
@@ -17,7 +17,7 @@
   },
   {
    "deck": "token-triumph",
-   "status": "shipped",
+   "status": "shipped (the best of three candidates on these tables; a run of its own is queued)",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
    "tables": {
@@ -30,14 +30,14 @@
   },
   {
    "deck": "hail-caesar",
-   "status": "shipped (confirmed on new tables)",
+   "status": "shipped (confirmed in a second run)",
    "playbook": "playbook/precons/hail-caesar.json",
-   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge declines it two times in three).",
+   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five).",
    "tables": {
     "file": "demo-data/ab/2026-11-11-ab-v9/hail-caesar.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #15, the confirming run on tables it had not seen"
+    "run": "ab-run #15, the confirming run: 200 new games (138 of the opponent trios recur from the tables that chose it)"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json"
   },

@@ -9,12 +9,17 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status:** Phase 2 (measure) under way. The benchmark pod (four bundled Commander precons) plays itself through a
-Java harness that records every game as a JSON event stream; the dashboard shows per-deck win rates,
-mulligans, land drops, commander timing and the cards that never get cast, with card images from Scryfall.
-Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI on the pod, and a precon league
-(91 bundled precons over random four-player tables) scores the sim's precon ranking against the human
-win rates Playgroup.gg publishes for stock precons.
+**Status (2026-11-11):** four precons have a per-deck bot that beats the same deck under Forge's stock AI at 200
+four-player tables: Goblin Storm (20% of tables against stock's 9%), Token Triumph (33.5% against 21.5%), Hail,
+Caesar (21% against 13.5%) and Tricky Terrain (24% against 15%). A bot is a playbook for one deck: which card to
+cast when and aimed at what, which of the deck's optional triggers to take, whom to attack; every other seat stays
+stock Forge AI. The dashboard shows them in one table next to the human win rates. Underneath: the benchmark pod
+(four bundled Commander precons) plays itself through a Java harness that records every game as a JSON event
+stream; the dashboard shows per-deck win rates, mulligans, land drops, commander timing and the cards that never
+get cast, with card images from Scryfall; Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI
+on the pod; and a precon league (91 bundled precons over random four-player tables) scores the sim's precon
+ranking against the human win rates Playgroup.gg publishes for stock precons. `DESIGN.md` §21 and §22 have how the
+bots were built and measured.
 
 **Dashboard:** https://lt-lit.github.io/vibefish/ — GitHub Pages serves the `testing` branch directly (Settings → Pages → Deploy from a branch → `testing`, root). The repository root redirects to `dashboard/`, which reads `../demo-data/`; `.nojekyll` keeps Pages from processing the files.
 

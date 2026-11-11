@@ -4,7 +4,8 @@ Paired A/B results for per-deck AI data (`runner/ab.py rollup`, DESIGN.md §19),
 does not read these yet; the numbers are summarised in DESIGN.md. Each file holds the arms' win rates with Wilson
 intervals, the paired differences, and every game's seats, seed, winner and length.
 
-`2026-11-10-ab-v1b/` is the v1 arms again on 100 new tables per deck (seed 20261110, `ab-run` #2), and
+`2026-11-10-ab-v1b/` is the v1 arms again on 100 new tables per deck (seed 20261110, `ab-run` #2; consecutive seeds share the
+opponents of 69 of the 100 tables, in other seats and on other shuffles), and
 `2026-11-10-ab-v1-pooled/` pools each deck's two seeds into one 200-table measurement (`runner/ab.py pool`, kind `ab-pool`:
 games keyed by run seed and table, the same statistics).
 
@@ -57,8 +58,15 @@ be aimed at, joined with run #5's arms on its tables (48 wins, version 2's 40, s
 deck's first playbook on 200 new tables with a stock arm of its own (seed 20261142): stock 30 wins, the playbook under go-wide 48
 (+9.0 points, 33 discordant pairs against 15, exact test 0.013), 50 with key cards for the tutors, 37 under the pressure attack.
 
-`2026-11-11-ab-v9/` holds `ab-run` #15. `hail-caesar.json` is the confirming run of Hail, Caesar's shipped playbook on 200 tables it
-had not seen (seed 20261143): 42 wins against stock's 27, +7.5 points (37 discordant pairs against 22, exact test 0.07);
+`2026-11-11-ab-v9/` holds `ab-run` #15. `hail-caesar.json` is the confirming run of Hail, Caesar's shipped playbook: 200 new games
+(seed 20261143; 138 of the tables seat the same three opponents as a table of run #6, on other seats and shuffles, because the seeds
+are two apart: DESIGN.md §22 finds nothing carried over): 42 wins against stock's 27, +7.5 points (37 discordant pairs against 22, exact test 0.07);
 `hail-caesar-pooled.json` pools it with the tables that chose it (`ab.py pool`: 93 against 61 of 400, exact test 0.004).
 `quick-draw.json` is Quick Draw's first candidate against stock (seed 20261144): 38 wins against 31, +3.5 points, exact test 0.42.
 `science.json` (`ab-run` #14, seed 20261145) is Science!'s candidate against stock: 15 wins against 14.
+
+`2026-11-11-ab-archive-check/goblin-storm.json` (`ab-run` #16, 40 tables, seed 20261146) is a check of the plumbing rather
+than a measurement: the first run after `forge/fetch-forge.sh` learned to fetch a pinned snapshot from this repository's
+release `forge-runtimes`. Both shards missed the Actions cache, downloaded the 11-10 archive, verified it and played: stock 4
+wins of 40, Goblin Storm's shipped playbook (version 3) 8 (6 discordant pairs against 2). Fourteen of its tables seat the
+opponents of a run #5 table (the seeds are six apart).
