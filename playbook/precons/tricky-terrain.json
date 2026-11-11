@@ -47,5 +47,148 @@
   },
   "on": "2026-11-09",
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
+ },
+ "playbook": {
+  "version": 5,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 2,
+   "safety_margin": 5,
+   "max_reserve": 2,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Thespian's Stage"
+     ],
+     "ability": "becomes a copy",
+     "target": "Dark Depths"
+    },
+    {
+     "play": [
+      "Pongify",
+      "Beast Within"
+     ],
+     "when": [
+      "threat >= 7"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Poison Dart Frog",
+      "Growth Spiral",
+      "Chromatic Lantern"
+     ]
+    },
+    {
+     "play": [
+      "Omo, Queen of Vesuva"
+     ]
+    },
+    {
+     "play": [
+      "Dryad of the Ilysian Grove",
+      "Satyr Wayfinder",
+      "Floriferous Vinewall",
+      "Elvish Rejuvenator",
+      "Sylvan Scrying",
+      "Expedition Map"
+     ]
+    },
+    {
+     "activate": [
+      "Expedition Map"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "play": [
+      "Tatyova, Benthic Druid",
+      "Scute Swarm",
+      "Rampaging Baloths",
+      "Avenger of Zendikar",
+      "Seer's Sundial"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Hour of Promise",
+      "Urban Evolution",
+      "Eureka Moment"
+     ]
+    },
+    {
+     "play": [
+      "Apex Devastator",
+      "Mana Reflection",
+      "Hydra Broodmaster",
+      "Ulvenwald Hydra",
+      "Jyoti, Moag Ancient",
+      "Vivien Reid",
+      "Uro, Titan of Nature's Wrath",
+      "Rampant Frogantua",
+      "Sage of the Maze",
+      "Ramunap Excavator",
+      "Wonderscape Sage",
+      "Desert Warfare",
+      "Propaganda",
+      "Copy Land",
+      "Fog Bank"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Hydroid Krasis"
+     ],
+     "x": "max",
+     "x_min": 4
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Nissa, Steward of Elements"
+     ],
+     "x": "max",
+     "x_min": 3
+    }
+   ]
+  },
+  "notes": "The lands candidate (version 5: Omo at once, the land finders, landfall payoffs before the land, ramp, the big creatures on curve, X spells as mana sinks, the Marit Lage line, Pongify and Beast Within when threatened, Seer's Sundial's trigger) under the go-wide attack from two attackers up instead of the pressure attack. In sixty duels (seed 20261153) stock won 17, the pressure version 17 and this one 20: under pressure the seat held back more attackers than it sent (860 against 700) and dealt 25 damage a game where it deals 120 to three goldfish. Shipped 2026-11-11 after ab-run #11: on 200 new tables (seed 20261142) it wins 48 where stock wins 30, 24.0% against 15.0% (+9.0 points, 95% +2 to +16, 33 tables won only by it against 15 only by stock, exact test 0.013). With key cards for the tutors on top (Dark Depths and Thespian's Stage first) it wins 50, no different; the same rules under the pressure attack win 37 (demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json, DESIGN.md §22).",
+  "on": "2026-11-11",
+  "triggers": [
+   {
+    "accept": [
+     "Seer's Sundial"
+    ],
+    "when": [
+     "hand <= 3",
+     "library >= 20"
+    ]
+   }
+  ]
  }
 }

@@ -4,14 +4,14 @@
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped",
+   "status": "shipped (v3, picked on these tables; v2's confirmed figure is 20.0%)",
    "playbook": "playbook/precons/goblin-storm.json",
-   "summary": "Aims its single-target spells at Zada, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
+   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "tables": {
-    "file": "demo-data/ab/2026-11-11-ab-v5/goblin-storm.json",
+    "file": "demo-data/ab/2026-11-11-ab-v8/goblin-storm.json",
     "stock": "stock",
-    "bot": "v2",
-    "run": "ab-run #5"
+    "bot": "zadawide",
+    "run": "ab-run #11 on #5's tables"
    },
    "goldfish": "demo-data/goldfish/2026-11-10-goblin-storm/seeds-9001-9100-as-shipped.json"
   },
@@ -30,7 +30,7 @@
   },
   {
    "deck": "hail-caesar",
-   "status": "shipped, confirming run queued",
+   "status": "shipped, confirming run playing",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge declines it two times in three).",
    "tables": {
@@ -43,10 +43,16 @@
   },
   {
    "deck": "tricky-terrain",
-   "status": "candidate, at the tables",
-   "playbook": "playbook/variants/tricky-terrain-lands-wide.json",
+   "status": "shipped",
+   "playbook": "playbook/precons/tricky-terrain.json",
    "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
-   "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-seeds-8001-8040.json"
+   "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-seeds-8001-8040.json",
+   "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",
+    "stock": "stock",
+    "bot": "go_wide",
+    "run": "ab-run #11"
+   }
   },
   {
    "deck": "quick-draw",

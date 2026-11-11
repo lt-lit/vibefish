@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-11T06:51:25Z",
+ "generated": "2026-11-11T08:04:31Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -14,18 +14,18 @@
    "commanders": [
     "Zada, Hedron Grinder"
    ],
-   "status": "shipped",
+   "status": "shipped (v3, picked on these tables; v2's confirmed figure is 20.0%)",
    "playbook": "playbook/precons/goblin-storm.json",
-   "summary": "Aims its single-target spells at Zada, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
+   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "human": {
     "win_rate": 0.2093,
     "games": 218
    },
    "tables": {
-    "run": "ab-run #5",
+    "run": "ab-run #11 on #5's tables",
     "seed": 20261140,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v5/goblin-storm.json",
+    "source": "demo-data/ab/2026-11-11-ab-v8/goblin-storm.json",
     "stock": {
      "games": 200,
      "wins": 18,
@@ -37,21 +37,21 @@
     },
     "bot": {
      "games": 200,
-     "wins": 40,
-     "win_rate": 0.2,
+     "wins": 48,
+     "win_rate": 0.24,
      "win_rate_ci95": [
-      0.1505,
-      0.2609
+      0.1861,
+      0.3037
      ]
     },
-    "difference": 0.11,
+    "difference": 0.15,
     "difference_ci95": [
-     0.0468,
-     0.1732
+     0.0839,
+     0.2161
     ],
-    "bot_only": 33,
-    "stock_only": 11,
-    "exact_p": 0.0013
+    "bot_only": 40,
+    "stock_only": 10,
+    "exact_p": 0.0
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-10-goblin-storm/seeds-9001-9100-as-shipped.json",
@@ -130,7 +130,7 @@
    "commanders": [
     "Caesar, Legion's Emperor"
    ],
-   "status": "shipped, confirming run queued",
+   "status": "shipped, confirming run playing",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge declines it two times in three).",
    "human": {
@@ -188,14 +188,45 @@
    "commanders": [
     "Omo, Queen of Vesuva"
    ],
-   "status": "candidate, at the tables",
-   "playbook": "playbook/variants/tricky-terrain-lands-wide.json",
+   "status": "shipped",
+   "playbook": "playbook/precons/tricky-terrain.json",
    "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
    "human": {
     "win_rate": 0.2859,
     "games": 306
    },
-   "tables": null,
+   "tables": {
+    "run": "ab-run #11",
+    "seed": 20261142,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",
+    "stock": {
+     "games": 200,
+     "wins": 30,
+     "win_rate": 0.15,
+     "win_rate_ci95": [
+      0.1071,
+      0.2061
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 48,
+     "win_rate": 0.24,
+     "win_rate_ci95": [
+      0.1861,
+      0.3037
+     ]
+    },
+    "difference": 0.09,
+    "difference_ci95": [
+     0.0233,
+     0.1567
+    ],
+    "bot_only": 33,
+    "stock_only": 15,
+    "exact_p": 0.0133
+   },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/tricky-terrain-seeds-8001-8040.json",
     "games": 40,
