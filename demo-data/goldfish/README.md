@@ -23,3 +23,4 @@ playbook.
 attack, Caesar's attack trigger accepted every time; 10.10 turns against 12.47), Token Triumph
 (`token-triumph-cast.json`; 9.05 against 10.38), Tricky Terrain (`tricky-terrain-lands.json`, version 3; 10.64 against 13.39, with
 seven stock games and one playbook game cut off by the clock).
+Quick Draw (`quick-draw-spells.json`; 11.72 turns against 13.72) was added the same day, the fifth deck with a candidate.

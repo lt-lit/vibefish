@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-11T04:15Z",
-  "note": "Confirming run for Hail, Caesar's shipped playbook version 3 (cast rules, go-wide attack, Caesar's trigger taken when there is a token to give up): stock against playbook on 200 tables it has not seen. It was the best of four candidates on run #6's tables (51 wins against stock's 34).",
+  "requested": "2026-11-11T04:27Z",
+  "note": "Two requests in one run. Hail, Caesar: confirming run for its shipped playbook version 3 (the best of four candidates on run #6's tables), stock against playbook on 200 tables it has not seen. Quick Draw: a fifth deck's first playbook (the spell payoffs first, then every cheap spell; two turns faster than stock in goldfish) against stock on 200 tables.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -12,6 +12,11 @@
       "decks": "hail-caesar",
       "arms": "stock,playbook",
       "seed": "20261143"
+    },
+    {
+      "decks": "quick-draw@spells",
+      "arms": "stock,playbook",
+      "seed": "20261144"
     }
   ]
 }

@@ -1,0 +1,208 @@
+{
+ "schema": 1,
+ "deck": "quick-draw",
+ "variant": "draft",
+ "of": "playbook/precons/quick-draw.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Izzet Signet",
+      "Cursed Mirror",
+      "Forger's Foundry",
+      "Midnight Clock"
+     ]
+    },
+    {
+     "play": [
+      "Stella Lee, Wild Card"
+     ]
+    },
+    {
+     "play": [
+      "Pyretic Charge"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Pyretic Charge"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Leyline Dowser",
+      "Propaganda",
+      "Smoldering Stagecoach",
+      "Arcane Bombardment",
+      "Shark Typhoon"
+     ]
+    },
+    {
+     "play": [
+      "Eris, Roar of the Storm",
+      "Octavia, Living Thesis",
+      "Niv-Mizzet, Parun",
+      "Crackling Spellslinger",
+      "Archmage Emeritus",
+      "Murmuring Mystic",
+      "Storm-Kiln Artist",
+      "Talrand, Sky Summoner",
+      "Guttersnipe",
+      "Haughty Djinn",
+      "Veyran, Voice of Duality",
+      "Bloodthirsty Adversary",
+      "Electrostatic Field",
+      "Goblin Electromancer",
+      "Kaza, Roil Chaser",
+      "Third Path Iconoclast",
+      "Thunderclap Drake",
+      "Young Pyromancer",
+      "Pteramander"
+     ]
+    },
+    {
+     "play": [
+      "Faithless Looting",
+      "Ponder",
+      "Preordain",
+      "Serum Visions",
+      "Lock and Load",
+      "Tezzeret's Gambit",
+      "Treasure Cruise"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-11"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Baral's Expertise",
+    "why": "aimed"
+   },
+   {
+    "card": "Curse of the Swine",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Deep Analysis",
+    "why": "aimed"
+   },
+   {
+    "card": "Elemental Eruption",
+    "why": "storm"
+   },
+   {
+    "card": "Epic Experiment",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Expressive Iteration",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Finale of Promise",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Finale of Revelation",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Mizzix's Mastery",
+    "why": "aimed"
+   },
+   {
+    "card": "Rousing Refrain",
+    "why": "aimed"
+   },
+   {
+    "card": "Vandalblast",
+    "why": "aimed"
+   },
+   {
+    "card": "Volcanic Torrent",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Windfall",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Winged Boots",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Arcane Denial",
+    "why": "instant"
+   },
+   {
+    "card": "Big Score",
+    "why": "instant"
+   },
+   {
+    "card": "Chaos Warp",
+    "why": "instant"
+   },
+   {
+    "card": "Dig Through Time",
+    "why": "instant"
+   },
+   {
+    "card": "Galvanic Iteration",
+    "why": "instant"
+   },
+   {
+    "card": "Opt",
+    "why": "instant"
+   },
+   {
+    "card": "Pongify",
+    "why": "instant"
+   },
+   {
+    "card": "Radical Idea",
+    "why": "instant"
+   },
+   {
+    "card": "Think Twice",
+    "why": "instant"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Curse of the Swine",
+   "Epic Experiment",
+   "Mizzix's Mastery",
+   "Windfall"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Bloodthirsty Adversary",
+   "Faithless Looting"
+  ],
+  "optional_triggers": [
+   "Stella Lee, Wild Card",
+   "Bloodthirsty Adversary",
+   "Crackling Spellslinger",
+   "Arcane Bombardment"
+  ]
+ }
+}
