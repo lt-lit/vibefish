@@ -1,0 +1,145 @@
+{
+ "source": "https://playgroup.gg/cards (per-card statistics from games played on Playgroup Live, where the cards are virtual and each cast is recorded); figures read from each card's public page, multiplayer view",
+ "retrieved": "2026-11-11",
+ "license": "https://creativecommons.org/licenses/by/4.0/ (the cards page: \"the aggregate per-card stats are published under CC-BY 4.0\"; link back to the card page)",
+ "notes": [
+  "Twelve cards, the board wipes and removal of the four decks that had a shipped playbook on 2026-11-11 (DESIGN.md section 25). Read by a session, one page a card, through a page reader, not transcribed from saved copies: treat as provisional until a saved copy is transcribed. On every row played / ever_drawn equals the page's own \"Drawn -> Played\" percentage, which is the check that was possible.",
+  "times_brought: games in which the card was in a tracked deck. ever_drawn: of those, games in which it was drawn. played: games in which it was cast (the page's funnel calls it \"reached battlefield\", also for sorceries). drawn_played: the page's \"Drawn -> Played\". median_cast_turn, p25, p75: the turn of the first cast. same_turn: \"cast same turn as drawn\".",
+  "Each figure is over every deck that runs the card and every kind of table on Playgroup Live, not one precon at one table. The raw game events are not public (the cards page: \"The raw game events themselves are not public; the aggregates are what we publish\").",
+  "Nothing in the pipeline fetches playgroup.gg. runner/cardplay.py reads this file with --reference."
+ ],
+ "cards": {
+  "Oblivion Stone": {
+   "times_brought": 427,
+   "ever_drawn": 109,
+   "played": 79,
+   "drawn_played": 0.72,
+   "median_cast_turn": 6,
+   "p25": 5,
+   "p75": 8,
+   "same_turn": 0.31,
+   "page": "https://playgroup.gg/cards/oblivion-stone"
+  },
+  "Curse of the Swine": {
+   "times_brought": 2466,
+   "ever_drawn": 607,
+   "played": 354,
+   "drawn_played": 0.58,
+   "median_cast_turn": 7,
+   "p25": 6,
+   "p75": 9,
+   "same_turn": 0.28,
+   "page": "https://playgroup.gg/cards/curse-of-the-swine"
+  },
+  "Summary Dismissal": {
+   "times_brought": 215,
+   "ever_drawn": 55,
+   "played": 35,
+   "drawn_played": 0.64,
+   "median_cast_turn": 8,
+   "p25": 7,
+   "p75": 10,
+   "same_turn": 0.14,
+   "page": "https://playgroup.gg/cards/summary-dismissal"
+  },
+  "Evacuation": {
+   "times_brought": 1072,
+   "ever_drawn": 289,
+   "played": 136,
+   "drawn_played": 0.47,
+   "median_cast_turn": 8,
+   "p25": 6,
+   "p75": 9,
+   "same_turn": 0.22,
+   "page": "https://playgroup.gg/cards/evacuation"
+  },
+  "Beast Within": {
+   "times_brought": 21678,
+   "ever_drawn": 5106,
+   "played": 3236,
+   "drawn_played": 0.63,
+   "median_cast_turn": 7,
+   "p25": 6,
+   "p75": 9,
+   "same_turn": 0.27,
+   "page": "https://playgroup.gg/cards/beast-within"
+  },
+  "Pongify": {
+   "times_brought": 7458,
+   "ever_drawn": 2008,
+   "played": 1413,
+   "drawn_played": 0.7,
+   "median_cast_turn": 7,
+   "p25": 5,
+   "p75": 8,
+   "same_turn": 0.33,
+   "page": "https://playgroup.gg/cards/pongify"
+  },
+  "Ruinous Ultimatum": {
+   "times_brought": 3211,
+   "ever_drawn": 699,
+   "played": 384,
+   "drawn_played": 0.55,
+   "median_cast_turn": 8,
+   "p25": 7,
+   "p75": 9,
+   "same_turn": 0.25,
+   "page": "https://playgroup.gg/cards/ruinous-ultimatum"
+  },
+  "Martial Coup": {
+   "times_brought": 2806,
+   "ever_drawn": 703,
+   "played": 399,
+   "drawn_played": 0.57,
+   "median_cast_turn": 8,
+   "p25": 7,
+   "p75": 10,
+   "same_turn": 0.25,
+   "page": "https://playgroup.gg/cards/martial-coup"
+  },
+  "Hour of Reckoning": {
+   "times_brought": 2273,
+   "ever_drawn": 451,
+   "played": 211,
+   "drawn_played": 0.47,
+   "median_cast_turn": 9,
+   "p25": 7,
+   "p75": 11,
+   "same_turn": 0.23,
+   "page": "https://playgroup.gg/cards/hour-of-reckoning"
+  },
+  "Vault 75: Middle School": {
+   "times_brought": 245,
+   "ever_drawn": 48,
+   "played": 33,
+   "drawn_played": 0.69,
+   "median_cast_turn": 8,
+   "p25": 6,
+   "p75": 10,
+   "same_turn": 0.45,
+   "page": "https://playgroup.gg/cards/vault-75-middle-school"
+  },
+  "Citywide Bust": {
+   "times_brought": 254,
+   "ever_drawn": 70,
+   "played": 37,
+   "drawn_played": 0.53,
+   "median_cast_turn": 8,
+   "p25": 6,
+   "p75": 10,
+   "same_turn": 0.34,
+   "page": "https://playgroup.gg/cards/citywide-bust"
+  },
+  "Blasphemous Act": {
+   "times_brought": 28605,
+   "ever_drawn": 6455,
+   "played": 3585,
+   "drawn_played": 0.56,
+   "median_cast_turn": 7,
+   "p25": 6,
+   "p75": 9,
+   "same_turn": 0.26,
+   "page": "https://playgroup.gg/cards/blasphemous-act"
+  }
+ }
+}
