@@ -22,8 +22,8 @@
      ],
      "when": [
       "creatures <= 3",
-      "opp_creatures >= 3",
-      "opp_power >= 6"
+      "opp_creatures >= 4",
+      "opp_power >= 8"
      ],
      "phase": "main1"
     },
@@ -34,8 +34,8 @@
      "when": [
       "tokens >= 2",
       "creatures <= 5",
-      "opp_creatures >= 3",
-      "opp_power >= 6"
+      "opp_creatures >= 4",
+      "opp_power >= 8"
      ],
      "phase": "main1"
     },
@@ -46,8 +46,8 @@
      "when": [
       "tokens >= 4",
       "creatures <= 7",
-      "opp_creatures >= 3",
-      "opp_power >= 6"
+      "opp_creatures >= 4",
+      "opp_power >= 8"
      ],
      "phase": "main1"
     },
@@ -58,8 +58,8 @@
      "when": [
       "tokens >= 6",
       "creatures <= 9",
-      "opp_creatures >= 3",
-      "opp_power >= 6"
+      "opp_creatures >= 4",
+      "opp_power >= 8"
      ],
      "phase": "main1"
     },
@@ -70,8 +70,8 @@
      "when": [
       "tokens >= 8",
       "creatures <= 11",
-      "opp_creatures >= 3",
-      "opp_power >= 6"
+      "opp_creatures >= 4",
+      "opp_power >= 8"
      ],
      "phase": "main1"
     },
@@ -82,8 +82,8 @@
      "when": [
       "tokens >= 10",
       "creatures <= 13",
-      "opp_creatures >= 3",
-      "opp_power >= 6"
+      "opp_creatures >= 4",
+      "opp_power >= 8"
      ],
      "phase": "main1"
     },
@@ -94,8 +94,8 @@
      "when": [
       "tokens >= 12",
       "creatures <= 15",
-      "opp_creatures >= 3",
-      "opp_power >= 6"
+      "opp_creatures >= 4",
+      "opp_power >= 8"
      ],
      "phase": "main1"
     },
@@ -274,7 +274,7 @@
     }
    ]
   },
-  "notes": "DRAFT (local testing)",
+  "notes": "Version 3 with the deck's answers added. Every shipped rule is kept, in its order; rules 1 to 7, 18, 20, 22 and 23 are new. Written from the 200 games of the four bots at one table (league-run #2, seed 20261190, DESIGN.md §24: this seat won 92 and lost 108) and tried on 30 local tables of bots (seed 20269020). What those games show about the table: the opponent that kills this seat does it with tokens (at the seat's last own turn of a loss Goblin Storm has 4 nontoken creatures and 12 tokens, Tricky Terrain 5 and 40, Hail, Caesar 4 and 4), so neither board wipe answers the swarm itself; what they take is the engine behind it (Zada, Krenko and the lords; Omo, Avenger of Zendikar, the first Scute Swarm; Caesar). And Forge judges a mass removal spell by one opponent's board, the next player in turn order (DestroyAllAi.doMassRemovalLogic returns inside its loop over the opponents: with Citywide Bust in hand and three lands it was cast on 13 of the 88 own turns on which that player had a creature of printed toughness 4 or more, and on 1 of the 84 on which only another opponent had one), with the mana the rules leave. HOUR OF RECKONING (rules 1 to 7; destroy all nontoken creatures: this deck keeps its tokens and loses Emmara and whatever else is a card). Drawn in 51 league games, cast in 8, in hand at 21 losses. The seven rules are one sentence: before combat, when the wipe costs us at most three creatures and an opponent has a board of four creatures and eight power. The format has no difference of two metrics, so creatures minus tokens <= 3 is a ladder, tokens >= k with creatures <= k + 3 for k = 0, 2, ... 12 (three on an even count of tokens, two on an odd one, never with more than fifteen creatures). First in the file, so that the turn's mana is not spent on creatures the wipe would kill, and in the first main phase, where it costs seven mana (Forge's controller taps no creature for convoke before its attack is declared). The cap is from the league games: with seven mana and that board on the other side, the 24 games in which the seat had three or fewer nontoken creatures were 15 losses and 9 wins, and the 17 more in which the wipe would fire only without a cap were 11 wins and 6 losses, at four or more creatures of ours a cast: above three it is mostly a winning board that would be wiped. Under the rules as written the card would have been cast in 21 of the 48 league games with it in hand at the start of an own turn, first on own turn 8, taking 8.4 nontoken creatures from the opponents for 2.2 of ours. The bar on the other side was three creatures and six power at first: at that bar local game 11 wiped four small creatures on turn 6 with Hornet Queen and Collective Blessing in hand, and the table had rebuilt two turns later; of the league's 50 own turns that pass the low bar the raised one drops four, two of them turns on which the wipe would have taken fewer than six creatures. PATH TO EXILE (rule 18, a hold). Cast in all 40 league games it was drawn, on turn 5: 18 of the 41 casts were made with no opponent above five power on the table, 17 of them in the seat's first four turns, at Goblin Bushwhacker, Skirk Prospector, Poison Dart Frog, Searslicer Goblin and the like, each handing that opponent a land. Held until an opponent has six power on the battlefield; what it is aimed at is still Forge's choice (above that line the league's targets were Caesar, Zada, Krenko, Marit Lage, Avenger of Zendikar). CONCLAVE TRIBUNAL (rule 20). Drawn 51, cast 26, in hand at 12 losses with Caesar, Apex Devastator, Terastodon or Rampaging Baloths on the table while the mana went to creatures. Cast by rule once an opponent has six power, after the list of permanents: it takes the mana and the untapped creatures (convoke) the deck's own plays leave, in either main phase. The target of its trigger is Forge's. A first draft cast it ahead of the list (local games 1 to 10: three casts at full price before combat, Howlsquad Heavy and Caesar twice, all three games won); it was moved so that the answer does not take a turn from the anthems. NULLMAGE SHEPHERD (rules 22 and 23; AI:RemoveDeck:All, so Forge never uses it). The shipped rules cast it as a 2/4; its ability was not activated once in the 73 own turns it spent on the battlefield in 30 league games (Propaganda, Desert Warfare, Mana Reflection, Marshal's Anthem, Assemble the Legion and Impact Tremors were each on an opponent's side at the seat's last own turn in 11 to 25 of its 108 losses). Used after combat on the artifact or enchantment Forge picks, when no single opponent could attack us next turn for our life less five, the attack policy's own margin (the four creatures it taps do not block): two rungs, life 20 with threat 14 and life 40 with threat 34. LEFT WITH FORGE. Citywide Bust (drawn 48, cast 19, in hand at 11 losses; its casts took a commander nearly every time): no condition sees toughness, ours or theirs, and ours moves with every anthem, so a rule would cast it blind; with our own side clean it would have hit nothing in 7 of 29 league games and one creature in 12. Devouring Light (47 casts, at attackers: Omo 8, Caesar 6, Zada 4), Aura Mutation, Sylvan Reclamation and Reclamation Sage (cast in 73 to 91% of the games they were drawn, at what Forge rates highest, mana rocks included). Rootborn Defenses and Dauntless Escort answer a wipe at instant speed, which no rule reaches. LOCAL TABLES (30 games, tables 1 to 30 of seed 20269020, the other three seats under their shipped playbooks; games 1 to 10 the first draft, 11 to 20 with the Tribunal behind the list and the Shepherd's guard, 21 to 30 the rules as written here; the seat won 18, which is too few games to mean anything). Hour of Reckoning: in hand in 7 games, cast in 4, all by rule: 3 creatures of ours for 9 of theirs (game 5), 2 for 4 (game 11, the low bar), 1 for 8 (game 23: Zada, Krenko, General Kreat, Omo, Ulvenwald Hydra, Acidic Slime, Caesar, Pitiless Plunderer) and 1 for 9 (game 25); not cast with seven nontoken creatures of ours on the table or against a last opponent without a board. Path to Exile: 12 of 12, the hold turning Forge down in five games, then Caesar three times, Hydra Broodmaster and Goblin Dark-Dwellers twice each, Zada, Krenko, Avenger of Zendikar, Goblin Trashmaster and once a token. Conclave Tribunal: 10 of 10 (8 by rule): Caesar four times, Omo twice, Howlsquad Heavy, Avenger of Zendikar, Terastodon, Mana Reflection. Nullmage Shepherd: two activations in the 8 games it was cast (the go-wide attack seldom leaves four creatures untapped). Citywide Bust, Forge's: 2 of 7. Not judged here: whether any of it wins games; that is for 200 tables.",
   "on": "2026-11-11"
  }
 }

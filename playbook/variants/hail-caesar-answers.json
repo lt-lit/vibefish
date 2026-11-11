@@ -50,12 +50,26 @@
     {
      "play": [
       "Martial Coup",
+      "The Nipton Lottery",
+      "Vault 75: Middle School"
+     ],
+     "x": "max",
+     "x_min": 5,
+     "when": [
+      "threat >= life",
+      "threat >= 50",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Martial Coup",
       "The Nipton Lottery"
      ],
      "x": "max",
      "x_min": 5,
      "when": [
-      "threat >= 30",
+      "threat >= 20",
       "opp_power > power",
       "creatures <= 4"
      ]
@@ -69,15 +83,6 @@
      "when": [
       "creatures <= 1",
       "opp_creatures >= 5"
-     ]
-    },
-    {
-     "play": [
-      "Vault 75: Middle School"
-     ],
-     "when": [
-      "not controls Caesar, Legion's Emperor",
-      "threat >= 20"
      ]
     },
     {
