@@ -1,0 +1,252 @@
+{
+ "schema": 1,
+ "deck": "tricky-terrain",
+ "variant": "answers",
+ "of": "playbook/precons/tricky-terrain.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 6,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 2,
+   "safety_margin": 5,
+   "max_reserve": 2,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Oblivion Stone"
+     ],
+     "ability": "Destroy each nonland permanent",
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 5",
+      "not controls Propaganda"
+     ],
+     "before_land": true
+    },
+    {
+     "activate": [
+      "Oblivion Stone"
+     ],
+     "ability": "Destroy each nonland permanent",
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ],
+     "before_land": true
+    },
+    {
+     "activate": [
+      "Oblivion Stone"
+     ],
+     "ability": "Destroy each nonland permanent",
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opponents == 1"
+     ],
+     "before_land": true
+    },
+    {
+     "activate": [
+      "Thespian's Stage"
+     ],
+     "ability": "becomes a copy",
+     "target": "Dark Depths"
+    },
+    {
+     "play": [
+      "Propaganda"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Evacuation"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 5",
+      "power < 20"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Evacuation"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures",
+      "threat >= life",
+      "power < 20"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Evacuation"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opponents == 1",
+      "power < 20"
+     ],
+     "before_land": true
+    },
+    {
+     "hold": [
+      "Evacuation"
+     ]
+    },
+    {
+     "play": [
+      "Oblivion Stone"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Pongify",
+      "Beast Within"
+     ],
+     "when": [
+      "threat >= 7"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Poison Dart Frog",
+      "Growth Spiral",
+      "Chromatic Lantern"
+     ]
+    },
+    {
+     "play": [
+      "Omo, Queen of Vesuva"
+     ]
+    },
+    {
+     "play": [
+      "Dryad of the Ilysian Grove",
+      "Satyr Wayfinder",
+      "Floriferous Vinewall",
+      "Elvish Rejuvenator",
+      "Sylvan Scrying",
+      "Expedition Map"
+     ]
+    },
+    {
+     "activate": [
+      "Expedition Map"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "play": [
+      "Tatyova, Benthic Druid",
+      "Scute Swarm",
+      "Rampaging Baloths",
+      "Avenger of Zendikar",
+      "Seer's Sundial"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Hour of Promise",
+      "Urban Evolution",
+      "Eureka Moment"
+     ]
+    },
+    {
+     "play": [
+      "Apex Devastator",
+      "Mana Reflection",
+      "Hydra Broodmaster",
+      "Ulvenwald Hydra",
+      "Jyoti, Moag Ancient",
+      "Vivien Reid",
+      "Uro, Titan of Nature's Wrath",
+      "Rampant Frogantua",
+      "Sage of the Maze",
+      "Ramunap Excavator",
+      "Wonderscape Sage",
+      "Desert Warfare",
+      "Propaganda",
+      "Copy Land",
+      "Fog Bank"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Oblivion Stone"
+     ]
+    },
+    {
+     "play": [
+      "Hydroid Krasis"
+     ],
+     "x": "max",
+     "x_min": 4
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Nissa, Steward of Elements"
+     ],
+     "x": "max",
+     "x_min": 3
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Seer's Sundial"
+    ],
+    "when": [
+     "hand <= 3",
+     "library >= 20"
+    ]
+   }
+  ],
+  "notes": "DRAFT v6"
+ }
+}
