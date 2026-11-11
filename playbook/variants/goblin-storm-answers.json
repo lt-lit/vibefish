@@ -17,6 +17,16 @@
   "cast": {
    "rules": [
     {
+     "activate": [
+      "Goblin Bombardment"
+     ],
+     "when": [
+      "opp_life <= 5",
+      "creatures >= opp_life"
+     ],
+     "times": 60
+    },
+    {
      "play": [
       "Sol Ring",
       "Ruby Medallion"
@@ -287,6 +297,11 @@
       "Frontline Heroism",
       "Quest for the Goblin Lord",
       "Faithless Looting"
+     ]
+    },
+    {
+     "play": [
+      "Goblin Bombardment"
      ]
     },
     {
