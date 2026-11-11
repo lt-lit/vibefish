@@ -135,3 +135,11 @@ runner/ab.py play --deck goblin-storm --arms stock,playbook ...   # then the sam
 Goldfish measures whether the seat runs its own deck (what it casts, in what order, how fast it kills three opponents
 that do nothing); it says nothing about blocking, removal or being attacked, which is what the tables are for.
 `runner/ab.py` has `playbook` and `playbookdata` arms.
+
+## `variants/`
+
+Candidate playbooks that are not the deck's shipped one: `variants/<deck>-<name>.json` holds a `playbook` object (and
+says what it is a variant of). `runner/ab.py --data playbook/variants/<deck>-<name>.json` plays one locally, and the
+`ab-run` workflow takes `deck@name` in its deck list, so several candidates can be measured side by side on the same
+tables before one of them replaces the playbook in `precons/`. A variant carries no deck data: the data arms need the
+deck's own file.

@@ -1,0 +1,242 @@
+{
+ "schema": 1,
+ "deck": "goblin-storm",
+ "variant": "pressure3",
+ "of": "playbook/precons/goblin-storm.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "attack": {
+   "policy": "pressure",
+   "target": "highest_life",
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "damage_per_loss": 3
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Ruby Medallion"
+     ]
+    },
+    {
+     "activate": [
+      "Krenko, Mob Boss"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3",
+      "creatures <= 12",
+      "library >= 40"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Fists of Flame",
+      "Witch's Mark"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3",
+      "creatures <= 12",
+      "library >= 40"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Wild Ride"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid",
+      "Fists of Flame",
+      "Witch's Mark",
+      "Wild Ride"
+     ],
+     "until": [
+      "turn >= 12",
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid",
+      "Fists of Flame",
+      "Witch's Mark",
+      "Wild Ride"
+     ],
+     "until": [
+      "life <= 15",
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Fountainport"
+     ],
+     "ability": "Sacrifice a token"
+    },
+    {
+     "play": [
+      "Battle Hymn"
+     ],
+     "when": [
+      "creatures >= 4",
+      "hand >= 3",
+      "mana <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Brightstone Ritual"
+     ],
+     "when": [
+      "type:Goblin >= 4",
+      "hand >= 3",
+      "mana <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Battle Hymn",
+      "Brightstone Ritual"
+     ]
+    },
+    {
+     "play": [
+      "Haze of Rage"
+     ],
+     "when": [
+      "attackers >= 5"
+     ],
+     "phase": "main1",
+     "times": 6
+    },
+    {
+     "hold": [
+      "Haze of Rage"
+     ]
+    },
+    {
+     "play": [
+      "Empty the Warrens"
+     ],
+     "when": [
+      "storm >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "Empty the Warrens"
+     ],
+     "until": [
+      "storm >= 2"
+     ]
+    },
+    {
+     "hold": [
+      "Grapeshot"
+     ],
+     "until": [
+      "storm >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Zada, Hedron Grinder"
+     ],
+     "when": [
+      "creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Krenko, Mob Boss",
+      "Siege-Gang Commander",
+      "Goblin Warchief",
+      "Goblin Chieftain",
+      "Storm-Kiln Artist",
+      "Impact Tremors",
+      "Mogg War Marshal",
+      "Dragon Fodder",
+      "Krenko's Command",
+      "Howlsquad Heavy",
+      "General Kreat, the Boltbringer",
+      "Siege-Gang Lieutenant",
+      "Idol of Oblivion",
+      "Rundvelt Hordemaster",
+      "Goblin Trashmaster",
+      "Searslicer Goblin",
+      "Redcap Gutter-Dweller",
+      "Goblin Lackey",
+      "Skirk Prospector",
+      "Conspicuous Snoop",
+      "Goblin Matron",
+      "Goblin Dark-Dwellers",
+      "Pashalik Mons",
+      "Grenzo, Havoc Raiser",
+      "Frontline Heroism",
+      "Quest for the Goblin Lord",
+      "Faithless Looting"
+     ]
+    },
+    {
+     "activate": [
+      "Skullclamp"
+     ],
+     "ability": "Equip",
+     "target": "Goblin Token",
+     "when": [
+      "not controls Goblin Chieftain",
+      "not controls Rundvelt Hordemaster",
+      "not controls Goblin Trashmaster",
+      "library >= 20"
+     ],
+     "phase": "main2",
+     "times": 2
+    }
+   ]
+  },
+  "notes": "Version 2's cast rules with the pressure attack: a Goblin a blocker would kill stays home unless the damage the swing gets through is three times the creatures it loses.",
+  "on": "2026-11-10"
+ }
+}

@@ -1,12 +1,13 @@
 {
-  "requested": "2026-11-10T23:58Z",
-  "note": "Does aiming the go-wide attack at the highest life (with the split) carry over from Goblin Storm? Token Triumph and Hail, Caesar, playbook version 2 (attack only, no cast rules yet) against stock, 200 tables each, on the cached 11-10 build.",
-  "decks": "token-triumph,hail-caesar",
+  "requested": "2026-11-11T00:28Z",
+  "note": "Four candidate playbooks for Goblin Storm on the 200 tables of run #5 (same seed, so each pairs with that run's stock and version-2 arms): the pressure attack at two settings, pressure with two rules for a lost board, pressure with Zada held until she can be aimed at. Playbook arm only.",
+  "decks": "goblin-storm@pressure3,goblin-storm@pressure2,goblin-storm@table,goblin-storm@zadahold",
   "games": "200",
-  "arms": "stock,playbook",
+  "arms": "playbook",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
-  "seed": "20261141",
+  "opponents": "3",
+  "seed": "20261140",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10"
 }

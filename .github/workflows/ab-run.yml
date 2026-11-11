@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       decks:
-        description: "Deck ids, comma-separated (ids from runner/precon-league.json)"
+        description: "Deck ids, comma-separated (ids from runner/precon-league.json); deck@variant plays playbook/variants/<deck>-<variant>.json"
         default: "token-triumph,goblin-storm,tricky-terrain,hail-caesar"
       games:
         description: "Tables per deck (each played once per arm)"
@@ -25,6 +25,9 @@ on:
       jobs_per_shard:
         description: "Games at a time per shard"
         default: "2"
+      opponents:
+        description: "Opponents at each table: 3 (four-player tables, the default) or 1 (duels: a faster read on combat, blind to table politics)"
+        default: "3"
       seed:
         description: "Base seed (blank = today's date)"
         default: ""
@@ -56,6 +59,7 @@ jobs:
       arms: ${{ steps.vals.outputs.arms }}
       shards_per_deck: ${{ steps.vals.outputs.shards_per_deck }}
       jobs_per_shard: ${{ steps.vals.outputs.jobs_per_shard }}
+      opponents: ${{ steps.vals.outputs.opponents }}
       seed: ${{ steps.vals.outputs.seed }}
       forge_channel: ${{ steps.vals.outputs.forge_channel }}
       snapshot_build: ${{ steps.vals.outputs.snapshot_build }}
@@ -70,6 +74,7 @@ jobs:
           IN_ARMS: ${{ inputs.arms }}
           IN_SHARDS_PER_DECK: ${{ inputs.shards_per_deck }}
           IN_JOBS_PER_SHARD: ${{ inputs.jobs_per_shard }}
+          IN_OPPONENTS: ${{ inputs.opponents }}
           IN_SEED: ${{ inputs.seed }}
           IN_FORGE_CHANNEL: ${{ inputs.forge_channel }}
           IN_FORGE_SNAPSHOT_BUILD: ${{ inputs.forge_snapshot_build }}
@@ -77,7 +82,7 @@ jobs:
           python3 - <<'PY' | tee -a "$GITHUB_OUTPUT"
           import datetime, json, os
           vals = {"decks": "token-triumph,goblin-storm,tricky-terrain,hail-caesar", "games": "100", "arms": "stock,data,mc,mcdata",
-                  "shards_per_deck": "5", "jobs_per_shard": "2", "seed": "", "forge_channel": "snapshot",
+                  "shards_per_deck": "5", "jobs_per_shard": "2", "opponents": "3", "seed": "", "forge_channel": "snapshot",
                   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.08"}
           if os.environ["EVENT"] == "push":
               queued = json.load(open("runner/queue/ab-run.json"))
@@ -90,7 +95,14 @@ jobs:
           for k, v in vals.items():
               print(f"{k}={v}")
           print("snapshot_build=" + (vals["forge_snapshot_build"] if vals["forge_channel"] == "snapshot" else ""))
-          print("matrix=" + json.dumps([{"deck": d, "shard": k} for d in decks for k in range(1, int(vals["shards_per_deck"]) + 1)]))
+          # "deck@variant" plays the deck with playbook/variants/<deck>-<variant>.json in place of its own file, so
+          # several candidate playbooks can be measured side by side without any of them being the shipped one.
+          matrix = []
+          for entry in decks:
+              deck, _, variant = entry.partition("@")
+              data = f"playbook/variants/{deck}-{variant}.json" if variant else ""
+              matrix += [{"entry": entry, "deck": deck, "data": data, "shard": k} for k in range(1, int(vals["shards_per_deck"]) + 1)]
+          print("matrix=" + json.dumps(matrix))
           PY
 
   shard:
@@ -119,24 +131,27 @@ jobs:
       - run: forge/fetch-forge.sh
       - name: Arm profiles
         run: runner/make-arm-profiles.sh forge/runtime
-      - name: Play ${{ matrix.deck }} shard ${{ matrix.shard }}
+      - name: Play ${{ matrix.entry }} shard ${{ matrix.shard }}
         run: |
+          DATA=()
+          if [ -n "${{ matrix.data }}" ]; then DATA=(--data "${{ matrix.data }}"); fi
           python3 -I runner/ab.py play --deck "${{ matrix.deck }}" --games "${{ needs.prep.outputs.games }}" --seed "${{ needs.prep.outputs.seed }}" \
-            --out "results/ab-${{ matrix.deck }}" --runtime forge/runtime --arms "${{ needs.prep.outputs.arms }}" \
-            --shards "${{ needs.prep.outputs.shards_per_deck }}" --shard "${{ matrix.shard }}" -j "${{ needs.prep.outputs.jobs_per_shard }}"
+            --out "results/ab-${{ matrix.entry }}" --runtime forge/runtime --arms "${{ needs.prep.outputs.arms }}" \
+            --shards "${{ needs.prep.outputs.shards_per_deck }}" --shard "${{ matrix.shard }}" -j "${{ needs.prep.outputs.jobs_per_shard }}" \
+            --opponents "${{ needs.prep.outputs.opponents }}" "${DATA[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: ab-${{ matrix.deck }}-${{ matrix.shard }}
+          name: ab-${{ matrix.entry }}-${{ matrix.shard }}
           path: |
-            results/ab-${{ matrix.deck }}/arm-*/
-            results/ab-${{ matrix.deck }}/ab.json
+            results/ab-${{ matrix.entry }}/arm-*/
+            results/ab-${{ matrix.entry }}/ab.json
           retention-days: 90
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: ab-${{ matrix.deck }}-${{ matrix.shard }}-log
-          path: results/ab-${{ matrix.deck }}/play.log
+          name: ab-${{ matrix.entry }}-${{ matrix.shard }}-log
+          path: results/ab-${{ matrix.entry }}/play.log
           retention-days: 30
 
   rollup:
