@@ -112,3 +112,10 @@ Triumph 80 against 83 (-1.5, -6 to +3, 0.65). Hail, Caesar's and Goblin Storm's 
 `2026-11-12-ab-v14/` (`ab-run` #22, seed 20261220): two candidates that had only met stock tables, at 200 tables of bots each, stock pilot
 against candidate. Quick Draw `spells` 39 wins against 32 (+3.5 points, 95% -3 to +10, exact test 0.40); Science! `lab` 4 against 7
 (-1.5, -4 to +1).
+
+`2026-11-12-ab-v15/` (`ab-run` #23 to #25, seeds 20261210, 20261230 and 20261200; all queued before the pool's Hail, Caesar, Goblin
+Storm and Tricky Terrain changed version, so they play the pool as it was): the attack question. A candidate's rules with the go-wide
+attack and with Forge's own attack on the same 200 tables of bots, beside the stock pilot; `<deck>-join.json` has the three arms (kind
+`ab-join`). In so far: Limit Break (#25, on the code with the equip check) stock 24, go-wide 28, Forge's attack 47 (+11.5 points on stock,
+95% +5 to +18, exact test 0.0006; +9.5 on go-wide, 0.0005); Eldrazi Incursion (#24) stock 62, go-wide 52, Forge's attack 64 (+1.0 on
+stock, -7 to +9; +6.0 on go-wide, 0.065).
