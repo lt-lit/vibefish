@@ -102,7 +102,9 @@ Outside the seat's own main phases only the holds apply.
 | `{"hold": [cards]}` | Forge's AI may not cast these cards, from any zone, nor use the activated abilities of these permanents (`ability`: only the one whose text it quotes). A `play` or `activate` rule still may, which is how "only this way" is written. A card named by several hold rules is released as soon as one of them is | `until` (released when all of these hold; never, without it), `ability` |
 
 - `target`: the name of a permanent we control (a token by Forge's name for it, `Goblin Token`). The spell must have
-  exactly one part that takes a target, and it is pointed at that permanent and nothing else. Without `target`, a spell
+  exactly one part that takes a target, and it is pointed at that permanent and nothing else. An Equip ability is not
+  used on the creature that already wears the equipment (since 2026-11-12: Forge allows it, and a rule without that
+  check paid for the same equip every turn). Without `target`, a spell
   that needs no choice is cast as it is; one that needs targets or an X is cast only if Forge's own logic for the card
   agrees, since that logic is what picks them.
 - `phase`: `main` (either main phase, the default), `main1` or `main2`.

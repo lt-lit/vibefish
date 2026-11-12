@@ -934,6 +934,12 @@ public class PlaybookController extends PlayerControllerAi {
         SpellAbility aimed = null;
         SpellAbility paidX = null;
         if (target != null) {
+            // An Equip aimed at the creature that already wears the equipment attaches nothing and costs the mana
+            // (Limit Break, 2026-11-12: 308 of 429 firings of its equip rule re-attached what Cloud already wore).
+            Card host = sa.getHostCard();
+            if (sa.isEquip() && host != null && host.isAttachedToEntity(target)) {
+                return false;
+            }
             // The rule aims at one permanent, so the spell must have exactly one part that takes a target (the spell
             // itself, or the sub-ability that does: Fists of Flame draws first and pumps its target second).
             int parts = 0;
