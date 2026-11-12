@@ -1,0 +1,148 @@
+{
+ "schema": 1,
+ "deck": "eldrazi-incursion",
+ "variant": "ulalek-forgeattack",
+ "of": "playbook/variants/eldrazi-incursion-ulalek.json",
+ "about": "The ulalek candidate's cast and trigger rules with Forge's own attack. Only the playbook object is read.",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Eldrazi Monument"
+     ],
+     "until": [
+      "creatures >= 5",
+      "tokens >= 2"
+     ]
+    },
+    {
+     "hold": [
+      "Sire of Stagnation"
+     ],
+     "until": [
+      "not controls Ulalek, Fused Atrocity"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Ulalek, Fused Atrocity"
+     ]
+    },
+    {
+     "play": [
+      "Sire of Stagnation"
+     ],
+     "when": [
+      "not controls Ulalek, Fused Atrocity"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Talisman of Curiosity",
+      "Talisman of Dominance",
+      "Talisman of Impulse",
+      "Talisman of Resilience",
+      "Hedron Archive"
+     ]
+    },
+    {
+     "play": [
+      "Herald's Horn",
+      "Forsaken Monument",
+      "Ugin, the Ineffable",
+      "Awakening Zone",
+      "Garruk's Uprising",
+      "Mystic Forge",
+      "Dreamstone Hedron"
+     ]
+    },
+    {
+     "play": [
+      "Ulamog's Dreadsire",
+      "Artisan of Kozilek",
+      "Elder Deep-Fiend",
+      "Ulamog's Crusher",
+      "Benthic Anomaly",
+      "Hideous Taskmaster",
+      "Morophon, the Boundless",
+      "Spawnbed Protector",
+      "Twins of Discord",
+      "World Breaker",
+      "Skittering Invasion",
+      "Angelic Aberration",
+      "Deepfathom Skulker",
+      "Drowner of Hope",
+      "Endbringer",
+      "Oblivion Sower",
+      "Titans' Vanguard",
+      "Bismuth Mindrender",
+      "Inversion Behemoth",
+      "Sifter of Skulls",
+      "Ulamog's Nullifier",
+      "Azlask, the Swelling Scourge",
+      "Chittering Dispatcher",
+      "Eldrazi Displacer",
+      "Glaring Fleshraker",
+      "Mutated Cultist",
+      "Snapping Voidcraw",
+      "Vile Redeemer",
+      "Wastescape Battlemage"
+     ]
+    },
+    {
+     "activate": [
+      "Ulamog's Dreadsire"
+     ],
+     "phase": "main2"
+    },
+    {
+     "play": [
+      "Ugin's Insight",
+      "Rishkar's Expertise"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Create a 10/10"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "phase": "main2"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Ulalek, Fused Atrocity"
+    ],
+    "when": [
+     "mana <= 10"
+    ]
+   },
+   {
+    "decline": [
+     "Ulalek, Fused Atrocity"
+    ]
+   }
+  ],
+  "notes": "The ulalek candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a run on the same tables as the go-wide version (DESIGN §27). Generated from playbook/variants/eldrazi-incursion-ulalek.json on 2026-11-12; cast, trigger and mulligan rules are that file's, unchanged.",
+  "on": "2026-11-12"
+ }
+}
