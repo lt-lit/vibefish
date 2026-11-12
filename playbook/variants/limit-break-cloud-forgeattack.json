@@ -1,0 +1,175 @@
+{
+ "schema": 1,
+ "deck": "limit-break",
+ "variant": "cloud-forgeattack",
+ "of": "playbook/variants/limit-break-cloud.json",
+ "about": "The cloud candidate's cast and trigger rules with Forge's own attack. Only the playbook object is read.",
+ "playbook": {
+  "version": 6,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Cloud, Ex-SOLDIER"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Bugenhagen, Wise Elder",
+      "Rampant Growth",
+      "Nature's Lore",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "Wrecking Ball Arm",
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Hero's Blade",
+      "Champion's Helm"
+     ]
+    },
+    {
+     "play": [
+      "Puresteel Paladin",
+      "Cid, Freeflier Pilot",
+      "Bastion Protector",
+      "Tifa, Martial Artist",
+      "Inspiring Statuary",
+      "SOLDIER Military Program",
+      "Furious Rise"
+     ]
+    },
+    {
+     "play": [
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist",
+      "Skullclamp",
+      "Conformer Shuriken",
+      "Summoning Materia"
+     ]
+    },
+    {
+     "play": [
+      "Barret Wallace",
+      "Barret, Avalanche Leader",
+      "Heidegger, Shinra Executive",
+      "Sephiroth, Fallen Hero",
+      "Bronze Guardian",
+      "Cait Sith, Fortune Teller",
+      "Vincent, Vengeful Atoner",
+      "Professional Face-Breaker",
+      "Aerith, Last Ancient",
+      "Hellkite Tyrant",
+      "Helitrooper",
+      "Zack Fair",
+      "Professor Hojo",
+      "Armory Automaton",
+      "Red XIII, Proud Warrior",
+      "Elena, Turk Recruit"
+     ]
+    },
+    {
+     "activate": [
+      "Wrecking Ball Arm"
+     ],
+     "ability": "legendary",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Champion's Helm",
+      "Hero's Blade",
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist"
+     ],
+     "ability": "Equip",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Slayers' Stronghold"
+     ],
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Bonders' Enclave"
+     ],
+     "phase": "main2",
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Lightning Greaves"
+     ],
+     "ability": "Equip"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Armory Automaton"
+    ],
+    "when": [
+     "controls Cloud, Ex-SOLDIER"
+    ]
+   },
+   {
+    "accept": [
+     "Puresteel Paladin",
+     "Mask of Memory"
+    ],
+    "when": [
+     "library >= 30"
+    ]
+   },
+   {
+    "accept": [
+     "Hero's Blade",
+     "SOLDIER Military Program",
+     "Furious Rise",
+     "Sword of the Animist",
+     "Explorer's Scope",
+     "Professional Face-Breaker",
+     "Cait Sith, Fortune Teller",
+     "Sephiroth, Fallen Hero"
+    ]
+   }
+  ],
+  "notes": "The cloud candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a run on the same tables as the go-wide version (DESIGN §27). Generated from playbook/variants/limit-break-cloud.json on 2026-11-12; cast, trigger and mulligan rules are that file's, unchanged."
+ }
+}

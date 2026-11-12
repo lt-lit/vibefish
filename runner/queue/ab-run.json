@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-12T01:40Z",
-  "note": "Eldrazi Incursion joins its batch at the bot tables: eldrazi-incursion@ulalek, stock pilot against candidate, and its Forge-attack sibling on the same tables (playbook arm), seed 20261230, opponents drawn from the four bot decks under their shipped playbooks. The request before this one, commit 53c732b, is ab-run #23 (the attack question for every deck and the rest of the batch).",
+  "requested": "2026-11-12T02:05Z",
+  "note": "Limit Break joins its batch at the bot tables now that the controller no longer re-equips what Cloud already wears (commit 5c293e4; the candidate then gains half a turn in goldfish on fresh seeds): limit-break@cloud, stock pilot against candidate, and its Forge-attack sibling on the same tables (playbook arm), seed 20261230, opponents drawn from the four bot decks under their shipped playbooks. This is the first run on the code with that check. The requests before this one: commit 5f69ddc is ab-run #24 (Eldrazi Incursion), 53c732b is #23.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,12 +11,12 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "eldrazi-incursion@ulalek",
+      "decks": "limit-break@cloud",
       "arms": "stock,playbook",
       "seed": "20261230"
     },
     {
-      "decks": "eldrazi-incursion@ulalek-forgeattack",
+      "decks": "limit-break@cloud-forgeattack",
       "arms": "playbook",
       "seed": "20261230"
     }
