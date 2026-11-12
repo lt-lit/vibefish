@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-12T00:10Z",
-  "note": "Answer rules for the four shipped bots (DESIGN \u00a724, \u00a726): each deck's candidate playbook/variants/<deck>-answers.json, the shipped rules plus rules that cast the deck's wipes and removal, at the 200 tables of ab-run #20 (the same pool, opponents under their shipped playbooks, seed 20261200). Playbook arm only: runner/ab.py join pairs it with #20's stock arm and with #20's shipped-playbook arm. A candidate replaces the shipped version if it wins more of those tables than the shipped version does and loses fewer games with a castable answer in hand.",
+  "requested": "2026-11-12T00:25Z",
+  "note": "Two candidates that had only met stock tables sit the exam at tables of bots: quick-draw@spells and science@lab (playbook/variants/README.md), each at 200 tables whose opponents are drawn from the four bot decks under their shipped playbooks, stock pilot against candidate, seed 20261220. Part of the road to twelve bots (CLAUDE.md, Status). The request before this one, commit cd34c5f, is ab-run #21: the answer rules of the shipped four on #20's tables.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,9 +11,9 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "goblin-storm@answers,token-triumph@answers,hail-caesar@answers,tricky-terrain@answers",
-      "arms": "playbook",
-      "seed": "20261200"
+      "decks": "quick-draw@spells,science@lab",
+      "arms": "stock,playbook",
+      "seed": "20261220"
     }
   ]
 }
