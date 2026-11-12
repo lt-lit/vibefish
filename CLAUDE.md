@@ -163,7 +163,7 @@ The owner's plan: twelve bots for a well-rounded meta, then refine all of them u
 | Limit Break | RGW, equipment on the commander | `cloud`: nothing in goldfish (11.07 turns against 11.03). Its equip rule re-attaches what Cloud already wears, 308 of 429 firings; measure the same file again once `PlaybookController` skips an equip onto the creature already wearing it (a small Java change, after the agents have finished playing) |
 | Elven Council | GU, elves | candidate `grove`: goldfish 10.47 against 13.07 (+2.60, 95% +2.04 to +3.16); exam with its batch |
 | Eldrazi Incursion | five colours, ramp into large Eldrazi | being written (started when Sultai Arisen fell out) |
-| Enduring Enchantments | WBG, enchantments and the graveyard | being written |
+| Enduring Enchantments | WBG, enchantments and the graveyard | candidate `nyx`: goldfish 10.95 turns against 12.82 (+2.31, 95% +1.53 to +3.09; 39 games of 40 finished against stock's 33; stock never casts the commander); exam with its batch |
 | Sultai Arisen | BGU, graveyard | dropped: `graves` gained half a turn in goldfish (+0.50, 95% +0.08 to +0.92); stock already plays the deck and its engine, casting from the graveyard, is out of the rules' reach |
 
 The four new ones were chosen for what the pool lacks (black, a commander that wins by itself, a tribe, the graveyard), among decks stock AI plays poorly (15%, 17%, 8% and 16% in the stock league). What the pool still lacks after them: a deck that plays on other players' turns (control, counterspells) and one that wins by milling, both out of the rule format's reach until a playbook can act outside its own main phase (Next 5).

@@ -42,4 +42,5 @@ Seed blocks used by this batch: 2001 to 2140, 2301 to 2440, 2601 to 2740, 3101 t
 `elven-council-seeds-13101-13140.json` (`playbook/variants/elven-council-grove.json`: 10.47 turns against 13.07);
 `wretched-ranks-seeds-11101-11140.json` (`wretched-ranks-gisa.json`: 9.85 against 10.63 on the 38 seeds both arms won);
 `sultai-arisen-seeds-14101-14140.json` (`sultai-arisen-graves.json`: 12.15 against 12.65, not sent to the tables);
-`limit-break-seeds-12101-12140.json` (`limit-break-cloud.json`: 11.07 against 11.03, nothing).
+`limit-break-seeds-12101-12140.json` (`limit-break-cloud.json`: 11.07 against 11.03, nothing);
+`enduring-enchantments-seeds-16101-16140.json` (`enduring-enchantments-nyx.json`: 10.95 against 12.82 on the 32 seeds both arms won).
