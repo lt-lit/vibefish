@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "deck": "eldrazi-incursion",
+  "variant": "ulalek",
+  "of": "playbook/precons/eldrazi-incursion.json",
+  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+  "playbook": {
+    "version": 1,
+    "attack": {
+      "policy": "go_wide",
+      "target": "highest_life",
+      "min_attackers": 3,
+      "safety_margin": 5,
+      "max_reserve": 3,
+      "spread": true
+    },
+    "cast": {
+      "rules": [
+        {
+          "play": [
+            "Sol Ring",
+            "Arcane Signet",
+            "Talisman of Curiosity",
+            "Talisman of Dominance",
+            "Talisman of Impulse",
+            "Talisman of Resilience",
+            "Hedron Archive"
+          ]
+        },
+        {
+          "play": [
+            "Ulalek, Fused Atrocity"
+          ]
+        },
+        {
+          "play": [
+            "Herald's Horn",
+            "Forsaken Monument",
+            "Ugin, the Ineffable",
+            "Awakening Zone",
+            "Garruk's Uprising",
+            "Mystic Forge",
+            "Dreamstone Hedron"
+          ]
+        },
+        {
+          "play": [
+            "Ulamog's Dreadsire",
+            "Artisan of Kozilek",
+            "Elder Deep-Fiend",
+            "Ulamog's Crusher",
+            "Benthic Anomaly",
+            "Hideous Taskmaster",
+            "Morophon, the Boundless",
+            "Spawnbed Protector",
+            "Twins of Discord",
+            "World Breaker",
+            "Skittering Invasion",
+            "Angelic Aberration",
+            "Deepfathom Skulker",
+            "Drowner of Hope",
+            "Endbringer",
+            "Oblivion Sower",
+            "Sire of Stagnation",
+            "Titans' Vanguard",
+            "Bismuth Mindrender",
+            "Inversion Behemoth",
+            "Sifter of Skulls",
+            "Ulamog's Nullifier",
+            "Azlask, the Swelling Scourge",
+            "Chittering Dispatcher",
+            "Eldrazi Displacer",
+            "Glaring Fleshraker",
+            "Mutated Cultist",
+            "Snapping Voidcraw",
+            "Vile Redeemer",
+            "Wastescape Battlemage"
+          ]
+        },
+        {
+          "activate": [
+            "Ulamog's Dreadsire"
+          ],
+          "phase": "main2"
+        },
+        {
+          "play": [
+            "Ugin's Insight",
+            "Rishkar's Expertise"
+          ],
+          "when": [
+            "library >= 30"
+          ]
+        }
+      ]
+    },
+    "triggers": [
+      {
+        "accept": [
+          "Ulalek, Fused Atrocity"
+        ],
+        "when": [
+          "mana <= 10"
+        ]
+      },
+      {
+        "decline": [
+          "Ulalek, Fused Atrocity"
+        ]
+      }
+    ],
+    "notes": "work in progress"
+  }
+}
