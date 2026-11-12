@@ -26,6 +26,14 @@
           ]
         },
         {
+          "hold": [
+            "Sire of Stagnation"
+          ],
+          "until": [
+            "not controls Ulalek, Fused Atrocity"
+          ]
+        },
+        {
           "play": [
             "Sol Ring"
           ]
@@ -33,6 +41,14 @@
         {
           "play": [
             "Ulalek, Fused Atrocity"
+          ]
+        },
+        {
+          "play": [
+            "Sire of Stagnation"
+          ],
+          "when": [
+            "not controls Ulalek, Fused Atrocity"
           ]
         },
         {
@@ -74,7 +90,6 @@
             "Drowner of Hope",
             "Endbringer",
             "Oblivion Sower",
-            "Sire of Stagnation",
             "Titans' Vanguard",
             "Bismuth Mindrender",
             "Inversion Behemoth",
