@@ -5,13 +5,13 @@
   "of": "playbook/precons/limit-break.json",
   "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
   "playbook": {
-    "version": 5,
+    "version": 6,
     "attack": {
       "policy": "go_wide",
       "target": "highest_life",
-      "min_attackers": 1,
+      "min_attackers": 3,
       "safety_margin": 5,
-      "max_reserve": 2,
+      "max_reserve": 3,
       "spread": true
     },
     "cast": {
@@ -44,32 +44,6 @@
             "Hero's Blade",
             "Champion's Helm"
           ]
-        },
-        {
-          "activate": [
-            "Wrecking Ball Arm"
-          ],
-          "ability": "legendary",
-          "target": "Cloud, Ex-SOLDIER",
-          "phase": "main1"
-        },
-        {
-          "activate": [
-            "Colossus Hammer",
-            "Behemoth Sledge",
-            "Hero's Heirloom",
-            "Champion's Helm",
-            "Hero's Blade",
-            "Conqueror's Flail",
-            "Mask of Memory",
-            "Trailblazer's Boots",
-            "Darksteel Plate",
-            "Explorer's Scope",
-            "Sword of the Animist"
-          ],
-          "ability": "Equip",
-          "target": "Cloud, Ex-SOLDIER",
-          "phase": "main1"
         },
         {
           "play": [
@@ -114,6 +88,32 @@
             "Red XIII, Proud Warrior",
             "Elena, Turk Recruit"
           ]
+        },
+        {
+          "activate": [
+            "Wrecking Ball Arm"
+          ],
+          "ability": "legendary",
+          "target": "Cloud, Ex-SOLDIER",
+          "phase": "main1"
+        },
+        {
+          "activate": [
+            "Colossus Hammer",
+            "Behemoth Sledge",
+            "Hero's Heirloom",
+            "Champion's Helm",
+            "Hero's Blade",
+            "Conqueror's Flail",
+            "Mask of Memory",
+            "Trailblazer's Boots",
+            "Darksteel Plate",
+            "Explorer's Scope",
+            "Sword of the Animist"
+          ],
+          "ability": "Equip",
+          "target": "Cloud, Ex-SOLDIER",
+          "phase": "main1"
         },
         {
           "play": [
