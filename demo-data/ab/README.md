@@ -123,3 +123,18 @@ Party 57 / 57 / 69 (in `-v12/`); Goblin Storm (version 3) 11 / 30 / 42; Token Tr
 25 / 36 / 41; Tricky Terrain (version 5) 32 / 40 / 59; Elven Council 15 / 39 / 40; Wretched Ranks 35 / 31 / 40; Enduring Enchantments
 62 / 61 / 62; Eldrazi Incursion 62 / 52 / 64; Limit Break (on the code with the equip check) 24 / 28 / 47. Thirteen decks, thirteen times
 at least as many wins with Forge's attack: 501 / 567 / 685 of 2,600 tables (DESIGN.md §27 has the intervals and the exact tests).
+
+`2026-11-12-ab-v16/` (`ab-run` #26, seed 20261240): the first round on the pool of twelve (`runner/leagues/bots-v2.json`). `<deck>.json`
+is a deck at 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook, its own seat once
+under stock AI and once under its shipped playbook. Wins of 200, stock pilot / shipped playbook: Goblin Storm 20 / 47 (+13.5 points,
+exact test 0.0001); Token Triumph 43 / 65 (+11.0, 0.0032); Enduring Enchantments 40 / 62 (+11.0, 0.014); Hail, Caesar 28 / 45 (+8.5,
+0.03); Deep Clue Sea 42 / 58 (+8.0, 0.076); Quick Draw 34 / 50 (+8.0, 0.052); Tricky Terrain 29 / 40 (+5.5, 0.20; 18 of the playbook
+arm's games ran to the clock); Elven Council 18 / 27 (+4.5, 0.20); Limit Break 34 / 39 (+2.5, 0.60); Planeswalker Party 44 / 44;
+Eldrazi Incursion 48 / 46 (-1.0, 0.89); Wretched Ranks 39 / 34 (-2.5, 0.58). All twelve: 419 / 557 of 2,400. Five side arms on the same
+tables, playbook arm only, are the same rules with the go-wide attack (`goblin-storm-answers.json`, `hail-caesar-answers.json`,
+`tricky-terrain-answers.json`, `token-triumph-gowide.json`, `quick-draw-spells.json`), and `<deck>-join.json` sets the three arms side by
+side (kind `ab-join`; arms `stock`, `shipped`, `gowide`). Go-wide against the shipped version, which leaves the attack to Forge: Goblin
+Storm 56 against 47 (+4.5, 30 discordant pairs against 21, exact test 0.26); Hail, Caesar 66 against 45 (+10.5, 36 against 15, 0.0046);
+Tricky Terrain 58 against 40 (+9.0, 39 against 21, 0.027); Token Triumph 54 against 65 (-5.5, 17 against 28, 0.14); Quick Draw 43
+against 50 (-3.5, 20 against 27, 0.38). DESIGN.md §28 reads them. The league of the same twelve (`league-run` #3, seed 20261250) is
+`demo-data/runs/2026-11-12-bots-v2-snapshot-2026-11-10-s20261250-bots/`.

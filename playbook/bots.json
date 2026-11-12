@@ -1,17 +1,17 @@
 {
  "schema": 1,
- "about": "The decks that have a per-deck bot or a candidate for one, and where each one's measurements are. runner/bots.py turns this into demo-data/bots.json for the dashboard. Edited by hand when a playbook ships or a run comes in.",
+ "about": "The decks that have a per-deck bot or a candidate for one, and where each one's measurements are. runner/bots.py turns this into demo-data/bots.json for the dashboard. Edited by hand when a playbook ships or a run comes in. `tables` is the deck's latest paired exam among bots (since 2026-11-12 the round on the pool of twelve); `pool_of_four_tables` is the exam it joined the pool on and `stock_tables` the old exam at three stock seats, both kept for the record.",
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped (v5: answer rules, the attack left to Forge); each measured against the earlier version among bots (+4.0 and +6.0), together in the next round",
+   "status": "shipped (v5: answer rules, the attack left to Forge); among the twelve +13.5 points on its stock pilot, confirmed. The same rules with the go-wide attack won nine tables more on these tables (a lean, exact test 0.26)",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment; version 5 leaves the attack to Forge.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v13/goblin-storm-join.json",
+    "file": "demo-data/ab/2026-11-12-ab-v16/goblin-storm.json",
     "stock": "stock",
-    "bot": "answers",
-    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 3 of this deck won 30 of the same tables)"
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 4, the same rules with the go-wide attack, won 56 of the same tables)"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json",
    "stock_tables": {
@@ -19,18 +19,24 @@
     "stock": "stock",
     "bot": "playbook",
     "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (48 against stock's 18 on the tables that chose it, the same count)"
+   },
+   "pool_of_four_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v13/goblin-storm-join.json",
+    "stock": "stock",
+    "bot": "answers",
+    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 3 of this deck won 30 of the same tables)"
    }
   },
   {
    "deck": "token-triumph",
-   "status": "shipped (v4, the attack left to Forge); among bots +9.0 points on its stock pilot",
+   "status": "shipped (v4, the attack left to Forge); among the twelve +11.0 points on its stock pilot, confirmed",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump; version 4 leaves the attack to Forge.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v15/token-triumph-join.json",
+    "file": "demo-data/ab/2026-11-12-ab-v16/token-triumph.json",
     "stock": "stock",
-    "bot": "forgeattack",
-    "run": "ab-run #23 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (the same rules with the go-wide attack won 83)"
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (the same rules with the go-wide attack won 54)"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json",
    "stock_tables": {
@@ -38,18 +44,24 @@
     "stock": "stock",
     "bot": "playbook",
     "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (67 against stock's 43 on the tables that chose it)"
+   },
+   "pool_of_four_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v15/token-triumph-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #23 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (the same rules with the go-wide attack won 83)"
    }
   },
   {
    "deck": "hail-caesar",
-   "status": "shipped (v5: answer rules, the attack left to Forge); each measured against the earlier version among bots (+9.5 and +2.5), together in the next round",
+   "status": "shipped (v5: answer rules, the attack left to Forge); among the twelve +8.5 points on its stock pilot, confirmed. The same rules with the go-wide attack won 21 tables more on these tables (exact test 0.005): the attack is to be decided",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five); version 4 also casts its board wipes (Ruinous Ultimatum, Martial Coup, Vault 75, Hour of Reckoning, The Nipton Lottery) when the table calls for them; version 5 leaves the attack to Forge.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v13/hail-caesar-join.json",
+    "file": "demo-data/ab/2026-11-12-ab-v16/hail-caesar.json",
     "stock": "stock",
-    "bot": "answers",
-    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 3 of this deck won 36 of the same tables)"
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 4, the same rules with the go-wide attack, won 66 of the same tables)"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
    "stock_tables": {
@@ -57,86 +69,128 @@
     "stock": "stock",
     "bot": "playbook",
     "run": "ab-run #15, the confirming run: 200 new games (138 of the opponent trios recur from the tables that chose it)"
+   },
+   "pool_of_four_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v13/hail-caesar-join.json",
+    "stock": "stock",
+    "bot": "answers",
+    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 3 of this deck won 36 of the same tables)"
    }
   },
   {
    "deck": "tricky-terrain",
-   "status": "shipped (v7: answer rules, the attack left to Forge); each measured against the earlier version among bots (+2.0 and +9.5), together in the next round",
+   "status": "shipped (v7: answer rules, the attack left to Forge); among the twelve +5.5 points on its stock pilot, a lean, with 18 of its 200 games left on the clock. The same rules with the go-wide attack won 18 tables more (exact test 0.027): the attack is to be decided",
    "playbook": "playbook/precons/tricky-terrain.json",
    "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths; version 6 also plays Oblivion Stone and Propaganda early and uses the Stone and Evacuation against a wide board; version 7 leaves the attack to Forge.",
    "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v13/tricky-terrain-join.json",
+    "file": "demo-data/ab/2026-11-12-ab-v16/tricky-terrain.json",
     "stock": "stock",
-    "bot": "answers",
-    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 5 of this deck won 40 of the same tables)"
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 6, the same rules with the go-wide attack, won 58 of the same tables)"
    },
    "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",
     "stock": "stock",
     "bot": "go_wide",
     "run": "ab-run #11"
+   },
+   "pool_of_four_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v13/tricky-terrain-join.json",
+    "stock": "stock",
+    "bot": "answers",
+    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 5 of this deck won 40 of the same tables)"
    }
   },
   {
    "deck": "deep-clue-sea",
-   "status": "shipped (v1); among bots +12.0 points on its stock pilot, confirmed",
+   "status": "shipped (v1); among the twelve +8.0 points on its stock pilot (exact test 0.08; +12.0 on the pool of four)",
    "playbook": "playbook/precons/deep-clue-sea.json",
    "summary": "Morska out on turn 4, one Clue cracked a turn for her second-card trigger, Selvala and Idol of Oblivion tapped, Mechanized Production on a Clue, Farewell held unless behind; the attack is Forge's.",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/deep-clue-sea.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-11/deep-clue-sea-seeds-3201-3240.json",
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v15/deep-clue-sea-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #19 and #23: 200 tables of bots (61 wins with the go-wide attack the rules were written with)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-11/deep-clue-sea-seeds-3201-3240.json"
+   }
   },
   {
    "deck": "planeswalker-party",
-   "status": "shipped (v1); among bots +6.0 points on its stock pilot, a lean",
+   "status": "shipped (v1); among the twelve level with its stock pilot (44 tables each; +6.0 on the pool of four)",
    "playbook": "playbook/precons/planeswalker-party.json",
    "summary": "Commodore Guff on turn 4, the planeswalkers in a fixed order, three loyalty abilities by rule, the cards Forge never casts; the attack is Forge's, which keeps creatures home for the planeswalkers.",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/planeswalker-party.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-11/planeswalker-party-forge-attack-seeds-2701-2740.json",
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v12/planeswalker-party-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #19: 200 tables of bots (57 wins with the go-wide attack)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-11/planeswalker-party-forge-attack-seeds-2701-2740.json"
+   }
   },
   {
    "deck": "limit-break",
-   "status": "shipped (v1); among bots +11.5 points on its stock pilot, confirmed",
+   "status": "shipped (v1); among the twelve +2.5 points on its stock pilot, a lean (+11.5 on the pool of four)",
    "playbook": "playbook/precons/limit-break.json",
    "summary": "Cloud at once, the big equipment before him so his trigger has something to attach, every equip aimed at Cloud and never paid twice; the attack is Forge's.",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/limit-break.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-12/limit-break-fix-seeds-12201-12240.json",
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v15/limit-break-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #25: 200 tables of bots (28 wins with the go-wide attack)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-12/limit-break-fix-seeds-12201-12240.json"
+   }
   },
   {
    "deck": "elven-council",
-   "status": "shipped (v1); among bots +12.5 points on its stock pilot, confirmed",
+   "status": "shipped (v1); among the twelve +4.5 points on its stock pilot, a lean (+12.5 on the pool of four)",
    "playbook": "playbook/precons/elven-council.json",
    "summary": "The ramp cast, Galadriel at once, the payoffs ahead of the five-drops, Elvish Piper used, Genesis Wave and Haldir with all the mana; votes, the instants and the attack are Forge's.",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/elven-council.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-12/elven-council-seeds-13101-13140.json",
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v15/elven-council-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #23: 200 tables of bots (39 wins with the go-wide attack)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-12/elven-council-seeds-13101-13140.json"
+   }
   },
   {
    "deck": "quick-draw",
-   "status": "shipped (v1, the attack left to Forge); this row is its rules with the go-wide attack, +3.5 points on its stock pilot among bots, a lean",
+   "status": "shipped (v1, the attack left to Forge); among the twelve +8.0 points on its stock pilot (exact test 0.05)",
    "playbook": "playbook/precons/quick-draw.json",
    "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
    "goldfish": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/quick-draw.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (the same rules with the go-wide attack won 43)"
+   },
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v14/quick-draw-spells.json",
     "stock": "stock",
     "bot": "playbook",
@@ -145,42 +199,60 @@
   },
   {
    "deck": "wretched-ranks",
-   "status": "shipped (v1); among bots +2.5 points on its stock pilot, a lean",
+   "status": "shipped (v1); among the twelve level with its stock pilot (-2.5; over both pools 74 tables each)",
    "playbook": "playbook/precons/wretched-ranks.json",
    "summary": "Casts the commander Forge never casts, Ghoulcaller Gisa, and uses her every turn ahead of the lords; the lords' abilities, Cryptbreaker, the draw spells with a library guard; God-Eternal Bontu held; the attack is Forge's.",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/wretched-ranks.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-12/wretched-ranks-seeds-11101-11140.json",
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v15/wretched-ranks-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #23: 200 tables of bots (31 wins with the go-wide attack)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-12/wretched-ranks-seeds-11101-11140.json"
+   }
   },
   {
    "deck": "eldrazi-incursion",
-   "status": "shipped (v1); among bots level with its stock pilot (+1.0)",
+   "status": "shipped (v1); among the twelve level with its stock pilot (-1.0; over both pools 110 tables each)",
    "playbook": "playbook/precons/eldrazi-incursion.json",
    "summary": "Pays for Ulalek's copy trigger, which Forge never does, while ten mana or less is available; Ulalek ahead of the rocks; Eldrazi Monument held for a board of tokens; the attack is Forge's. Open defect: a chain of copies can deck the seat.",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/eldrazi-incursion.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-12/eldrazi-incursion-seeds-15101-15140.json",
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v15/eldrazi-incursion-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #24: 200 tables of bots (52 wins with the go-wide attack)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-12/eldrazi-incursion-seeds-15101-15140.json"
+   }
   },
   {
    "deck": "enduring-enchantments",
-   "status": "shipped (v1); among bots level with its stock pilot",
+   "status": "shipped (v1); among the twelve +11.0 points on its stock pilot, confirmed (it was level with it on the pool of four)",
    "playbook": "playbook/precons/enduring-enchantments.json",
    "summary": "Casts the commander Forge never casts, Anikthea, lays the enchantress engine in order, uses the land searches and holds every enchantment once the library is under 25 cards; the attack is Forge's.",
    "tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/enduring-enchantments.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-12/enduring-enchantments-seeds-16101-16140.json",
+   "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v15/enduring-enchantments-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #23: 200 tables of bots (61 wins with the go-wide attack)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-12/enduring-enchantments-seeds-16101-16140.json"
+   }
   }
  ]
 }

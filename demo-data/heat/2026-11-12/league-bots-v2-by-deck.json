@@ -1,0 +1,1013 @@
+{
+ "games": 600,
+ "groups": {
+  "deep-clue-sea": {
+   "seat_games": 200,
+   "aims_per_seat_game": 4.13,
+   "aims_by_spell_share": 0.247,
+   "aim_at": {
+    "a creature": 538,
+    "a commander": 215,
+    "another permanent or spell": 62,
+    "a player": 11
+   },
+   "attack": {
+    "events": 795,
+    "n": 2445,
+    "biggest board": {
+     "n": 2103,
+     "share": 0.748,
+     "chance": 0.389
+    },
+    "highest life": {
+     "n": 2199,
+     "share": 0.28,
+     "chance": 0.393
+    },
+    "lowest life": {
+     "n": 2299,
+     "share": 0.565,
+     "chance": 0.39
+    },
+    "the winner": {
+     "n": 1116,
+     "share": 0.244,
+     "chance": 0.367
+    },
+    "hurt me most": {
+     "n": 1943,
+     "share": 0.498,
+     "chance": 0.387
+    },
+    "hurt the table": {
+     "n": 2244,
+     "share": 0.488,
+     "chance": 0.388
+    },
+    "attacked me": {
+     "n": 589,
+     "share": 0.565,
+     "chance": 0.387
+    }
+   },
+   "aim": {
+    "events": 540,
+    "n": 637,
+    "biggest board": {
+     "n": 545,
+     "share": 0.532,
+     "chance": 0.401
+    },
+    "highest life": {
+     "n": 583,
+     "share": 0.518,
+     "chance": 0.398
+    },
+    "lowest life": {
+     "n": 585,
+     "share": 0.338,
+     "chance": 0.398
+    },
+    "the winner": {
+     "n": 258,
+     "share": 0.376,
+     "chance": 0.395
+    },
+    "hurt me most": {
+     "n": 498,
+     "share": 0.414,
+     "chance": 0.391
+    },
+    "hurt the table": {
+     "n": 608,
+     "share": 0.438,
+     "chance": 0.395
+    }
+   }
+  },
+  "eldrazi-incursion": {
+   "seat_games": 200,
+   "aims_per_seat_game": 3.58,
+   "aims_by_spell_share": 0.155,
+   "aim_at": {
+    "a player": 113,
+    "a commander": 172,
+    "a creature": 350,
+    "another permanent or spell": 82
+   },
+   "attack": {
+    "events": 598,
+    "n": 2196,
+    "biggest board": {
+     "n": 1957,
+     "share": 0.694,
+     "chance": 0.407
+    },
+    "highest life": {
+     "n": 1994,
+     "share": 0.415,
+     "chance": 0.41
+    },
+    "lowest life": {
+     "n": 2064,
+     "share": 0.486,
+     "chance": 0.408
+    },
+    "the winner": {
+     "n": 741,
+     "share": 0.246,
+     "chance": 0.372
+    },
+    "hurt me most": {
+     "n": 1738,
+     "share": 0.596,
+     "chance": 0.407
+    },
+    "hurt the table": {
+     "n": 2083,
+     "share": 0.608,
+     "chance": 0.408
+    },
+    "attacked me": {
+     "n": 435,
+     "share": 0.536,
+     "chance": 0.367
+    }
+   },
+   "aim": {
+    "events": 534,
+    "n": 665,
+    "biggest board": {
+     "n": 609,
+     "share": 0.443,
+     "chance": 0.391
+    },
+    "highest life": {
+     "n": 579,
+     "share": 0.313,
+     "chance": 0.392
+    },
+    "lowest life": {
+     "n": 601,
+     "share": 0.506,
+     "chance": 0.39
+    },
+    "the winner": {
+     "n": 382,
+     "share": 0.369,
+     "chance": 0.369
+    },
+    "hurt me most": {
+     "n": 461,
+     "share": 0.421,
+     "chance": 0.389
+    },
+    "hurt the table": {
+     "n": 601,
+     "share": 0.411,
+     "chance": 0.39
+    }
+   }
+  },
+  "elven-council": {
+   "seat_games": 200,
+   "aims_per_seat_game": 2.27,
+   "aims_by_spell_share": 0.472,
+   "aim_at": {
+    "a commander": 123,
+    "a player": 73,
+    "a creature": 205,
+    "another permanent or spell": 52
+   },
+   "attack": {
+    "events": 871,
+    "n": 2240,
+    "biggest board": {
+     "n": 1981,
+     "share": 0.704,
+     "chance": 0.396
+    },
+    "highest life": {
+     "n": 1964,
+     "share": 0.313,
+     "chance": 0.399
+    },
+    "lowest life": {
+     "n": 2068,
+     "share": 0.558,
+     "chance": 0.396
+    },
+    "the winner": {
+     "n": 1541,
+     "share": 0.2,
+     "chance": 0.378
+    },
+    "hurt me most": {
+     "n": 1715,
+     "share": 0.565,
+     "chance": 0.399
+    },
+    "hurt the table": {
+     "n": 2058,
+     "share": 0.55,
+     "chance": 0.396
+    },
+    "attacked me": {
+     "n": 477,
+     "share": 0.562,
+     "chance": 0.383
+    }
+   },
+   "aim": {
+    "events": 394,
+    "n": 396,
+    "biggest board": {
+     "n": 343,
+     "share": 0.554,
+     "chance": 0.379
+    },
+    "highest life": {
+     "n": 329,
+     "share": 0.395,
+     "chance": 0.386
+    },
+    "lowest life": {
+     "n": 364,
+     "share": 0.431,
+     "chance": 0.38
+    },
+    "the winner": {
+     "n": 297,
+     "share": 0.441,
+     "chance": 0.367
+    },
+    "hurt me most": {
+     "n": 273,
+     "share": 0.469,
+     "chance": 0.383
+    },
+    "hurt the table": {
+     "n": 359,
+     "share": 0.451,
+     "chance": 0.382
+    }
+   }
+  },
+  "enduring-enchantments": {
+   "seat_games": 200,
+   "aims_per_seat_game": 2.34,
+   "aims_by_spell_share": 0.152,
+   "aim_at": {
+    "another permanent or spell": 75,
+    "a creature": 247,
+    "a commander": 96,
+    "a player": 50
+   },
+   "attack": {
+    "events": 713,
+    "n": 2375,
+    "biggest board": {
+     "n": 2098,
+     "share": 0.703,
+     "chance": 0.405
+    },
+    "highest life": {
+     "n": 2156,
+     "share": 0.299,
+     "chance": 0.41
+    },
+    "lowest life": {
+     "n": 2243,
+     "share": 0.55,
+     "chance": 0.407
+    },
+    "the winner": {
+     "n": 903,
+     "share": 0.223,
+     "chance": 0.37
+    },
+    "hurt me most": {
+     "n": 1872,
+     "share": 0.489,
+     "chance": 0.408
+    },
+    "hurt the table": {
+     "n": 2235,
+     "share": 0.51,
+     "chance": 0.406
+    },
+    "attacked me": {
+     "n": 474,
+     "share": 0.553,
+     "chance": 0.375
+    }
+   },
+   "aim": {
+    "events": 313,
+    "n": 430,
+    "biggest board": {
+     "n": 378,
+     "share": 0.479,
+     "chance": 0.379
+    },
+    "highest life": {
+     "n": 349,
+     "share": 0.341,
+     "chance": 0.387
+    },
+    "lowest life": {
+     "n": 375,
+     "share": 0.443,
+     "chance": 0.384
+    },
+    "the winner": {
+     "n": 249,
+     "share": 0.337,
+     "chance": 0.355
+    },
+    "hurt me most": {
+     "n": 288,
+     "share": 0.42,
+     "chance": 0.387
+    },
+    "hurt the table": {
+     "n": 374,
+     "share": 0.417,
+     "chance": 0.384
+    }
+   }
+  },
+  "goblin-storm": {
+   "seat_games": 200,
+   "aims_per_seat_game": 4.37,
+   "aims_by_spell_share": 0.312,
+   "aim_at": {
+    "a creature": 270,
+    "a commander": 119,
+    "a player": 314,
+    "another permanent or spell": 170
+   },
+   "attack": {
+    "events": 732,
+    "n": 2754,
+    "biggest board": {
+     "n": 2314,
+     "share": 0.721,
+     "chance": 0.382
+    },
+    "highest life": {
+     "n": 2265,
+     "share": 0.344,
+     "chance": 0.388
+    },
+    "lowest life": {
+     "n": 2484,
+     "share": 0.48,
+     "chance": 0.383
+    },
+    "the winner": {
+     "n": 1663,
+     "share": 0.192,
+     "chance": 0.36
+    },
+    "hurt me most": {
+     "n": 2162,
+     "share": 0.495,
+     "chance": 0.386
+    },
+    "hurt the table": {
+     "n": 2439,
+     "share": 0.535,
+     "chance": 0.383
+    },
+    "attacked me": {
+     "n": 705,
+     "share": 0.533,
+     "chance": 0.375
+    }
+   },
+   "aim": {
+    "events": 686,
+    "n": 733,
+    "biggest board": {
+     "n": 633,
+     "share": 0.444,
+     "chance": 0.393
+    },
+    "highest life": {
+     "n": 677,
+     "share": 0.216,
+     "chance": 0.397
+    },
+    "lowest life": {
+     "n": 684,
+     "share": 0.618,
+     "chance": 0.396
+    },
+    "the winner": {
+     "n": 466,
+     "share": 0.262,
+     "chance": 0.38
+    },
+    "hurt me most": {
+     "n": 599,
+     "share": 0.419,
+     "chance": 0.393
+    },
+    "hurt the table": {
+     "n": 642,
+     "share": 0.474,
+     "chance": 0.394
+    }
+   }
+  },
+  "hail-caesar": {
+   "seat_games": 200,
+   "aims_per_seat_game": 3.75,
+   "aims_by_spell_share": 0.304,
+   "aim_at": {
+    "a player": 397,
+    "another permanent or spell": 129,
+    "a creature": 147,
+    "a commander": 78
+   },
+   "attack": {
+    "events": 677,
+    "n": 1996,
+    "biggest board": {
+     "n": 1763,
+     "share": 0.623,
+     "chance": 0.391
+    },
+    "highest life": {
+     "n": 1727,
+     "share": 0.25,
+     "chance": 0.399
+    },
+    "lowest life": {
+     "n": 1870,
+     "share": 0.602,
+     "chance": 0.394
+    },
+    "the winner": {
+     "n": 1140,
+     "share": 0.181,
+     "chance": 0.371
+    },
+    "hurt me most": {
+     "n": 1598,
+     "share": 0.509,
+     "chance": 0.396
+    },
+    "hurt the table": {
+     "n": 1765,
+     "share": 0.491,
+     "chance": 0.397
+    },
+    "attacked me": {
+     "n": 502,
+     "share": 0.518,
+     "chance": 0.394
+    }
+   },
+   "aim": {
+    "events": 599,
+    "n": 649,
+    "biggest board": {
+     "n": 563,
+     "share": 0.529,
+     "chance": 0.384
+    },
+    "highest life": {
+     "n": 530,
+     "share": 0.209,
+     "chance": 0.391
+    },
+    "lowest life": {
+     "n": 580,
+     "share": 0.681,
+     "chance": 0.386
+    },
+    "the winner": {
+     "n": 433,
+     "share": 0.328,
+     "chance": 0.377
+    },
+    "hurt me most": {
+     "n": 504,
+     "share": 0.442,
+     "chance": 0.388
+    },
+    "hurt the table": {
+     "n": 586,
+     "share": 0.415,
+     "chance": 0.387
+    }
+   }
+  },
+  "limit-break": {
+   "seat_games": 200,
+   "aims_per_seat_game": 1.75,
+   "aims_by_spell_share": 0.514,
+   "aim_at": {
+    "another permanent or spell": 80,
+    "a creature": 184,
+    "a commander": 82,
+    "a player": 4
+   },
+   "attack": {
+    "events": 858,
+    "n": 1530,
+    "biggest board": {
+     "n": 1285,
+     "share": 0.692,
+     "chance": 0.378
+    },
+    "highest life": {
+     "n": 1267,
+     "share": 0.29,
+     "chance": 0.383
+    },
+    "lowest life": {
+     "n": 1362,
+     "share": 0.526,
+     "chance": 0.379
+    },
+    "the winner": {
+     "n": 978,
+     "share": 0.224,
+     "chance": 0.361
+    },
+    "hurt me most": {
+     "n": 1093,
+     "share": 0.518,
+     "chance": 0.378
+    },
+    "hurt the table": {
+     "n": 1367,
+     "share": 0.525,
+     "chance": 0.378
+    },
+    "attacked me": {
+     "n": 383,
+     "share": 0.606,
+     "chance": 0.374
+    }
+   },
+   "aim": {
+    "events": 219,
+    "n": 291,
+    "biggest board": {
+     "n": 238,
+     "share": 0.613,
+     "chance": 0.38
+    },
+    "highest life": {
+     "n": 241,
+     "share": 0.332,
+     "chance": 0.38
+    },
+    "lowest life": {
+     "n": 259,
+     "share": 0.459,
+     "chance": 0.377
+    },
+    "the winner": {
+     "n": 206,
+     "share": 0.393,
+     "chance": 0.362
+    },
+    "hurt me most": {
+     "n": 217,
+     "share": 0.438,
+     "chance": 0.376
+    },
+    "hurt the table": {
+     "n": 261,
+     "share": 0.444,
+     "chance": 0.376
+    }
+   }
+  },
+  "planeswalker-party": {
+   "seat_games": 200,
+   "aims_per_seat_game": 2.85,
+   "aims_by_spell_share": 0.199,
+   "aim_at": {
+    "a commander": 236,
+    "a creature": 263,
+    "another permanent or spell": 32,
+    "a player": 38
+   },
+   "attack": {
+    "events": 485,
+    "n": 948,
+    "biggest board": {
+     "n": 815,
+     "share": 0.712,
+     "chance": 0.392
+    },
+    "highest life": {
+     "n": 791,
+     "share": 0.292,
+     "chance": 0.395
+    },
+    "lowest life": {
+     "n": 838,
+     "share": 0.595,
+     "chance": 0.392
+    },
+    "the winner": {
+     "n": 444,
+     "share": 0.333,
+     "chance": 0.358
+    },
+    "hurt me most": {
+     "n": 485,
+     "share": 0.534,
+     "chance": 0.397
+    },
+    "hurt the table": {
+     "n": 673,
+     "share": 0.585,
+     "chance": 0.394
+    },
+    "attacked me": {
+     "n": 343,
+     "share": 0.525,
+     "chance": 0.386
+    }
+   },
+   "aim": {
+    "events": 404,
+    "n": 516,
+    "biggest board": {
+     "n": 431,
+     "share": 0.487,
+     "chance": 0.378
+    },
+    "highest life": {
+     "n": 372,
+     "share": 0.344,
+     "chance": 0.39
+    },
+    "lowest life": {
+     "n": 432,
+     "share": 0.442,
+     "chance": 0.382
+    },
+    "the winner": {
+     "n": 265,
+     "share": 0.4,
+     "chance": 0.375
+    },
+    "hurt me most": {
+     "n": 283,
+     "share": 0.396,
+     "chance": 0.393
+    },
+    "hurt the table": {
+     "n": 375,
+     "share": 0.4,
+     "chance": 0.387
+    }
+   }
+  },
+  "quick-draw": {
+   "seat_games": 200,
+   "aims_per_seat_game": 6.25,
+   "aims_by_spell_share": 0.383,
+   "aim_at": {
+    "a player": 737,
+    "a creature": 272,
+    "a commander": 112,
+    "another permanent or spell": 129
+   },
+   "attack": {
+    "events": 784,
+    "n": 2106,
+    "biggest board": {
+     "n": 1822,
+     "share": 0.651,
+     "chance": 0.392
+    },
+    "highest life": {
+     "n": 1797,
+     "share": 0.381,
+     "chance": 0.4
+    },
+    "lowest life": {
+     "n": 1891,
+     "share": 0.466,
+     "chance": 0.397
+    },
+    "the winner": {
+     "n": 1113,
+     "share": 0.204,
+     "chance": 0.375
+    },
+    "hurt me most": {
+     "n": 1509,
+     "share": 0.488,
+     "chance": 0.395
+    },
+    "hurt the table": {
+     "n": 1818,
+     "share": 0.488,
+     "chance": 0.394
+    },
+    "attacked me": {
+     "n": 439,
+     "share": 0.565,
+     "chance": 0.398
+    }
+   },
+   "aim": {
+    "events": 891,
+    "n": 974,
+    "biggest board": {
+     "n": 882,
+     "share": 0.471,
+     "chance": 0.394
+    },
+    "highest life": {
+     "n": 873,
+     "share": 0.228,
+     "chance": 0.398
+    },
+    "lowest life": {
+     "n": 937,
+     "share": 0.668,
+     "chance": 0.393
+    },
+    "the winner": {
+     "n": 500,
+     "share": 0.234,
+     "chance": 0.369
+    },
+    "hurt me most": {
+     "n": 704,
+     "share": 0.491,
+     "chance": 0.391
+    },
+    "hurt the table": {
+     "n": 871,
+     "share": 0.445,
+     "chance": 0.395
+    }
+   }
+  },
+  "token-triumph": {
+   "seat_games": 200,
+   "aims_per_seat_game": 2.17,
+   "aims_by_spell_share": 0.495,
+   "aim_at": {
+    "a player": 53,
+    "another permanent or spell": 197,
+    "a commander": 53,
+    "a creature": 131
+   },
+   "attack": {
+    "events": 707,
+    "n": 3139,
+    "biggest board": {
+     "n": 2782,
+     "share": 0.732,
+     "chance": 0.394
+    },
+    "highest life": {
+     "n": 2684,
+     "share": 0.284,
+     "chance": 0.399
+    },
+    "lowest life": {
+     "n": 2907,
+     "share": 0.598,
+     "chance": 0.394
+    },
+    "the winner": {
+     "n": 1246,
+     "share": 0.177,
+     "chance": 0.369
+    },
+    "hurt me most": {
+     "n": 2574,
+     "share": 0.467,
+     "chance": 0.393
+    },
+    "hurt the table": {
+     "n": 2734,
+     "share": 0.5,
+     "chance": 0.395
+    },
+    "attacked me": {
+     "n": 881,
+     "share": 0.494,
+     "chance": 0.372
+    }
+   },
+   "aim": {
+    "events": 355,
+    "n": 376,
+    "biggest board": {
+     "n": 318,
+     "share": 0.538,
+     "chance": 0.371
+    },
+    "highest life": {
+     "n": 309,
+     "share": 0.32,
+     "chance": 0.373
+    },
+    "lowest life": {
+     "n": 326,
+     "share": 0.448,
+     "chance": 0.371
+    },
+    "the winner": {
+     "n": 231,
+     "share": 0.368,
+     "chance": 0.36
+    },
+    "hurt me most": {
+     "n": 308,
+     "share": 0.399,
+     "chance": 0.371
+    },
+    "hurt the table": {
+     "n": 323,
+     "share": 0.378,
+     "chance": 0.37
+    }
+   }
+  },
+  "tricky-terrain": {
+   "seat_games": 200,
+   "aims_per_seat_game": 4.75,
+   "aims_by_spell_share": 0.183,
+   "aim_at": {
+    "another permanent or spell": 292,
+    "a creature": 387,
+    "a player": 167,
+    "a commander": 105
+   },
+   "attack": {
+    "events": 896,
+    "n": 3472,
+    "biggest board": {
+     "n": 3016,
+     "share": 0.833,
+     "chance": 0.417
+    },
+    "highest life": {
+     "n": 3024,
+     "share": 0.448,
+     "chance": 0.424
+    },
+    "lowest life": {
+     "n": 3170,
+     "share": 0.408,
+     "chance": 0.42
+    },
+    "the winner": {
+     "n": 1028,
+     "share": 0.245,
+     "chance": 0.365
+    },
+    "hurt me most": {
+     "n": 2218,
+     "share": 0.551,
+     "chance": 0.412
+    },
+    "hurt the table": {
+     "n": 3297,
+     "share": 0.59,
+     "chance": 0.422
+    },
+    "attacked me": {
+     "n": 632,
+     "share": 0.601,
+     "chance": 0.387
+    }
+   },
+   "aim": {
+    "events": 754,
+    "n": 833,
+    "biggest board": {
+     "n": 744,
+     "share": 0.435,
+     "chance": 0.39
+    },
+    "highest life": {
+     "n": 767,
+     "share": 0.433,
+     "chance": 0.391
+    },
+    "lowest life": {
+     "n": 774,
+     "share": 0.368,
+     "chance": 0.391
+    },
+    "the winner": {
+     "n": 403,
+     "share": 0.385,
+     "chance": 0.371
+    },
+    "hurt me most": {
+     "n": 658,
+     "share": 0.416,
+     "chance": 0.387
+    },
+    "hurt the table": {
+     "n": 791,
+     "share": 0.391,
+     "chance": 0.39
+    }
+   }
+  },
+  "wretched-ranks": {
+   "seat_games": 200,
+   "aims_per_seat_game": 1.23,
+   "aims_by_spell_share": 0.805,
+   "aim_at": {
+    "a commander": 62,
+    "a player": 96,
+    "a creature": 83,
+    "another permanent or spell": 5
+   },
+   "attack": {
+    "events": 686,
+    "n": 2309,
+    "biggest board": {
+     "n": 2061,
+     "share": 0.69,
+     "chance": 0.394
+    },
+    "highest life": {
+     "n": 1938,
+     "share": 0.324,
+     "chance": 0.395
+    },
+    "lowest life": {
+     "n": 2053,
+     "share": 0.5,
+     "chance": 0.392
+    },
+    "the winner": {
+     "n": 1183,
+     "share": 0.238,
+     "chance": 0.362
+    },
+    "hurt me most": {
+     "n": 1563,
+     "share": 0.567,
+     "chance": 0.39
+    },
+    "hurt the table": {
+     "n": 1862,
+     "share": 0.569,
+     "chance": 0.391
+    },
+    "attacked me": {
+     "n": 592,
+     "share": 0.584,
+     "chance": 0.377
+    }
+   },
+   "aim": {
+    "events": 232,
+    "n": 232,
+    "biggest board": {
+     "n": 186,
+     "share": 0.452,
+     "chance": 0.358
+    },
+    "highest life": {
+     "n": 153,
+     "share": 0.392,
+     "chance": 0.363
+    },
+    "lowest life": {
+     "n": 175,
+     "share": 0.463,
+     "chance": 0.359
+    },
+    "the winner": {
+     "n": 185,
+     "share": 0.33,
+     "chance": 0.355
+    },
+    "hurt me most": {
+     "n": 117,
+     "share": 0.376,
+     "chance": 0.359
+    },
+    "hurt the table": {
+     "n": 158,
+     "share": 0.418,
+     "chance": 0.361
+    }
+   }
+  }
+ }
+}
