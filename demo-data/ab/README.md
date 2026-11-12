@@ -114,8 +114,12 @@ against candidate. Quick Draw `spells` 39 wins against 32 (+3.5 points, 95% -3 t
 (-1.5, -4 to +1).
 
 `2026-11-12-ab-v15/` (`ab-run` #23 to #25, seeds 20261210, 20261230 and 20261200; all queued before the pool's Hail, Caesar, Goblin
-Storm and Tricky Terrain changed version, so they play the pool as it was): the attack question. A candidate's rules with the go-wide
-attack and with Forge's own attack on the same 200 tables of bots, beside the stock pilot; `<deck>-join.json` has the three arms (kind
-`ab-join`). In so far: Limit Break (#25, on the code with the equip check) stock 24, go-wide 28, Forge's attack 47 (+11.5 points on stock,
-95% +5 to +18, exact test 0.0006; +9.5 on go-wide, 0.0005); Eldrazi Incursion (#24) stock 62, go-wide 52, Forge's attack 64 (+1.0 on
-stock, -7 to +9; +6.0 on go-wide, 0.065).
+Storm and Tricky Terrain changed version, so they play the pool as it was): the attack question. A deck's rules with the go-wide attack
+and with Forge's own attack on the same 200 tables of bots, beside the stock pilot. `<deck>-<name>.json` and `<deck>-<name>-forgeattack.json`
+are the runs' rollups, `<deck>-join.json` the three arms side by side (kind `ab-join`; arms `stock`, `gowide`, `forgeattack`); for the
+decks whose stock and go-wide arms were played earlier those arms come from `2026-11-11-ab-v12/` and `-v11/`. Wins of 200, stock pilot /
+go-wide / Forge's attack: Counter Intelligence 23 / 20 / 22; Deep Clue Sea 52 / 61 / 76; Food and Fellowship 28 / 29 / 30; Planeswalker
+Party 57 / 57 / 69 (in `-v12/`); Goblin Storm (version 3) 11 / 30 / 42; Token Triumph (version 3) 75 / 83 / 93; Hail, Caesar (version 3)
+25 / 36 / 41; Tricky Terrain (version 5) 32 / 40 / 59; Elven Council 15 / 39 / 40; Wretched Ranks 35 / 31 / 40; Enduring Enchantments
+62 / 61 / 62; Eldrazi Incursion 62 / 52 / 64; Limit Break (on the code with the equip check) 24 / 28 / 47. Thirteen decks, thirteen times
+at least as many wins with Forge's attack: 501 / 567 / 685 of 2,600 tables (DESIGN.md §27 has the intervals and the exact tests).

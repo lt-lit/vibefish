@@ -29,5 +29,107 @@
   },
   "cards_without_script": []
  },
- "curated": {}
+ "curated": {},
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Izzet Signet",
+      "Cursed Mirror",
+      "Midnight Clock",
+      "Forger's Foundry"
+     ]
+    },
+    {
+     "play": [
+      "Stella Lee, Wild Card"
+     ]
+    },
+    {
+     "play": [
+      "Young Pyromancer",
+      "Third Path Iconoclast",
+      "Electrostatic Field",
+      "Goblin Electromancer",
+      "Guttersnipe",
+      "Kaza, Roil Chaser",
+      "Thunderclap Drake",
+      "Murmuring Mystic",
+      "Talrand, Sky Summoner",
+      "Storm-Kiln Artist",
+      "Veyran, Voice of Duality",
+      "Archmage Emeritus",
+      "Haughty Djinn",
+      "Arcane Bombardment",
+      "Shark Typhoon",
+      "Niv-Mizzet, Parun",
+      "Eris, Roar of the Storm",
+      "Octavia, Living Thesis",
+      "Crackling Spellslinger",
+      "Bloodthirsty Adversary",
+      "Pteramander",
+      "Smoldering Stagecoach",
+      "Leyline Dowser",
+      "Propaganda"
+     ]
+    },
+    {
+     "play": [
+      "Opt",
+      "Ponder",
+      "Preordain",
+      "Serum Visions",
+      "Faithless Looting",
+      "Think Twice",
+      "Radical Idea",
+      "Expressive Iteration",
+      "Big Score",
+      "Lock and Load",
+      "Tezzeret's Gambit",
+      "Treasure Cruise",
+      "Dig Through Time"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Windfall"
+     ],
+     "when": [
+      "hand <= 2",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Epic Experiment"
+     ],
+     "x": "max",
+     "x_min": 4,
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    }
+   ]
+  },
+  "notes": "Quick Draw (Stella Lee: a second spell each turn exiles a card to play, a third lets her copy one). A spellslinger: the payoffs for casting spells go down first (Young Pyromancer, Guttersnipe, Talrand, Murmuring Mystic and the rest), then every cheap spell the mana allows, which is what feeds them and Stella; stock Forge leaves 47% of this deck's mana unspent and casts nothing on a quarter of its turns, sitting on Faithless Looting, Windfall and its cantrips. Windfall (never cast by Forge's AI) refills an empty hand; Epic Experiment (never cast either) and Finale of Revelation are paid for with what is left. Stella's own copy ability needs a spell on the stack, which a rule cannot wait for, so it stays Forge's. Go-wide attack from two attackers up, the highest life first. Goldfish, 40 seeds (1001-1040): stock 13.72 turns, the mechanical draft 12.78, this file 11.72, 1.97 turns faster than stock on the 38 seeds both finish (95% +1.38 to +2.56). At the tables (ab-run #15, 200 tables, seed 20261144): 38 wins against stock's 31, 19.0% against 15.5%, +3.5 points (95% -4 to +11, 31 tables to 24, exact test 0.42). A lean; not shipped. Shipped on 2026-11-12 as version 1 with the attack left to Forge. At 200 tables of bots (ab-run #22, seed 20261220) these rules with the go-wide attack won 39 against the stock pilot's 32 (+3.5 points, 95% -3 to +10, exact test 0.40: a lean). With Forge's own attack the deck has not been played yet; every deck that played both did at least as well with it.",
+  "on": "2026-11-12"
+ }
 }

@@ -9,11 +9,12 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status (2026-11-11):** four precons have a per-deck bot that beats the same deck under Forge's stock AI at 200
-four-player tables: Goblin Storm (24% of tables against stock's 9%), Token Triumph (28% against 17.5%), Hail,
-Caesar (21% against 13.5%) and Tricky Terrain (24% against 15%). A bot is a playbook for one deck: which card to
-cast when and aimed at what, which of the deck's optional triggers to take, whom to attack; every other seat stays
-stock Forge AI. The dashboard shows them in one table. Underneath: the benchmark pod
+**Status (2026-11-12):** twelve precons have a per-deck bot: a playbook for one deck that says which card to cast
+when and aimed at what, which of the deck's optional triggers to take, and when to use its board wipes; attacking and
+everything else stays Forge's. Each was judged at 200 four-player tables whose other three seats are bots too, against
+the same deck under Forge's stock AI: six clearly ahead of their stock pilot (Goblin Storm, Hail, Caesar, Tricky
+Terrain, Deep Clue Sea, Limit Break, Elven Council), Token Triumph at the edge of noise, three ahead on a lean, two
+level. The dashboard shows them in one table. Underneath: the benchmark pod
 (four bundled Commander precons) plays itself through a Java harness that records every game as a JSON event
 stream; the dashboard shows per-deck win rates, mulligans, land drops, commander timing and the cards that never
 get cast, with card images from Scryfall; Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI

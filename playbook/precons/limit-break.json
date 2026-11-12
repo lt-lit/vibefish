@@ -27,5 +27,174 @@
   },
   "cards_without_script": []
  },
- "curated": {}
+ "curated": {},
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Cloud, Ex-SOLDIER"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Bugenhagen, Wise Elder",
+      "Rampant Growth",
+      "Nature's Lore",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "Wrecking Ball Arm",
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Hero's Blade",
+      "Champion's Helm"
+     ]
+    },
+    {
+     "play": [
+      "Puresteel Paladin",
+      "Cid, Freeflier Pilot",
+      "Bastion Protector",
+      "Tifa, Martial Artist",
+      "Inspiring Statuary",
+      "SOLDIER Military Program",
+      "Furious Rise"
+     ]
+    },
+    {
+     "play": [
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist",
+      "Skullclamp",
+      "Conformer Shuriken",
+      "Summoning Materia"
+     ]
+    },
+    {
+     "play": [
+      "Barret Wallace",
+      "Barret, Avalanche Leader",
+      "Heidegger, Shinra Executive",
+      "Sephiroth, Fallen Hero",
+      "Bronze Guardian",
+      "Cait Sith, Fortune Teller",
+      "Vincent, Vengeful Atoner",
+      "Professional Face-Breaker",
+      "Aerith, Last Ancient",
+      "Hellkite Tyrant",
+      "Helitrooper",
+      "Zack Fair",
+      "Professor Hojo",
+      "Armory Automaton",
+      "Red XIII, Proud Warrior",
+      "Elena, Turk Recruit"
+     ]
+    },
+    {
+     "activate": [
+      "Wrecking Ball Arm"
+     ],
+     "ability": "legendary",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Champion's Helm",
+      "Hero's Blade",
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist"
+     ],
+     "ability": "Equip",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Slayers' Stronghold"
+     ],
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Bonders' Enclave"
+     ],
+     "phase": "main2",
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Lightning Greaves"
+     ],
+     "ability": "Equip"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Armory Automaton"
+    ],
+    "when": [
+     "controls Cloud, Ex-SOLDIER"
+    ]
+   },
+   {
+    "accept": [
+     "Puresteel Paladin",
+     "Mask of Memory"
+    ],
+    "when": [
+     "library >= 30"
+    ]
+   },
+   {
+    "accept": [
+     "Hero's Blade",
+     "SOLDIER Military Program",
+     "Furious Rise",
+     "Sword of the Animist",
+     "Explorer's Scope",
+     "Professional Face-Breaker",
+     "Cait Sith, Fortune Teller",
+     "Sephiroth, Fallen Hero"
+    ]
+   }
+  ],
+  "notes": "Limit Break (Cloud, Ex-SOLDIER: haste, attaches an equipment as he enters, draws a card per equipped attacker and makes two Treasures at power 7). Stock Forge casts Cloud on time but spreads its equipment over whatever creature is out (Cid, Zack Fair, Helitrooper; 11 of about 100 equip activations in the 12 audit games went to Cloud), never uses Zack Fair or Scavenger Grounds, and leaves 37% of its mana unspent. Rules: Sol Ring, then Cloud as soon as he is affordable, then the rest of the ramp and the big equipment (Wrecking Ball Arm, Colossus Hammer, Behemoth Sledge, Hero's Heirloom, Hero's Blade, Champion's Helm) so Cloud's enter trigger has something to pick up; the equipment payoffs and enablers (Puresteel Paladin, Cid, Bastion Protector, Tifa, Inspiring Statuary, SOLDIER Military Program, Furious Rise), the other equipment and the creatures; then, in the first main phase, every equip ability aimed at Cloud (Wrecking Ball Arm by its legendary equip {3}) as a mana sink, Harmonize while the library is over 30, Slayers' Stronghold on Cloud before combat, Bonders' Enclave in the second main phase. Lightning Greaves is never equipped (shroud on Cloud would stop every other equip). Triggers: Armory Automaton's 'attach any number of equipment' declined while Cloud is out (it takes them off him), Puresteel Paladin and Mask of Memory draws taken while the library is over 30, and the other optional triggers taken. The equip rules sit below the casts because the rule format cannot tell an equipment already on Cloud from one that is not: an equip rule re-equips it to Cloud every turn (75 mana over 12 audit games); placed before the creatures it cost half a turn. Secret Rendezvous was tried and dropped: it is aimed at an opponent, Forge's own logic declined it, and a rule can only aim at our permanents. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #25, seed 20261230, the code that does not re-equip what Cloud already wears) 47 wins against the stock pilot's 24 (+11.5 points, 95% +5 to +18, exact test 0.0006); 28 with the go-wide attack.",
+  "on": "2026-11-12"
+ }
 }

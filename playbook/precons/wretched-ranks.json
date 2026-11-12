@@ -23,5 +23,145 @@
   },
   "cards_without_script": []
  },
- "curated": {}
+ "curated": {},
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Charcoal Diamond",
+      "Mind Stone",
+      "Commander's Sphere",
+      "Patchwork Banner"
+     ]
+    },
+    {
+     "play": [
+      "Ghoulcaller Gisa"
+     ]
+    },
+    {
+     "activate": [
+      "Ghoulcaller Gisa"
+     ],
+     "phase": "main1",
+     "when": [
+      "creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Undead Warchief",
+      "Endless Ranks of the Dead",
+      "Death Baron",
+      "Lord of the Undead",
+      "Cemetery Reaper",
+      "Lord of the Accursed",
+      "Bad Moon",
+      "Liliana's Mastery",
+      "Champion of the Perished",
+      "Diregraf Colossus"
+     ]
+    },
+    {
+     "play": [
+      "Army of the Damned",
+      "Grave Titan",
+      "Moan of the Unhallowed",
+      "Open the Graves",
+      "Gray Merchant of Asphodel",
+      "Headless Rider",
+      "Vengeful Dead",
+      "Liliana's Reaver",
+      "Kalitas, Traitor of Ghet",
+      "Josu Vess, Lich Knight",
+      "Soulless One",
+      "Midnight Reaper",
+      "Undead Augur",
+      "Ayara, First of Locthwain",
+      "Zul Ashur, Lich Lord",
+      "Cryptbreaker",
+      "Gravecrawler",
+      "Carrion Feeder",
+      "Wight of Precinct Six",
+      "Mire Triton",
+      "Undead Butler",
+      "Eternal Taskmaster",
+      "Razorlash Transmogrant",
+      "Oversold Cemetery",
+      "Phyrexian Arena",
+      "Bontu's Monument",
+      "Marchesa's Decree"
+     ]
+    },
+    {
+     "play": [
+      "Graveborn Muse"
+     ],
+     "when": [
+      "library >= 50",
+      "type:Zombie <= 5"
+     ]
+    },
+    {
+     "activate": [
+      "Cemetery Reaper"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Lord of the Undead"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Cryptbreaker"
+     ],
+     "ability": "Create a 2/2",
+     "when": [
+      "hand >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Night's Whisper",
+      "Ambition's Cost",
+      "Sign in Blood"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Lord of the Accursed"
+     ],
+     "phase": "main1",
+     "when": [
+      "attackers >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "God-Eternal Bontu"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Oversold Cemetery",
+     "Undead Butler"
+    ]
+   }
+  ],
+  "notes": "Version 1. Ghoulcaller Gisa is flagged AI:RemoveDeck:All and stock never casts her (0 of 12 audit games, seeds 11001-11012). The rules put the rocks down, cast Gisa as soon as she is affordable and tap her in every first main phase while she has another creature to sacrifice (Forge picks the sacrifice: a Zombie token 43 times in 60 tuning activations, Death Baron 7). Then the lords and anthems, Endless Ranks of the Dead (also never cast by stock), the token makers and the creatures dearest first; Graveborn Muse only while the library is 50+ and Zombies 5 or fewer; Cemetery Reaper's and Lord of the Undead's abilities in main 1, Cryptbreaker's token with a hand of 4+, the draw spells while the library is 30+, Lord of the Accursed's menace with 3+ attackers. God-Eternal Bontu is held: under a play rule Forge accepted its enters trigger and sacrificed every permanent, lands included (a decline trigger rule does not reach that choice). Oversold Cemetery's and Undead Butler's optional triggers are taken. Attack: go-wide at the highest life with the split. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #23, seed 20261230) 40 wins against the stock pilot's 35 (+2.5 points, 95% -5 to +10, exact test 0.60: a lean); 31 with the go-wide attack.",
+  "on": "2026-11-12"
+ }
 }

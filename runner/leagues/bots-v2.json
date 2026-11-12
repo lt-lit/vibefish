@@ -1,0 +1,169 @@
+{
+ "name": "bots-v2",
+ "status": "frozen",
+ "chosen_on": "2026-11-12",
+ "chosen_with": "snapshot-2026-11-10",
+ "description": "The twelve precons that have a shipped playbook on 2026-11-12: the four of bots-v1 (Goblin Storm, Token Triumph, Hail, Caesar, Tricky Terrain) and Deep Clue Sea, Planeswalker Party, Limit Break, Elven Council, Quick Draw, Wretched Ranks, Eldrazi Incursion, Enduring Enchantments. Each joined because at 200 tables of bots its playbook did at least as well as the stock pilot of the same deck (DESIGN.md section 27 says which leads are clear of noise). A league of the bot decks alone, and the pool the exams draw opponents from. Played with league.py play --playbooks every seat is under its playbook. If this list ever changes, that is a new league with a new name.",
+ "schedule": "runner/league.py: twelve decks are three tables a round. A cycle is four rounds, so every deck plays four games a cycle and sits in every seat once; 50 cycles = 600 games, 200 per deck.",
+ "precon_dir": "res/quest/commanderprecons",
+ "reference": "runner/reference/playgroup-commander.json",
+ "checked": "The twelve decks are league-v1 decks (runner/precon-league.json): same files, same checks.",
+ "decks": [
+  {
+   "id": "goblin-storm",
+   "file": "Goblin Storm [SLD] [2026].dck",
+   "name": "Goblin Storm",
+   "commanders": [
+    "Zada, Hedron Grinder"
+   ],
+   "set": "SLD",
+   "year": 2026,
+   "reference_name": "Goblin Storm",
+   "ai_never": 3,
+   "ai_random": 4
+  },
+  {
+   "id": "token-triumph",
+   "file": "Token Triumph [SCD] [2022].dck",
+   "name": "Token Triumph",
+   "commanders": [
+    "Emmara, Soul of the Accord"
+   ],
+   "set": "SCD",
+   "year": 2022,
+   "reference_name": "Token Triumph",
+   "ai_never": 3,
+   "ai_random": 1
+  },
+  {
+   "id": "hail-caesar",
+   "file": "Hail, Caesar [PIP] [2024].dck",
+   "name": "Hail, Caesar",
+   "commanders": [
+    "Caesar, Legion's Emperor"
+   ],
+   "set": "PIP",
+   "year": 2024,
+   "reference_name": "Hail, Caesar",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "tricky-terrain",
+   "file": "Tricky Terrain [M3C] [2024].dck",
+   "name": "Tricky Terrain",
+   "commanders": [
+    "Omo, Queen of Vesuva"
+   ],
+   "set": "M3C",
+   "year": 2024,
+   "reference_name": "Tricky Terrain",
+   "ai_never": 8,
+   "ai_random": 5
+  },
+  {
+   "id": "deep-clue-sea",
+   "file": "Deep Clue Sea [MKC] [2024].dck",
+   "name": "Deep Clue Sea",
+   "commanders": [
+    "Morska, Undersea Sleuth"
+   ],
+   "set": "MKC",
+   "year": 2024,
+   "reference_name": "Deep Clue Sea",
+   "ai_never": 4,
+   "ai_random": 3
+  },
+  {
+   "id": "planeswalker-party",
+   "file": "Planeswalker Party [CMM] [2023].dck",
+   "name": "Planeswalker Party",
+   "commanders": [
+    "Commodore Guff"
+   ],
+   "set": "CMM",
+   "year": 2023,
+   "reference_name": "Planeswalker Party",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "limit-break",
+   "file": "Limit Break [FIC] [2025].dck",
+   "name": "Limit Break",
+   "commanders": [
+    "Cloud, Ex-SOLDIER"
+   ],
+   "set": "FIC",
+   "year": 2025,
+   "reference_name": "Limit Break",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "elven-council",
+   "file": "Elven Council [LTC] [2023].dck",
+   "name": "Elven Council",
+   "commanders": [
+    "Galadriel, Elven-Queen"
+   ],
+   "set": "LTC",
+   "year": 2023,
+   "reference_name": "Elven Council",
+   "ai_never": 4,
+   "ai_random": 2
+  },
+  {
+   "id": "quick-draw",
+   "file": "Quick Draw [OTC] [2024].dck",
+   "name": "Quick Draw",
+   "commanders": [
+    "Stella Lee, Wild Card"
+   ],
+   "set": "OTC",
+   "year": 2024,
+   "reference_name": "Quick Draw",
+   "ai_never": 6,
+   "ai_random": 3
+  },
+  {
+   "id": "wretched-ranks",
+   "file": "Wretched Ranks [FDC] [2026].dck",
+   "name": "Wretched Ranks",
+   "commanders": [
+    "Ghoulcaller Gisa"
+   ],
+   "set": "FDC",
+   "year": 2026,
+   "reference_name": "Wretched Ranks",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "eldrazi-incursion",
+   "file": "Eldrazi Incursion [M3C] [2024].dck",
+   "name": "Eldrazi Incursion",
+   "commanders": [
+    "Ulalek, Fused Atrocity"
+   ],
+   "set": "M3C",
+   "year": 2024,
+   "reference_name": "Eldrazi Incursion",
+   "ai_never": 2,
+   "ai_random": 6
+  },
+  {
+   "id": "enduring-enchantments",
+   "file": "Enduring Enchantments [CMM] [2023].dck",
+   "name": "Enduring Enchantments",
+   "commanders": [
+    "Anikthea, Hand of Erebos"
+   ],
+   "set": "CMM",
+   "year": 2023,
+   "reference_name": "Enduring Enchantments",
+   "ai_never": 2,
+   "ai_random": 6
+  }
+ ]
+}

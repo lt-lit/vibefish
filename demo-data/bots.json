@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-12T03:26:59Z",
+ "generated": "2026-11-12T07:02:57Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -14,9 +14,9 @@
    "commanders": [
     "Zada, Hedron Grinder"
    ],
-   "status": "shipped (v4, with answer rules); among bots +13.5 points on its stock pilot, confirmed, and +4.0 on version 3",
+   "status": "shipped (v5: answer rules, the attack left to Forge); each measured against the earlier version among bots (+4.0 and +6.0), together in the next round",
    "playbook": "playbook/precons/goblin-storm.json",
-   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment.",
+   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment; version 5 leaves the attack to Forge.",
    "human": {
     "win_rate": 0.2093,
     "games": 218
@@ -72,18 +72,18 @@
    "commanders": [
     "Emmara, Soul of the Accord"
    ],
-   "status": "shipped (v3); among bots +4.0 on its stock pilot, a lean",
+   "status": "shipped (v4, the attack left to Forge); among bots +9.0 points on its stock pilot",
    "playbook": "playbook/precons/token-triumph.json",
-   "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
+   "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump; version 4 leaves the attack to Forge.",
    "human": {
     "win_rate": 0.2652,
     "games": 197
    },
    "tables": {
-    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "run": "ab-run #23 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (the same rules with the go-wide attack won 83)",
     "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v11/token-triumph.json",
+    "source": "demo-data/ab/2026-11-12-ab-v15/token-triumph-join.json",
     "stock": {
      "games": 200,
      "wins": 75,
@@ -95,21 +95,21 @@
     },
     "bot": {
      "games": 200,
-     "wins": 83,
-     "win_rate": 0.415,
+     "wins": 93,
+     "win_rate": 0.465,
      "win_rate_ci95": [
-      0.3489,
-      0.4843
+      0.3972,
+      0.5341
      ]
     },
-    "difference": 0.04,
+    "difference": 0.09,
     "difference_ci95": [
-     -0.0441,
-     0.1241
+     0.0055,
+     0.1745
     ],
-    "bot_only": 41,
-    "stock_only": 33,
-    "exact_p": 0.416
+    "bot_only": 47,
+    "stock_only": 29,
+    "exact_p": 0.0505
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json",
@@ -130,9 +130,9 @@
    "commanders": [
     "Caesar, Legion's Emperor"
    ],
-   "status": "shipped (v4, with answer rules); among bots +15.0 points on its stock pilot and +9.5 on version 3, confirmed",
+   "status": "shipped (v5: answer rules, the attack left to Forge); each measured against the earlier version among bots (+9.5 and +2.5), together in the next round",
    "playbook": "playbook/precons/hail-caesar.json",
-   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five); version 4 also casts its board wipes (Ruinous Ultimatum, Martial Coup, Vault 75, Hour of Reckoning, The Nipton Lottery) when the table calls for them.",
+   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five); version 4 also casts its board wipes (Ruinous Ultimatum, Martial Coup, Vault 75, Hour of Reckoning, The Nipton Lottery) when the table calls for them; version 5 leaves the attack to Forge.",
    "human": {
     "win_rate": 0.2152,
     "games": 320
@@ -188,9 +188,9 @@
    "commanders": [
     "Omo, Queen of Vesuva"
    ],
-   "status": "shipped (v6, with answer rules); among bots +6.0 points on its stock pilot, a lean",
+   "status": "shipped (v7: answer rules, the attack left to Forge); each measured against the earlier version among bots (+2.0 and +9.5), together in the next round",
    "playbook": "playbook/precons/tricky-terrain.json",
-   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths; version 6 also plays Oblivion Stone and Propaganda early and uses the Stone and Evacuation against a wide board.",
+   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths; version 6 also plays Oblivion Stone and Propaganda early and uses the Stone and Evacuation against a wide board; version 7 leaves the attack to Forge.",
    "human": {
     "win_rate": 0.2859,
     "games": 306
@@ -241,13 +241,245 @@
    }
   },
   {
+   "deck": "deep-clue-sea",
+   "name": "Deep Clue Sea",
+   "commanders": [
+    "Morska, Undersea Sleuth"
+   ],
+   "status": "shipped (v1); among bots +12.0 points on its stock pilot, confirmed",
+   "playbook": "playbook/precons/deep-clue-sea.json",
+   "summary": "Morska out on turn 4, one Clue cracked a turn for her second-card trigger, Selvala and Idol of Oblivion tapped, Mechanized Production on a Clue, Farewell held unless behind; the attack is Forge's.",
+   "human": {
+    "win_rate": 0.1974,
+    "games": 152
+   },
+   "tables": {
+    "run": "ab-run #19 and #23: 200 tables of bots (61 wins with the go-wide attack the rules were written with)",
+    "seed": 20261210,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-12-ab-v15/deep-clue-sea-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 52,
+     "win_rate": 0.26,
+     "win_rate_ci95": [
+      0.2041,
+      0.3249
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 76,
+     "win_rate": 0.38,
+     "win_rate_ci95": [
+      0.3156,
+      0.4489
+     ]
+    },
+    "difference": 0.12,
+    "difference_ci95": [
+     0.0374,
+     0.2026
+    ],
+    "bot_only": 49,
+    "stock_only": 25,
+    "exact_p": 0.0071
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-11/deep-clue-sea-seeds-3201-3240.json",
+    "games": 40,
+    "stock_kill_turn": 12.575,
+    "bot_kill_turn": 9.7,
+    "faster_by": 2.875,
+    "faster_by_ci95": [
+     2.243,
+     3.507
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "planeswalker-party",
+   "name": "Planeswalker Party",
+   "commanders": [
+    "Commodore Guff"
+   ],
+   "status": "shipped (v1); among bots +6.0 points on its stock pilot, a lean",
+   "playbook": "playbook/precons/planeswalker-party.json",
+   "summary": "Commodore Guff on turn 4, the planeswalkers in a fixed order, three loyalty abilities by rule, the cards Forge never casts; the attack is Forge's, which keeps creatures home for the planeswalkers.",
+   "human": {
+    "win_rate": 0.3354,
+    "games": 199
+   },
+   "tables": {
+    "run": "ab-run #19: 200 tables of bots (57 wins with the go-wide attack)",
+    "seed": 20261210,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-11-ab-v12/planeswalker-party-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 57,
+     "win_rate": 0.285,
+     "win_rate_ci95": [
+      0.2269,
+      0.3512
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 69,
+     "win_rate": 0.345,
+     "win_rate_ci95": [
+      0.2826,
+      0.4132
+     ]
+    },
+    "difference": 0.06,
+    "difference_ci95": [
+     -0.0239,
+     0.1439
+    ],
+    "bot_only": 43,
+    "stock_only": 31,
+    "exact_p": 0.2007
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-11/planeswalker-party-forge-attack-seeds-2701-2740.json",
+    "games": 40,
+    "stock_kill_turn": 13.075,
+    "bot_kill_turn": 11.325,
+    "faster_by": 1.75,
+    "faster_by_ci95": [
+     0.891,
+     2.609
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "limit-break",
+   "name": "Limit Break",
+   "commanders": [
+    "Cloud, Ex-SOLDIER"
+   ],
+   "status": "shipped (v1); among bots +11.5 points on its stock pilot, confirmed",
+   "playbook": "playbook/precons/limit-break.json",
+   "summary": "Cloud at once, the big equipment before him so his trigger has something to attach, every equip aimed at Cloud and never paid twice; the attack is Forge's.",
+   "human": {
+    "win_rate": 0.1883,
+    "games": 806
+   },
+   "tables": {
+    "run": "ab-run #25: 200 tables of bots (28 wins with the go-wide attack)",
+    "seed": 20261230,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-12-ab-v15/limit-break-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 24,
+     "win_rate": 0.12,
+     "win_rate_ci95": [
+      0.082,
+      0.1723
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 47,
+     "win_rate": 0.235,
+     "win_rate_ci95": [
+      0.1816,
+      0.2984
+     ]
+    },
+    "difference": 0.115,
+    "difference_ci95": [
+     0.0527,
+     0.1773
+    ],
+    "bot_only": 33,
+    "stock_only": 10,
+    "exact_p": 0.0006
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-12/limit-break-fix-seeds-12201-12240.json",
+    "games": 40,
+    "stock_kill_turn": 10.85,
+    "bot_kill_turn": 10.275,
+    "faster_by": 0.575,
+    "faster_by_ci95": [
+     0.16,
+     0.99
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "elven-council",
+   "name": "Elven Council",
+   "commanders": [
+    "Galadriel, Elven-Queen"
+   ],
+   "status": "shipped (v1); among bots +12.5 points on its stock pilot, confirmed",
+   "playbook": "playbook/precons/elven-council.json",
+   "summary": "The ramp cast, Galadriel at once, the payoffs ahead of the five-drops, Elvish Piper used, Genesis Wave and Haldir with all the mana; votes, the instants and the attack are Forge's.",
+   "human": {
+    "win_rate": 0.1536,
+    "games": 140
+   },
+   "tables": {
+    "run": "ab-run #23: 200 tables of bots (39 wins with the go-wide attack)",
+    "seed": 20261230,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-12-ab-v15/elven-council-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 15,
+     "win_rate": 0.075,
+     "win_rate_ci95": [
+      0.046,
+      0.12
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 40,
+     "win_rate": 0.2,
+     "win_rate_ci95": [
+      0.1505,
+      0.2609
+     ]
+    },
+    "difference": 0.125,
+    "difference_ci95": [
+     0.0631,
+     0.1869
+    ],
+    "bot_only": 34,
+    "stock_only": 9,
+    "exact_p": 0.0002
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-12/elven-council-seeds-13101-13140.json",
+    "games": 40,
+    "stock_kill_turn": 13.075,
+    "bot_kill_turn": 10.475,
+    "faster_by": 2.6,
+    "faster_by_ci95": [
+     2.039,
+     3.161
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
    "deck": "quick-draw",
    "name": "Quick Draw",
    "commanders": [
     "Stella Lee, Wild Card"
    ],
-   "status": "candidate; among bots +3.5 points on its stock pilot, a lean",
-   "playbook": "playbook/variants/quick-draw-spells.json",
+   "status": "shipped (v1, the attack left to Forge); this row is its rules with the go-wide attack, +3.5 points on its stock pilot among bots, a lean",
+   "playbook": "playbook/precons/quick-draw.json",
    "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
    "human": {
     "win_rate": 0.2585,
@@ -296,6 +528,180 @@
      2.563
     ],
     "seeds_paired": 38
+   }
+  },
+  {
+   "deck": "wretched-ranks",
+   "name": "Wretched Ranks",
+   "commanders": [
+    "Ghoulcaller Gisa"
+   ],
+   "status": "shipped (v1); among bots +2.5 points on its stock pilot, a lean",
+   "playbook": "playbook/precons/wretched-ranks.json",
+   "summary": "Casts the commander Forge never casts, Ghoulcaller Gisa, and uses her every turn ahead of the lords; the lords' abilities, Cryptbreaker, the draw spells with a library guard; God-Eternal Bontu held; the attack is Forge's.",
+   "human": {
+    "win_rate": 0.1261,
+    "games": 563
+   },
+   "tables": {
+    "run": "ab-run #23: 200 tables of bots (31 wins with the go-wide attack)",
+    "seed": 20261230,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-12-ab-v15/wretched-ranks-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 35,
+     "win_rate": 0.175,
+     "win_rate_ci95": [
+      0.1286,
+      0.2336
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 40,
+     "win_rate": 0.2,
+     "win_rate_ci95": [
+      0.1505,
+      0.2609
+     ]
+    },
+    "difference": 0.025,
+    "difference_ci95": [
+     -0.0502,
+     0.1002
+    ],
+    "bot_only": 32,
+    "stock_only": 27,
+    "exact_p": 0.6029
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-12/wretched-ranks-seeds-11101-11140.json",
+    "games": 40,
+    "stock_kill_turn": 10.632,
+    "bot_kill_turn": 9.846,
+    "faster_by": 0.789,
+    "faster_by_ci95": [
+     0.377,
+     1.202
+    ],
+    "seeds_paired": 38
+   }
+  },
+  {
+   "deck": "eldrazi-incursion",
+   "name": "Eldrazi Incursion",
+   "commanders": [
+    "Ulalek, Fused Atrocity"
+   ],
+   "status": "shipped (v1); among bots level with its stock pilot (+1.0)",
+   "playbook": "playbook/precons/eldrazi-incursion.json",
+   "summary": "Pays for Ulalek's copy trigger, which Forge never does, while ten mana or less is available; Ulalek ahead of the rocks; Eldrazi Monument held for a board of tokens; the attack is Forge's. Open defect: a chain of copies can deck the seat.",
+   "human": {
+    "win_rate": 0.2165,
+    "games": 433
+   },
+   "tables": {
+    "run": "ab-run #24: 200 tables of bots (52 wins with the go-wide attack)",
+    "seed": 20261230,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-12-ab-v15/eldrazi-incursion-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 62,
+     "win_rate": 0.31,
+     "win_rate_ci95": [
+      0.25,
+      0.3772
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 64,
+     "win_rate": 0.32,
+     "win_rate_ci95": [
+      0.2593,
+      0.3875
+     ]
+    },
+    "difference": 0.01,
+    "difference_ci95": [
+     -0.0743,
+     0.0943
+    ],
+    "bot_only": 38,
+    "stock_only": 36,
+    "exact_p": 0.9076
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-12/eldrazi-incursion-seeds-15101-15140.json",
+    "games": 40,
+    "stock_kill_turn": 11.85,
+    "bot_kill_turn": 10.421,
+    "faster_by": 1.211,
+    "faster_by_ci95": [
+     0.736,
+     1.685
+    ],
+    "seeds_paired": 38
+   }
+  },
+  {
+   "deck": "enduring-enchantments",
+   "name": "Enduring Enchantments",
+   "commanders": [
+    "Anikthea, Hand of Erebos"
+   ],
+   "status": "shipped (v1); among bots level with its stock pilot",
+   "playbook": "playbook/precons/enduring-enchantments.json",
+   "summary": "Casts the commander Forge never casts, Anikthea, lays the enchantress engine in order, uses the land searches and holds every enchantment once the library is under 25 cards; the attack is Forge's.",
+   "human": {
+    "win_rate": 0.2226,
+    "games": 169
+   },
+   "tables": {
+    "run": "ab-run #23: 200 tables of bots (61 wins with the go-wide attack)",
+    "seed": 20261230,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-12-ab-v15/enduring-enchantments-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 62,
+     "win_rate": 0.31,
+     "win_rate_ci95": [
+      0.25,
+      0.3772
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 62,
+     "win_rate": 0.31,
+     "win_rate_ci95": [
+      0.25,
+      0.3772
+     ]
+    },
+    "difference": 0.0,
+    "difference_ci95": [
+     -0.0866,
+     0.0866
+    ],
+    "bot_only": 39,
+    "stock_only": 39,
+    "exact_p": 1.0
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-12/enduring-enchantments-seeds-16101-16140.json",
+    "games": 40,
+    "stock_kill_turn": 12.818,
+    "bot_kill_turn": 10.949,
+    "faster_by": 2.312,
+    "faster_by_ci95": [
+     1.533,
+     3.092
+    ],
+    "seeds_paired": 32
    }
   }
  ]

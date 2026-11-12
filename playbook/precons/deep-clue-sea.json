@@ -25,5 +25,312 @@
   },
   "cards_without_script": []
  },
- "curated": {}
+ "curated": {},
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Farewell"
+     ],
+     "until": [
+      "opp_power > power",
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "Lonis, Cryptozoologist"
+     ],
+     "ability": "reveals the top"
+    },
+    {
+     "hold": [
+      "Tezzeret, Betrayer of Flesh"
+     ],
+     "ability": "emblem"
+    },
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Talisman of Unity",
+      "Talisman of Curiosity",
+      "Talisman of Progress",
+      "Simic Signet",
+      "Azorius Signet"
+     ],
+     "when": [
+      "turn <= 5"
+     ]
+    },
+    {
+     "play": [
+      "Morska, Undersea Sleuth"
+     ]
+    },
+    {
+     "activate": [
+      "Krosan Verge"
+     ],
+     "ability": "Search your library",
+     "when": [
+      "lands <= 7"
+     ]
+    },
+    {
+     "play": [
+      "Mechanized Production"
+     ],
+     "target": "Clue Token"
+    },
+    {
+     "hold": [
+      "Mechanized Production"
+     ]
+    },
+    {
+     "activate": [
+      "Selvala, Explorer Returned"
+     ],
+     "phase": "main1",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "On the Trail"
+     ],
+     "when": [
+      "turn <= 5"
+     ]
+    },
+    {
+     "play": [
+      "Tangletrove Kelp",
+      "Selvala, Explorer Returned",
+      "Idol of Oblivion",
+      "Jolrael, Mwonvuli Recluse",
+      "Detective of the Month",
+      "Alandra, Sky Dreamer",
+      "Ethereal Investigator",
+      "Tezzeret, Betrayer of Flesh",
+      "Knowledge Is Power",
+      "Chulane, Teller of Tales",
+      "Thought Monitor"
+     ]
+    },
+    {
+     "activate": [
+      "Clue Token"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "drawn <= 1",
+      "library >= 20",
+      "not controls Bennie Bracks, Zoologist",
+      "not controls Chulane, Teller of Tales",
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    },
+    {
+     "activate": [
+      "Jolrael, Mwonvuli Recluse"
+     ],
+     "ability": "base power and toughness",
+     "phase": "main1",
+     "when": [
+      "attackers >= 4",
+      "hand >= 7"
+     ]
+    },
+    {
+     "activate": [
+      "Clue Token"
+     ],
+     "ability": "Draw a card",
+     "phase": "main1",
+     "when": [
+      "controls Knowledge Is Power",
+      "attackers >= 6",
+      "library >= 20",
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    },
+    {
+     "play": [
+      "Bennie Bracks, Zoologist"
+     ],
+     "when": [
+      "attackers == 0"
+     ]
+    },
+    {
+     "play": [
+      "Koma, Cosmos Serpent",
+      "Hornet Queen",
+      "Adrix and Nev, Twincasters",
+      "Psychosis Crawler",
+      "Kappa Cannoneer",
+      "Shimmer Dragon",
+      "Junk Winder",
+      "Teferi's Ageless Insight",
+      "Academy Manufactor",
+      "Nadir Kraken",
+      "Erdwal Illuminator",
+      "Tireless Tracker",
+      "Lonis, Cryptozoologist",
+      "Ongoing Investigation",
+      "Wavesifter",
+      "Innocuous Researcher",
+      "Sophia, Dogged Detective",
+      "Merchant of Truth",
+      "Whirler Rogue",
+      "Nettlecyst",
+      "Ulvenwald Mysteries",
+      "Serene Sleuth",
+      "Armed with Proof",
+      "Inspiring Statuary",
+      "Graf Mole",
+      "Killer Service",
+      "Wilderness Reclamation",
+      "Aerial Extortionist",
+      "On the Trail",
+      "Arcane Signet",
+      "Talisman of Unity",
+      "Talisman of Curiosity",
+      "Talisman of Progress",
+      "Simic Signet",
+      "Azorius Signet",
+      "Search the Premises",
+      "Magnifying Glass",
+      "Ransom Note",
+      "Follow the Bodies"
+     ]
+    },
+    {
+     "play": [
+      "Hydroid Krasis"
+     ],
+     "x": "max",
+     "x_min": 4
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Clue Token"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "drawn <= 1",
+      "library >= 20",
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    },
+    {
+     "activate": [
+      "Clue Token"
+     ],
+     "ability": "Draw a card",
+     "phase": "main1",
+     "when": [
+      "controls Knowledge Is Power",
+      "attackers >= 4",
+      "library >= 20",
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    },
+    {
+     "activate": [
+      "Clue Token"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "controls Psychosis Crawler",
+      "library >= 20",
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    },
+    {
+     "activate": [
+      "Clue Token"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "hand <= 2",
+      "library >= 20",
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    },
+    {
+     "hold": [
+      "Clue Token"
+     ],
+     "ability": "Draw a card",
+     "until": [
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    },
+    {
+     "hold": [
+      "Sophia, Dogged Detective"
+     ],
+     "ability": "counter on each Dog",
+     "until": [
+      "not controls Tangletrove Kelp",
+      "not controls Mechanized Production"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Nadir Kraken"
+    ]
+   },
+   {
+    "accept": [
+     "Killer Service"
+    ],
+    "when": [
+     "controls Food Token"
+    ]
+   }
+  ],
+  "notes": "Deep Clue Sea (Morska, Undersea Sleuth: a Clue every upkeep, two +1/+1 counters whenever the second card of a turn is drawn, no maximum hand size). What stock Forge leaves undone (12 audit games, seeds 3101-3112): Morska comes down on turn 7.0; of 176 Clues it cracks 32, every one on another player's turn, so her counters arrive three times a game; Krosan Verge sits unused for 20 turns; the four cards flagged AI:RemoveDeck:All are never cast (Selvala, Jolrael, Psychosis Crawler, Esix); and it casts Farewell on its own board (1 of the 12, 6 of 20 tuning games, 12 of 40 validation games). The rules: Sol Ring and, to turn 5, the two-mana rocks, then Morska; Krosan Verge fetched while there are seven lands or fewer; Mechanized Production only on a Clue (eight Clues win the game), and no Clue sacrificed while it or Tangletrove Kelp (Clues attack as 6/6) is out, whether by cracking or by Sophia; Selvala and Idol of Oblivion tapped for the turn's second card; the cards that pay for that second card first (Kelp, Selvala, Idol, Jolrael, Detective of the Month, Alandra, Ethereal Investigator, Tezzeret, Knowledge Is Power, Chulane, Thought Monitor), then one Clue cracked a turn when nothing else has drawn it (not with Bennie Bracks or Chulane out, who draw it anyway; a second rule after the casts catches the turn they do not); Jolrael's X/X before an attack of four or more with seven cards in hand; further Clues cracked before combat under Knowledge Is Power, with Psychosis Crawler out, or on a hand of two or fewer; every other permanent in a fixed order, rocks and On the Trail last after turn 5; Bennie Bracks only when there is no attacker for his convoke to tap (cast by rule in the first main phase he tapped Morska and cost two attacks in the first twelve games); Hydroid Krasis for four or more, Finale of Revelation on a short hand. Kept from Forge: Farewell unless an opponent's creatures out-power ours; Lonis's reveal, which sacrifices every Clue the seat has; Tezzeret's emblem, which decked the seat (seed 3121, stock and one variant); Esix is named by no rule, since Forge's AI answers its replacement by copying Morska, a copy that dies to the legend rule in place of the upkeep Clue. Triggers: Nadir Kraken's {1} always, Killer Service's Rhino when there is a Food to give up. Attack: go-wide at the highest life with the split. Library guards (20, 30 for Finale) on every rule that draws. Goldfish, seeds not looked at before the rules were final (3201-3240, 40 games a side, every game finished): stock 12.57 turns, this file 9.70, 2.88 turns faster (95% +2.24 to +3.51; faster in 36, same in 3, slower in 1). On the 28 seeds where stock did not cast Farewell the difference is 1.93 turns (95% +1.42 to +2.44); 7 of the 40 games under the rules end with Mechanized Production (stock: 5). On the seeds the rules were written on (3101-3112, 3121-3140) it is 2.58 turns over the 31 of 32 that stock finishes. Cracking the Clue only after the casts instead of before them changes nothing in goldfish (0.03 turns on the 31 of those seeds both versions finish). Not played at tables yet. What goldfish cannot price: Selvala's parley hands each opponent a card a turn, Lonis's steals are given up, and a tall Morska has no evasion. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #19 and #23, seed 20261210) 76 wins against the stock pilot's 52 (+12.0 points, 95% +4 to +20, exact test 0.0071); 61 with the go-wide attack these rules were written with.",
+  "on": "2026-11-12"
+ }
 }

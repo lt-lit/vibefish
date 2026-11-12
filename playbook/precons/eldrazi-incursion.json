@@ -44,5 +44,146 @@
   },
   "cards_without_script": []
  },
- "curated": {}
+ "curated": {},
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Eldrazi Monument"
+     ],
+     "until": [
+      "creatures >= 5",
+      "tokens >= 2"
+     ]
+    },
+    {
+     "hold": [
+      "Sire of Stagnation"
+     ],
+     "until": [
+      "not controls Ulalek, Fused Atrocity"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Ulalek, Fused Atrocity"
+     ]
+    },
+    {
+     "play": [
+      "Sire of Stagnation"
+     ],
+     "when": [
+      "not controls Ulalek, Fused Atrocity"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Talisman of Curiosity",
+      "Talisman of Dominance",
+      "Talisman of Impulse",
+      "Talisman of Resilience",
+      "Hedron Archive"
+     ]
+    },
+    {
+     "play": [
+      "Herald's Horn",
+      "Forsaken Monument",
+      "Ugin, the Ineffable",
+      "Awakening Zone",
+      "Garruk's Uprising",
+      "Mystic Forge",
+      "Dreamstone Hedron"
+     ]
+    },
+    {
+     "play": [
+      "Ulamog's Dreadsire",
+      "Artisan of Kozilek",
+      "Elder Deep-Fiend",
+      "Ulamog's Crusher",
+      "Benthic Anomaly",
+      "Hideous Taskmaster",
+      "Morophon, the Boundless",
+      "Spawnbed Protector",
+      "Twins of Discord",
+      "World Breaker",
+      "Skittering Invasion",
+      "Angelic Aberration",
+      "Deepfathom Skulker",
+      "Drowner of Hope",
+      "Endbringer",
+      "Oblivion Sower",
+      "Titans' Vanguard",
+      "Bismuth Mindrender",
+      "Inversion Behemoth",
+      "Sifter of Skulls",
+      "Ulamog's Nullifier",
+      "Azlask, the Swelling Scourge",
+      "Chittering Dispatcher",
+      "Eldrazi Displacer",
+      "Glaring Fleshraker",
+      "Mutated Cultist",
+      "Snapping Voidcraw",
+      "Vile Redeemer",
+      "Wastescape Battlemage"
+     ]
+    },
+    {
+     "activate": [
+      "Ulamog's Dreadsire"
+     ],
+     "phase": "main2"
+    },
+    {
+     "play": [
+      "Ugin's Insight",
+      "Rishkar's Expertise"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Create a 10/10"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "phase": "main2"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Ulalek, Fused Atrocity"
+    ],
+    "when": [
+     "mana <= 10"
+    ]
+   },
+   {
+    "decline": [
+     "Ulalek, Fused Atrocity"
+    ]
+   }
+  ],
+  "notes": "Eldrazi Incursion (Ulalek, Fused Atrocity: whenever you cast an Eldrazi spell, you may pay {C}{C} to copy every spell and every other ability you control). Stock Forge never pays Ulalek's trigger (0 copies in 12 audit games, 63 triggers put on the stack) and casts Ulalek on its own turn 6.5 on average. Rules: Sol Ring, then Ulalek at once, then the other rocks (a rock cast first had cost Ulalek a turn); Sire of Stagnation only while Ulalek is not on the battlefield (held otherwise), because copies of Sire draw two per Sire per opponent land and milled the seat in a tuning game (seven copies); the cost reducers and engines (Herald's Horn, Forsaken Monument, Ugin, Awakening Zone, Garruk's Uprising, Mystic Forge, Dreamstone Hedron), then the creatures dearest first; Ulamog's Dreadsire's 10/10 after combat (vigilance); the draw spells while 30 cards remain; Idol of Oblivion's 10/10 and its draw. Eldrazi Monument is held until five creatures, two of them tokens: its upkeep sacrifice ate Ulalek and the board in a tuning game. Trigger: Ulalek's copy paid while Forge estimates 10 mana or less left, declined above. Each copy of the trigger copies every spell on the stack again, so accepting without the cap doubled one creature spell into a thousand copies and two of twelve games ran into the clock as draws and one into the turn cap; the mana bound caps a chain at about five payments. Go-wide attack from two attackers up. Goldfish: audit seeds 15002-15013 stock 11.33, this file 10.25; tuning seeds 15022-15041 stock 11.65, this file 10.45 (+1.20, 95% +0.76 to +1.64). Validation, seeds 15101-15140, not looked at before the rules were final: stock 11.85 (40 of 40 finished), this file 10.42 (38 of 40), +1.21 turns on the 38 paired seeds (95% +0.74 to +1.68), faster in 24, same in 12, slower in 2. The two unfinished games hit the turn cap: on seed 15132 the mana cap did not stop a chain (Elder Deep-Fiend copied 255 times), and Garruk's Uprising drew a card for each copy until the seat was milled at 126 life. Forge's mana estimate seems to leave out Spawn and Scion sacrifices doubled by Forsaken Monument. Seed 15104 stayed on one land all game. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #24, seed 20261230) 64 wins against the stock pilot's 62 (+1.0 points, 95% -7 to +9: level); 52 with the go-wide attack. Open defect: a chain of copies can deck the seat.",
+  "on": "2026-11-12"
+ }
 }

@@ -52,15 +52,7 @@
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
  },
  "playbook": {
-  "version": 3,
-  "attack": {
-   "policy": "go_wide",
-   "target": "highest_life",
-   "min_attackers": 3,
-   "safety_margin": 5,
-   "max_reserve": 3,
-   "spread": true
-  },
+  "version": 4,
   "cast": {
    "rules": [
     {
@@ -200,7 +192,7 @@
     }
    ]
   },
-  "notes": "Emmara makes a lifelink Soldier whenever she becomes tapped, so the deck is a token engine with anthems on top. The rules put the mana creatures and rocks down first, then Emmara, then Karametra's Favor and Presence of Gond on her and nowhere else; with Presence of Gond she taps for an Elf and a Soldier every turn before combat. Collective Unconscious and Camaraderie wait for five creatures and are not cast into a board of more than twelve or a library under forty (a draft decked itself that way). Overrun waits for five attackers. The permanents go down in the listed order, anthems first, including the three cards flagged AI:RemoveDeck:All that stock never casts (Dauntless Escort, Nullmage Shepherd, Slate of Ancestry). Permanents are cast in either main phase. Attack: go-wide at the highest life with the split, as version 2. Shipped 2026-11-11 as version 3 after ab-run #8: on the 200 tables of run #6 (seed 20261141) it wins 67 where stock wins 43 and the attack-only version 2 wins 39 (+12.0 points against stock, 47 tables won only by it against 23 only by stock, exact test 0.006); the same rules under the pressure attack win 60, and with everything but the anthems cast after combat 58 (demo-data/ab/2026-11-11-ab-v6/token-triumph.json, DESIGN.md §22). Confirmed on tables of its own (ab-run #17, seed 20261160, 200 tables whose opponents the deck had not met): 56 wins against stock's 35, 28.0% against 17.5%, +10.5 points (95% +3 to +18, 38 tables won only by it against 17 only by stock, exact test 0.0065; demo-data/ab/2026-11-11-ab-v10/token-triumph.json, DESIGN.md §23).",
-  "on": "2026-11-11"
+  "notes": "Emmara makes a lifelink Soldier whenever she becomes tapped, so the deck is a token engine with anthems on top. The rules put the mana creatures and rocks down first, then Emmara, then Karametra's Favor and Presence of Gond on her and nowhere else; with Presence of Gond she taps for an Elf and a Soldier every turn before combat. Collective Unconscious and Camaraderie wait for five creatures and are not cast into a board of more than twelve or a library under forty (a draft decked itself that way). Overrun waits for five attackers. The permanents go down in the listed order, anthems first, including the three cards flagged AI:RemoveDeck:All that stock never casts (Dauntless Escort, Nullmage Shepherd, Slate of Ancestry). Permanents are cast in either main phase. Attack: go-wide at the highest life with the split, as version 2. Shipped 2026-11-11 as version 3 after ab-run #8: on the 200 tables of run #6 (seed 20261141) it wins 67 where stock wins 43 and the attack-only version 2 wins 39 (+12.0 points against stock, 47 tables won only by it against 23 only by stock, exact test 0.006); the same rules under the pressure attack win 60, and with everything but the anthems cast after combat 58 (demo-data/ab/2026-11-11-ab-v6/token-triumph.json, DESIGN.md §22). Confirmed on tables of its own (ab-run #17, seed 20261160, 200 tables whose opponents the deck had not met): 56 wins against stock's 35, 28.0% against 17.5%, +10.5 points (95% +3 to +18, 38 tables won only by it against 17 only by stock, exact test 0.0065; demo-data/ab/2026-11-11-ab-v10/token-triumph.json, DESIGN.md §23). Version 4 (2026-11-12): the attack is left to Forge. At 200 tables of bots (ab-run #23 joined with #20, seed 20261200) these rules won 93 tables with Forge's own attack against 83 with the go-wide attack (+5.0 points, 95% -1 to +11, exact test 0.17) and the stock pilot's 75 (+9.0, +1 to +17, 0.05).",
+  "on": "2026-11-12"
  }
 }

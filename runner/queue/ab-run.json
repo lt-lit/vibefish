@@ -1,24 +1,24 @@
 {
-  "requested": "2026-11-12T02:05Z",
-  "note": "Limit Break joins its batch at the bot tables now that the controller no longer re-equips what Cloud already wears (commit 5c293e4; the candidate then gains half a turn in goldfish on fresh seeds): limit-break@cloud, stock pilot against candidate, and its Forge-attack sibling on the same tables (playbook arm), seed 20261230, opponents drawn from the four bot decks under their shipped playbooks. This is the first run on the code with that check. The requests before this one: commit 5f69ddc is ab-run #24 (Eldrazi Incursion), 53c732b is #23.",
+  "requested": "2026-11-12T07:30Z",
+  "note": "The confirming round on the new pool (runner/leagues/bots-v2.json, the twelve decks with a shipped playbook; every exam before this drew its opponents from the four of bots-v1). (1) Each of the twelve at 200 tables whose three opponents are drawn from the other eleven, each under its shipped playbook: stock pilot against shipped playbook, seed 20261240. (2) On the same tables, playbook arm only, the go-wide versions of the five decks whose shipped attack has not been played with their shipped rules: goblin-storm@answers, hail-caesar@answers and tricky-terrain@answers (the answer rules with the go-wide attack; shipped is the same rules with Forge's attack), token-triumph@gowide (version 3) and quick-draw@spells. runner/ab.py join puts a deck's arms side by side.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
-  "pool": "runner/leagues/bots-v1.json",
+  "pool": "runner/leagues/bots-v2.json",
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "limit-break@cloud",
+      "decks": "goblin-storm,token-triumph,hail-caesar,tricky-terrain,deep-clue-sea,planeswalker-party,limit-break,elven-council,quick-draw,wretched-ranks,eldrazi-incursion,enduring-enchantments",
       "arms": "stock,playbook",
-      "seed": "20261230"
+      "seed": "20261240"
     },
     {
-      "decks": "limit-break@cloud-forgeattack",
+      "decks": "goblin-storm@answers,hail-caesar@answers,tricky-terrain@answers,token-triumph@gowide,quick-draw@spells",
       "arms": "playbook",
-      "seed": "20261230"
+      "seed": "20261240"
     }
   ]
 }
