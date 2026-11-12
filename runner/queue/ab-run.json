@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-11T21:20Z",
-  "note": "The request of ab-run #18 again. #18 was created at 20:21 UTC and never started: an hour later it was still queued with no jobs, like the two smoke-test runs of the same push, while runs created later played (GitHub's side; the Pages builds of that push and the next failed at startup). The request: each of the four shipped bots at 200 tables whose three opponents are the other three bots, each under its shipped playbook; the deck's own seat once under stock AI and once under its playbook. Does a playbook still earn its place when the table is competent. Seed 20261200 for all four. The batch's candidates are ab-run #19 (the request before this one, commit 1f0d7cb: counter-intelligence@charge, deep-clue-sea@sleuth, food-and-fellowship@eat, planeswalker-party@guff and @guff-forgeattack, seed 20261210).",
+  "requested": "2026-11-12T00:10Z",
+  "note": "Answer rules for the four shipped bots (DESIGN \u00a724, \u00a726): each deck's candidate playbook/variants/<deck>-answers.json, the shipped rules plus rules that cast the deck's wipes and removal, at the 200 tables of ab-run #20 (the same pool, opponents under their shipped playbooks, seed 20261200). Playbook arm only: runner/ab.py join pairs it with #20's stock arm and with #20's shipped-playbook arm. A candidate replaces the shipped version if it wins more of those tables than the shipped version does and loses fewer games with a castable answer in hand.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,8 +11,8 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "goblin-storm,token-triumph,hail-caesar,tricky-terrain",
-      "arms": "stock,playbook",
+      "decks": "goblin-storm@answers,token-triumph@answers,hail-caesar@answers,tricky-terrain@answers",
+      "arms": "playbook",
       "seed": "20261200"
     }
   ]
