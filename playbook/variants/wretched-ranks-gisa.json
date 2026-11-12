@@ -149,6 +149,7 @@
     ]
    }
   ],
-  "notes": "Version 1: Ghoulcaller Gisa is flagged AI:RemoveDeck:All and stock never casts her (0 of 12 audit games). The rules cast her on curve after the rocks, the lords and Endless Ranks of the Dead (also never cast by stock) before anything else, and tap her every first main phase to turn another creature into that many 2/2 Zombies."
- }
+  "notes": "Version 1. Ghoulcaller Gisa is flagged AI:RemoveDeck:All and stock never casts her (0 of 12 audit games, seeds 11001-11012). The rules put the rocks down, cast Gisa as soon as she is affordable and tap her in every first main phase while she has another creature to sacrifice (Forge picks the sacrifice: a Zombie token 43 times in 60 tuning activations, Death Baron 7). Then the lords and anthems, Endless Ranks of the Dead (also never cast by stock), the token makers and the creatures dearest first; Graveborn Muse only while the library is 50+ and Zombies 5 or fewer; Cemetery Reaper's and Lord of the Undead's abilities in main 1, Cryptbreaker's token with a hand of 4+, the draw spells while the library is 30+, Lord of the Accursed's menace with 3+ attackers. God-Eternal Bontu is held: under a play rule Forge accepted its enters trigger and sacrificed every permanent, lands included (a decline trigger rule does not reach that choice). Oversold Cemetery's and Undead Butler's optional triggers are taken. Attack: go-wide at the highest life with the split."
+ },
+ "on": "2026-11-12"
 }

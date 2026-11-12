@@ -113,3 +113,5 @@ All on the heuristic AI (Monte Carlo off). The trace that names declined trigger
 - Stock Tricky Terrain fails to kill three do-nothing opponents in seven of forty goldfish games
   (`runner/goldfish.sh "Tricky Terrain [M3C] [2024].dck" -s 8000`: six stop at the turn cap of twenty rounds, one on
   the 900 s clock). Why has not been looked into.
+
+- **God-Eternal Bontu (seen 2026-11-12, snapshot 2026-11-10, Wretched Ranks goldfish):** when the card is cast, Forge's AI answers its enters trigger ("sacrifice any number of other permanents, then draw that many cards") by sacrificing every other permanent it has, lands included (2 of 12 tuning games). The choice is not an optional trigger, so a playbook cannot decline it; the deck's candidate holds the card. For our own reference only.

@@ -47,6 +47,7 @@ it came from, kept as the record of what was measured.
 | `tricky-terrain-draft.json` | draft | goldfish +1.2 turns over stock (27 games) |
 | `tricky-terrain-lands.json` | measured, not shipped | the shipped rules under pressure: 37 wins of 200 (stock 30, go-wide 48) |
 | `tricky-terrain-lands-wide.json` | SHIPPED as tricky-terrain (first playbook) | 200 new tables: 48 wins (stock 30); its curated key cards add nothing (50) |
+| `wretched-ranks-gisa.json` | candidate, for the bot tables with the rest of its batch (seed 20261230) | goldfish 9.85 turns against stock's 10.63 on seeds 11101 to 11140 (+0.79 on the 38 seeds both won, 95% +0.38 to +1.20; faster in 24, the same in 10, slower in 4). Stock never casts the commander (Ghoulcaller Gisa carries Forge's never-cast flag): the rules cast her at once and use her every turn, ahead of the lords; the lords' abilities, Cryptbreaker, the draw spells with a library guard. God-Eternal Bontu held: under a play rule Forge sacrificed every permanent to its trigger, lands included |
 
 Keep this table current when a candidate is added, measured or shipped: it is what stops the next session
 measuring a dead end twice.
