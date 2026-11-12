@@ -9,27 +9,40 @@
     "attack": {
       "policy": "go_wide",
       "target": "highest_life",
-      "min_attackers": 3,
+      "min_attackers": 2,
       "safety_margin": 5,
-      "max_reserve": 3,
+      "max_reserve": 2,
       "spread": true
     },
     "cast": {
       "rules": [
         {
+          "hold": [
+            "Eldrazi Monument"
+          ],
+          "until": [
+            "creatures >= 5",
+            "tokens >= 2"
+          ]
+        },
+        {
           "play": [
-            "Sol Ring",
+            "Sol Ring"
+          ]
+        },
+        {
+          "play": [
+            "Ulalek, Fused Atrocity"
+          ]
+        },
+        {
+          "play": [
             "Arcane Signet",
             "Talisman of Curiosity",
             "Talisman of Dominance",
             "Talisman of Impulse",
             "Talisman of Resilience",
             "Hedron Archive"
-          ]
-        },
-        {
-          "play": [
-            "Ulalek, Fused Atrocity"
           ]
         },
         {
@@ -89,6 +102,36 @@
             "Rishkar's Expertise"
           ],
           "when": [
+            "library >= 30"
+          ]
+        },
+        {
+          "activate": [
+            "Idol of Oblivion"
+          ],
+          "ability": "Create a 10/10"
+        },
+        {
+          "activate": [
+            "Idol of Oblivion"
+          ],
+          "ability": "Draw a card",
+          "phase": "main2"
+        },
+        {
+          "activate": [
+            "Ruins of Oran-Rief"
+          ],
+          "phase": "main2"
+        },
+        {
+          "activate": [
+            "Hedron Archive"
+          ],
+          "ability": "Draw two",
+          "phase": "main2",
+          "when": [
+            "hand <= 2",
             "library >= 30"
           ]
         }
