@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-12T03:17:43Z",
+ "generated": "2026-11-12T03:26:59Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -188,18 +188,18 @@
    "commanders": [
     "Omo, Queen of Vesuva"
    ],
-   "status": "shipped; among bots +4.0 on its stock pilot, a lean",
+   "status": "shipped (v6, with answer rules); among bots +6.0 points on its stock pilot, a lean",
    "playbook": "playbook/precons/tricky-terrain.json",
-   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
+   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths; version 6 also plays Oblivion Stone and Propaganda early and uses the Stone and Evacuation against a wide board.",
    "human": {
     "win_rate": 0.2859,
     "games": 306
    },
    "tables": {
-    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 5 of this deck won 40 of the same tables)",
     "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v11/tricky-terrain.json",
+    "source": "demo-data/ab/2026-11-12-ab-v13/tricky-terrain-join.json",
     "stock": {
      "games": 200,
      "wins": 32,
@@ -211,21 +211,21 @@
     },
     "bot": {
      "games": 200,
-     "wins": 40,
-     "win_rate": 0.2,
+     "wins": 44,
+     "win_rate": 0.22,
      "win_rate_ci95": [
-      0.1505,
-      0.2609
+      0.1682,
+      0.2824
      ]
     },
-    "difference": 0.04,
+    "difference": 0.06,
     "difference_ci95": [
-     -0.0357,
-     0.1157
+     -0.0129,
+     0.1329
     ],
     "bot_only": 34,
-    "stock_only": 26,
-    "exact_p": 0.3663
+    "stock_only": 22,
+    "exact_p": 0.1409
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",

@@ -946,3 +946,25 @@ A consequence for later runs: from the commit that shipped them, the pool's Hail
 
 **Quick Draw and Science! (`ab-run` #22: 200 tables of bots each, stock pilot against candidate, seed 20261220; `demo-data/ab/2026-11-12-ab-v14/`).** Quick Draw `spells` 39 wins against 32 (+3.5 points, 95% -3 to +10, exact test 0.40), the same lean it had at stock tables (§22: 38 against 31). Science! `lab` 4 against 7 (-1.5, -4 to +1): the deck wins two to four tables in a hundred here under either pilot.
 
+**What the answer rules cast (the 800 games of `ab-run` #21, read on 2026-11-12; beside them the 200 league games of §24 and §25, the same pool under the shipped playbooks, on other tables).** Games in which the card was drawn, games in which it was cast from hand, and losses with it in hand at the seat's last own turn.
+
+| Deck | card | shipped bots, the league: cast of drawn | answer rules, #21: cast of drawn | in hand at a loss: league, then #21 |
+|---|---|---|---|---|
+| Hail, Caesar | Ruinous Ultimatum | 7 of 35 (20%) | 28 of 41 (68%) | 18 of 168 losses, 12 of 145 |
+| | Martial Coup | 11 of 41 (27%) | 20 of 32 (62%) | 21, 11 |
+| | Hour of Reckoning | 9 of 34 (26%) | 23 of 36 (64%) | 22, 10 |
+| | Vault 75: Middle School | 16 of 38 (42%) | 31 of 45 (69%) | 18, 10 |
+| | The Nipton Lottery | 8 of 33 (24%) | 30 of 39 (77%) | 20, 6 |
+| Token Triumph | Hour of Reckoning | 8 of 51 (16%) | 32 of 43 (74%) | 21 of 108, 8 of 120 |
+| | Conclave Tribunal | 26 of 51 (51%) | 53 of 56 (95%) | 12, 4 |
+| | Citywide Bust (no rule) | 19 of 48 (40%) | 18 of 49 (37%) | 11, 18 |
+| Tricky Terrain | Oblivion Stone | 0 of 66 | 46 of 46 | 42 of 156, 1 of 156 |
+| | Propaganda | 40 of 45 (89%) | 52 of 52 | 5, 0 |
+| | Evacuation (held for a wide board) | 32 of 38 (84%) | 34 of 47 (72%) | 2, 10 |
+| | Curse of the Swine, Summary Dismissal (no rule) | 0 of 55, 0 of 48 | 0 of 57, 0 of 51 | 39 and 27, 39 and 32 |
+| Goblin Storm | Blasphemous Act | 16 of 30 (53%) | 24 of 32 (75%) | 5 of 168, 1 of 162 |
+| | Goblin Bombardment | 0 of 51 | 42 of 44 | 32, 3 |
+| | Grapeshot | 2 of 49 (4%) | 7 of 59 (12%) | 36, 43 |
+
+The rules do what they were written to do: a wipe that was cast in a fifth to two fifths of the games it was drawn is cast in three fifths to three quarters, and the cards Forge never cast are on the table. What that is worth depends on the seat. It carried Hail, Caesar (+9.5 points) and helped Goblin Storm (+4.0); it did nothing for Token Triumph, which casts Hour of Reckoning four and a half times as often and wins as before: the deck that leads this table gains nothing from clearing it. For Tricky Terrain the lean is small (+2.0), but the seat no longer loses with Oblivion Stone in hand, and its candidate was shipped as version 6 on that and on not losing tables: a lean in wins, a clear change in what the games show. Still in hand at the losses: Grapeshot (the rule asks for a storm count the seat seldom reaches), Curse of the Swine and Summary Dismissal (no rule can drive them: X and targets are Forge's, and a counterspell needs another player's turn), Citywide Bust.
+

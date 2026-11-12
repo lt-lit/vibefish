@@ -61,15 +61,15 @@
   },
   {
    "deck": "tricky-terrain",
-   "status": "shipped; among bots +4.0 on its stock pilot, a lean",
+   "status": "shipped (v6, with answer rules); among bots +6.0 points on its stock pilot, a lean",
    "playbook": "playbook/precons/tricky-terrain.json",
-   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
+   "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths; version 6 also plays Oblivion Stone and Propaganda early and uses the Stone and Evacuation against a wide board.",
    "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",
    "tables": {
-    "file": "demo-data/ab/2026-11-11-ab-v11/tricky-terrain.json",
+    "file": "demo-data/ab/2026-11-12-ab-v13/tricky-terrain-join.json",
     "stock": "stock",
-    "bot": "playbook",
-    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook"
+    "bot": "answers",
+    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 5 of this deck won 40 of the same tables)"
    },
    "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",

@@ -49,7 +49,7 @@
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
  },
  "playbook": {
-  "version": 5,
+  "version": 6,
   "attack": {
    "policy": "go_wide",
    "target": "highest_life",
@@ -62,10 +62,108 @@
    "rules": [
     {
      "activate": [
+      "Oblivion Stone"
+     ],
+     "ability": "Destroy each nonland permanent",
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 5",
+      "not controls Propaganda"
+     ],
+     "before_land": true
+    },
+    {
+     "activate": [
+      "Oblivion Stone"
+     ],
+     "ability": "Destroy each nonland permanent",
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ],
+     "before_land": true
+    },
+    {
+     "activate": [
+      "Oblivion Stone"
+     ],
+     "ability": "Destroy each nonland permanent",
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opponents == 1"
+     ],
+     "before_land": true
+    },
+    {
+     "activate": [
       "Thespian's Stage"
      ],
      "ability": "becomes a copy",
      "target": "Dark Depths"
+    },
+    {
+     "play": [
+      "Propaganda"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Evacuation"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 5",
+      "power < 20"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Evacuation"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures",
+      "threat >= life",
+      "power < 20"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Evacuation"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opponents == 1",
+      "power < 20"
+     ],
+     "before_land": true
+    },
+    {
+     "hold": [
+      "Evacuation"
+     ]
+    },
+    {
+     "play": [
+      "Oblivion Stone"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ],
+     "before_land": true
     },
     {
      "play": [
@@ -152,6 +250,11 @@
     },
     {
      "play": [
+      "Oblivion Stone"
+     ]
+    },
+    {
+     "play": [
       "Hydroid Krasis"
      ],
      "x": "max",
@@ -177,8 +280,6 @@
     }
    ]
   },
-  "notes": "The lands candidate (version 5: Omo at once, the land finders, landfall payoffs before the land, ramp, the big creatures on curve, X spells as mana sinks, the Marit Lage line, Pongify and Beast Within when threatened, Seer's Sundial's trigger) under the go-wide attack from two attackers up instead of the pressure attack. In sixty duels (seed 20261153) stock won 17, the pressure version 17 and this one 20: under pressure the seat held back more attackers than it sent (860 against 700) and dealt 25 damage a game where it deals 120 to three goldfish. Shipped 2026-11-11 after ab-run #11: on 200 new tables (seed 20261142) it wins 48 where stock wins 30, 24.0% against 15.0% (+9.0 points, 95% +2 to +16, 33 tables won only by it against 15 only by stock, exact test 0.013). With key cards for the tutors on top (Dark Depths and Thespian's Stage first) it wins 50, no different; the same rules under the pressure attack win 37 (demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json, DESIGN.md §22).",
-  "on": "2026-11-11",
   "triggers": [
    {
     "accept": [
@@ -189,6 +290,8 @@
      "library >= 20"
     ]
    }
-  ]
+  ],
+  "notes": "The answers candidate: version 5 as shipped (the same attack, trigger rule and thirteen cast rules, in their order) plus ten rules for the deck's answer cards, rules 1 to 3, 5 to 10 and 20. Written from the 200 games of the four bots at one table (league-run #2, seed 20261190, DESIGN.md §24), where the seat won 44. There it never cast Oblivion Stone, Curse of the Swine or Summary Dismissal from its hand (Forge's AI drops cards flagged AI:RemoveDeck:All; the seven casts in the logs were free ones from exile, off cascade and discover) and lost 42, 39 and 27 games holding them. In its 153 losses with damage in the last turn cycle one opponent dealt the last blow alone (Token Triumph 75 times), the seat's last own turn was its ninth (median), and the opponent that struck had 4, 6, 8 and 10 creatures three, two, one and no own turns before the end (medians); the largest opposing board had seven or more creatures in 65% of those losses two own turns before the end and in 75% one turn before. THE CONDITIONS. A board worth a wipe: an opponent has seven or more creatures and more power than we have. A wipe that also hits us is used on that and one of three: we have five creatures or fewer (three quarters of the losses on the seat's last own turn, and its wins come from wider boards: in the last three own turns the first two conditions held in 92% of the losses and 41% of the wins, with this one 87% and 20%; base power from the logs); or that opponent also has more creatures than we have and could kill us next turn (added after a local game in which the seat sat on the Stone with seven creatures against nineteen and died); or it is the last opponent (in the league's 68 heads-up endings the first two conditions held at some turn in 29 of the 34 the seat lost and 10 of the 34 it won). RULES 1 TO 3, Oblivion Stone's sacrifice, on those three conditions. It keeps the lands, which is this deck. Rule 1 waits while Propaganda is ours (the Stone destroys it); rules 2 and 3 do not. before_land, so that the sacrifice comes before the landfall creatures of rule 16. RULE 5, Propaganda as soon as an opponent has three creatures, ahead of everything but the Stone's sacrifice and the Stage. In version 5 it is the thirteenth card of a fifteen-card rule and came down on turn 7 (median), three turns after it was first in hand. The seat won 25 of the 43 league games in which it cast it and 19 of the other 157; with it on the battlefield an opponent attacked the seat on 2 to 12% of its turns from turn 5 on, against 17 to 27% without. Part of that is the other bots, not the card: their go-wide attack leaves out an attacker that has to pay a tax (PlaybookController.goWide), so behind Propaganda the seat is attacked only when Forge's own attack logic declares. RULES 6 TO 9, Evacuation on the same three conditions with our own power under 20 (Marit Lage is a token and would be gone), held from Forge otherwise. Forge's AI cast it in 32 of the 38 league games in which it was drawn: 11 of its 36 casts on own turn 5 or earlier and 10 with three or fewer opposing tokens on the table. A hold with the conditions as its 'until' was tried first; Forge then cast the card in its own upkeep, ahead of the Stone, so the hold is unconditional and the play rules do the casting. A hold does not bind the free cast a cascade offers: Apex Devastator still casts it. RULES 10 AND 20, Oblivion Stone onto the battlefield when an opponent has three creatures (three mana to cast and five to sacrifice, and the seat has five lands on turn 6, so it has to be down a turn before it is needed), and otherwise when nothing else is left to cast. NOT WRITTEN. Curse of the Swine: a rule cannot set its X or aim it at an opponent's creatures; when a rule plays it Forge's logic does both (ChangeZoneAi, read from the bytecode: X is all the mana that is left, lowered to the number of opposing creatures it lists; never our own). Four placements were tried at the tables (before the turn's other casts; with six to eight mana; as the first mana sink; after combat with five to eight mana left): 8 casts, 34 creatures exiled, 17 of them tokens that came back as 2/2 Boars, once X of nought; before combat it also put untapped Boars in front of our own attack. One cast was what a pilot would do (Thunderfoot Baloth and Loyal Guardian for four mana). The rule was dropped; the card needs a rule that sets X and names what may be targeted. Summary Dismissal: the rules run in the seat's own main phases with the stack empty, and Forge's AI never casts the card. The Stone's fate counters: a rule cannot read counters, so it would pay four mana for one every turn. Blast Zone: with its one counter it hits mana value 1, and tokens are 0. The Pongify and Beast Within rule keeps its threshold of seven: an opponent has seven base power on 64% of the seat's fifth turns and 84% of its sixth, so the rule means 'from turn 5 or 6'; the league's 33 Beast Within and 43 Pongify casts from hand hit permanents of mana value 5 (median: lords, commanders, seven anthems), 24 of each aimed at the strongest board, and the turns Pongify waited with the threshold passed were Forge's target logic. LOCAL TABLES, 2026-11-11: 39 games against the other three bots under their shipped playbooks, the rules changing between batches (21 tables of seed 20269030, the last of them with this file as it stands; 18 replays of league games, same seed and seats, picked because an answer card was in hand early and the shipped seat lost). Oblivion Stone: drawn in 12 games, cast in 12 (turn 5.5), sacrificed in 6 (five times by rule 1, once by rule 2, behind Propaganda) with 18 to 60 opposing nonland permanents on the table (18, 18, 23, 24, 28, 60) and one to five of ours; destroyed by an opponent before it could be used in 3 (Goblin Trashmaster, Powder Ganger, Ruinous Ultimatum). Propaganda: drawn in 11, cast in 11, on turn 5 (median). Evacuation: 7 casts by rule (six by rule 6, one by rule 7), 64 opposing creature tokens gone and 3 of ours. Rules 3, 8 and 20 never fired. The seat won 8 of the 39 (3 of the 21 on its own seed, 5 of the 18 league games): too few games to say anything about a win rate. One game ran 21 minutes: Propaganda on turn 4, the seat never attacked, 919 copies of Scute Swarm by turn 10, won. A seat that lives longer makes more of those; nothing in the rule format caps the Swarm (its trigger is not optional and the land drop is Forge's). Shipped on 2026-11-12 as version 6: at 200 tables of bots (ab-run #21 joined with #20, seed 20261200) 44 wins against version 5's 40 on the same tables (+2.0 points, 95% -3 to +7, exact test 0.58: a lean, not a result) and the stock pilot's 32; shipped for what the games show, Oblivion Stone cast in all 46 games it was drawn and in hand at one loss, where version 5 never cast it and lost 42 of the league's games holding it.",
+  "on": "2026-11-12"
  }
 }
