@@ -4,50 +4,74 @@
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped (v3, confirmed on tables of its own)",
+   "status": "shipped (v3); among bots +9.5 points on its stock pilot, confirmed",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v11/goblin-storm.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json",
+   "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v10/goblin-storm.json",
     "stock": "stock",
     "bot": "playbook",
     "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (48 against stock's 18 on the tables that chose it, the same count)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json"
+   }
   },
   {
    "deck": "token-triumph",
-   "status": "shipped (v3, confirmed on tables of its own)",
+   "status": "shipped (v3); among bots +4.0 on its stock pilot, a lean",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
    "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v11/token-triumph.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json",
+   "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v10/token-triumph.json",
     "stock": "stock",
     "bot": "playbook",
     "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (67 against stock's 43 on the tables that chose it)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json"
+   }
   },
   {
    "deck": "hail-caesar",
-   "status": "shipped (confirmed in a second run)",
+   "status": "shipped (v3); among bots +5.5 on its stock pilot, a lean",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five).",
    "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v11/hail-caesar.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
+   "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v9/hail-caesar.json",
     "stock": "stock",
     "bot": "playbook",
     "run": "ab-run #15, the confirming run: 200 new games (138 of the opponent trios recur from the tables that chose it)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json"
+   }
   },
   {
    "deck": "tricky-terrain",
-   "status": "shipped",
+   "status": "shipped; among bots +4.0 on its stock pilot, a lean",
    "playbook": "playbook/precons/tricky-terrain.json",
    "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
    "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",
    "tables": {
+    "file": "demo-data/ab/2026-11-11-ab-v11/tricky-terrain.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook"
+   },
+   "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",
     "stock": "stock",
     "bot": "go_wide",
@@ -56,7 +80,7 @@
   },
   {
    "deck": "quick-draw",
-   "status": "candidate, not shipped: a lean at the tables",
+   "status": "candidate, not shipped; this row is from tables of three stock seats, its exam among bots is playing",
    "playbook": "playbook/variants/quick-draw-spells.json",
    "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
    "goldfish": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json",

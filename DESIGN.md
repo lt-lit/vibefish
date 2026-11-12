@@ -920,3 +920,14 @@ People play a wipe or a removal spell in about half to seven tenths of the games
 
 **What a bot needs to join the pool** (the owner's plan of 2026-11-12: twelve bots for a rounded meta first, refinement after). Its playbook arm does at least as well as its stock pilot at tables of bots, and its goldfish gain held on unseen seeds; "confirmed" stays reserved for an interval that excludes zero. By that rule Deep Clue Sea and Planeswalker Party (with Forge's attack) are in on a lean, Food and Fellowship is level, Counter Intelligence is three wins short. Nothing is shipped from this run until #23 says which attack each deck keeps.
 
+**The shipped four among bots (`ab-run` #20: each deck at 200 tables whose three opponents are the other three bots under their shipped playbooks, its own seat once under stock AI and once under its shipped playbook; seed 20261200; `demo-data/ab/2026-11-11-ab-v11/`).**
+
+| Deck | stock pilot | shipped playbook | difference (95%), exact test | at three stock seats (§23) |
+|---|---|---|---|---|
+| Goblin Storm | 11 of 200 (5.5%) | 30 (15.0%) | +9.5 (+4 to +15), 0.0013 | 9.0% against 24.0%, +15.0 |
+| Hail, Caesar | 25 (12.5%) | 36 (18.0%) | +5.5 (-1 to +12), 0.13 | 13.5% against 21.0%, +7.5 |
+| Token Triumph | 75 (37.5%) | 83 (41.5%) | +4.0 (-4 to +12), 0.42 | 17.5% against 28.0%, +10.5 |
+| Tricky Terrain | 32 (16.0%) | 40 (20.0%) | +4.0 (-4 to +12), 0.37 | 15.0% against 24.0%, +9.0 |
+
+Every playbook is still ahead of its stock pilot, by four to nine and a half points where it was seven and a half to fifteen at stock tables, and only Goblin Storm's lead is clear of noise at 200 tables. Summed over the four decks the playbooks win 189 of 800 tables against 143, so the rules are worth something among bots; deck by deck this run cannot say how much. Token Triumph wins 37.5% of these tables under stock AI: its 46% in the bot league (§24) is mostly the deck at this table, not its pilot. The dashboard's bots card now shows these figures (`playbook/bots.json` keeps the stock-table measurement of each deck as `stock_tables`).
+

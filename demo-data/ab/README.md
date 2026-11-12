@@ -95,3 +95,10 @@ against 28 (+0.5, -6 to +7, 1.0); Planeswalker Party `guff` 57 against 57 (0.0, 
 the same rules with Forge's own attack on the same tables, playbook arm only, and `planeswalker-party-join.json` the three arms side by
 side (kind `ab-join`): 69 wins, +6.0 on stock (-2 to +14, 0.20) and +6.0 on the go-wide version (21 discordant pairs against 9, 0.043).
 None of the four clearly beats its stock pilot; all four had gained one to three turns in goldfish (DESIGN.md §27).
+
+`2026-11-11-ab-v11/` (`ab-run` #20, seed 20261200, snapshot 2026-11-10): the four shipped bots among bots. Each deck at 200 four-player
+tables whose three opponents are the other three bot decks, each under its shipped playbook; the deck's own seat once under stock AI and
+once under its shipped playbook. Goblin Storm 30 wins against its stock pilot's 11 (+9.5 points, 95% +4 to +15, exact test 0.0013);
+Hail, Caesar 36 against 25 (+5.5, -1 to +12, 0.13); Token Triumph 83 against 75 (+4.0, -4 to +12, 0.42); Tricky Terrain 40 against 32
+(+4.0, -4 to +12, 0.37). Every playbook is ahead of its stock pilot; only Goblin Storm's lead is clear of noise. Token Triumph wins
+37.5% of these tables under stock AI as well: at this table the deck is strong whoever pilots it (DESIGN.md §27).

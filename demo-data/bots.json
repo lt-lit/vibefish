@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-11T18:16:29Z",
+ "generated": "2026-11-12T01:56:26Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -14,7 +14,7 @@
    "commanders": [
     "Zada, Hedron Grinder"
    ],
-   "status": "shipped (v3, confirmed on tables of its own)",
+   "status": "shipped (v3); among bots +9.5 points on its stock pilot, confirmed",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
    "human": {
@@ -22,36 +22,36 @@
     "games": 218
    },
    "tables": {
-    "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (48 against stock's 18 on the tables that chose it, the same count)",
-    "seed": 20261170,
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v10/goblin-storm.json",
+    "source": "demo-data/ab/2026-11-11-ab-v11/goblin-storm.json",
     "stock": {
      "games": 200,
-     "wins": 18,
-     "win_rate": 0.09,
+     "wins": 11,
+     "win_rate": 0.055,
      "win_rate_ci95": [
-      0.0577,
-      0.1378
+      0.031,
+      0.0958
      ]
     },
     "bot": {
      "games": 200,
-     "wins": 48,
-     "win_rate": 0.24,
+     "wins": 30,
+     "win_rate": 0.15,
      "win_rate_ci95": [
-      0.1861,
-      0.3037
+      0.1071,
+      0.2061
      ]
     },
-    "difference": 0.15,
+    "difference": 0.095,
     "difference_ci95": [
-     0.0811,
-     0.2189
+     0.0403,
+     0.1497
     ],
-    "bot_only": 42,
-    "stock_only": 12,
-    "exact_p": 0.0001
+    "bot_only": 26,
+    "stock_only": 7,
+    "exact_p": 0.0013
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json",
@@ -72,7 +72,7 @@
    "commanders": [
     "Emmara, Soul of the Accord"
    ],
-   "status": "shipped (v3, confirmed on tables of its own)",
+   "status": "shipped (v3); among bots +4.0 on its stock pilot, a lean",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump.",
    "human": {
@@ -80,36 +80,36 @@
     "games": 197
    },
    "tables": {
-    "run": "ab-run #17, the confirming run: 200 tables whose opponents the deck had not met (67 against stock's 43 on the tables that chose it)",
-    "seed": 20261160,
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v10/token-triumph.json",
+    "source": "demo-data/ab/2026-11-11-ab-v11/token-triumph.json",
     "stock": {
      "games": 200,
-     "wins": 35,
-     "win_rate": 0.175,
+     "wins": 75,
+     "win_rate": 0.375,
      "win_rate_ci95": [
-      0.1286,
-      0.2336
+      0.3109,
+      0.4439
      ]
     },
     "bot": {
      "games": 200,
-     "wins": 56,
-     "win_rate": 0.28,
+     "wins": 83,
+     "win_rate": 0.415,
      "win_rate_ci95": [
-      0.2224,
-      0.3459
+      0.3489,
+      0.4843
      ]
     },
-    "difference": 0.105,
+    "difference": 0.04,
     "difference_ci95": [
-     0.0338,
-     0.1762
+     -0.0441,
+     0.1241
     ],
-    "bot_only": 38,
-    "stock_only": 17,
-    "exact_p": 0.0065
+    "bot_only": 41,
+    "stock_only": 33,
+    "exact_p": 0.416
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json",
@@ -130,7 +130,7 @@
    "commanders": [
     "Caesar, Legion's Emperor"
    ],
-   "status": "shipped (confirmed in a second run)",
+   "status": "shipped (v3); among bots +5.5 on its stock pilot, a lean",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five).",
    "human": {
@@ -138,36 +138,36 @@
     "games": 320
    },
    "tables": {
-    "run": "ab-run #15, the confirming run: 200 new games (138 of the opponent trios recur from the tables that chose it)",
-    "seed": 20261143,
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v9/hail-caesar.json",
+    "source": "demo-data/ab/2026-11-11-ab-v11/hail-caesar.json",
     "stock": {
      "games": 200,
-     "wins": 27,
-     "win_rate": 0.135,
+     "wins": 25,
+     "win_rate": 0.125,
      "win_rate_ci95": [
-      0.0945,
-      0.1893
+      0.0861,
+      0.178
      ]
     },
     "bot": {
      "games": 200,
-     "wins": 42,
-     "win_rate": 0.21,
+     "wins": 36,
+     "win_rate": 0.18,
      "win_rate_ci95": [
-      0.1593,
-      0.2716
+      0.1329,
+      0.2391
      ]
     },
-    "difference": 0.075,
+    "difference": 0.055,
     "difference_ci95": [
-     0.0004,
-     0.1496
+     -0.0088,
+     0.1188
     ],
-    "bot_only": 37,
-    "stock_only": 22,
-    "exact_p": 0.0674
+    "bot_only": 27,
+    "stock_only": 16,
+    "exact_p": 0.1263
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
@@ -188,7 +188,7 @@
    "commanders": [
     "Omo, Queen of Vesuva"
    ],
-   "status": "shipped",
+   "status": "shipped; among bots +4.0 on its stock pilot, a lean",
    "playbook": "playbook/precons/tricky-terrain.json",
    "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths.",
    "human": {
@@ -196,36 +196,36 @@
     "games": 306
    },
    "tables": {
-    "run": "ab-run #11",
-    "seed": 20261142,
+    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",
+    "source": "demo-data/ab/2026-11-11-ab-v11/tricky-terrain.json",
     "stock": {
      "games": 200,
-     "wins": 30,
-     "win_rate": 0.15,
+     "wins": 32,
+     "win_rate": 0.16,
      "win_rate_ci95": [
-      0.1071,
-      0.2061
+      0.1157,
+      0.2171
      ]
     },
     "bot": {
      "games": 200,
-     "wins": 48,
-     "win_rate": 0.24,
+     "wins": 40,
+     "win_rate": 0.2,
      "win_rate_ci95": [
-      0.1861,
-      0.3037
+      0.1505,
+      0.2609
      ]
     },
-    "difference": 0.09,
+    "difference": 0.04,
     "difference_ci95": [
-     0.0233,
-     0.1567
+     -0.0357,
+     0.1157
     ],
-    "bot_only": 33,
-    "stock_only": 15,
-    "exact_p": 0.0133
+    "bot_only": 34,
+    "stock_only": 26,
+    "exact_p": 0.3663
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",
@@ -246,7 +246,7 @@
    "commanders": [
     "Stella Lee, Wild Card"
    ],
-   "status": "candidate, not shipped: a lean at the tables",
+   "status": "candidate, not shipped; this row is from tables of three stock seats, its exam among bots is playing",
    "playbook": "playbook/variants/quick-draw-spells.json",
    "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
    "human": {
