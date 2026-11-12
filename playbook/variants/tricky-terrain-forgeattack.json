@@ -1,0 +1,142 @@
+{
+ "schema": 1,
+ "deck": "tricky-terrain",
+ "variant": "forgeattack",
+ "of": "playbook/precons/tricky-terrain.json",
+ "about": "The shipped playbook's cast and trigger rules with Forge's own attack. Only the playbook object is read.",
+ "playbook": {
+  "version": 5,
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Thespian's Stage"
+     ],
+     "ability": "becomes a copy",
+     "target": "Dark Depths"
+    },
+    {
+     "play": [
+      "Pongify",
+      "Beast Within"
+     ],
+     "when": [
+      "threat >= 7"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Poison Dart Frog",
+      "Growth Spiral",
+      "Chromatic Lantern"
+     ]
+    },
+    {
+     "play": [
+      "Omo, Queen of Vesuva"
+     ]
+    },
+    {
+     "play": [
+      "Dryad of the Ilysian Grove",
+      "Satyr Wayfinder",
+      "Floriferous Vinewall",
+      "Elvish Rejuvenator",
+      "Sylvan Scrying",
+      "Expedition Map"
+     ]
+    },
+    {
+     "activate": [
+      "Expedition Map"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "play": [
+      "Tatyova, Benthic Druid",
+      "Scute Swarm",
+      "Rampaging Baloths",
+      "Avenger of Zendikar",
+      "Seer's Sundial"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Hour of Promise",
+      "Urban Evolution",
+      "Eureka Moment"
+     ]
+    },
+    {
+     "play": [
+      "Apex Devastator",
+      "Mana Reflection",
+      "Hydra Broodmaster",
+      "Ulvenwald Hydra",
+      "Jyoti, Moag Ancient",
+      "Vivien Reid",
+      "Uro, Titan of Nature's Wrath",
+      "Rampant Frogantua",
+      "Sage of the Maze",
+      "Ramunap Excavator",
+      "Wonderscape Sage",
+      "Desert Warfare",
+      "Propaganda",
+      "Copy Land",
+      "Fog Bank"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Hydroid Krasis"
+     ],
+     "x": "max",
+     "x_min": 4
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Nissa, Steward of Elements"
+     ],
+     "x": "max",
+     "x_min": 3
+    }
+   ]
+  },
+  "notes": "The shipped playbook's cast and trigger rules with the attack left to Forge (no attack policy), for a run on the same tables as the go-wide version (DESIGN §27). Generated from playbook/precons/tricky-terrain.json on 2026-11-12; cast, trigger and mulligan rules are that file's, unchanged.",
+  "on": "2026-11-11",
+  "triggers": [
+   {
+    "accept": [
+     "Seer's Sundial"
+    ],
+    "when": [
+     "hand <= 3",
+     "library >= 20"
+    ]
+   }
+  ]
+ }
+}

@@ -901,3 +901,22 @@ People play a wipe or a removal spell in about half to seven tenths of the games
 **Access and licence, since the owner asked.** Playgroup's legal page says the aggregated, anonymized game statistics and metagame data it produces are published under a Creative Commons Attribution 4.0 licence, to be credited with a link to the page the figure comes from; it forbids visitors nothing by name. Its robots.txt lets crawlers read the statistics pages (it blocks the links that launch playtests, the guest-lobby links and `/brew`). The legal page mentions a public API, not looked at. Individual games are not published. So reading the public pages and using their figures with credit is allowed. "Nothing in the pipeline fetches playgroup.gg" is this project's own caution, from the session that first copied the table, stricter than anything the site asks; it stays as a fact about the pipeline.
 
 **No contact.** The owner, on being told a request to Playgroup was an option: nobody is written to, nothing is posted, nothing is forked, no one is interacted with. §25's suggestion is withdrawn and CLAUDE.md carries the rule.
+
+## 27. The first exams at tables of bots (2026-11-12)
+
+**Why.** §24 moved the exam: a candidate is judged at tables whose three opponents are bots, with the stock pilot of the same deck in the same seat as the control. The first four candidates written for it (§24, the batch of 2026-11-11) had gained one to three turns in goldfish on seeds they had not seen. `ab-run` #19 is their exam: 200 tables each, opponents drawn from the four bot decks under their shipped playbooks, seed 20261210, snapshot 2026-11-10; rollups in `demo-data/ab/2026-11-11-ab-v12/`.
+
+**Results.**
+
+| Deck, candidate | goldfish gain (turns) | stock pilot | candidate | difference (95%), exact test | game length, stock / candidate (turns) |
+|---|---|---|---|---|---|
+| Counter Intelligence `charge` | +1.82 | 23 of 200 (11.5%) | 20 (10.0%) | -1.5 (-7 to +4), 0.74 | 43.0 / 41.7 |
+| Deep Clue Sea `sleuth` | +2.88 | 52 (26.0%) | 61 (30.5%) | +4.5 (-4 to +13), 0.36 | 45.7 / 40.2 |
+| Food and Fellowship `eat` | +1.07 | 28 (14.0%) | 29 (14.5%) | +0.5 (-6 to +7), 1.0 | 44.8 / 42.8 |
+| Planeswalker Party `guff` | +2.42 | 57 (28.5%) | 57 (28.5%) | 0.0 (-8 to +8), 1.0 | 48.1 / 41.9 |
+| Planeswalker Party `guff-forgeattack` (the same rules, Forge's own attack; playbook arm on the same tables, joined) | +1.75 | 57 (28.5%) | 69 (34.5%) | +6.0 (-2 to +14), 0.20; against `guff`: +6.0 (+1 to +11), 21 discordant pairs against 9, 0.043 | 48.1 / 42.6 |
+
+**What it says.** (1) None of the four clearly beats its stock pilot. At stock tables two turns of goldfish speed bought Goblin Storm eleven points (§22); at tables of bots one to three turns bought these four between minus one and a half and plus four and a half, none distinguishable from nothing. A faster engine does not carry a seat at a table that attacks. The games do get shorter under the candidate (by one to six turns), and the seat is out earlier as well as winning earlier. (2) The one clear difference in the run is the attack. Planeswalker Party's rules with Forge's own attack won twelve tables more than the same rules with the go-wide policy, on the same tables (0.043, one comparison chosen in advance for this deck because go-wide cannot keep creatures home for planeswalkers). `go_wide` was chosen at stock tables (§20, §22), where nothing punished an open board. Whether it still earns its place for the other decks is now a question for the same instrument: `ab-run` #23 plays the Forge-attack sibling of every candidate and of the four shipped playbooks on the tables their go-wide versions played. (3) The stock pilots' own rates at these tables are a first look at the decks among bots: Planeswalker Party 28.5% and Deep Clue Sea 26.0% hold their own under stock AI, Food and Fellowship 14.0% and Counter Intelligence 11.5% do not.
+
+**What a bot needs to join the pool** (the owner's plan of 2026-11-12: twelve bots for a rounded meta first, refinement after). Its playbook arm does at least as well as its stock pilot at tables of bots, and its goldfish gain held on unseen seeds; "confirmed" stays reserved for an interval that excludes zero. By that rule Deep Clue Sea and Planeswalker Party (with Forge's attack) are in on a lean, Food and Fellowship is level, Counter Intelligence is three wins short. Nothing is shipped from this run until #23 says which attack each deck keeps.
+

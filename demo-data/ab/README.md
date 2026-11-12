@@ -86,3 +86,12 @@ that have a shipped playbook, played on a session's machine on the same seeds (2
 playbook (20 games) and with every seat stock (17 games; three not played, and two of the 17 draws). The bots' games average 39.0
 turns against 54.2 (9.75 rounds against 13.5 by turns over four; people 8.75). It measures how long a table of bots takes and says
 nothing about who wins (DESIGN.md §23).
+
+`2026-11-11-ab-v12/` (`ab-run` #19, seed 20261210, snapshot 2026-11-10): the first candidates judged at tables of bots. Each deck at 200
+four-player tables whose three opponents are drawn from the four decks with a shipped playbook (`runner/leagues/bots-v1.json`), each
+under it; the deck's own seat once under stock AI and once under its candidate. Counter Intelligence `charge` 20 wins against stock's 23
+(-1.5 points, 95% -7 to +4, exact test 0.74); Deep Clue Sea `sleuth` 61 against 52 (+4.5, -4 to +13, 0.36); Food and Fellowship `eat` 29
+against 28 (+0.5, -6 to +7, 1.0); Planeswalker Party `guff` 57 against 57 (0.0, -8 to +8). `planeswalker-party-guff-forgeattack.json` is
+the same rules with Forge's own attack on the same tables, playbook arm only, and `planeswalker-party-join.json` the three arms side by
+side (kind `ab-join`): 69 wins, +6.0 on stock (-2 to +14, 0.20) and +6.0 on the go-wide version (21 discordant pairs against 9, 0.043).
+None of the four clearly beats its stock pilot; all four had gained one to three turns in goldfish (DESIGN.md §27).

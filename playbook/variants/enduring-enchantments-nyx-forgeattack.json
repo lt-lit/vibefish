@@ -1,0 +1,201 @@
+{
+ "schema": 1,
+ "deck": "enduring-enchantments",
+ "variant": "nyx-forgeattack",
+ "of": "playbook/variants/enduring-enchantments-nyx.json",
+ "about": "The nyx candidate's cast and trigger rules with Forge's own attack. Only the playbook object is read.",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Abundance",
+      "Arasta of the Endless Web",
+      "Archon of Sun's Grace",
+      "Battle at the Helvault",
+      "Battle for Bretagard",
+      "Binding the Old Gods",
+      "Boon of the Spirit Realm",
+      "Cacophony Unleashed",
+      "Calix, Destiny's Hand",
+      "Cast Out",
+      "Composer of Spring",
+      "Courser of Kruphix",
+      "Cunning Rhetoric",
+      "Demon of Fate's Design",
+      "Destiny Spinner",
+      "Doomwake Giant",
+      "Dreadhorde Invasion",
+      "Dryad of the Ilysian Grove",
+      "Eidolon of Blossoms",
+      "Enchantress's Presence",
+      "Erebos, Bleak-Hearted",
+      "Ghoulish Impetus",
+      "Grasp of Fate",
+      "Greater Tanuki",
+      "Heliod, God of the Sun",
+      "Love Song of Night and Day",
+      "Mesa Enchantress",
+      "Mindwrack Harpy",
+      "Mirari's Wake",
+      "Narci, Fable Singer",
+      "Nessian Wanderer",
+      "Nyx Weaver",
+      "Nyxborn Behemoth",
+      "Omen of the Hunt",
+      "Omen of the Sun",
+      "Ondu Spiritdancer",
+      "Sandwurm Convergence",
+      "Satyr Enchanter",
+      "Setessan Champion",
+      "Sigil of the Empty Throne",
+      "Spirited Companion",
+      "Starfield of Nyx",
+      "Sythis, Harvest's Hand",
+      "The Binding of the Titans",
+      "The Eldest Reborn",
+      "The Mending of Dominaria",
+      "Verduran Enchantress"
+     ],
+     "until": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Krosan Verge"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "activate": [
+      "Khalni Heart Expedition"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Sanctum Weaver",
+      "Jukai Naturalist",
+      "Herald of the Pantheon",
+      "Starfield Mystic",
+      "Rampant Growth",
+      "Farseek",
+      "Font of Fertility",
+      "Kodama's Reach"
+     ]
+    },
+    {
+     "play": [
+      "Khalni Heart Expedition",
+      "Felidar Retreat"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Anikthea, Hand of Erebos"
+     ]
+    },
+    {
+     "play": [
+      "Sythis, Harvest's Hand",
+      "Enchantress's Presence",
+      "Satyr Enchanter",
+      "Setessan Champion",
+      "Eidolon of Blossoms",
+      "Mesa Enchantress",
+      "Verduran Enchantress",
+      "Sigil of the Empty Throne",
+      "Archon of Sun's Grace",
+      "Ondu Spiritdancer",
+      "Composer of Spring",
+      "Nessian Wanderer",
+      "Boon of the Spirit Realm",
+      "Mirari's Wake",
+      "Doomwake Giant"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "play": [
+      "Sandwurm Convergence",
+      "Demon of Fate's Design",
+      "Nyxborn Behemoth",
+      "Heliod, God of the Sun",
+      "Erebos, Bleak-Hearted",
+      "Narci, Fable Singer",
+      "Greater Tanuki",
+      "Arasta of the Endless Web",
+      "Mindwrack Harpy",
+      "Starfield of Nyx",
+      "Courser of Kruphix",
+      "Dryad of the Ilysian Grove",
+      "Destiny Spinner",
+      "Spirited Companion",
+      "Nyx Weaver",
+      "Dreadhorde Invasion",
+      "Battle for Bretagard",
+      "Omen of the Sun",
+      "Omen of the Hunt",
+      "The Mending of Dominaria",
+      "The Binding of the Titans",
+      "Love Song of Night and Day",
+      "Cunning Rhetoric"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Font of Fertility"
+     ]
+    },
+    {
+     "activate": [
+      "Heliod, God of the Sun"
+     ],
+     "times": 3
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Composer of Spring",
+     "Nessian Wanderer",
+     "Ondu Spiritdancer",
+     "Khalni Heart Expedition",
+     "Omen of the Hunt",
+     "Starfield of Nyx",
+     "Courser of Kruphix"
+    ]
+   },
+   {
+    "accept": [
+     "Mesa Enchantress",
+     "Verduran Enchantress"
+    ],
+    "when": [
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Erebos, Bleak-Hearted"
+    ],
+    "when": [
+     "life >= 15",
+     "library >= 25"
+    ]
+   }
+  ],
+  "notes": "The nyx candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a run on the same tables as the go-wide version (DESIGN §27). Generated from playbook/variants/enduring-enchantments-nyx.json on 2026-11-12; cast, trigger and mulligan rules are that file's, unchanged."
+ }
+}

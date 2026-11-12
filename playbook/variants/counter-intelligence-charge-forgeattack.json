@@ -1,0 +1,294 @@
+{
+ "schema": 1,
+ "deck": "counter-intelligence",
+ "variant": "charge-forgeattack",
+ "of": "playbook/variants/counter-intelligence-charge.json",
+ "about": "The charge candidate's cast and trigger rules with Forge's own attack. Only the playbook object is read.",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Titan Forge"
+     ],
+     "ability": "Create a 9/9"
+    },
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet"
+     ],
+     "when": [
+      "turn <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Etherium Sculptor",
+      "Enthusiastic Mechanaut",
+      "Steel Overseer",
+      "Gavel of the Righteous"
+     ]
+    },
+    {
+     "play": [
+      "Inspirit, Flagship Vessel"
+     ]
+    },
+    {
+     "play": [
+      "Cyberdrive Awakener"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Cyberdrive Awakener"
+     ],
+     "until": [
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Depthshaker Titan"
+     ],
+     "phase": "main1",
+     "when": [
+      "turn >= 9",
+      "attackers >= 4"
+     ]
+    },
+    {
+     "hold": [
+      "Depthshaker Titan"
+     ],
+     "until": [
+      "turn >= 9",
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "hold": [
+      "Ripples of Potential"
+     ],
+     "until": [
+      "main == 2"
+     ]
+    },
+    {
+     "play": [
+      "Kappa Cannoneer",
+      "Threefold Thunderhulk",
+      "Thought Monitor",
+      "Alibou, Ancient Witness",
+      "Lux Artillery",
+      "Kilo, Apogee Mind",
+      "Titan Forge",
+      "Jhoira, Weatherlight Captain",
+      "Uthros Research Craft",
+      "Angel of the Ruins",
+      "Tekuthal, Inquiry Dominus",
+      "Surge Conductor",
+      "Coretapper",
+      "Solar Array",
+      "Golem Foundry",
+      "Insight Engine",
+      "Long-Range Sensor",
+      "Cloud Key",
+      "Crystalline Crawler",
+      "Chrome Host Seedshark",
+      "Patrolling Peacemaker",
+      "Thrummingbird",
+      "Emry, Lurker of the Loch"
+     ]
+    },
+    {
+     "play": [
+      "Tezzeret's Gambit",
+      "Thirst for Knowledge",
+      "Experimental Augury"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Titan Forge"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Gavel of the Righteous"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Long-Range Sensor"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Golem Foundry"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Darksteel Reactor"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Insight Engine"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Inspirit, Flagship Vessel"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Empowered Autogenerator"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Astral Cornucopia"
+    },
+    {
+     "activate": [
+      "Coretapper"
+     ],
+     "ability": "Put a charge counter",
+     "target": "Everflowing Chalice"
+    },
+    {
+     "activate": [
+      "Steel Overseer"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Insight Engine"
+     ],
+     "phase": "main2",
+     "when": [
+      "hand <= 5",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Universal Surveillance",
+      "Pull from Tomorrow"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "phase": "main2",
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Karn's Bastion"
+     ],
+     "ability": "Proliferate"
+    },
+    {
+     "activate": [
+      "Karn's Bastion"
+     ],
+     "ability": "Proliferate",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Titan Forge"
+     ],
+     "ability": "Put a charge counter",
+     "phase": "main2"
+    },
+    {
+     "play": [
+      "Phyrexian Metamorph",
+      "Mindless Automaton",
+      "Etched Oracle",
+      "Empowered Autogenerator",
+      "Darksteel Reactor",
+      "Lux Cannon",
+      "Arcane Signet",
+      "Pentad Prism",
+      "Moxite Refinery",
+      "Soul-Guide Lantern"
+     ],
+     "phase": "main2"
+    },
+    {
+     "hold": [
+      "Phyrexian Metamorph",
+      "Mindless Automaton",
+      "Etched Oracle",
+      "Empowered Autogenerator",
+      "Darksteel Reactor",
+      "Lux Cannon",
+      "Arcane Signet",
+      "Pentad Prism",
+      "Moxite Refinery",
+      "Soul-Guide Lantern"
+     ],
+     "until": [
+      "main == 2"
+     ]
+    },
+    {
+     "play": [
+      "Hangarback Walker"
+     ],
+     "x": "max",
+     "x_min": 1,
+     "phase": "main2"
+    },
+    {
+     "play": [
+      "Astral Cornucopia"
+     ],
+     "x": "max",
+     "x_min": 1,
+     "phase": "main2"
+    }
+   ]
+  },
+  "notes": "The charge candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a run on the same tables as the go-wide version (DESIGN §27). Generated from playbook/variants/counter-intelligence-charge.json on 2026-11-12; cast, trigger and mulligan rules are that file's, unchanged.",
+  "on": "2026-11-11"
+ }
+}

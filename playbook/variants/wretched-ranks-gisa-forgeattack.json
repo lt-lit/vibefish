@@ -1,0 +1,146 @@
+{
+ "schema": 1,
+ "deck": "wretched-ranks",
+ "variant": "gisa-forgeattack",
+ "of": "playbook/variants/wretched-ranks-gisa.json",
+ "about": "The gisa candidate's cast and trigger rules with Forge's own attack. Only the playbook object is read.",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Charcoal Diamond",
+      "Mind Stone",
+      "Commander's Sphere",
+      "Patchwork Banner"
+     ]
+    },
+    {
+     "play": [
+      "Ghoulcaller Gisa"
+     ]
+    },
+    {
+     "activate": [
+      "Ghoulcaller Gisa"
+     ],
+     "phase": "main1",
+     "when": [
+      "creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Undead Warchief",
+      "Endless Ranks of the Dead",
+      "Death Baron",
+      "Lord of the Undead",
+      "Cemetery Reaper",
+      "Lord of the Accursed",
+      "Bad Moon",
+      "Liliana's Mastery",
+      "Champion of the Perished",
+      "Diregraf Colossus"
+     ]
+    },
+    {
+     "play": [
+      "Army of the Damned",
+      "Grave Titan",
+      "Moan of the Unhallowed",
+      "Open the Graves",
+      "Gray Merchant of Asphodel",
+      "Headless Rider",
+      "Vengeful Dead",
+      "Liliana's Reaver",
+      "Kalitas, Traitor of Ghet",
+      "Josu Vess, Lich Knight",
+      "Soulless One",
+      "Midnight Reaper",
+      "Undead Augur",
+      "Ayara, First of Locthwain",
+      "Zul Ashur, Lich Lord",
+      "Cryptbreaker",
+      "Gravecrawler",
+      "Carrion Feeder",
+      "Wight of Precinct Six",
+      "Mire Triton",
+      "Undead Butler",
+      "Eternal Taskmaster",
+      "Razorlash Transmogrant",
+      "Oversold Cemetery",
+      "Phyrexian Arena",
+      "Bontu's Monument",
+      "Marchesa's Decree"
+     ]
+    },
+    {
+     "play": [
+      "Graveborn Muse"
+     ],
+     "when": [
+      "library >= 50",
+      "type:Zombie <= 5"
+     ]
+    },
+    {
+     "activate": [
+      "Cemetery Reaper"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Lord of the Undead"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Cryptbreaker"
+     ],
+     "ability": "Create a 2/2",
+     "when": [
+      "hand >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Night's Whisper",
+      "Ambition's Cost",
+      "Sign in Blood"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Lord of the Accursed"
+     ],
+     "phase": "main1",
+     "when": [
+      "attackers >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "God-Eternal Bontu"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Oversold Cemetery",
+     "Undead Butler"
+    ]
+   }
+  ],
+  "notes": "The gisa candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a run on the same tables as the go-wide version (DESIGN §27). Generated from playbook/variants/wretched-ranks-gisa.json on 2026-11-12; cast, trigger and mulligan rules are that file's, unchanged."
+ }
+}

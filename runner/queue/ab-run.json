@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-12T00:25Z",
-  "note": "Two candidates that had only met stock tables sit the exam at tables of bots: quick-draw@spells and science@lab (playbook/variants/README.md), each at 200 tables whose opponents are drawn from the four bot decks under their shipped playbooks, stock pilot against candidate, seed 20261220. Part of the road to twelve bots (CLAUDE.md, Status). The request before this one, commit cd34c5f, is ab-run #21: the answer rules of the shipped four on #20's tables.",
+  "requested": "2026-11-12T01:30Z",
+  "note": "Four requests in one run (DESIGN \u00a727). ab-run #19 said that at tables of bots a faster engine alone does not win (three of four candidates level with their stock pilot) and that on Planeswalker Party the same rules with Forge's own attack beat the go-wide attack on the same tables (21 discordant pairs against 9). So: (1) the Forge-attack siblings of the other three candidates of #19, playbook arm only on #19's tables (seed 20261210); (2) the new batch, Elven Council, Wretched Ranks and Enduring Enchantments, stock pilot against candidate (seed 20261230); (3) their Forge-attack siblings on the same tables, playbook arm only; (4) the four shipped playbooks with Forge's own attack, playbook arm only on #20's tables (seed 20261200). All at tables whose opponents are the four bot decks under their shipped playbooks. runner/ab.py join puts the arms of one deck side by side.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,9 +11,24 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "quick-draw@spells,science@lab",
+      "decks": "counter-intelligence@charge-forgeattack,deep-clue-sea@sleuth-forgeattack,food-and-fellowship@eat-forgeattack",
+      "arms": "playbook",
+      "seed": "20261210"
+    },
+    {
+      "decks": "elven-council@grove,wretched-ranks@gisa,enduring-enchantments@nyx",
       "arms": "stock,playbook",
-      "seed": "20261220"
+      "seed": "20261230"
+    },
+    {
+      "decks": "elven-council@grove-forgeattack,wretched-ranks@gisa-forgeattack,enduring-enchantments@nyx-forgeattack",
+      "arms": "playbook",
+      "seed": "20261230"
+    },
+    {
+      "decks": "goblin-storm@forgeattack,token-triumph@forgeattack,hail-caesar@forgeattack,tricky-terrain@forgeattack",
+      "arms": "playbook",
+      "seed": "20261200"
     }
   ]
 }

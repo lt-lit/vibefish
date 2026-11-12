@@ -1,0 +1,245 @@
+{
+ "schema": 1,
+ "deck": "food-and-fellowship",
+ "variant": "eat-forgeattack",
+ "of": "playbook/variants/food-and-fellowship-eat.json",
+ "about": "The eat candidate's cast and trigger rules with Forge's own attack. Only the playbook object is read.",
+ "playbook": {
+  "version": 5,
+  "cast": {
+   "groups": {
+    "cheap": [
+     "Sol Ring",
+     "Birds of Paradise",
+     "Gilded Goose",
+     "Essence Warden",
+     "Arcane Signet",
+     "Prize Pig",
+     "Farseek",
+     "Gollum, Obsessed Stalker",
+     "Pippin, Warden of Isengard",
+     "Prosperous Innkeeper",
+     "Shire Shirriff",
+     "Night's Whisper",
+     "Merry, Warden of Isengard",
+     "Rosie Cotton of South Lane",
+     "The Gaffer",
+     "Rapacious Guest",
+     "Savvy Hunter",
+     "Bilbo, Birthday Celebrant",
+     "Lobelia, Defender of Bag End",
+     "Tireless Provisioner",
+     "Field-Tested Frying Pan",
+     "Of Herbs and Stewed Rabbit",
+     "Mentor of the Meek",
+     "Cultivate",
+     "Chromatic Lantern",
+     "Pristine Talisman",
+     "Commander's Sphere",
+     "Treebeard, Gracious Host",
+     "Mirkwood Bats",
+     "Butterbur, Bree Innkeeper",
+     "Harmonize"
+    ]
+   },
+   "rules": [
+    {
+     "play": [
+      "Sam, Loyal Attendant",
+      "Frodo, Adventurous Hobbit"
+     ]
+    },
+    {
+     "play": [
+      "Banquet Guests"
+     ],
+     "x": "max",
+     "x_min": 4
+    },
+    {
+     "play": [
+      "Feasting Hobbit"
+     ],
+     "when": [
+      "controls Food Token"
+     ]
+    },
+    {
+     "hold": [
+      "Feasting Hobbit"
+     ]
+    },
+    {
+     "activate": [
+      "Food Token"
+     ],
+     "phase": "main1",
+     "when": [
+      "controls Frodo, Adventurous Hobbit",
+      "attackers >= 1",
+      "storm == 0"
+     ]
+    },
+    {
+     "activate": [
+      "Food Token"
+     ],
+     "phase": "main1",
+     "when": [
+      "controls Treebeard, Gracious Host"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Birds of Paradise",
+      "Gilded Goose",
+      "Arcane Signet",
+      "Prize Pig",
+      "Farseek"
+     ],
+     "when": [
+      "turn <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Treebeard, Gracious Host",
+      "Call for Unity",
+      "Gwaihir, Greatest of the Eagles",
+      "Motivated Pony",
+      "Assemble the Entmoot",
+      "Mirkwood Bats",
+      "Sanguine Bond",
+      "Gollum, Obsessed Stalker",
+      "Orchard Strider",
+      "Generous Ent",
+      "Eagles of the North",
+      "Landroval, Horizon Witness",
+      "Harmonize",
+      "Butterbur, Bree Innkeeper",
+      "Merry, Warden of Isengard",
+      "Rosie Cotton of South Lane",
+      "The Gaffer",
+      "Rapacious Guest",
+      "Savvy Hunter",
+      "Tireless Provisioner",
+      "Bilbo, Birthday Celebrant",
+      "Lobelia, Defender of Bag End",
+      "Field-Tested Frying Pan",
+      "Of Herbs and Stewed Rabbit",
+      "Mentor of the Meek",
+      "Cultivate",
+      "Chromatic Lantern",
+      "Pristine Talisman",
+      "Commander's Sphere",
+      "Pippin, Warden of Isengard",
+      "Prosperous Innkeeper",
+      "Night's Whisper",
+      "Dawn of Hope",
+      "Shire Shirriff",
+      "Arcane Signet",
+      "Prize Pig",
+      "Farseek",
+      "Essence Warden",
+      "Sol Ring",
+      "Birds of Paradise",
+      "Gilded Goose"
+     ]
+    },
+    {
+     "play": [
+      "Great Oak Guardian"
+     ],
+     "phase": "main1",
+     "when": [
+      "attackers >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Farmer Cotton"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "Banquet Guests"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "Well of Lost Dreams"
+     ],
+     "when": [
+      "lands >= 8"
+     ]
+    },
+    {
+     "hold": [
+      "Well of Lost Dreams"
+     ],
+     "until": [
+      "lands >= 8"
+     ]
+    },
+    {
+     "hold": [
+      "Assemble the Entmoot"
+     ],
+     "ability": "Treefolk"
+    },
+    {
+     "activate": [
+      "Food Token"
+     ],
+     "phase": "main2",
+     "when": [
+      "controls Assemble the Entmoot",
+      "controls Sam, Loyal Attendant"
+     ]
+    },
+    {
+     "activate": [
+      "Assemble the Entmoot"
+     ],
+     "phase": "main2",
+     "when": [
+      "controls Sam, Loyal Attendant",
+      "not controls Food Token"
+     ]
+    },
+    {
+     "hold": [
+      "Savvy Hunter"
+     ],
+     "ability": "Draw a card"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Dawn of Hope"
+    ],
+    "when": [
+     "hand:cheap >= 1",
+     "mana <= 5"
+    ]
+   },
+   {
+    "decline": [
+     "Dawn of Hope"
+    ],
+    "when": [
+     "hand >= 6"
+    ]
+   }
+  ],
+  "notes": "The eat candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a run on the same tables as the go-wide version (DESIGN §27). Generated from playbook/variants/food-and-fellowship-eat.json on 2026-11-12; cast, trigger and mulligan rules are that file's, unchanged.",
+  "on": "2026-11-11"
+ }
+}
