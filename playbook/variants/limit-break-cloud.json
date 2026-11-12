@@ -5,7 +5,7 @@
   "of": "playbook/precons/limit-break.json",
   "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
   "playbook": {
-    "version": 2,
+    "version": 4,
     "attack": {
       "policy": "go_wide",
       "target": "highest_life",
@@ -18,7 +18,16 @@
       "rules": [
         {
           "play": [
-            "Sol Ring",
+            "Sol Ring"
+          ]
+        },
+        {
+          "play": [
+            "Cloud, Ex-SOLDIER"
+          ]
+        },
+        {
+          "play": [
             "Arcane Signet",
             "Bugenhagen, Wise Elder",
             "Rampant Growth",
@@ -34,11 +43,6 @@
             "Hero's Heirloom",
             "Hero's Blade",
             "Champion's Helm"
-          ]
-        },
-        {
-          "play": [
-            "Cloud, Ex-SOLDIER"
           ]
         },
         {
@@ -113,7 +117,8 @@
         },
         {
           "play": [
-            "Harmonize"
+            "Harmonize",
+            "Secret Rendezvous"
           ],
           "when": [
             "library >= 30"
@@ -125,6 +130,15 @@
           ],
           "target": "Cloud, Ex-SOLDIER",
           "phase": "main1"
+        },
+        {
+          "activate": [
+            "Bonders' Enclave"
+          ],
+          "phase": "main2",
+          "when": [
+            "library >= 30"
+          ]
         },
         {
           "hold": [

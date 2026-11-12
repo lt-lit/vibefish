@@ -37,3 +37,6 @@ The batch of 2026-11-11 (DESIGN.md §24), four decks written at once, each valid
 playbook's `file` is the name of the copy that was played; the rules are those of the variant named here (checked rule for rule).
 Goldfish flatters a planeswalker deck in particular: nobody attacks its planeswalkers.
 Seed blocks used by this batch: 2001 to 2140, 2301 to 2440, 2601 to 2740, 3101 to 3240 (audit, tuning, validation).
+
+`2026-11-12/`: the batch of 2026-11-12, validation pairs on 40 seeds the rules had not seen (`runner/hands.py compare`):
+`elven-council-seeds-13101-13140.json` (`playbook/variants/elven-council-grove.json`: 10.47 turns against 13.07).

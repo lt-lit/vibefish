@@ -46,6 +46,14 @@
         },
         {
           "play": [
+            "Nyx Weaver"
+          ],
+          "when": [
+            "library >= 50"
+          ]
+        },
+        {
+          "play": [
             "Stitcher's Supplier",
             "Satyr Wayfinder",
             "Hedron Crab",
@@ -57,17 +65,37 @@
         },
         {
           "play": [
-            "Lord of Extinction",
             "Colossal Grave-Reaver",
-            "Avenger of Zendikar"
-          ],
-          "when": [
-            "lands >= 5"
+            "Avenger of Zendikar",
+            "Lord of Extinction",
+            "Jarad, Golgari Lich Lord",
+            "Multani, Yavimaya's Avatar",
+            "Lord of the Forsaken",
+            "Junji, the Midnight Sky",
+            "Ob Nixilis, the Fallen",
+            "Consuming Aberration",
+            "Diviner of Mist",
+            "River Kelpie",
+            "Meren of Clan Nel Toth",
+            "Wonder",
+            "Tasigur, the Golden Fang",
+            "Necropolis Fiend",
+            "Timeless Witness",
+            "Springbloom Druid",
+            "Woe Strider",
+            "Dauthi Voidwalker",
+            "Reassembling Skeleton",
+            "Gravecrawler",
+            "Shigeki, Jukai Visionary"
           ]
         },
         {
           "play": [
-            "Phyrexian Reclamation"
+            "Disciple of Bolas"
+          ],
+          "when": [
+            "creatures >= 3",
+            "library >= 30"
           ]
         },
         {
@@ -87,23 +115,20 @@
         },
         {
           "activate": [
-            "Phyrexian Reclamation"
+            "Jarad, Golgari Lich Lord"
           ],
+          "ability": "Each opponent loses life",
           "phase": "main2",
+          "times": 2,
           "when": [
-            "hand <= 2",
-            "life >= 15"
+            "tokens >= 1"
           ]
         },
         {
-          "activate": [
-            "Skull Prophet"
+          "hold": [
+            "Woe Strider"
           ],
-          "ability": "Mill two",
-          "phase": "main2",
-          "when": [
-            "library >= 40"
-          ]
+          "ability": "Scry 1"
         }
       ]
     },
