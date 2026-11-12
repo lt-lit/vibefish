@@ -102,3 +102,13 @@ once under its shipped playbook. Goblin Storm 30 wins against its stock pilot's 
 Hail, Caesar 36 against 25 (+5.5, -1 to +12, 0.13); Token Triumph 83 against 75 (+4.0, -4 to +12, 0.42); Tricky Terrain 40 against 32
 (+4.0, -4 to +12, 0.37). Every playbook is ahead of its stock pilot; only Goblin Storm's lead is clear of noise. Token Triumph wins
 37.5% of these tables under stock AI as well: at this table the deck is strong whoever pilots it (DESIGN.md §27).
+
+`2026-11-12-ab-v13/` (`ab-run` #21, seed 20261200): answer rules for the four shipped bots, playbook arm only on the tables of `ab-run` #20
+(`2026-11-11-ab-v11/`). `<deck>-answers.json` is the run's rollup and `<deck>-join.json` the three arms on the same 200 tables (kind
+`ab-join`: stock pilot, shipped playbook, answers). Hail, Caesar 55 wins against the shipped version's 36 (+9.5 points, 95% +5 to +14,
+exact test 0.0003); Goblin Storm 38 against 30 (+4.0, +1 to +7, 0.039); Tricky Terrain 44 against 40 (+2.0, -3 to +7, 0.58); Token
+Triumph 80 against 83 (-1.5, -6 to +3, 0.65). Hail, Caesar's and Goblin Storm's became version 4 of their shipped playbooks.
+
+`2026-11-12-ab-v14/` (`ab-run` #22, seed 20261220): two candidates that had only met stock tables, at 200 tables of bots each, stock pilot
+against candidate. Quick Draw `spells` 39 wins against 32 (+3.5 points, 95% -3 to +10, exact test 0.40); Science! `lab` 4 against 7
+(-1.5, -4 to +1).

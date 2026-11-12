@@ -931,3 +931,18 @@ People play a wipe or a removal spell in about half to seven tenths of the games
 
 Every playbook is still ahead of its stock pilot, by four to nine and a half points where it was seven and a half to fifteen at stock tables, and only Goblin Storm's lead is clear of noise at 200 tables. Summed over the four decks the playbooks win 189 of 800 tables against 143, so the rules are worth something among bots; deck by deck this run cannot say how much. Token Triumph wins 37.5% of these tables under stock AI: its 46% in the bot league (§24) is mostly the deck at this table, not its pilot. The dashboard's bots card now shows these figures (`playbook/bots.json` keeps the stock-table measurement of each deck as `stock_tables`).
 
+**Answer rules for the shipped four (`ab-run` #21: each deck's `answers` candidate, the shipped rules plus rules that cast its wipes and removal, playbook arm on #20's 200 tables; joined with #20's arms; `demo-data/ab/2026-11-12-ab-v13/`).** The candidates were written from the 200 league games of §24, one agent a deck, and tried at 20 to 39 local bot tables.
+
+| Deck | stock pilot | shipped | answers | answers against shipped (95%), discordant pairs, exact test |
+|---|---|---|---|---|
+| Hail, Caesar | 25 | 36 | 55 (27.5%) | +9.5 (+5 to +14), 23 against 4, 0.0003 |
+| Goblin Storm | 11 | 30 | 38 (19.0%) | +4.0 (+1 to +7), 10 against 2, 0.039 |
+| Tricky Terrain | 32 | 40 | 44 (22.0%) | +2.0 (-3 to +7), 17 against 13, 0.58 |
+| Token Triumph | 75 | 83 | 80 (40.0%) | -1.5 (-6 to +3), 8 against 11, 0.65 |
+
+Hail, Caesar's answer rules are the largest effect measured at tables of bots so far: nineteen tables more than the shipped version on the same 200, and thirty more than the stock pilot (+15.0 points, +8 to +22). Its agent's thirty local tables had said the casts bought turns and no wins; 200 tables say otherwise, which is §22's lesson about local tables again. Goblin Storm's gained eight tables (0.039, one of four comparisons, so read it as a gain at the edge of noise); its agent had expected little. Tricky Terrain's and Token Triumph's did nothing measurable. Hail, Caesar's and Goblin Storm's candidates became version 4 of their shipped playbooks on 2026-11-12. Tricky Terrain's waits for its games to be read (does the seat still lose with its answers in hand); Token Triumph's is not shipped. The per-game logs of this run were not read for this paragraph: what the rules cast and what the seats still held is the next thing to look at.
+
+A consequence for later runs: from the commit that shipped them, the pool's Hail, Caesar and Goblin Storm play version 4. An arm played before and an arm played after are not on the same tables even with the same seed, and `runner/ab.py join` does not know it.
+
+**Quick Draw and Science! (`ab-run` #22: 200 tables of bots each, stock pilot against candidate, seed 20261220; `demo-data/ab/2026-11-12-ab-v14/`).** Quick Draw `spells` 39 wins against 32 (+3.5 points, 95% -3 to +10, exact test 0.40), the same lean it had at stock tables (§22: 38 against 31). Science! `lab` 4 against 7 (-1.5, -4 to +1): the deck wins two to four tables in a hundred here under either pilot.
+

@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.1",
- "generated": "2026-11-12T01:56:26Z",
+ "generated": "2026-11-12T03:17:43Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -14,18 +14,18 @@
    "commanders": [
     "Zada, Hedron Grinder"
    ],
-   "status": "shipped (v3); among bots +9.5 points on its stock pilot, confirmed",
+   "status": "shipped (v4, with answer rules); among bots +13.5 points on its stock pilot, confirmed, and +4.0 on version 3",
    "playbook": "playbook/precons/goblin-storm.json",
-   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life.",
+   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment.",
    "human": {
     "win_rate": 0.2093,
     "games": 218
    },
    "tables": {
-    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 3 of this deck won 30 of the same tables)",
     "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v11/goblin-storm.json",
+    "source": "demo-data/ab/2026-11-12-ab-v13/goblin-storm-join.json",
     "stock": {
      "games": 200,
      "wins": 11,
@@ -37,21 +37,21 @@
     },
     "bot": {
      "games": 200,
-     "wins": 30,
-     "win_rate": 0.15,
+     "wins": 38,
+     "win_rate": 0.19,
      "win_rate_ci95": [
-      0.1071,
-      0.2061
+      0.1417,
+      0.25
      ]
     },
-    "difference": 0.095,
+    "difference": 0.135,
     "difference_ci95": [
-     0.0403,
-     0.1497
+     0.0751,
+     0.1949
     ],
-    "bot_only": 26,
+    "bot_only": 34,
     "stock_only": 7,
-    "exact_p": 0.0013
+    "exact_p": 0.0
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json",
@@ -130,18 +130,18 @@
    "commanders": [
     "Caesar, Legion's Emperor"
    ],
-   "status": "shipped (v3); among bots +5.5 on its stock pilot, a lean",
+   "status": "shipped (v4, with answer rules); among bots +15.0 points on its stock pilot and +9.5 on version 3, confirmed",
    "playbook": "playbook/precons/hail-caesar.json",
-   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five).",
+   "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five); version 4 also casts its board wipes (Ruinous Ultimatum, Martial Coup, Vault 75, Hour of Reckoning, The Nipton Lottery) when the table calls for them.",
    "human": {
     "win_rate": 0.2152,
     "games": 320
    },
    "tables": {
-    "run": "ab-run #20: 200 tables whose three opponents are the other three bots, each under its shipped playbook",
+    "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 3 of this deck won 36 of the same tables)",
     "seed": 20261200,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v11/hail-caesar.json",
+    "source": "demo-data/ab/2026-11-12-ab-v13/hail-caesar-join.json",
     "stock": {
      "games": 200,
      "wins": 25,
@@ -153,21 +153,21 @@
     },
     "bot": {
      "games": 200,
-     "wins": 36,
-     "win_rate": 0.18,
+     "wins": 55,
+     "win_rate": 0.275,
      "win_rate_ci95": [
-      0.1329,
-      0.2391
+      0.2178,
+      0.3407
      ]
     },
-    "difference": 0.055,
+    "difference": 0.15,
     "difference_ci95": [
-     -0.0088,
-     0.1188
+     0.0825,
+     0.2175
     ],
-    "bot_only": 27,
-    "stock_only": 16,
-    "exact_p": 0.1263
+    "bot_only": 41,
+    "stock_only": 11,
+    "exact_p": 0.0
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
@@ -246,7 +246,7 @@
    "commanders": [
     "Stella Lee, Wild Card"
    ],
-   "status": "candidate, not shipped; this row is from tables of three stock seats, its exam among bots is playing",
+   "status": "candidate; among bots +3.5 points on its stock pilot, a lean",
    "playbook": "playbook/variants/quick-draw-spells.json",
    "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts.",
    "human": {
@@ -254,36 +254,36 @@
     "games": 133
    },
    "tables": {
-    "run": "ab-run #15",
-    "seed": 20261144,
+    "run": "ab-run #22: 200 tables whose three opponents are drawn from the four bot decks under their playbooks",
+    "seed": 20261220,
     "forge_version": "snapshot-2026-11-10",
-    "source": "demo-data/ab/2026-11-11-ab-v9/quick-draw.json",
+    "source": "demo-data/ab/2026-11-12-ab-v14/quick-draw-spells.json",
     "stock": {
      "games": 200,
-     "wins": 31,
-     "win_rate": 0.155,
+     "wins": 32,
+     "win_rate": 0.16,
      "win_rate_ci95": [
-      0.1114,
-      0.2116
+      0.1157,
+      0.2171
      ]
     },
     "bot": {
      "games": 200,
-     "wins": 38,
-     "win_rate": 0.19,
+     "wins": 39,
+     "win_rate": 0.195,
      "win_rate_ci95": [
-      0.1417,
-      0.25
+      0.1461,
+      0.2554
      ]
     },
     "difference": 0.035,
     "difference_ci95": [
-     -0.0375,
-     0.1075
+     -0.0348,
+     0.1048
     ],
-    "bot_only": 31,
-    "stock_only": 24,
-    "exact_p": 0.4188
+    "bot_only": 29,
+    "stock_only": 22,
+    "exact_p": 0.4011
    },
    "goldfish": {
     "source": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json",

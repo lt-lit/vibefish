@@ -79,7 +79,7 @@
   "by": "hand, from the decklist and Forge's plan detectors (DESIGN.md §19)"
  },
  "playbook": {
-  "version": 3,
+  "version": 4,
   "attack": {
    "policy": "go_wide",
    "target": "highest_life",
@@ -90,6 +90,27 @@
   },
   "cast": {
    "rules": [
+    {
+     "activate": [
+      "Goblin Bombardment"
+     ],
+     "when": [
+      "opponents == 1",
+      "opp_life <= 5",
+      "creatures >= opp_life"
+     ],
+     "times": 60
+    },
+    {
+     "play": [
+      "Goblin Bombardment"
+     ],
+     "when": [
+      "opponents == 1",
+      "opp_life <= 5",
+      "creatures >= opp_life"
+     ]
+    },
     {
      "play": [
       "Sol Ring",
@@ -126,6 +147,33 @@
       "library >= 40"
      ],
      "phase": "main1"
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "creatures <= 3",
+      "opp_creatures >= 9"
+     ]
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "creatures <= 6",
+      "opp_creatures >= 12"
+     ]
     },
     {
      "play": [
@@ -214,6 +262,14 @@
      "hold": [
       "Battle Hymn",
       "Brightstone Ritual"
+     ]
+    },
+    {
+     "play": [
+      "Grapeshot"
+     ],
+     "when": [
+      "opp_life <= storm"
      ]
     },
     {
@@ -321,6 +377,11 @@
      ]
     },
     {
+     "play": [
+      "Goblin Bombardment"
+     ]
+    },
+    {
      "activate": [
       "Skullclamp"
      ],
@@ -348,7 +409,7 @@
     ]
    }
   },
-  "notes": "Zada copies a spell that targets only her for every other creature we control, so the deck's engine is a board of Goblins, Zada, and a one-mana spell aimed at her: Expedite, Crimson Wisps and Renegade Tactics draw a card for each creature, Ancestors' Aid makes a Treasure for each, Fists of Flame and Witch's Mark draw and pump, Wild Ride pumps and gives haste. Stock Forge aims about a third of these at Zada and sits on the rest (DESIGN.md §21), so they are held for the rules, which cast them at Zada in the first main phase once she has two other creatures, draws first and pump last, and never when the copies would draw most of the library (more than twelve creatures, or under forty cards left: a seat decked itself that way in testing). Krenko, Mob Boss makes his tokens every turn before combat instead of attacking, which stock does twice in a hundred games. The permanents go down in the listed order, best first, whatever Forge thinks of them (Faithless Looting is flagged AI:RemoveDeck:All and stock never casts it). Battle Hymn and Brightstone Ritual wait for a hand to spend them on. Haze of Rage is cast before an attack of five or more, at most six times a turn: with Storm-Kiln Artist it is the deck's infinite combo, and stock recasts it for minutes without attacking. Skullclamp goes on a 1/1 Goblin token after combat while no lord keeps it alive; Idol of Oblivion is tapped whenever a token was made; Fountainport does not eat the tokens. The attack is the go-wide policy with the spread (what the first defender does not need to die goes at the next), aimed at the opponent with the highest life. Aimed at the lowest life it killed a goldfish table just as fast and, over 40 real tables, killed the two weakest players and then lost to the one nobody had touched: 5 wins against 9 this way and 4 for stock. A land-count mulligan rule was tried and changed nothing (9.61 against 9.56 turns), so the mulligan stays Forge's. Not written yet: Great Train Heist's extra combat, Past in Flames, Goblin Bombardment and the sacrifice outlets, tutor targets. Version 3 (2026-11-11): Zada stays in the command zone until she can be cast and aimed at in the same turn (two other creatures, one of her spells in hand, five mana), or the board is four wide, or it is turn eight. On run #5's 200 tables it wins 48 where version 2 won 40 and stock 18 (24 tables won only by it against 16 only by version 2, exact test 0.27): a lean, not a result by itself, shipped because the same change was worth seven wins under the pressure attack on the same tables and nothing in either comparison says it costs anything. Those tables have now chosen among six candidates, so 24.0% is flattered by the choosing; version 2's 20.0% is the figure from tables it had not seen (demo-data/ab/2026-11-11-ab-v8/goblin-storm.json, DESIGN.md §22). Confirmed on tables of its own (ab-run #17, seed 20261170, 200 tables whose opponents the deck had not met): 48 wins against stock's 18 again, 24.0% against 9.0%, +15.0 points (95% +8 to +22, 42 tables won only by it against 12 only by stock, exact test 0.0001; demo-data/ab/2026-11-11-ab-v10/goblin-storm.json, DESIGN.md §23).",
-  "on": "2026-11-11"
+  "notes": "Version 4 (2026-11-11), the candidate `answers`: version 3 as shipped, every rule and its order kept, plus seven rules for three of the deck's answer cards (the version 3 notes are in playbook/precons/goblin-storm.json). Written from the 200 games of the bot league (league-run #2, every seat under its playbook; DESIGN.md §24), where this seat won 32, was the first player out in 68 and took its last blow from Token Triumph in 82 of 168 losses. What those games say first: the seat's removal is not what it sits on. Forge casts Chaos Warp in 40 of the 47 games it is drawn, Vandalblast in 34 of 45 (ten of its 40 casts overloaded), Goblin Negotiation in 27 of 50, Spreading Insurrection in 26 of 51 and Blasphemous Act in 16 of 30, all aimed by Forge, and those stay Forge's. At the start of its last own turn of a loss the seat holds its storm half (Grapeshot in 36 losses, Haze of Rage 27, Battle Hymn 27, Empty the Warrens 25) and Goblin Bombardment (32), which Forge's AI never casts (0 of 51 games drawn; AI:RemoveDeck:All). In 67 of the 168 losses it never had a turn with two or more copies of a spell aimed at Zada. It takes a hit of ten or more in 181 games; the first comes in the round after its own turns 5 to 8 in 152 of them and from Token Triumph in 114, when the seat has a median of four creatures and blocks under one of the six or seven attackers. Blasphemous Act: three play rules, after the one-mana draw spells at Zada (cashed in first) and before anything that puts a body on the table or could discard the card (Witch's Mark, Faithless Looting). Forge's own test for the card (DamageAllAi.evaluateDamageAll) weighs our creatures against those of the one opponent with the lowest life and asks for 200 points of difference, whatever the other boards hold; the widest board at this table is usually Token Triumph's, which is seldom the lowest life. Rule one, `threat >= life` and `opp_creatures > creatures`: one opponent's board can attack for all our life and it outnumbers ours. Counted from the league logs with printed power (a floor), that state came up on 283 own turns of 121 games; the seat was dead before its next turn 39% of the time (4% when none of the three rules applies) and won 9 of the 121. In the same danger with the wider board (34 games) it won 15, so the rule asks to be outnumbered. Rules two and three, three creatures or fewer against nine or more and six or fewer against twelve or more: a lead of six bodies is where deaths within the round jump (10% at a lead of four or five, 27% at six to eight, 30% above). Forge's own casts are left alone (no hold). The 16 casts Forge made in the league bought the seat 5.8 more own turns against 3.2 in matched states without a cast, and one win: the wipe buys time, not games. Grapeshot: one play rule above Haze of Rage, `opp_life <= storm`: every opponent left has no more life than the spells cast this turn, so the copies alone finish one of them. The shipped hold (until storm five) stays as it is. Goblin Bombardment: a play rule after the permanents (spare mana only) and, at the top of the list, the kill: with one opponent left at five life or less and a creature for each point of it, cast Bombardment if it is still in hand and sacrifice until that opponent is dead (`times` 60). Forge's burn logic aims a one-damage ability at the face of the lowest-life opponent once that opponent is at five or less and chooses the creature to sacrifice itself (tokens, in what was seen); the conditions keep the rule to the case where that wins the game. In the league the seat lost two games with the last opponent at 2 and at 4 life, six and eleven creatures of its own and Bombardment in hand. Tried and dropped. Grapeshot whenever the storm count reaches five (the seat reached that with the card in hand on 20 own turns of 17 league games and cast it on two): its one cast at the local tables put the original on a 1/4 and five copies in the face of a player at 40 life, a second, free cast eight more, and nothing left the table; the aim is Forge's. An `activate` for Bombardment without conditions: Forge agrees to it, pays with a token and pings a creature that one damage kills, a planeswalker, or a player at five or less (six activations in two table games with a scratch deck: Fish and Rat tokens for a Reclamation Sage, a Satyr Wayfinder, an Insect, two Forest Dryads and a point of Ajani's loyalty; ten in six goldfish games, all at players at five or less, who died of them). Forge's test for the player is that the ping leaves it under five life (DamageAiBase.shouldTgtP), not that the creatures are there to finish, and nothing in such a rule says when a trade of tokens is wanted. Local tables of bots, seed 20269040, to see the rules fire and not to measure anything: 20 different tables finished (13 under a first version without the Bombardment rules and with the storm-five Grapeshot rule, six with both, one under the rules as they stand) and four of those tables again under the rules as they stand, which came out the same; two games stopped by hand when a Tricky Terrain board of 54 and of 156 permanents brought them to a standstill. Blasphemous Act was drawn in four games and cast in all four, three times by rule one at 13, 6 and 23 life: 20, 27 and 12 opposing creatures died for 4, 5 and 2 of ours, the seat lived 2, 5 and 7 more own turns and won none of the three; in the first, Hail, Caesar's Bastion of Remembrance turned its nine dead creatures into nine life lost for us. Rules two and three did not fire at those tables; with a scratch deck holding six copies rule two fired three times in four games (2 creatures against 14, none against 9, 3 against 9), and rule three has not fired anywhere. The Grapeshot kill and the Bombardment kill never came up at a table; the Bombardment kill was seen once in twelve goldfish games with a scratch deck of twelve copies (the last opponent at 1 life, one Goblin token sacrificed). Bombardment itself was cast in three of the three games it was drawn once it had its play rule. What the format cannot say for these cards: a condition on the lowest opponent life (`opp_life` is the highest), which a Bombardment or Grapeshot kill on one of several opponents needs (in 22 of the 43 league games with Bombardment in hand at the start of a turn the seat had as many creatures as the life of an opponent at five or less); the aim of anything pointed at an opponent (Grapeshot's copies, Bombardment, the X of Goblin Negotiation); Vandalblast's overload (a play rule casts only a card's plain spell; Forge overloads it by itself); Gempalm Incinerator's cycling, an ability of a card in hand, never used in the 200 games; what the opponents have on the table (Hornet Nest and Bastion of Remembrance turn the wipe against us); which card is discarded (Blasphemous Act went to Witch's Mark, Faithless Looting or the hand limit in 12 league games); anything on another player's turn. Shipped on 2026-11-12 as version 4: at 200 tables of bots (ab-run #21 joined with #20, seed 20261200) 38 wins against version 3's 30 on the same tables (+4.0 points, 95% +1 to +7, 10 discordant pairs against 2, exact test 0.039, one of four comparisons made that day) and the stock pilot's 11.",
+  "on": "2026-11-12"
  }
 }
