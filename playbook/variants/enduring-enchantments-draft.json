@@ -1,0 +1,151 @@
+{
+ "schema": 1,
+ "deck": "enduring-enchantments",
+ "variant": "draft",
+ "of": "playbook/precons/enduring-enchantments.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Sanctum Weaver",
+      "Rampant Growth",
+      "Kodama's Reach"
+     ]
+    },
+    {
+     "play": [
+      "Anikthea, Hand of Erebos"
+     ]
+    },
+    {
+     "play": [
+      "Font of Fertility",
+      "Dreadhorde Invasion",
+      "Khalni Heart Expedition",
+      "The Binding of the Titans",
+      "Battle for Bretagard",
+      "Cunning Rhetoric",
+      "Enchantress's Presence",
+      "Love Song of Night and Day",
+      "Omen of the Hunt",
+      "Omen of the Sun",
+      "Abundance",
+      "Binding the Old Gods",
+      "Felidar Retreat",
+      "Boon of the Spirit Realm",
+      "Mirari's Wake",
+      "Sigil of the Empty Throne",
+      "Starfield of Nyx",
+      "Battle at the Helvault",
+      "Sandwurm Convergence"
+     ]
+    },
+    {
+     "play": [
+      "Nyxborn Behemoth",
+      "Demon of Fate's Design",
+      "Greater Tanuki",
+      "Doomwake Giant",
+      "Ondu Spiritdancer",
+      "Arasta of the Endless Web",
+      "Archon of Sun's Grace",
+      "Eidolon of Blossoms",
+      "Erebos, Bleak-Hearted",
+      "Heliod, God of the Sun",
+      "Mindwrack Harpy",
+      "Narci, Fable Singer",
+      "Courser of Kruphix",
+      "Dryad of the Ilysian Grove",
+      "Mesa Enchantress",
+      "Nyx Weaver",
+      "Satyr Enchanter",
+      "Setessan Champion",
+      "Verduran Enchantress",
+      "Composer of Spring",
+      "Destiny Spinner",
+      "Herald of the Pantheon",
+      "Jukai Naturalist",
+      "Nessian Wanderer",
+      "Spirited Companion",
+      "Starfield Mystic",
+      "Sythis, Harvest's Hand"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-12"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Cacophony Unleashed",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Calix, Destiny's Hand",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Cast Out",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Culling Ritual",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Extinguish All Hope",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Farseek",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Ghoulish Impetus",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Grasp of Fate",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Path to Exile",
+    "why": "instant"
+   },
+   {
+    "card": "The Eldest Reborn",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "The Mending of Dominaria",
+    "why": "sweeping or symmetrical"
+   }
+  ],
+  "never_cast_by_forge": [],
+  "cast_by_rule_though_flagged": [
+   "Abundance",
+   "Nyx Weaver"
+  ],
+  "optional_triggers": [
+   "Composer of Spring",
+   "Courser of Kruphix",
+   "Cunning Rhetoric",
+   "Erebos, Bleak-Hearted",
+   "Khalni Heart Expedition",
+   "Mesa Enchantress",
+   "Nessian Wanderer",
+   "Omen of the Hunt",
+   "Ondu Spiritdancer",
+   "Starfield of Nyx",
+   "Verduran Enchantress"
+  ]
+ }
+}

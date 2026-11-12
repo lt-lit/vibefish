@@ -1,0 +1,166 @@
+{
+ "schema": 1,
+ "deck": "eldrazi-incursion",
+ "variant": "draft",
+ "of": "playbook/precons/eldrazi-incursion.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Curiosity",
+      "Talisman of Dominance",
+      "Talisman of Impulse",
+      "Talisman of Resilience"
+     ]
+    },
+    {
+     "play": [
+      "Ulalek, Fused Atrocity"
+     ]
+    },
+    {
+     "play": [
+      "Idol of Oblivion",
+      "Awakening Zone",
+      "Garruk's Uprising",
+      "Herald's Horn",
+      "Hedron Archive",
+      "Mystic Forge",
+      "Forsaken Monument",
+      "Dreamstone Hedron",
+      "Ugin, the Ineffable"
+     ]
+    },
+    {
+     "play": [
+      "Ulamog's Dreadsire",
+      "Artisan of Kozilek",
+      "Elder Deep-Fiend",
+      "Ulamog's Crusher",
+      "Benthic Anomaly",
+      "Hideous Taskmaster",
+      "Morophon, the Boundless",
+      "Skittering Invasion",
+      "Spawnbed Protector",
+      "Twins of Discord",
+      "World Breaker",
+      "Angelic Aberration",
+      "Deepfathom Skulker",
+      "Drowner of Hope",
+      "Endbringer",
+      "Oblivion Sower",
+      "Sire of Stagnation",
+      "Titans' Vanguard",
+      "Bismuth Mindrender",
+      "Inversion Behemoth",
+      "Sifter of Skulls",
+      "Ulamog's Nullifier",
+      "Azlask, the Swelling Scourge",
+      "Chittering Dispatcher",
+      "Eldrazi Displacer",
+      "Glaring Fleshraker",
+      "Mutated Cultist",
+      "Snapping Voidcraw",
+      "Vile Redeemer",
+      "Wastescape Battlemage"
+     ]
+    },
+    {
+     "play": [
+      "Ugin's Insight",
+      "Rishkar's Expertise"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-12"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "All Is Dust",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Ancient Stirrings",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Selective Obliteration",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Crib Swap",
+    "why": "instant"
+   },
+   {
+    "card": "Eldrazi Confluence",
+    "why": "instant"
+   },
+   {
+    "card": "Eldritch Immunity",
+    "why": "instant"
+   },
+   {
+    "card": "Kozilek's Return",
+    "why": "instant"
+   },
+   {
+    "card": "Return of the Wildspeaker",
+    "why": "instant"
+   },
+   {
+    "card": "Suffer the Past",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Warping Wail",
+    "why": "instant"
+   },
+   {
+    "card": "Eldrazi Conscription",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Imprisoned in the Moon",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Eldrazi Monument",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Everflowing Chalice",
+    "why": "its script says when (NeedsToPlay)"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Selective Obliteration",
+   "Suffer the Past"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Ulalek, Fused Atrocity",
+   "Artisan of Kozilek",
+   "Bismuth Mindrender",
+   "Deepfathom Skulker",
+   "Elder Deep-Fiend",
+   "Oblivion Sower",
+   "Ulamog's Nullifier",
+   "Vile Redeemer",
+   "Kozilek's Return",
+   "Awakening Zone",
+   "Herald's Horn"
+  ]
+ }
+}
