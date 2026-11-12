@@ -1,0 +1,153 @@
+{
+ "schema": 1,
+ "deck": "wretched-ranks",
+ "variant": "draft",
+ "of": "playbook/precons/wretched-ranks.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Charcoal Diamond",
+      "Mind Stone",
+      "Commander's Sphere",
+      "Infernal Idol",
+      "Patchwork Banner"
+     ]
+    },
+    {
+     "play": [
+      "Ghoulcaller Gisa"
+     ]
+    },
+    {
+     "play": [
+      "Oversold Cemetery",
+      "Bontu's Monument",
+      "Phyrexian Arena",
+      "Endless Ranks of the Dead",
+      "Marchesa's Decree",
+      "Liliana's Mastery",
+      "Open the Graves"
+     ]
+    },
+    {
+     "play": [
+      "Army of the Damned",
+      "Grave Titan",
+      "God-Eternal Bontu",
+      "Gray Merchant of Asphodel",
+      "Noxious Ghoul",
+      "Graveborn Muse",
+      "Josu Vess, Lich Knight",
+      "Kalitas, Traitor of Ghet",
+      "Liliana's Reaver",
+      "Moan of the Unhallowed",
+      "Soulless One",
+      "Undead Warchief",
+      "Vengeful Dead",
+      "Ayara, First of Locthwain",
+      "Cemetery Reaper",
+      "Death Baron",
+      "Diregraf Colossus",
+      "Headless Rider",
+      "Lord of the Accursed",
+      "Lord of the Undead",
+      "Midnight Reaper",
+      "Eternal Taskmaster",
+      "Mire Triton",
+      "Razorlash Transmogrant",
+      "Undead Augur",
+      "Undead Butler",
+      "Wight of Precinct Six",
+      "Zul Ashur, Lich Lord",
+      "Carrion Feeder",
+      "Champion of the Perished",
+      "Cryptbreaker",
+      "Gravecrawler"
+     ]
+    },
+    {
+     "play": [
+      "Night's Whisper",
+      "Ambition's Cost"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-12"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Fleshbag Marauder",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Bad Moon",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Consumed by Greed",
+    "why": "instant"
+   },
+   {
+    "card": "Consuming Corruption",
+    "why": "instant"
+   },
+   {
+    "card": "Go for the Throat",
+    "why": "instant"
+   },
+   {
+    "card": "Tendrils of Corruption",
+    "why": "instant"
+   },
+   {
+    "card": "Withering Torment",
+    "why": "instant"
+   },
+   {
+    "card": "Mutilate",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Necrotic Hex",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Cemetery Recruitment",
+    "why": "aimed"
+   },
+   {
+    "card": "Sign in Blood",
+    "why": "aimed"
+   },
+   {
+    "card": "Syphon Flesh",
+    "why": "sorcery of no drafted kind"
+   }
+  ],
+  "never_cast_by_forge": [],
+  "cast_by_rule_though_flagged": [
+   "Ghoulcaller Gisa",
+   "God-Eternal Bontu"
+  ],
+  "optional_triggers": [
+   "God-Eternal Bontu",
+   "Josu Vess, Lich Knight",
+   "Eternal Taskmaster",
+   "Undead Butler",
+   "Oversold Cemetery"
+  ]
+ }
+}

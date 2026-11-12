@@ -1,0 +1,199 @@
+{
+ "schema": 1,
+ "deck": "sultai-arisen",
+ "variant": "draft",
+ "of": "playbook/precons/sultai-arisen.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Millikin",
+      "Skull Prophet",
+      "Rampant Growth",
+      "Cultivate",
+      "Harrow"
+     ]
+    },
+    {
+     "play": [
+      "Kotis, Sibsig Champion"
+     ]
+    },
+    {
+     "play": [
+      "Phyrexian Reclamation",
+      "Crawling Sensation",
+      "Essence Anchor",
+      "Teval's Judgment",
+      "Conduit of Worlds"
+     ]
+    },
+    {
+     "play": [
+      "Necropolis Fiend",
+      "Colossal Grave-Reaver",
+      "Avenger of Zendikar",
+      "Lord of the Forsaken",
+      "Multani, Yavimaya's Avatar",
+      "Tasigur, the Golden Fang",
+      "Diviner of Mist",
+      "River Kelpie",
+      "Jarad, Golgari Lich Lord",
+      "Meren of Clan Nel Toth",
+      "Teval, the Balanced Scale",
+      "Wonder",
+      "Floral Evoker",
+      "Nyx Weaver",
+      "Springbloom Druid",
+      "Woe Strider",
+      "Dauthi Voidwalker",
+      "Kishla Skimmer",
+      "Reassembling Skeleton",
+      "Sakura-Tribe Elder",
+      "Satyr Wayfinder",
+      "Shigeki, Jukai Visionary",
+      "Gravecrawler",
+      "Stitcher's Supplier"
+     ]
+    },
+    {
+     "play": [
+      "Welcome the Dead",
+      "Treasure Cruise"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-12"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Steward of the Harvest",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Amphin Mutineer",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Disciple of Bolas",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Junji, the Midnight Sky",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Noxious Gearhulk",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Ob Nixilis, the Fallen",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Consuming Aberration",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Lord of Extinction",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Hedron Crab",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Timeless Witness",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Afterlife from the Loam",
+    "why": "aimed"
+   },
+   {
+    "card": "Will of the Sultai",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Life from the Loam",
+    "why": "aimed"
+   },
+   {
+    "card": "Casualties of War",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Living Death",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Necromantic Selection",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Victimize",
+    "why": "aimed"
+   },
+   {
+    "card": "Farseek",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Lethal Scheme",
+    "why": "instant"
+   },
+   {
+    "card": "Forbidden Alchemy",
+    "why": "instant"
+   },
+   {
+    "card": "Grapple with the Past",
+    "why": "instant"
+   },
+   {
+    "card": "Tear Asunder",
+    "why": "instant"
+   },
+   {
+    "card": "Grisly Salvage",
+    "why": "instant"
+   },
+   {
+    "card": "Putrefy",
+    "why": "instant"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Disciple of Bolas"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Nyx Weaver",
+   "Phyrexian Reclamation"
+  ],
+  "optional_triggers": [
+   "Kotis, Sibsig Champion",
+   "Teval, the Balanced Scale",
+   "Diviner of Mist",
+   "Noxious Gearhulk",
+   "Ob Nixilis, the Fallen",
+   "Woe Strider",
+   "Avenger of Zendikar",
+   "Satyr Wayfinder",
+   "Springbloom Druid",
+   "Crawling Sensation",
+   "Essence Anchor"
+  ]
+ }
+}

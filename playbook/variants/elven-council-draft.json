@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "deck": "elven-council",
+ "variant": "draft",
+ "of": "playbook/precons/elven-council.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Elvish Mystic",
+      "Sol Ring",
+      "Arcane Signet",
+      "Paradise Druid",
+      "Wose Pathfinder",
+      "Commander's Sphere",
+      "Model of Unity",
+      "Rampant Growth",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "Galadriel, Elven-Queen"
+     ]
+    },
+    {
+     "play": [
+      "Overwhelming Stampede"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Overwhelming Stampede"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Mirror of Galadriel",
+      "Asceticism",
+      "Song of Eärendil"
+     ]
+    },
+    {
+     "play": [
+      "Colossal Whale",
+      "Hornet Queen",
+      "Círdan the Shipwright",
+      "Elrond of the White Council",
+      "Gandalf, Westward Voyager",
+      "Celeborn the Wise",
+      "Elvish Piper",
+      "Radagast, Wizard of Wilds",
+      "Arwen, Weaver of Hope",
+      "Elvish Archdruid",
+      "Erestor of the Council",
+      "Farhaven Elf",
+      "Legolas Greenleaf",
+      "Mirkwood Trapper",
+      "Wood Elves",
+      "Elvish Visionary",
+      "Elvish Warmaster",
+      "Arbor Elf"
+     ]
+    },
+    {
+     "play": [
+      "Elven Farsight",
+      "Preordain",
+      "Lórien Revealed"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-12"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Beast Within",
+    "why": "instant"
+   },
+   {
+    "card": "Devastation Tide",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Galadhrim Ambush",
+    "why": "instant"
+   },
+   {
+    "card": "Genesis Wave",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Growth Spiral",
+    "why": "instant"
+   },
+   {
+    "card": "Haldir, Lórien Lieutenant",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Heroic Intervention",
+    "why": "instant"
+   },
+   {
+    "card": "Inscription of Abundance",
+    "why": "instant"
+   },
+   {
+    "card": "Learn from the Past",
+    "why": "instant"
+   },
+   {
+    "card": "Lightning Greaves",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Lignify",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Lothlórien Blade",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Mirkwood Elk",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Mystic Confluence",
+    "why": "instant"
+   },
+   {
+    "card": "Opt",
+    "why": "instant"
+   },
+   {
+    "card": "Plea for Power",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Raise the Palisade",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Realm Seekers",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Reclamation Sage",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Sail into the West",
+    "why": "instant"
+   },
+   {
+    "card": "Seeds of Renewal",
+    "why": "aimed"
+   },
+   {
+    "card": "Swan Song",
+    "why": "instant"
+   },
+   {
+    "card": "Sylvan Offering",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Trap the Trespassers",
+    "why": "instant"
+   },
+   {
+    "card": "Travel Through Caradhras",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Whispersilk Cloak",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Windswift Slice",
+    "why": "instant"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Beast Within",
+   "Mystic Confluence",
+   "Swan Song",
+   "Sylvan Offering"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Colossal Whale",
+   "Farhaven Elf",
+   "Gandalf, Westward Voyager",
+   "Reclamation Sage"
+  ]
+ }
+}

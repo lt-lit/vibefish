@@ -1,0 +1,154 @@
+{
+ "schema": 1,
+ "deck": "wretched-ranks",
+ "variant": "gisa",
+ "of": "playbook/precons/wretched-ranks.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Charcoal Diamond",
+      "Mind Stone",
+      "Commander's Sphere",
+      "Patchwork Banner"
+     ]
+    },
+    {
+     "play": [
+      "Ghoulcaller Gisa"
+     ]
+    },
+    {
+     "activate": [
+      "Ghoulcaller Gisa"
+     ],
+     "phase": "main1",
+     "when": [
+      "creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Undead Warchief",
+      "Endless Ranks of the Dead",
+      "Death Baron",
+      "Lord of the Undead",
+      "Cemetery Reaper",
+      "Lord of the Accursed",
+      "Bad Moon",
+      "Liliana's Mastery",
+      "Champion of the Perished",
+      "Diregraf Colossus"
+     ]
+    },
+    {
+     "play": [
+      "Army of the Damned",
+      "Grave Titan",
+      "Moan of the Unhallowed",
+      "Open the Graves",
+      "Gray Merchant of Asphodel",
+      "Headless Rider",
+      "Vengeful Dead",
+      "Liliana's Reaver",
+      "Kalitas, Traitor of Ghet",
+      "Josu Vess, Lich Knight",
+      "Soulless One",
+      "Midnight Reaper",
+      "Undead Augur",
+      "Ayara, First of Locthwain",
+      "Zul Ashur, Lich Lord",
+      "Cryptbreaker",
+      "Gravecrawler",
+      "Carrion Feeder",
+      "Wight of Precinct Six",
+      "Mire Triton",
+      "Undead Butler",
+      "Eternal Taskmaster",
+      "Razorlash Transmogrant",
+      "Oversold Cemetery",
+      "Phyrexian Arena",
+      "Bontu's Monument",
+      "Marchesa's Decree"
+     ]
+    },
+    {
+     "play": [
+      "Graveborn Muse"
+     ],
+     "when": [
+      "library >= 50",
+      "type:Zombie <= 5"
+     ]
+    },
+    {
+     "activate": [
+      "Cemetery Reaper"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Lord of the Undead"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Cryptbreaker"
+     ],
+     "ability": "Create a 2/2",
+     "when": [
+      "hand >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Night's Whisper",
+      "Ambition's Cost",
+      "Sign in Blood"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Lord of the Accursed"
+     ],
+     "phase": "main1",
+     "when": [
+      "attackers >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "God-Eternal Bontu"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Oversold Cemetery",
+     "Undead Butler"
+    ]
+   }
+  ],
+  "notes": "Version 1: Ghoulcaller Gisa is flagged AI:RemoveDeck:All and stock never casts her (0 of 12 audit games). The rules cast her on curve after the rocks, the lords and Endless Ranks of the Dead (also never cast by stock) before anything else, and tap her every first main phase to turn another creature into that many 2/2 Zombies."
+ }
+}

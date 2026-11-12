@@ -1,0 +1,230 @@
+{
+ "schema": 1,
+ "deck": "limit-break",
+ "variant": "draft",
+ "of": "playbook/precons/limit-break.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Bugenhagen, Wise Elder",
+      "Rampant Growth",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "Cloud, Ex-SOLDIER"
+     ]
+    },
+    {
+     "play": [
+      "Furious Rise",
+      "Inspiring Statuary",
+      "SOLDIER Military Program"
+     ]
+    },
+    {
+     "play": [
+      "Hellkite Tyrant",
+      "Summon: Kujata",
+      "Bronze Guardian",
+      "Sephiroth, Fallen Hero",
+      "Aerith, Last Ancient",
+      "Barret Wallace",
+      "Barret, Avalanche Leader",
+      "Cait Sith, Fortune Teller",
+      "Heidegger, Shinra Executive",
+      "Avalanche of Sector 7",
+      "Bastion Protector",
+      "Professional Face-Breaker",
+      "Vincent, Vengeful Atoner",
+      "Cid, Freeflier Pilot",
+      "Helitrooper",
+      "Professor Hojo",
+      "Puresteel Paladin",
+      "Zack Fair"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-12"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Tifa, Martial Artist",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Elena, Turk Recruit",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Yuffie, Materia Hunter",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Red XIII, Proud Warrior",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Armory Automaton",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Cloud's Limit Break",
+    "why": "instant"
+   },
+   {
+    "card": "Ultimate Magic: Holy",
+    "why": "instant"
+   },
+   {
+    "card": "Lifestream's Blessing",
+    "why": "instant"
+   },
+   {
+    "card": "Clever Concealment",
+    "why": "instant"
+   },
+   {
+    "card": "Chaos Warp",
+    "why": "instant"
+   },
+   {
+    "card": "Dispatch",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Ultimate Magic: Meteor",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Austere Command",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Unfinished Business",
+    "why": "aimed"
+   },
+   {
+    "card": "Vanquish the Horde",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Decimate",
+    "why": "aimed"
+   },
+   {
+    "card": "Secret Rendezvous",
+    "why": "aimed"
+   },
+   {
+    "card": "Vandalblast",
+    "why": "aimed"
+   },
+   {
+    "card": "Nature's Lore",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Summoning Materia",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Conformer Shuriken",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Wrecking Ball Arm",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Champion's Helm",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Conqueror's Flail",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Darksteel Plate",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Sword of the Animist",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Behemoth Sledge",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Colossus Hammer",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Explorer's Scope",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Hero's Blade",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Hero's Heirloom",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Lightning Greaves",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Mask of Memory",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Skullclamp",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Trailblazer's Boots",
+    "why": "aura or equipment"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Dispatch"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Cait Sith, Fortune Teller",
+   "Yuffie, Materia Hunter",
+   "Sephiroth, Fallen Hero",
+   "Puresteel Paladin",
+   "Professional Face-Breaker",
+   "Armory Automaton",
+   "SOLDIER Military Program",
+   "Furious Rise",
+   "Sword of the Animist",
+   "Explorer's Scope",
+   "Hero's Blade",
+   "Mask of Memory"
+  ]
+ }
+}

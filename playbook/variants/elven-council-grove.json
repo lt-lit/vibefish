@@ -1,0 +1,170 @@
+{
+ "schema": 1,
+ "deck": "elven-council",
+ "variant": "grove",
+ "of": "playbook/precons/elven-council.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "groups": {
+    "piper_targets": [
+     "Colossal Whale",
+     "Hornet Queen",
+     "Mirkwood Elk",
+     "Realm Seekers",
+     "Elrond of the White Council",
+     "Círdan the Shipwright"
+    ]
+   },
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Elvish Mystic",
+      "Arbor Elf",
+      "Paradise Druid",
+      "Wose Pathfinder",
+      "Arcane Signet",
+      "Wood Elves",
+      "Rampant Growth",
+      "Growth Spiral"
+     ]
+    },
+    {
+     "play": [
+      "Galadriel, Elven-Queen"
+     ]
+    },
+    {
+     "play": [
+      "Arwen, Weaver of Hope",
+      "Elvish Archdruid",
+      "Elvish Warmaster",
+      "Gandalf, Westward Voyager",
+      "Radagast, Wizard of Wilds"
+     ]
+    },
+    {
+     "play": [
+      "Cultivate",
+      "Model of Unity",
+      "Commander's Sphere"
+     ],
+     "when": [
+      "lands <= 6"
+     ]
+    },
+    {
+     "activate": [
+      "Elvish Piper"
+     ],
+     "when": [
+      "hand:piper_targets >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Colossal Whale",
+      "Hornet Queen",
+      "Elrond of the White Council",
+      "Círdan the Shipwright",
+      "Celeborn the Wise",
+      "Legolas Greenleaf",
+      "Erestor of the Council",
+      "Realm Seekers",
+      "Mirkwood Elk",
+      "Elvish Piper",
+      "Elvish Visionary",
+      "Farhaven Elf",
+      "Mirkwood Trapper",
+      "Reclamation Sage",
+      "Song of Eärendil",
+      "Asceticism"
+     ]
+    },
+    {
+     "play": [
+      "Haldir, Lórien Lieutenant"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "Genesis Wave"
+     ],
+     "x": "max",
+     "x_min": 5,
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "play": [
+      "Overwhelming Stampede"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Overwhelming Stampede"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "activate": [
+      "Elvish Warmaster"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Haldir, Lórien Lieutenant"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Lórien Revealed",
+      "Plea for Power",
+      "Travel Through Caradhras"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Mirror of Galadriel"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    }
+   ]
+  },
+  "notes": "Elven Council is Galadriel, Elven-Queen: she votes at the start of each of our combats if another Elf entered this turn, so the deck wants her out at once and an Elf down in every first main phase. The stock seat sat on Wood Elves and Growth Spiral for a whole land-light game and cast Galadriel on turn 7 to 12 in a third of the audit games. The rules ramp first, then Galadriel, then Arwen (every later creature enters with counters) and the lords and spell-value engines (Archdruid, Warmaster, Gandalf, Radagast) ahead of the five-drops, then the rest of the creatures; Elvish Piper puts the big creatures in from hand, which stock never did; Haldir and Genesis Wave with all the mana; Overwhelming Stampede, Warmaster's and Haldir's pumps before an attack of four or more; the card draw and Travel Through Caradhras (never cast by stock) while the library holds thirty cards. The reactive cards (Heroic Intervention, Swan Song, Beast Within, Mystic Confluence, Lignify, Devastation Tide, Windswift Slice, Trap the Trespassers, Galadhrim Ambush) and Sylvan Offering, which gives an opponent the same tokens, stay Forge's. Votes are Forge's.",
+  "on": "2026-11-12"
+ }
+}

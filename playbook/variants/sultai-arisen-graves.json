@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "deck": "sultai-arisen",
+  "variant": "graves",
+  "of": "playbook/precons/sultai-arisen.json",
+  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+  "playbook": {
+    "version": 1,
+    "attack": {
+      "policy": "go_wide",
+      "target": "highest_life",
+      "min_attackers": 3,
+      "safety_margin": 5,
+      "max_reserve": 3,
+      "spread": true
+    },
+    "cast": {
+      "rules": [
+        {
+          "play": [
+            "Sol Ring",
+            "Arcane Signet",
+            "Millikin",
+            "Skull Prophet",
+            "Rampant Growth",
+            "Farseek",
+            "Cultivate",
+            "Harrow",
+            "Sakura-Tribe Elder"
+          ]
+        },
+        {
+          "play": [
+            "Kotis, Sibsig Champion"
+          ]
+        },
+        {
+          "play": [
+            "Teval's Judgment",
+            "Essence Anchor",
+            "Crawling Sensation",
+            "Teval, the Balanced Scale",
+            "Conduit of Worlds",
+            "Kishla Skimmer"
+          ]
+        },
+        {
+          "play": [
+            "Stitcher's Supplier",
+            "Satyr Wayfinder",
+            "Hedron Crab",
+            "Floral Evoker"
+          ],
+          "when": [
+            "library >= 30"
+          ]
+        },
+        {
+          "play": [
+            "Lord of Extinction",
+            "Colossal Grave-Reaver",
+            "Avenger of Zendikar"
+          ],
+          "when": [
+            "lands >= 5"
+          ]
+        },
+        {
+          "play": [
+            "Phyrexian Reclamation"
+          ]
+        },
+        {
+          "play": [
+            "Welcome the Dead",
+            "Treasure Cruise"
+          ],
+          "when": [
+            "library >= 25"
+          ]
+        },
+        {
+          "activate": [
+            "Essence Anchor"
+          ],
+          "phase": "main2"
+        },
+        {
+          "activate": [
+            "Phyrexian Reclamation"
+          ],
+          "phase": "main2",
+          "when": [
+            "hand <= 2",
+            "life >= 15"
+          ]
+        },
+        {
+          "activate": [
+            "Skull Prophet"
+          ],
+          "ability": "Mill two",
+          "phase": "main2",
+          "when": [
+            "library >= 40"
+          ]
+        }
+      ]
+    },
+    "triggers": [
+      {
+        "accept": [
+          "Teval, the Balanced Scale",
+          "Springbloom Druid",
+          "Avenger of Zendikar",
+          "Diviner of Mist",
+          "Ob Nixilis, the Fallen"
+        ]
+      },
+      {
+        "accept": [
+          "Crawling Sensation",
+          "Satyr Wayfinder"
+        ],
+        "when": [
+          "library >= 30"
+        ]
+      }
+    ],
+    "notes": "Draft for tuning."
+  }
+}
