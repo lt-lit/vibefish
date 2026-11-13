@@ -1,0 +1,253 @@
+{
+ "schema": 1,
+ "deck": "limit-break",
+ "variant": "answers",
+ "of": "playbook/precons/limit-break.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Ultimate Magic: Holy"
+     ],
+     "when": [
+      "hand:wipes >= 1",
+      "creatures >= 2",
+      "mana >= 9",
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Vanquish the Horde",
+      "Austere Command",
+      "Ultimate Magic: Meteor"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Vanquish the Horde",
+      "Austere Command",
+      "Ultimate Magic: Meteor"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_power > power"
+     ]
+    },
+    {
+     "hold": [
+      "Vanquish the Horde",
+      "Austere Command",
+      "Ultimate Magic: Meteor"
+     ]
+    },
+    {
+     "play": [
+      "Cloud, Ex-SOLDIER"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Bugenhagen, Wise Elder",
+      "Rampant Growth",
+      "Nature's Lore",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "Wrecking Ball Arm",
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Hero's Blade",
+      "Champion's Helm"
+     ]
+    },
+    {
+     "play": [
+      "Puresteel Paladin",
+      "Cid, Freeflier Pilot",
+      "Bastion Protector",
+      "Tifa, Martial Artist",
+      "Inspiring Statuary",
+      "SOLDIER Military Program",
+      "Furious Rise"
+     ]
+    },
+    {
+     "play": [
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist",
+      "Skullclamp",
+      "Conformer Shuriken",
+      "Summoning Materia"
+     ]
+    },
+    {
+     "play": [
+      "Decimate"
+     ]
+    },
+    {
+     "play": [
+      "Dispatch"
+     ],
+     "phase": "main1",
+     "when": [
+      "opp_power >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Summon: Kujata"
+     ],
+     "when": [
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Yuffie, Materia Hunter"
+     ]
+    },
+    {
+     "play": [
+      "Barret Wallace",
+      "Barret, Avalanche Leader",
+      "Heidegger, Shinra Executive",
+      "Sephiroth, Fallen Hero",
+      "Bronze Guardian",
+      "Cait Sith, Fortune Teller",
+      "Vincent, Vengeful Atoner",
+      "Professional Face-Breaker",
+      "Aerith, Last Ancient",
+      "Hellkite Tyrant",
+      "Helitrooper",
+      "Zack Fair",
+      "Professor Hojo",
+      "Armory Automaton",
+      "Red XIII, Proud Warrior",
+      "Elena, Turk Recruit"
+     ]
+    },
+    {
+     "activate": [
+      "Wrecking Ball Arm"
+     ],
+     "ability": "legendary",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Champion's Helm",
+      "Hero's Blade",
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist"
+     ],
+     "ability": "Equip",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Slayers' Stronghold"
+     ],
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Bonders' Enclave"
+     ],
+     "phase": "main2",
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Lightning Greaves"
+     ],
+     "ability": "Equip"
+    }
+   ],
+   "groups": {
+    "wipes": [
+     "Vanquish the Horde",
+     "Austere Command",
+     "Ultimate Magic: Meteor"
+    ]
+   }
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Armory Automaton"
+    ],
+    "when": [
+     "controls Cloud, Ex-SOLDIER"
+    ]
+   },
+   {
+    "accept": [
+     "Puresteel Paladin",
+     "Mask of Memory"
+    ],
+    "when": [
+     "library >= 30"
+    ]
+   },
+   {
+    "accept": [
+     "Hero's Blade",
+     "SOLDIER Military Program",
+     "Furious Rise",
+     "Sword of the Animist",
+     "Explorer's Scope",
+     "Professional Face-Breaker",
+     "Cait Sith, Fortune Teller",
+     "Sephiroth, Fallen Hero"
+    ]
+   }
+  ],
+  "notes": "PLACEHOLDER",
+  "on": "2026-11-12"
+ }
+}

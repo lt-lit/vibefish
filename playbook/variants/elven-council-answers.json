@@ -1,0 +1,221 @@
+{
+ "schema": 1,
+ "deck": "elven-council",
+ "variant": "answers",
+ "of": "playbook/precons/elven-council.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "groups": {
+    "piper_targets": [
+     "Colossal Whale",
+     "Hornet Queen",
+     "Mirkwood Elk",
+     "Realm Seekers",
+     "Elrond of the White Council",
+     "Círdan the Shipwright"
+    ]
+   },
+   "rules": [
+    {
+     "play": [
+      "Devastation Tide"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 5"
+     ]
+    },
+    {
+     "play": [
+      "Devastation Tide"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Devastation Tide"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opponents == 1"
+     ]
+    },
+    {
+     "play": [
+      "Raise the Palisade"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "type:Elf >= 3",
+      "type:Insect <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Elvish Mystic",
+      "Arbor Elf",
+      "Paradise Druid",
+      "Wose Pathfinder",
+      "Arcane Signet",
+      "Wood Elves",
+      "Rampant Growth",
+      "Growth Spiral"
+     ]
+    },
+    {
+     "play": [
+      "Galadriel, Elven-Queen"
+     ]
+    },
+    {
+     "play": [
+      "Beast Within"
+     ],
+     "when": [
+      "threat >= 7"
+     ]
+    },
+    {
+     "play": [
+      "Mystic Confluence"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Arwen, Weaver of Hope",
+      "Elvish Archdruid",
+      "Elvish Warmaster",
+      "Gandalf, Westward Voyager",
+      "Radagast, Wizard of Wilds"
+     ]
+    },
+    {
+     "play": [
+      "Cultivate",
+      "Model of Unity",
+      "Commander's Sphere"
+     ],
+     "when": [
+      "lands <= 6"
+     ]
+    },
+    {
+     "activate": [
+      "Elvish Piper"
+     ],
+     "when": [
+      "hand:piper_targets >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Colossal Whale",
+      "Hornet Queen",
+      "Elrond of the White Council",
+      "Círdan the Shipwright",
+      "Celeborn the Wise",
+      "Legolas Greenleaf",
+      "Erestor of the Council",
+      "Realm Seekers",
+      "Mirkwood Elk",
+      "Elvish Piper",
+      "Elvish Visionary",
+      "Farhaven Elf",
+      "Mirkwood Trapper",
+      "Reclamation Sage",
+      "Song of Eärendil",
+      "Asceticism"
+     ]
+    },
+    {
+     "play": [
+      "Haldir, Lórien Lieutenant"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "Genesis Wave"
+     ],
+     "x": "max",
+     "x_min": 5,
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "play": [
+      "Overwhelming Stampede"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Overwhelming Stampede"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "activate": [
+      "Elvish Warmaster"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Haldir, Lórien Lieutenant"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Lórien Revealed",
+      "Plea for Power",
+      "Travel Through Caradhras"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Mirror of Galadriel"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    }
+   ]
+  },
+  "notes": "PLACEHOLDER",
+  "on": "2026-11-12"
+ }
+}

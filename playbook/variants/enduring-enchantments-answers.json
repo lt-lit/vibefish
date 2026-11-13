@@ -1,0 +1,243 @@
+{
+ "schema": 1,
+ "deck": "enduring-enchantments",
+ "variant": "answers",
+ "of": "playbook/precons/enduring-enchantments.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Abundance",
+      "Arasta of the Endless Web",
+      "Archon of Sun's Grace",
+      "Battle at the Helvault",
+      "Battle for Bretagard",
+      "Binding the Old Gods",
+      "Boon of the Spirit Realm",
+      "Cacophony Unleashed",
+      "Calix, Destiny's Hand",
+      "Cast Out",
+      "Composer of Spring",
+      "Courser of Kruphix",
+      "Cunning Rhetoric",
+      "Demon of Fate's Design",
+      "Destiny Spinner",
+      "Doomwake Giant",
+      "Dreadhorde Invasion",
+      "Dryad of the Ilysian Grove",
+      "Eidolon of Blossoms",
+      "Enchantress's Presence",
+      "Erebos, Bleak-Hearted",
+      "Ghoulish Impetus",
+      "Grasp of Fate",
+      "Greater Tanuki",
+      "Heliod, God of the Sun",
+      "Love Song of Night and Day",
+      "Mesa Enchantress",
+      "Mindwrack Harpy",
+      "Mirari's Wake",
+      "Narci, Fable Singer",
+      "Nessian Wanderer",
+      "Nyx Weaver",
+      "Nyxborn Behemoth",
+      "Omen of the Hunt",
+      "Omen of the Sun",
+      "Ondu Spiritdancer",
+      "Sandwurm Convergence",
+      "Satyr Enchanter",
+      "Setessan Champion",
+      "Sigil of the Empty Throne",
+      "Spirited Companion",
+      "Starfield of Nyx",
+      "Sythis, Harvest's Hand",
+      "The Binding of the Titans",
+      "The Eldest Reborn",
+      "The Mending of Dominaria",
+      "Verduran Enchantress"
+     ],
+     "until": [
+      "library >= 25"
+     ]
+    },
+    {
+     "play": [
+      "Extinguish All Hope",
+      "Cacophony Unleashed"
+     ],
+     "when": [
+      "opp_creatures >= 5",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Extinguish All Hope",
+      "Cacophony Unleashed"
+     ],
+     "when": [
+      "opp_creatures >= 8",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Culling Ritual"
+     ],
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "activate": [
+      "Krosan Verge"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "activate": [
+      "Khalni Heart Expedition"
+     ],
+     "ability": "Search your library"
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Sanctum Weaver",
+      "Jukai Naturalist",
+      "Herald of the Pantheon",
+      "Starfield Mystic",
+      "Rampant Growth",
+      "Farseek",
+      "Font of Fertility",
+      "Kodama's Reach"
+     ]
+    },
+    {
+     "play": [
+      "Khalni Heart Expedition",
+      "Felidar Retreat"
+     ],
+     "before_land": true
+    },
+    {
+     "play": [
+      "Anikthea, Hand of Erebos"
+     ]
+    },
+    {
+     "play": [
+      "Sythis, Harvest's Hand",
+      "Enchantress's Presence",
+      "Satyr Enchanter",
+      "Setessan Champion",
+      "Eidolon of Blossoms",
+      "Mesa Enchantress",
+      "Verduran Enchantress",
+      "Sigil of the Empty Throne",
+      "Archon of Sun's Grace",
+      "Ondu Spiritdancer",
+      "Composer of Spring",
+      "Nessian Wanderer",
+      "Boon of the Spirit Realm",
+      "Mirari's Wake",
+      "Doomwake Giant"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "play": [
+      "Grasp of Fate",
+      "Binding the Old Gods",
+      "The Eldest Reborn",
+      "Calix, Destiny's Hand",
+      "Battle at the Helvault"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Sandwurm Convergence",
+      "Demon of Fate's Design",
+      "Nyxborn Behemoth",
+      "Heliod, God of the Sun",
+      "Erebos, Bleak-Hearted",
+      "Narci, Fable Singer",
+      "Greater Tanuki",
+      "Arasta of the Endless Web",
+      "Mindwrack Harpy",
+      "Starfield of Nyx",
+      "Courser of Kruphix",
+      "Dryad of the Ilysian Grove",
+      "Destiny Spinner",
+      "Spirited Companion",
+      "Nyx Weaver",
+      "Dreadhorde Invasion",
+      "Battle for Bretagard",
+      "Omen of the Sun",
+      "Omen of the Hunt",
+      "The Mending of Dominaria",
+      "The Binding of the Titans",
+      "Love Song of Night and Day",
+      "Cunning Rhetoric"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Font of Fertility"
+     ]
+    },
+    {
+     "activate": [
+      "Heliod, God of the Sun"
+     ],
+     "times": 3
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Composer of Spring",
+     "Nessian Wanderer",
+     "Ondu Spiritdancer",
+     "Khalni Heart Expedition",
+     "Omen of the Hunt",
+     "Starfield of Nyx",
+     "Courser of Kruphix"
+    ]
+   },
+   {
+    "accept": [
+     "Mesa Enchantress",
+     "Verduran Enchantress"
+    ],
+    "when": [
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Erebos, Bleak-Hearted"
+    ],
+    "when": [
+     "life >= 15",
+     "library >= 25"
+    ]
+   }
+  ],
+  "notes": "Version 2 (answers candidate) = shipped version 1 (its trigger rules, its eleven cast rules in their order, no attack block: Forge attacks) plus four cast rules for the deck's answers: rules 2-4 (wipes, read before everything but the hold) and rule 11 (the removal enchantments, after the enchantress engine and before the other threats). Written from the 200 games of the league of twelve (league-run #3, seed 20261250), where the seat won 64. Seen in / cast from hand in / in hand on the seat's last own turn of a loss: Extinguish All Hope 68/14/29, Culling Ritual 60/13/28, Cacophony Unleashed 59/9/22, Calix 63/21/31, The Eldest Reborn 57/20/20, Grasp of Fate 54/24/18, Battle at the Helvault 47/17/16, Binding the Old Gods 43/20/13 (Path to Exile 74/76/1, Cast Out 46/43/1 and Doomwake Giant 56/52/6 are cast by Forge already and left to it). The library hold of version 1 was not why they sat: under 25 cards on 6 of 104 held turns at most. Boards counted from the zone events and the deck lists (creature tokens counted as creatures without the enchantment type). Rule 2: Extinguish All Hope, else Cacophony Unleashed (destroy all nonenchantment creatures; most of this deck's creatures are enchantment creatures and survive) when an opponent has five or more creatures and more than we have. On the turns Extinguish sat in hand with six lands in a loss, our creatures were 1/3/6 (quartiles), nonenchantment 0/1/4, the largest opposing board 4/7/11; the condition held in 26 of the 34 losses where the card was castable, a median two own turns before the end, and in 14 of 23 such wins (a one-sided wipe there costs little). Rule 3: the same two when an opponent has eight or more creatures and more power than we have, however wide we are. Rule 4: Culling Ritual (destroys every nonland permanent of mana value 2 or less, both sides, tokens included; adds mana for each) when an opponent has six or more creatures and more than we have: it costs us Sol Ring, Signet, the two-mana enchantresses, so a narrower trigger than the one-sided wipe; it held in 19 to 25 of the 33 castable losses. Rule 11: Grasp of Fate, Binding the Old Gods, The Eldest Reborn, Calix and Battle at the Helvault are permanents whose targets are chosen as their trigger or chapter resolves, so a play rule casts them and Forge still aims them. Forge kept them on 54 to 104 turns of losses with the lands for them; a person casts removal that also draws off the enchantresses and feeds Anikthea's copies. Placed after the engine so the enchantresses come first. Not expressible: what a wipe destroys of ours (the creatures metric counts the enchantment creatures that survive), opponents' cheap permanents for Culling Ritual, and which permanent Grasp, Binding, Helvault, Calix's -3, Cast Out and Path aim at (Forge's choice). ",
+  "on": "2026-11-13"
+ }
+}

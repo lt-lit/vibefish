@@ -1,0 +1,158 @@
+{
+ "schema": 1,
+ "deck": "quick-draw",
+ "variant": "answers",
+ "of": "playbook/precons/quick-draw.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "storm >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Curse of the Swine"
+     ],
+     "when": [
+      "threat >= 12"
+     ]
+    },
+    {
+     "play": [
+      "Baral's Expertise"
+     ],
+     "when": [
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Propaganda"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Izzet Signet",
+      "Cursed Mirror",
+      "Midnight Clock",
+      "Forger's Foundry"
+     ]
+    },
+    {
+     "play": [
+      "Stella Lee, Wild Card"
+     ]
+    },
+    {
+     "play": [
+      "Young Pyromancer",
+      "Third Path Iconoclast",
+      "Electrostatic Field",
+      "Goblin Electromancer",
+      "Guttersnipe",
+      "Kaza, Roil Chaser",
+      "Thunderclap Drake",
+      "Murmuring Mystic",
+      "Talrand, Sky Summoner",
+      "Storm-Kiln Artist",
+      "Veyran, Voice of Duality",
+      "Archmage Emeritus",
+      "Haughty Djinn",
+      "Arcane Bombardment",
+      "Shark Typhoon",
+      "Niv-Mizzet, Parun",
+      "Eris, Roar of the Storm",
+      "Octavia, Living Thesis",
+      "Crackling Spellslinger",
+      "Bloodthirsty Adversary",
+      "Pteramander",
+      "Smoldering Stagecoach",
+      "Leyline Dowser",
+      "Propaganda"
+     ]
+    },
+    {
+     "play": [
+      "Opt",
+      "Ponder",
+      "Preordain",
+      "Serum Visions",
+      "Faithless Looting",
+      "Think Twice",
+      "Radical Idea",
+      "Expressive Iteration",
+      "Big Score",
+      "Lock and Load",
+      "Tezzeret's Gambit",
+      "Treasure Cruise",
+      "Dig Through Time"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Windfall"
+     ],
+     "when": [
+      "hand <= 2",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Epic Experiment"
+     ],
+     "x": "max",
+     "x_min": 4,
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
+    }
+   ]
+  },
+  "notes": "DRAFT",
+  "on": "2026-11-12"
+ }
+}

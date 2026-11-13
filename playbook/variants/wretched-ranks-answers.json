@@ -1,0 +1,188 @@
+{
+  "schema": 1,
+  "deck": "wretched-ranks",
+  "variant": "answers",
+  "of": "playbook/precons/wretched-ranks.json",
+  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+  "playbook": {
+    "version": 2,
+    "cast": {
+      "rules": [
+        {
+          "play": [
+            "Sol Ring",
+            "Arcane Signet",
+            "Charcoal Diamond",
+            "Mind Stone",
+            "Commander's Sphere",
+            "Patchwork Banner"
+          ]
+        },
+        {
+          "play": [
+            "Ghoulcaller Gisa"
+          ]
+        },
+        {
+          "activate": [
+            "Ghoulcaller Gisa"
+          ],
+          "phase": "main1",
+          "when": [
+            "creatures >= 2"
+          ]
+        },
+        {
+          "play": [
+            "Noxious Ghoul"
+          ],
+          "when": [
+            "opp_creatures >= 3"
+          ]
+        },
+        {
+          "play": [
+            "Syphon Flesh"
+          ],
+          "when": [
+            "opp_creatures >= 1"
+          ]
+        },
+        {
+          "play": [
+            "Necrotic Hex"
+          ],
+          "when": [
+            "opp_creatures >= 3"
+          ]
+        },
+        {
+          "play": [
+            "Mutilate"
+          ],
+          "when": [
+            "lands >= 5",
+            "opp_creatures >= 3",
+            "opp_power > power"
+          ]
+        },
+        {
+          "play": [
+            "Fleshbag Marauder"
+          ],
+          "when": [
+            "opp_creatures >= 1"
+          ]
+        },
+        {
+          "play": [
+            "Undead Warchief",
+            "Endless Ranks of the Dead",
+            "Death Baron",
+            "Lord of the Undead",
+            "Cemetery Reaper",
+            "Lord of the Accursed",
+            "Bad Moon",
+            "Liliana's Mastery",
+            "Champion of the Perished",
+            "Diregraf Colossus"
+          ]
+        },
+        {
+          "play": [
+            "Army of the Damned",
+            "Grave Titan",
+            "Moan of the Unhallowed",
+            "Open the Graves",
+            "Gray Merchant of Asphodel",
+            "Headless Rider",
+            "Vengeful Dead",
+            "Liliana's Reaver",
+            "Kalitas, Traitor of Ghet",
+            "Josu Vess, Lich Knight",
+            "Soulless One",
+            "Midnight Reaper",
+            "Undead Augur",
+            "Ayara, First of Locthwain",
+            "Zul Ashur, Lich Lord",
+            "Cryptbreaker",
+            "Gravecrawler",
+            "Carrion Feeder",
+            "Wight of Precinct Six",
+            "Mire Triton",
+            "Undead Butler",
+            "Eternal Taskmaster",
+            "Razorlash Transmogrant",
+            "Oversold Cemetery",
+            "Phyrexian Arena",
+            "Bontu's Monument",
+            "Marchesa's Decree"
+          ]
+        },
+        {
+          "play": [
+            "Graveborn Muse"
+          ],
+          "when": [
+            "library >= 50",
+            "type:Zombie <= 5"
+          ]
+        },
+        {
+          "activate": [
+            "Cemetery Reaper"
+          ],
+          "phase": "main1"
+        },
+        {
+          "activate": [
+            "Lord of the Undead"
+          ],
+          "phase": "main1"
+        },
+        {
+          "activate": [
+            "Cryptbreaker"
+          ],
+          "ability": "Create a 2/2",
+          "when": [
+            "hand >= 4"
+          ]
+        },
+        {
+          "play": [
+            "Night's Whisper",
+            "Ambition's Cost",
+            "Sign in Blood"
+          ],
+          "when": [
+            "library >= 30"
+          ]
+        },
+        {
+          "activate": [
+            "Lord of the Accursed"
+          ],
+          "phase": "main1",
+          "when": [
+            "attackers >= 3"
+          ]
+        },
+        {
+          "hold": [
+            "God-Eternal Bontu"
+          ]
+        }
+      ]
+    },
+    "triggers": [
+      {
+        "accept": [
+          "Oversold Cemetery",
+          "Undead Butler"
+        ]
+      }
+    ],
+    "notes": "Version 2 (candidate 'answers') = the shipped version 1 (its trigger rules and its twelve cast rules unchanged and in their order, now rules 1-3 and 9-17; no attack block, Forge attacks, as shipped) with five rules, 4 to 8, for the deck's edicts and sweepers, which version 1 left to Forge. Written from the 200 games of the league of twelve (league-run #3, seed 20261250), where the seat won 37, lost 162 and was first out in 68. Games drawn / cast / in hand on the seat's last turn of a loss: Syphon Flesh 47/16/23, Fleshbag Marauder 53/26/19, Mutilate 49/7/31, Necrotic Hex 58/12/35, Noxious Ghoul 43/7/29; on own turns with the card in hand and lands >= its mana value they sat 134, 174, 193, 124 and 190 times. The targeted removal (Go for the Throat, Consuming Corruption, Tendrils of Corruption, Withering Torment, Consumed by Greed) is cast by Forge in most games it is drawn and was in hand at 1 to 4 losses each: left to Forge, which picks the targets a rule could not. They sit after the rocks, Gisa and Gisa's activation (so Gisa makes her tokens before a sacrifice effect asks for six creatures) and before the lords and creatures. Rule 4, Noxious Ghoul with an opponent at 3+ creatures: the deck's one-sided sweeper (-1/-1 to non-Zombies for every Zombie that enters), first so the Zombies cast after it in the same turn trigger it; it also shrinks Gisa, Kalitas, Ayara and Grave Titan. Rule 5, Syphon Flesh whenever an opponent has a creature: one-sided, each other player sacrifices one and we get a Zombie for each. Rule 6, Necrotic Hex with an opponent at 3+ creatures: every player sacrifices six and we alone get six 2/2 Zombies back, so it is near one-sided for a deck of tokens. Rule 7, Mutilate (-1/-1 per Swamp to every creature, ours too) only when behind: 5+ lands, an opponent with 3+ creatures and more power than our whole board. Rule 8, Fleshbag Marauder whenever an opponent has a creature: each player sacrifices one, and Forge gives up our lowest-rated creature, usually a token or the Marauder itself."
+  }
+}

@@ -1,0 +1,305 @@
+{
+ "schema": 1,
+ "deck": "planeswalker-party",
+ "variant": "answers",
+ "of": "playbook/precons/planeswalker-party.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped version 1 with answer rules (wipes, Elspeth's and Chandra's sweeping loyalty abilities, Gideon's +2, the attack deterrents). Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Urza's Ruinous Blast"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Urza's Ruinous Blast"
+     ],
+     "when": [
+      "threat >= 12",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "activate": [
+      "Nevinyrral's Disk"
+     ],
+     "ability": "Destroy all artifacts, creatures, and enchantments",
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "activate": [
+      "Chandra, Awakened Inferno"
+     ],
+     "ability": "3 damage to each non-Elemental creature",
+     "when": [
+      "opp_creatures >= 4",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "Destroy all creatures with power 4 or greater",
+     "when": [
+      "threat >= 12",
+      "opp_creatures <= 3",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Promise of Loyalty"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power",
+      "creatures <= 2"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Commodore Guff"
+     ]
+    },
+    {
+     "hold": [
+      "Commodore Guff"
+     ],
+     "ability": "You draw X cards",
+     "until": [
+      "turn >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Fellwar Stone",
+      "Talisman of Conviction",
+      "Talisman of Creativity",
+      "Talisman of Progress",
+      "Boros Signet",
+      "Azorius Signet",
+      "Izzet Signet",
+      "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "play": [
+      "Onakke Oathkeeper"
+     ]
+    },
+    {
+     "play": [
+      "Norn's Annex"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Silent Arbiter"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Nevinyrral's Disk"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "Silent Arbiter",
+      "Promise of Loyalty"
+     ],
+     "until": [
+      "opp_power > power"
+     ]
+    },
+    {
+     "hold": [
+      "Chandra, Legacy of Fire"
+     ],
+     "ability": "Remove a loyalty counter from each",
+     "until": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Repeated Reverberation"
+     ],
+     "when": [
+      "controls Chandra, Awakened Inferno"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Repeated Reverberation"
+     ],
+     "when": [
+      "controls Elspeth, Sun's Champion"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Chandra, Awakened Inferno"
+     ],
+     "ability": "At the beginning of your upkeep, this emblem deals 1 damage",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "+2/+2 and have flying",
+     "when": [
+      "creatures >= 6"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "three 1/1 white Soldier",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Gideon Jura"
+     ],
+     "ability": "attack Gideon Jura if able",
+     "when": [
+      "threat >= 8"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Gideon Jura"
+     ],
+     "ability": "becomes a 6/6",
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Elspeth, Sun's Champion",
+      "Chandra, Awakened Inferno",
+      "Gideon Jura",
+      "Sarkhan the Masterless",
+      "Chandra, Legacy of Fire",
+      "Jaya's Phoenix",
+      "Ajani Steadfast",
+      "Deploy the Gatewatch",
+      "Vronos, Masked Inquisitor",
+      "Chandra, Torch of Defiance",
+      "Leori, Sparktouched Hunter",
+      "Narset of the Ancient Way",
+      "Jace, Architect of Thought",
+      "Nahiri, the Harbinger",
+      "Saheeli, Sublime Artificer",
+      "Oath of Gideon",
+      "Jace Beleren",
+      "Narset, Parter of Veils",
+      "Jace, Mirror Mage",
+      "The Wanderer",
+      "Teyo, Geometric Tactician"
+     ]
+    },
+    {
+     "play": [
+      "Oath of Teferi"
+     ],
+     "when": [
+      "controls Commodore Guff"
+     ]
+    },
+    {
+     "play": [
+      "The Chain Veil"
+     ],
+     "when": [
+      "controls Commodore Guff",
+      "mana >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Narset, Enlightened Master",
+      "Kazuul, Tyrant of the Cliffs",
+      "Flux Channeler",
+      "Thrummingbird",
+      "Grateful Apparition",
+      "Oath of Jace",
+      "Mangara, the Diplomat",
+      "Cartographer's Hawk",
+      "Honor-Worn Shaku",
+      "Gatewatch Beacon",
+      "Sparkshaper Visionary",
+      "Oreskos Explorer",
+      "Wall of Denial",
+      "Fog Bank",
+      "Norn's Annex",
+      "Nevinyrral's Disk"
+     ]
+    },
+    {
+     "activate": [
+      "The Chain Veil"
+     ],
+     "when": [
+      "mana >= 4"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Gatewatch Beacon"
+    ]
+   },
+   {
+    "accept": [
+     "Jaya's Phoenix"
+    ]
+   }
+  ],
+  "notes": "draft",
+  "on": "2026-11-12"
+ }
+}
