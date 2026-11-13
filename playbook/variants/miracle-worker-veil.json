@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "deck": "miracle-worker",
+ "variant": "veil",
+ "of": "playbook/precons/miracle-worker.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {"play": ["Sol Ring"]},
+    {"play": ["Aminatou, Veil Piercer"]},
+    {"play": ["Arcane Signet", "Azorius Signet", "Orzhov Signet", "Mind Stone", "Commander's Sphere"]},
+    {"play": ["Starfield Mystic", "Mesa Enchantress", "Sigil of the Empty Throne", "Secret Arcade // Dusty Parlor", "Soaring Lightbringer", "Demon of Fate's Design", "Ondu Spiritdancer", "Ancient Cellarspawn", "One with the Multiverse", "Extravagant Replication"]},
+    {"play": ["Entreat the Angels"], "x": "max", "x_min": 2},
+    {"play": ["Fear of Sleep Paralysis", "Archetype of Imagination", "Athreos, Shroud-Veiled", "Dream Eater", "Doomwake Giant", "Prognostic Sphinx", "Metamorphosis Fanatic", "Nightmare Shepherd", "Phenomenon Investigators", "Solemn Simulacrum", "Moon-Blessed Cleric", "Verge Rangers", "Burnished Hart", "Life Insurance", "Sphere of Safety", "Spirit-Sister's Call", "Shark Typhoon", "Cramped Vents // Access Maze", "Bottomless Pool // Locker Room"]},
+    {"activate": ["Secret Arcade // Dusty Parlor", "Cramped Vents // Access Maze", "Bottomless Pool // Locker Room"], "ability": "unlock"},
+    {"play": ["Read the Bones", "Diabolic Vision", "Ponder"], "when": ["library >= 30"]},
+    {"activate": ["Hall of Heliod's Generosity"], "ability": "enchantment card", "phase": "main2"}
+   ]
+  },
+  "triggers": [
+   {"accept": ["Mesa Enchantress"], "when": ["library >= 25"]},
+   {"accept": ["Moon-Blessed Cleric", "Ondu Spiritdancer", "Solemn Simulacrum"]}
+  ],
+  "notes": "Version 1 (candidate). Written from 12 stock goldfish games (seeds 28001-28012). Stock takes every miracle it is offered (27 of 27 triggers cast), so the miracle draw itself needs no rule. What stock leaves undone: the commander waits behind other plays (first cast on own turns 3 to 14), and several creatures are never cast at all in goldfish (Fear of Sleep Paralysis 7 games drawn, 0 cast; Dream Eater 6/0; Phenomenon Investigators 4/0; Doomwake Giant 3/0), nor are the Rooms from hand. Rules: Sol Ring, then Aminatou the turn she is affordable, then rocks; the enchantment engine (cost reducer, Mesa Enchantress, Sigil, Secret Arcade which makes every permanent an enchantment for Sigil and Mesa); Entreat from hand at the largest X of two or more; the bodies Forge sits on; unlock Rooms; card selection guarded by library size; Hall of Heliod's Generosity after combat to put an enchantment on top for the next turn's miracle. Answers (wipes, removal, counters, Inkshield) left to Forge."
+ }
+}

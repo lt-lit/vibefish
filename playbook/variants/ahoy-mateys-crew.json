@@ -7,28 +7,175 @@
   "on": "2026-11-13",
   "playbook": {
     "version": 1,
-    "attack": {"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true},
+    "attack": {
+      "policy": "go_wide",
+      "target": "highest_life",
+      "min_attackers": 3,
+      "safety_margin": 5,
+      "max_reserve": 3,
+      "spread": true
+    },
     "cast": {
       "rules": [
-        {"play": ["Sol Ring", "Arcane Signet", "Rakdos Signet", "Dimir Signet", "Izzet Signet", "Commander's Sphere"]},
-        {"play": ["Admiral Brass, Unsinkable"]},
-        {"play": ["Herald's Horn", "Admiral Beckett Brass", "Skeleton Crew", "Corsair Captain", "Vanquisher's Banner", "Icon of Ancestry", "Shared Animosity", "Angrath's Marauders", "Port Razer", "Gemcutter Buccaneer", "Malcolm, Keen-Eyed Navigator", "Ramirez DePietro, Pillager", "Breeches, Brazen Plunderer", "Black Market Connections", "Bident of Thassa", "Arm-Mounted Anchor", "The Indomitable", "Zara, Renegade Recruiter", "Don Andres, the Renegade", "Azure Fleet Admiral", "Pitiless Plunderer", "Captain Lannery Storm", "Broadside Bombardiers", "Kari Zev, Skyship Raider", "Fathom Fleet Captain", "Francisco, Fowl Marauder", "Storm Fleet Negotiator", "Ghost of Ramirez DePietro", "Warkite Marauder", "Daring Saboteur", "Departed Deckhand", "Enterprising Scallywag", "Timestream Navigator", "Captivating Crew", "Spectral Sailor", "Siren Stormtamer", "The Grim Captain's Locker", "King Narfi's Betrayal", "Wayfarer's Bauble"]},
-        {"activate": ["Arm-Mounted Anchor"], "phase": "main1"},
-        {"activate": ["Timestream Navigator"]},
-        {"play": ["Distant Melody"], "when": ["type:Pirate >= 4", "library >= 30"]},
-        {"play": ["Windfall"], "when": ["hand <= 2", "library >= 30"]},
-        {"play": ["Faithless Looting"], "when": ["library >= 30"]},
-        {"activate": ["Wayfarer's Bauble"]},
-        {"activate": ["Broadside Bombardiers"], "phase": "main2"},
-        {"activate": ["Spectral Sailor"], "phase": "main2", "when": ["library >= 30"]}
+        {
+          "play": [
+            "Sol Ring",
+            "Arcane Signet",
+            "Rakdos Signet",
+            "Dimir Signet",
+            "Izzet Signet",
+            "Commander's Sphere"
+          ]
+        },
+        {
+          "activate": [
+            "Wayfarer's Bauble"
+          ],
+          "when": [
+            "turn <= 7"
+          ]
+        },
+        {
+          "play": [
+            "Admiral Brass, Unsinkable"
+          ]
+        },
+        {
+          "play": [
+            "Herald's Horn",
+            "Admiral Beckett Brass",
+            "Skeleton Crew",
+            "Corsair Captain",
+            "Vanquisher's Banner",
+            "Icon of Ancestry",
+            "Shared Animosity",
+            "Angrath's Marauders",
+            "Port Razer",
+            "Gemcutter Buccaneer",
+            "Malcolm, Keen-Eyed Navigator",
+            "Ramirez DePietro, Pillager",
+            "Breeches, Brazen Plunderer",
+            "Black Market Connections",
+            "Bident of Thassa",
+            "Arm-Mounted Anchor",
+            "The Indomitable",
+            "Zara, Renegade Recruiter",
+            "Don Andres, the Renegade",
+            "Azure Fleet Admiral",
+            "Pitiless Plunderer",
+            "Captain Lannery Storm",
+            "Broadside Bombardiers",
+            "Kari Zev, Skyship Raider",
+            "Fathom Fleet Captain",
+            "Francisco, Fowl Marauder",
+            "Storm Fleet Negotiator",
+            "Ghost of Ramirez DePietro",
+            "Warkite Marauder",
+            "Daring Saboteur",
+            "Departed Deckhand",
+            "Enterprising Scallywag",
+            "Timestream Navigator",
+            "Captivating Crew",
+            "Spectral Sailor",
+            "Siren Stormtamer",
+            "The Grim Captain's Locker",
+            "King Narfi's Betrayal",
+            "Wayfarer's Bauble"
+          ]
+        },
+        {
+          "activate": [
+            "Arm-Mounted Anchor"
+          ],
+          "phase": "main1"
+        },
+        {
+          "activate": [
+            "Timestream Navigator"
+          ]
+        },
+        {
+          "play": [
+            "Distant Melody"
+          ],
+          "when": [
+            "type:Pirate >= 4",
+            "library >= 30"
+          ]
+        },
+        {
+          "play": [
+            "Windfall"
+          ],
+          "when": [
+            "hand <= 5",
+            "library >= 30"
+          ]
+        },
+        {
+          "play": [
+            "Faithless Looting"
+          ],
+          "when": [
+            "library >= 30"
+          ]
+        },
+        {
+          "activate": [
+            "Spectral Sailor"
+          ],
+          "phase": "main2",
+          "when": [
+            "library >= 30",
+            "mana >= 4"
+          ]
+        },
+        {
+          "activate": [
+            "Port of Karfell"
+          ],
+          "phase": "main2",
+          "when": [
+            "lands >= 9"
+          ]
+        }
       ]
     },
     "triggers": [
-      {"accept": ["Admiral Brass, Unsinkable"]},
-      {"accept": ["Fathom Fleet Captain"]},
-      {"accept": ["Bident of Thassa"], "when": ["library >= 20"]},
-      {"accept": ["Daring Saboteur"], "when": ["library >= 20"]},
-      {"accept": ["Herald's Horn", "Breeches, Brazen Plunderer", "Ramirez DePietro, Pillager", "Zara, Renegade Recruiter"]}
+      {
+        "accept": [
+          "Admiral Brass, Unsinkable"
+        ]
+      },
+      {
+        "accept": [
+          "Fathom Fleet Captain"
+        ]
+      },
+      {
+        "accept": [
+          "Bident of Thassa"
+        ],
+        "when": [
+          "library >= 20"
+        ]
+      },
+      {
+        "accept": [
+          "Daring Saboteur"
+        ],
+        "when": [
+          "library >= 20"
+        ]
+      },
+      {
+        "accept": [
+          "Herald's Horn",
+          "Breeches, Brazen Plunderer",
+          "Ramirez DePietro, Pillager",
+          "Zara, Renegade Recruiter"
+        ]
+      }
     ],
     "notes": "Ahoy Mateys (Admiral Brass, Unsinkable: at the beginning of combat return a Pirate from the graveyard as a 4/4 with haste). Draft of version 1."
   }

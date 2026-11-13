@@ -6,24 +6,169 @@
   "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
   "playbook": {
     "version": 1,
-    "attack": {"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true},
+    "attack": {
+      "policy": "go_wide",
+      "target": "highest_life",
+      "min_attackers": 3,
+      "safety_margin": 5,
+      "max_reserve": 3,
+      "spread": true
+    },
     "cast": {
       "rules": [
-        {"play": ["Sol Ring", "Arcane Signet", "Talisman of Dominance", "Talisman of Resilience", "Talisman of Curiosity", "Rampant Growth", "Farseek", "Cultivate"]},
-        {"play": ["The Wise Mothman"]},
-        {"play": ["Hardened Scales", "Winding Constrictor", "Branching Evolution", "Corpsejack Menace"]},
-        {"play": ["Raul, Trouble Shooter", "Hancock, Ghoulish Mayor", "Guardian Project", "Inexorable Tide", "Marcus, Mutant Mayor", "Screeching Scorchbeast", "Mirelurk Queen"]},
-        {"activate": ["Raul, Trouble Shooter"], "when": ["library >= 30"], "phase": "main1"},
-        {"play": ["Agent Frank Horrigan", "Strong, the Brutish Thespian", "Bloatfly Swarm", "Lily Bowen, Raging Grandma", "Young Deathclaws", "Vault 12: The Necropolis", "Recon Craft Theta", "Tireless Tracker", "Glowing One", "Feral Ghoul", "Watchful Radstag", "Infesting Radroach", "Vexing Radgull", "Piper Wright, Publick Reporter", "Tato Farmer", "Cathedral Acolyte", "Jason Bright, Glowing Prophet", "Strength Bobblehead"]},
-        {"play": ["Biomass Mutation"], "x": "max", "x_min": 6, "when": ["attackers >= 3"], "phase": "main1"},
-        {"play": ["Contaminated Drink"], "x": "max", "x_min": 3, "when": ["hand <= 2", "library >= 30"]},
-        {"play": ["Harmonize"], "when": ["library >= 25"]},
-        {"activate": ["Strength Bobblehead"], "ability": "Put X", "phase": "main2"}
+        {
+          "play": [
+            "Sol Ring",
+            "Arcane Signet",
+            "Talisman of Dominance",
+            "Talisman of Resilience",
+            "Talisman of Curiosity",
+            "Rampant Growth",
+            "Farseek",
+            "Cultivate"
+          ]
+        },
+        {
+          "play": [
+            "The Wise Mothman"
+          ]
+        },
+        {
+          "play": [
+            "Hardened Scales",
+            "Winding Constrictor",
+            "Branching Evolution",
+            "Corpsejack Menace"
+          ]
+        },
+        {
+          "play": [
+            "Raul, Trouble Shooter",
+            "Hancock, Ghoulish Mayor",
+            "Guardian Project",
+            "Inexorable Tide",
+            "Marcus, Mutant Mayor",
+            "Screeching Scorchbeast",
+            "Mirelurk Queen"
+          ]
+        },
+        {
+          "activate": [
+            "Raul, Trouble Shooter"
+          ],
+          "when": [
+            "library >= 30"
+          ],
+          "phase": "main1"
+        },
+        {
+          "play": [
+            "Agent Frank Horrigan",
+            "Strong, the Brutish Thespian",
+            "Bloatfly Swarm",
+            "Lily Bowen, Raging Grandma",
+            "Young Deathclaws",
+            "Vault 12: The Necropolis",
+            "Recon Craft Theta",
+            "Tireless Tracker",
+            "Glowing One",
+            "Feral Ghoul",
+            "Watchful Radstag",
+            "Infesting Radroach",
+            "Vexing Radgull",
+            "Piper Wright, Publick Reporter",
+            "Tato Farmer",
+            "Cathedral Acolyte",
+            "Jason Bright, Glowing Prophet",
+            "Strength Bobblehead"
+          ]
+        },
+        {
+          "play": [
+            "Vault 87: Forced Evolution",
+            "Struggle for Project Purity"
+          ],
+          "when": [
+            "library >= 45"
+          ]
+        },
+        {
+          "play": [
+            "Biomass Mutation"
+          ],
+          "x": "max",
+          "x_min": 6,
+          "when": [
+            "attackers >= 3"
+          ],
+          "phase": "main1"
+        },
+        {
+          "play": [
+            "Contaminated Drink"
+          ],
+          "x": "max",
+          "x_min": 3,
+          "when": [
+            "hand <= 4",
+            "library >= 35"
+          ]
+        },
+        {
+          "play": [
+            "Harmonize"
+          ],
+          "when": [
+            "library >= 25"
+          ]
+        },
+        {
+          "activate": [
+            "Strength Bobblehead"
+          ],
+          "ability": "Put X",
+          "phase": "main2"
+        },
+        {
+          "activate": [
+            "Contagion Clasp"
+          ],
+          "ability": "Proliferate",
+          "phase": "main2"
+        }
       ]
     },
     "triggers": [
-      {"accept": ["Screeching Scorchbeast"]},
-      {"accept": ["Infesting Radroach"]}
+      {
+        "accept": [
+          "Screeching Scorchbeast"
+        ]
+      },
+      {
+        "accept": [
+          "Infesting Radroach"
+        ]
+      },
+      {
+        "accept": [
+          "Tato Farmer"
+        ],
+        "when": [
+          "controls The Wise Mothman",
+          "library >= 50",
+          "life >= 20"
+        ]
+      },
+      {
+        "accept": [
+          "Tato Farmer"
+        ],
+        "when": [
+          "controls Screeching Scorchbeast",
+          "library >= 50",
+          "life >= 20"
+        ]
+      }
     ],
     "notes": "draft v1"
   }

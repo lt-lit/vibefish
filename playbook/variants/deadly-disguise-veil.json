@@ -1,0 +1,47 @@
+{
+ "schema": 1,
+ "deck": "deadly-disguise",
+ "variant": "veil",
+ "of": "playbook/precons/deadly-disguise.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "groups": {
+    "facedown": ["Ainok Survivalist", "Broodhatch Nantuko", "Den Protector", "Hidden Dragonslayer", "Master of Pearls",
+                 "Nervous Gardener", "Printlifter Ooze", "Deathmist Raptor", "Boltbender", "Experiment Twelve",
+                 "Nantuko Vigilante", "Salt Road Ambushers", "Thelonite Hermit", "Exalted Angel", "Root Elemental",
+                 "Imperial Hellkite", "Akroma, Angel of Fury", "Krosan Colossus", "Krosan Cloudscraper", "Hooded Hydra",
+                 "Ashcloud Phoenix", "True Identity"]
+   },
+   "rules": [
+    {"play": ["Sol Ring", "Arcane Signet", "Three Visits", "Nature's Lore", "Wild Growth", "Sakura-Tribe Elder"]},
+    {"play": ["Kaust, Eyes of the Glade"]},
+    {"play": ["Obscuring Aether", "Panoptic Projektor", "Trail of Mystery", "Ugin's Mastery", "Veiled Ascension",
+              "Lifecrafter's Bestiary", "Scroll of Fate", "Mastery of the Unseen", "Ransom Note"]},
+    {"activate": ["Panoptic Projektor"], "when": ["hand:facedown >= 1"]},
+    {"play": ["Duskana, the Rage Mother", "Beast Whisperer", "Seedborn Muse", "Ohran Frostfang", "Whisperwood Elemental",
+              "Temur War Shaman", "Toski, Bearer of Secrets", "Mirror Entity", "Welcoming Vampire", "Tesak, Judith's Hellhound",
+              "Saryth, the Viper's Fang", "Sidar Kondo of Jamuraa", "Yedora, Grave Gardener", "Neheb, the Eternal",
+              "Scourge of the Throne"]},
+    {"play": ["Exalted Angel", "Imperial Hellkite", "Akroma, Angel of Fury", "Master of Pearls", "Thelonite Hermit",
+              "Salt Road Ambushers", "Experiment Twelve", "Printlifter Ooze", "Hidden Dragonslayer", "Deathmist Raptor",
+              "Den Protector", "Ainok Survivalist", "Broodhatch Nantuko", "Nervous Gardener", "Nantuko Vigilante",
+              "Root Elemental", "Krosan Colossus", "Krosan Cloudscraper", "Boltbender", "Ashcloud Phoenix", "True Identity"]},
+    {"activate": ["Scroll of Fate"]},
+    {"activate": ["Krosan Verge"]},
+    {"activate": ["Mirror Entity"], "x": "max", "x_min": 4, "phase": "main1", "when": ["attackers >= 3"]},
+    {"activate": ["Mastery of the Unseen"], "times": 4, "phase": "main2", "when": ["library >= 20"]}
+   ]
+  },
+  "notes": "draft v1"
+ }
+}
