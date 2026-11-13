@@ -6,26 +6,120 @@
  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
  "playbook": {
   "version": 1,
-  "attack": {"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true},
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
   "cast": {
    "rules": [
-    {"play": ["Sol Ring", "Arcane Signet", "Golgari Signet", "Talisman of Resilience", "Mind Stone", "Deathcap Cultivator", "Rampant Growth", "Commander's Sphere", "Harrow"]},
-    {"play": ["Winter, Cynical Opportunist"]},
-    {"play": ["Polluted Cistern // Dim Oubliette", "Stitcher's Supplier", "Nyx Weaver", "Crawling Sensation", "Cemetery Tampering"], "when": ["library >= 30"]},
-    {"play": ["Demonic Covenant", "Titania, Nature's Force", "Grist, the Hunger Tide", "Ob Nixilis Reignited", "Whip of Erebos", "Deathreap Ritual", "Into the Pit"]},
-    {"play": ["Deadbridge Chant"], "when": ["library >= 40"]},
-    {"play": ["Old Stickfingers"], "x": "max", "x_min": 3},
-    {"activate": ["Whip of Erebos"]},
-    {"play": ["Mulch", "Grisly Salvage", "Grapple with the Past"], "when": ["library >= 25"]}
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Golgari Signet",
+      "Talisman of Resilience",
+      "Mind Stone",
+      "Deathcap Cultivator",
+      "Rampant Growth",
+      "Commander's Sphere",
+      "Harrow"
+     ]
+    },
+    {
+     "play": [
+      "Winter, Cynical Opportunist"
+     ]
+    },
+    {
+     "play": [
+      "Polluted Cistern // Dim Oubliette",
+      "Stitcher's Supplier",
+      "Nyx Weaver",
+      "Crawling Sensation",
+      "Cemetery Tampering"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Demonic Covenant",
+      "Titania, Nature's Force",
+      "Grist, the Hunger Tide",
+      "Ob Nixilis Reignited",
+      "Whip of Erebos",
+      "Deathreap Ritual",
+      "Into the Pit"
+     ]
+    },
+    {
+     "play": [
+      "Deadbridge Chant"
+     ],
+     "when": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Old Stickfingers"
+     ],
+     "x": "max",
+     "x_min": 3
+    },
+    {
+     "activate": [
+      "Whip of Erebos"
+     ]
+    },
+    {
+     "play": [
+      "Mulch",
+      "Grisly Salvage",
+      "Grapple with the Past"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    }
    ]
   },
   "triggers": [
-   {"accept": ["Winter, Cynical Opportunist"]},
-   {"accept": ["Cemetery Tampering", "Crawling Sensation", "Titania, Nature's Force"], "when": ["library >= 25"]},
-   {"accept": ["Deathreap Ritual"], "when": ["library >= 10"]},
-   {"accept": ["Solemn Simulacrum"]}
+   {
+    "accept": [
+     "Winter, Cynical Opportunist"
+    ]
+   },
+   {
+    "accept": [
+     "Cemetery Tampering",
+     "Crawling Sensation",
+     "Titania, Nature's Force"
+    ],
+    "when": [
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Deathreap Ritual"
+    ],
+    "when": [
+     "library >= 10"
+    ]
+   },
+   {
+    "accept": [
+     "Solemn Simulacrum"
+    ]
+   }
   ],
-  "notes": "draft in progress",
+  "notes": "Death Toll (Winter, Cynical Opportunist: deathtouch; mills three when she attacks; with delirium, at the end step exiles cards from the graveyard and puts a permanent among them onto the battlefield). Winter is flagged AI:RemoveDeck:All, so stock Forge never casts its own commander: 0 casts in the 12 audit games (seeds 27001-27012), where stock left 45% of its mana unspent and killed on turn 11.67. Rule 1 puts the rocks and ramp down, rule 2 casts Winter as soon as she is affordable, rule 3 the self-mill engine (Polluted Cistern, whose drain fires on every mill, Stitcher's Supplier, Nyx Weaver, also flagged never-cast, Crawling Sensation, Cemetery Tampering) while the library has 30 cards, rule 4 the other engines and walkers, rule 5 Deadbridge Chant (mills ten) only with 40 cards left, rule 6 Old Stickfingers with all the mana as X (at least 3), rule 7 Whip of Erebos's reanimation, rule 8 the mill spells with 25 cards left. Triggers: Cemetery Tampering, Crawling Sensation and Titania's mills while the library has 25 cards, Deathreap Ritual's draw with 10, Solemn's land; Winter's own end-step trigger is not asked as an optional trigger (Forge chooses the cards, and exiles the whole graveyard). The deck's answers (Putrefy, Convert to Slime, Binding the Old Gods, Culling Ritual, Deluge of Doom, Vile Mutilator, Ob Nixilis and Grist minus abilities, Noxious Gearhulk, Reanimate on an opponent's creature) are left to Forge for a second pass. Go-wide attack, highest life first.",
   "on": "2026-11-13"
  }
 }

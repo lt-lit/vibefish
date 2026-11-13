@@ -38,7 +38,7 @@
               "Root Elemental", "Krosan Colossus", "Krosan Cloudscraper", "Boltbender", "Ashcloud Phoenix", "True Identity"]},
     {"activate": ["Scroll of Fate"]},
     {"activate": ["Krosan Verge"]},
-    {"activate": ["Mirror Entity"], "x": "max", "x_min": 4, "phase": "main1", "when": ["attackers >= 3"]},
+    {"activate": ["Mirror Entity"], "x": "max", "x_min": 3, "phase": "main1", "when": ["attackers >= 3"]},
     {"activate": ["Mastery of the Unseen"], "times": 4, "phase": "main2", "when": ["library >= 20"]}
    ]
   },
