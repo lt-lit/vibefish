@@ -5,7 +5,7 @@
  "of": "playbook/precons/revenant-recon.json",
  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
  "playbook": {
-  "version": 2,
+  "version": 3,
   "attack": {
    "policy": "go_wide",
    "target": "highest_life",
@@ -37,7 +37,6 @@
       "Sinister Starfish",
       "Case of the Shifting Visage",
       "Dimir Spybug",
-      "Disinformation Campaign",
       "Enhanced Surveillance"
      ]
     },
@@ -87,6 +86,11 @@
       "Nightveil Sprite",
       "Final-Word Phantom",
       "Thoughtbound Phantasm"
+     ]
+    },
+    {
+     "play": [
+      "Disinformation Campaign"
      ]
     },
     {
@@ -162,6 +166,6 @@
     ]
    }
   ],
-  "notes": "Version 1, written before the audit games were read: commander at once, the surveil engine (Snitch, Starfish, Case, Spybug) down early, Starfish tapped every turn, Mission Briefing (never cast by Forge's AI) cast, Rise of the Dark Realms whenever affordable, creatures dearest first, card draw guarded by library size, Doom Whisperer and Tocasia's Dig Site as surveil sinks. Mirko's end-step reanimation always taken."
+  "notes": "Version 3 (2026-11-13), for goldfish; answers left to Forge. Audit (12 stock goldfish games, seeds 25002-25013): kill turn 12.75, 52% of the mana unspent, Mirko cast on own turn 6 to 7 in four games and never in one, Sinister Starfish tapped on 1 of its 15 turns, Port of Karfell, Lazav and Enhanced Surveillance never used, Mission Briefing flagged never-cast. RULES: 1 mana rocks first. 2 Mirko at once (the commander's end-step reanimation needs him out and growing). 3 the surveil engine: Whispering Snitch (drain per surveil turn), Sinister Starfish, Case of the Shifting Visage (upkeep surveil, copies creatures once solved), Dimir Spybug, Enhanced Surveillance. 4 Phyrexian Arena while the library is deep. 5 tap Sinister Starfish every turn (surveil grows Mirko, Spybug, Phantasm and fills the graveyard Mirko returns from). 6 Mission Briefing (AI:RemoveDeck:All). 7 Rise of the Dark Realms whenever affordable. 8 creatures dearest first (the draft's order). 9 Disinformation Campaign after the creatures: in version 2 it sat with the engine and looped on every surveil, 42 casts on 12 games and two games a turn slower. 10 cheap card draw with a library guard. 11 Doom Whisperer's surveil while life >= 20. 12 Tocasia's Dig Site after combat. 13 Port of Karfell after combat with eight lands (never fired in tuning). TRIGGERS: Mirko's end-step return always; Master of Death's return at life >= 10; Marvo's free cast; Copy Catchers' {1}{U} copy with four mana spare and a deep library (64 to 74 copies paid in 12 games: it is what makes the board wide). Tuning on the audit seeds: version 1 1.67 turns faster than stock (95% +1.06 to +2.27, 10 faster, 2 same); version 2 (Disinformation in the engine rule, Port of Karfell added) 0.17 slower than version 1."
  }
 }

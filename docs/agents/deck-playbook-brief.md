@@ -1,6 +1,6 @@
 # Brief: write and goldfish-test a candidate playbook for one Commander precon
 
-You own ONE deck (named in your prompt). Three other agents are doing the same for other decks at the same time
+You own ONE deck (named in your prompt). Other agents are doing the same for other decks at the same time
 on the same 4-core machine. Your job ends with a candidate playbook file and a goldfish measurement of it against
 stock Forge AI; the four-player table runs happen later in GitHub Actions and are not yours.
 
@@ -8,9 +8,16 @@ stock Forge AI; the four-player table runs happen later in GitHub Actions and ar
 Vibefish (`/home/user/vibefish`) plays Commander decks through Forge's AI, headless. Stock Forge AI misplays many
 decks. A "playbook" is a small JSON file of rules written for ONE deck that takes over some of that seat's
 decisions (which card to cast when and aimed at what, which optional triggers to take, how to attack); everything
-the rules do not cover stays Forge's. Four decks have a shipped playbook that beats stock by 7 to 15 points at
-tables. What moved them was the deck's own lines, written by hand from reading its games: the commander out at
+the rules do not cover stays Forge's. Twelve decks have a shipped playbook; the best beat their stock pilot by 8 to
+13 points at tables of other bots. What moved them was the deck's own lines, written by hand from reading its games: the commander out at
 once, the engine cards used, the cards Forge's AI never casts cast, the "you may" triggers it declines taken.
+
+## What this batch is for
+These ten decks are the precons the project's owner and the owner's group actually play. Each bot will be used two ways:
+as an opponent when the owner playtests a new deck, and as the pilot when the owner simulates this deck itself. So the
+aim is the deck played the way a competent person who owns it would play it: its commander out when it should be, its
+engine running, its abilities used, its cards cast. A deck that stock Forge AI already plays well is a fine result:
+say so, keep the rules few, and do not invent rules to have some.
 
 ## Read first (in this order, skim what you do not need)
 1. `/home/user/vibefish/playbook/README.md`, the section "`playbook` (Phase 4)" to the end: the rule format
@@ -30,11 +37,11 @@ once, the engine cards used, the cards Forge's AI never casts cast, the "you may
 All commands run from `/home/user/vibefish`. The Forge build is already fetched at `forge/runtime-snapshot`
 (do NOT fetch or rebuild anything). Deck files are in `forge/runtime-snapshot/res/quest/commanderprecons/`.
 Card text: Forge's card scripts are unzipped at
-`/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/cards/all/<first letter>/<card_name_lowercase_underscores>.txt`
+`/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/cards/all/<first letter>/<card_name_lowercase_underscores>.txt`
 (Oracle text is the `Oracle:` line; `AI:RemoveDeck:All` means stock AI never casts the card).
 
-    SLOT=/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/bin/slot
-    W=/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/batch/<your deck id>     # your scratch dir
+    SLOT=/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/bin/slot
+    W=/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/batch/<your deck id>     # your scratch dir
     D="forge/runtime-snapshot/res/quest/commanderprecons/<your deck file>"
 
 1. What Forge's scripts say:
@@ -52,9 +59,15 @@ Card text: Forge's card scripts are unzipped at
 3. Write the candidate: `playbook/variants/<id>-<short name>.json`. Rules about this deck's own cards only.
    Start from what the audit shows stock leaves undone, in this order of likely worth: the commander's timing, the
    deck's engine (the two or three cards its plan runs through), activated abilities stock never uses, optional
-   triggers it declines, cards flagged `AI:RemoveDeck:All`, then curve and mana. Attack: use
+   triggers it declines, cards flagged `AI:RemoveDeck:All` that advance the deck's own plan, then curve and mana.
+   Leave the deck's ANSWERS alone in this pass (board wipes, spot removal, counterspells, fogs): against three
+   opponents that do nothing there is no board to answer, so goldfish cannot test a rule for them. List them in
+   your report instead (item 7); rules for them are written in a second pass from games at real tables. Attack: use
    `{"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true}`
-   unless the deck clearly wants otherwise (Tricky Terrain uses min_attackers 2 and max_reserve 2). No mulligan rule.
+   unless the deck clearly wants otherwise (a deck that attacks with one or two big creatures wants min_attackers 1
+   or 2 and max_reserve 1 or 2). The attack block is there so that goldfish measures the engine; at the tables the
+   same rules are also played with Forge's own attack, and which attack the deck keeps is decided there, not by
+   you. No mulligan rule.
 4. Tune on your AUDIT seeds (and up to 20 more TUNING seeds if you need them):
    `$SLOT runner/goldfish.sh "$D" -n 12 -s <AUDIT_BASE> -i tune-1 -R forge/runtime-snapshot -o $W/results -P playbook/variants/<id>-<name>.json`
    `python3 runner/hands.py compare $W/results/audit-stock $W/results/tune-1`
@@ -79,12 +92,13 @@ Card text: Forge's card scripts are unzipped at
   edit Java, docs, other decks' files, anything under `playbook/precons/`, `runner/`, `demo-data/` or `.github/`.
   No git commits, no pushes, no GitHub calls.
 - **Honesty.** Report what was measured, including nothing. If stock already runs the deck (little unspent mana,
-  no idle engine) and your best candidate gains under half a turn on validation, say so and recommend not sending
-  it to the tables: two of the six decks tried so far ended that way and that is a useful result.
+  no idle engine) and your best candidate gains under half a turn on validation, say so plainly: several decks
+  tried so far ended that way and that is a useful result. The candidate file is still wanted (the deck will get
+  answer rules in the second pass), so leave the best version you have.
 - If a line of the deck cannot be written with the rule format (for example it needs a choice the rules cannot
   make), do not work around it: list it in the report as a capability the controller lacks.
 
-## Report (your final message; keep it under 500 words plus one small table)
+## Report (your final message; keep it under 650 words plus one small table)
 1. The audit in numbers: stock's kill turn, share of mana unspent, the cards it sat on, abilities never used,
    triggers declined, cards flagged never-cast.
 2. The candidate: file path, the rules in one line each with the reason, anything you tried and dropped.
@@ -93,3 +107,7 @@ Card text: Forge's card scripts are unzipped at
 4. Which rules fired (counts from `playbook_stats`), and any that never did.
 5. What the deck needs that the rule format cannot express.
 6. Your recommendation: send to 200 tables, or not, and why.
+7. The deck's answers, for the second pass: each board wipe, spot removal spell, counterspell and fog in the list by
+   name with what it hits, and which of them Forge's AI is flagged never to cast. One line each; no rules for them.
+8. In three or four plain sentences, how a person who owns this deck expects it to play, and where your candidate
+   still falls short of that. The owner will read this to judge the bot.

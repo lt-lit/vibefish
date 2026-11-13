@@ -1,23 +1,24 @@
 # Brief: answer rules for one shipped bot
 
-You own ONE deck (named in your prompt). Three other agents do the same for three other decks at the same time on
+You own ONE deck (named in your prompt). Other agents do the same for other decks at the same time on
 the same 4-core machine. Your job ends with a candidate playbook file and a short report; the 200-table judgement
 happens later in GitHub Actions and is not yours.
 
-## Where things stand, in ten lines
+## Where things stand, in a dozen lines
 Vibefish (`/home/user/vibefish`) plays Commander decks through Forge's AI, headless. A "playbook" is a JSON file of
 rules for ONE deck that takes over some of that seat's decisions (which card to cast when and aimed at what, which
-optional triggers to take, how to attack); whatever the rules do not cover stays with stock Forge AI. Four decks have
-a shipped playbook: Goblin Storm, Token Triumph, Hail, Caesar, Tricky Terrain. Each plays its own plan well. None of
-them plays the table: the rules cover the deck's engine and leave every answer card (board wipes, removal) to Forge,
-and Forge mostly keeps those in hand, or is told never to cast them at all (`AI:RemoveDeck:All`).
-On 2026-11-11 the four were played against each other, every seat under its playbook, 200 games
-(`DESIGN.md` section 24, read it: "Results: the four bots at one table" and "What the bots hold while they lose").
-Token Triumph won 46% of the games (people's figures would give it 27% of that table), the other three 16 to 22%.
-The seats lost holding their answers: Hail, Caesar saw Ruinous Ultimatum in 36 games and cast it in 8; Tricky Terrain
-lost 42 games holding Oblivion Stone and 39 holding Curse of the Swine. The owner's aim is a bot that plays its deck
-the way a competent person would, and a competent person casts those cards. That is the gap you are closing for one
-deck: when should this seat use each of its answers, and can the rule format say so.
+optional triggers to take, how to attack); whatever the rules do not cover stays with stock Forge AI. Twelve decks
+have a shipped playbook (`runner/leagues/bots-v2.json`). Each plays its own plan. Only three of them play the table:
+Hail, Caesar, Goblin Storm and Tricky Terrain carry "answer rules", rules that cast the deck's board wipes and removal,
+which Forge's AI mostly keeps in hand or is told never to cast at all (`AI:RemoveDeck:All`). Before those rules the
+seats lost holding their answers (`DESIGN.md` section 24, "What the bots hold while they lose"); with them a wipe that
+was cast in a fifth to two fifths of the games it was drawn is cast in three fifths to three quarters (section 27,
+"What the answer rules cast"), which was worth 9.5 points of win rate to Hail, Caesar, 4 to Goblin Storm, a lean to
+Tricky Terrain and nothing to Token Triumph, the deck that led that table. The owner's purpose (section 29): the bots
+are opponents for playtesting decks, and an opponent has to react to the table the way a competent person would, so
+the answers must be played whether or not they raise this seat's own win rate. On 2026-11-12 the twelve were played
+against each other, every seat under its playbook, 600 games (section 28). Those games are your material: when
+should this seat use each of its answers, and can the rule format say so.
 
 ## Read first
 1. `/home/user/vibefish/playbook/README.md` from "`playbook` (Phase 4)" to the end: the rule format. Note in
@@ -27,7 +28,10 @@ deck: when should this seat use each of its answers, and can the rule format say
    permanent of ours named by the rule, or if Forge's own logic for the card agrees (Forge then picks the targets);
    the rules are read only in the seat's own main phases with an empty stack.
 2. Your deck's shipped playbook, the `playbook` object in `/home/user/vibefish/playbook/precons/<deck id>.json`,
-   with its `notes`. A candidate file looks like `/home/user/vibefish/playbook/variants/quick-draw-spells.json`
+   with its `notes`, and as worked examples the answer rules of two shipped bots: the rules about Ruinous Ultimatum,
+   Martial Coup and Hour of Reckoning in `/home/user/vibefish/playbook/precons/hail-caesar.json`, and the rules about
+   Oblivion Stone, Propaganda and Evacuation in `/home/user/vibefish/playbook/precons/tricky-terrain.json` (their
+   `notes` say what each was written from). A candidate file looks like `/home/user/vibefish/playbook/variants/quick-draw-spells.json`
    (keys: schema, deck, variant, of, about, playbook).
 3. `/home/user/vibefish/DESIGN.md` section 22, "**Results: Goblin Storm's candidates**": two "lost board" rules cost
    that deck wins. They were judged at tables of stock AI; the new exam is tables of bots, so that verdict does not
@@ -35,16 +39,16 @@ deck: when should this seat use each of its answers, and can the rule format say
    usually loses.
 
 ## Your material
-- The 200 league games, one directory a game:
-  `L=/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/league2/2026-11-11-bots-v1-snapshot-2026-11-10-s20261190-bots`
+- The 600 league games (your deck is in 200 of them), one directory a game:
+  `L=/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/league3/2026-11-12-bots-v2-snapshot-2026-11-10-s20261250-bots`
   `$L/shard-N/gNNNNN/run.json` (the decks with their card lists, mana values and the playbook each seat ran) and
   `$L/shard-N/gNNNNN/games/game-001.events.jsonl` (the event stream: schema in `DESIGN.md` section 6; every `turn`
   event has each seat's hand by card name, life, lands and permanent count; `cast`, `attack`, `block`, `damage`,
   `zone`, `lost` events carry the seat).
   `python3 runner/hands.py game <events.jsonl> --deck <deck id>` prints one game turn by turn for your seat.
-  `python3 runner/playstyle.py $L --by-deck` prints how the four played.
+  `python3 runner/playstyle.py $L --by-deck` prints how the twelve played (slow: it reads 600 games; run it once).
 - Card text: Forge's card scripts, unzipped, at
-  `/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/cards/all/<first letter>/<name_lowercase_underscores>.txt`
+  `/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/cards/all/<first letter>/<name_lowercase_underscores>.txt`
   (`Oracle:` is the text; `AI:RemoveDeck:All` means stock Forge AI never casts the card).
 - The rule engine itself, if you need to know exactly what a condition counts:
   `/home/user/vibefish/controller/src/vibefish/PlaybookController.java` and `Playbook.java`. READ ONLY.
@@ -62,27 +66,29 @@ deck: when should this seat use each of its answers, and can the rule format say
    rules where they belong: rules are read top to bottom and the first `play` or `activate` rule that has something
    to do acts, so an answer that should come before the turn's other plays goes above them.
 3. Write `playbook/variants/<deck id>-answers.json`: `"variant": "answers"`, `"of": "playbook/precons/<deck id>.json"`,
-   the shipped playbook's `attack`, `triggers` and `cast` with your rules added, `"version"` one higher than the
+   the shipped playbook's `triggers` and `cast` with your rules added, its `attack` exactly as shipped (most shipped
+   playbooks have none: then yours has none, and Forge attacks; which attack suits the deck is decided at the tables), `"version"` one higher than the
    shipped version, and `notes` that say for each new rule why it is there and what it was written from.
 4. Test it at tables of bots, locally, a few games at a time. This is to see that the rules fire when they should and
    do what you meant, not to measure a win rate (the tables in Actions do that; a dozen games cannot):
 
-       SLOT=/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/bin/slot
-       W=/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/batch/answers-<deck id>
+       SLOT=/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/bin/slot
+       W=/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/batch/answers-<deck id>
        cd /home/user/vibefish
-       $SLOT env FORGE_RUNTIME=$PWD/forge/runtime-snapshot python3 -I runner/ab.py play --deck <deck id> --games 10 \
+       $SLOT env FORGE_RUNTIME=$PWD/forge/runtime-snapshot python3 -I runner/ab.py play --deck <deck id> --games 8 \
            --seed <YOUR SEED> --out $W/results/t1 --runtime forge/runtime-snapshot -j 1 --arms playbook \
-           --data playbook/variants/<deck id>-answers.json --pool runner/leagues/bots-v1.json --opponent-playbooks
+           --data playbook/variants/<deck id>-answers.json --pool runner/leagues/bots-v2.json --opponent-playbooks
        python3 -I runner/ab.py rollup $W/results/t1 ; python3 runner/losses.py $W/results/t1
 
-   That plays ten tables with your seat under the candidate and the other three seats under the shipped playbooks
-   of the other three bots; the games land in `$W/results/t1/arm-playbook/gNNNN/`. Without `--data` the same command
-   plays the shipped playbook on the same ten tables, which is your comparison if you want one.
-   A game takes one to two minutes, so ten games is more than the ten-minute limit of a foreground command: start
+   That plays eight tables with your seat under the candidate and the other three seats drawn from the other eleven
+   bots, each under its shipped playbook; the games land in `$W/results/t1/arm-playbook/gNNNN/`. Without `--data` the same command
+   plays the shipped playbook on the same eight tables, which is your comparison if you want one.
+   A game takes one to two minutes (some far longer), so eight games is more than the ten-minute limit of a foreground command: start
    the run with `run_in_background: true` and wait for the notification.
    Read the games: every cast of your answer cards (the `cast` events of your seat), the turn, what was on the table,
    what left the battlefield after it (`zone` events), and the turns on which the card was in hand and stayed there.
-   Fix, play again. Aim for 30 local table games in all; 40 is the hard cap.
+   Fix, play again. Aim for 16 local table games in all; 24 is the hard cap (nine agents share two game slots, and
+   the 200 tables in Actions are the judgement, not these).
    Do not trust `playbook_stats` here: at a table with several playbook seats the counters are summed over the seats
    and the rule numbers of different playbooks collide. Go by the event log.
 
