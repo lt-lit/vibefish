@@ -1,0 +1,71 @@
+{
+ "schema": 1,
+ "deck": "revenant-recon",
+ "variant": "mirko",
+ "of": "playbook/precons/revenant-recon.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": ["Sol Ring", "Arcane Signet", "Dimir Signet", "Talisman of Dominance", "Mind Stone", "Thought Vessel"]
+    },
+    {
+     "play": ["Mirko, Obsessive Theorist"]
+    },
+    {
+     "play": ["Whispering Snitch", "Sinister Starfish", "Case of the Shifting Visage", "Dimir Spybug"]
+    },
+    {
+     "play": ["Phyrexian Arena"],
+     "when": ["library >= 30"]
+    },
+    {
+     "activate": ["Sinister Starfish"],
+     "ability": "Surveil"
+    },
+    {
+     "play": ["Mission Briefing"],
+     "when": ["library >= 20"]
+    },
+    {
+     "play": ["Rise of the Dark Realms"]
+    },
+    {
+     "play": ["Sphinx of the Second Sun", "Grave Titan", "Massacre Wurm", "Doom Whisperer", "Syr Konrad, the Grim", "Marvo, Deep Operative", "Twilight Prophet", "Mulldrifter", "Master of Death", "Unshakable Tail", "Dogged Detective", "Baleful Strix", "Lazav, the Multifarious", "Copy Catchers", "Nightveil Sprite", "Final-Word Phantom", "Thoughtbound Phantasm"]
+    },
+    {
+     "play": ["Notion Rain", "Discovery // Dispersal", "Curate", "Consider"],
+     "when": ["library >= 25"]
+    },
+    {
+     "activate": ["Doom Whisperer"],
+     "ability": "Surveil",
+     "when": ["life >= 20", "library >= 30"]
+    },
+    {
+     "activate": ["Tocasia's Dig Site"],
+     "ability": "Surveil",
+     "phase": "main2",
+     "when": ["library >= 25"]
+    }
+   ]
+  },
+  "triggers": [
+   {"accept": ["Mirko, Obsessive Theorist"]},
+   {"accept": ["Master of Death"], "when": ["life >= 10"]},
+   {"accept": ["Marvo, Deep Operative"]},
+   {"accept": ["Copy Catchers"], "when": ["mana >= 4", "library >= 25"]}
+  ],
+  "notes": "Version 1, written before the audit games were read: commander at once, the surveil engine (Snitch, Starfish, Case, Spybug) down early, Starfish tapped every turn, Mission Briefing (never cast by Forge's AI) cast, Rise of the Dark Realms whenever affordable, creatures dearest first, card draw guarded by library size, Doom Whisperer and Tocasia's Dig Site as surveil sinks. Mirko's end-step reanimation always taken."
+ }
+}
