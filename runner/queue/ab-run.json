@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-12T07:30Z",
-  "note": "The confirming round on the new pool (runner/leagues/bots-v2.json, the twelve decks with a shipped playbook; every exam before this drew its opponents from the four of bots-v1). (1) Each of the twelve at 200 tables whose three opponents are drawn from the other eleven, each under its shipped playbook: stock pilot against shipped playbook, seed 20261240. (2) On the same tables, playbook arm only, the go-wide versions of the five decks whose shipped attack has not been played with their shipped rules: goblin-storm@answers, hail-caesar@answers and tricky-terrain@answers (the answer rules with the go-wide attack; shipped is the same rules with Forge's attack), token-triumph@gowide (version 3) and quick-draw@spells. runner/ab.py join puts a deck's arms side by side.",
+  "requested": "2026-11-13T23:46Z",
+  "note": "The owner's table, first exam (DESIGN §30). (1) Four of the ten precons the owner's group plays, each candidate at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks: the deck's own seat under stock AI and under the candidate with the go-wide attack it was written with (blight-curse@wretch, mutant-menace@mothman, squirreled-away@acorns, ahoy-mateys@crew; each beat stock by a turn or more in goldfish on 40 unseen seeds). (2) The same rules with the attack left to Forge, playbook arm on the same tables (the -forgeattack siblings): which attack each deck keeps is decided here. (3) Hail, Caesar version 6 and Tricky Terrain version 8, the shipped playbooks with the go-wide attack back, against their stock pilots on tables of their own: both were the better of two arms on ab-run #26's tables, and what this says is the figure for the shipped files. The pool plays Hail, Caesar 6 and Tricky Terrain 8 from this run on.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,14 +11,19 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "goblin-storm,token-triumph,hail-caesar,tricky-terrain,deep-clue-sea,planeswalker-party,limit-break,elven-council,quick-draw,wretched-ranks,eldrazi-incursion,enduring-enchantments",
+      "decks": "blight-curse@wretch,mutant-menace@mothman,squirreled-away@acorns,ahoy-mateys@crew",
       "arms": "stock,playbook",
-      "seed": "20261240"
+      "seed": "20261260"
     },
     {
-      "decks": "goblin-storm@answers,hail-caesar@answers,tricky-terrain@answers,token-triumph@gowide,quick-draw@spells",
+      "decks": "blight-curse@wretch-forgeattack,mutant-menace@mothman-forgeattack,squirreled-away@acorns-forgeattack,ahoy-mateys@crew-forgeattack",
       "arms": "playbook",
-      "seed": "20261240"
+      "seed": "20261260"
+    },
+    {
+      "decks": "hail-caesar,tricky-terrain",
+      "arms": "stock,playbook",
+      "seed": "20261270"
     }
   ]
 }
