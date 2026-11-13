@@ -4,7 +4,7 @@
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped (v5: answer rules, the attack left to Forge); among the twelve +13.5 points on its stock pilot, confirmed. The same rules with the go-wide attack won nine tables more on these tables (a lean, exact test 0.26)",
+   "status": "shipped (v5: answer rules, the attack left to Forge); among the twelve +13.5 points on its stock pilot, confirmed. The same rules with the go-wide attack won nine tables more on these tables (exact test 0.26, inside noise): left as it is",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment; version 5 leaves the attack to Forge.",
    "tables": {
@@ -54,14 +54,14 @@
   },
   {
    "deck": "hail-caesar",
-   "status": "shipped (v5: answer rules, the attack left to Forge); among the twelve +8.5 points on its stock pilot, confirmed. The same rules with the go-wide attack won 21 tables more on these tables (exact test 0.005): the attack is to be decided",
+   "status": "shipped (v6, 2026-11-13: the answer rules with the go-wide attack put back). Among the twelve these rules won 66 tables with go-wide where they won 45 with the attack left to Forge (exact test 0.0046); this row is the go-wide arm, the better of two on these tables, and a run of its own is queued",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five); version 4 also casts its board wipes (Ruinous Ultimatum, Martial Coup, Vault 75, Hour of Reckoning, The Nipton Lottery) when the table calls for them; version 5 leaves the attack to Forge.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/hail-caesar.json",
+    "file": "demo-data/ab/2026-11-12-ab-v16/hail-caesar-join.json",
     "stock": "stock",
-    "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 4, the same rules with the go-wide attack, won 66 of the same tables)"
+    "bot": "gowide",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots; the go-wide arm, chosen on these tables over the same rules with Forge's attack (45 wins)"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
    "stock_tables": {
@@ -79,15 +79,15 @@
   },
   {
    "deck": "tricky-terrain",
-   "status": "shipped (v7: answer rules, the attack left to Forge); among the twelve +5.5 points on its stock pilot, a lean, with 18 of its 200 games left on the clock. The same rules with the go-wide attack won 18 tables more (exact test 0.027): the attack is to be decided",
+   "status": "shipped (v8, 2026-11-13: the answer rules with the go-wide attack put back). Among the twelve these rules won 58 tables with go-wide where they won 40 with the attack left to Forge and left 18 games on the clock (exact test 0.027); this row is the go-wide arm, the better of two on these tables, and a run of its own is queued",
    "playbook": "playbook/precons/tricky-terrain.json",
    "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths; version 6 also plays Oblivion Stone and Propaganda early and uses the Stone and Evacuation against a wide board; version 7 leaves the attack to Forge.",
    "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/tricky-terrain.json",
+    "file": "demo-data/ab/2026-11-12-ab-v16/tricky-terrain-join.json",
     "stock": "stock",
-    "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 6, the same rules with the go-wide attack, won 58 of the same tables)"
+    "bot": "gowide",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots; the go-wide arm, chosen on these tables over the same rules with Forge's attack (40 wins)"
    },
    "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",
