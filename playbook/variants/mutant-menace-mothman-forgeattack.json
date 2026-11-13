@@ -1,0 +1,167 @@
+{
+ "schema": 1,
+ "deck": "mutant-menace",
+ "variant": "mothman-forgeattack",
+ "of": "playbook/variants/mutant-menace-mothman.json",
+ "about": "The mothman candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Dominance",
+      "Talisman of Resilience",
+      "Talisman of Curiosity",
+      "Rampant Growth",
+      "Farseek",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "The Wise Mothman"
+     ]
+    },
+    {
+     "play": [
+      "Hardened Scales",
+      "Winding Constrictor",
+      "Branching Evolution",
+      "Corpsejack Menace"
+     ]
+    },
+    {
+     "play": [
+      "Raul, Trouble Shooter",
+      "Hancock, Ghoulish Mayor",
+      "Guardian Project",
+      "Inexorable Tide",
+      "Marcus, Mutant Mayor",
+      "Screeching Scorchbeast",
+      "Mirelurk Queen"
+     ]
+    },
+    {
+     "activate": [
+      "Raul, Trouble Shooter"
+     ],
+     "when": [
+      "library >= 30"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Agent Frank Horrigan",
+      "Strong, the Brutish Thespian",
+      "Bloatfly Swarm",
+      "Lily Bowen, Raging Grandma",
+      "Young Deathclaws",
+      "Vault 12: The Necropolis",
+      "Recon Craft Theta",
+      "Tireless Tracker",
+      "Glowing One",
+      "Feral Ghoul",
+      "Watchful Radstag",
+      "Infesting Radroach",
+      "Vexing Radgull",
+      "Piper Wright, Publick Reporter",
+      "Tato Farmer",
+      "Cathedral Acolyte",
+      "Jason Bright, Glowing Prophet",
+      "Strength Bobblehead"
+     ]
+    },
+    {
+     "play": [
+      "Vault 87: Forced Evolution",
+      "Struggle for Project Purity"
+     ],
+     "when": [
+      "library >= 45"
+     ]
+    },
+    {
+     "play": [
+      "Biomass Mutation"
+     ],
+     "x": "max",
+     "x_min": 6,
+     "when": [
+      "attackers >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Contaminated Drink"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "hand <= 4",
+      "library >= 35"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Strength Bobblehead"
+     ],
+     "ability": "Put X",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Contagion Clasp"
+     ],
+     "ability": "Proliferate",
+     "phase": "main2"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Screeching Scorchbeast"
+    ]
+   },
+   {
+    "accept": [
+     "Infesting Radroach"
+    ]
+   },
+   {
+    "accept": [
+     "Tato Farmer"
+    ],
+    "when": [
+     "controls The Wise Mothman",
+     "library >= 50",
+     "life >= 20"
+    ]
+   },
+   {
+    "accept": [
+     "Tato Farmer"
+    ],
+    "when": [
+     "controls Screeching Scorchbeast",
+     "library >= 50",
+     "life >= 20"
+    ]
+   }
+  ],
+  "notes": "Mutant Menace (The Wise Mothman, BUG counters and rad/mill). Written from 12 stock goldfish games (seeds 23001-23012): stock kills on turn 11.3, casts Mothman on own turn 4 to 11 (median 5), never cast Bloatfly Swarm, Raul, Feral Ghoul, Struggle for Project Purity, Guardian Project or Contaminated Drink, and under-cast its ramp (Cultivate 1 of 5, Talisman of Dominance 1 of 5) and the counter doublers (Winding Constrictor, Hardened Scales held with the mana up). Rule 1: ramp first. Rule 2: the commander as soon as it can be cast (each mill of a nonland card of ours then grows the team). Rule 3: the counter doublers next, before the creatures they multiply. Rule 4: the engines (Raul, Hancock, Guardian Project, Inexorable Tide, Marcus, Scorchbeast, Mirelurk Queen). Rule 5: tap Raul in the first main phase so every player mills one before combat (Mothman, Mirelurk and Scorchbeast trigger on our own nonland mills), library 30 or more. Rule 6: the rest of the creatures, dearest first, whatever Forge thinks of them (Bloatfly Swarm was never cast by stock). Rule 7: Vault 87 and Struggle for Project Purity with 45 cards or more in the library (both draw). Rule 8: Biomass Mutation (AI:RemoveDeck:All) before combat at X 6 or more with three attackers. Rule 9: Contaminated Drink at X 3 or more with a short hand and a deep library. Rule 10: Harmonize. Rules 11-12: Strength Bobblehead's counters and Contagion Clasp's proliferate as after-combat mana sinks. Triggers: Scorchbeast's tokens and Radroach's return always; Tato Farmer's two rad counters on us only while Mothman or Scorchbeast turns our own mills into counters or tokens, with 50 cards left and 20 life. Answers (Putrefy, Atomize, Casualties of War, Nuclear Fallout, Find // Finality, Alpha Deathclaw's monstrosity, Rampaging Yao Guai, Mutational Advantage) are left to Forge for a second pass."
+ }
+}

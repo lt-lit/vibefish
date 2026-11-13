@@ -6,25 +6,162 @@
  "about": "Candidate playbook for Blood Rites (Clavileno, First of the Blessed), written from 12 stock goldfish games on seeds 26001-26012.",
  "playbook": {
   "version": 1,
-  "attack": {"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true},
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
   "cast": {
    "rules": [
-    {"play": ["Sol Ring", "Arcane Signet", "Talisman of Hierarchy", "Orzhov Signet", "Mind Stone", "Commander's Sphere"]},
-    {"play": ["Clavileño, First of the Blessed"]},
-    {"play": ["Legion Lieutenant", "Radiant Destiny", "Etchings of the Chosen", "Glass-Cast Heart", "Sanctum Seeker", "Mavren Fein, Dusk Apostle", "Kindred Boon", "Cordial Vampire", "Drana, Liberator of Malakir", "Elenda, the Dusk Rose", "Exquisite Blood", "Crossway Troublemakers", "Timothar, Baron of Bats", "Promise of Aclazotz"]},
-    {"play": ["Champion of Dusk"], "when": ["type:Vampire >= 3", "library >= 30", "life >= 15"]},
-    {"play": ["Order of Sacred Dusk", "Carmen, Cruel Skymarcher", "Vona, Butcher of Magan", "Twilight Prophet", "Falkenrath Noble", "Bloodtracker", "Elenda's Hierophant", "Welcoming Vampire", "Yahenni, Undying Partisan", "Nighthawk Scavenger", "Bloodline Necromancer", "Redemption Choir", "Butcher of Malakir", "Blood Artist", "Cruel Celebrant", "Bartolomé del Presidio", "Charismatic Conqueror", "Indulgent Aristocrat", "Dusk Legion Zealot", "Dusk Legion Sergeant", "Martyr of Dusk", "Oathsworn Vampire", "Bloodghast", "Master of Dark Rites", "Viscera Seer", "Wayfarer's Bauble"]},
-    {"play": ["March of the Canonized"], "x": "max", "x_min": 3},
-    {"hold": ["Viscera Seer"], "ability": "Scry"},
-    {"activate": ["Glass-Cast Heart"], "ability": "Create a 1/1", "when": ["life >= 10"], "phase": "main2"}
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Hierarchy",
+      "Orzhov Signet",
+      "Mind Stone",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "Clavileño, First of the Blessed"
+     ]
+    },
+    {
+     "play": [
+      "Legion Lieutenant",
+      "Radiant Destiny",
+      "Etchings of the Chosen",
+      "Glass-Cast Heart",
+      "Sanctum Seeker",
+      "Mavren Fein, Dusk Apostle",
+      "Kindred Boon",
+      "Cordial Vampire",
+      "Drana, Liberator of Malakir",
+      "Elenda, the Dusk Rose",
+      "Exquisite Blood",
+      "Crossway Troublemakers",
+      "Timothar, Baron of Bats",
+      "Promise of Aclazotz"
+     ]
+    },
+    {
+     "play": [
+      "Champion of Dusk"
+     ],
+     "when": [
+      "type:Vampire >= 3",
+      "library >= 30",
+      "life >= 15"
+     ]
+    },
+    {
+     "play": [
+      "Order of Sacred Dusk",
+      "Carmen, Cruel Skymarcher",
+      "Vona, Butcher of Magan",
+      "Twilight Prophet",
+      "Falkenrath Noble",
+      "Bloodtracker",
+      "Elenda's Hierophant",
+      "Welcoming Vampire",
+      "Yahenni, Undying Partisan",
+      "Nighthawk Scavenger",
+      "Bloodline Necromancer",
+      "Redemption Choir",
+      "Butcher of Malakir",
+      "Blood Artist",
+      "Cruel Celebrant",
+      "Bartolomé del Presidio",
+      "Charismatic Conqueror",
+      "Indulgent Aristocrat",
+      "Dusk Legion Zealot",
+      "Dusk Legion Sergeant",
+      "Martyr of Dusk",
+      "Oathsworn Vampire",
+      "Bloodghast",
+      "Master of Dark Rites",
+      "Viscera Seer",
+      "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "play": [
+      "March of the Canonized"
+     ],
+     "x": "max",
+     "x_min": 3
+    },
+    {
+     "hold": [
+      "Viscera Seer"
+     ],
+     "ability": "Scry"
+    },
+    {
+     "activate": [
+      "Glass-Cast Heart"
+     ],
+     "ability": "Create a 1/1",
+     "when": [
+      "life >= 10"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Blade of the Bloodchief",
+      "Heirloom Blade"
+     ],
+     "ability": "Equip",
+     "phase": "main1"
+    }
    ]
   },
   "triggers": [
-   {"accept": ["Bloodghast"]},
-   {"accept": ["Heirloom Blade"]},
-   {"accept": ["Bloodline Necromancer"]},
-   {"accept": ["Timothar, Baron of Bats"]},
-   {"accept": ["Crossway Troublemakers"], "when": ["life >= 15", "library >= 30", "hand <= 5"]}
+   {
+    "accept": [
+     "Bloodghast"
+    ]
+   },
+   {
+    "accept": [
+     "Heirloom Blade"
+    ]
+   },
+   {
+    "accept": [
+     "Bloodline Necromancer"
+    ]
+   },
+   {
+    "accept": [
+     "Timothar, Baron of Bats"
+    ]
+   },
+   {
+    "accept": [
+     "Crossway Troublemakers"
+    ],
+    "when": [
+     "life >= 15",
+     "library >= 30",
+     "hand <= 5"
+    ]
+   },
+   {
+    "accept": [
+     "Promise of Aclazotz"
+    ],
+    "when": [
+     "tokens >= 1",
+     "creatures >= 4"
+    ]
+   }
   ],
   "notes": "Clavileno makes an attacking Vampire a Demon that draws a card and leaves a 4/3 flier when it dies, so the deck is Vampires that attack every turn with drain and lifegain on top. Stock Forge plays it fairly well in goldfish (12.4 turns, 12 of 12 kills) and leaves 43% of its mana unspent, but most of that is answers it rightly holds against do-nothing opponents. What it does leave undone: the commander late behind rocks it has (Sol Ring and Talisman out, Clavileno on turn 5 and Elenda held for four turns in game 7), anthems and engine permanents held (Kindred Boon, Glass-Cast Heart, Elenda's Hierophant held for many turns), Viscera Seer never cast (flagged), March of the Canonized barely cast. The rules: rocks, then the commander, then the anthems and engine permanents in order of worth, Champion of Dusk only with three Vampires and a library and life to pay for it, then the bodies; March of the Canonized for all the mana at X 3 or more; Viscera Seer is cast as a 1-mana Vampire but its scry outlet stays shut (Forge would feed it creatures); Glass-Cast Heart makes a lifelink Vampire with mana left after combat. Trigger rules take Bloodghast, Heirloom Blade, Bloodline Necromancer and Timothar always and Crossway Troublemakers' card while life and library allow. Answers (Swords, Utter End, Return to Dust, New Blood, Damn, Austere Command, Olivia's Wrath, Patron of the Vein, Butcher of Malakir's sacrifice, Vona's ability) are left to Forge in this pass. Go-wide attack, highest life first.",
   "on": "2026-11-13"
