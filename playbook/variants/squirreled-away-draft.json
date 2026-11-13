@@ -1,0 +1,178 @@
+{
+ "schema": 1,
+ "deck": "squirreled-away",
+ "variant": "draft",
+ "of": "playbook/precons/squirreled-away.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Gilded Goose",
+      "Sol Ring",
+      "Arcane Signet",
+      "Golgari Signet",
+      "Talisman of Resilience"
+     ]
+    },
+    {
+     "play": [
+      "Hazel of the Rootbloom"
+     ]
+    },
+    {
+     "play": [
+      "Gourmand's Talent",
+      "Idol of Oblivion",
+      "Bastion of Remembrance",
+      "Beastmaster Ascension",
+      "Chitterspitter",
+      "Binding the Old Gods",
+      "Maskwood Nexus",
+      "Moldervine Reclamation",
+      "Garruk, Cursed Huntsman"
+     ]
+    },
+    {
+     "play": [
+      "End-Raze Forerunners",
+      "Beledros Witherbloom",
+      "Deep Forest Hermit",
+      "Moonstone Eulogist",
+      "Ogre Slumlord",
+      "Swarmyard Massacre",
+      "The Odd Acorn Gang",
+      "Arasta of the Endless Web",
+      "Chittering Witch",
+      "Insatiable Frugivore",
+      "Poison-Tip Archer",
+      "Skyfisher Spider",
+      "Toski, Bearer of Secrets",
+      "Academy Manufactor",
+      "Chatterfang, Squirrel General",
+      "Honored Dreyleader",
+      "Morbid Opportunist",
+      "Nadier's Nightblade",
+      "Scurry of Squirrels",
+      "Tireless Provisioner",
+      "Woe Strider",
+      "Prosperous Innkeeper",
+      "Squirrel Sovereign",
+      "Zulaport Cutthroat",
+      "Haywire Mite",
+      "Nested Shambler",
+      "Ravenous Squirrel"
+     ]
+    },
+    {
+     "play": [
+      "Shamanic Revelation"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Hazel's Brewmaster",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Plaguecrafter",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Cache Grab",
+    "why": "instant"
+   },
+   {
+    "card": "Deadly Dispute",
+    "why": "instant"
+   },
+   {
+    "card": "Plumb the Forbidden",
+    "why": "instant"
+   },
+   {
+    "card": "Putrefy",
+    "why": "instant"
+   },
+   {
+    "card": "Saw in Half",
+    "why": "instant"
+   },
+   {
+    "card": "Second Harvest",
+    "why": "instant"
+   },
+   {
+    "card": "Tear Asunder",
+    "why": "instant"
+   },
+   {
+    "card": "Windgrace's Judgment",
+    "why": "instant"
+   },
+   {
+    "card": "Casualties of War",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Chatterstorm",
+    "why": "storm"
+   },
+   {
+    "card": "Decree of Pain",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Maelstrom Pulse",
+    "why": "aimed"
+   },
+   {
+    "card": "Rootcast Apprenticeship",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Skullclamp",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Sword of the Squeak",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Squirrel Nest",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Wolfwillow Haven",
+    "why": "aura or equipment"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Decree of Pain"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Insatiable Frugivore",
+   "Ogre Slumlord",
+   "Scurry of Squirrels",
+   "Skyfisher Spider",
+   "Woe Strider",
+   "Plumb the Forbidden",
+   "Chitterspitter",
+   "Sword of the Squeak",
+   "Beastmaster Ascension"
+  ]
+ }
+}

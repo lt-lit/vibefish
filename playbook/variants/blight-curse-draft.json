@@ -1,0 +1,183 @@
+{
+ "schema": 1,
+ "deck": "blight-curse",
+ "variant": "draft",
+ "of": "playbook/precons/blight-curse.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Ignoble Hierarch",
+      "Sol Ring",
+      "Arcane Signet",
+      "Devoted Druid",
+      "Commander's Sphere",
+      "Wickersmith's Tools"
+     ]
+    },
+    {
+     "play": [
+      "Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "play": [
+      "Lasting Tarfire",
+      "Blowfly Infestation",
+      "Everlasting Torment",
+      "Puca's Covenant",
+      "Binding the Old Gods",
+      "Grave Venerations",
+      "Flourishing Defenses",
+      "Chimil, the Inner Sun",
+      "Vraska, Betrayal's Sting"
+     ]
+    },
+    {
+     "play": [
+      "Grim Poppet",
+      "Carnifex Demon",
+      "Grave Titan",
+      "Midnight Banshee",
+      "Archfiend of Ifnir",
+      "Kulrath Knight",
+      "The Scorpion God",
+      "Massacre Girl, Known Killer",
+      "Soul Snuffers",
+      "Tree of Perdition",
+      "Wickerbough Elder",
+      "Dusk Urchins",
+      "Evolution Sage",
+      "Glissa Sunslayer",
+      "Necroskitter",
+      "Sinister Gnarlbark",
+      "Hapatra, Vizier of Poisons",
+      "Oft-Nabbed Goat"
+     ]
+    },
+    {
+     "play": [
+      "Cathartic Reunion",
+      "Night's Whisper",
+      "Painful Truths",
+      "Harmonize",
+      "Hoarder's Greed",
+      "Eventide's Shadow"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Liliana, Death Wielder",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "The Reaper, King No More",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Dread Tiller",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Ferrafor, Young Yew",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Village Pillagers",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Channeler Initiate",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Puppeteer Clique",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Skinrender",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Assassin's Trophy",
+    "why": "instant"
+   },
+   {
+    "card": "Cathartic Pyre",
+    "why": "instant"
+   },
+   {
+    "card": "Fire Covenant",
+    "why": "instant"
+   },
+   {
+    "card": "Infernal Grasp",
+    "why": "instant"
+   },
+   {
+    "card": "Putrefy",
+    "why": "instant"
+   },
+   {
+    "card": "Terminate",
+    "why": "instant"
+   },
+   {
+    "card": "Aberrant Return",
+    "why": "aimed"
+   },
+   {
+    "card": "Burning Curiosity",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Black Sun's Zenith",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Chain Reaction",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Incremental Blight",
+    "why": "aimed"
+   },
+   {
+    "card": "Persist",
+    "why": "aimed"
+   },
+   {
+    "card": "Contagion Clasp",
+    "why": "aimed when it enters"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Fire Covenant",
+   "Black Sun's Zenith"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Devoted Druid"
+  ],
+  "optional_triggers": [
+   "The Reaper, King No More",
+   "Dread Tiller",
+   "Hapatra, Vizier of Poisons",
+   "Necroskitter",
+   "Puca's Covenant",
+   "Flourishing Defenses"
+  ]
+ }
+}

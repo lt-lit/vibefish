@@ -1,0 +1,180 @@
+{
+ "schema": 1,
+ "deck": "deadly-disguise",
+ "variant": "draft",
+ "of": "playbook/precons/deadly-disguise.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet"
+     ]
+    },
+    {
+     "play": [
+      "Kaust, Eyes of the Glade"
+     ]
+    },
+    {
+     "play": [
+      "Obscuring Aether",
+      "Ransom Note",
+      "Mastery of the Unseen",
+      "Trail of Mystery",
+      "True Identity",
+      "Lifecrafter's Bestiary",
+      "Scroll of Fate",
+      "Panoptic Projektor",
+      "Ugin's Mastery",
+      "Veiled Ascension"
+     ]
+    },
+    {
+     "play": [
+      "Krosan Cloudscraper",
+      "Krosan Colossus",
+      "Akroma, Angel of Fury",
+      "Imperial Hellkite",
+      "Exalted Angel",
+      "Root Elemental",
+      "Scourge of the Throne",
+      "Temur War Shaman",
+      "Duskana, the Rage Mother",
+      "Neheb, the Eternal",
+      "Ohran Frostfang",
+      "Seedborn Muse",
+      "Whisperwood Elemental",
+      "Yedora, Grave Gardener",
+      "Beast Whisperer",
+      "Boltbender",
+      "Experiment Twelve",
+      "Nantuko Vigilante",
+      "Salt Road Ambushers",
+      "Saryth, the Viper's Fang",
+      "Sidar Kondo of Jamuraa",
+      "Tesak, Judith's Hellhound",
+      "Thelonite Hermit",
+      "Toski, Bearer of Secrets",
+      "Deathmist Raptor",
+      "Mirror Entity",
+      "Welcoming Vampire",
+      "Ainok Survivalist",
+      "Broodhatch Nantuko",
+      "Den Protector",
+      "Hidden Dragonslayer",
+      "Master of Pearls",
+      "Nervous Gardener",
+      "Printlifter Ooze",
+      "Sakura-Tribe Elder"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Ashcloud Phoenix",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Hooded Hydra",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Austere Command",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Decimate",
+    "why": "aimed"
+   },
+   {
+    "card": "Dusk // Dawn",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Fell the Mighty",
+    "why": "aimed"
+   },
+   {
+    "card": "Jeska's Will",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Nature's Lore",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Three Visits",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Chaos Warp",
+    "why": "instant"
+   },
+   {
+    "card": "Path to Exile",
+    "why": "instant"
+   },
+   {
+    "card": "Return of the Wildspeaker",
+    "why": "instant"
+   },
+   {
+    "card": "Showstopping Surprise",
+    "why": "instant"
+   },
+   {
+    "card": "Unexplained Absence",
+    "why": "instant"
+   },
+   {
+    "card": "Wild Growth",
+    "why": "aura or equipment"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Wild Growth"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Boltbender",
+   "Mirror Entity",
+   "Obscuring Aether"
+  ],
+  "optional_triggers": [
+   "Ainok Survivalist",
+   "Ashcloud Phoenix",
+   "Boltbender",
+   "Broodhatch Nantuko",
+   "Deathmist Raptor",
+   "Den Protector",
+   "Exalted Angel",
+   "Experiment Twelve",
+   "Hidden Dragonslayer",
+   "Imperial Hellkite",
+   "Krosan Cloudscraper",
+   "Master of Pearls",
+   "Nantuko Vigilante",
+   "Nervous Gardener",
+   "Root Elemental",
+   "Salt Road Ambushers",
+   "Temur War Shaman",
+   "Tesak, Judith's Hellhound",
+   "Thelonite Hermit",
+   "Yedora, Grave Gardener",
+   "Trail of Mystery",
+   "True Identity",
+   "Ugin's Mastery",
+   "Veiled Ascension",
+   "Lifecrafter's Bestiary"
+  ]
+ }
+}

@@ -1,0 +1,179 @@
+{
+ "schema": 1,
+ "deck": "death-toll",
+ "variant": "draft",
+ "of": "playbook/precons/death-toll.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Deathcap Cultivator",
+      "Golgari Signet",
+      "Mind Stone",
+      "Talisman of Resilience",
+      "Commander's Sphere",
+      "Rampant Growth",
+      "Harrow"
+     ]
+    },
+    {
+     "play": [
+      "Winter, Cynical Opportunist"
+     ]
+    },
+    {
+     "play": [
+      "Polluted Cistern // Dim Oubliette",
+      "Cemetery Tampering",
+      "Crawling Sensation",
+      "Grist, the Hunger Tide",
+      "Into the Pit",
+      "Binding the Old Gods",
+      "Deathreap Ritual",
+      "Whip of Erebos",
+      "Ob Nixilis Reignited",
+      "Demonic Covenant"
+     ]
+    },
+    {
+     "play": [
+      "Demolisher Spawn",
+      "Giant Adephage",
+      "Hornet Queen",
+      "Moldgraf Monstrosity",
+      "Titania, Nature's Force",
+      "Ishkanah, Grafwidow",
+      "Rendmaw, Creaking Nest",
+      "Carrion Grub",
+      "Solemn Simulacrum",
+      "Burnished Hart",
+      "Formless Genesis",
+      "Nyx Weaver",
+      "Ursine Monstrosity",
+      "Grim Flayer",
+      "Sakura-Tribe Elder",
+      "Scavenging Ooze",
+      "Skola Grovedancer",
+      "Suspicious Bookcase",
+      "Gnarlwood Dryad",
+      "Haywire Mite",
+      "Stitcher's Supplier",
+      "Dryad Arbor"
+     ]
+    },
+    {
+     "play": [
+      "Night's Whisper",
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Professor Onyx",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Wrenn and Seven",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Moldgraf Millipede",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Noxious Gearhulk",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Obsessive Skinner",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Old Stickfingers",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Vile Mutilator",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Arachnogenesis",
+    "why": "instant"
+   },
+   {
+    "card": "Grapple with the Past",
+    "why": "instant"
+   },
+   {
+    "card": "Grisly Salvage",
+    "why": "instant"
+   },
+   {
+    "card": "Inscription of Abundance",
+    "why": "instant"
+   },
+   {
+    "card": "Putrefy",
+    "why": "instant"
+   },
+   {
+    "card": "Convert to Slime",
+    "why": "aimed"
+   },
+   {
+    "card": "Culling Ritual",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Deluge of Doom",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Mulch",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Reanimate",
+    "why": "aimed"
+   },
+   {
+    "card": "Deadbridge Chant",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Whispersilk Cloak",
+    "why": "aura or equipment"
+   }
+  ],
+  "never_cast_by_forge": [],
+  "cast_by_rule_though_flagged": [
+   "Winter, Cynical Opportunist",
+   "Nyx Weaver"
+  ],
+  "optional_triggers": [
+   "Winter, Cynical Opportunist",
+   "Noxious Gearhulk",
+   "Solemn Simulacrum",
+   "Titania, Nature's Force",
+   "Cemetery Tampering",
+   "Crawling Sensation",
+   "Deathreap Ritual",
+   "Polluted Cistern // Dim Oubliette"
+  ]
+ }
+}

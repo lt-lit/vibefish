@@ -1,0 +1,199 @@
+{
+ "schema": 1,
+ "deck": "miracle-worker",
+ "variant": "draft",
+ "of": "playbook/precons/miracle-worker.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Azorius Signet",
+      "Mind Stone",
+      "Orzhov Signet",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "Aminatou, Veil Piercer"
+     ]
+    },
+    {
+     "play": [
+      "Bottomless Pool // Locker Room",
+      "Brainstone",
+      "Monologue Tax",
+      "Cramped Vents // Access Maze",
+      "Life Insurance",
+      "Secret Arcade // Dusty Parlor",
+      "Sigil of the Empty Throne",
+      "Sphere of Safety",
+      "Spirit-Sister's Call",
+      "Extravagant Replication",
+      "Shark Typhoon",
+      "One with the Multiverse"
+     ]
+    },
+    {
+     "play": [
+      "Archetype of Imagination",
+      "Athreos, Shroud-Veiled",
+      "Demon of Fate's Design",
+      "Dream Eater",
+      "Doomwake Giant",
+      "Ondu Spiritdancer",
+      "Prognostic Sphinx",
+      "Soaring Lightbringer",
+      "Nightmare Shepherd",
+      "Phenomenon Investigators",
+      "Solemn Simulacrum",
+      "Ancient Cellarspawn",
+      "Burnished Hart",
+      "Mesa Enchantress",
+      "Moon-Blessed Cleric",
+      "Verge Rangers",
+      "Starfield Mystic"
+     ]
+    },
+    {
+     "play": [
+      "Ponder",
+      "Read the Bones"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Auramancer",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Fear of Sleep Paralysis",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Metamorphosis Fanatic",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "The Master of Keys",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Arcane Denial",
+    "why": "instant"
+   },
+   {
+    "card": "Brainstorm",
+    "why": "instant"
+   },
+   {
+    "card": "Inkshield",
+    "why": "instant"
+   },
+   {
+    "card": "Otherworldly Gaze",
+    "why": "instant"
+   },
+   {
+    "card": "Return to Dust",
+    "why": "instant"
+   },
+   {
+    "card": "Swords to Plowshares",
+    "why": "instant"
+   },
+   {
+    "card": "Telling Time",
+    "why": "instant"
+   },
+   {
+    "card": "Thirst for Meaning",
+    "why": "instant"
+   },
+   {
+    "card": "Utter End",
+    "why": "instant"
+   },
+   {
+    "card": "Aminatou's Augury",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Diabolic Vision",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Entreat the Angels",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Portent",
+    "why": "aimed"
+   },
+   {
+    "card": "Redress Fate",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Terminus",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Time Wipe",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Cast Out",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Mirrormade",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "The Eldest Reborn",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Timely Ward",
+    "why": "aura or equipment"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Timely Ward"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Aminatou, Veil Piercer",
+   "Auramancer",
+   "Dream Eater",
+   "Mesa Enchantress",
+   "Metamorphosis Fanatic",
+   "Moon-Blessed Cleric",
+   "Nightmare Shepherd",
+   "Ondu Spiritdancer",
+   "Solemn Simulacrum",
+   "The Master of Keys",
+   "Bottomless Pool // Locker Room",
+   "Cramped Vents // Access Maze",
+   "Life Insurance",
+   "Secret Arcade // Dusty Parlor",
+   "Spirit-Sister's Call"
+  ]
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "schema": 1,
+ "deck": "blood-rites",
+ "variant": "draft",
+ "of": "playbook/precons/blood-rites.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Master of Dark Rites",
+      "Sol Ring",
+      "Arcane Signet",
+      "Mind Stone",
+      "Orzhov Signet",
+      "Talisman of Hierarchy",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "Clavileño, First of the Blessed"
+     ]
+    },
+    {
+     "play": [
+      "Wayfarer's Bauble",
+      "Promise of Aclazotz",
+      "Etchings of the Chosen",
+      "Glass-Cast Heart",
+      "Radiant Destiny",
+      "Kindred Boon",
+      "Exquisite Blood"
+     ]
+    },
+    {
+     "play": [
+      "Order of Sacred Dusk",
+      "Crossway Troublemakers",
+      "Timothar, Baron of Bats",
+      "Carmen, Cruel Skymarcher",
+      "Champion of Dusk",
+      "Vona, Butcher of Magan",
+      "Bloodtracker",
+      "Elenda, the Dusk Rose",
+      "Falkenrath Noble",
+      "Sanctum Seeker",
+      "Twilight Prophet",
+      "Drana, Liberator of Malakir",
+      "Elenda's Hierophant",
+      "Mavren Fein, Dusk Apostle",
+      "Nighthawk Scavenger",
+      "Welcoming Vampire",
+      "Yahenni, Undying Partisan",
+      "Bartolomé del Presidio",
+      "Blood Artist",
+      "Bloodghast",
+      "Charismatic Conqueror",
+      "Cordial Vampire",
+      "Cruel Celebrant",
+      "Dusk Legion Sergeant",
+      "Dusk Legion Zealot",
+      "Legion Lieutenant",
+      "Martyr of Dusk",
+      "Oathsworn Vampire",
+      "Indulgent Aristocrat",
+      "Viscera Seer"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Austere Command",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Blade of the Bloodchief",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Bloodline Necromancer",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Butcher of Malakir",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Damn",
+    "why": "aimed"
+   },
+   {
+    "card": "Heirloom Blade",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "March of the Canonized",
+    "why": "X in its cost"
+   },
+   {
+    "card": "New Blood",
+    "why": "aimed"
+   },
+   {
+    "card": "Olivia's Wrath",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Pact of the Serpent",
+    "why": "aimed"
+   },
+   {
+    "card": "Patron of the Vein",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Redemption Choir",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Return to Dust",
+    "why": "instant"
+   },
+   {
+    "card": "Sorin, Lord of Innistrad",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Swiftfoot Boots",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Swords to Plowshares",
+    "why": "instant"
+   },
+   {
+    "card": "Utter End",
+    "why": "instant"
+   },
+   {
+    "card": "Village Rites",
+    "why": "instant"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Pact of the Serpent"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Viscera Seer"
+  ],
+  "optional_triggers": [
+   "Bloodghast",
+   "Bloodline Necromancer",
+   "Crossway Troublemakers",
+   "Heirloom Blade",
+   "Promise of Aclazotz",
+   "Timothar, Baron of Bats"
+  ]
+ }
+}

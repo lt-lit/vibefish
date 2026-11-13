@@ -1,0 +1,178 @@
+{
+ "schema": 1,
+ "deck": "ahoy-mateys",
+ "variant": "draft",
+ "of": "playbook/precons/ahoy-mateys.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Dimir Signet",
+      "Izzet Signet",
+      "Rakdos Signet",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "Admiral Brass, Unsinkable"
+     ]
+    },
+    {
+     "play": [
+      "Wayfarer's Bauble",
+      "Black Market Connections",
+      "Herald's Horn",
+      "Icon of Ancestry",
+      "King Narfi's Betrayal",
+      "Shared Animosity",
+      "Bident of Thassa",
+      "The Grim Captain's Locker",
+      "The Indomitable",
+      "Vanquisher's Banner"
+     ]
+    },
+    {
+     "play": [
+      "Angrath's Marauders",
+      "Port Razer",
+      "Zara, Renegade Recruiter",
+      "Admiral Beckett Brass",
+      "Azure Fleet Admiral",
+      "Breeches, Brazen Plunderer",
+      "Captivating Crew",
+      "Don Andres, the Renegade",
+      "Gemcutter Buccaneer",
+      "Pitiless Plunderer",
+      "Ramirez DePietro, Pillager",
+      "Skeleton Crew",
+      "Broadside Bombardiers",
+      "Captain Lannery Storm",
+      "Corsair Captain",
+      "Ghost of Ramirez DePietro",
+      "Malcolm, Keen-Eyed Navigator",
+      "Storm Fleet Negotiator",
+      "Daring Saboteur",
+      "Departed Deckhand",
+      "Enterprising Scallywag",
+      "Fathom Fleet Captain",
+      "Francisco, Fowl Marauder",
+      "Kari Zev, Skyship Raider",
+      "Timestream Navigator",
+      "Warkite Marauder",
+      "Siren Stormtamer",
+      "Spectral Sailor"
+     ]
+    },
+    {
+     "play": [
+      "Faithless Looting"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Amphin Mutineer",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Arm-Mounted Anchor",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Blasphemous Act",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Blood Money",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Chaos Warp",
+    "why": "instant"
+   },
+   {
+    "card": "Coercive Recruiter",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Dire Fleet Daredevil",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Dire Fleet Ravager",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Distant Melody",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Evacuation",
+    "why": "instant"
+   },
+   {
+    "card": "Feed the Swarm",
+    "why": "aimed"
+   },
+   {
+    "card": "Hostage Taker",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Lethal Scheme",
+    "why": "instant"
+   },
+   {
+    "card": "Merchant Raiders",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Prismari Command",
+    "why": "instant"
+   },
+   {
+    "card": "Rakdos Charm",
+    "why": "instant"
+   },
+   {
+    "card": "Windfall",
+    "why": "sweeping or symmetrical"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Rakdos Charm",
+   "Windfall"
+  ],
+  "cast_by_rule_though_flagged": [
+   "Faithless Looting"
+  ],
+  "optional_triggers": [
+   "Admiral Brass, Unsinkable",
+   "Bident of Thassa",
+   "Breeches, Brazen Plunderer",
+   "Daring Saboteur",
+   "Dire Fleet Daredevil",
+   "Fathom Fleet Captain",
+   "Herald's Horn",
+   "Hostage Taker",
+   "Ramirez DePietro, Pillager",
+   "The Indomitable",
+   "Zara, Renegade Recruiter"
+  ]
+ }
+}

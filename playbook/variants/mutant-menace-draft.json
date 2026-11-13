@@ -1,0 +1,174 @@
+{
+ "schema": 1,
+ "deck": "mutant-menace",
+ "variant": "draft",
+ "of": "playbook/precons/mutant-menace.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Curiosity",
+      "Talisman of Dominance",
+      "Talisman of Resilience",
+      "Strength Bobblehead",
+      "Rampant Growth",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "The Wise Mothman"
+     ]
+    },
+    {
+     "play": [
+      "Hardened Scales",
+      "Branching Evolution",
+      "Guardian Project",
+      "Recon Craft Theta",
+      "Struggle for Project Purity",
+      "Inexorable Tide",
+      "Vault 87: Forced Evolution",
+      "Vault 12: The Necropolis"
+     ]
+    },
+    {
+     "play": [
+      "Lumbering Megasloth",
+      "Agent Frank Horrigan",
+      "Screeching Scorchbeast",
+      "Strong, The Brutish Thespian",
+      "Marcus, Mutant Mayor",
+      "Bloatfly Swarm",
+      "Corpsejack Menace",
+      "Lily Bowen, Raging Grandma",
+      "Young Deathclaws",
+      "Feral Ghoul",
+      "Glowing One",
+      "Hancock, Ghoulish Mayor",
+      "Harold and Bob, First Numens",
+      "Infesting Radroach",
+      "Jason Bright, Glowing Prophet",
+      "Raul, Trouble Shooter",
+      "Tato Farmer",
+      "Tireless Tracker",
+      "Watchful Radstag",
+      "Cathedral Acolyte",
+      "Piper Wright, Publick Reporter",
+      "Vexing Radgull",
+      "Winding Constrictor"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Alpha Deathclaw",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "The Master, Transcendent",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Mirelurk Queen",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Nightkin Ambusher",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Rampaging Yao Guai",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Fraying Sanity",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Atomize",
+    "why": "instant"
+   },
+   {
+    "card": "Biomass Mutation",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Contaminated Drink",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Inspiring Call",
+    "why": "instant"
+   },
+   {
+    "card": "Mutational Advantage",
+    "why": "instant"
+   },
+   {
+    "card": "Putrefy",
+    "why": "instant"
+   },
+   {
+    "card": "Radstorm",
+    "why": "instant"
+   },
+   {
+    "card": "Casualties of War",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Farseek",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Find // Finality",
+    "why": "aimed"
+   },
+   {
+    "card": "Nuclear Fallout",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Contagion Clasp",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Nuka-Nuke Launcher",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Power Fist",
+    "why": "aura or equipment"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Biomass Mutation"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Infesting Radroach",
+   "Screeching Scorchbeast",
+   "Tato Farmer"
+  ]
+ }
+}

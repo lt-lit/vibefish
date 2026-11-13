@@ -1,0 +1,161 @@
+{
+ "schema": 1,
+ "deck": "veloci-ramp-tor",
+ "variant": "draft",
+ "of": "playbook/precons/veloci-ramp-tor.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Ixalli's Lorekeeper",
+      "Sol Ring",
+      "Arcane Signet",
+      "Drover of the Mighty",
+      "Progenitor's Icon",
+      "Rampant Growth",
+      "Thunderherd Migration",
+      "Cultivate",
+      "Migration Path"
+     ]
+    },
+    {
+     "play": [
+      "Pantlaza, Sun-Favored"
+     ]
+    },
+    {
+     "play": [
+      "Descendants' Path",
+      "Lifecrafter's Bestiary",
+      "Rhythm of the Wild",
+      "From the Rubble"
+     ]
+    },
+    {
+     "play": [
+      "Zacama, Primal Calamity",
+      "Zetalpa, Primal Dawn",
+      "Rampaging Brontodon",
+      "Thundering Spineback",
+      "Verdant Sun's Avatar",
+      "Bellowing Aegisaur",
+      "Earthshaker Dreadmaw",
+      "Etali, Primal Storm",
+      "Regal Behemoth",
+      "Quartzwood Crasher",
+      "Regisaur Alpha",
+      "Scion of Calamity",
+      "Temple Altisaur",
+      "Wrathful Raptors",
+      "Xenagos, God of Revels",
+      "Curious Altisaur",
+      "Majestic Heliopterus",
+      "Raging Regisaur",
+      "Ripjaw Raptor",
+      "Shifting Ceratops",
+      "Atzocan Seer",
+      "Kinjalli's Sunwing",
+      "Ranging Raptors",
+      "Runic Armasaur",
+      "Sunfrill Imitator",
+      "Thrashing Brontodon",
+      "Topiary Stomper",
+      "Wayta, Trainer Prodigy",
+      "Wayward Swordtooth",
+      "Dinosaur Egg",
+      "Itzquinth, Firstborn of Gishath",
+      "Marauding Raptor",
+      "Otepec Huntmaster"
+     ]
+    },
+    {
+     "play": [
+      "Rishkar's Expertise"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Akroma's Will",
+    "why": "instant"
+   },
+   {
+    "card": "Apex Altisaur",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Bronzebeak Foragers",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Chandra's Ignition",
+    "why": "aimed"
+   },
+   {
+    "card": "Deathgorge Scavenger",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Farseek",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Fiery Confluence",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Generous Gift",
+    "why": "instant"
+   },
+   {
+    "card": "Path to Exile",
+    "why": "instant"
+   },
+   {
+    "card": "Raging Swordtooth",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Return of the Wildspeaker",
+    "why": "instant"
+   },
+   {
+    "card": "Savage Stomp",
+    "why": "aimed"
+   },
+   {
+    "card": "Wakening Sun's Avatar",
+    "why": "sweeping or symmetrical"
+   }
+  ],
+  "never_cast_by_forge": [],
+  "cast_by_rule_though_flagged": [
+   "Marauding Raptor"
+  ],
+  "optional_triggers": [
+   "Pantlaza, Sun-Favored",
+   "Deathgorge Scavenger",
+   "Descendants' Path",
+   "Dinosaur Egg",
+   "Etali, Primal Storm",
+   "Itzquinth, Firstborn of Gishath",
+   "Lifecrafter's Bestiary",
+   "Ranging Raptors",
+   "Runic Armasaur",
+   "Scion of Calamity",
+   "Sunfrill Imitator"
+  ]
+ }
+}

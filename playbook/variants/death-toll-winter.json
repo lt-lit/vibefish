@@ -1,0 +1,31 @@
+{
+ "schema": 1,
+ "deck": "death-toll",
+ "variant": "winter",
+ "of": "playbook/precons/death-toll.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true},
+  "cast": {
+   "rules": [
+    {"play": ["Sol Ring", "Arcane Signet", "Golgari Signet", "Talisman of Resilience", "Mind Stone", "Deathcap Cultivator", "Rampant Growth", "Commander's Sphere", "Harrow"]},
+    {"play": ["Winter, Cynical Opportunist"]},
+    {"play": ["Polluted Cistern // Dim Oubliette", "Stitcher's Supplier", "Nyx Weaver", "Crawling Sensation", "Cemetery Tampering"], "when": ["library >= 30"]},
+    {"play": ["Demonic Covenant", "Titania, Nature's Force", "Grist, the Hunger Tide", "Ob Nixilis Reignited", "Whip of Erebos", "Deathreap Ritual", "Into the Pit"]},
+    {"play": ["Deadbridge Chant"], "when": ["library >= 40"]},
+    {"play": ["Old Stickfingers"], "x": "max", "x_min": 3},
+    {"activate": ["Whip of Erebos"]},
+    {"play": ["Mulch", "Grisly Salvage", "Grapple with the Past"], "when": ["library >= 25"]}
+   ]
+  },
+  "triggers": [
+   {"accept": ["Winter, Cynical Opportunist"]},
+   {"accept": ["Cemetery Tampering", "Crawling Sensation", "Titania, Nature's Force"], "when": ["library >= 25"]},
+   {"accept": ["Deathreap Ritual"], "when": ["library >= 10"]},
+   {"accept": ["Solemn Simulacrum"]}
+  ],
+  "notes": "draft in progress",
+  "on": "2026-11-13"
+ }
+}

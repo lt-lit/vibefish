@@ -1,0 +1,203 @@
+{
+ "schema": 1,
+ "deck": "revenant-recon",
+ "variant": "draft",
+ "of": "playbook/precons/revenant-recon.json",
+ "about": "Drafted by runner/playbook.py from Forge's card scripts: a starting point for the deck's own playbook, not a tuned one. Only the playbook object is read by the harness.",
+ "playbook": {
+  "version": 0,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Dimir Signet",
+      "Mind Stone",
+      "Talisman of Dominance",
+      "Thought Vessel"
+     ]
+    },
+    {
+     "play": [
+      "Mirko, Obsessive Theorist"
+     ]
+    },
+    {
+     "play": [
+      "Ransom Note",
+      "Enhanced Surveillance",
+      "Case of the Shifting Visage",
+      "Phyrexian Arena",
+      "Foreboding Steamboat"
+     ]
+    },
+    {
+     "play": [
+      "Sphinx of the Second Sun",
+      "Eye of Duskmantle",
+      "Dream Eater",
+      "Grave Titan",
+      "Massacre Wurm",
+      "Watcher of Hours",
+      "Doom Whisperer",
+      "Marvo, Deep Operative",
+      "Mulldrifter",
+      "Syr Konrad, the Grim",
+      "Phyrexian Metamorph",
+      "Twilight Prophet",
+      "Final-Word Phantom",
+      "Master of Death",
+      "Unshakable Tail",
+      "Baleful Strix",
+      "Copy Catchers",
+      "Dimir Spybug",
+      "Dogged Detective",
+      "Lazav, the Multifarious",
+      "Nightveil Sprite",
+      "Sinister Starfish",
+      "Whispering Snitch",
+      "Thoughtbound Phantasm"
+     ]
+    },
+    {
+     "play": [
+      "Discovery // Dispersal",
+      "Notion Rain"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "notes": "Draft: mana first, the commander, team pumps only before combat with attackers, engines, creatures dearest first, card draw last. Everything in draft.left_to_forge is still Forge's to cast.",
+  "on": "2026-11-13"
+ },
+ "draft": {
+  "by": "runner/playbook.py 0.3.1",
+  "left_to_forge": [
+   {
+    "card": "Amphin Mutineer",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Overseer of the Damned",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Ravenous Chupacabra",
+    "why": "aimed when it enters"
+   },
+   {
+    "card": "Shriekmaw",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Vizier of Many Faces",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Black Sun's Zenith",
+    "why": "X in its cost"
+   },
+   {
+    "card": "Charnel Serenade",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Connive // Concoct",
+    "why": "aimed"
+   },
+   {
+    "card": "Deep Analysis",
+    "why": "aimed"
+   },
+   {
+    "card": "Reanimate",
+    "why": "aimed"
+   },
+   {
+    "card": "Rise of the Dark Realms",
+    "why": "sorcery of no drafted kind"
+   },
+   {
+    "card": "Toxic Deluge",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Brainstorm",
+    "why": "instant"
+   },
+   {
+    "card": "Consider",
+    "why": "instant"
+   },
+   {
+    "card": "Counterpoint",
+    "why": "instant"
+   },
+   {
+    "card": "Curate",
+    "why": "instant"
+   },
+   {
+    "card": "Ephara's Dispersal",
+    "why": "instant"
+   },
+   {
+    "card": "Mission Briefing",
+    "why": "instant"
+   },
+   {
+    "card": "Otherworldly Gaze",
+    "why": "instant"
+   },
+   {
+    "card": "Pile On",
+    "why": "instant"
+   },
+   {
+    "card": "Price of Fame",
+    "why": "instant"
+   },
+   {
+    "card": "Animate Dead",
+    "why": "aura or equipment"
+   },
+   {
+    "card": "Disinformation Campaign",
+    "why": "sweeping or symmetrical"
+   },
+   {
+    "card": "Necromancy",
+    "why": "its script says when (NeedsToPlay)"
+   },
+   {
+    "card": "Everflowing Chalice",
+    "why": "its script says when (NeedsToPlay)"
+   }
+  ],
+  "never_cast_by_forge": [
+   "Black Sun's Zenith",
+   "Toxic Deluge",
+   "Mission Briefing"
+  ],
+  "cast_by_rule_though_flagged": [],
+  "optional_triggers": [
+   "Mirko, Obsessive Theorist",
+   "Copy Catchers",
+   "Dogged Detective",
+   "Dream Eater",
+   "Lazav, the Multifarious",
+   "Marvo, Deep Operative",
+   "Master of Death",
+   "Mulldrifter",
+   "Nightveil Sprite",
+   "Overseer of the Damned",
+   "Shriekmaw",
+   "Watcher of Hours",
+   "Necromancy"
+  ]
+ }
+}
