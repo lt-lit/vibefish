@@ -1,0 +1,174 @@
+{
+ "schema": 1,
+ "deck": "ahoy-mateys",
+ "variant": "crew-forgeattack",
+ "of": "playbook/variants/ahoy-mateys-crew.json",
+ "about": "The crew candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "on": "2026-11-13",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Rakdos Signet",
+      "Dimir Signet",
+      "Izzet Signet",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "activate": [
+      "Wayfarer's Bauble"
+     ],
+     "when": [
+      "turn <= 7"
+     ]
+    },
+    {
+     "play": [
+      "Admiral Brass, Unsinkable"
+     ]
+    },
+    {
+     "play": [
+      "Herald's Horn",
+      "Admiral Beckett Brass",
+      "Skeleton Crew",
+      "Corsair Captain",
+      "Vanquisher's Banner",
+      "Icon of Ancestry",
+      "Shared Animosity",
+      "Angrath's Marauders",
+      "Port Razer",
+      "Gemcutter Buccaneer",
+      "Malcolm, Keen-Eyed Navigator",
+      "Ramirez DePietro, Pillager",
+      "Breeches, Brazen Plunderer",
+      "Black Market Connections",
+      "Bident of Thassa",
+      "Arm-Mounted Anchor",
+      "The Indomitable",
+      "Zara, Renegade Recruiter",
+      "Don Andres, the Renegade",
+      "Azure Fleet Admiral",
+      "Pitiless Plunderer",
+      "Captain Lannery Storm",
+      "Broadside Bombardiers",
+      "Kari Zev, Skyship Raider",
+      "Fathom Fleet Captain",
+      "Francisco, Fowl Marauder",
+      "Storm Fleet Negotiator",
+      "Ghost of Ramirez DePietro",
+      "Warkite Marauder",
+      "Daring Saboteur",
+      "Departed Deckhand",
+      "Enterprising Scallywag",
+      "Timestream Navigator",
+      "Captivating Crew",
+      "Spectral Sailor",
+      "Siren Stormtamer",
+      "The Grim Captain's Locker",
+      "King Narfi's Betrayal",
+      "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "activate": [
+      "Arm-Mounted Anchor"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Timestream Navigator"
+     ]
+    },
+    {
+     "play": [
+      "Distant Melody"
+     ],
+     "when": [
+      "type:Pirate >= 4",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Windfall"
+     ],
+     "when": [
+      "hand <= 5",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Faithless Looting"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Spectral Sailor"
+     ],
+     "phase": "main2",
+     "when": [
+      "library >= 30",
+      "mana >= 4"
+     ]
+    },
+    {
+     "activate": [
+      "Port of Karfell"
+     ],
+     "phase": "main2",
+     "when": [
+      "lands >= 9"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Admiral Brass, Unsinkable"
+    ]
+   },
+   {
+    "accept": [
+     "Fathom Fleet Captain"
+    ]
+   },
+   {
+    "accept": [
+     "Bident of Thassa"
+    ],
+    "when": [
+     "library >= 20"
+    ]
+   },
+   {
+    "accept": [
+     "Daring Saboteur"
+    ],
+    "when": [
+     "library >= 20"
+    ]
+   },
+   {
+    "accept": [
+     "Herald's Horn",
+     "Breeches, Brazen Plunderer",
+     "Ramirez DePietro, Pillager",
+     "Zara, Renegade Recruiter"
+    ]
+   }
+  ],
+  "notes": "Ahoy Mateys (Admiral Brass, Unsinkable: mills four on entering; at the beginning of each combat returns a Pirate from the graveyard as a 4/4 with haste). Stock already runs this deck fairly well (29% of mana unspent in the audit, Brass's combat trigger taken); what it leaves undone is timing: Brass waits one to three turns past the turn it could be cast in four of twelve audit games. The rules put the rocks down, then Brass the first turn he is castable, then the Pirate lords and engines (Herald's Horn first for the discount, Beckett Brass, Skeleton Crew, Corsair Captain, Banner, Icon, Shared Animosity, Angrath's Marauders) and the rest of the Pirates dearest first. Windfall (flagged never-cast) refills a hand of five or fewer and puts Pirates in the graveyard for Brass; Faithless Looting likewise; Distant Melody waits for four Pirates; all three need a library of 30. Arm-Mounted Anchor is equipped before combat, Spectral Sailor draws with spare mana after combat, Timestream Navigator takes its extra turn, Port of Karfell is used at nine lands. Triggers taken: Fathom Fleet Captain's paid token, Bident of Thassa and Daring Saboteur's draws (library 20), Herald's Horn, Breeches, Ramirez, Zara. Attack: go-wide at the highest life with the split (the batch default, so goldfish measures the engine). Answers are left to Forge. Goldfish audit seeds 29001-29012: stock 9.75, this file 8.92."
+ }
+}

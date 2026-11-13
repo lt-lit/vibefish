@@ -5,7 +5,7 @@
  "of": "playbook/precons/death-toll.json",
  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
  "playbook": {
-  "version": 1,
+  "version": 2,
   "attack": {
    "policy": "go_wide",
    "target": "highest_life",
@@ -16,6 +16,14 @@
   },
   "cast": {
    "rules": [
+    {
+     "activate": [
+      "Nyx Weaver"
+     ],
+     "when": [
+      "library <= 30"
+     ]
+    },
     {
      "play": [
       "Sol Ring",
@@ -69,8 +77,11 @@
      "play": [
       "Old Stickfingers"
      ],
-     "x": "max",
-     "x_min": 3
+     "x": 5,
+     "x_min": 3,
+     "when": [
+      "library >= 30"
+     ]
     },
     {
      "activate": [
@@ -86,25 +97,40 @@
      "when": [
       "library >= 25"
      ]
+    },
+    {
+     "hold": [
+      "Deadbridge Chant"
+     ],
+     "until": [
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Nyx Weaver",
+      "Cemetery Tampering",
+      "Crawling Sensation",
+      "Stitcher's Supplier",
+      "Old Stickfingers"
+     ],
+     "until": [
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Mulch",
+      "Grisly Salvage",
+      "Grapple with the Past"
+     ],
+     "until": [
+      "library >= 25"
+     ]
     }
    ]
   },
   "triggers": [
-   {
-    "accept": [
-     "Winter, Cynical Opportunist"
-    ]
-   },
-   {
-    "accept": [
-     "Cemetery Tampering",
-     "Crawling Sensation",
-     "Titania, Nature's Force"
-    ],
-    "when": [
-     "library >= 25"
-    ]
-   },
    {
     "accept": [
      "Deathreap Ritual"
