@@ -1,50 +1,259 @@
 {
-  "schema": 1,
-  "deck": "squirreled-away",
-  "variant": "acorns",
-  "of": "playbook/precons/squirreled-away.json",
-  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
-  "playbook": {
-    "version": 1,
-    "attack": {"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true},
-    "cast": {
-      "rules": [
-        {"play": ["Sol Ring", "Arcane Signet", "Golgari Signet", "Talisman of Resilience"]},
-        {"play": ["Hazel of the Rootbloom"]},
-        {"play": ["End-Raze Forerunners"], "when": ["attackers >= 4"], "phase": "main1"},
-        {"hold": ["End-Raze Forerunners"], "until": ["attackers >= 4", "main == 1"]},
-        {"play": ["Chatterfang, Squirrel General", "Squirrel Sovereign", "Deep Forest Hermit", "Chitterspitter",
-                  "Toski, Bearer of Secrets", "The Odd Acorn Gang", "Beastmaster Ascension", "Academy Manufactor",
-                  "Idol of Oblivion", "Skullclamp", "Bastion of Remembrance", "Zulaport Cutthroat", "Nadier's Nightblade",
-                  "Squirrel Nest", "Gourmand's Talent", "Prosperous Innkeeper", "Tireless Provisioner",
-                  "Beledros Witherbloom", "Garruk, Cursed Huntsman", "Ogre Slumlord", "Moonstone Eulogist",
-                  "Chittering Witch", "Swarmyard Massacre", "Honored Dreyleader", "Scurry of Squirrels",
-                  "Morbid Opportunist", "Moldervine Reclamation", "Maskwood Nexus", "Arasta of the Endless Web",
-                  "Insatiable Frugivore", "Woe Strider", "Sword of the Squeak", "Ravenous Squirrel", "Nested Shambler",
-                  "Gilded Goose"]},
-        {"play": ["Second Harvest"], "when": ["tokens >= 4"]},
-        {"play": ["Shamanic Revelation"], "when": ["creatures >= 5", "library >= 30"]},
-        {"activate": ["Gourmand's Talent"], "ability": "Level 2"},
-        {"activate": ["Gourmand's Talent"], "ability": "Level 3"},
-        {"activate": ["Skullclamp"], "ability": "Equip", "target": "Squirrel Token", "times": 3,
-         "when": ["not controls Squirrel Sovereign", "not controls Deep Forest Hermit", "library >= 30"]},
-        {"activate": ["Idol of Oblivion"], "ability": "Draw a card", "when": ["library >= 20"]},
-        {"play": ["Chatterstorm"], "when": ["storm >= 2"]},
-        {"play": ["Chatterstorm"], "phase": "main2"},
-        {"activate": ["Chitterspitter"], "phase": "main2"},
-        {"activate": ["Maskwood Nexus"], "phase": "main2"},
-        {"activate": ["Forest", "Swamp", "Barren Moor", "Bojuka Bog", "Command Tower", "Exotic Orchard", "Golgari Rot Farm",
-                      "Grim Backwoods", "Haunted Mire", "Jungle Hollow", "Llanowar Wastes", "Necroblossom Snarl",
-                      "Oran-Rief, the Vastwood", "Path of Ancestry", "Swarmyard", "Tainted Wood", "Temple of Malady",
-                      "Tranquil Thicket", "Twilight Mire", "Viridescent Bog", "Woodland Cemetery"],
-         "ability": "Squirrel creature token", "phase": "main2"},
-        {"activate": ["Idol of Oblivion"], "ability": "Draw a card", "phase": "main2", "when": ["library >= 20"]}
-      ]
+ "schema": 1,
+ "deck": "squirreled-away",
+ "variant": "acorns",
+ "of": "playbook/precons/squirreled-away.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 2,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Golgari Signet",
+      "Talisman of Resilience"
+     ]
     },
-    "triggers": [
-      {"accept": ["Beastmaster Ascension"]},
-      {"accept": ["Chitterspitter"], "when": ["tokens >= 3"]}
+    {
+     "play": [
+      "Hazel of the Rootbloom"
+     ]
+    },
+    {
+     "play": [
+      "End-Raze Forerunners"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "End-Raze Forerunners"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Chatterfang, Squirrel General",
+      "Squirrel Sovereign",
+      "Deep Forest Hermit",
+      "Chitterspitter",
+      "Toski, Bearer of Secrets",
+      "The Odd Acorn Gang",
+      "Beastmaster Ascension",
+      "Academy Manufactor",
+      "Idol of Oblivion",
+      "Skullclamp",
+      "Bastion of Remembrance",
+      "Zulaport Cutthroat",
+      "Nadier's Nightblade",
+      "Squirrel Nest",
+      "Gourmand's Talent",
+      "Prosperous Innkeeper",
+      "Tireless Provisioner",
+      "Beledros Witherbloom",
+      "Garruk, Cursed Huntsman",
+      "Ogre Slumlord",
+      "Moonstone Eulogist",
+      "Chittering Witch",
+      "Swarmyard Massacre",
+      "Honored Dreyleader",
+      "Scurry of Squirrels",
+      "Morbid Opportunist",
+      "Moldervine Reclamation",
+      "Maskwood Nexus",
+      "Arasta of the Endless Web",
+      "Hazel's Brewmaster",
+      "Insatiable Frugivore",
+      "Woe Strider",
+      "Sword of the Squeak",
+      "Ravenous Squirrel",
+      "Nested Shambler",
+      "Gilded Goose"
+     ]
+    },
+    {
+     "play": [
+      "Second Harvest"
+     ],
+     "when": [
+      "tokens >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Shamanic Revelation"
+     ],
+     "when": [
+      "creatures >= 5",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Gourmand's Talent"
+     ],
+     "ability": "Level 2"
+    },
+    {
+     "activate": [
+      "Gourmand's Talent"
+     ],
+     "ability": "Level 3"
+    },
+    {
+     "activate": [
+      "Skullclamp"
+     ],
+     "ability": "Equip",
+     "target": "Squirrel Token",
+     "times": 3,
+     "when": [
+      "not controls Squirrel Sovereign",
+      "not controls Deep Forest Hermit",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Chatterstorm"
+     ],
+     "when": [
+      "storm >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Chatterstorm"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Chitterspitter"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Maskwood Nexus"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Forest",
+      "Swamp",
+      "Barren Moor",
+      "Bojuka Bog",
+      "Command Tower",
+      "Exotic Orchard",
+      "Golgari Rot Farm",
+      "Grim Backwoods",
+      "Haunted Mire",
+      "Jungle Hollow",
+      "Llanowar Wastes",
+      "Necroblossom Snarl",
+      "Oran-Rief, the Vastwood",
+      "Path of Ancestry",
+      "Swarmyard",
+      "Tainted Wood",
+      "Temple of Malady",
+      "Tranquil Thicket",
+      "Twilight Mire",
+      "Viridescent Bog",
+      "Woodland Cemetery"
+     ],
+     "ability": "Squirrel creature token",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "phase": "main2",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Zulaport Cutthroat"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Bastion of Remembrance"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Nadier's Nightblade"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Poison-Tip Archer"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Beastmaster Ascension"
+    ]
+   },
+   {
+    "accept": [
+     "Chitterspitter"
     ],
-    "notes": "Draft 1."
-  }
+    "when": [
+     "tokens >= 3"
+    ]
+   }
+  ],
+  "notes": "Draft 1."
+ }
 }

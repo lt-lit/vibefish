@@ -1,0 +1,210 @@
+{
+ "schema": 1,
+ "deck": "blight-curse",
+ "variant": "wretch",
+ "of": "playbook/precons/blight-curse.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 1,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Blowfly Infestation"
+     ],
+     "until": [
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "hold": [
+      "Eventide's Shadow"
+     ],
+     "until": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Ignoble Hierarch",
+      "Commander's Sphere",
+      "Wickersmith's Tools",
+      "Devoted Druid"
+     ]
+    },
+    {
+     "play": [
+      "Channeler Initiate"
+     ],
+     "when": [
+      "creatures == 0"
+     ]
+    },
+    {
+     "play": [
+      "Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "play": [
+      "Hapatra, Vizier of Poisons",
+      "Lasting Tarfire",
+      "Sinister Gnarlbark",
+      "Grave Venerations",
+      "Chimil, the Inner Sun",
+      "Vraska, Betrayal's Sting",
+      "Evolution Sage",
+      "Oft-Nabbed Goat",
+      "Puca's Covenant"
+     ]
+    },
+    {
+     "play": [
+      "Flourishing Defenses"
+     ],
+     "when": [
+      "library >= 40",
+      "not controls Midnight Banshee"
+     ]
+    },
+    {
+     "activate": [
+      "Vraska, Betrayal's Sting"
+     ],
+     "ability": "You draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "activate": [
+      "Grim Poppet"
+     ],
+     "target": "Oft-Nabbed Goat",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Grim Poppet"
+     ],
+     "target": "Tree of Perdition",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Ferrafor, Young Yew"
+     ],
+     "target": "Oft-Nabbed Goat"
+    },
+    {
+     "play": [
+      "Painful Truths",
+      "Harmonize",
+      "Night's Whisper",
+      "Hoarder's Greed",
+      "Burning Curiosity"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Cathartic Reunion"
+     ],
+     "when": [
+      "library >= 30",
+      "hand >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Grave Titan",
+      "Grim Poppet",
+      "Carnifex Demon",
+      "Archfiend of Ifnir",
+      "Kulrath Knight",
+      "The Scorpion God",
+      "Village Pillagers",
+      "Massacre Girl, Known Killer",
+      "Tree of Perdition",
+      "Wickerbough Elder",
+      "The Reaper, King No More",
+      "Glissa Sunslayer",
+      "Dusk Urchins",
+      "Necroskitter",
+      "Dread Tiller"
+     ]
+    },
+    {
+     "activate": [
+      "The Scorpion God"
+     ],
+     "target": "Oft-Nabbed Goat",
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "The Scorpion God"
+     ],
+     "target": "Tree of Perdition",
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "The Scorpion God"
+     ],
+     "target": "Sinister Gnarlbark",
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "Wickersmith's Tools"
+     ],
+     "ability": "Create X",
+     "phase": "main2",
+     "when": [
+      "turn >= 10",
+      "lands >= 7"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Flourishing Defenses"
+    ],
+    "when": [
+     "library <= 29"
+    ]
+   },
+   {
+    "accept": [
+     "Flourishing Defenses",
+     "Dread Tiller",
+     "Puca's Covenant",
+     "The Reaper, King No More",
+     "Necroskitter"
+    ]
+   }
+  ],
+  "notes": "work in progress"
+ }
+}

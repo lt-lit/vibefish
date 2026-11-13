@@ -14,7 +14,7 @@
         {"play": ["Hardened Scales", "Winding Constrictor", "Branching Evolution", "Corpsejack Menace"]},
         {"play": ["Raul, Trouble Shooter", "Hancock, Ghoulish Mayor", "Guardian Project", "Inexorable Tide", "Marcus, Mutant Mayor", "Screeching Scorchbeast", "Mirelurk Queen"]},
         {"activate": ["Raul, Trouble Shooter"], "when": ["library >= 30"], "phase": "main1"},
-        {"play": ["Agent Frank Horrigan", "Strong, The Brutish Thespian", "Bloatfly Swarm", "Lily Bowen, Raging Grandma", "Young Deathclaws", "Vault 12: The Necropolis", "Recon Craft Theta", "Tireless Tracker", "Glowing One", "Feral Ghoul", "Watchful Radstag", "Infesting Radroach", "Vexing Radgull", "Piper Wright, Publick Reporter", "Tato Farmer", "Cathedral Acolyte", "Jason Bright, Glowing Prophet", "Strength Bobblehead"]},
+        {"play": ["Agent Frank Horrigan", "Strong, the Brutish Thespian", "Bloatfly Swarm", "Lily Bowen, Raging Grandma", "Young Deathclaws", "Vault 12: The Necropolis", "Recon Craft Theta", "Tireless Tracker", "Glowing One", "Feral Ghoul", "Watchful Radstag", "Infesting Radroach", "Vexing Radgull", "Piper Wright, Publick Reporter", "Tato Farmer", "Cathedral Acolyte", "Jason Bright, Glowing Prophet", "Strength Bobblehead"]},
         {"play": ["Biomass Mutation"], "x": "max", "x_min": 6, "when": ["attackers >= 3"], "phase": "main1"},
         {"play": ["Contaminated Drink"], "x": "max", "x_min": 3, "when": ["hand <= 2", "library >= 30"]},
         {"play": ["Harmonize"], "when": ["library >= 25"]},
