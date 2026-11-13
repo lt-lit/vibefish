@@ -49,7 +49,7 @@
      "activate": [
       "Chandra, Awakened Inferno"
      ],
-     "ability": "3 damage to each non-Elemental creature",
+     "ability": "each non-Elemental creature",
      "when": [
       "opp_creatures >= 4",
       "opp_creatures > creatures"
@@ -202,7 +202,7 @@
      "activate": [
       "Gideon Jura"
      ],
-     "ability": "attack Gideon Jura if able",
+     "ability": "if able",
      "when": [
       "threat >= 8"
      ],

@@ -21,7 +21,7 @@
       "hand:wipes >= 1",
       "creatures >= 2",
       "mana >= 9",
-      "opp_creatures >= 7",
+      "opp_creatures >= 5",
       "opp_power > power",
       "opp_creatures > creatures"
      ]
@@ -33,7 +33,7 @@
       "Ultimate Magic: Meteor"
      ],
      "when": [
-      "opp_creatures >= 7",
+      "opp_creatures >= 5",
       "opp_power > power",
       "opp_creatures > creatures"
      ]
