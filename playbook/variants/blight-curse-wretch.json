@@ -102,6 +102,16 @@
     },
     {
      "activate": [
+      "Grim Poppet"
+     ],
+     "target": "Sinister Gnarlbark",
+     "times": 1,
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
       "Ferrafor, Young Yew"
      ],
      "target": "Oft-Nabbed Goat"
@@ -205,6 +215,6 @@
     ]
    }
   ],
-  "notes": "work in progress"
+  "notes": "Blight Curse (Auntie Ool, Cursewretch: a -1/-1 counter on a creature of ours draws a card, on an opponent's costs its controller 1 life). Audit, 12 stock goldfish games (seeds 21002-21013): kill turn 15.6, half the mana unspent, nothing cast on a third of turns; stock sat on Painful Truths, Harmonize and Cathartic Reunion with full hands, never used Grim Poppet, Ferrafor, Wickersmith's Tools, Carnifex Demon or Nesting Grounds, used Vraska's +0 once in 33 turns and The Scorpion God 3 times in 30. RULES 1-2, holds: Blowfly Infestation until an opponent has two creatures (in goldfish its mandatory trigger aims at our own Snakes and, with Hapatra and Auntie, loops until Forge calls the game a draw or the seat decks), Eventide's Shadow until the library has 40 (it drew 18 at once and helped mill the seat). RULE 3, mana first; Devoted Druid is flagged never-cast and is a plain dork here. RULE 4, Channeler Initiate only onto an empty board, so its three counters land on itself (Forge aims them at Auntie, Devoted Druid or Dread Tiller otherwise). RULE 5, Auntie at once. RULE 6, the engines that turn counters into cards, snakes and damage (Hapatra, Lasting Tarfire, Sinister Gnarlbark, Grave Venerations, Chimil, Vraska, Evolution Sage, Oft-Nabbed Goat, Puca's Covenant). RULE 7 and trigger rule 1, Flourishing Defenses only with 40 cards left and no Midnight Banshee, and its Elf declined under 30: Banshee's upkeep counters on green tokens plus Auntie drew 40 cards in a turn cycle and decked the seat in tune-1. RULE 8, Vraska's +0 every turn (draw, proliferate). RULES 9-12, the free counters of Grim Poppet and Ferrafor's doubling aimed at our own sponges (Oft-Nabbed Goat, which draws and drains X when it dies; Tree of Perdition, whose lower toughness is a lower life to swap; Gnarlbark once a turn) for Auntie's draws and Tarfire's end-step damage. RULES 13-14, the draw spells with 30 cards left. RULE 15, the threats, dearest first. RULES 16-18, The Scorpion God's counter on the same sponges with spare mana. RULE 19, Wickersmith's Tools cashed in from turn 10 in the second main phase (charge counters cannot be read). Trigger rule 2 takes Dread Tiller's land, Puca's Covenant, The Reaper's and Necroskitter's steals. The answers are left to Forge. Attack: the batch default go_wide."
  }
 }

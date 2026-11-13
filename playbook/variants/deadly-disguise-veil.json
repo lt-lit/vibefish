@@ -42,6 +42,12 @@
     {"activate": ["Mastery of the Unseen"], "times": 4, "phase": "main2", "when": ["library >= 20"]}
    ]
   },
-  "notes": "draft v1"
+  "triggers": [
+   {"accept": ["Trail of Mystery"], "when": ["library >= 20"]},
+   {"accept": ["Lifecrafter's Bestiary"], "when": ["library >= 30"]},
+   {"accept": ["Ugin's Mastery", "Imperial Hellkite", "Deathmist Raptor", "Veiled Ascension", "Yedora, Grave Gardener",
+               "Broodhatch Nantuko", "Temur War Shaman", "Root Elemental"]}
+  ],
+  "notes": "draft v2"
  }
 }

@@ -6,17 +6,118 @@
  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
  "playbook": {
   "version": 1,
-  "attack": {"policy": "go_wide", "target": "highest_life", "min_attackers": 3, "safety_margin": 5, "max_reserve": 3, "spread": true},
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
   "cast": {
    "rules": [
-    {"play": ["Sol Ring", "Arcane Signet", "Ixalli's Lorekeeper", "Drover of the Mighty", "Rampant Growth", "Farseek", "Thunderherd Migration", "Cultivate", "Migration Path", "Progenitor's Icon"]},
-    {"play": ["Pantlaza, Sun-Favored"]},
-    {"play": ["Otepec Huntmaster", "Lifecrafter's Bestiary", "Rhythm of the Wild", "Descendants' Path"]},
-    {"play": ["Rishkar's Expertise"], "when": ["power >= 4", "library >= 30"]},
-    {"play": ["Zacama, Primal Calamity", "Zetalpa, Primal Dawn", "Apex Altisaur", "Rampaging Brontodon", "Thundering Spineback", "Verdant Sun's Avatar", "Etali, Primal Storm", "Earthshaker Dreadmaw", "Bellowing Aegisaur", "Regal Behemoth", "From the Rubble", "Xenagos, God of Revels", "Regisaur Alpha", "Scion of Calamity", "Quartzwood Crasher", "Wrathful Raptors", "Temple Altisaur", "Curious Altisaur", "Majestic Heliopterus", "Raging Regisaur", "Ripjaw Raptor", "Shifting Ceratops", "Bronzebeak Foragers", "Kinjalli's Sunwing", "Ranging Raptors", "Runic Armasaur", "Sunfrill Imitator", "Thrashing Brontodon", "Topiary Stomper", "Wayward Swordtooth", "Wayta, Trainer Prodigy", "Atzocan Seer", "Deathgorge Scavenger", "Dinosaur Egg"]},
-    {"activate": ["Thundering Spineback"], "phase": "main2"}
+    {
+     "hold": [
+      "Mosswort Bridge"
+     ],
+     "ability": "play the exiled card",
+     "until": [
+      "power >= 10"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Ixalli's Lorekeeper",
+      "Drover of the Mighty",
+      "Rampant Growth",
+      "Farseek",
+      "Thunderherd Migration",
+      "Cultivate",
+      "Migration Path",
+      "Progenitor's Icon"
+     ]
+    },
+    {
+     "play": [
+      "Pantlaza, Sun-Favored"
+     ]
+    },
+    {
+     "play": [
+      "Otepec Huntmaster",
+      "Lifecrafter's Bestiary",
+      "Rhythm of the Wild",
+      "Descendants' Path"
+     ]
+    },
+    {
+     "play": [
+      "Rishkar's Expertise"
+     ],
+     "when": [
+      "power >= 4",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Zacama, Primal Calamity",
+      "Zetalpa, Primal Dawn",
+      "Apex Altisaur",
+      "Rampaging Brontodon",
+      "Thundering Spineback",
+      "Verdant Sun's Avatar",
+      "Etali, Primal Storm",
+      "Earthshaker Dreadmaw",
+      "Bellowing Aegisaur",
+      "Regal Behemoth",
+      "From the Rubble",
+      "Xenagos, God of Revels",
+      "Regisaur Alpha",
+      "Scion of Calamity",
+      "Quartzwood Crasher",
+      "Wrathful Raptors",
+      "Temple Altisaur",
+      "Curious Altisaur",
+      "Majestic Heliopterus",
+      "Raging Regisaur",
+      "Ripjaw Raptor",
+      "Shifting Ceratops",
+      "Bronzebeak Foragers",
+      "Kinjalli's Sunwing",
+      "Ranging Raptors",
+      "Runic Armasaur",
+      "Sunfrill Imitator",
+      "Thrashing Brontodon",
+      "Topiary Stomper",
+      "Wayward Swordtooth",
+      "Wayta, Trainer Prodigy",
+      "Atzocan Seer",
+      "Deathgorge Scavenger",
+      "Dinosaur Egg"
+     ]
+    },
+    {
+     "activate": [
+      "Thundering Spineback"
+     ],
+     "phase": "main2"
+    }
    ]
   },
-  "notes": "Tuning draft."
+  "notes": "Tuning draft.",
+  "triggers": [
+   {
+    "accept": [
+     "Lifecrafter's Bestiary"
+    ],
+    "when": [
+     "mana >= 1",
+     "library >= 30"
+    ]
+   }
+  ]
  }
 }
