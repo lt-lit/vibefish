@@ -1,8 +1,8 @@
 {
-  "requested": "2026-11-14T01:29Z",
-  "note": "The owner's table, fourth exam (DESIGN §30; ab-run #27 on seed 20261260, #28 on seed 20261280 and #29 on seed 20261290 are the first three). Miracle Worker, the tenth of the owner's decks, at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks: the deck's own seat under stock AI and under the candidate with the go-wide attack it was written with (miracle-worker@veil; 1.6 turns faster than stock in goldfish on 40 unseen seeds), and the same rules with the attack left to Forge as a playbook-only arm on the same tables (the -forgeattack sibling).",
+  "requested": "2026-11-14T02:31Z",
+  "note": "Answer rules for the pool decks that had none, first part (DESIGN §30; one agent a deck from the 600 games of league-run #3, each candidate checked against the shipped playbook and its local runs): Eldrazi Incursion, Quick Draw and Enduring Enchantments. Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, once under its shipped playbook and once under the candidate with the answer rules, playbook arms only, on the same tables (seed 20261300; ab.py join shipped=<deck>:playbook answers=<deck>@answers:playbook). No stock arm: the question is what the answer rules add to the shipped bot. The other six candidates follow on the same seed as their agents finish.",
   "games": "200",
-  "shards_per_deck": "10",
+  "shards_per_deck": "5",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
@@ -11,14 +11,14 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "miracle-worker@veil",
-      "arms": "stock,playbook",
-      "seed": "20261290"
+      "decks": "eldrazi-incursion,quick-draw,enduring-enchantments",
+      "arms": "playbook",
+      "seed": "20261300"
     },
     {
-      "decks": "miracle-worker@veil-forgeattack",
+      "decks": "eldrazi-incursion@answers,quick-draw@answers,enduring-enchantments@answers",
       "arms": "playbook",
-      "seed": "20261290"
+      "seed": "20261300"
     }
   ]
 }
