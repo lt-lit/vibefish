@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T00:13Z",
-  "note": "The owner's table, second exam (DESIGN §30; the first is ab-run #27, seed 20261260, still running when this was queued). Three more of the ten precons the owner's group plays, each candidate at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks: the deck's own seat under stock AI and under the candidate with the go-wide attack it was written with (veloci-ramp-tor@stampede, death-toll@winter, deadly-disguise@veil; 1.3, 1.9 and 0.8 turns faster than stock in goldfish on 40 unseen seeds, Death Toll's rules changed once after validation games had been seen), and the same rules with the attack left to Forge as a playbook-only arm on the same tables (the -forgeattack siblings).",
+  "requested": "2026-11-14T00:22Z",
+  "note": "The owner's table, third exam (DESIGN §30; ab-run #27 on seed 20261260 and #28 on seed 20261280 are the first two). Revenant Recon and Blood Rites, each candidate at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks: the deck's own seat under stock AI and under the candidate with the go-wide attack it was written with (revenant-recon@mirko, blood-rites@demons; 0.9 and 1.1 turns faster than stock in goldfish on 40 unseen seeds), and the same rules with the attack left to Forge as a playbook-only arm on the same tables (the -forgeattack siblings). Miracle Worker, the tenth deck, follows on the same seed when its validation is done.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,14 +11,14 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "veloci-ramp-tor@stampede,death-toll@winter,deadly-disguise@veil",
+      "decks": "revenant-recon@mirko,blood-rites@demons",
       "arms": "stock,playbook",
-      "seed": "20261280"
+      "seed": "20261290"
     },
     {
-      "decks": "veloci-ramp-tor@stampede-forgeattack,death-toll@winter-forgeattack,deadly-disguise@veil-forgeattack",
+      "decks": "revenant-recon@mirko-forgeattack,blood-rites@demons-forgeattack",
       "arms": "playbook",
-      "seed": "20261280"
+      "seed": "20261290"
     }
   ]
 }
