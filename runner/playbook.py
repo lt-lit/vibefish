@@ -4,6 +4,8 @@
     runner/playbook.py draft --deck hail-caesar [--runtime forge/runtime-snapshot] [--league runner/precon-league.json]
                              [--out playbook/variants/hail-caesar-draft.json]
     runner/playbook.py roles --deck hail-caesar [--runtime ...]     # the classification only, one card a line
+    runner/playbook.py adapt --deck blight-curse --deck-file "/abs/My List.dck" [--base FILE] [--out FILE]
+                             [--no-forge-rule] [--no-wait] [--runtime ...]   # a precon's playbook for a list of your own
 
 A draft is where a deck's playbook starts, not where it ends. It sorts the deck's non-land cards by what their
 scripts say they are and writes the cast rules every hand-written playbook so far began with:
@@ -26,9 +28,22 @@ step is plain: goldfish it against stock (runner/goldfish.sh -P, runner/hands.py
 
 The output is a variant file (playbook/variants/<deck>-draft.json): the harness and runner/ab.py play it as it is
 (--playbook / --data), and it never replaces a deck's shipped playbook by itself. Standard library only.
+
+`adapt` is for playtesting a list of your own that started as a precon (DESIGN.md section 31): the precon's playbook
+(playbook/precons/<deck>.json, or --base FILE) cut to the cards the list still holds, because the harness refuses a
+playbook that names a card its deck does not have. A rule loses the cards the list dropped and goes when none is
+left, when its target is gone, or when it waits for a permanent the list no longer has; a hold whose release waits
+for such a permanent holds for good. The cards the list added are named by no rule, so they are Forge's to cast at a
+`{"forge": "unnamed", "wait": "main2"}` rule, which `adapt` puts after the commander's rule when the playbook has no
+forge rule of its own (playbook/README.md: without it the rules starve what they do not name). It prints what it cut,
+what is new, and which new cards Forge's AI never casts by itself (AI:RemoveDeck:All: those need a play rule written
+for them, or they stay in hand). The result is written next to the list (<list>.playbook.json) for
+`runner/ab.py play --deck-file LIST.dck --data LIST.playbook.json --arms stock,playbook`.
 """
 import argparse
 import datetime as dt
+import hashlib
+import json
 import os
 import re
 import sys
@@ -210,17 +225,211 @@ def draft(deck_id, cards):
     }
 
 
+CONTROLS = re.compile(r"^(not\s+)?controls\s+(.+)$")
+KINDS = ("play", "activate", "hold", "forge")
+
+
+def _list(v):
+    return [] if v is None else list(v) if isinstance(v, list) else [v]
+
+
+def adapt_playbook(pb, have, commanders, forge_rule=True, wait=True):
+    """A playbook cut to the cards a list holds: (playbook, report). `have(name)` says whether the list has a card."""
+    pb = json.loads(json.dumps(pb))
+    rep = {"dropped_rules": [], "trimmed_rules": [], "holds_for_good": [], "dropped_triggers": [], "forge_rule": None}
+
+    def conditions(conds, hold):
+        """(kept conditions, the missing permanent the rule waits for or None, whether any condition was removed)."""
+        keep, never, removed = [], None, False
+        for c in _list(conds):
+            m = CONTROLS.match(str(c).strip())
+            if m and not have(m.group(2).strip()):
+                removed = True
+                if not m.group(1):
+                    never = m.group(2).strip()      # "controls X" can never hold without X
+                continue                             # "not controls X" always holds without X
+            keep.append(c)
+        return keep, never, removed
+
+    cast = pb.get("cast")
+    if isinstance(cast, dict):
+        rules = []
+        for i, r in enumerate(_list(cast.get("rules")), 1):
+            r = dict(r)
+            kind = next((k for k in KINDS if k in r), None)
+            if kind is None:
+                rules.append(r)
+                continue
+            if kind != "forge":
+                names = _list(r[kind])
+                kept = [n for n in names if have(n)]
+                if not kept:
+                    rep["dropped_rules"].append({"rule": i, "kind": kind, "cards": names, "why": "none of its cards is in the list"})
+                    continue
+                if len(kept) < len(names):
+                    rep["trimmed_rules"].append({"rule": i, "kind": kind, "removed": [n for n in names if not have(n)]})
+                    r[kind] = kept
+            if r.get("target") and not have(r["target"]):
+                rep["dropped_rules"].append({"rule": i, "kind": kind, "cards": _list(r.get(kind)), "why": f"its target, {r['target']}, is not in the list"})
+                continue
+            key = "until" if kind == "hold" else "when"
+            if key in r:
+                keep, never, removed = conditions(r[key], kind == "hold")
+                if never and kind == "hold":
+                    r.pop(key)                       # released only with a permanent the list does not have: never
+                    rep["holds_for_good"].append({"rule": i, "cards": _list(r[kind]), "waited_for": never})
+                elif never:
+                    rep["dropped_rules"].append({"rule": i, "kind": kind, "cards": _list(r.get(kind)), "why": f"it waits for {never}, which is not in the list"})
+                    continue
+                elif keep:
+                    r[key] = keep
+                else:
+                    r.pop(key)
+                    if kind == "hold" and removed:
+                        rep["dropped_rules"].append({"rule": i, "kind": kind, "cards": _list(r[kind]),
+                                                     "why": "its release only waited for the absence of a permanent the list does not have"})
+                        continue
+            rules.append(r)
+        if forge_rule and not any("forge" in r for r in rules):
+            hits = [i for i, r in enumerate(rules) if any(c in _list(r.get("play")) for c in commanders)]
+            at = hits[0] + 1 if hits else 0
+            rules.insert(at, {"forge": "unnamed", "wait": "main2"} if wait else {"forge": "unnamed"})
+            rep["forge_rule"] = {"position": at + 1, "after": _list(rules[at - 1].get("play"))[:3] if at else None, "wait": bool(wait)}
+        cast["rules"] = rules
+        if isinstance(cast.get("groups"), dict):
+            cast["groups"] = {g: [n for n in _list(v) if have(n)] for g, v in cast["groups"].items()}
+    triggers = []
+    for i, r in enumerate(_list(pb.get("triggers")), 1):
+        r = dict(r)
+        key = "accept" if "accept" in r else "decline"
+        names = _list(r.get(key))
+        kept = [n for n in names if have(n)]
+        keep, never, _removed = conditions(r.get("when"), False)
+        if not kept or never:
+            rep["dropped_triggers"].append({"rule": i, "cards": names, "why": "none of its cards is in the list" if not kept else f"it waits for {never}, which is not in the list"})
+            continue
+        r[key] = kept
+        if "when" in r:
+            if keep:
+                r["when"] = keep
+            else:
+                r.pop("when")
+        triggers.append(r)
+    if "triggers" in pb:
+        if triggers:
+            pb["triggers"] = triggers
+        else:
+            pb.pop("triggers")
+    return pb, rep
+
+
+def adapt(args):
+    base_path = args.base or os.path.join(ROOT, "playbook", "precons", args.deck + ".json")
+    base = deckdata.load_json(base_path)
+    if not isinstance(base.get("playbook"), dict):
+        sys.exit(f"playbook.py: {base_path} has no playbook object (the deck has no shipped playbook: name a candidate with --base)")
+    if not os.path.isfile(args.deck_file):
+        sys.exit(f"playbook.py: {args.deck_file}: no such deck file")
+    main_cards, cmd = deckdata.read_dck(args.deck_file)
+    in_list = {n for n, _ in main_cards} | {n for n, _ in cmd}
+    commanders = [n for n, _ in cmd]
+
+    def have(name):
+        return name in in_list or name.endswith(" Token")
+
+    pb, rep = adapt_playbook(base["playbook"], have, commanders, forge_rule=not args.no_forge_rule, wait=not args.no_wait)
+    rules = _list((pb.get("cast") or {}).get("rules"))
+    named = {n for r in rules for n in _list(r.get("play"))}
+    scripts = deckdata.CardScripts(args.runtime) if args.runtime and os.path.isdir(args.runtime) else None
+    unnamed, never_cast, unknown = [], [], []
+    for name, _count in cmd + main_cards:
+        if name in named:
+            continue
+        if scripts is None:
+            unnamed.append(name)
+            continue
+        card, raw = raw_script(scripts, name)
+        if card is None:
+            unknown.append(name)
+            continue
+        if "Land" in card["types"] and "Creature" not in card["types"]:
+            continue
+        unnamed.append(name)
+        if any(a.startswith("RemoveDeck:All") for a in card["ai"]):
+            never_cast.append(name)
+    precon_names = None
+    try:
+        _entry, p_main, p_cmd = read_deck(args.league, args.runtime, args.deck)
+        precon_names = {n for n, _ in p_main} | {n for n, _ in p_cmd}
+    except SystemExit:
+        pass
+    added = sorted(in_list - precon_names) if precon_names is not None else None
+    cut = sorted(precon_names - in_list) if precon_names is not None else None
+    out = args.out or os.path.splitext(args.deck_file)[0] + ".playbook.json"
+    pb.pop("on", None)
+    line = (f"Adapted by runner/playbook.py adapt for the list {os.path.basename(args.deck_file)}: the rules of {os.path.relpath(base_path, ROOT) if os.path.abspath(base_path).startswith(ROOT) else base_path} "
+            "cut to the cards the list holds" + (", with a forge rule for the cards no rule names" if rep["forge_rule"] else "") + ". Not measured.")
+    notes = pb.get("notes")
+    pb["notes"] = (notes + [line]) if isinstance(notes, list) else ((notes + " " if notes else "") + line)
+    with open(args.deck_file, "rb") as f:
+        sha = hashlib.sha256(f.read()).hexdigest()
+    doc = {"schema": base.get("schema"), "deck": args.deck, "variant": "list", "of": base_path if args.base else f"playbook/precons/{args.deck}.json",
+           "about": f"The playbook of {args.deck} adapted to the list {os.path.basename(args.deck_file)} (runner/playbook.py adapt): only the playbook object is read.",
+           "list": {"file": os.path.basename(args.deck_file), "sha256": sha, "commanders": commanders},
+           "adapted": {**rep, "added_to_the_precon": added, "cut_from_the_precon": cut, "unnamed_nonland_cards": unnamed, "never_cast_by_forge": never_cast},
+           "playbook": pb}
+    deckdata.dump_json(out, doc)
+    say = lambda *a: print(*a, file=sys.stderr)
+    say(f"{out}: {len(rules)} cast rules, {len(_list(pb.get('triggers')))} trigger rules, for {os.path.basename(args.deck_file)} ({', '.join(commanders)})")
+    if base["playbook"].get("cast") and commanders and not any(c in _list(r.get('play')) for r in _list(base['playbook']['cast'].get('rules')) for c in commanders):
+        say(f"note: no rule of the playbook casts {', '.join(commanders)}: it was written for another commander, and most of it may not fit this list")
+    if added is not None:
+        say(f"against the precon: {len(added)} cards added, {len(cut)} cut")
+    for d in rep["dropped_rules"]:
+        say(f"  rule {d['rule']} ({d['kind']} {', '.join(d['cards'][:4])}{' ...' if len(d['cards']) > 4 else ''}) dropped: {d['why']}")
+    for d in rep["trimmed_rules"]:
+        say(f"  rule {d['rule']} ({d['kind']}) no longer lists: {', '.join(d['removed'])}")
+    for d in rep["holds_for_good"]:
+        say(f"  rule {d['rule']} now holds {', '.join(d['cards'])} for good: its release waited for {d['waited_for']}, which is not in the list")
+    for d in rep["dropped_triggers"]:
+        say(f"  trigger rule {d['rule']} ({', '.join(d['cards'][:4])}) dropped: {d['why']}")
+    if rep["forge_rule"]:
+        f = rep["forge_rule"]
+        say(f"  forge rule added at position {f['position']}" + (f" (after the rule that casts {', '.join(f['after'])})" if f["after"] else " (at the top: no rule casts the commander)")
+            + (", waiting for the second main phase" if f["wait"] else ""))
+    own = [i + 1 for i, r in enumerate(rules) if "forge" in r and not rep["forge_rule"] and r.get("wait") != "main2"]
+    if own:
+        say(f"  note: the playbook's own forge rule (position {', '.join(map(str, own))}) does not wait for the second main phase: creatures and other permanents among the "
+            "new cards may find the mana spent (playbook/README.md, \"wait\": \"main2\")")
+    new_unnamed = [n for n in unnamed if added is None or n in added]
+    say(f"named by no play rule (Forge's AI casts them, at the forge rule): {len(unnamed)} nonland cards"
+        + (f", {len(new_unnamed)} of them new to the precon" + (": " + ", ".join(new_unnamed) if new_unnamed else "") if added is not None else ""))
+    if never_cast:
+        say("Forge's AI never casts these by itself (AI:RemoveDeck:All); without a play rule of their own they stay in hand: " + ", ".join(never_cast))
+    if unknown:
+        say("no card script found for: " + ", ".join(unknown))
+    return 0
+
+
 def main(argv):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("draft", "roles"):
+    for name in ("draft", "roles", "adapt"):
         p = sub.add_parser(name)
         p.add_argument("--deck", required=True)
         p.add_argument("--league", default=os.path.join(HERE, "precon-league.json"))
         p.add_argument("--runtime", default=os.path.join(ROOT, "forge", "runtime-snapshot"))
         if name == "draft":
             p.add_argument("--out")
+        if name == "adapt":
+            p.add_argument("--deck-file", required=True, help="the list as a Forge .dck (runner/decklist.py writes one)")
+            p.add_argument("--base", help="a playbook file other than the deck's shipped one")
+            p.add_argument("--out", help="default: next to the list, <list>.playbook.json")
+            p.add_argument("--no-forge-rule", action="store_true", help="do not add a forge rule when the playbook has none")
+            p.add_argument("--no-wait", action="store_true", help='the added forge rule without "wait": "main2"')
     args = ap.parse_args(argv)
+    if args.cmd == "adapt":
+        return adapt(args)
     entry, main_cards, cmd = read_deck(args.league, args.runtime, args.deck)
     scripts = deckdata.CardScripts(args.runtime)
     cards, missing = roles_of(scripts, main_cards, cmd)

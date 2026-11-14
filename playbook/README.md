@@ -203,6 +203,7 @@ The loop is goldfish first, then duels, then tables (DESIGN.md §21, §22):
 
 ```
 runner/playbook.py draft --deck goblin-storm --runtime forge/runtime-snapshot    # a first set of cast rules from Forge's card scripts -> variants/goblin-storm-draft.json
+runner/playbook.py adapt --deck blight-curse --deck-file "/abs/My List.dck"         # the deck's playbook cut to a list of your own that started as this precon -> "/abs/My List.playbook.json"
 runner/goldfish.sh "$PRECONS/Goblin Storm [SLD] [2026].dck" -n 100 -s 7000 -i gs-stock                                   # stock AI
 runner/goldfish.sh "$PRECONS/Goblin Storm [SLD] [2026].dck" -n 100 -s 7000 -i gs-playbook -P playbook/precons/goblin-storm.json
 runner/hands.py compare results/gs-stock results/gs-playbook      # kill turn by run, paired difference on the same seeds
