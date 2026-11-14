@@ -61,6 +61,10 @@ are that session's and have to be replaced by the new session's scratch director
   `forge` rule put in mechanically (after the commander's rule unless told otherwise; `--wait` gives the rule
   `"wait": "main2"`). `playbook_check.sh [RUNTIME_DIR] [FILE...]` parses every playbook file with the harness's own
   loader (`PbCheck.java`): run it after a change to the playbook format and before a candidate goes to the tables.
+- `three_arm_check.sh EXAM_DIR DECK VARIANT OUT_DIR`: the card check of a candidate examined with both attacks (the
+  requests `DECK@VARIANT` with stock and playbook arms and `DECK@VARIANT-forgeattack`): the playtest report of the three
+  arms and what each attack arm casts less or more often than the stock pilot. The second pass of the owner's ten was
+  read with it (`demo-data/playtest/2026-11-14/second-pass/`).
 - `reports/<date>/`: the agents' reports as handed back: the audit, the rules, the validation, what the rule format could
   not say, the deck's answers for the second pass, and where the candidate falls short of a person.
 

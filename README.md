@@ -9,15 +9,16 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status (2026-11-14):** twelve precons have a per-deck bot: a playbook for one deck that says which card to cast
+**Status (2026-11-14):** twenty-two precons have a per-deck bot: a playbook for one deck that says which card to cast
 when and aimed at what, which of the deck's optional triggers to take, and when to use its board wipes and removal;
-two of them also choose their own attacks, and everything else stays Forge's. Each was judged at 200 four-player
-tables whose other three seats are bots too, against the same deck under Forge's stock AI: among the twelve the
+three of them also choose their own attacks, and everything else stays Forge's. Each was judged at 200 four-player
+tables whose other three seats are bots too, against the same deck under Forge's stock AI: among the first twelve the
 playbooks won 557 of 2,400 tables and the stock pilots of the same decks 419, nine decks ahead of their stock pilot
 (four of them clear of noise), one level and two a point or two behind. On 2026-11-14 the nine bots that had no rules
 for their answers got them: beside the versions before them on the same tables, they cast those cards in 77% of the
-games they draw them (34% before) and won 493 of 1,800 tables to 446. The dashboard shows the twelve in one table.
-Playbooks for ten more precons are at the tables. Underneath: the benchmark pod
+games they draw them (34% before) and won 493 of 1,800 tables to 446. Ten more precons got a playbook the same day, after two passes each: at
+200 tables of bots each their playbooks won 655 of 2,000 tables to the stock pilots' 498, five decks ahead beyond noise,
+four inside it, one level (`DESIGN.md` §30). The dashboard shows all twenty-two in one table. Underneath: the benchmark pod
 (four bundled Commander precons) plays itself through a Java harness that records every game as a JSON event
 stream; the dashboard shows per-deck win rates, mulligans, land drops, commander timing and the cards that never
 get cast, with card images from Scryfall; Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI
