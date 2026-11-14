@@ -15,9 +15,13 @@ are that session's and have to be replaced by the new session's scratch director
   pool `bots-v2`; give it the games of the latest league. The four of 2026-11-11 were Fable agents at 630k to 760k tokens
   each; nothing in the brief needs that.
 - `slot.sh`: every command that starts Forge goes behind it, so that the machine never plays more than three games however
-  many agents are working. Waiters queue shortest run first (the `-n` of the command), then by arrival: with two slots
-  and a plain race, ten agents starved one deck for half an hour and timed out its foreground runs. Create the `locks`
-  directory it names; after a container restart empty `locks/queue/`.
+  many agents are working. Goldfish runs queue shortest first (the `-n` of the command), then by arrival: with two slots
+  and a plain race, ten agents starved one deck for half an hour and timed out its foreground runs. Table runs (`ab.py`,
+  `league.py`) queue behind the goldfish runs and among themselves by arrival alone: ordered by size, the agents that asked
+  for four or six tables kept jumping ahead and two agents that asked for eight had no game in ninety minutes (2026-11-14).
+  Nine agents trying rules at local tables get about 23 table games an hour out of three slots between them, so ask for
+  few local tables (eight show whether a rule fires) and leave the measuring to Actions. Create the `locks` directory it
+  names; after a container restart empty `locks/queue/`.
 - `verify_batch.py DECK NAME`: the candidate `playbook/variants/DECK-NAME.json` against the playbook its validation run
   recorded, then the paired kill turns. `verify_answers.py DECK`: an answers candidate against the shipped playbook (every
   shipped rule kept, in order) and against the playbook each of its local runs recorded. Run them before a candidate goes
@@ -26,6 +30,10 @@ are that session's and have to be replaced by the new session's scratch director
   (`DECK-NAME-forgeattack.json`, for the side-by-side attack arm at the tables) and the goldfish pair copied into
   `demo-data/goldfish/<date>/`. `save_report.py TASK_ID DECK`: an agent's final report, verbatim from its transcript, into
   `docs/agents/reports/<date>/DECK.md`.
+- `exam_summary.py ROLLUPS_DIR [--out demo-data/ab/<date>-ab-vNN]`: an unzipped `ab-rollups` artifact read in one step:
+  every arm's wins and every paired difference with its interval and exact test, the rollups copied under the names
+  `demo-data/ab/` uses, and a deck's side arms (the `-forgeattack` sibling, a candidate played as a playbook-only arm) joined
+  on the same tables. It reproduces the figures recorded for `ab-run` #26.
 - `reports/<date>/`: the agents' reports as handed back: the audit, the rules, the validation, what the rule format could
   not say, the deck's answers for the second pass, and where the candidate falls short of a person.
 
