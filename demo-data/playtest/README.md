@@ -11,7 +11,9 @@ the games it was cast under stock Forge AI and under the playbook, on the same t
 - Blight Curse, Mutant Menace, Squirreled Away and Ahoy Mateys, from the stock and go-wide arms of `ab-run` #27 (seed
   20261260; the candidates `wretch`, `mothman`, `acorns`, `crew`): the same three files a deck, and for Blight Curse
   the two reports as Markdown (`blight-curse-stock.md`, `blight-curse-playbook.md`), which is what a playtest report
-  looks like.
+  looks like;
+- Veloci-Ramp-Tor, Death Toll and Deadly Disguise, from the stock and go-wide arms of `ab-run` #28 (seed 20261280; the
+  candidates `stampede`, `winter`, `veil`): the same three files a deck.
 
 The reports were made from shard artifacts merged the way the workflow's rollup merges them; the win counts in them
 are those of the published rollups in `demo-data/ab/`.

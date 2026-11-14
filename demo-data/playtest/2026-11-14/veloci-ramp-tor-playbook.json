@@ -1,0 +1,852 @@
+{
+ "kind": "playtest",
+ "deck": "veloci-ramp-tor",
+ "deck_file": "Veloci-Ramp-Tor [LCC] [2023].dck",
+ "deck_file_sha256": null,
+ "arm": "playbook",
+ "pilot": {
+  "playbook": "veloci-ramp-tor-stampede.json",
+  "version": 1,
+  "attack": "go_wide"
+ },
+ "commanders": [
+  "Pantlaza, Sun-Favored"
+ ],
+ "table": {
+  "pool": "bots-v2",
+  "seats": 4,
+  "seed": 20261280,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 80,
+  "win_rate": 0.4,
+  "win_rate_ci95": [
+   0.3346,
+   0.4692
+  ],
+  "even_share": 0.25,
+  "not_finished": 1,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 21
+   },
+   {
+    "games": 50,
+    "wins": 19
+   },
+   {
+    "games": 50,
+    "wins": 21
+   },
+   {
+    "games": 50,
+    "wins": 19
+   }
+  ],
+  "losses": 119,
+  "out_first": 37,
+  "out_second": 42,
+  "out_third": 40,
+  "loss_reasons": {
+   "LifeReachedZero": 107,
+   "CommanderDamage": 6,
+   "OpponentWon": 6
+  },
+  "game_turns": 42.0,
+  "own_turns_when_won": 12.1,
+  "own_turns_when_lost": 9.9
+ },
+ "opponents": {
+  "eldrazi-incursion": {
+   "tables": 43,
+   "focus_wins": 20,
+   "focus_win_rate": 0.465,
+   "its_wins": 7,
+   "its_win_rate": 0.163,
+   "took_it_out": 7
+  },
+  "enduring-enchantments": {
+   "tables": 53,
+   "focus_wins": 24,
+   "focus_win_rate": 0.453,
+   "its_wins": 17,
+   "its_win_rate": 0.321,
+   "took_it_out": 14
+  },
+  "planeswalker-party": {
+   "tables": 49,
+   "focus_wins": 22,
+   "focus_win_rate": 0.449,
+   "its_wins": 8,
+   "its_win_rate": 0.163,
+   "took_it_out": 5
+  },
+  "deep-clue-sea": {
+   "tables": 56,
+   "focus_wins": 25,
+   "focus_win_rate": 0.446,
+   "its_wins": 16,
+   "its_win_rate": 0.286,
+   "took_it_out": 9
+  },
+  "hail-caesar": {
+   "tables": 49,
+   "focus_wins": 21,
+   "focus_win_rate": 0.429,
+   "its_wins": 13,
+   "its_win_rate": 0.265,
+   "took_it_out": 7
+  },
+  "elven-council": {
+   "tables": 57,
+   "focus_wins": 24,
+   "focus_win_rate": 0.421,
+   "its_wins": 7,
+   "its_win_rate": 0.123,
+   "took_it_out": 9
+  },
+  "tricky-terrain": {
+   "tables": 48,
+   "focus_wins": 19,
+   "focus_win_rate": 0.396,
+   "its_wins": 5,
+   "its_win_rate": 0.104,
+   "took_it_out": 5
+  },
+  "quick-draw": {
+   "tables": 48,
+   "focus_wins": 18,
+   "focus_win_rate": 0.375,
+   "its_wins": 9,
+   "its_win_rate": 0.188,
+   "took_it_out": 9
+  },
+  "token-triumph": {
+   "tables": 52,
+   "focus_wins": 19,
+   "focus_win_rate": 0.365,
+   "its_wins": 13,
+   "its_win_rate": 0.25,
+   "took_it_out": 13
+  },
+  "goblin-storm": {
+   "tables": 54,
+   "focus_wins": 19,
+   "focus_win_rate": 0.352,
+   "its_wins": 12,
+   "its_win_rate": 0.222,
+   "took_it_out": 16
+  },
+  "limit-break": {
+   "tables": 40,
+   "focus_wins": 14,
+   "focus_win_rate": 0.35,
+   "its_wins": 7,
+   "its_win_rate": 0.175,
+   "took_it_out": 9
+  },
+  "wretched-ranks": {
+   "tables": 51,
+   "focus_wins": 15,
+   "focus_win_rate": 0.294,
+   "its_wins": 5,
+   "its_win_rate": 0.098,
+   "took_it_out": 7
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.155,
+  "lands_at_own_turn": {
+   "4": 3.31,
+   "6": 5.51,
+   "8": 7.4
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.72,
+   "6": 5.41,
+   "8": 5.23
+  },
+  "short_of_four_lands_at_turn_5": 0.11,
+  "commander_first_cast": {
+   "median": 5.0,
+   "p25": 4,
+   "p75": 6,
+   "never_cast": 0.02,
+   "casts_per_game": 2.02
+  },
+  "spells_per_game": 18.8,
+  "idle_turn_share": 0.056,
+  "damage_dealt_per_game": 64.0,
+  "damage_taken_per_game": 53.5,
+  "commander_damage_dealt_per_game": 9.7,
+  "nonland_cards_in_hand_at_loss": 4.62,
+  "of_them_affordable": 4.17
+ },
+ "cards": {
+  "Scion of Calamity": {
+   "drawn": 56,
+   "played": 43,
+   "played_share": 0.768,
+   "median_turn": 9,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.361,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Creature - Dinosaur"
+  },
+  "Chandra's Ignition": {
+   "drawn": 47,
+   "played": 11,
+   "played_share": 0.234,
+   "median_turn": 10,
+   "win_rate_drawn": 0.447,
+   "win_rate_not_drawn": 0.386,
+   "held_at_loss": 18,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Ripjaw Raptor": {
+   "drawn": 70,
+   "played": 54,
+   "played_share": 0.771,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.443,
+   "win_rate_not_drawn": 0.377,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Creature - Dinosaur"
+  },
+  "Itzquinth, Firstborn of Gishath": {
+   "drawn": 58,
+   "played": 36,
+   "played_share": 0.621,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.328,
+   "win_rate_not_drawn": 0.43,
+   "held_at_loss": 15,
+   "mv": 2,
+   "type": "Legendary Creature - Dinosaur"
+  },
+  "Regisaur Alpha": {
+   "drawn": 53,
+   "played": 43,
+   "played_share": 0.811,
+   "median_turn": 8,
+   "win_rate_drawn": 0.528,
+   "win_rate_not_drawn": 0.354,
+   "held_at_loss": 6,
+   "mv": 5,
+   "type": "Creature - Dinosaur"
+  },
+  "Ranging Raptors": {
+   "drawn": 53,
+   "played": 42,
+   "played_share": 0.792,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.377,
+   "win_rate_not_drawn": 0.408,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Creature - Dinosaur"
+  },
+  "Temple Altisaur": {
+   "drawn": 53,
+   "played": 36,
+   "played_share": 0.679,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.396,
+   "win_rate_not_drawn": 0.401,
+   "held_at_loss": 16,
+   "mv": 5,
+   "type": "Creature - Dinosaur"
+  },
+  "Wrathful Raptors": {
+   "drawn": 60,
+   "played": 45,
+   "played_share": 0.75,
+   "median_turn": 9,
+   "win_rate_drawn": 0.483,
+   "win_rate_not_drawn": 0.364,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Creature - Dinosaur"
+  },
+  "Cultivate": {
+   "drawn": 45,
+   "played": 42,
+   "played_share": 0.933,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.489,
+   "win_rate_not_drawn": 0.374,
+   "held_at_loss": 0,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Thundering Spineback": {
+   "drawn": 48,
+   "played": 38,
+   "played_share": 0.792,
+   "median_turn": 10.5,
+   "win_rate_drawn": 0.438,
+   "win_rate_not_drawn": 0.388,
+   "held_at_loss": 11,
+   "mv": 7,
+   "type": "Creature - Dinosaur"
+  },
+  "Quartzwood Crasher": {
+   "drawn": 60,
+   "played": 48,
+   "played_share": 0.8,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.533,
+   "win_rate_not_drawn": 0.343,
+   "held_at_loss": 11,
+   "mv": 5,
+   "type": "Creature - Dinosaur Beast"
+  },
+  "Lifecrafter's Bestiary": {
+   "drawn": 68,
+   "played": 67,
+   "played_share": 0.985,
+   "median_turn": 6,
+   "win_rate_drawn": 0.397,
+   "win_rate_not_drawn": 0.402,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Arcane Signet": {
+   "drawn": 61,
+   "played": 60,
+   "played_share": 0.984,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.443,
+   "win_rate_not_drawn": 0.381,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Majestic Heliopterus": {
+   "drawn": 69,
+   "played": 56,
+   "played_share": 0.812,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.42,
+   "win_rate_not_drawn": 0.389,
+   "held_at_loss": 12,
+   "mv": 4,
+   "type": "Creature - Dinosaur"
+  },
+  "Migration Path": {
+   "drawn": 47,
+   "played": 40,
+   "played_share": 0.851,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.532,
+   "win_rate_not_drawn": 0.359,
+   "held_at_loss": 1,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Generous Gift": {
+   "drawn": 48,
+   "played": 47,
+   "played_share": 0.979,
+   "median_turn": 7,
+   "win_rate_drawn": 0.562,
+   "win_rate_not_drawn": 0.349,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Ixalli's Lorekeeper": {
+   "drawn": 66,
+   "played": 66,
+   "played_share": 1.0,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.409,
+   "win_rate_not_drawn": 0.396,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Creature - Human Druid"
+  },
+  "Dinosaur Egg": {
+   "drawn": 62,
+   "played": 52,
+   "played_share": 0.839,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.355,
+   "held_at_loss": 7,
+   "mv": 2,
+   "type": "Creature - Dinosaur Egg"
+  },
+  "Raging Regisaur": {
+   "drawn": 50,
+   "played": 41,
+   "played_share": 0.82,
+   "median_turn": 9,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.367,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Creature - Dinosaur"
+  },
+  "Etali, Primal Storm": {
+   "drawn": 54,
+   "played": 42,
+   "played_share": 0.778,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.519,
+   "win_rate_not_drawn": 0.356,
+   "held_at_loss": 8,
+   "mv": 6,
+   "type": "Legendary Creature - Elder Dinosaur"
+  },
+  "Apex Altisaur": {
+   "drawn": 47,
+   "played": 32,
+   "played_share": 0.681,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.574,
+   "win_rate_not_drawn": 0.346,
+   "held_at_loss": 10,
+   "mv": 9,
+   "type": "Creature - Dinosaur"
+  },
+  "Drover of the Mighty": {
+   "drawn": 57,
+   "played": 56,
+   "played_share": 0.982,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.421,
+   "win_rate_not_drawn": 0.392,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Creature - Human Druid"
+  },
+  "Sunfrill Imitator": {
+   "drawn": 62,
+   "played": 45,
+   "played_share": 0.726,
+   "median_turn": 8,
+   "win_rate_drawn": 0.484,
+   "win_rate_not_drawn": 0.362,
+   "held_at_loss": 11,
+   "mv": 3,
+   "type": "Creature - Dinosaur"
+  },
+  "Curious Altisaur": {
+   "drawn": 54,
+   "played": 38,
+   "played_share": 0.704,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.363,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Creature - Dinosaur"
+  },
+  "Rishkar's Expertise": {
+   "drawn": 65,
+   "played": 54,
+   "played_share": 0.831,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.431,
+   "win_rate_not_drawn": 0.385,
+   "held_at_loss": 11,
+   "mv": 6,
+   "type": "Sorcery"
+  },
+  "Descendants' Path": {
+   "drawn": 64,
+   "played": 59,
+   "played_share": 0.922,
+   "median_turn": 6,
+   "win_rate_drawn": 0.453,
+   "win_rate_not_drawn": 0.375,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Wayta, Trainer Prodigy": {
+   "drawn": 39,
+   "played": 16,
+   "played_share": 0.41,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.487,
+   "win_rate_not_drawn": 0.379,
+   "held_at_loss": 14,
+   "mv": 3,
+   "type": "Legendary Creature - Human Warrior"
+  },
+  "Akroma's Will": {
+   "drawn": 78,
+   "played": 70,
+   "played_share": 0.897,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.564,
+   "win_rate_not_drawn": 0.295,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Marauding Raptor": {
+   "drawn": 50,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.4,
+   "win_rate_not_drawn": 0.4,
+   "held_at_loss": 28,
+   "mv": 2,
+   "type": "Creature - Dinosaur"
+  },
+  "Otepec Huntmaster": {
+   "drawn": 58,
+   "played": 58,
+   "played_share": 1.0,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.466,
+   "win_rate_not_drawn": 0.373,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Human Shaman"
+  },
+  "Earthshaker Dreadmaw": {
+   "drawn": 48,
+   "played": 38,
+   "played_share": 0.792,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.542,
+   "win_rate_not_drawn": 0.355,
+   "held_at_loss": 10,
+   "mv": 6,
+   "type": "Creature - Dinosaur"
+  },
+  "Topiary Stomper": {
+   "drawn": 56,
+   "played": 39,
+   "played_share": 0.696,
+   "median_turn": 10,
+   "win_rate_drawn": 0.482,
+   "win_rate_not_drawn": 0.368,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Creature - Plant Dinosaur"
+  },
+  "Verdant Sun's Avatar": {
+   "drawn": 46,
+   "played": 37,
+   "played_share": 0.804,
+   "median_turn": 9,
+   "win_rate_drawn": 0.652,
+   "win_rate_not_drawn": 0.325,
+   "held_at_loss": 3,
+   "mv": 7,
+   "type": "Creature - Dinosaur Avatar"
+  },
+  "Thrashing Brontodon": {
+   "drawn": 68,
+   "played": 44,
+   "played_share": 0.647,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.426,
+   "win_rate_not_drawn": 0.386,
+   "held_at_loss": 16,
+   "mv": 3,
+   "type": "Creature - Dinosaur"
+  },
+  "Bronzebeak Foragers": {
+   "drawn": 49,
+   "played": 41,
+   "played_share": 0.837,
+   "median_turn": 9,
+   "win_rate_drawn": 0.531,
+   "win_rate_not_drawn": 0.358,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Creature - Dinosaur"
+  },
+  "Rampant Growth": {
+   "drawn": 55,
+   "played": 54,
+   "played_share": 0.982,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.527,
+   "win_rate_not_drawn": 0.352,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Progenitor's Icon": {
+   "drawn": 61,
+   "played": 61,
+   "played_share": 1.0,
+   "median_turn": 7,
+   "win_rate_drawn": 0.475,
+   "win_rate_not_drawn": 0.367,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Wakening Sun's Avatar": {
+   "drawn": 51,
+   "played": 9,
+   "played_share": 0.176,
+   "median_turn": 12,
+   "win_rate_drawn": 0.549,
+   "win_rate_not_drawn": 0.349,
+   "held_at_loss": 20,
+   "mv": 8,
+   "type": "Creature - Dinosaur Avatar"
+  },
+  "Atzocan Seer": {
+   "drawn": 69,
+   "played": 33,
+   "played_share": 0.478,
+   "median_turn": 7,
+   "win_rate_drawn": 0.464,
+   "win_rate_not_drawn": 0.366,
+   "held_at_loss": 17,
+   "mv": 3,
+   "type": "Creature - Human Druid"
+  },
+  "Rampaging Brontodon": {
+   "drawn": 57,
+   "played": 45,
+   "played_share": 0.789,
+   "median_turn": 9,
+   "win_rate_drawn": 0.474,
+   "win_rate_not_drawn": 0.371,
+   "held_at_loss": 10,
+   "mv": 7,
+   "type": "Creature - Dinosaur"
+  },
+  "Fiery Confluence": {
+   "drawn": 77,
+   "played": 12,
+   "played_share": 0.156,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.429,
+   "win_rate_not_drawn": 0.382,
+   "held_at_loss": 35,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Deathgorge Scavenger": {
+   "drawn": 67,
+   "played": 41,
+   "played_share": 0.612,
+   "median_turn": 9,
+   "win_rate_drawn": 0.537,
+   "win_rate_not_drawn": 0.331,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Creature - Dinosaur"
+  },
+  "Savage Stomp": {
+   "drawn": 45,
+   "played": 20,
+   "played_share": 0.444,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.556,
+   "win_rate_not_drawn": 0.355,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Runic Armasaur": {
+   "drawn": 48,
+   "played": 37,
+   "played_share": 0.771,
+   "median_turn": 9,
+   "win_rate_drawn": 0.583,
+   "win_rate_not_drawn": 0.342,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Creature - Dinosaur"
+  },
+  "Rhythm of the Wild": {
+   "drawn": 50,
+   "played": 46,
+   "played_share": 0.92,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.48,
+   "win_rate_not_drawn": 0.373,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Farseek": {
+   "drawn": 54,
+   "played": 53,
+   "played_share": 0.981,
+   "median_turn": 6,
+   "win_rate_drawn": 0.426,
+   "win_rate_not_drawn": 0.39,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Return of the Wildspeaker": {
+   "drawn": 59,
+   "played": 31,
+   "played_share": 0.525,
+   "median_turn": 10,
+   "win_rate_drawn": 0.424,
+   "win_rate_not_drawn": 0.39,
+   "held_at_loss": 15,
+   "mv": 5,
+   "type": "Instant"
+  },
+  "Raging Swordtooth": {
+   "drawn": 58,
+   "played": 22,
+   "played_share": 0.379,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.483,
+   "win_rate_not_drawn": 0.366,
+   "held_at_loss": 19,
+   "mv": 5,
+   "type": "Creature - Dinosaur"
+  },
+  "Sol Ring": {
+   "drawn": 78,
+   "played": 77,
+   "played_share": 0.987,
+   "median_turn": 6,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.336,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Kinjalli's Sunwing": {
+   "drawn": 59,
+   "played": 54,
+   "played_share": 0.915,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.475,
+   "win_rate_not_drawn": 0.369,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Creature - Dinosaur"
+  },
+  "Thunderherd Migration": {
+   "drawn": 50,
+   "played": 49,
+   "played_share": 0.98,
+   "median_turn": 7,
+   "win_rate_drawn": 0.46,
+   "win_rate_not_drawn": 0.38,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Bellowing Aegisaur": {
+   "drawn": 51,
+   "played": 40,
+   "played_share": 0.784,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.412,
+   "win_rate_not_drawn": 0.396,
+   "held_at_loss": 8,
+   "mv": 6,
+   "type": "Creature - Dinosaur"
+  },
+  "Path to Exile": {
+   "drawn": 46,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 7,
+   "win_rate_drawn": 0.457,
+   "win_rate_not_drawn": 0.383,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Xenagos, God of Revels": {
+   "drawn": 43,
+   "played": 28,
+   "played_share": 0.651,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.512,
+   "win_rate_not_drawn": 0.369,
+   "held_at_loss": 8,
+   "mv": 5,
+   "type": "Legendary Enchantment Creature - God"
+  },
+  "From the Rubble": {
+   "drawn": 52,
+   "played": 38,
+   "played_share": 0.731,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.365,
+   "held_at_loss": 9,
+   "mv": 6,
+   "type": "Enchantment"
+  },
+  "Zacama, Primal Calamity": {
+   "drawn": 56,
+   "played": 33,
+   "played_share": 0.589,
+   "median_turn": 9,
+   "win_rate_drawn": 0.446,
+   "win_rate_not_drawn": 0.382,
+   "held_at_loss": 12,
+   "mv": 9,
+   "type": "Legendary Creature - Elder Dinosaur"
+  },
+  "Shifting Ceratops": {
+   "drawn": 59,
+   "played": 40,
+   "played_share": 0.678,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.424,
+   "win_rate_not_drawn": 0.39,
+   "held_at_loss": 13,
+   "mv": 4,
+   "type": "Creature - Dinosaur"
+  },
+  "Regal Behemoth": {
+   "drawn": 52,
+   "played": 37,
+   "played_share": 0.712,
+   "median_turn": 8,
+   "win_rate_drawn": 0.538,
+   "win_rate_not_drawn": 0.351,
+   "held_at_loss": 10,
+   "mv": 6,
+   "type": "Creature - Dinosaur"
+  },
+  "Wayward Swordtooth": {
+   "drawn": 64,
+   "played": 46,
+   "played_share": 0.719,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.453,
+   "win_rate_not_drawn": 0.375,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Creature - Dinosaur"
+  },
+  "Zetalpa, Primal Dawn": {
+   "drawn": 55,
+   "played": 39,
+   "played_share": 0.709,
+   "median_turn": 8,
+   "win_rate_drawn": 0.473,
+   "win_rate_not_drawn": 0.372,
+   "held_at_loss": 11,
+   "mv": 8,
+   "type": "Legendary Creature - Elder Dinosaur"
+  }
+ }
+}
