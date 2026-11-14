@@ -31,9 +31,51 @@
  },
  "curated": {},
  "playbook": {
-  "version": 1,
+  "version": 2,
   "cast": {
    "rules": [
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "storm >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Curse of the Swine"
+     ],
+     "when": [
+      "threat >= 12",
+      "opp_creatures <= 6"
+     ]
+    },
+    {
+     "play": [
+      "Baral's Expertise"
+     ],
+     "when": [
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Propaganda"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
     {
      "play": [
       "Sol Ring",
@@ -126,10 +168,18 @@
       "hand <= 3",
       "library >= 30"
      ]
+    },
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
     }
    ]
   },
-  "notes": "Quick Draw (Stella Lee: a second spell each turn exiles a card to play, a third lets her copy one). A spellslinger: the payoffs for casting spells go down first (Young Pyromancer, Guttersnipe, Talrand, Murmuring Mystic and the rest), then every cheap spell the mana allows, which is what feeds them and Stella; stock Forge leaves 47% of this deck's mana unspent and casts nothing on a quarter of its turns, sitting on Faithless Looting, Windfall and its cantrips. Windfall (never cast by Forge's AI) refills an empty hand; Epic Experiment (never cast either) and Finale of Revelation are paid for with what is left. Stella's own copy ability needs a spell on the stack, which a rule cannot wait for, so it stays Forge's. Go-wide attack from two attackers up, the highest life first. Goldfish, 40 seeds (1001-1040): stock 13.72 turns, the mechanical draft 12.78, this file 11.72, 1.97 turns faster than stock on the 38 seeds both finish (95% +1.38 to +2.56). At the tables (ab-run #15, 200 tables, seed 20261144): 38 wins against stock's 31, 19.0% against 15.5%, +3.5 points (95% -4 to +11, 31 tables to 24, exact test 0.42). A lean; not shipped. Shipped on 2026-11-12 as version 1 with the attack left to Forge. At 200 tables of bots (ab-run #22, seed 20261220) these rules with the go-wide attack won 39 against the stock pilot's 32 (+3.5 points, 95% -3 to +10, exact test 0.40: a lean). With Forge's own attack the deck has not been played yet; every deck that played both did at least as well with it.",
-  "on": "2026-11-12"
+  "notes": "Version 2 = the shipped version 1 (its seven cast rules unchanged and in their order, now rules 6 to 12; no triggers, no attack block, so Forge attacks, as shipped) with six rules for the deck's answers: rules 1 to 5 in front, rule 13 at the end. Written from the seat's 200 games of the league of twelve (league-run #3, seed 20261250), where it won 57. Seen / cast in / in hand at the last own turn of a loss: Volcanic Torrent 80 / 37 / 25, Curse of the Swine 82 / 0 / 36 (AI:RemoveDeck:All, Forge never casts it), Baral's Expertise 85 / 59 / 16, Propaganda 88 / 77 / 1 (in hand a median of two own turns first), Pongify 89 / 82 / 5, Chaos Warp 83 / 77 / 5, Vandalblast 80 / 73 / 10, Arcane Denial 74 / 46 / 11. Forge already plays the instants (Pongify, Chaos Warp) and Vandalblast; the losses were held with the sorcery wipes. Rule 1: Volcanic Torrent (one-sided: X damage to each creature and planeswalker the opponents control, X = spells we cast this turn, cascade adds one) once two spells have gone this turn and an opponent has four creatures, so X is at least four. Rule 2: Torrent at once against an opponent with eight creatures, where even X of two clears a token board (the pool is token decks: Goblin, Soldier, Elf, Zombie, Drake tokens). Rule 13: Torrent with whatever mana the engine rules leave, against four creatures. Local casts (16 tables of bots, seeds 20263050-51): five from hand, killing 10 tokens; a planeswalker and three Boars; 12 creatures (storm 16); Cid and eight Soldiers. Rule 3: Curse of the Swine when an opponent could hit for 12 and no opponent has more than six creatures: X and the targets are Forge's (its ChangeZone logic agrees once the flag is bypassed), and against a wide board it spread X over 1/1 tokens (which become 2/2 Boars) and a ward creature whose ward countered the whole spell (first local batch, under 'threat >= 12' alone); the cap of six keeps it for boards of few large creatures, which is where trading a creature for a 2/2 helps. Cast twice locally; one resolved, three creatures exiled. Rule 4: Baral's Expertise when an opponent could kill us next turn (bounce three, targets Forge's). Rule 5: Propaganda as soon as an opponent has three creatures, ahead of the engine (it was the last card of the shipped payoff list). Not expressible: Arcane Denial (a counterspell needs a spell on the stack, other players' turns), Pongify and Chaos Warp at instant speed or aimed at a chosen permanent of an opponent (left to Forge, which casts them in nine games of ten), Vandalblast's overload (an alternative cost, which play rules do not use), the targets and X of Curse of the Swine. Shipped as version 2 on 2026-11-14 from ab-run #31: on the same 200 tables of bots (seed 20261300, opponents drawn from the other eleven bots under their playbooks of 2026-11-13) it won 58 against version 1's 59 (-0.5 points, 95% -6 to +5, exact test 1.0); the cards the new rules name were cast in 155 of the 211 games they were drawn, under version 1 in 69 of 209. It has not been set against its stock pilot. What it still casts in a share of games 15 points or more below stock AI's (the stock arm of ab-run #26, other tables of the same pool), 9 cards: Elemental Eruption, Rousing Refrain, Galvanic Iteration, Pyretic Charge, Deep Analysis, Arcane Denial and 3 more (demo-data/playtest/2026-11-14/pool-answers/quick-draw-check.txt).",
+  "on": "2026-11-14"
  }
 }

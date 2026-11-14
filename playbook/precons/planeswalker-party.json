@@ -25,9 +25,77 @@
  },
  "curated": {},
  "playbook": {
-  "version": 1,
+  "version": 2,
   "cast": {
    "rules": [
+    {
+     "play": [
+      "Urza's Ruinous Blast"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Urza's Ruinous Blast"
+     ],
+     "when": [
+      "threat >= 12",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "activate": [
+      "Nevinyrral's Disk"
+     ],
+     "ability": "Destroy all artifacts, creatures, and enchantments",
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "activate": [
+      "Chandra, Awakened Inferno"
+     ],
+     "ability": "each non-Elemental creature",
+     "when": [
+      "opp_creatures >= 4",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "activate": [
+      "Elspeth, Sun's Champion"
+     ],
+     "ability": "Destroy all creatures with power 4 or greater",
+     "when": [
+      "threat >= 12",
+      "opp_creatures <= 3",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Promise of Loyalty"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power",
+      "creatures <= 2"
+     ]
+    },
     {
      "play": [
       "Sol Ring"
@@ -58,6 +126,36 @@
       "Azorius Signet",
       "Izzet Signet",
       "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "play": [
+      "Onakke Oathkeeper"
+     ]
+    },
+    {
+     "play": [
+      "Norn's Annex"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Silent Arbiter"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Nevinyrral's Disk"
+     ],
+     "when": [
+      "opp_creatures >= 3"
      ]
     },
     {
@@ -182,7 +280,11 @@
       "Honor-Worn Shaku",
       "Gatewatch Beacon",
       "Sparkshaper Visionary",
-      "Oreskos Explorer"
+      "Oreskos Explorer",
+      "Wall of Denial",
+      "Fog Bank",
+      "Norn's Annex",
+      "Nevinyrral's Disk"
      ]
     },
     {
@@ -207,7 +309,7 @@
     ]
    }
   ],
-  "notes": "Planeswalker Party (Commodore Guff: +1 makes a Wizard that taps for red for planeswalker spells, -3 draws X and deals X to each opponent, X the planeswalkers; at the end step another planeswalker gets a loyalty counter). Stock Forge AI already uses a loyalty ability on three planeswalker-turns in four (nine in ten leaving out The Wanderer, Teyo, Saheeli and Gideon, whose abilities it never uses) and its choices are mostly sound, so the rules leave them alone and take what is around them. What stock does (12 audit games, seeds 2601-2612, and the 40 stock validation games in brackets): Guff first cast on its turn 7.9 (6.9) and not at all in 1 (2) games, 22% (23%) of the mana unspent; over the 52 games Gideon Jura, The Chain Veil and Oreskos Explorer are never cast (AI:RemoveDeck:All; in hand in 14, 14 and 13 games), Repeated Reverberation once (in hand in 22), Gideon's and Teyo's abilities are never used, and Promise of Loyalty (21 games) and Silent Arbiter (13) are cast against empty boards: the first sacrifices the seat's own creatures, the second caps its own attack at one creature. The rules: Sol Ring, Guff as soon as he can be paid for (turn 4.3 on average in validation, every game), the other rocks; Guff's -3 is kept from Forge before turn 5 (with Guff out on turn 3 or 4 Forge spent it the turn he arrived for one card, six times in the first twelve games under these rules); Silent Arbiter and Promise of Loyalty are held until an opponent has more power on the battlefield than the seat; Chandra, Legacy of Fire's 0 (a card off the library for every loyalty counter Forge chooses to remove) is held under 40 cards in the library; Repeated Reverberation is cast first thing when Chandra, Awakened Inferno or Elspeth is out, and the rules then activate Chandra's +2, Elspeth's -7 with six creatures or her +1, so its two copies land there (times 3 covers Oath of Teferi and The Chain Veil); Gideon Jura's 0 before combat every turn; the planeswalkers in a fixed order with Jaya's Phoenix, Ajani and Leori among them and Deploy the Gatewatch; Oath of Teferi with Guff out; The Chain Veil once eight mana are available, used after the turn's casts when four mana are left, after which Forge activates its planeswalkers again; then the creatures and the last rocks. The Gatewatch Beacon's and Jaya's Phoenix's optional triggers are accepted (Forge declined no optional trigger in any traced game). Every other loyalty ability stays Forge's: an activate rule does drive a loyalty ability (named by a piece of its text), but a condition can neither read loyalty nor count planeswalkers, so a minus ability cannot be timed by rule unless its cost is the guard (Elspeth's -7). Attack: go-wide at the highest life with the split. Goldfish, 40 validation seeds not looked at before the rules were final (2701-2740): stock 13.07 turns, this file 10.65, 2.42 turns faster on the 40 seeds both finish (95% +1.57 to +3.28; faster in 32, the same in 4, slower in 4). The hold on Chandra's 0 was added after the validation games had been seen: with the same cast rules under Forge's own attack one validation game was lost on turn 11 to an empty library (Forge took a counter off every planeswalker twice a turn under Oath of Teferi, 31 and 24 cards in its last two turns; stock itself ended one validation game with 12 cards left). The 40 games of this file replay with the same kill turn on every seed with the hold in, so the number above is not moved by it. The same cast rules with Forge's own attack (planeswalker-party-guff-forgeattack.json): 11.32 turns, 1.75 faster than stock (95% +0.89 to +2.61), so about 1.7 turns of the gain are the cast rules and 0.7 the attack. On the 12 audit seeds the rules were written on: stock 12.67, the last tuning version 10.00. Tried and dropped: Forge of Heroes at Guff the turn he arrives (never fired), cheap engines first until turn 5 (fired once), a rule for Mobilized District (stock uses it), and keeping loyalty abilities for the second main phase so that Jaya's Phoenix and Leori copy them (the same kill turn on all 12 audit seeds). A goldfish table flatters this deck: nobody attacks its planeswalkers, 81% of the damage is combat damage that no one blocks, 19% of all damage by Wizard tokens alone. Not played at tables. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #19, seed 20261210) 69 wins against the stock pilot's 57 (+6.0 points, 95% -2 to +14, exact test 0.20: a lean); 57 with the go-wide attack.",
-  "on": "2026-11-12"
+  "notes": "Version 2 (candidate, not shipped): version 1's rules unchanged and in their order, with answer rules added, written from the 200 games of this seat in league-run #3 (seed 20261250, every seat a bot), where the deck won 29 and Forge's attack sent 15.4 attackers a game at its planeswalkers (walkers left the battlefield for the graveyard 1,029 times in the 171 games it did not win). League figures below are games drawn / cast from hand / in hand at the seat's last turn in a game it did not win. The deck's planeswalkers are all legendary and none is a creature on our side of a wipe, so every wipe in it is close to one-sided for this seat: what it costs us is tokens, mana rocks and the odd creature. At the top, before the turn's other plays, so the board is cleared before new tokens and walkers go down: (1) Urza's Ruinous Blast when an opponent has 4 or more creatures and more power than ours, or (2) can attack us for 12 or more and has more power (47/6/31: Forge's AI almost never casts it; it exiles every nonlegendary nonland permanent and leaves our walkers, Guff, Mangara, Kazuul and the Oaths); (3) Blasphemous Act on the same board as (1) (61/38/10; Forge casts it, the rule makes it sure and early); (4) Nevinyrral's Disk's activation on that board (53 drawn, 19 cast, 11 activations; it spares planeswalkers); (5) Chandra, Awakened Inferno's -3 (3 damage to each non-Elemental creature) when an opponent has 4 or more creatures and more creatures than we do: never used in the league, Forge took her +2 all 145 times; (6) Elspeth's -3 (destroy each creature with power 4 or more) when one opponent can attack us for 12 or more with 3 creatures or fewer, which means at least one of them has power 4 or more, and has more power than ours: never used in the league (113 +1, 10 -7); (7) Promise of Loyalty when an opponent has 4 or more creatures and more power and we have 2 creatures or fewer (74/24/39; version 1's hold until opp_power > power stays, this makes it cast). After the mana rocks, the deterrents to attacks on the walkers: Onakke Oathkeeper at once (57/39/15: a tax of 1 for each creature attacking a walker), Norn's Annex when an opponent has 3 or more creatures (55/29/22), Silent Arbiter on the board of (1) (47/14/17; version 1's hold stays and this rule casts it), Nevinyrral's Disk when an opponent has 3 or more creatures, so it is on the battlefield and untapped by the time (4) wants it. The last list of creatures gains Wall of Denial (49/21/26), Fog Bank (57/43/11), Norn's Annex and the Disk, so they are cast with mana left over whatever the board. Thresholds: 4 creatures is Hail, Caesar's for its one-sided wipe; 12 as a threat is the same as its Ruinous Ultimatum rule; neither was tuned on these games. Left to Forge as before: Path to Exile (57/55/1) and Swords to Plowshares (64/60/3), which it already casts; the single-target loyalty removal (Chandra, Torch -3 64 times, The Wanderer -2 65, Nahiri -2 70, Vronos -2 80). Not expressible: Guff Rewrites History (46 drawn, never cast, 33 in hand at a loss: it needs a target of every player's, which Forge's logic never agrees to) and Semester's End (an instant that saves walkers from attack or removal, wanted on another player's turn).\n Tried and dropped: Gideon Jura's +2 (an opponent's creatures must attack Gideon) when one opponent could attack for 8: it never fired in 8 local tables with Gideon out on 8 turns; the ability targets an opponent, so a rule needs Forge's logic to agree, and Forge's logic for that delayed trigger does not (the card is AI:RemoveDeck:All, its script notes the missing AI). Checked at 16 local tables of bots (seeds 20263040 and 20263041, opponents from bots-v2 under their playbooks; games read in the event log, not playbook_stats): every new rule but the Disk's play rule fired as meant at least once; the wipes took 1 to 9 of our permanents against 4 to 44 of the opponents' (Ruinous Blast 44 against 7 and 26 against 5; Chandra's -3 nine opponent creatures against two of ours). Win rate not measured: 3 wins of 16 is too few games to mean anything. Shipped as version 2 on 2026-11-14 from ab-run #32: on the same 200 tables of bots (seed 20261300, opponents drawn from the other eleven bots under their playbooks of 2026-11-13) it won 52 against version 1's 42 (+5.0 points, 95% -1 to +11, exact test 0.13); the cards the new rules name were cast in 446 of the 544 games they were drawn, under version 1 in 247 of 490. It has not been set against its stock pilot. What it still casts in a share of games 15 points or more below stock AI's (the stock arm of ab-run #26, other tables of the same pool), 12 cards: Spark Double, Deepglow Skate, Narset, Enlightened Master, Wall of Denial, Mangara, the Diplomat, Kazuul, Tyrant of the Cliffs and 6 more (demo-data/playtest/2026-11-14/pool-answers/planeswalker-party-check.txt).",
+  "on": "2026-11-14"
  }
 }

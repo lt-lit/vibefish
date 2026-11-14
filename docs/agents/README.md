@@ -42,6 +42,21 @@ are that session's and have to be replaced by the new session's scratch director
   `-forgeattack` sibling the tables played) into `playbook/precons/DECK.json` with the date and a note, and the deck's row
   in `playbook/bots.json`. The words are the session's. `add_row.py ROW_FILE` puts one row into
   `playbook/variants/README.md` (a row with the same first cell is replaced).
+- `ship_version.py DECK NAME --tables ... --old-arm shipped --new-arm NAME --run ... --status ... --note ...`: the same for
+  the next version of a playbook that is already shipped, judged against the shipped arm of its own deck on the same
+  tables (the nine pool decks' answer rules, 2026-11-14). It refuses a candidate whose version is not the shipped one plus
+  one or whose attack block differs, keeps the row's `tables` (the last measurement against the stock pilot, of the
+  earlier version: the status has to say so) and records this exam as `version_tables`.
+- The card check of an exam (what each arm casts, card by card; DESIGN §30): `fetch-shards-brief.md` is the brief of the
+  small agent that downloads a run's shard artifacts with `fetch_artifact.sh DEST NAME 'URL'`; `shards.sh DEST ENTRY`
+  merges the shards of one request into a run directory for `runner/playtest.py`; then, on the reports of the arms:
+  `arm_card_diff.py STOCK.json PLAYBOOK.json` (two arms), `three_way.py STOCK.json BASE.json NEW.json` (the cards a base
+  playbook casts less than stock AI and what a third arm does with them: the `forge` rule's trial),
+  `pool_check.py DECK VARIANT OUT_DIR [--base-commit=REV]` (a candidate that extends a shipped playbook, beside it and
+  beside stock AI: the pool's answer rules; the files in `demo-data/playtest/2026-11-14/pool-answers/` are its output
+  with `--base-commit=304db09`, the commit before the nine shipped), and `cast_phase.py RUN_DIR ARM DECK CARD...`
+  (whether a seat's casts on its own turn come before or after its attack: the logs have no phase, and this is how
+  §30 found that Forge's AI casts most permanents after combat).
 - `reports/<date>/`: the agents' reports as handed back: the audit, the rules, the validation, what the rule format could
   not say, the deck's answers for the second pass, and where the candidate falls short of a person.
 

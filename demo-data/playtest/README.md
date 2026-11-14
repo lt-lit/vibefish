@@ -15,7 +15,12 @@ the games it was cast under stock Forge AI and under the playbook, on the same t
 - Veloci-Ramp-Tor, Death Toll and Deadly Disguise, from the stock and go-wide arms of `ab-run` #28 (seed 20261280; the
   candidates `stampede`, `winter`, `veil`): the same three files a deck;
 - Revenant Recon and Blood Rites, from the stock and go-wide arms of `ab-run` #29 (seed 20261290; the candidates
-  `mirko`, `demons`): the same three files a deck.
+  `mirko`, `demons`): the same three files a deck;
+- `pool-answers/`: the nine pool decks whose answer rules were examined in `ab-run` #31 to #33 and #35 (seed 20261300,
+  playbook arms only): `<deck>-shipped.json` is the report of the shipped playbook of 2026-11-13, `<deck>-answers.json`
+  (`token-triumph-answers2.json`) of the candidate on the same tables, and `<deck>-check.txt` sets the two beside the
+  stock arm of `ab-run` #26 for the cards the candidate's new rules name, then lists what the candidate casts fifteen
+  points less or more often than the shipped playbook and than stock AI. The candidates shipped on 2026-11-14.
 
 The reports were made from shard artifacts merged the way the workflow's rollup merges them; the win counts in them
 are those of the published rollups in `demo-data/ab/`. Regenerated on 2026-11-14 05:55 UTC after `runner/playtest.py`

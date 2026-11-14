@@ -38,7 +38,7 @@
  },
  "curated": {},
  "playbook": {
-  "version": 1,
+  "version": 2,
   "cast": {
    "groups": {
     "piper_targets": [
@@ -51,6 +51,59 @@
     ]
    },
    "rules": [
+    {
+     "play": [
+      "Devastation Tide"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 5"
+     ]
+    },
+    {
+     "play": [
+      "Devastation Tide"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Devastation Tide"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "opponents == 1"
+     ]
+    },
+    {
+     "play": [
+      "Raise the Palisade"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "type:Elf >= 2",
+      "type:Insect <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Raise the Palisade"
+     ],
+     "when": [
+      "threat >= 10",
+      "type:Elf >= 2",
+      "type:Insect <= 2"
+     ],
+     "phase": "main1"
+    },
     {
      "play": [
       "Sol Ring",
@@ -67,6 +120,14 @@
     {
      "play": [
       "Galadriel, Elven-Queen"
+     ]
+    },
+    {
+     "play": [
+      "Beast Within"
+     ],
+     "when": [
+      "threat >= 7"
      ]
     },
     {
@@ -189,7 +250,7 @@
     }
    ]
   },
-  "notes": "Elven Council is Galadriel, Elven-Queen: she votes at the start of each of our combats if another Elf entered this turn, so the deck wants her out at once and an Elf down in every first main phase. The stock seat sat on Wood Elves and Growth Spiral for a whole land-light game and cast Galadriel on turn 7 to 12 in a third of the audit games. The rules ramp first, then Galadriel, then Arwen (every later creature enters with counters) and the lords and spell-value engines (Archdruid, Warmaster, Gandalf, Radagast) ahead of the five-drops, then the rest of the creatures; Elvish Piper puts the big creatures in from hand, which stock never did; Haldir and Genesis Wave with all the mana; Overwhelming Stampede, Warmaster's and Haldir's pumps before an attack of four or more; the card draw and Travel Through Caradhras (never cast by stock) while the library holds thirty cards. The reactive cards (Heroic Intervention, Swan Song, Beast Within, Mystic Confluence, Lignify, Devastation Tide, Windswift Slice, Trap the Trespassers, Galadhrim Ambush) and Sylvan Offering, which gives an opponent the same tokens, stay Forge's. Votes are Forge's. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #23, seed 20261230) 40 wins against the stock pilot's 15 (+12.5 points, 95% +6 to +19, exact test 0.0002); 39 with the go-wide attack.",
-  "on": "2026-11-12"
+  "notes": "The answers candidate: version 1 as shipped (its fourteen cast rules and its group, in their order: now rules 6, 7 and 9 to 20; no triggers, no attack block, so Forge attacks) plus six rules for the deck's answer cards, rules 1 to 5 and 8. Written from the 200 games of the league of twelve (league-run #3, seed 20261250), where the seat won 36. Drawn / cast / in hand on the last own turn of a loss there: Beast Within 60 / 0 / 41 (AI:RemoveDeck:All, so Forge's AI never casts it), Mystic Confluence 50 / 0 / 34 (the same flag), Devastation Tide 66 / 33 / 21, Raise the Palisade 56 / 40 / 14; Lignify, Windswift Slice, Trap the Trespassers and Reclamation Sage were cast in 85 to 97% of the games they were drawn and are left to Forge. RULES 1 TO 3, Devastation Tide (returns every nonland permanent, ours too; our lands stay) on the conditions Tricky Terrain's Oblivion Stone and Evacuation use: an opponent with seven creatures or more and more power than we have, and one of: five creatures or fewer of ours, that opponent wider than us and able to kill us next turn, or the last opponent. Forge's own casts stay (no hold: the miracle cost is Forge's to take, and a hold might stop it); in the league they came at any position (a cast at 40 life with six permanents a side) and the seat won 7 of the 33 games with one. RULES 4 AND 5, Raise the Palisade in the first main phase, so the opponents' blockers are gone before our attack and what comes back next turn is summoning sick: when an opponent has four creatures, or could hit us for ten (the second condition is for decks of a few large creatures: a local game was lost to Eldrazi Incursion with the card in hand for eight turns, the opponent never having four creatures). Forge chooses the type (AILogic MostProminentComputerControls); with two Elves or more and two Insects or fewer it chose Elf in every cast seen, league and local, and the cast returned the opponents' boards (tokens die) and at most a non-Elf or two of ours. Ahead of the ramp, so the turn's mana goes to it first. RULE 8, Beast Within when an opponent could attack us for seven or more, as Tricky Terrain's rule (cast there in 72 of 75 games drawn). It names no target, so it is cast only when Forge's logic for the card agrees, and Forge picks the target (AITgts: a permanent of mana value 4 or more of an opponent's): locally it destroyed Cloud, Ex-SOLDIER, Gray Merchant of Asphodel, Rampaging Baloths and Twins of Discord. TRIED AND DROPPED: Mystic Confluence as a first-main play with an opponent at three creatures. Forge's charm logic chose its modes and both local casts resolved with no effect at all (no card drawn, nothing returned): five mana for nothing. A person holds it for an opponent's turn (counter unless they pay three, or bounce attackers), which the rules cannot reach. Left to Forge as before, out of the format's reach: Galadhrim Ambush (combat, other players' turns), Heroic Intervention and Swan Song (responses), Mystic Confluence; Sylvan Offering (gives an opponent the same tokens). Local test tables are recorded in the agent's report, not here. Shipped as version 2 on 2026-11-14 from ab-run #32: on the same 200 tables of bots (seed 20261300, opponents drawn from the other eleven bots under their playbooks of 2026-11-13) it won 32 against version 1's 34 (-1.0 points, 95% -5 to +3, exact test 0.82); the cards the new rules name were cast in 163 of the 186 games they were drawn, under version 1 in 70 of 189. It has not been set against its stock pilot. What it still casts in a share of games 15 points or more below stock AI's (the stock arm of ab-run #26, other tables of the same pool), 6 cards: Seeds of Renewal, Galadhrim Ambush, Preordain, Whispersilk Cloak, Lothlórien Blade, Swan Song (demo-data/playtest/2026-11-14/pool-answers/elven-council-check.txt).",
+  "on": "2026-11-14"
  }
 }

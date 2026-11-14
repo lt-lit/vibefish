@@ -25,7 +25,7 @@
  },
  "curated": {},
  "playbook": {
-  "version": 1,
+  "version": 2,
   "cast": {
    "rules": [
     {
@@ -50,6 +50,48 @@
      "phase": "main1",
      "when": [
       "creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Noxious Ghoul"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Syphon Flesh"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Necrotic Hex"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Mutilate"
+     ],
+     "when": [
+      "lands >= 5",
+      "opp_creatures >= 3",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Fleshbag Marauder"
+     ],
+     "when": [
+      "opp_creatures >= 1"
      ]
     },
     {
@@ -161,7 +203,7 @@
     ]
    }
   ],
-  "notes": "Version 1. Ghoulcaller Gisa is flagged AI:RemoveDeck:All and stock never casts her (0 of 12 audit games, seeds 11001-11012). The rules put the rocks down, cast Gisa as soon as she is affordable and tap her in every first main phase while she has another creature to sacrifice (Forge picks the sacrifice: a Zombie token 43 times in 60 tuning activations, Death Baron 7). Then the lords and anthems, Endless Ranks of the Dead (also never cast by stock), the token makers and the creatures dearest first; Graveborn Muse only while the library is 50+ and Zombies 5 or fewer; Cemetery Reaper's and Lord of the Undead's abilities in main 1, Cryptbreaker's token with a hand of 4+, the draw spells while the library is 30+, Lord of the Accursed's menace with 3+ attackers. God-Eternal Bontu is held: under a play rule Forge accepted its enters trigger and sacrificed every permanent, lands included (a decline trigger rule does not reach that choice). Oversold Cemetery's and Undead Butler's optional triggers are taken. Attack: go-wide at the highest life with the split. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #23, seed 20261230) 40 wins against the stock pilot's 35 (+2.5 points, 95% -5 to +10, exact test 0.60: a lean); 31 with the go-wide attack.",
-  "on": "2026-11-12"
+  "notes": "Version 2 (candidate 'answers') = the shipped version 1 (its trigger rules and its twelve cast rules unchanged and in their order, now rules 1-3 and 9-17; no attack block, Forge attacks, as shipped) with five rules, 4 to 8, for the deck's edicts and sweepers, which version 1 left to Forge. Written from the 200 games of the league of twelve (league-run #3, seed 20261250), where the seat won 37, lost 162 and was first out in 68. Games drawn / cast / in hand on the seat's last turn of a loss: Syphon Flesh 44/16/23, Fleshbag Marauder 51/26/19, Mutilate 48/7/31, Necrotic Hex 57/12/35, Noxious Ghoul 41/7/29; on own turns with the card in hand and lands >= its mana value they sat 134, 174, 193, 124 and 190 times. The targeted removal (Go for the Throat, Consuming Corruption, Tendrils of Corruption, Withering Torment, Consumed by Greed) is cast by Forge in most games it is drawn and was in hand at 1 to 4 losses each: left to Forge, which picks the targets a rule could not. They sit after the rocks, Gisa and Gisa's activation (so Gisa makes her tokens before a sacrifice effect asks for six creatures) and before the lords and creatures. Rule 4, Noxious Ghoul with an opponent at 3+ creatures: the deck's one-sided sweeper (-1/-1 to non-Zombies for every Zombie that enters), first so the Zombies cast after it in the same turn trigger it; it also shrinks Gisa, Kalitas, Ayara and Grave Titan. Rule 5, Syphon Flesh whenever an opponent has a creature: one-sided, each other player sacrifices one and we get a Zombie for each. Rule 6, Necrotic Hex with an opponent at 3+ creatures: every player sacrifices six and we alone get six 2/2 Zombies back, so it is near one-sided for a deck of tokens. Rule 7, Mutilate (-1/-1 per Swamp to every creature, ours too) only when behind: 5+ lands, an opponent with 3+ creatures and more power than our whole board. Rule 8, Fleshbag Marauder whenever an opponent has a creature: each player sacrifices one, and Forge gives up our lowest-rated creature, usually a token or the Marauder itself. The seat's losses there came by combat (7,607 of 8,030 damage taken in the last four game turns), a median of four attackers at it per attack. Checked at 16 local tables of bots (seeds 20263060 and 20263061): the five rules fired 16 times, Syphon Flesh 4 casts (11 opposing creatures sacrificed, 13 tokens), Fleshbag Marauder 4, Necrotic Hex 2 (18 opposing creatures and 7 of ours gone, 12 tokens), Noxious Ghoul 3 (3 opposing creatures killed in all, two casts killed none: the -1/-1 only kills X/1s unless more Zombies follow), Mutilate 1 (at 8 life: 8 of theirs, 1 of ours) and held through five turns of a game the seat was ahead in and won. Shipped as version 2 on 2026-11-14 from ab-run #32: on the same 200 tables of bots (seed 20261300, opponents drawn from the other eleven bots under their playbooks of 2026-11-13) it won 38 against version 1's 27 (+5.5 points, 95% +0 to +11, exact test 0.061); the cards the new rules name were cast in 190 of the 247 games they were drawn, under version 1 in 61 of 248. It has not been set against its stock pilot. What it still casts in a share of games 15 points or more below stock AI's (the stock arm of ab-run #26, other tables of the same pool), 8 cards: Graveborn Muse, Marchesa's Decree, Soulless One, Sign in Blood, Kalitas, Traitor of Ghet, Josu Vess, Lich Knight and 2 more (demo-data/playtest/2026-11-14/pool-answers/wretched-ranks-check.txt).",
+  "on": "2026-11-14"
  }
 }

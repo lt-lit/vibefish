@@ -29,12 +29,52 @@
  },
  "curated": {},
  "playbook": {
-  "version": 1,
+  "version": 2,
   "cast": {
    "rules": [
     {
      "play": [
       "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Ultimate Magic: Holy"
+     ],
+     "when": [
+      "hand:wipes >= 1",
+      "creatures >= 2",
+      "mana >= 9",
+      "opp_creatures >= 5",
+      "opp_power > power",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Vanquish the Horde",
+      "Ultimate Magic: Meteor"
+     ],
+     "when": [
+      "opp_creatures >= 5",
+      "opp_power > power",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Vanquish the Horde",
+      "Ultimate Magic: Meteor"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_power > power"
+     ]
+    },
+    {
+     "hold": [
+      "Vanquish the Horde",
+      "Ultimate Magic: Meteor"
      ]
     },
     {
@@ -83,6 +123,24 @@
       "Skullclamp",
       "Conformer Shuriken",
       "Summoning Materia"
+     ]
+    },
+    {
+     "play": [
+      "Decimate"
+     ]
+    },
+    {
+     "play": [
+      "Summon: Kujata"
+     ],
+     "when": [
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Yuffie, Materia Hunter"
      ]
     },
     {
@@ -161,7 +219,13 @@
      ],
      "ability": "Equip"
     }
-   ]
+   ],
+   "groups": {
+    "wipes": [
+     "Vanquish the Horde",
+     "Ultimate Magic: Meteor"
+    ]
+   }
   },
   "triggers": [
    {
@@ -194,7 +258,7 @@
     ]
    }
   ],
-  "notes": "Limit Break (Cloud, Ex-SOLDIER: haste, attaches an equipment as he enters, draws a card per equipped attacker and makes two Treasures at power 7). Stock Forge casts Cloud on time but spreads its equipment over whatever creature is out (Cid, Zack Fair, Helitrooper; 11 of about 100 equip activations in the 12 audit games went to Cloud), never uses Zack Fair or Scavenger Grounds, and leaves 37% of its mana unspent. Rules: Sol Ring, then Cloud as soon as he is affordable, then the rest of the ramp and the big equipment (Wrecking Ball Arm, Colossus Hammer, Behemoth Sledge, Hero's Heirloom, Hero's Blade, Champion's Helm) so Cloud's enter trigger has something to pick up; the equipment payoffs and enablers (Puresteel Paladin, Cid, Bastion Protector, Tifa, Inspiring Statuary, SOLDIER Military Program, Furious Rise), the other equipment and the creatures; then, in the first main phase, every equip ability aimed at Cloud (Wrecking Ball Arm by its legendary equip {3}) as a mana sink, Harmonize while the library is over 30, Slayers' Stronghold on Cloud before combat, Bonders' Enclave in the second main phase. Lightning Greaves is never equipped (shroud on Cloud would stop every other equip). Triggers: Armory Automaton's 'attach any number of equipment' declined while Cloud is out (it takes them off him), Puresteel Paladin and Mask of Memory draws taken while the library is over 30, and the other optional triggers taken. The equip rules sit below the casts because the rule format cannot tell an equipment already on Cloud from one that is not: an equip rule re-equips it to Cloud every turn (75 mana over 12 audit games); placed before the creatures it cost half a turn. Secret Rendezvous was tried and dropped: it is aimed at an opponent, Forge's own logic declined it, and a rule can only aim at our permanents. Shipped on 2026-11-12 as version 1 with the attack left to Forge: at 200 tables of bots (ab-run #25, seed 20261230, the code that does not re-equip what Cloud already wears) 47 wins against the stock pilot's 24 (+11.5 points, 95% +5 to +18, exact test 0.0006); 28 with the go-wide attack.",
-  "on": "2026-11-12"
+  "notes": "Version 2 candidate = the shipped version 1 (its three trigger rules and its thirteen cast rules unchanged and in their order; no attack block, so Forge attacks, as shipped) plus seven cast rules for the deck's answers: rules 2 to 5 at the top (after Sol Ring, before Cloud) and rules 11 to 13 before the shipped creature rule. Written from the 200 games of the league of twelve (league-run #3, seed 20261250), where the seat won 35 and lost 165. On its last own turn of a loss the seat had 3 creatures (median) against 11 for the widest opponent; an opponent had 5 or more creatures and more than the seat in 144 of the 165 losses and 7 of the 35 wins (7 or more: 124 and 6). Drawn / cast / in hand on the last own turn of a loss: Vanquish the Horde 55/29/18, Austere Command 45/14/22, Ultimate Magic: Meteor 42/0/5 (Forge foretells it, 49 times hand to exile, and never casts it from exile), Decimate 55/21/26, Summon: Kujata 50/22/22, Yuffie, Materia Hunter 32/0/21, Dispatch 50/0/32, Clever Concealment 43/0/30; Chaos Warp 51/47, Cloud's Limit Break 50/50, Vandalblast 55/44 and Ultimate Magic: Holy 43/25 are cast by Forge already and are left to it. RULE 3, the wipe: Vanquish the Horde, else Meteor (hard cast from hand), when an opponent has 5 or more creatures, more power than we have and more creatures than we have. Both kill our creatures too; the equipment, which is this deck, stays, and Cloud comes back from the command zone (rule 6 sits below, so he is recast after the wipe). 5 rather than 7: on the losses' last turns 5 adds 20 losses and 1 win to the 7 condition. RULE 4, the emergency: the same two when an opponent could kill us next turn with more power than ours, whatever the count. RULE 5 holds the two from Forge: of Forge's 43 league casts of Vanquish and Austere, 8 were outside the rule-3 board (6 losses, 2 wins). RULE 2: Ultimate Magic: Holy first (our permanents indestructible until end of turn) when a wipe of rule 3 is in hand, rule 3's board holds, we have 2 creatures or more and 9 mana; the wipe then follows. Never seen to fire locally: Forge foretells Holy within a turn or two of drawing it, and a foretold card cannot be cast by a rule. RULE 11, Decimate moved ahead of the creatures (Forge picks the four targets; the rule only asks earlier). RULE 12, Summon: Kujata when an opponent has 2 creatures (chapter I: 3 damage to up to two creatures, aimed by Forge). RULE 13, Yuffie, Materia Hunter (gain control of an opponent's noncreature artifact; stock Forge never cast her in 32 draws). Tried and dropped: Austere Command in rules 3 to 5. Cast by a play rule it resolves with no mode chosen and destroys nothing (a local game, turn 24: 13 opposing creatures, nothing left the battlefield); Forge's own casts choose modes and destroyed 5 to 35 opposing permanents in the league. It stays Forge's. Dispatch with a play rule (opp_power >= 4): Forge's logic for it (AI:RemoveDeck:All) never agreed in 8 games with it in hand on many turns; dropped. Local tables (24 at seed 20263020 to 20263022, bots-v2, opponents under their playbooks; 3 wins, too few to mean anything): Vanquish cast once (7 opposing creatures against 1), held once correctly when the seat had the widest board and went on to win; Meteor hard-cast twice (7 opposing creatures for 2 of ours plus a Treasure; 13 opposing permanents for Cloud); Kujata 4 casts, 2 creatures each; Yuffie 11 casts (Arcane Signet, Mind Stone, Talisman, Nevinyrral's Disk); Decimate 4 casts. Shipped as version 2 on 2026-11-14 from ab-run #33: on the same 200 tables of bots (seed 20261300, opponents drawn from the other eleven bots under their playbooks of 2026-11-13) it won 51 against version 1's 44 (+3.5 points, 95% -2 to +9, exact test 0.30); the cards the new rules name were cast in 185 of the 284 games they were drawn, under version 1 in 72 of 275. It has not been set against its stock pilot. What it still casts in a share of games 15 points or more below stock AI's (the stock arm of ab-run #26, other tables of the same pool), 3 cards: Austere Command, Avalanche of Sector 7, Ultimate Magic: Holy (demo-data/playtest/2026-11-14/pool-answers/limit-break-check.txt).",
+  "on": "2026-11-14"
  }
 }

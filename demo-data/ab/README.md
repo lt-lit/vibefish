@@ -139,13 +139,37 @@ Tricky Terrain 58 against 40 (+9.0, 39 against 21, 0.027); Token Triumph 54 agai
 against 50 (-3.5, 20 against 27, 0.38). DESIGN.md §28 reads them. The league of the same twelve (`league-run` #3, seed 20261250) is
 `demo-data/runs/2026-11-12-bots-v2-snapshot-2026-11-10-s20261250-bots/`.
 
-`2026-11-14-ab-v17/`: the owner's table (DESIGN.md §30), collected run by run as Actions finishes them; this paragraph grows with them.
-The first exam of the ten engine-only candidates, each at 200 tables whose three opponents are drawn from the twelve bots of `bots-v2`
-under their shipped playbooks of 2026-11-13: `<deck>-<name>.json` has the stock pilot and the candidate with its go-wide attack,
-`<deck>-<name>-forgeattack.json` the same rules with the attack left to Forge on the same tables (playbook arm only), and
-`<deck>-join.json` the three side by side (kind `ab-join`; arms `stock`, `gowide`, `forgeattack`). Collected so far (`ab-run` #29 and
-#30, seed 20261290), wins of 200 as stock / go-wide / Forge's attack: Blood Rites `demons` 66 / 78 / 83 (go-wide +6.0 points, exact
-test 0.22; Forge's attack +8.5, 95% -1 to +18, 0.089; between the two attacks 0.61); Revenant Recon `mirko` 47 / 55 / 53 (+4.0, 0.37;
-+3.0, 0.52); Miracle Worker `veil` 64 / 55 / 59 (-4.5, 0.29; -2.5, 0.63). None of these candidates is shipped: every one of them casts
-its removal and its large threats far less than its stock pilot on the same tables (§30), and each deck ships from the exam of its
-second pass (`<deck>-answers.json`, `ab-run` #36 to #39).
+`2026-11-14-ab-v17/`: the owner's table and the pool's answer rules (DESIGN.md §30), nine Actions runs of 2026-11-14, all at tables
+whose three opponents are drawn from the twelve bots of `bots-v2` under their shipped playbooks of 2026-11-13.
+
+The first exam of the ten engine-only candidates for the owner's precons (`ab-run` #27 to #30; seeds 20261260, 20261280, 20261290):
+`<deck>-<name>.json` has the stock pilot and the candidate with its go-wide attack, `<deck>-<name>-forgeattack.json` the same rules with
+the attack left to Forge on the same tables (playbook arm only), and `<deck>-join.json` the three side by side (kind `ab-join`; arms
+`stock`, `gowide`, `forgeattack`). Wins of 200 as stock / go-wide / Forge's attack: Blight Curse `wretch` 46 / 41 / 44; Veloci-Ramp-Tor
+`stampede` 85 / 80 / 91; Mutant Menace `mothman` 46 / 55 / 63 (Forge's attack on stock +8.5 points, exact test 0.060); Squirreled Away
+`acorns` 46 / 47 / 57; Revenant Recon `mirko` 47 / 55 / 53; Blood Rites `demons` 66 / 78 / 83 (+8.5, 0.089); Death Toll `winter`
+37 / 59 / 51 (go-wide on stock +11.0, 95% +2 to +20, 0.018); Miracle Worker `veil` 64 / 55 / 59; Ahoy Mateys `crew` 36 / 52 / 62
+(go-wide +8.0, 0.048; Forge's attack +13.0, +5 to +21, 0.002); Deadly Disguise `veil` 27 / 20 / 25. Over the 2,000 tables 500 / 542 /
+588; between the two attacks 247 discordant tables against 201 for Forge's attack (exact test 0.033), no single deck clear of noise.
+None of these candidates is shipped: every one casts its removal and its large threats far less than its stock pilot on the same
+tables, and each deck ships from the exam of its second pass (`<deck>-answers.json`, `ab-run` #36 to #39, to be collected into a
+directory of their own).
+
+`hail-caesar.json` and `tricky-terrain.json` (`ab-run` #27, seed 20261270): versions 6 and 8, the go-wide attack back, against their
+stock pilots on tables that did not choose the attack: Hail, Caesar 54 wins against 30 (+12.0, 95% +4 to +20, exact test 0.0032),
+Tricky Terrain 48 against 34 (+7.0, -0 to +14, 0.081).
+
+`<deck>-<name>-forge.json` and `<deck>-forge-join.json` (`ab-run` #34, seed 20261260, the tables of #27; arms `stock`, `gowide`,
+`forgeattack`, `forge`): the trial of the `forge` rule, put in mechanically after the commander's rule of the first four go-wide
+candidates. With the rule against without it: Blight Curse 52 against 41 (+5.5, exact test 0.18), Mutant Menace 53 against 55, Squirreled
+Away 45 against 47, Ahoy Mateys 63 against 52 (+5.5, 0.18); 213 against 195 over the 800 tables (0.23).
+
+The answer rules of the nine pool decks that had none (`ab-run` #31 to #33 and #35, seed 20261300): `<deck>.json` is the shipped
+playbook of 2026-11-13 (playbook arm only), `<deck>-answers.json` the candidate on the same tables (`token-triumph-answers2.json` for
+Token Triumph), `<deck>-join.json` the two side by side (arms `shipped` and `answers`, or `answers2`). Candidate against shipped, wins
+of 200: Deep Clue Sea 71 against 67; Eldrazi Incursion 63 against 64; Elven Council 32 against 34; Enduring Enchantments 63 against 52
+(+5.5, 0.16); Limit Break 51 against 44; Planeswalker Party 52 against 42 (+5.0, 0.13); Quick Draw 58 against 59; Token Triumph 65
+against 57 (+4.0, 0.17); Wretched Ranks 38 against 27 (+5.5, 95% +0 to +11, 0.061). Summed 493 against 446 of 1,800 (166 discordant
+tables against 119, exact test 0.0063), and the cards the new rules name cast in 77% of the games they were drawn against 34%
+(`demo-data/playtest/2026-11-14/pool-answers/`). All nine shipped on 2026-11-14 as the next version of each deck; none has met its
+stock pilot yet.

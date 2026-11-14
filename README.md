@@ -9,18 +9,21 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status (2026-11-12):** twelve precons have a per-deck bot: a playbook for one deck that says which card to cast
-when and aimed at what, which of the deck's optional triggers to take, and when to use its board wipes; attacking and
-everything else stays Forge's. Each was judged at 200 four-player tables whose other three seats are bots too, against
-the same deck under Forge's stock AI: six clearly ahead of their stock pilot (Goblin Storm, Hail, Caesar, Tricky
-Terrain, Deep Clue Sea, Limit Break, Elven Council), Token Triumph at the edge of noise, three ahead on a lean, two
-level. The dashboard shows them in one table. Underneath: the benchmark pod
+**Status (2026-11-14):** twelve precons have a per-deck bot: a playbook for one deck that says which card to cast
+when and aimed at what, which of the deck's optional triggers to take, and when to use its board wipes and removal;
+two of them also choose their own attacks, and everything else stays Forge's. Each was judged at 200 four-player
+tables whose other three seats are bots too, against the same deck under Forge's stock AI: among the twelve the
+playbooks won 557 of 2,400 tables and the stock pilots of the same decks 419, nine decks ahead of their stock pilot
+(four of them clear of noise), one level and two a point or two behind. On 2026-11-14 the nine bots that had no rules
+for their answers got them: beside the versions before them on the same tables, they cast those cards in 77% of the
+games they draw them (34% before) and won 493 of 1,800 tables to 446. The dashboard shows the twelve in one table.
+Playbooks for ten more precons are at the tables. Underneath: the benchmark pod
 (four bundled Commander precons) plays itself through a Java harness that records every game as a JSON event
 stream; the dashboard shows per-deck win rates, mulligans, land drops, commander timing and the cards that never
 get cast, with card images from Scryfall; Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI
 on the pod; and a precon league (91 bundled precons over random four-player tables) scores the sim's precon
 ranking against the human win rates Playgroup.gg publishes for stock precons, a coarse comparison (those rates are
-against unknown decks and noisy, `DESIGN.md` §26). `DESIGN.md` §21 to §26 have how the bots were built and measured.
+against unknown decks and noisy, `DESIGN.md` §26). `DESIGN.md` §21 to §31 have how the bots were built and measured.
 
 **Dashboard:** https://lt-lit.github.io/vibefish/ — GitHub Pages serves the `testing` branch directly (Settings → Pages → Deploy from a branch → `testing`, root). The repository root redirects to `dashboard/`, which reads `../demo-data/`; `.nojekyll` keeps Pages from processing the files.
 
