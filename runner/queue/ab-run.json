@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T02:55Z",
-  "note": "Answer rules for the pool decks that had none, second part (DESIGN §30; ab-run #31 has Eldrazi Incursion, Quick Draw and Enduring Enchantments): Planeswalker Party, Wretched Ranks and Elven Council. Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, once under its shipped playbook and once under the candidate with the answer rules, playbook arms only, on the same tables (seed 20261300; docs/agents/exam_summary.py joins them). Deep Clue Sea, Limit Break and Token Triumph follow as their agents finish.",
+  "requested": "2026-11-14T03:30Z",
+  "note": "Answer rules for the pool decks that had none, third part (DESIGN §30; ab-run #31 and #32 have six decks): Deep Clue Sea and Limit Break. Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, once under its shipped playbook and once under the candidate with the answer rules, playbook arms only, on the same tables (seed 20261300; docs/agents/exam_summary.py joins them). Token Triumph's second attempt follows when its agent finishes.",
   "games": "200",
   "shards_per_deck": "5",
   "jobs_per_shard": "2",
@@ -11,12 +11,12 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "planeswalker-party,wretched-ranks,elven-council",
+      "decks": "deep-clue-sea,limit-break",
       "arms": "playbook",
       "seed": "20261300"
     },
     {
-      "decks": "planeswalker-party@answers,wretched-ranks@answers,elven-council@answers",
+      "decks": "deep-clue-sea@answers,limit-break@answers",
       "arms": "playbook",
       "seed": "20261300"
     }
