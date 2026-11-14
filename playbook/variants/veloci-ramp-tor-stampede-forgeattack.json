@@ -1,0 +1,106 @@
+{
+ "schema": 1,
+ "deck": "veloci-ramp-tor",
+ "variant": "stampede-forgeattack",
+ "of": "playbook/variants/veloci-ramp-tor-stampede.json",
+ "about": "The stampede candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "playbook": {
+  "version": 1,
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Mosswort Bridge"
+     ],
+     "ability": "play the exiled card",
+     "until": [
+      "power >= 10",
+      "lands >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Ixalli's Lorekeeper",
+      "Drover of the Mighty",
+      "Rampant Growth",
+      "Farseek",
+      "Thunderherd Migration",
+      "Cultivate",
+      "Migration Path",
+      "Progenitor's Icon"
+     ]
+    },
+    {
+     "play": [
+      "Pantlaza, Sun-Favored"
+     ]
+    },
+    {
+     "play": [
+      "Otepec Huntmaster",
+      "Lifecrafter's Bestiary",
+      "Rhythm of the Wild",
+      "Descendants' Path"
+     ]
+    },
+    {
+     "play": [
+      "Rishkar's Expertise"
+     ],
+     "when": [
+      "power >= 4",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Zacama, Primal Calamity",
+      "Zetalpa, Primal Dawn",
+      "Apex Altisaur",
+      "Rampaging Brontodon",
+      "Thundering Spineback",
+      "Verdant Sun's Avatar",
+      "Etali, Primal Storm",
+      "Earthshaker Dreadmaw",
+      "Bellowing Aegisaur",
+      "Regal Behemoth",
+      "From the Rubble",
+      "Xenagos, God of Revels",
+      "Regisaur Alpha",
+      "Scion of Calamity",
+      "Quartzwood Crasher",
+      "Wrathful Raptors",
+      "Temple Altisaur",
+      "Curious Altisaur",
+      "Majestic Heliopterus",
+      "Raging Regisaur",
+      "Ripjaw Raptor",
+      "Shifting Ceratops",
+      "Bronzebeak Foragers",
+      "Kinjalli's Sunwing",
+      "Ranging Raptors",
+      "Runic Armasaur",
+      "Sunfrill Imitator",
+      "Thrashing Brontodon",
+      "Topiary Stomper",
+      "Wayward Swordtooth",
+      "Wayta, Trainer Prodigy",
+      "Atzocan Seer",
+      "Deathgorge Scavenger",
+      "Dinosaur Egg"
+     ]
+    },
+    {
+     "activate": [
+      "Thundering Spineback"
+     ],
+     "phase": "main2"
+    }
+   ]
+  },
+  "notes": "Pantlaza, Sun-Favored discovers once a turn when a Dinosaur enters (X = its toughness), so the deck wants mana, then Pantlaza, then a Dinosaur a turn, dearest first so the one discover is the biggest. Stock Forge already runs most of this (all spells but the answers cast, 28% of mana unspent, almost all of it on held answers); what it does not do is cast Pantlaza early (own turn 4 to 10, median 6 to 7, not at all in 2 of 12 audit games), and it casts the ramp and engines late. Rule 1: Mosswort Bridge's ability is held until 10 power and 8 lands: Forge activated it every upkeep with Bronzebeak Foragers under it (an aimed spell Forge then declines to cast), spending its green each turn and stranding a hand of green cards (one audit game took 14 turns). Rule 2: ramp and rocks first. Rule 3: Pantlaza as soon as affordable. Rule 4: the engines (Otepec Huntmaster's discount, Lifecrafter's Bestiary, Rhythm of the Wild, Descendants' Path). Rule 5: Rishkar's Expertise, which stock never cast, with some power on board and a library to draw from. Rule 6: every Dinosaur and creature dearest first, including Apex Altisaur and Bronzebeak Foragers as bodies (stock never cast either with nothing to aim their enter triggers at); Itzquinth is left to Forge and Marauding Raptor (flagged AI:RemoveDeck:All) left out on purpose: it deals 2 to each creature that enters and kills the mana creatures. Rule 7: Thundering Spineback's token with mana left in the second main phase. Answers (Path to Exile, Generous Gift, Fiery Confluence, Chandra's Ignition, Savage Stomp, Wakening Sun's Avatar) are left to Forge for a second pass. Tried and dropped: an accept rule for Lifecrafter's Bestiary's pay-G draw; Forge already pays whenever it has the mana (identical games). Attack go-wide for goldfish only.",
+  "on": "2026-11-13"
+ }
+}
