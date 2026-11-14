@@ -1,0 +1,844 @@
+{
+ "kind": "playtest",
+ "deck": "wretched-ranks",
+ "deck_file": "Wretched Ranks [FDC] [2026].dck",
+ "deck_file_sha256": null,
+ "arm": "playbook",
+ "pilot": {
+  "playbook": "wretched-ranks.json",
+  "version": 1,
+  "attack": null
+ },
+ "commanders": [
+  "Ghoulcaller Gisa"
+ ],
+ "table": {
+  "pool": "bots-v2",
+  "seats": 4,
+  "seed": 20261240,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 34,
+  "win_rate": 0.17,
+  "win_rate_ci95": [
+   0.1243,
+   0.2282
+  ],
+  "even_share": 0.25,
+  "not_finished": 4,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 8
+   },
+   {
+    "games": 50,
+    "wins": 9
+   },
+   {
+    "games": 50,
+    "wins": 8
+   },
+   {
+    "games": 50,
+    "wins": 9
+   }
+  ],
+  "losses": 162,
+  "out_first": 75,
+  "out_second": 53,
+  "out_third": 34,
+  "loss_reasons": {
+   "LifeReachedZero": 146,
+   "OpponentWon": 10,
+   "CommanderDamage": 8
+  },
+  "game_turns": 45.4,
+  "own_turns_when_won": 13.7,
+  "own_turns_when_lost": 10.2
+ },
+ "opponents": {
+  "quick-draw": {
+   "tables": 55,
+   "focus_wins": 12,
+   "focus_win_rate": 0.218,
+   "its_wins": 9,
+   "its_win_rate": 0.164,
+   "took_it_out": 8
+  },
+  "token-triumph": {
+   "tables": 53,
+   "focus_wins": 11,
+   "focus_win_rate": 0.208,
+   "its_wins": 15,
+   "its_win_rate": 0.283,
+   "took_it_out": 15
+  },
+  "limit-break": {
+   "tables": 49,
+   "focus_wins": 10,
+   "focus_win_rate": 0.204,
+   "its_wins": 12,
+   "its_win_rate": 0.245,
+   "took_it_out": 12
+  },
+  "planeswalker-party": {
+   "tables": 60,
+   "focus_wins": 11,
+   "focus_win_rate": 0.183,
+   "its_wins": 9,
+   "its_win_rate": 0.15,
+   "took_it_out": 5
+  },
+  "goblin-storm": {
+   "tables": 55,
+   "focus_wins": 10,
+   "focus_win_rate": 0.182,
+   "its_wins": 11,
+   "its_win_rate": 0.2,
+   "took_it_out": 14
+  },
+  "elven-council": {
+   "tables": 59,
+   "focus_wins": 10,
+   "focus_win_rate": 0.169,
+   "its_wins": 15,
+   "its_win_rate": 0.254,
+   "took_it_out": 20
+  },
+  "hail-caesar": {
+   "tables": 51,
+   "focus_wins": 8,
+   "focus_win_rate": 0.157,
+   "its_wins": 18,
+   "its_win_rate": 0.353,
+   "took_it_out": 17
+  },
+  "enduring-enchantments": {
+   "tables": 47,
+   "focus_wins": 7,
+   "focus_win_rate": 0.149,
+   "its_wins": 17,
+   "its_win_rate": 0.362,
+   "took_it_out": 16
+  },
+  "eldrazi-incursion": {
+   "tables": 59,
+   "focus_wins": 8,
+   "focus_win_rate": 0.136,
+   "its_wins": 22,
+   "its_win_rate": 0.373,
+   "took_it_out": 19
+  },
+  "deep-clue-sea": {
+   "tables": 67,
+   "focus_wins": 9,
+   "focus_win_rate": 0.134,
+   "its_wins": 25,
+   "its_win_rate": 0.373,
+   "took_it_out": 14
+  },
+  "tricky-terrain": {
+   "tables": 45,
+   "focus_wins": 6,
+   "focus_win_rate": 0.133,
+   "its_wins": 9,
+   "its_win_rate": 0.2,
+   "took_it_out": 7
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.19,
+  "lands_at_own_turn": {
+   "4": 2.96,
+   "6": 4.53,
+   "8": 5.91
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.17,
+   "6": 4.45,
+   "8": 4.01
+  },
+  "short_of_four_lands_at_turn_5": 0.191,
+  "commander_first_cast": {
+   "median": 5,
+   "p25": 5,
+   "p75": 6,
+   "never_cast": 0.035,
+   "casts_per_game": 1.78
+  },
+  "spells_per_game": 14.0,
+  "idle_turn_share": 0.037,
+  "damage_dealt_per_game": 29.8,
+  "damage_taken_per_game": 68.5,
+  "commander_damage_dealt_per_game": 0.1,
+  "nonland_cards_in_hand_at_loss": 3.32,
+  "of_them_affordable": 3.0
+ },
+ "cards": {
+  "Grave Titan": {
+   "drawn": 55,
+   "played": 34,
+   "played_share": 0.618,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.218,
+   "win_rate_not_drawn": 0.152,
+   "held_at_loss": 13,
+   "mv": 6,
+   "type": "Creature - Giant"
+  },
+  "God-Eternal Bontu": {
+   "drawn": 46,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.174,
+   "win_rate_not_drawn": 0.169,
+   "held_at_loss": 28,
+   "mv": 5,
+   "type": "Legendary Creature - Zombie God"
+  },
+  "Sol Ring": {
+   "drawn": 47,
+   "played": 47,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.163,
+   "held_at_loss": 4,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Undead Butler": {
+   "drawn": 49,
+   "played": 40,
+   "played_share": 0.816,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.184,
+   "win_rate_not_drawn": 0.166,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Zombie"
+  },
+  "Withering Torment": {
+   "drawn": 53,
+   "played": 49,
+   "played_share": 0.925,
+   "median_turn": 6,
+   "win_rate_drawn": 0.17,
+   "win_rate_not_drawn": 0.17,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Liliana's Reaver": {
+   "drawn": 47,
+   "played": 40,
+   "played_share": 0.851,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.163,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Creature - Zombie"
+  },
+  "Bad Moon": {
+   "drawn": 45,
+   "played": 44,
+   "played_share": 0.978,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.178,
+   "win_rate_not_drawn": 0.168,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Infernal Idol": {
+   "drawn": 47,
+   "played": 13,
+   "played_share": 0.277,
+   "median_turn": 9,
+   "win_rate_drawn": 0.106,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 23,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Carrion Feeder": {
+   "drawn": 47,
+   "played": 45,
+   "played_share": 0.957,
+   "median_turn": 5,
+   "win_rate_drawn": 0.17,
+   "win_rate_not_drawn": 0.17,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Creature - Zombie"
+  },
+  "Midnight Reaper": {
+   "drawn": 42,
+   "played": 39,
+   "played_share": 0.929,
+   "median_turn": 8,
+   "win_rate_drawn": 0.214,
+   "win_rate_not_drawn": 0.158,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Creature - Zombie Knight"
+  },
+  "Endless Ranks of the Dead": {
+   "drawn": 60,
+   "played": 53,
+   "played_share": 0.883,
+   "median_turn": 7,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.136,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Necrotic Hex": {
+   "drawn": 48,
+   "played": 2,
+   "played_share": 0.042,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.188,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 32,
+   "mv": 7,
+   "type": "Sorcery"
+  },
+  "Gray Merchant of Asphodel": {
+   "drawn": 54,
+   "played": 36,
+   "played_share": 0.667,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.315,
+   "win_rate_not_drawn": 0.116,
+   "held_at_loss": 14,
+   "mv": 5,
+   "type": "Creature - Zombie"
+  },
+  "Army of the Damned": {
+   "drawn": 52,
+   "played": 14,
+   "played_share": 0.269,
+   "median_turn": 10.5,
+   "win_rate_drawn": 0.154,
+   "win_rate_not_drawn": 0.176,
+   "held_at_loss": 16,
+   "mv": 8,
+   "type": "Sorcery"
+  },
+  "Go for the Throat": {
+   "drawn": 50,
+   "played": 49,
+   "played_share": 0.98,
+   "median_turn": 5,
+   "win_rate_drawn": 0.18,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Lord of the Undead": {
+   "drawn": 52,
+   "played": 48,
+   "played_share": 0.923,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.135,
+   "win_rate_not_drawn": 0.182,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Creature - Zombie"
+  },
+  "Lord of the Accursed": {
+   "drawn": 57,
+   "played": 55,
+   "played_share": 0.965,
+   "median_turn": 6,
+   "win_rate_drawn": 0.246,
+   "win_rate_not_drawn": 0.14,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Creature - Zombie"
+  },
+  "Liliana's Mastery": {
+   "drawn": 38,
+   "played": 32,
+   "played_share": 0.842,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.263,
+   "win_rate_not_drawn": 0.148,
+   "held_at_loss": 6,
+   "mv": 5,
+   "type": "Enchantment"
+  },
+  "Josu Vess, Lich Knight": {
+   "drawn": 48,
+   "played": 29,
+   "played_share": 0.604,
+   "median_turn": 7,
+   "win_rate_drawn": 0.083,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 18,
+   "mv": 4,
+   "type": "Legendary Creature - Zombie Knight"
+  },
+  "Phyrexian Arena": {
+   "drawn": 57,
+   "played": 44,
+   "played_share": 0.772,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.14,
+   "win_rate_not_drawn": 0.182,
+   "held_at_loss": 11,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Diregraf Colossus": {
+   "drawn": 39,
+   "played": 37,
+   "played_share": 0.949,
+   "median_turn": 5,
+   "win_rate_drawn": 0.205,
+   "win_rate_not_drawn": 0.161,
+   "held_at_loss": 0,
+   "mv": 3,
+   "type": "Creature - Zombie Giant"
+  },
+  "Undead Warchief": {
+   "drawn": 48,
+   "played": 45,
+   "played_share": 0.938,
+   "median_turn": 7,
+   "win_rate_drawn": 0.292,
+   "win_rate_not_drawn": 0.132,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Creature - Zombie"
+  },
+  "Noxious Ghoul": {
+   "drawn": 59,
+   "played": 14,
+   "played_share": 0.237,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.237,
+   "win_rate_not_drawn": 0.142,
+   "held_at_loss": 33,
+   "mv": 5,
+   "type": "Creature - Zombie"
+  },
+  "Gravecrawler": {
+   "drawn": 61,
+   "played": 59,
+   "played_share": 0.967,
+   "median_turn": 4,
+   "win_rate_drawn": 0.23,
+   "win_rate_not_drawn": 0.144,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Creature - Zombie"
+  },
+  "Open the Graves": {
+   "drawn": 42,
+   "played": 28,
+   "played_share": 0.667,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.171,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Enchantment"
+  },
+  "Eternal Taskmaster": {
+   "drawn": 43,
+   "played": 33,
+   "played_share": 0.767,
+   "median_turn": 5,
+   "win_rate_drawn": 0.209,
+   "win_rate_not_drawn": 0.159,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Zombie"
+  },
+  "Bontu's Monument": {
+   "drawn": 54,
+   "played": 37,
+   "played_share": 0.685,
+   "median_turn": 8,
+   "win_rate_drawn": 0.259,
+   "win_rate_not_drawn": 0.137,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Legendary Artifact"
+  },
+  "Undead Augur": {
+   "drawn": 46,
+   "played": 42,
+   "played_share": 0.913,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.13,
+   "win_rate_not_drawn": 0.182,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Zombie Wizard"
+  },
+  "Vengeful Dead": {
+   "drawn": 36,
+   "played": 29,
+   "played_share": 0.806,
+   "median_turn": 7,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.152,
+   "held_at_loss": 4,
+   "mv": 4,
+   "type": "Creature - Zombie"
+  },
+  "Ayara, First of Locthwain": {
+   "drawn": 46,
+   "played": 34,
+   "played_share": 0.739,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.239,
+   "win_rate_not_drawn": 0.149,
+   "held_at_loss": 11,
+   "mv": 3,
+   "type": "Legendary Creature - Elf Noble"
+  },
+  "Ambition's Cost": {
+   "drawn": 54,
+   "played": 18,
+   "played_share": 0.333,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.185,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 25,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Kalitas, Traitor of Ghet": {
+   "drawn": 60,
+   "played": 43,
+   "played_share": 0.717,
+   "median_turn": 8,
+   "win_rate_drawn": 0.267,
+   "win_rate_not_drawn": 0.129,
+   "held_at_loss": 18,
+   "mv": 4,
+   "type": "Legendary Creature - Vampire Warrior"
+  },
+  "Night's Whisper": {
+   "drawn": 47,
+   "played": 39,
+   "played_share": 0.83,
+   "median_turn": 7,
+   "win_rate_drawn": 0.106,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 7,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Cryptbreaker": {
+   "drawn": 47,
+   "played": 44,
+   "played_share": 0.936,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.163,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Creature - Zombie"
+  },
+  "Oversold Cemetery": {
+   "drawn": 44,
+   "played": 39,
+   "played_share": 0.886,
+   "median_turn": 8,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.147,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Mutilate": {
+   "drawn": 46,
+   "played": 6,
+   "played_share": 0.13,
+   "median_turn": 14.0,
+   "win_rate_drawn": 0.196,
+   "win_rate_not_drawn": 0.162,
+   "held_at_loss": 30,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Razorlash Transmogrant": {
+   "drawn": 32,
+   "played": 30,
+   "played_share": 0.938,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.125,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact Creature - Zombie"
+  },
+  "Mind Stone": {
+   "drawn": 46,
+   "played": 46,
+   "played_share": 1.0,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.196,
+   "win_rate_not_drawn": 0.162,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Commander's Sphere": {
+   "drawn": 49,
+   "played": 47,
+   "played_share": 0.959,
+   "median_turn": 6,
+   "win_rate_drawn": 0.122,
+   "win_rate_not_drawn": 0.185,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Headless Rider": {
+   "drawn": 41,
+   "played": 38,
+   "played_share": 0.927,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.195,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Creature - Zombie"
+  },
+  "Death Baron": {
+   "drawn": 45,
+   "played": 43,
+   "played_share": 0.956,
+   "median_turn": 6,
+   "win_rate_drawn": 0.156,
+   "win_rate_not_drawn": 0.174,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Creature - Zombie Wizard"
+  },
+  "Tendrils of Corruption": {
+   "drawn": 46,
+   "played": 38,
+   "played_share": 0.826,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.174,
+   "win_rate_not_drawn": 0.169,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Zul Ashur, Lich Lord": {
+   "drawn": 49,
+   "played": 44,
+   "played_share": 0.898,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.265,
+   "win_rate_not_drawn": 0.139,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Legendary Creature - Zombie Warlock"
+  },
+  "Champion of the Perished": {
+   "drawn": 49,
+   "played": 49,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.204,
+   "win_rate_not_drawn": 0.159,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Creature - Zombie"
+  },
+  "Soulless One": {
+   "drawn": 39,
+   "played": 31,
+   "played_share": 0.795,
+   "median_turn": 8,
+   "win_rate_drawn": 0.282,
+   "win_rate_not_drawn": 0.143,
+   "held_at_loss": 9,
+   "mv": 4,
+   "type": "Creature - Zombie Avatar"
+  },
+  "Fleshbag Marauder": {
+   "drawn": 59,
+   "played": 24,
+   "played_share": 0.407,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.203,
+   "win_rate_not_drawn": 0.156,
+   "held_at_loss": 29,
+   "mv": 3,
+   "type": "Creature - Zombie Warrior"
+  },
+  "Consuming Corruption": {
+   "drawn": 47,
+   "played": 45,
+   "played_share": 0.957,
+   "median_turn": 7,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.144,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Patchwork Banner": {
+   "drawn": 53,
+   "played": 53,
+   "played_share": 1.0,
+   "median_turn": 5,
+   "win_rate_drawn": 0.226,
+   "win_rate_not_drawn": 0.15,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Charcoal Diamond": {
+   "drawn": 44,
+   "played": 44,
+   "played_share": 1.0,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.136,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Arcane Signet": {
+   "drawn": 45,
+   "played": 44,
+   "played_share": 0.978,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.156,
+   "win_rate_not_drawn": 0.174,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Graveborn Muse": {
+   "drawn": 50,
+   "played": 29,
+   "played_share": 0.58,
+   "median_turn": 8,
+   "win_rate_drawn": 0.08,
+   "win_rate_not_drawn": 0.2,
+   "held_at_loss": 20,
+   "mv": 4,
+   "type": "Creature - Zombie Spirit"
+  },
+  "Consumed by Greed": {
+   "drawn": 56,
+   "played": 53,
+   "played_share": 0.946,
+   "median_turn": 7,
+   "win_rate_drawn": 0.161,
+   "win_rate_not_drawn": 0.174,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Syphon Flesh": {
+   "drawn": 47,
+   "played": 20,
+   "played_share": 0.426,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.163,
+   "held_at_loss": 21,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Cemetery Recruitment": {
+   "drawn": 32,
+   "played": 17,
+   "played_share": 0.531,
+   "median_turn": 9,
+   "win_rate_drawn": 0.188,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 15,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Moan of the Unhallowed": {
+   "drawn": 47,
+   "played": 44,
+   "played_share": 0.936,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.163,
+   "held_at_loss": 7,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Mire Triton": {
+   "drawn": 43,
+   "played": 39,
+   "played_share": 0.907,
+   "median_turn": 6,
+   "win_rate_drawn": 0.186,
+   "win_rate_not_drawn": 0.166,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Creature - Zombie Merfolk"
+  },
+  "Wight of Precinct Six": {
+   "drawn": 45,
+   "played": 44,
+   "played_share": 0.978,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.161,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Creature - Zombie"
+  },
+  "Marchesa's Decree": {
+   "drawn": 35,
+   "played": 11,
+   "played_share": 0.314,
+   "median_turn": 8,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 13,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Cemetery Reaper": {
+   "drawn": 49,
+   "played": 44,
+   "played_share": 0.898,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.152,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Creature - Zombie"
+  },
+  "Sign in Blood": {
+   "drawn": 37,
+   "played": 26,
+   "played_share": 0.703,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.216,
+   "win_rate_not_drawn": 0.16,
+   "held_at_loss": 8,
+   "mv": 2,
+   "type": "Sorcery"
+  }
+ }
+}

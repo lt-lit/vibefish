@@ -1,0 +1,853 @@
+{
+ "kind": "playtest",
+ "deck": "quick-draw",
+ "deck_file": "Quick Draw [OTC] [2024].dck",
+ "deck_file_sha256": null,
+ "arm": "stock",
+ "pilot": {
+  "playbook": null
+ },
+ "commanders": [
+  "Stella Lee, Wild Card"
+ ],
+ "table": {
+  "pool": "bots-v2",
+  "seats": 4,
+  "seed": 20261240,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 34,
+  "win_rate": 0.17,
+  "win_rate_ci95": [
+   0.1243,
+   0.2282
+  ],
+  "even_share": 0.25,
+  "not_finished": 3,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 7
+   },
+   {
+    "games": 50,
+    "wins": 10
+   },
+   {
+    "games": 50,
+    "wins": 9
+   },
+   {
+    "games": 50,
+    "wins": 8
+   }
+  ],
+  "losses": 163,
+  "out_first": 32,
+  "out_second": 47,
+  "out_third": 84,
+  "loss_reasons": {
+   "LifeReachedZero": 151,
+   "OpponentWon": 8,
+   "CommanderDamage": 4
+  },
+  "game_turns": 45.4,
+  "own_turns_when_won": 14.0,
+  "own_turns_when_lost": 11.1
+ },
+ "opponents": {
+  "wretched-ranks": {
+   "tables": 45,
+   "focus_wins": 10,
+   "focus_win_rate": 0.222,
+   "its_wins": 9,
+   "its_win_rate": 0.2,
+   "took_it_out": 8
+  },
+  "elven-council": {
+   "tables": 59,
+   "focus_wins": 13,
+   "focus_win_rate": 0.22,
+   "its_wins": 12,
+   "its_win_rate": 0.203,
+   "took_it_out": 16
+  },
+  "hail-caesar": {
+   "tables": 51,
+   "focus_wins": 10,
+   "focus_win_rate": 0.196,
+   "its_wins": 13,
+   "its_win_rate": 0.255,
+   "took_it_out": 12
+  },
+  "tricky-terrain": {
+   "tables": 53,
+   "focus_wins": 10,
+   "focus_win_rate": 0.189,
+   "its_wins": 18,
+   "its_win_rate": 0.34,
+   "took_it_out": 12
+  },
+  "deep-clue-sea": {
+   "tables": 67,
+   "focus_wins": 12,
+   "focus_win_rate": 0.179,
+   "its_wins": 18,
+   "its_win_rate": 0.269,
+   "took_it_out": 11
+  },
+  "planeswalker-party": {
+   "tables": 60,
+   "focus_wins": 10,
+   "focus_win_rate": 0.167,
+   "its_wins": 11,
+   "its_win_rate": 0.183,
+   "took_it_out": 11
+  },
+  "token-triumph": {
+   "tables": 55,
+   "focus_wins": 9,
+   "focus_win_rate": 0.164,
+   "its_wins": 24,
+   "its_win_rate": 0.436,
+   "took_it_out": 24
+  },
+  "enduring-enchantments": {
+   "tables": 47,
+   "focus_wins": 7,
+   "focus_win_rate": 0.149,
+   "its_wins": 15,
+   "its_win_rate": 0.319,
+   "took_it_out": 12
+  },
+  "goblin-storm": {
+   "tables": 55,
+   "focus_wins": 8,
+   "focus_win_rate": 0.145,
+   "its_wins": 12,
+   "its_win_rate": 0.218,
+   "took_it_out": 14
+  },
+  "limit-break": {
+   "tables": 49,
+   "focus_wins": 6,
+   "focus_win_rate": 0.122,
+   "its_wins": 12,
+   "its_win_rate": 0.245,
+   "took_it_out": 13
+  },
+  "eldrazi-incursion": {
+   "tables": 59,
+   "focus_wins": 7,
+   "focus_win_rate": 0.119,
+   "its_wins": 19,
+   "its_win_rate": 0.322,
+   "took_it_out": 20
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.25,
+  "lands_at_own_turn": {
+   "4": 2.93,
+   "6": 4.49,
+   "8": 6.07
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 6.12,
+   "6": 5.06,
+   "8": 4.76
+  },
+  "short_of_four_lands_at_turn_5": 0.23,
+  "commander_first_cast": {
+   "median": 3,
+   "p25": 3,
+   "p75": 4,
+   "never_cast": 0.015,
+   "casts_per_game": 1.91
+  },
+  "spells_per_game": 17.9,
+  "idle_turn_share": 0.142,
+  "damage_dealt_per_game": 30.4,
+  "damage_taken_per_game": 66.5,
+  "commander_damage_dealt_per_game": 2.8,
+  "nonland_cards_in_hand_at_loss": 3.74,
+  "of_them_affordable": 3.47
+ },
+ "cards": {
+  "Epic Experiment": {
+   "drawn": 64,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.266,
+   "win_rate_not_drawn": 0.125,
+   "held_at_loss": 35,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Dig Through Time": {
+   "drawn": 57,
+   "played": 26,
+   "played_share": 0.456,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.246,
+   "win_rate_not_drawn": 0.14,
+   "held_at_loss": 13,
+   "mv": 8,
+   "type": "Instant"
+  },
+  "Talrand, Sky Summoner": {
+   "drawn": 62,
+   "played": 51,
+   "played_share": 0.823,
+   "median_turn": 9,
+   "win_rate_drawn": 0.194,
+   "win_rate_not_drawn": 0.159,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Legendary Creature - Merfolk Wizard"
+  },
+  "Smoldering Stagecoach": {
+   "drawn": 53,
+   "played": 49,
+   "played_share": 0.925,
+   "median_turn": 7,
+   "win_rate_drawn": 0.245,
+   "win_rate_not_drawn": 0.143,
+   "held_at_loss": 4,
+   "mv": 4,
+   "type": "Artifact - Vehicle"
+  },
+  "Crackling Spellslinger": {
+   "drawn": 58,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.148,
+   "held_at_loss": 26,
+   "mv": 5,
+   "type": "Creature - Human Wizard"
+  },
+  "Midnight Clock": {
+   "drawn": 60,
+   "played": 50,
+   "played_share": 0.833,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.136,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Think Twice": {
+   "drawn": 60,
+   "played": 53,
+   "played_share": 0.883,
+   "median_turn": 8,
+   "win_rate_drawn": 0.233,
+   "win_rate_not_drawn": 0.143,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Tezzeret's Gambit": {
+   "drawn": 54,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.13,
+   "win_rate_not_drawn": 0.185,
+   "held_at_loss": 37,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Sol Ring": {
+   "drawn": 54,
+   "played": 49,
+   "played_share": 0.907,
+   "median_turn": 7,
+   "win_rate_drawn": 0.185,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Deep Analysis": {
+   "drawn": 57,
+   "played": 42,
+   "played_share": 0.737,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.281,
+   "win_rate_not_drawn": 0.126,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Pteramander": {
+   "drawn": 57,
+   "played": 55,
+   "played_share": 0.965,
+   "median_turn": 7,
+   "win_rate_drawn": 0.158,
+   "win_rate_not_drawn": 0.175,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Creature - Salamander Drake"
+  },
+  "Niv-Mizzet, Parun": {
+   "drawn": 67,
+   "played": 48,
+   "played_share": 0.716,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.239,
+   "win_rate_not_drawn": 0.135,
+   "held_at_loss": 6,
+   "mv": 6,
+   "type": "Legendary Creature - Dragon Wizard"
+  },
+  "Vandalblast": {
+   "drawn": 56,
+   "played": 55,
+   "played_share": 0.982,
+   "median_turn": 7,
+   "win_rate_drawn": 0.268,
+   "win_rate_not_drawn": 0.132,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Guttersnipe": {
+   "drawn": 62,
+   "played": 53,
+   "played_share": 0.855,
+   "median_turn": 8,
+   "win_rate_drawn": 0.242,
+   "win_rate_not_drawn": 0.138,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Creature - Goblin Shaman"
+  },
+  "Electrostatic Field": {
+   "drawn": 67,
+   "played": 61,
+   "played_share": 0.91,
+   "median_turn": 6,
+   "win_rate_drawn": 0.284,
+   "win_rate_not_drawn": 0.113,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Wall"
+  },
+  "Octavia, Living Thesis": {
+   "drawn": 62,
+   "played": 32,
+   "played_share": 0.516,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.21,
+   "win_rate_not_drawn": 0.152,
+   "held_at_loss": 14,
+   "mv": 10,
+   "type": "Legendary Creature - Elemental Octopus"
+  },
+  "Finale of Revelation": {
+   "drawn": 69,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.246,
+   "win_rate_not_drawn": 0.13,
+   "held_at_loss": 40,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Faithless Looting": {
+   "drawn": 51,
+   "played": 1,
+   "played_share": 0.02,
+   "median_turn": 12,
+   "win_rate_drawn": 0.176,
+   "win_rate_not_drawn": 0.168,
+   "held_at_loss": 26,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Finale of Promise": {
+   "drawn": 71,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.169,
+   "win_rate_not_drawn": 0.171,
+   "held_at_loss": 43,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Elemental Eruption": {
+   "drawn": 65,
+   "played": 59,
+   "played_share": 0.908,
+   "median_turn": 9,
+   "win_rate_drawn": 0.215,
+   "win_rate_not_drawn": 0.148,
+   "held_at_loss": 10,
+   "mv": 6,
+   "type": "Sorcery"
+  },
+  "Haughty Djinn": {
+   "drawn": 59,
+   "played": 51,
+   "played_share": 0.864,
+   "median_turn": 7,
+   "win_rate_drawn": 0.237,
+   "win_rate_not_drawn": 0.142,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Creature - Djinn"
+  },
+  "Murmuring Mystic": {
+   "drawn": 55,
+   "played": 51,
+   "played_share": 0.927,
+   "median_turn": 8,
+   "win_rate_drawn": 0.236,
+   "win_rate_not_drawn": 0.145,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Creature - Human Wizard"
+  },
+  "Chaos Warp": {
+   "drawn": 65,
+   "played": 65,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.126,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Cursed Mirror": {
+   "drawn": 61,
+   "played": 47,
+   "played_share": 0.77,
+   "median_turn": 7,
+   "win_rate_drawn": 0.164,
+   "win_rate_not_drawn": 0.173,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Treasure Cruise": {
+   "drawn": 62,
+   "played": 41,
+   "played_share": 0.661,
+   "median_turn": 8,
+   "win_rate_drawn": 0.21,
+   "win_rate_not_drawn": 0.152,
+   "held_at_loss": 7,
+   "mv": 8,
+   "type": "Sorcery"
+  },
+  "Young Pyromancer": {
+   "drawn": 50,
+   "played": 46,
+   "played_share": 0.92,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.18,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Human Shaman"
+  },
+  "Leyline Dowser": {
+   "drawn": 51,
+   "played": 48,
+   "played_share": 0.941,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.294,
+   "win_rate_not_drawn": 0.128,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Arcane Denial": {
+   "drawn": 66,
+   "played": 51,
+   "played_share": 0.773,
+   "median_turn": 7,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.119,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Forger's Foundry": {
+   "drawn": 68,
+   "played": 53,
+   "played_share": 0.779,
+   "median_turn": 8,
+   "win_rate_drawn": 0.294,
+   "win_rate_not_drawn": 0.106,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Baral's Expertise": {
+   "drawn": 56,
+   "played": 54,
+   "played_share": 0.964,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.304,
+   "win_rate_not_drawn": 0.118,
+   "held_at_loss": 2,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Arcane Bombardment": {
+   "drawn": 52,
+   "played": 41,
+   "played_share": 0.788,
+   "median_turn": 8,
+   "win_rate_drawn": 0.231,
+   "win_rate_not_drawn": 0.149,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Enchantment"
+  },
+  "Ponder": {
+   "drawn": 61,
+   "played": 56,
+   "played_share": 0.918,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.246,
+   "win_rate_not_drawn": 0.137,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Big Score": {
+   "drawn": 54,
+   "played": 36,
+   "played_share": 0.667,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.296,
+   "win_rate_not_drawn": 0.123,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Third Path Iconoclast": {
+   "drawn": 56,
+   "played": 50,
+   "played_share": 0.893,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.232,
+   "win_rate_not_drawn": 0.146,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Human Monk"
+  },
+  "Windfall": {
+   "drawn": 60,
+   "played": 4,
+   "played_share": 0.067,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.233,
+   "win_rate_not_drawn": 0.143,
+   "held_at_loss": 29,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Thunderclap Drake": {
+   "drawn": 60,
+   "played": 53,
+   "played_share": 0.883,
+   "median_turn": 7,
+   "win_rate_drawn": 0.217,
+   "win_rate_not_drawn": 0.15,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Creature - Drake"
+  },
+  "Serum Visions": {
+   "drawn": 49,
+   "played": 40,
+   "played_share": 0.816,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.119,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Radical Idea": {
+   "drawn": 57,
+   "played": 53,
+   "played_share": 0.93,
+   "median_turn": 6,
+   "win_rate_drawn": 0.263,
+   "win_rate_not_drawn": 0.133,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Curse of the Swine": {
+   "drawn": 51,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.294,
+   "win_rate_not_drawn": 0.128,
+   "held_at_loss": 27,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Opt": {
+   "drawn": 51,
+   "played": 46,
+   "played_share": 0.902,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.196,
+   "win_rate_not_drawn": 0.161,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Izzet Signet": {
+   "drawn": 67,
+   "played": 59,
+   "played_share": 0.881,
+   "median_turn": 9,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.143,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Eris, Roar of the Storm": {
+   "drawn": 60,
+   "played": 46,
+   "played_share": 0.767,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.121,
+   "held_at_loss": 8,
+   "mv": 10,
+   "type": "Legendary Creature - Elemental Warlock"
+  },
+  "Archmage Emeritus": {
+   "drawn": 63,
+   "played": 58,
+   "played_share": 0.921,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.254,
+   "win_rate_not_drawn": 0.131,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Creature - Human Wizard"
+  },
+  "Pongify": {
+   "drawn": 58,
+   "played": 52,
+   "played_share": 0.897,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.293,
+   "win_rate_not_drawn": 0.12,
+   "held_at_loss": 4,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Kaza, Roil Chaser": {
+   "drawn": 61,
+   "played": 58,
+   "played_share": 0.951,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.311,
+   "win_rate_not_drawn": 0.108,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Legendary Creature - Human Wizard"
+  },
+  "Volcanic Torrent": {
+   "drawn": 69,
+   "played": 36,
+   "played_share": 0.522,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.261,
+   "win_rate_not_drawn": 0.122,
+   "held_at_loss": 16,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Expressive Iteration": {
+   "drawn": 57,
+   "played": 47,
+   "played_share": 0.825,
+   "median_turn": 7,
+   "win_rate_drawn": 0.228,
+   "win_rate_not_drawn": 0.147,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Mizzix's Mastery": {
+   "drawn": 67,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.254,
+   "win_rate_not_drawn": 0.128,
+   "held_at_loss": 35,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Winged Boots": {
+   "drawn": 70,
+   "played": 67,
+   "played_share": 0.957,
+   "median_turn": 6,
+   "win_rate_drawn": 0.186,
+   "win_rate_not_drawn": 0.162,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact - Equipment"
+  },
+  "Preordain": {
+   "drawn": 66,
+   "played": 51,
+   "played_share": 0.773,
+   "median_turn": 7,
+   "win_rate_drawn": 0.242,
+   "win_rate_not_drawn": 0.134,
+   "held_at_loss": 8,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Bloodthirsty Adversary": {
+   "drawn": 57,
+   "played": 4,
+   "played_share": 0.07,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.281,
+   "win_rate_not_drawn": 0.126,
+   "held_at_loss": 33,
+   "mv": 2,
+   "type": "Creature - Vampire"
+  },
+  "Galvanic Iteration": {
+   "drawn": 64,
+   "played": 44,
+   "played_share": 0.688,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.132,
+   "held_at_loss": 15,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Veyran, Voice of Duality": {
+   "drawn": 52,
+   "played": 45,
+   "played_share": 0.865,
+   "median_turn": 8,
+   "win_rate_drawn": 0.269,
+   "win_rate_not_drawn": 0.135,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Legendary Creature - Efreet Wizard"
+  },
+  "Storm-Kiln Artist": {
+   "drawn": 59,
+   "played": 47,
+   "played_share": 0.797,
+   "median_turn": 8,
+   "win_rate_drawn": 0.237,
+   "win_rate_not_drawn": 0.142,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Creature - Dwarf Shaman"
+  },
+  "Propaganda": {
+   "drawn": 55,
+   "played": 48,
+   "played_share": 0.873,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.291,
+   "win_rate_not_drawn": 0.124,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Arcane Signet": {
+   "drawn": 61,
+   "played": 56,
+   "played_share": 0.918,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.246,
+   "win_rate_not_drawn": 0.137,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Pyretic Charge": {
+   "drawn": 52,
+   "played": 31,
+   "played_share": 0.596,
+   "median_turn": 8,
+   "win_rate_drawn": 0.288,
+   "win_rate_not_drawn": 0.128,
+   "held_at_loss": 6,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Shark Typhoon": {
+   "drawn": 50,
+   "played": 35,
+   "played_share": 0.7,
+   "median_turn": 10,
+   "win_rate_drawn": 0.28,
+   "win_rate_not_drawn": 0.133,
+   "held_at_loss": 5,
+   "mv": 6,
+   "type": "Enchantment"
+  },
+  "Lock and Load": {
+   "drawn": 51,
+   "played": 33,
+   "played_share": 0.647,
+   "median_turn": 7,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.141,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Goblin Electromancer": {
+   "drawn": 58,
+   "played": 56,
+   "played_share": 0.966,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.241,
+   "win_rate_not_drawn": 0.141,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Goblin Wizard"
+  },
+  "Rousing Refrain": {
+   "drawn": 50,
+   "played": 34,
+   "played_share": 0.68,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.127,
+   "held_at_loss": 3,
+   "mv": 5,
+   "type": "Sorcery"
+  }
+ }
+}

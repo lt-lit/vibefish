@@ -1,0 +1,851 @@
+{
+ "kind": "playtest",
+ "deck": "mutant-menace",
+ "deck_file": "Mutant Menace [PIP] [2024].dck",
+ "deck_file_sha256": null,
+ "arm": "stock",
+ "pilot": {
+  "playbook": null
+ },
+ "commanders": [
+  "The Wise Mothman"
+ ],
+ "table": {
+  "pool": "bots-v2",
+  "seats": 4,
+  "seed": 20261260,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 46,
+  "win_rate": 0.23,
+  "win_rate_ci95": [
+   0.1771,
+   0.2931
+  ],
+  "even_share": 0.25,
+  "not_finished": 6,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 10
+   },
+   {
+    "games": 50,
+    "wins": 15
+   },
+   {
+    "games": 50,
+    "wins": 11
+   },
+   {
+    "games": 50,
+    "wins": 10
+   }
+  ],
+  "losses": 148,
+  "out_first": 39,
+  "out_second": 54,
+  "out_third": 55,
+  "loss_reasons": {
+   "LifeReachedZero": 147,
+   "OpponentWon": 3,
+   "IntentionalDraw": 1,
+   "Milled": 1
+  },
+  "game_turns": 41.3,
+  "own_turns_when_won": 11.1,
+  "own_turns_when_lost": 10.1
+ },
+ "opponents": {
+  "eldrazi-incursion": {
+   "tables": 50,
+   "focus_wins": 18,
+   "focus_win_rate": 0.36,
+   "its_wins": 7,
+   "its_win_rate": 0.14,
+   "took_it_out": 10
+  },
+  "goblin-storm": {
+   "tables": 50,
+   "focus_wins": 16,
+   "focus_win_rate": 0.32,
+   "its_wins": 8,
+   "its_win_rate": 0.16,
+   "took_it_out": 15
+  },
+  "limit-break": {
+   "tables": 48,
+   "focus_wins": 15,
+   "focus_win_rate": 0.312,
+   "its_wins": 9,
+   "its_win_rate": 0.188,
+   "took_it_out": 5
+  },
+  "elven-council": {
+   "tables": 41,
+   "focus_wins": 12,
+   "focus_win_rate": 0.293,
+   "its_wins": 9,
+   "its_win_rate": 0.22,
+   "took_it_out": 8
+  },
+  "quick-draw": {
+   "tables": 55,
+   "focus_wins": 14,
+   "focus_win_rate": 0.255,
+   "its_wins": 16,
+   "its_win_rate": 0.291,
+   "took_it_out": 11
+  },
+  "deep-clue-sea": {
+   "tables": 52,
+   "focus_wins": 13,
+   "focus_win_rate": 0.25,
+   "its_wins": 17,
+   "its_win_rate": 0.327,
+   "took_it_out": 14
+  },
+  "enduring-enchantments": {
+   "tables": 52,
+   "focus_wins": 13,
+   "focus_win_rate": 0.25,
+   "its_wins": 18,
+   "its_win_rate": 0.346,
+   "took_it_out": 17
+  },
+  "tricky-terrain": {
+   "tables": 49,
+   "focus_wins": 10,
+   "focus_win_rate": 0.204,
+   "its_wins": 9,
+   "its_win_rate": 0.184,
+   "took_it_out": 5
+  },
+  "hail-caesar": {
+   "tables": 48,
+   "focus_wins": 8,
+   "focus_win_rate": 0.167,
+   "its_wins": 23,
+   "its_win_rate": 0.479,
+   "took_it_out": 16
+  },
+  "token-triumph": {
+   "tables": 50,
+   "focus_wins": 8,
+   "focus_win_rate": 0.16,
+   "its_wins": 14,
+   "its_win_rate": 0.28,
+   "took_it_out": 14
+  },
+  "planeswalker-party": {
+   "tables": 51,
+   "focus_wins": 7,
+   "focus_win_rate": 0.137,
+   "its_wins": 9,
+   "its_win_rate": 0.176,
+   "took_it_out": 7
+  },
+  "wretched-ranks": {
+   "tables": 54,
+   "focus_wins": 4,
+   "focus_win_rate": 0.074,
+   "its_wins": 9,
+   "its_win_rate": 0.167,
+   "took_it_out": 10
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.205,
+  "lands_at_own_turn": {
+   "4": 3.17,
+   "6": 4.9,
+   "8": 6.4
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.6,
+   "6": 4.72,
+   "8": 4.25
+  },
+  "short_of_four_lands_at_turn_5": 0.115,
+  "commander_first_cast": {
+   "median": 5,
+   "p25": 4,
+   "p75": 6,
+   "never_cast": 0.055,
+   "casts_per_game": 1.59
+  },
+  "spells_per_game": 10.9,
+  "idle_turn_share": 0.085,
+  "damage_dealt_per_game": 53.6,
+  "damage_taken_per_game": 53.9,
+  "commander_damage_dealt_per_game": 23.2,
+  "nonland_cards_in_hand_at_loss": 3.45,
+  "of_them_affordable": 3.28
+ },
+ "cards": {
+  "Radstorm": {
+   "drawn": 38,
+   "played": 11,
+   "played_share": 0.289,
+   "median_turn": 10,
+   "win_rate_drawn": 0.289,
+   "win_rate_not_drawn": 0.216,
+   "held_at_loss": 20,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Vexing Radgull": {
+   "drawn": 34,
+   "played": 30,
+   "played_share": 0.882,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.324,
+   "win_rate_not_drawn": 0.211,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Bird Mutant"
+  },
+  "Cultivate": {
+   "drawn": 42,
+   "played": 31,
+   "played_share": 0.738,
+   "median_turn": 9,
+   "win_rate_drawn": 0.214,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Agent Frank Horrigan": {
+   "drawn": 40,
+   "played": 31,
+   "played_share": 0.775,
+   "median_turn": 8,
+   "win_rate_drawn": 0.375,
+   "win_rate_not_drawn": 0.194,
+   "held_at_loss": 6,
+   "mv": 7,
+   "type": "Legendary Creature - Mutant Warrior"
+  },
+  "Inspiring Call": {
+   "drawn": 42,
+   "played": 40,
+   "played_share": 0.952,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Winding Constrictor": {
+   "drawn": 39,
+   "played": 29,
+   "played_share": 0.744,
+   "median_turn": 6,
+   "win_rate_drawn": 0.359,
+   "win_rate_not_drawn": 0.199,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Creature - Snake"
+  },
+  "Raul, Trouble Shooter": {
+   "drawn": 37,
+   "played": 27,
+   "played_share": 0.73,
+   "median_turn": 8,
+   "win_rate_drawn": 0.189,
+   "win_rate_not_drawn": 0.239,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Legendary Creature - Zombie Mutant Rogue"
+  },
+  "Corpsejack Menace": {
+   "drawn": 43,
+   "played": 38,
+   "played_share": 0.884,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.372,
+   "win_rate_not_drawn": 0.191,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Creature - Fungus"
+  },
+  "Find // Finality": {
+   "drawn": 30,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.241,
+   "held_at_loss": 3,
+   "mv": 8,
+   "type": "Sorcery"
+  },
+  "Strong, the Brutish Thespian": {
+   "drawn": 48,
+   "played": 39,
+   "played_share": 0.812,
+   "median_turn": 7,
+   "win_rate_drawn": 0.292,
+   "win_rate_not_drawn": 0.211,
+   "held_at_loss": 6,
+   "mv": 6,
+   "type": "Legendary Creature - Mutant Berserker"
+  },
+  "Mutational Advantage": {
+   "drawn": 43,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.163,
+   "win_rate_not_drawn": 0.248,
+   "held_at_loss": 28,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Power Fist": {
+   "drawn": 43,
+   "played": 42,
+   "played_share": 0.977,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.209,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact - Equipment"
+  },
+  "Cathedral Acolyte": {
+   "drawn": 36,
+   "played": 27,
+   "played_share": 0.75,
+   "median_turn": 7,
+   "win_rate_drawn": 0.222,
+   "win_rate_not_drawn": 0.232,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Human Cleric"
+  },
+  "Hancock, Ghoulish Mayor": {
+   "drawn": 42,
+   "played": 36,
+   "played_share": 0.857,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.247,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Legendary Creature - Zombie Mutant Advisor"
+  },
+  "Harold and Bob, First Numens": {
+   "drawn": 42,
+   "played": 41,
+   "played_share": 0.976,
+   "median_turn": 6,
+   "win_rate_drawn": 0.238,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Legendary Creature - Treefolk Mutant"
+  },
+  "Fraying Sanity": {
+   "drawn": 42,
+   "played": 40,
+   "played_share": 0.952,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Enchantment - Aura Curse"
+  },
+  "Screeching Scorchbeast": {
+   "drawn": 39,
+   "played": 31,
+   "played_share": 0.795,
+   "median_turn": 7,
+   "win_rate_drawn": 0.308,
+   "win_rate_not_drawn": 0.211,
+   "held_at_loss": 6,
+   "mv": 6,
+   "type": "Creature - Bat Mutant"
+  },
+  "Sol Ring": {
+   "drawn": 44,
+   "played": 40,
+   "played_share": 0.909,
+   "median_turn": 2.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.224,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Struggle for Project Purity": {
+   "drawn": 51,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.235,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 34,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Mirelurk Queen": {
+   "drawn": 45,
+   "played": 36,
+   "played_share": 0.8,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.244,
+   "win_rate_not_drawn": 0.226,
+   "held_at_loss": 4,
+   "mv": 5,
+   "type": "Creature - Crab Mutant"
+  },
+  "Contagion Clasp": {
+   "drawn": 38,
+   "played": 30,
+   "played_share": 0.789,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.184,
+   "win_rate_not_drawn": 0.241,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Harmonize": {
+   "drawn": 51,
+   "played": 17,
+   "played_share": 0.333,
+   "median_turn": 9,
+   "win_rate_drawn": 0.314,
+   "win_rate_not_drawn": 0.201,
+   "held_at_loss": 20,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Arcane Signet": {
+   "drawn": 55,
+   "played": 45,
+   "played_share": 0.818,
+   "median_turn": 6,
+   "win_rate_drawn": 0.218,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Jason Bright, Glowing Prophet": {
+   "drawn": 39,
+   "played": 32,
+   "played_share": 0.821,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.154,
+   "win_rate_not_drawn": 0.248,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Legendary Creature - Zombie Mutant Advisor"
+  },
+  "Feral Ghoul": {
+   "drawn": 49,
+   "played": 38,
+   "played_share": 0.776,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.184,
+   "win_rate_not_drawn": 0.245,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Creature - Zombie Mutant"
+  },
+  "Lily Bowen, Raging Grandma": {
+   "drawn": 39,
+   "played": 23,
+   "played_share": 0.59,
+   "median_turn": 8,
+   "win_rate_drawn": 0.256,
+   "win_rate_not_drawn": 0.224,
+   "held_at_loss": 13,
+   "mv": 4,
+   "type": "Legendary Creature - Mutant Warrior"
+  },
+  "Watchful Radstag": {
+   "drawn": 33,
+   "played": 25,
+   "played_share": 0.758,
+   "median_turn": 9,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Creature - Elk Mutant"
+  },
+  "Lumbering Megasloth": {
+   "drawn": 38,
+   "played": 31,
+   "played_share": 0.816,
+   "median_turn": 7,
+   "win_rate_drawn": 0.237,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 5,
+   "mv": 12,
+   "type": "Creature - Sloth Mutant"
+  },
+  "Nuka-Nuke Launcher": {
+   "drawn": 38,
+   "played": 36,
+   "played_share": 0.947,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.263,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact - Equipment"
+  },
+  "Nightkin Ambusher": {
+   "drawn": 40,
+   "played": 34,
+   "played_share": 0.85,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.225,
+   "win_rate_not_drawn": 0.231,
+   "held_at_loss": 7,
+   "mv": 4,
+   "type": "Creature - Mutant Warrior"
+  },
+  "Atomize": {
+   "drawn": 39,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.205,
+   "held_at_loss": 24,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Contaminated Drink": {
+   "drawn": 34,
+   "played": 19,
+   "played_share": 0.559,
+   "median_turn": 11,
+   "win_rate_drawn": 0.176,
+   "win_rate_not_drawn": 0.241,
+   "held_at_loss": 13,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Rampant Growth": {
+   "drawn": 45,
+   "played": 45,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.289,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Tato Farmer": {
+   "drawn": 37,
+   "played": 35,
+   "played_share": 0.946,
+   "median_turn": 7,
+   "win_rate_drawn": 0.216,
+   "win_rate_not_drawn": 0.233,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Creature - Zombie Mutant Peasant"
+  },
+  "Inexorable Tide": {
+   "drawn": 36,
+   "played": 29,
+   "played_share": 0.806,
+   "median_turn": 8,
+   "win_rate_drawn": 0.306,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 7,
+   "mv": 5,
+   "type": "Enchantment"
+  },
+  "Biomass Mutation": {
+   "drawn": 45,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.244,
+   "win_rate_not_drawn": 0.226,
+   "held_at_loss": 30,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Nuclear Fallout": {
+   "drawn": 48,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.271,
+   "win_rate_not_drawn": 0.217,
+   "held_at_loss": 32,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Alpha Deathclaw": {
+   "drawn": 47,
+   "played": 39,
+   "played_share": 0.83,
+   "median_turn": 7,
+   "win_rate_drawn": 0.319,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 8,
+   "mv": 6,
+   "type": "Creature - Lizard Mutant"
+  },
+  "Putrefy": {
+   "drawn": 46,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 6,
+   "win_rate_drawn": 0.217,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Tireless Tracker": {
+   "drawn": 40,
+   "played": 34,
+   "played_share": 0.85,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.175,
+   "win_rate_not_drawn": 0.244,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Creature - Human Scout"
+  },
+  "Young Deathclaws": {
+   "drawn": 43,
+   "played": 41,
+   "played_share": 0.953,
+   "median_turn": 6,
+   "win_rate_drawn": 0.186,
+   "win_rate_not_drawn": 0.242,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Creature - Lizard Mutant"
+  },
+  "The Master, Transcendent": {
+   "drawn": 24,
+   "played": 23,
+   "played_share": 0.958,
+   "median_turn": 7,
+   "win_rate_drawn": 0.208,
+   "win_rate_not_drawn": 0.233,
+   "held_at_loss": 1,
+   "mv": 4,
+   "type": "Legendary Artifact Creature - Mutant"
+  },
+  "Marcus, Mutant Mayor": {
+   "drawn": 36,
+   "played": 33,
+   "played_share": 0.917,
+   "median_turn": 7,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.226,
+   "held_at_loss": 5,
+   "mv": 5,
+   "type": "Legendary Creature - Mutant Advisor"
+  },
+  "Branching Evolution": {
+   "drawn": 45,
+   "played": 30,
+   "played_share": 0.667,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.222,
+   "win_rate_not_drawn": 0.232,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Casualties of War": {
+   "drawn": 36,
+   "played": 31,
+   "played_share": 0.861,
+   "median_turn": 8,
+   "win_rate_drawn": 0.306,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 5,
+   "mv": 6,
+   "type": "Sorcery"
+  },
+  "Recon Craft Theta": {
+   "drawn": 44,
+   "played": 26,
+   "played_share": 0.591,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.227,
+   "win_rate_not_drawn": 0.231,
+   "held_at_loss": 12,
+   "mv": 4,
+   "type": "Artifact - Vehicle"
+  },
+  "Talisman of Dominance": {
+   "drawn": 34,
+   "played": 26,
+   "played_share": 0.765,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.324,
+   "win_rate_not_drawn": 0.211,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Talisman of Resilience": {
+   "drawn": 45,
+   "played": 39,
+   "played_share": 0.867,
+   "median_turn": 4,
+   "win_rate_drawn": 0.178,
+   "win_rate_not_drawn": 0.245,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Vault 87: Forced Evolution": {
+   "drawn": 46,
+   "played": 36,
+   "played_share": 0.783,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.239,
+   "win_rate_not_drawn": 0.227,
+   "held_at_loss": 7,
+   "mv": 5,
+   "type": "Enchantment - Saga"
+  },
+  "Glowing One": {
+   "drawn": 47,
+   "played": 39,
+   "played_share": 0.83,
+   "median_turn": 7,
+   "win_rate_drawn": 0.319,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Creature - Zombie Mutant"
+  },
+  "Infesting Radroach": {
+   "drawn": 42,
+   "played": 32,
+   "played_share": 0.762,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.31,
+   "win_rate_not_drawn": 0.209,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Creature - Insect Mutant"
+  },
+  "Farseek": {
+   "drawn": 37,
+   "played": 36,
+   "played_share": 0.973,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.27,
+   "win_rate_not_drawn": 0.221,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Strength Bobblehead": {
+   "drawn": 43,
+   "played": 30,
+   "played_share": 0.698,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.209,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Artifact - Bobblehead"
+  },
+  "Guardian Project": {
+   "drawn": 37,
+   "played": 17,
+   "played_share": 0.459,
+   "median_turn": 8,
+   "win_rate_drawn": 0.054,
+   "win_rate_not_drawn": 0.27,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Hardened Scales": {
+   "drawn": 38,
+   "played": 34,
+   "played_share": 0.895,
+   "median_turn": 3.0,
+   "win_rate_drawn": 0.211,
+   "win_rate_not_drawn": 0.235,
+   "held_at_loss": 4,
+   "mv": 1,
+   "type": "Enchantment"
+  },
+  "Rampaging Yao Guai": {
+   "drawn": 37,
+   "played": 14,
+   "played_share": 0.378,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.189,
+   "win_rate_not_drawn": 0.239,
+   "held_at_loss": 16,
+   "mv": 3,
+   "type": "Creature - Bear Mutant"
+  },
+  "Vault 12: The Necropolis": {
+   "drawn": 41,
+   "played": 30,
+   "played_share": 0.732,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.341,
+   "win_rate_not_drawn": 0.201,
+   "held_at_loss": 8,
+   "mv": 6,
+   "type": "Enchantment - Saga"
+  },
+  "Bloatfly Swarm": {
+   "drawn": 44,
+   "played": 33,
+   "played_share": 0.75,
+   "median_turn": 8,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.218,
+   "held_at_loss": 9,
+   "mv": 4,
+   "type": "Creature - Insect Mutant"
+  },
+  "Piper Wright, Publick Reporter": {
+   "drawn": 37,
+   "played": 29,
+   "played_share": 0.784,
+   "median_turn": 4,
+   "win_rate_drawn": 0.108,
+   "win_rate_not_drawn": 0.258,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Legendary Creature - Human Detective"
+  },
+  "Talisman of Curiosity": {
+   "drawn": 41,
+   "played": 29,
+   "played_share": 0.707,
+   "median_turn": 3,
+   "win_rate_drawn": 0.146,
+   "win_rate_not_drawn": 0.252,
+   "held_at_loss": 8,
+   "mv": 2,
+   "type": "Artifact"
+  }
+ }
+}

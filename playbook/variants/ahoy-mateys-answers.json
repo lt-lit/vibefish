@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "deck": "ahoy-mateys",
+  "variant": "answers",
+  "of": "playbook/variants/ahoy-mateys-crew.json",
+  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+  "on": "2026-11-14",
+  "playbook": {
+    "version": 2,
+    "attack": {
+      "policy": "go_wide",
+      "target": "highest_life",
+      "min_attackers": 3,
+      "safety_margin": 5,
+      "max_reserve": 3,
+      "spread": true
+    },
+    "cast": {
+      "rules": [
+        {
+          "play": [
+            "Blood Money",
+            "Blasphemous Act"
+          ],
+          "when": [
+            "threat >= life",
+            "opp_power > power"
+          ]
+        },
+        {
+          "play": [
+            "Blood Money",
+            "Blasphemous Act"
+          ],
+          "when": [
+            "opp_creatures >= 5",
+            "opp_power >= 10",
+            "opp_power > power"
+          ]
+        },
+        {
+          "play": [
+            "Evacuation"
+          ],
+          "phase": "main2",
+          "when": [
+            "threat >= life",
+            "opp_power > power"
+          ]
+        },
+        {
+          "hold": [
+            "Evacuation"
+          ],
+          "until": [
+            "threat >= life"
+          ]
+        },
+        {
+          "play": [
+            "Sol Ring",
+            "Arcane Signet",
+            "Rakdos Signet",
+            "Dimir Signet",
+            "Izzet Signet",
+            "Commander's Sphere"
+          ]
+        },
+        {
+          "activate": [
+            "Wayfarer's Bauble"
+          ],
+          "when": [
+            "turn <= 7"
+          ]
+        },
+        {
+          "play": [
+            "Admiral Brass, Unsinkable"
+          ]
+        },
+        {
+          "play": [
+            "Herald's Horn",
+            "Admiral Beckett Brass",
+            "Skeleton Crew",
+            "Corsair Captain",
+            "Vanquisher's Banner",
+            "Icon of Ancestry",
+            "Shared Animosity"
+          ]
+        },
+        {
+          "play": [
+            "Hostage Taker",
+            "Feed the Swarm"
+          ],
+          "when": [
+            "opp_creatures >= 1"
+          ]
+        },
+        {
+          "play": [
+            "Coercive Recruiter"
+          ],
+          "when": [
+            "opp_creatures >= 1"
+          ]
+        },
+        {
+          "play": [
+            "Angrath's Marauders",
+            "Port Razer",
+            "Gemcutter Buccaneer",
+            "Malcolm, Keen-Eyed Navigator",
+            "Ramirez DePietro, Pillager",
+            "Breeches, Brazen Plunderer"
+          ]
+        },
+        {
+          "play": [
+            "Dire Fleet Ravager"
+          ],
+          "when": [
+            "power >= opp_power"
+          ]
+        },
+        {
+          "play": [
+            "Distant Melody"
+          ],
+          "when": [
+            "type:Pirate >= 3",
+            "library >= 30"
+          ]
+        },
+        {
+          "play": [
+            "Merchant Raiders",
+            "Amphin Mutineer",
+            "Black Market Connections",
+            "Bident of Thassa",
+            "Arm-Mounted Anchor",
+            "The Indomitable",
+            "The Grim Captain's Locker",
+            "Zara, Renegade Recruiter",
+            "Don Andres, the Renegade",
+            "Azure Fleet Admiral",
+            "Captivating Crew",
+            "Pitiless Plunderer",
+            "Captain Lannery Storm",
+            "Broadside Bombardiers",
+            "Kari Zev, Skyship Raider",
+            "Fathom Fleet Captain",
+            "Francisco, Fowl Marauder",
+            "Storm Fleet Negotiator",
+            "Ghost of Ramirez DePietro",
+            "Warkite Marauder",
+            "Daring Saboteur",
+            "Departed Deckhand",
+            "Dire Fleet Daredevil",
+            "Enterprising Scallywag",
+            "Timestream Navigator",
+            "Spectral Sailor",
+            "Siren Stormtamer",
+            "King Narfi's Betrayal",
+            "Wayfarer's Bauble"
+          ]
+        },
+        {
+          "activate": [
+            "Arm-Mounted Anchor"
+          ],
+          "phase": "main1"
+        },
+        {
+          "activate": [
+            "Captivating Crew"
+          ],
+          "phase": "main1",
+          "when": [
+            "opp_creatures >= 1"
+          ]
+        },
+        {
+          "activate": [
+            "Timestream Navigator"
+          ]
+        },
+        {
+          "play": [
+            "Windfall"
+          ],
+          "when": [
+            "hand <= 5",
+            "library >= 30"
+          ]
+        },
+        {
+          "play": [
+            "Faithless Looting"
+          ],
+          "when": [
+            "library >= 30"
+          ]
+        },
+        {
+          "activate": [
+            "Spectral Sailor"
+          ],
+          "phase": "main2",
+          "when": [
+            "library >= 30",
+            "mana >= 4"
+          ]
+        },
+        {
+          "activate": [
+            "Port of Karfell"
+          ],
+          "phase": "main2",
+          "when": [
+            "lands >= 9"
+          ]
+        },
+        {
+          "play": [
+            "Rakdos Charm"
+          ],
+          "phase": "main2"
+        }
+      ]
+    },
+    "triggers": [
+      {
+        "accept": [
+          "Admiral Brass, Unsinkable"
+        ]
+      },
+      {
+        "accept": [
+          "Fathom Fleet Captain"
+        ]
+      },
+      {
+        "accept": [
+          "Bident of Thassa"
+        ],
+        "when": [
+          "library >= 20"
+        ]
+      },
+      {
+        "accept": [
+          "Daring Saboteur"
+        ],
+        "when": [
+          "library >= 20"
+        ]
+      },
+      {
+        "accept": [
+          "Herald's Horn",
+          "Breeches, Brazen Plunderer",
+          "Ramirez DePietro, Pillager",
+          "Zara, Renegade Recruiter"
+        ]
+      }
+    ],
+    "notes": "DRAFT"
+  }
+}

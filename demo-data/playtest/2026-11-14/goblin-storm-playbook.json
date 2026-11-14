@@ -1,0 +1,879 @@
+{
+ "kind": "playtest",
+ "deck": "goblin-storm",
+ "deck_file": "Goblin Storm [SLD] [2026].dck",
+ "deck_file_sha256": null,
+ "arm": "playbook",
+ "pilot": {
+  "playbook": "goblin-storm.json",
+  "version": 5,
+  "attack": null
+ },
+ "commanders": [
+  "Zada, Hedron Grinder"
+ ],
+ "table": {
+  "pool": "bots-v2",
+  "seats": 4,
+  "seed": 20261240,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 47,
+  "win_rate": 0.235,
+  "win_rate_ci95": [
+   0.1816,
+   0.2984
+  ],
+  "even_share": 0.25,
+  "not_finished": 4,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 11
+   },
+   {
+    "games": 50,
+    "wins": 15
+   },
+   {
+    "games": 50,
+    "wins": 13
+   },
+   {
+    "games": 50,
+    "wins": 8
+   }
+  ],
+  "losses": 149,
+  "out_first": 31,
+  "out_second": 60,
+  "out_third": 58,
+  "loss_reasons": {
+   "LifeReachedZero": 142,
+   "OpponentWon": 4,
+   "CommanderDamage": 3,
+   "Milled": 1,
+   "IntentionalDraw": 1
+  },
+  "game_turns": 43.2,
+  "own_turns_when_won": 11.2,
+  "own_turns_when_lost": 10.9
+ },
+ "opponents": {
+  "planeswalker-party": {
+   "tables": 49,
+   "focus_wins": 15,
+   "focus_win_rate": 0.306,
+   "its_wins": 10,
+   "its_win_rate": 0.204,
+   "took_it_out": 8
+  },
+  "quick-draw": {
+   "tables": 60,
+   "focus_wins": 18,
+   "focus_win_rate": 0.3,
+   "its_wins": 10,
+   "its_win_rate": 0.167,
+   "took_it_out": 7
+  },
+  "wretched-ranks": {
+   "tables": 45,
+   "focus_wins": 13,
+   "focus_win_rate": 0.289,
+   "its_wins": 4,
+   "its_win_rate": 0.089,
+   "took_it_out": 6
+  },
+  "limit-break": {
+   "tables": 51,
+   "focus_wins": 14,
+   "focus_win_rate": 0.275,
+   "its_wins": 8,
+   "its_win_rate": 0.157,
+   "took_it_out": 11
+  },
+  "eldrazi-incursion": {
+   "tables": 59,
+   "focus_wins": 16,
+   "focus_win_rate": 0.271,
+   "its_wins": 18,
+   "its_win_rate": 0.305,
+   "took_it_out": 16
+  },
+  "elven-council": {
+   "tables": 59,
+   "focus_wins": 16,
+   "focus_win_rate": 0.271,
+   "its_wins": 11,
+   "its_win_rate": 0.186,
+   "took_it_out": 14
+  },
+  "deep-clue-sea": {
+   "tables": 67,
+   "focus_wins": 16,
+   "focus_win_rate": 0.239,
+   "its_wins": 15,
+   "its_win_rate": 0.224,
+   "took_it_out": 13
+  },
+  "hail-caesar": {
+   "tables": 55,
+   "focus_wins": 12,
+   "focus_win_rate": 0.218,
+   "its_wins": 14,
+   "its_win_rate": 0.255,
+   "took_it_out": 14
+  },
+  "tricky-terrain": {
+   "tables": 53,
+   "focus_wins": 10,
+   "focus_win_rate": 0.189,
+   "its_wins": 23,
+   "its_win_rate": 0.434,
+   "took_it_out": 17
+  },
+  "token-triumph": {
+   "tables": 55,
+   "focus_wins": 6,
+   "focus_win_rate": 0.109,
+   "its_wins": 16,
+   "its_win_rate": 0.291,
+   "took_it_out": 16
+  },
+  "enduring-enchantments": {
+   "tables": 47,
+   "focus_wins": 5,
+   "focus_win_rate": 0.106,
+   "its_wins": 20,
+   "its_win_rate": 0.426,
+   "took_it_out": 16
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.255,
+  "lands_at_own_turn": {
+   "4": 2.96,
+   "6": 4.59,
+   "8": 5.86
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.0,
+   "6": 4.05,
+   "8": 4.33
+  },
+  "short_of_four_lands_at_turn_5": 0.19,
+  "commander_first_cast": {
+   "median": 6.0,
+   "p25": 5,
+   "p75": 7,
+   "never_cast": 0.04,
+   "casts_per_game": 1.81
+  },
+  "spells_per_game": 17.7,
+  "idle_turn_share": 0.108,
+  "damage_dealt_per_game": 69.1,
+  "damage_taken_per_game": 48.1,
+  "commander_damage_dealt_per_game": 6.6,
+  "nonland_cards_in_hand_at_loss": 2.92,
+  "of_them_affordable": 2.78
+ },
+ "cards": {
+  "Grapeshot": {
+   "drawn": 58,
+   "played": 7,
+   "played_share": 0.121,
+   "median_turn": 8,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.239,
+   "held_at_loss": 34,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Krenko's Command": {
+   "drawn": 58,
+   "played": 53,
+   "played_share": 0.914,
+   "median_turn": 6,
+   "win_rate_drawn": 0.345,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Goblin Dark-Dwellers": {
+   "drawn": 105,
+   "played": 71,
+   "played_share": 0.676,
+   "median_turn": 7,
+   "win_rate_drawn": 0.295,
+   "win_rate_not_drawn": 0.168,
+   "held_at_loss": 17,
+   "mv": 5,
+   "type": "Creature - Goblin"
+  },
+  "Searslicer Goblin": {
+   "drawn": 53,
+   "played": 51,
+   "played_share": 0.962,
+   "median_turn": 5,
+   "win_rate_drawn": 0.226,
+   "win_rate_not_drawn": 0.238,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Goblin Bombardment": {
+   "drawn": 48,
+   "played": 44,
+   "played_share": 0.917,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.257,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Mogg War Marshal": {
+   "drawn": 48,
+   "played": 47,
+   "played_share": 0.979,
+   "median_turn": 7,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.204,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Krenko, Mob Boss": {
+   "drawn": 52,
+   "played": 45,
+   "played_share": 0.865,
+   "median_turn": 7,
+   "win_rate_drawn": 0.385,
+   "win_rate_not_drawn": 0.182,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Legendary Creature - Goblin Warrior"
+  },
+  "Impact Tremors": {
+   "drawn": 50,
+   "played": 46,
+   "played_share": 0.92,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.44,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Gempalm Incinerator": {
+   "drawn": 48,
+   "played": 39,
+   "played_share": 0.812,
+   "median_turn": 8,
+   "win_rate_drawn": 0.188,
+   "win_rate_not_drawn": 0.25,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Creature - Goblin"
+  },
+  "Seething Song": {
+   "drawn": 50,
+   "played": 36,
+   "played_share": 0.72,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.28,
+   "win_rate_not_drawn": 0.22,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Swiftfoot Boots": {
+   "drawn": 50,
+   "played": 37,
+   "played_share": 0.74,
+   "median_turn": 6,
+   "win_rate_drawn": 0.24,
+   "win_rate_not_drawn": 0.233,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact - Equipment"
+  },
+  "Boggart Shenanigans": {
+   "drawn": 51,
+   "played": 38,
+   "played_share": 0.745,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.314,
+   "win_rate_not_drawn": 0.208,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Kindred Enchantment - Goblin"
+  },
+  "Goblin Warchief": {
+   "drawn": 60,
+   "played": 58,
+   "played_share": 0.967,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.229,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Expedite": {
+   "drawn": 56,
+   "played": 47,
+   "played_share": 0.839,
+   "median_turn": 7,
+   "win_rate_drawn": 0.268,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Rundvelt Hordemaster": {
+   "drawn": 49,
+   "played": 44,
+   "played_share": 0.898,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Ruby Medallion": {
+   "drawn": 55,
+   "played": 55,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Goblin Matron": {
+   "drawn": 64,
+   "played": 59,
+   "played_share": 0.922,
+   "median_turn": 7,
+   "win_rate_drawn": 0.312,
+   "win_rate_not_drawn": 0.199,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Creature - Goblin"
+  },
+  "Pashalik Mons": {
+   "drawn": 63,
+   "played": 60,
+   "played_share": 0.952,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.19,
+   "win_rate_not_drawn": 0.255,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Legendary Creature - Goblin Warrior"
+  },
+  "Ancestors' Aid": {
+   "drawn": 58,
+   "played": 51,
+   "played_share": 0.879,
+   "median_turn": 7,
+   "win_rate_drawn": 0.328,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Sol Ring": {
+   "drawn": 47,
+   "played": 47,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.34,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Vandalblast": {
+   "drawn": 65,
+   "played": 55,
+   "played_share": 0.846,
+   "median_turn": 7,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 7,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Empty the Warrens": {
+   "drawn": 61,
+   "played": 33,
+   "played_share": 0.541,
+   "median_turn": 8,
+   "win_rate_drawn": 0.246,
+   "win_rate_not_drawn": 0.23,
+   "held_at_loss": 22,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Skirk Prospector": {
+   "drawn": 50,
+   "played": 45,
+   "played_share": 0.9,
+   "median_turn": 6,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Creature - Goblin"
+  },
+  "Idol of Oblivion": {
+   "drawn": 59,
+   "played": 57,
+   "played_share": 0.966,
+   "median_turn": 3,
+   "win_rate_drawn": 0.288,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Conspicuous Snoop": {
+   "drawn": 52,
+   "played": 46,
+   "played_share": 0.885,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.269,
+   "win_rate_not_drawn": 0.223,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Goblin Rogue"
+  },
+  "Siege-Gang Commander": {
+   "drawn": 54,
+   "played": 42,
+   "played_share": 0.778,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.241,
+   "win_rate_not_drawn": 0.233,
+   "held_at_loss": 2,
+   "mv": 5,
+   "type": "Creature - Goblin"
+  },
+  "Goblin Bushwhacker": {
+   "drawn": 47,
+   "played": 43,
+   "played_share": 0.915,
+   "median_turn": 6,
+   "win_rate_drawn": 0.234,
+   "win_rate_not_drawn": 0.235,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Great Train Heist": {
+   "drawn": 68,
+   "played": 46,
+   "played_share": 0.676,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.258,
+   "held_at_loss": 21,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Daring Discovery": {
+   "drawn": 58,
+   "played": 36,
+   "played_share": 0.621,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.328,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 12,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Mana Geyser": {
+   "drawn": 65,
+   "played": 38,
+   "played_share": 0.585,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.246,
+   "win_rate_not_drawn": 0.23,
+   "held_at_loss": 22,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Roaming Throne": {
+   "drawn": 55,
+   "played": 38,
+   "played_share": 0.691,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.218,
+   "win_rate_not_drawn": 0.241,
+   "held_at_loss": 11,
+   "mv": 4,
+   "type": "Artifact Creature - Golem"
+  },
+  "Broadside Bombardiers": {
+   "drawn": 51,
+   "played": 39,
+   "played_share": 0.765,
+   "median_turn": 8,
+   "win_rate_drawn": 0.176,
+   "win_rate_not_drawn": 0.255,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Creature - Goblin Pirate"
+  },
+  "Goblin Trashmaster": {
+   "drawn": 61,
+   "played": 52,
+   "played_share": 0.852,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.344,
+   "win_rate_not_drawn": 0.187,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Dragon Fodder": {
+   "drawn": 55,
+   "played": 53,
+   "played_share": 0.964,
+   "median_turn": 6,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.2,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Howlsquad Heavy": {
+   "drawn": 48,
+   "played": 47,
+   "played_share": 0.979,
+   "median_turn": 7,
+   "win_rate_drawn": 0.271,
+   "win_rate_not_drawn": 0.224,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Creature - Goblin Mercenary"
+  },
+  "Fists of Flame": {
+   "drawn": 56,
+   "played": 54,
+   "played_share": 0.964,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.304,
+   "win_rate_not_drawn": 0.208,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Siege-Gang Lieutenant": {
+   "drawn": 69,
+   "played": 56,
+   "played_share": 0.812,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.232,
+   "win_rate_not_drawn": 0.237,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Creature - Goblin"
+  },
+  "Redcap Gutter-Dweller": {
+   "drawn": 67,
+   "played": 55,
+   "played_share": 0.821,
+   "median_turn": 7,
+   "win_rate_drawn": 0.209,
+   "win_rate_not_drawn": 0.248,
+   "held_at_loss": 4,
+   "mv": 4,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Glimpse the Impossible": {
+   "drawn": 51,
+   "played": 41,
+   "played_share": 0.804,
+   "median_turn": 7,
+   "win_rate_drawn": 0.314,
+   "win_rate_not_drawn": 0.208,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Blasphemous Act": {
+   "drawn": 40,
+   "played": 30,
+   "played_share": 0.75,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.225,
+   "win_rate_not_drawn": 0.237,
+   "held_at_loss": 6,
+   "mv": 9,
+   "type": "Sorcery"
+  },
+  "Sazacap's Brew": {
+   "drawn": 52,
+   "played": 41,
+   "played_share": 0.788,
+   "median_turn": 8,
+   "win_rate_drawn": 0.173,
+   "win_rate_not_drawn": 0.257,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Renegade Tactics": {
+   "drawn": 63,
+   "played": 59,
+   "played_share": 0.937,
+   "median_turn": 7,
+   "win_rate_drawn": 0.317,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Grenzo, Havoc Raiser": {
+   "drawn": 52,
+   "played": 49,
+   "played_share": 0.942,
+   "median_turn": 7,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.23,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Legendary Creature - Goblin Rogue"
+  },
+  "Haze of Rage": {
+   "drawn": 59,
+   "played": 47,
+   "played_share": 0.797,
+   "median_turn": 8,
+   "win_rate_drawn": 0.254,
+   "win_rate_not_drawn": 0.227,
+   "held_at_loss": 25,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Impulsive Pilferer": {
+   "drawn": 48,
+   "played": 45,
+   "played_share": 0.938,
+   "median_turn": 6,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.23,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Creature - Goblin Pirate"
+  },
+  "Faithless Looting": {
+   "drawn": 54,
+   "played": 51,
+   "played_share": 0.944,
+   "median_turn": 5,
+   "win_rate_drawn": 0.259,
+   "win_rate_not_drawn": 0.226,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Throne of Eldraine": {
+   "drawn": 47,
+   "played": 21,
+   "played_share": 0.447,
+   "median_turn": 8,
+   "win_rate_drawn": 0.298,
+   "win_rate_not_drawn": 0.216,
+   "held_at_loss": 14,
+   "mv": 5,
+   "type": "Legendary Artifact"
+  },
+  "Battle Hymn": {
+   "drawn": 60,
+   "played": 28,
+   "played_share": 0.467,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.214,
+   "held_at_loss": 23,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Past in Flames": {
+   "drawn": 37,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.243,
+   "win_rate_not_drawn": 0.233,
+   "held_at_loss": 19,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Witch's Mark": {
+   "drawn": 61,
+   "played": 50,
+   "played_share": 0.82,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.361,
+   "win_rate_not_drawn": 0.18,
+   "held_at_loss": 12,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Crimson Wisps": {
+   "drawn": 45,
+   "played": 38,
+   "played_share": 0.844,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.244,
+   "win_rate_not_drawn": 0.232,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Frontline Heroism": {
+   "drawn": 53,
+   "played": 42,
+   "played_share": 0.792,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.245,
+   "win_rate_not_drawn": 0.231,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Skullclamp": {
+   "drawn": 50,
+   "played": 44,
+   "played_share": 0.88,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.28,
+   "win_rate_not_drawn": 0.22,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Artifact - Equipment"
+  },
+  "Chaos Warp": {
+   "drawn": 54,
+   "played": 51,
+   "played_share": 0.944,
+   "median_turn": 7,
+   "win_rate_drawn": 0.278,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Brightstone Ritual": {
+   "drawn": 47,
+   "played": 28,
+   "played_share": 0.596,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.234,
+   "win_rate_not_drawn": 0.235,
+   "held_at_loss": 16,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Wild Ride": {
+   "drawn": 50,
+   "played": 46,
+   "played_share": 0.92,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.34,
+   "win_rate_not_drawn": 0.2,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "General Kreat, the Boltbringer": {
+   "drawn": 58,
+   "played": 51,
+   "played_share": 0.879,
+   "median_turn": 6,
+   "win_rate_drawn": 0.414,
+   "win_rate_not_drawn": 0.162,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Goblin Soldier"
+  },
+  "Spreading Insurrection": {
+   "drawn": 56,
+   "played": 38,
+   "played_share": 0.679,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Quest for the Goblin Lord": {
+   "drawn": 54,
+   "played": 52,
+   "played_share": 0.963,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.278,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Enchantment"
+  },
+  "Goblin Lackey": {
+   "drawn": 48,
+   "played": 47,
+   "played_share": 0.979,
+   "median_turn": 5,
+   "win_rate_drawn": 0.312,
+   "win_rate_not_drawn": 0.211,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Creature - Goblin"
+  },
+  "Goblin Negotiation": {
+   "drawn": 50,
+   "played": 29,
+   "played_share": 0.58,
+   "median_turn": 9,
+   "win_rate_drawn": 0.16,
+   "win_rate_not_drawn": 0.26,
+   "held_at_loss": 13,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Storm-Kiln Artist": {
+   "drawn": 48,
+   "played": 43,
+   "played_share": 0.896,
+   "median_turn": 7,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.23,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Creature - Dwarf Shaman"
+  },
+  "Goblin Chieftain": {
+   "drawn": 51,
+   "played": 45,
+   "played_share": 0.882,
+   "median_turn": 6,
+   "win_rate_drawn": 0.294,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Creature - Goblin"
+  }
+ }
+}
