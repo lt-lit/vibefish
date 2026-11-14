@@ -37,6 +37,11 @@ are that session's and have to be replaced by the new session's scratch director
   every arm's wins and every paired difference with its interval and exact test, the rollups copied under the names
   `demo-data/ab/` uses, and a deck's side arms (the `-forgeattack` sibling, a candidate played as a playbook-only arm) joined
   on the same tables. It reproduces the figures recorded for `ab-run` #26.
+- `ship_candidate.py DECK NAME --attack gowide|forge --tables ... --bot-arm ... --run ... --status ... --summary ...`: the
+  mechanical part of shipping: the candidate's playbook (with or without its attack block, checked against the
+  `-forgeattack` sibling the tables played) into `playbook/precons/DECK.json` with the date and a note, and the deck's row
+  in `playbook/bots.json`. The words are the session's. `add_row.py ROW_FILE` puts one row into
+  `playbook/variants/README.md` (a row with the same first cell is replaced).
 - `reports/<date>/`: the agents' reports as handed back: the audit, the rules, the validation, what the rule format could
   not say, the deck's answers for the second pass, and where the candidate falls short of a person.
 
