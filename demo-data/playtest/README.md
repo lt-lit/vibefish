@@ -13,7 +13,9 @@ the games it was cast under stock Forge AI and under the playbook, on the same t
   the two reports as Markdown (`blight-curse-stock.md`, `blight-curse-playbook.md`), which is what a playtest report
   looks like;
 - Veloci-Ramp-Tor, Death Toll and Deadly Disguise, from the stock and go-wide arms of `ab-run` #28 (seed 20261280; the
-  candidates `stampede`, `winter`, `veil`): the same three files a deck.
+  candidates `stampede`, `winter`, `veil`): the same three files a deck;
+- Revenant Recon and Blood Rites, from the stock and go-wide arms of `ab-run` #29 (seed 20261290; the candidates
+  `mirko`, `demons`): the same three files a deck.
 
 The reports were made from shard artifacts merged the way the workflow's rollup merges them; the win counts in them
 are those of the published rollups in `demo-data/ab/`.
