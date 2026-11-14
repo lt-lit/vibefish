@@ -1,0 +1,277 @@
+{
+ "schema": 1,
+ "deck": "revenant-recon",
+ "variant": "answers",
+ "of": "playbook/variants/revenant-recon-mirko.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 4,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_power > power",
+      "creatures <= 3"
+     ]
+    },
+    {
+     "play": [
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Toxic Deluge"
+     ],
+     "when": [
+      "opp_creatures >= 6",
+      "opp_power > power",
+      "creatures <= 3",
+      "life >= 12"
+     ]
+    },
+    {
+     "play": [
+      "Toxic Deluge"
+     ],
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures",
+      "threat >= life",
+      "life >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Dimir Signet",
+      "Talisman of Dominance",
+      "Mind Stone",
+      "Thought Vessel"
+     ]
+    },
+    {
+     "play": [
+      "Massacre Wurm"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Mirko, Obsessive Theorist"
+     ]
+    },
+    {
+     "play": [
+      "Whispering Snitch",
+      "Sinister Starfish",
+      "Case of the Shifting Visage",
+      "Dimir Spybug",
+      "Enhanced Surveillance"
+     ]
+    },
+    {
+     "play": [
+      "Phyrexian Arena"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Sinister Starfish"
+     ],
+     "ability": "Surveil"
+    },
+    {
+     "play": [
+      "Overseer of the Damned",
+      "Ravenous Chupacabra",
+      "Shriekmaw"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Amphin Mutineer"
+     ],
+     "when": [
+      "opp_creatures >= 1",
+      "opp_power >= 6"
+     ]
+    },
+    {
+     "play": [
+      "Mission Briefing"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Rise of the Dark Realms"
+     ]
+    },
+    {
+     "play": [
+      "Sphinx of the Second Sun",
+      "Eye of Duskmantle",
+      "Grave Titan",
+      "Massacre Wurm",
+      "Doom Whisperer",
+      "Syr Konrad, the Grim",
+      "Marvo, Deep Operative",
+      "Twilight Prophet",
+      "Mulldrifter",
+      "Master of Death",
+      "Watcher of Hours"
+     ]
+    },
+    {
+     "play": [
+      "Reanimate",
+      "Animate Dead"
+     ]
+    },
+    {
+     "play": [
+      "Necromancy",
+      "Charnel Serenade"
+     ],
+     "when": [
+      "turn >= 6"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Unshakable Tail",
+      "Dogged Detective",
+      "Baleful Strix",
+      "Lazav, the Multifarious",
+      "Copy Catchers",
+      "Nightveil Sprite",
+      "Final-Word Phantom",
+      "Thoughtbound Phantasm"
+     ]
+    },
+    {
+     "play": [
+      "Disinformation Campaign"
+     ]
+    },
+    {
+     "play": [
+      "Notion Rain",
+      "Discovery // Dispersal",
+      "Curate",
+      "Consider",
+      "Deep Analysis"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Doom Whisperer"
+     ],
+     "ability": "Surveil",
+     "when": [
+      "life >= 20",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Tocasia's Dig Site"
+     ],
+     "ability": "Surveil",
+     "phase": "main2",
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Port of Karfell"
+     ],
+     "ability": "Mill four",
+     "phase": "main2",
+     "when": [
+      "lands >= 8",
+      "library >= 25"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Mirko, Obsessive Theorist"
+    ]
+   },
+   {
+    "accept": [
+     "Master of Death"
+    ],
+    "when": [
+     "life >= 10"
+    ]
+   },
+   {
+    "accept": [
+     "Marvo, Deep Operative"
+    ]
+   },
+   {
+    "accept": [
+     "Copy Catchers"
+    ],
+    "when": [
+     "mana >= 4",
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Overseer of the Damned"
+    ],
+    "when": [
+     "opp_creatures >= 1"
+    ]
+   }
+  ],
+  "notes": "Version 3 (2026-11-13), for goldfish; answers left to Forge. Audit (12 stock goldfish games, seeds 25002-25013): kill turn 12.75, 52% of the mana unspent, Mirko cast on own turn 6 to 7 in four games and never in one, Sinister Starfish tapped on 1 of its 15 turns, Port of Karfell, Lazav and Enhanced Surveillance never used, Mission Briefing flagged never-cast. RULES: 1 mana rocks first. 2 Mirko at once (the commander's end-step reanimation needs him out and growing). 3 the surveil engine: Whispering Snitch (drain per surveil turn), Sinister Starfish, Case of the Shifting Visage (upkeep surveil, copies creatures once solved), Dimir Spybug, Enhanced Surveillance. 4 Phyrexian Arena while the library is deep. 5 tap Sinister Starfish every turn (surveil grows Mirko, Spybug, Phantasm and fills the graveyard Mirko returns from). 6 Mission Briefing (AI:RemoveDeck:All). 7 Rise of the Dark Realms whenever affordable. 8 creatures dearest first (the draft's order). 9 Disinformation Campaign after the creatures: in version 2 it sat with the engine and looped on every surveil, 42 casts on 12 games and two games a turn slower. 10 cheap card draw with a library guard. 11 Doom Whisperer's surveil while life >= 20. 12 Tocasia's Dig Site after combat. 13 Port of Karfell after combat with eight lands (never fired in tuning). TRIGGERS: Mirko's end-step return always; Master of Death's return at life >= 10; Marvo's free cast; Copy Catchers' {1}{U} copy with four mana spare and a deep library (64 to 74 copies paid in 12 games: it is what makes the board wide). Tuning on the audit seeds: version 1 1.67 turns faster than stock (95% +1.06 to +2.27, 10 faster, 2 same); version 2 (Disinformation in the engine rule, Port of Karfell added) 0.17 slower than version 1."
+ }
+}
