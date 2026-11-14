@@ -69,6 +69,10 @@ runner/ab.py play --deck goblin-storm --games 200 --seed 20261200 --out results/
 runner/ab.py join --out joined.json --against v2 stock=run5.json:stock v2=run5.json:playbook pressure3=run7.json   # arms of different runs on the same tables (same deck and seed) as one measurement (kind: ab-join)
 runner/playbook.py draft --deck hail-caesar --runtime forge/runtime-snapshot   # a first set of cast rules read off Forge's card scripts -> playbook/variants/<deck>-draft.json (roles: the sorting alone)
 runner/bots.py                                         # playbook/bots.json (which decks have a bot and where their measurements are) -> demo-data/bots.json, the dashboard's per-deck bots table
+runner/decklist.py "My List.txt" --commander "Card Name" --runtime forge/runtime-snapshot   # a list pasted from a deck site -> "My List.dck", checked by Forge: unknown cards, cards Forge's AI never plays, Commander legality
+runner/ab.py play --deck my-deck --deck-file "/abs/My List.dck" --games 200 --seed 20261400 --out results/pt-my-deck --runtime forge/runtime-snapshot -j 2 --arms stock --pool runner/leagues/bots-v2.json --opponent-playbooks
+                                                       # a playtest: a list of your own in the seat under test (any id; stock AI pilots it unless --data gives it a playbook), opponents drawn from the bots under their playbooks; the same --deck and --seed with another --deck-file is the other list on the same tables (ab.py join)
+runner/playtest.py results/pt-my-deck [--arm stock] [--goldfish results/gf-my-deck] [--md report.md] [--json report.json]   # the playtest report for the seat under test: wins beside an even share, each opposing deck, tempo, and per card the games drawn, the share cast, the win rate drawn and not drawn, in hand at a loss; several run dirs are the shards of one run
 python3 -m http.server 8000                            # then open http://localhost:8000/dashboard/?data=../demo-data
 runner/pod-smoke.sh -n 3 -s 42                         # Phase 0 smoke test through Forge's own sim mode
 ```

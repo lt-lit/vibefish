@@ -38,6 +38,15 @@ runner/league.py play --seed 20261109 --cycles 25 --out results/league --shards 
                                      # one shard of it locally; .github/workflows/league-run.yml plays them all
 ```
 
+Playtest a list of your own at a table of the bots:
+
+```bash
+runner/decklist.py "My List.txt" --commander "Card Name" --runtime forge/runtime   # a list pasted from a deck site → "My List.dck", checked by Forge
+runner/ab.py play --deck my-deck --deck-file "$PWD/My List.dck" --games 200 --seed 20261400 --out results/pt-my-deck \
+  --arms stock --pool runner/leagues/bots-v2.json --opponent-playbooks -j 2        # the list in one seat, three bots under their playbooks in the others
+runner/playtest.py results/pt-my-deck --md report.md                               # wins, who beats it, tempo, and what each card did
+```
+
 Validate and play any Commander decks through the harness directly:
 
 ```bash
