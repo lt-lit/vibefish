@@ -1,0 +1,262 @@
+{
+ "schema": 1,
+ "deck": "squirreled-away",
+ "variant": "acorns-forge",
+ "of": "playbook/variants/squirreled-away-acorns.json",
+ "about": "playbook/variants/squirreled-away-acorns.json with a forge rule after rule 2 ({\"play\": [\"Hazel of the Rootbloom\"]}): what the rules do not name is Forge's choice there, not last.",
+ "playbook": {
+  "version": 3,
+  "attack": {
+   "policy": "go_wide",
+   "target": "highest_life",
+   "min_attackers": 3,
+   "safety_margin": 5,
+   "max_reserve": 3,
+   "spread": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Golgari Signet",
+      "Talisman of Resilience"
+     ]
+    },
+    {
+     "play": [
+      "Hazel of the Rootbloom"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "End-Raze Forerunners"
+     ],
+     "when": [
+      "attackers >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "End-Raze Forerunners"
+     ],
+     "until": [
+      "attackers >= 4",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Chatterfang, Squirrel General",
+      "Squirrel Sovereign",
+      "Deep Forest Hermit",
+      "Chitterspitter",
+      "Toski, Bearer of Secrets",
+      "The Odd Acorn Gang",
+      "Beastmaster Ascension",
+      "Academy Manufactor",
+      "Idol of Oblivion",
+      "Skullclamp",
+      "Bastion of Remembrance",
+      "Zulaport Cutthroat",
+      "Nadier's Nightblade",
+      "Squirrel Nest",
+      "Gourmand's Talent",
+      "Prosperous Innkeeper",
+      "Tireless Provisioner",
+      "Beledros Witherbloom",
+      "Garruk, Cursed Huntsman",
+      "Ogre Slumlord",
+      "Moonstone Eulogist",
+      "Chittering Witch",
+      "Swarmyard Massacre",
+      "Honored Dreyleader",
+      "Scurry of Squirrels",
+      "Morbid Opportunist",
+      "Moldervine Reclamation",
+      "Maskwood Nexus",
+      "Arasta of the Endless Web",
+      "Hazel's Brewmaster",
+      "Insatiable Frugivore",
+      "Woe Strider",
+      "Sword of the Squeak",
+      "Ravenous Squirrel",
+      "Nested Shambler",
+      "Gilded Goose"
+     ]
+    },
+    {
+     "play": [
+      "Second Harvest"
+     ],
+     "when": [
+      "tokens >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Shamanic Revelation"
+     ],
+     "when": [
+      "creatures >= 5",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Gourmand's Talent"
+     ],
+     "ability": "Level 2"
+    },
+    {
+     "activate": [
+      "Gourmand's Talent"
+     ],
+     "ability": "Level 3"
+    },
+    {
+     "activate": [
+      "Skullclamp"
+     ],
+     "ability": "Equip",
+     "target": "Squirrel Token",
+     "times": 3,
+     "when": [
+      "not controls Squirrel Sovereign",
+      "not controls Deep Forest Hermit",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Chatterstorm"
+     ],
+     "when": [
+      "storm >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Chatterstorm"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Chitterspitter"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Maskwood Nexus"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Forest",
+      "Swamp",
+      "Barren Moor",
+      "Bojuka Bog",
+      "Command Tower",
+      "Exotic Orchard",
+      "Golgari Rot Farm",
+      "Grim Backwoods",
+      "Haunted Mire",
+      "Jungle Hollow",
+      "Llanowar Wastes",
+      "Necroblossom Snarl",
+      "Oran-Rief, the Vastwood",
+      "Path of Ancestry",
+      "Swarmyard",
+      "Tainted Wood",
+      "Temple of Malady",
+      "Tranquil Thicket",
+      "Twilight Mire",
+      "Viridescent Bog",
+      "Woodland Cemetery"
+     ],
+     "ability": "Squirrel creature token",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "phase": "main2",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Zulaport Cutthroat"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Bastion of Remembrance"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Nadier's Nightblade"
+     ]
+    },
+    {
+     "hold": [
+      "Woe Strider"
+     ],
+     "ability": "Scry",
+     "until": [
+      "controls Poison-Tip Archer"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Beastmaster Ascension"
+    ]
+   },
+   {
+    "accept": [
+     "Chitterspitter"
+    ],
+    "when": [
+     "tokens >= 3"
+    ]
+   }
+  ],
+  "notes": "Squirreled Away (Hazel of the Rootbloom: copies a token at each end step, two if it is a Squirrel; Chatterfang in the 99). Engine pass only, written from 12 stock goldfish games (seeds 24001-24012), where stock already runs most of the deck: 27% of mana unspent, Hazel out on turn 5.2 on average, kill turn 11.75. Rules: the four rocks first, Hazel at once, End-Raze Forerunners only in the first main phase with four attackers (stock cast it after combat, wasting its +2/+2), then the token engine and payoffs in a fixed order (Chatterfang, the Squirrel lords, Chitterspitter, Toski, the Odd Acorn Gang, Beastmaster Ascension, the drain and draw pieces), Hazel's Brewmaster included (stock never cast it); Second Harvest at four tokens, Shamanic Revelation at five creatures with a library of 30; Gourmand's Talent levelled; Skullclamp equipped onto 1/1 Squirrel tokens (up to three a turn) while no lord keeps them alive and the library is 30 or more; Idol of Oblivion drawn from whenever a token was made; in the second main phase spare mana goes to Chatterstorm, Chitterspitter, Maskwood Nexus and the land under Squirrel Nest (stock never tapped it). Woe Strider's sacrifice-for-scry is held unless a death payoff (Zulaport, Bastion, Nadier's Nightblade, Poison-Tip Archer) is out: stock fed it its tokens on other players' turns for nothing. Triggers: Beastmaster Ascension's quest counter always, Chitterspitter's upkeep sacrifice with three tokens or more (stock declined it). The answers (Putrefy, Maelstrom Pulse, Tear Asunder, Windgrace's Judgment, Casualties of War, Saw in Half, Decree of Pain, Plaguecrafter, Binding the Old Gods) are left to Forge for a second pass. Rootcast Apprenticeship (three modes, targets) cannot be cast by a rule. Attack go-wide at the highest life with the split, for goldfish; the attack is decided at the tables. Variant acorns-forge (not shipped): the rules of playbook/variants/squirreled-away-acorns.json unchanged and in their order, with one rule added after rule 2 ({\"play\": [\"Hazel of the Rootbloom\"]}): {\"forge\": \"unnamed\"}, Forge's own choice among the plays no rule names, at that place instead of after every rule (DESIGN.md section 30: engine rules crowd out the cards they do not name). Put in mechanically by docs/agents/add_forge_rule.py; its place was not chosen for this deck."
+ }
+}

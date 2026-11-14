@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T03:30Z",
-  "note": "Answer rules for the pool decks that had none, third part (DESIGN §30; ab-run #31 and #32 have six decks): Deep Clue Sea and Limit Break. Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, once under its shipped playbook and once under the candidate with the answer rules, playbook arms only, on the same tables (seed 20261300; docs/agents/exam_summary.py joins them). Token Triumph's second attempt follows when its agent finishes.",
+  "requested": "2026-11-14T03:34Z",
+  "note": "The trial of the forge rule on the owner's first four decks (DESIGN §30): each engine-only candidate with {\"forge\": \"unnamed\"} after the rule that casts its commander (blight-curse@wretch-forge, mutant-menace@mothman-forge, squirreled-away@acorns-forge, ahoy-mateys@crew-forge; docs/agents/add_forge_rule.py), as a playbook-only arm on the tables of ab-run #27 (seed 20261260, opponents drawn from bots-v2 under their shipped playbooks, which have not changed since), so that each joins its deck's stock and go-wide arms: ab.py join --against gowide stock=<#27 rollup>:stock gowide=<#27 rollup>:playbook forge=<this rollup>. First run on harness 0.3.2.",
   "games": "200",
   "shards_per_deck": "5",
   "jobs_per_shard": "2",
@@ -11,14 +11,9 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "deep-clue-sea,limit-break",
+      "decks": "blight-curse@wretch-forge,mutant-menace@mothman-forge,squirreled-away@acorns-forge,ahoy-mateys@crew-forge",
       "arms": "playbook",
-      "seed": "20261300"
-    },
-    {
-      "decks": "deep-clue-sea@answers,limit-break@answers",
-      "arms": "playbook",
-      "seed": "20261300"
+      "seed": "20261260"
     }
   ]
 }
