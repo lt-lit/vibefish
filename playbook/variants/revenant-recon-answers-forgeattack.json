@@ -1,0 +1,247 @@
+{
+ "schema": 1,
+ "deck": "revenant-recon",
+ "variant": "answers-forgeattack",
+ "of": "playbook/variants/revenant-recon-answers.json",
+ "about": "The answers candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "playbook": {
+  "version": 4,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_power > power",
+      "creatures <= 3"
+     ]
+    },
+    {
+     "play": [
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Dimir Signet",
+      "Talisman of Dominance",
+      "Mind Stone",
+      "Thought Vessel"
+     ]
+    },
+    {
+     "play": [
+      "Massacre Wurm"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Mirko, Obsessive Theorist"
+     ]
+    },
+    {
+     "play": [
+      "Whispering Snitch",
+      "Sinister Starfish",
+      "Case of the Shifting Visage",
+      "Dimir Spybug",
+      "Enhanced Surveillance"
+     ]
+    },
+    {
+     "play": [
+      "Phyrexian Arena"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Sinister Starfish"
+     ],
+     "ability": "Surveil"
+    },
+    {
+     "play": [
+      "Overseer of the Damned",
+      "Ravenous Chupacabra",
+      "Shriekmaw"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Amphin Mutineer"
+     ],
+     "when": [
+      "opp_creatures >= 1",
+      "opp_power >= 6"
+     ]
+    },
+    {
+     "play": [
+      "Mission Briefing"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Rise of the Dark Realms"
+     ]
+    },
+    {
+     "play": [
+      "Sphinx of the Second Sun",
+      "Eye of Duskmantle",
+      "Grave Titan",
+      "Massacre Wurm",
+      "Doom Whisperer",
+      "Syr Konrad, the Grim",
+      "Marvo, Deep Operative",
+      "Twilight Prophet",
+      "Mulldrifter",
+      "Master of Death",
+      "Watcher of Hours"
+     ]
+    },
+    {
+     "play": [
+      "Reanimate",
+      "Animate Dead"
+     ]
+    },
+    {
+     "play": [
+      "Necromancy",
+      "Charnel Serenade"
+     ],
+     "when": [
+      "turn >= 6"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Unshakable Tail",
+      "Dogged Detective",
+      "Baleful Strix",
+      "Lazav, the Multifarious",
+      "Copy Catchers",
+      "Nightveil Sprite",
+      "Final-Word Phantom",
+      "Thoughtbound Phantasm"
+     ]
+    },
+    {
+     "play": [
+      "Disinformation Campaign"
+     ]
+    },
+    {
+     "play": [
+      "Notion Rain",
+      "Discovery // Dispersal",
+      "Curate",
+      "Consider",
+      "Deep Analysis"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Doom Whisperer"
+     ],
+     "ability": "Surveil",
+     "when": [
+      "life >= 20",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Tocasia's Dig Site"
+     ],
+     "ability": "Surveil",
+     "phase": "main2",
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Port of Karfell"
+     ],
+     "ability": "Mill four",
+     "phase": "main2",
+     "when": [
+      "lands >= 8",
+      "library >= 25"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Mirko, Obsessive Theorist"
+    ]
+   },
+   {
+    "accept": [
+     "Master of Death"
+    ],
+    "when": [
+     "life >= 10"
+    ]
+   },
+   {
+    "accept": [
+     "Marvo, Deep Operative"
+    ]
+   },
+   {
+    "accept": [
+     "Copy Catchers"
+    ],
+    "when": [
+     "mana >= 4",
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Overseer of the Damned"
+    ],
+    "when": [
+     "opp_creatures >= 1"
+    ]
+   }
+  ],
+  "notes": "Version 4 = the mirko candidate (version 3) with answer rules and rules for the cards its engine rules starved, written from the 200 tables of ab-run #29 (seed 20261290, pool bots-v2 under their playbooks; candidate 55 wins, stock pilot 47). WHAT WAS WRONG. A play or activate rule with something to do goes before every card no rule names, so under version 3 the unnamed cards were starved (cast/drawn, stock -> candidate): Amphin Mutineer 43/50 -> 23/54, Eye of Duskmantle 25/34 -> 10/31, Charnel Serenade 34/51 -> 14/48, Watcher of Hours 24/43 -> 8/38, Vizier of Many Faces 28/40 -> 12/34, Overseer of the Damned 34/42 -> 21/44, Phyrexian Metamorph 40/50 -> 24/51, Ravenous Chupacabra 43/45 -> 31/48, Deep Analysis 39/51 -> 21/45, Foreboding Steamboat 24/43 -> 14/47, Necromancy 31/49 -> 21/53, Dream Eater 32/36 -> 30/41. Black Sun's Zenith and Toxic Deluge (AI:RemoveDeck:All) were never cast by either pilot and were in hand at 29 and 32 of the candidate's 144 losses. By the logs' creature counts (zone events), on the seat's last own turn of a loss the widest opponent had a median 11 creatures to our 4, at 14 life. RULE ORDER (base rules in brackets): 1-2 Black Sun's Zenith, x max, x_min 3, when the widest opponent has six or more creatures and more power than we have and we have three or fewer (true on one of the last three own turns in 91 of 144 losses, 11 of 55 wins), or six or more and more creatures than we have and its attack could kill us next turn; above everything, since it wants all the mana. 3 mana rocks [1]. 4 Massacre Wurm once an opponent has four creatures (one-sided), above Mirko so a turn with six mana goes to the Wurm. 5 Mirko [2]. 6 engine [3]. 7 Phyrexian Arena [4]. 8 Sinister Starfish [5]. 9 Overseer of the Damned, Ravenous Chupacabra, Shriekmaw when an opponent has a creature (Forge aims the enter triggers; Overseer's optional destroy is accepted by trigger rule 5 when an opponent has a creature). 10 Amphin Mutineer when an opponent has a creature and 6+ power (it gives the exiled creature's controller a 4/3, so not on small boards). 11 Mission Briefing [6]. 12 Rise of the Dark Realms [7]. 13 the threats: base rule 8's first nine creatures with Eye of Duskmantle after Sphinx and Watcher of Hours last (hard cast; neither was named). 14 Reanimate and Animate Dead (Forge's logic picks the target, so cast only when it agrees). 15 Necromancy and Charnel Serenade from own turn 6 (neither targets as cast, so a rule casts them as they are; by turn 6 graveyards hold creatures). 16 {forge: unnamed}: Forge chooses among the rest (Phyrexian Metamorph, Vizier of Many Faces, Connive // Concoct, Foreboding Steamboat, Dream Eater, Price of Fame, Pile On, Ephara's Dispersal, Everflowing Chalice, Rogue's Passage, encore) before the cheap creatures and draw spells: clones and the split card need Forge's choice of what to copy or which half anyway. 17 base rule 8's cheap creatures (Unshakable Tail to Thoughtbound Phantasm), split off from the threats so they no longer starve the rest. 18 Disinformation Campaign [9]. 19 cheap draw [10] with Deep Analysis added (it targets a player: Forge's agreement). 20-22 [11-13]. TRIED AND DROPPED: Toxic Deluge on the same conditions as the Zenith. Its X is paid in life (PayLife<X>), which a rule cannot set: in the local tables it was cast once with X = 0, no life paid, nothing died. Left to Forge, which never casts it. NOT WRITTEN: Counterpoint, Dream Eater's flash, Final-Word Phantom's flash window (instant speed); which creature Mirko and the reanimation spells return; Foreboding Steamboat's choice of our exiled creatures. LOCAL CHECK (16 tables of bots, seeds 20263180 and 20263181, 8 each; the second on this file exactly, the first with the two Toxic Deluge rules still in): cast/drawn over the 16, Black Sun's Zenith 3/6 (each cast with the widest opponent at 9 creatures; it killed 12, 15 and 13 opposing creatures and 1 to 3 of ours, two of those games won), Massacre Wurm 3/4 (killed 7 and 16 opposing creatures), Overseer of the Damned 4/6 (its destroy accepted and aimed at an opposing creature each time), Ravenous Chupacabra 1/1, Amphin Mutineer 4/4, Eye of Duskmantle 2/5, Charnel Serenade 3/6, Watcher of Hours 1/3, Necromancy 3/5, Deep Analysis 1/1, Phyrexian Metamorph 3/6, Foreboding Steamboat 1/3, Dream Eater 3/4, Vizier of Many Faces 0/3 (Forge's choice at rule 16 declined it). The forge rule took 20 plays (trace): Metamorph, Connive, Dream Eater, Everflowing Chalice, Rogue's Passage, encore, Brainstorm, Ransom Note, Watcher's suspend. The seat won 6 of 16: too few games to mean anything."
+ }
+}

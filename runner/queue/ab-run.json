@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T05:45Z",
-  "note": "The second pass of the owner's table, second part (DESIGN §30; ab-run #36 has five decks): Veloci-Ramp-Tor and Deadly Disguise, each engine-only candidate reworked by an agent with answer rules, with rules for the cards its engine crowded out and with a forge rule (playbook/variants/<deck>-answers.json, checked against its base and its local runs; Deadly Disguise's is a repair: the rule that cast its morph and disguise cards face up is gone). Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, on tables of its own (seed 20261310): the seat under stock AI and under the second-pass candidate with the go-wide attack of its base, and the same rules with the attack left to Forge as a playbook-only arm (the -answers-forgeattack siblings). Revenant Recon, Blood Rites and Miracle Worker follow.",
+  "requested": "2026-11-14T05:50Z",
+  "note": "The second pass of the owner's table, third part (DESIGN §30; ab-run #36 and #37 have seven decks): Revenant Recon and Blood Rites, each engine-only candidate reworked by an agent with answer rules, with rules for the cards its engine crowded out and with forge rules (playbook/variants/<deck>-answers.json, checked against its base and its local runs). Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, on tables of its own (seed 20261310): the seat under stock AI and under the second-pass candidate with the go-wide attack of its base, and the same rules with the attack left to Forge as a playbook-only arm (the -answers-forgeattack siblings). Miracle Worker, the tenth, follows.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,12 +11,12 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "veloci-ramp-tor@answers,deadly-disguise@answers",
+      "decks": "revenant-recon@answers,blood-rites@answers",
       "arms": "stock,playbook",
       "seed": "20261310"
     },
     {
-      "decks": "veloci-ramp-tor@answers-forgeattack,deadly-disguise@answers-forgeattack",
+      "decks": "revenant-recon@answers-forgeattack,blood-rites@answers-forgeattack",
       "arms": "playbook",
       "seed": "20261310",
       "shards_per_deck": "5"
