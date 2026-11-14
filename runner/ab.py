@@ -4,7 +4,7 @@
     runner/ab.py play --deck token-triumph --games 40 --seed 20261110 --out results/ab-token-triumph
                       [--runtime forge/runtime-snapshot] [--arms stock,data] [-j 2] [--clock 1800] [--turn-cap 120] [--opponents 3]
                       [--data playbook/precons/<deck>.json] [--shards K --shard k] [--limit N] [--dry-run]
-                      [--pool runner/leagues/bots-v1.json] [--opponent-playbooks]
+                      [--pool runner/leagues/bots-v1.json] [--opponent-playbooks] [--deck-file /path/My Deck.dck]
     runner/ab.py rollup results/ab-token-triumph
     runner/ab.py pool --out pooled.json results/ab-token-triumph/rollup.json demo-data/ab/2026-11-09-ab-v1/token-triumph.json
     runner/ab.py join --out joined.json [--against v2] stock=run5/rollup.json:stock v2=run5/rollup.json:playbook pressure=run7/rollup.json
@@ -42,6 +42,13 @@ other games, and where it was measured nothing carried over (DESIGN.md §22, Hai
 they are not fresh draws of opponents: keep a deck's runs ten seeds apart. `play` says so when demo-data/ab holds a
 run of the deck on a nearby seed.
 
+A deck of your own: --deck-file PATH plays that .dck in the focus seat, under the id --deck gives it (any name; an
+id of the league means "this list instead of the league's", and the deck's playbook is then the default for the
+playbook arms). Its opponents are drawn from the pool or the league as for any deck. Two lists of one deck on the
+same tables are two runs with the same --deck and --seed and another --deck-file, lined up with `join`
+(listA=runA/rollup.json:stock listB=runB/rollup.json:stock): the paired design with the list as the arm. ab.json
+records the file and its SHA-256. Run `controller/vibefish-sim.sh check` on a new list first.
+
 One harness process per game (controller/vibefish-sim.sh play --games 1), like runner/league.py; finished games
 are never replayed. The rollup pairs the arms game by game: wins per arm with Wilson intervals, the paired
 difference with a normal-approximation interval, the discordant pairs and an exact two-sided test that they split
@@ -53,6 +60,7 @@ arm), each under a name given on the command line, every arm paired with the fir
 import argparse
 import collections
 import datetime as dt
+import hashlib
 import json
 import math
 import os
@@ -152,8 +160,13 @@ def write_deck_profile(runtime, deck_id, eff):
 def cmd_play(args):
     league = lg.load_json(args.league)
     by_id = {d["id"]: d for d in league["decks"]}
-    if args.deck not in by_id:
-        raise SystemExit(f"{args.deck} is not in {args.league}")
+    own_deck = None                      # --deck-file: a list of the user's own in the focus seat
+    if args.deck_file:
+        own_deck = os.path.abspath(args.deck_file)
+        if not os.path.isfile(own_deck):
+            raise SystemExit(f"{args.deck_file}: no such deck file")
+    elif args.deck not in by_id:
+        raise SystemExit(f"{args.deck} is not in {args.league} (a list of your own: --deck-file PATH, and --deck is the id it plays under)")
     runtime = os.path.abspath(args.runtime)
     with open(os.path.join(runtime, "VIBEFISH_FORGE_VERSION"), encoding="utf-8") as f:
         forge_version = f.readline().strip()
@@ -163,6 +176,10 @@ def cmd_play(args):
     for a in arms:
         if a not in ARMS:
             raise SystemExit(f"unknown arm {a}; arms: {', '.join(ARMS)}")
+    needs_file = [a for a in arms if ARMS[a]["data"] or ARMS[a].get("playbook")]
+    if needs_file and not os.path.isfile(data_file):
+        raise SystemExit(f"arm {needs_file[0]} needs the deck's data or playbook file and {os.path.relpath(data_file, ROOT)} does not exist: "
+                         f"--data FILE, or play --arms stock")
     eff = dd.effective(lg.load_json(data_file)) if any(ARMS[a]["data"] for a in arms) else {}
     deck_profile, overrides = (write_deck_profile(runtime, args.deck, eff) if eff else ("", {}))
     if any(ARMS[a]["opp_profile"] == "Vibefish-Heuristic" for a in arms) and not os.path.isfile(os.path.join(runtime, "res", "ai", "Vibefish-Heuristic.ai")):
@@ -170,6 +187,8 @@ def cmd_play(args):
     pool = lg.load_json(args.pool) if args.pool else None
     if pool:
         by_id = {**{d["id"]: d for d in pool["decks"]}, **by_id}
+    if own_deck:
+        by_id[args.deck] = {"id": args.deck, "file": own_deck, "name": os.path.splitext(os.path.basename(own_deck))[0]}
     games = schedule(league, args.deck, args.seed, args.games, args.opponents, pool)
     # --opponent-playbooks: an opponent that has a shipped playbook plays under it, in every arm
     opp_playbooks = {}
@@ -187,7 +206,8 @@ def cmd_play(args):
     meta_path = os.path.join(out, "ab.json")
     if not os.path.isfile(meta_path):
         lg.dump_json(meta_path, {
-            "vibefish": rl.VERSION, "deck": args.deck, "deck_file": by_id[args.deck]["file"], "league": league["name"],
+            "vibefish": rl.VERSION, "deck": args.deck, "deck_file": by_id[args.deck]["file"],
+            **({"deck_file_sha256": hashlib.sha256(open(own_deck, "rb").read()).hexdigest()} if own_deck else {}), "league": league["name"],
             "seed": args.seed, "games": args.games, "opponents": args.opponents, "arms": arms, "data_file": os.path.relpath(data_file, ROOT),
             "pool": pool["name"] if pool else None, "pool_file": os.path.relpath(os.path.abspath(args.pool), ROOT) if pool else None,
             "opponent_playbooks": sorted(opp_playbooks),
@@ -439,7 +459,8 @@ def cmd_join(args):
             raise SystemExit(f"two arms named {name}")
         per_arm[name] = games
         sources.append({"arm": name, "from": os.path.basename(os.path.dirname(os.path.abspath(path))) + "/" + os.path.basename(path), "source_arm": arm,
-                        "data_file": r.get("data_file"), "generated": r.get("generated"), "forge_version": r.get("forge_version"), "vibefish": r.get("vibefish")})
+                        "data_file": r.get("data_file"), "generated": r.get("generated"), "forge_version": r.get("forge_version"), "vibefish": r.get("vibefish"),
+                        **({"deck_file": r.get("deck_file"), "deck_file_sha256": r["deck_file_sha256"]} if r.get("deck_file_sha256") else {})})
     names = list(per_arm)
     arm_stats, pairs = summarise(names, per_arm)
     for base in args.against or []:
@@ -481,6 +502,7 @@ def main(argv):
     p.add_argument("--limit", type=int)
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--pool", help="a deck list to draw the opponents from instead of the league (runner/leagues/bots-v1.json: the bot decks)")
+    p.add_argument("--deck-file", help="a .dck of your own for the focus seat; --deck is then the id it plays under")
     p.add_argument("--opponent-playbooks", action="store_true",
                    help="every opponent that has a shipped playbook (playbook/precons/<id>.json) plays under it, in every arm")
     p.set_defaults(func=cmd_play)
