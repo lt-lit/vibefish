@@ -95,10 +95,22 @@ stack, after Forge has made the turn's land drop. The first `play` or `activate`
 it, one spell or ability at a time; when none has, the choice is Forge's, minus whatever a `hold` rule keeps back.
 Outside the seat's own main phases only the holds apply.
 
+**What the rules do not name comes last, unless a `forge` rule says where it comes.** A rule that has something to do
+always goes before Forge's own choice, and Forge's own choice is the only way a card no rule names is cast. A set of
+engine rules (ramp, a draw spell, an activation) nearly always has something to do, so it starves the rest of the
+deck: at 200 tables of bots Blight Curse's engine-only candidate cast Incremental Blight in 10 of the 54 games it was
+drawn where stock AI cast it in 49 of 56, and the removal, wipes and large threats of every deck examined went the
+same way (`DESIGN.md` §30). Goldfish does not show it. Two remedies, and a playbook usually wants both: a rule of its
+own for each card that matters (an answer wants conditions about the board anyway), and a `{"forge": "unnamed"}` rule
+at the place in the order where everything else belongs, typically after the commander and the core of the engine
+and before the draw spells, the filler creatures and the mana sinks. `docs/agents/arm_card_diff.py` on the two arms of
+an exam lists the cards a playbook casts less than stock AI does.
+
 | rule | does | keys |
 |---|---|---|
 | `{"play": [cards]}` | casts the first listed card that is in hand (or is the commander in the command zone), legal and affordable. Forge's own opinion of the card is not asked, so this is also how a card flagged `AI:RemoveDeck:All` gets cast | `when`, `target`, `phase`, `times` (casts of one card a turn, default 1: only a card that comes back to hand, a buyback spell, can be cast again) |
 | `{"activate": [permanents]}` | uses an activated ability of a listed permanent of ours (mana abilities stay Forge's to tap) | `ability` (a piece of the ability's text, when the card has several), `times` (per permanent per turn, default 1), `when`, `target`, `phase` |
+| `{"forge": "unnamed"}` | at this place in the order Forge's own AI chooses among the plays no rule names: the spells of cards no `play` rule lists and the abilities no `activate` rule covers, the holds in force left out. It casts what it would have cast with only those to choose from (its own judgement of each card and its own targets); when it wants none of them, the rules below are read. A card a `play` rule lists with a `when` that does not hold is still a named card: it waits for its rule, or for the end of the rules | `when`, `phase` |
 | `{"hold": [cards]}` | Forge's AI may not cast these cards, from any zone, nor use the activated abilities of these permanents (`ability`: only the one whose text it quotes). A `play` or `activate` rule still may, which is how "only this way" is written. A card named by several hold rules is released as soon as one of them is | `until` (released when all of these hold; never, without it), `ability` |
 
 - `target`: the name of a permanent we control (a token by Forge's name for it, `Goblin Token`). The spell must have
@@ -140,7 +152,9 @@ policy's counters per game (`games[].playbook_stats`): `attack_decisions`, `atta
 `attack_spread`, `attackers_declared`, `attackers_reserved`, `mulligan_decisions`, `mulligans_taken`, and for the
 cast rules `cast_decisions` (times the rules were read), `cast_policy` (times one fired), `cast_rule_<n>` (per rule, by
 its position in the file), `cast_hold_vetoes` (a Forge choice that a hold turned down), `cast_hold_stuck` (a hold that
-could only be kept by passing), `cast_failed`, `cast_forge_declined`, `cast_turn_limit`, `cast_errors`.
+could only be kept by passing), `cast_failed`, `cast_forge_declined`, `cast_turn_limit`, `cast_errors`, and for a
+`forge` rule `cast_forge_unnamed` (times Forge took a play at it) and `cast_forge_stuck` (Forge kept choosing a named
+play and the rules below decided).
 `FORGE_JAVA_OPTS=-Dvibefish.trace=true` prints one line per rule decision to the shard log.
 
 ### `triggers`: the seat's answer to "you may"

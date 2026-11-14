@@ -146,9 +146,14 @@ public final class Playbook {
      * them, or the one {@code ability} quotes), until every {@code until} condition holds (never, with no
      * {@code until}); a card named by several hold rules is released as soon as one of them is, and a play or
      * activate rule may still make a held play, which is how "only this way" is written.
+     * {@code forge} (its value is {@code "unnamed"}): at this place in the order Forge's own AI chooses, among the
+     * plays no rule names: the spells of cards no play rule lists and the abilities no activate rule covers, the
+     * holds in force left out. When it wants none of them the rules below are read. Without such a rule everything
+     * the rules do not name waits until every rule is idle, which starves it behind an engine that always has
+     * something to do (DESIGN.md section 30).
      */
     public static final class CastRule {
-        public final String kind;           // play | activate | hold
+        public final String kind;           // play | activate | hold | forge
         public final List<String> cards;
         public final String target;         // play, activate
         public final String ability;        // activate, hold: text the ability's description contains (null: any of them)
@@ -163,21 +168,32 @@ public final class Playbook {
         CastRule(JsonObject o, int index) {
             this.index = index;
             String k = null;
-            for (String candidate : List.of("play", "activate", "hold")) {
+            for (String candidate : List.of("play", "activate", "hold", "forge")) {
                 if (o.has(candidate)) {
                     if (k != null) {
-                        throw new IllegalArgumentException("playbook cast rule " + index + " needs exactly one of \"play\", \"activate\" and \"hold\"");
+                        throw new IllegalArgumentException("playbook cast rule " + index + " needs exactly one of \"play\", \"activate\", \"hold\" and \"forge\"");
                     }
                     k = candidate;
                 }
             }
             if (k == null) {
-                throw new IllegalArgumentException("playbook cast rule " + index + " needs one of \"play\", \"activate\" and \"hold\"");
+                throw new IllegalArgumentException("playbook cast rule " + index + " needs one of \"play\", \"activate\", \"hold\" and \"forge\"");
             }
             kind = k;
             boolean hold = "hold".equals(kind);
-            cards = strings(o.get(kind));
-            if (cards.isEmpty()) {
+            boolean forge = "forge".equals(kind);
+            if (forge) {
+                if (!o.get("forge").isJsonPrimitive() || !"unnamed".equals(o.get("forge").getAsString())) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": \"forge\" takes \"unnamed\" (Forge's choice among the plays no rule names)");
+                }
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until")) {
+                    if (o.has(key)) {
+                        throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\" and \"phase\"");
+                    }
+                }
+            }
+            cards = forge ? Collections.emptyList() : strings(o.get(kind));
+            if (cards.isEmpty() && !forge) {
                 throw new IllegalArgumentException("playbook cast rule " + index + " names no cards");
             }
             target = hold ? null : str(o, "target", null);
@@ -224,6 +240,10 @@ public final class Playbook {
 
         public boolean isHold() {
             return "hold".equals(kind);
+        }
+
+        public boolean isForge() {
+            return "forge".equals(kind);
         }
     }
 
@@ -396,6 +416,11 @@ public final class Playbook {
                 holds += r.isHold() ? 1 : 0;
             }
             sb.append(" cast=").append(plays).append(" play, ").append(activations).append(" activate, ").append(holds).append(" hold rule(s)");
+            for (CastRule r : cast.rules) {
+                if (r.isForge()) {
+                    sb.append(", Forge's choice among the unnamed at rule ").append(r.index);
+                }
+            }
         }
         if (!triggers.isEmpty()) {
             sb.append(" triggers=").append(triggers.size()).append(" rule(s)");

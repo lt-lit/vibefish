@@ -779,6 +779,86 @@ public class PlaybookController extends PlayerControllerAi {
         }
     }
 
+    /**
+     * Whether a play or activate rule names this play: the spell of a card some play rule lists, or, for a permanent
+     * of ours on the battlefield, an activated ability some activate rule covers (all of the permanent's, or the one
+     * whose text the rule quotes). Mana abilities and lands are never named.
+     */
+    private boolean isNamed(SpellAbility sa, Playbook.Cast cast) {
+        Card host = sa.getHostCard();
+        if (host == null || sa.isLandAbility()) {
+            return false;
+        }
+        boolean onBattlefield = host.isInZone(ZoneType.Battlefield);
+        if (onBattlefield ? !sa.isActivatedAbility() || sa.isManaAbility() : !sa.isSpell()) {
+            return false;
+        }
+        String d = sa.getDescription();
+        for (Playbook.CastRule rule : cast.rules) {
+            if (!rule.cards.contains(host.getName())) {
+                continue;
+            }
+            if (onBattlefield) {
+                if (rule.isActivate() && (rule.ability == null || (d != null && d.toLowerCase().contains(rule.ability.toLowerCase())))) {
+                    return true;
+                }
+            } else if (rule.isPlay()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** Flags, for Forge's next decision, every play a rule names and every held play (see {@link #flagHeld}). */
+    private void flagNamed(Playbook.Cast cast, List<Playbook.CastRule> holds, List<SpellAbility> flagged) {
+        for (Card c : ComputerUtilAbility.getAvailableCards(getGame(), player)) {
+            if (c.isInZone(ZoneType.Battlefield) && c.getController() != player) {
+                continue;
+            }
+            List<SpellAbility> all = new ArrayList<>();
+            for (SpellAbility sa : c.getSpellAbilities()) {
+                all.add(sa);
+            }
+            all.addAll(c.getAllPossibleAbilities(player, false));
+            for (SpellAbility sa : all) {
+                if (!sa.isSkip() && (isNamed(sa, cast) || isHeld(sa, holds))) {
+                    sa.setSkip(true);
+                    flagged.add(sa);
+                }
+            }
+        }
+    }
+
+    /**
+     * A {@code forge} rule: Forge's own choice with the plays the rules name, and the held ones, left out; null when
+     * it wants none of what is left. The flags work as in {@link #forgeChoice}: when Forge's memory of dropped
+     * abilities lets a flagged play through, one unflagged call empties it and the flags of the call after stand.
+     * Forge is asked afresh after this, so its earlier answer of the turn is not reused ({@code castRetargeted}).
+     */
+    private SpellAbility forgeUnnamed(Playbook.Cast cast) {
+        List<Playbook.CastRule> holds = holdsInForce(cast);
+        List<SpellAbility> flagged = new ArrayList<>();
+        castRetargeted = true;
+        try {
+            flagNamed(cast, holds, flagged);
+            List<SpellAbility> choice = super.chooseSpellAbilityToPlay();
+            if (choice != null && !choice.isEmpty() && (isNamed(choice.get(0), cast) || isHeld(choice.get(0), holds))) {
+                unflag(flagged);
+                super.chooseSpellAbilityToPlay();       // result unused: this call only resets Forge's skip memory
+                flagNamed(cast, holds, flagged);
+                choice = super.chooseSpellAbilityToPlay();
+                if (choice != null && !choice.isEmpty() && (isNamed(choice.get(0), cast) || isHeld(choice.get(0), holds))) {
+                    count("cast_forge_stuck", 1);
+                    trace("Forge kept choosing a named play (" + choice.get(0).getHostCard().getName() + "); the rules below decide");
+                    return null;
+                }
+            }
+            return choice == null || choice.isEmpty() ? null : choice.get(0);
+        } finally {
+            unflag(flagged);
+        }
+    }
+
     /** The cards a rule can cast: the hand and the commanders in the command zone. */
     private List<Card> castable() {
         List<Card> cards = new ArrayList<>();
@@ -821,6 +901,18 @@ public class PlaybookController extends PlayerControllerAi {
         List<Card> cards = castable();
         for (Playbook.CastRule rule : cast.rules) {
             if (rule.isHold() || (beforeLandOnly && !rule.beforeLand) || !phaseFits(rule, ph) || !allHold(rule.when)) {
+                continue;
+            }
+            if (rule.isForge()) {
+                // Forge's own pick among the plays no rule names, at this place in the order instead of after every rule.
+                SpellAbility sa = forgeUnnamed(cast);
+                if (sa != null) {
+                    castPlays++;
+                    count("cast_rule_" + rule.index, 1);
+                    count("cast_forge_unnamed", 1);
+                    trace("rule " + rule.index + " leaves the choice to Forge among the unnamed: " + sa.getHostCard().getName() + ": " + sa);
+                    return sa;
+                }
                 continue;
             }
             Card target = null;
