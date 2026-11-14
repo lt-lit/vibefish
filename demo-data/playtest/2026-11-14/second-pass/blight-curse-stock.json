@@ -1,0 +1,1559 @@
+{
+ "kind": "playtest",
+ "deck": "blight-curse",
+ "deck_file": "Blight Curse [ECC] [2026].dck",
+ "deck_file_sha256": null,
+ "arm": "stock",
+ "pilot": {
+  "playbook": null
+ },
+ "commanders": [
+  "Auntie Ool, Cursewretch"
+ ],
+ "table": {
+  "pool": "bots-v2",
+  "seats": 4,
+  "seed": 20261310,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 45,
+  "win_rate": 0.225,
+  "win_rate_ci95": [
+   0.1726,
+   0.2877
+  ],
+  "even_share": 0.25,
+  "not_finished": 2,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 11
+   },
+   {
+    "games": 50,
+    "wins": 12
+   },
+   {
+    "games": 50,
+    "wins": 8
+   },
+   {
+    "games": 50,
+    "wins": 14
+   }
+  ],
+  "losses": 153,
+  "out_first": 43,
+  "out_second": 51,
+  "out_third": 59,
+  "loss_reasons": {
+   "LifeReachedZero": 147,
+   "OpponentWon": 4,
+   "Milled": 2,
+   "CommanderDamage": 1
+  },
+  "game_turns": 47.2,
+  "own_turns_when_won": 13.5,
+  "own_turns_when_lost": 11.4
+ },
+ "opponents": {
+  "hail-caesar": {
+   "tables": 45,
+   "focus_wins": 13,
+   "focus_win_rate": 0.289,
+   "its_wins": 12,
+   "its_win_rate": 0.267,
+   "took_it_out": 12
+  },
+  "wretched-ranks": {
+   "tables": 56,
+   "focus_wins": 16,
+   "focus_win_rate": 0.286,
+   "its_wins": 15,
+   "its_win_rate": 0.268,
+   "took_it_out": 14
+  },
+  "token-triumph": {
+   "tables": 48,
+   "focus_wins": 13,
+   "focus_win_rate": 0.271,
+   "its_wins": 10,
+   "its_win_rate": 0.208,
+   "took_it_out": 12
+  },
+  "elven-council": {
+   "tables": 56,
+   "focus_wins": 15,
+   "focus_win_rate": 0.268,
+   "its_wins": 11,
+   "its_win_rate": 0.196,
+   "took_it_out": 12
+  },
+  "limit-break": {
+   "tables": 41,
+   "focus_wins": 10,
+   "focus_win_rate": 0.244,
+   "its_wins": 6,
+   "its_win_rate": 0.146,
+   "took_it_out": 7
+  },
+  "tricky-terrain": {
+   "tables": 52,
+   "focus_wins": 12,
+   "focus_win_rate": 0.231,
+   "its_wins": 14,
+   "its_win_rate": 0.269,
+   "took_it_out": 8
+  },
+  "enduring-enchantments": {
+   "tables": 59,
+   "focus_wins": 13,
+   "focus_win_rate": 0.22,
+   "its_wins": 13,
+   "its_win_rate": 0.22,
+   "took_it_out": 15
+  },
+  "deep-clue-sea": {
+   "tables": 45,
+   "focus_wins": 9,
+   "focus_win_rate": 0.2,
+   "its_wins": 17,
+   "its_win_rate": 0.378,
+   "took_it_out": 11
+  },
+  "eldrazi-incursion": {
+   "tables": 48,
+   "focus_wins": 9,
+   "focus_win_rate": 0.188,
+   "its_wins": 16,
+   "its_win_rate": 0.333,
+   "took_it_out": 16
+  },
+  "goblin-storm": {
+   "tables": 43,
+   "focus_wins": 8,
+   "focus_win_rate": 0.186,
+   "its_wins": 9,
+   "its_win_rate": 0.209,
+   "took_it_out": 9
+  },
+  "planeswalker-party": {
+   "tables": 49,
+   "focus_wins": 8,
+   "focus_win_rate": 0.163,
+   "its_wins": 13,
+   "its_win_rate": 0.265,
+   "took_it_out": 3
+  },
+  "quick-draw": {
+   "tables": 58,
+   "focus_wins": 9,
+   "focus_win_rate": 0.155,
+   "its_wins": 17,
+   "its_win_rate": 0.293,
+   "took_it_out": 13
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.17,
+  "lands_at_own_turn": {
+   "4": 2.73,
+   "6": 4.37,
+   "8": 5.95
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.97,
+   "6": 5.61,
+   "8": 5.28
+  },
+  "short_of_four_lands_at_turn_5": 0.43,
+  "commander_first_cast": {
+   "median": 6,
+   "p25": 4,
+   "p75": 7,
+   "never_cast": 0.115,
+   "casts_per_game": 1.53
+  },
+  "spells_per_game": 14.2,
+  "idle_turn_share": 0.109,
+  "damage_dealt_per_game": 23.4,
+  "damage_taken_per_game": 59.2,
+  "commander_damage_dealt_per_game": 3.1,
+  "nonland_cards_in_hand_at_loss": 4.67,
+  "of_them_affordable": 4.49
+ },
+ "cards": {
+  "Channeler Initiate": {
+   "drawn": 63,
+   "played": 4,
+   "played_share": 0.063,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.254,
+   "win_rate_not_drawn": 0.212,
+   "held_at_loss": 40,
+   "mv": 2,
+   "type": "Creature - Human Druid"
+  },
+  "Devoted Druid": {
+   "drawn": 54,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.259,
+   "win_rate_not_drawn": 0.212,
+   "held_at_loss": 27,
+   "mv": 2,
+   "type": "Creature - Elf Druid"
+  },
+  "Commander's Sphere": {
+   "drawn": 66,
+   "played": 44,
+   "played_share": 0.667,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.197,
+   "win_rate_not_drawn": 0.239,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Vraska, Betrayal's Sting": {
+   "drawn": 62,
+   "played": 34,
+   "played_share": 0.548,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.29,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 14,
+   "mv": 6,
+   "type": "Legendary Planeswalker - Vraska"
+  },
+  "Ignoble Hierarch": {
+   "drawn": 55,
+   "played": 54,
+   "played_share": 0.982,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.214,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Creature - Goblin Shaman"
+  },
+  "Incremental Blight": {
+   "drawn": 66,
+   "played": 47,
+   "played_share": 0.712,
+   "median_turn": 8,
+   "win_rate_drawn": 0.258,
+   "win_rate_not_drawn": 0.209,
+   "held_at_loss": 7,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Dusk Urchins": {
+   "drawn": 59,
+   "played": 44,
+   "played_share": 0.746,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.237,
+   "win_rate_not_drawn": 0.22,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Creature - Ouphe"
+  },
+  "Wickersmith's Tools": {
+   "drawn": 48,
+   "played": 34,
+   "played_share": 0.708,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.217,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Midnight Banshee": {
+   "drawn": 44,
+   "played": 28,
+   "played_share": 0.636,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.386,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 6,
+   "mv": 6,
+   "type": "Creature - Spirit"
+  },
+  "Tree of Perdition": {
+   "drawn": 62,
+   "played": 38,
+   "played_share": 0.613,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.274,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 17,
+   "mv": 4,
+   "type": "Creature - Plant"
+  },
+  "Fire Covenant": {
+   "drawn": 60,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.317,
+   "win_rate_not_drawn": 0.186,
+   "held_at_loss": 36,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Necroskitter": {
+   "drawn": 49,
+   "played": 36,
+   "played_share": 0.735,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.245,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Creature - Elemental"
+  },
+  "Black Sun's Zenith": {
+   "drawn": 60,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 44,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Ferrafor, Young Yew": {
+   "drawn": 57,
+   "played": 36,
+   "played_share": 0.632,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.298,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 10,
+   "mv": 7,
+   "type": "Legendary Creature - Treefolk Druid"
+  },
+  "Wickerbough Elder": {
+   "drawn": 51,
+   "played": 39,
+   "played_share": 0.765,
+   "median_turn": 8,
+   "win_rate_drawn": 0.196,
+   "win_rate_not_drawn": 0.235,
+   "held_at_loss": 7,
+   "mv": 4,
+   "type": "Creature - Treefolk Shaman"
+  },
+  "Carnifex Demon": {
+   "drawn": 50,
+   "played": 41,
+   "played_share": 0.82,
+   "median_turn": 9,
+   "win_rate_drawn": 0.34,
+   "win_rate_not_drawn": 0.187,
+   "held_at_loss": 6,
+   "mv": 6,
+   "type": "Creature - Phyrexian Demon"
+  },
+  "The Scorpion God": {
+   "drawn": 56,
+   "played": 52,
+   "played_share": 0.929,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 15,
+   "mv": 5,
+   "type": "Legendary Creature - God"
+  },
+  "Hapatra, Vizier of Poisons": {
+   "drawn": 62,
+   "played": 39,
+   "played_share": 0.629,
+   "median_turn": 7,
+   "win_rate_drawn": 0.29,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 13,
+   "mv": 2,
+   "type": "Legendary Creature - Human Cleric"
+  },
+  "Dread Tiller": {
+   "drawn": 62,
+   "played": 53,
+   "played_share": 0.855,
+   "median_turn": 7,
+   "win_rate_drawn": 0.274,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Artifact Creature - Scarecrow"
+  },
+  "Lasting Tarfire": {
+   "drawn": 53,
+   "played": 36,
+   "played_share": 0.679,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.34,
+   "win_rate_not_drawn": 0.184,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Puppeteer Clique": {
+   "drawn": 67,
+   "played": 55,
+   "played_share": 0.821,
+   "median_turn": 8,
+   "win_rate_drawn": 0.313,
+   "win_rate_not_drawn": 0.18,
+   "held_at_loss": 7,
+   "mv": 5,
+   "type": "Creature - Faerie Wizard"
+  },
+  "Putrefy": {
+   "drawn": 54,
+   "played": 52,
+   "played_share": 0.963,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.204,
+   "win_rate_not_drawn": 0.233,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Glissa Sunslayer": {
+   "drawn": 66,
+   "played": 60,
+   "played_share": 0.909,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.227,
+   "win_rate_not_drawn": 0.224,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Legendary Creature - Phyrexian Zombie Elf"
+  },
+  "Blowfly Infestation": {
+   "drawn": 62,
+   "played": 37,
+   "played_share": 0.597,
+   "median_turn": 8,
+   "win_rate_drawn": 0.29,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Grim Poppet": {
+   "drawn": 55,
+   "played": 34,
+   "played_share": 0.618,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.214,
+   "held_at_loss": 7,
+   "mv": 7,
+   "type": "Artifact Creature - Scarecrow"
+  },
+  "Grave Titan": {
+   "drawn": 51,
+   "played": 36,
+   "played_share": 0.706,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.188,
+   "held_at_loss": 6,
+   "mv": 6,
+   "type": "Creature - Giant"
+  },
+  "Massacre Girl, Known Killer": {
+   "drawn": 67,
+   "played": 53,
+   "played_share": 0.791,
+   "median_turn": 8,
+   "win_rate_drawn": 0.269,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Legendary Creature - Human Assassin"
+  },
+  "The Reaper, King No More": {
+   "drawn": 48,
+   "played": 37,
+   "played_share": 0.771,
+   "median_turn": 7,
+   "win_rate_drawn": 0.312,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 4,
+   "mv": 6,
+   "type": "Legendary Artifact Creature - Scarecrow"
+  },
+  "Liliana, Death Wielder": {
+   "drawn": 46,
+   "played": 32,
+   "played_share": 0.696,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.174,
+   "win_rate_not_drawn": 0.24,
+   "held_at_loss": 8,
+   "mv": 7,
+   "type": "Legendary Planeswalker - Liliana"
+  },
+  "Aberrant Return": {
+   "drawn": 58,
+   "played": 45,
+   "played_share": 0.776,
+   "median_turn": 9,
+   "win_rate_drawn": 0.362,
+   "win_rate_not_drawn": 0.169,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Sorcery"
+  },
+  "Skinrender": {
+   "drawn": 56,
+   "played": 30,
+   "played_share": 0.536,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.268,
+   "win_rate_not_drawn": 0.208,
+   "held_at_loss": 15,
+   "mv": 4,
+   "type": "Creature - Phyrexian Zombie"
+  },
+  "Cathartic Reunion": {
+   "drawn": 72,
+   "played": 5,
+   "played_share": 0.069,
+   "median_turn": 12,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.211,
+   "held_at_loss": 48,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Binding the Old Gods": {
+   "drawn": 55,
+   "played": 29,
+   "played_share": 0.527,
+   "median_turn": 9,
+   "win_rate_drawn": 0.236,
+   "win_rate_not_drawn": 0.221,
+   "held_at_loss": 12,
+   "mv": 4,
+   "type": "Enchantment - Saga"
+  },
+  "Harmonize": {
+   "drawn": 62,
+   "played": 26,
+   "played_share": 0.419,
+   "median_turn": 10.5,
+   "win_rate_drawn": 0.242,
+   "win_rate_not_drawn": 0.217,
+   "held_at_loss": 29,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Cathartic Pyre": {
+   "drawn": 58,
+   "played": 56,
+   "played_share": 0.966,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.225,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Grave Venerations": {
+   "drawn": 58,
+   "played": 36,
+   "played_share": 0.621,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.345,
+   "win_rate_not_drawn": 0.176,
+   "held_at_loss": 11,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Oft-Nabbed Goat": {
+   "drawn": 53,
+   "played": 45,
+   "played_share": 0.849,
+   "median_turn": 7,
+   "win_rate_drawn": 0.321,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Creature - Goat"
+  },
+  "Soul Snuffers": {
+   "drawn": 52,
+   "played": 6,
+   "played_share": 0.115,
+   "median_turn": 10.5,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.189,
+   "held_at_loss": 24,
+   "mv": 4,
+   "type": "Creature - Elemental Shaman"
+  },
+  "Village Pillagers": {
+   "drawn": 66,
+   "played": 51,
+   "played_share": 0.773,
+   "median_turn": 8,
+   "win_rate_drawn": 0.394,
+   "win_rate_not_drawn": 0.142,
+   "held_at_loss": 5,
+   "mv": 5,
+   "type": "Creature - Goblin Warrior"
+  },
+  "Painful Truths": {
+   "drawn": 68,
+   "played": 36,
+   "played_share": 0.529,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.221,
+   "win_rate_not_drawn": 0.227,
+   "held_at_loss": 24,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Persist": {
+   "drawn": 63,
+   "played": 44,
+   "played_share": 0.698,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.317,
+   "win_rate_not_drawn": 0.182,
+   "held_at_loss": 12,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Everlasting Torment": {
+   "drawn": 55,
+   "played": 37,
+   "played_share": 0.673,
+   "median_turn": 6,
+   "win_rate_drawn": 0.236,
+   "win_rate_not_drawn": 0.221,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Burning Curiosity": {
+   "drawn": 47,
+   "played": 46,
+   "played_share": 0.979,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.234,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Contagion Clasp": {
+   "drawn": 50,
+   "played": 36,
+   "played_share": 0.72,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.28,
+   "win_rate_not_drawn": 0.207,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Hoarder's Greed": {
+   "drawn": 56,
+   "played": 53,
+   "played_share": 0.946,
+   "median_turn": 8,
+   "win_rate_drawn": 0.357,
+   "win_rate_not_drawn": 0.174,
+   "held_at_loss": 4,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Evolution Sage": {
+   "drawn": 57,
+   "played": 46,
+   "played_share": 0.807,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.175,
+   "win_rate_not_drawn": 0.245,
+   "held_at_loss": 13,
+   "mv": 3,
+   "type": "Creature - Elf Druid"
+  },
+  "Night's Whisper": {
+   "drawn": 50,
+   "played": 33,
+   "played_share": 0.66,
+   "median_turn": 8,
+   "win_rate_drawn": 0.22,
+   "win_rate_not_drawn": 0.227,
+   "held_at_loss": 14,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Terminate": {
+   "drawn": 69,
+   "played": 65,
+   "played_share": 0.942,
+   "median_turn": 7,
+   "win_rate_drawn": 0.203,
+   "win_rate_not_drawn": 0.237,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Chain Reaction": {
+   "drawn": 55,
+   "played": 35,
+   "played_share": 0.636,
+   "median_turn": 9,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.207,
+   "held_at_loss": 13,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Arcane Signet": {
+   "drawn": 45,
+   "played": 33,
+   "played_share": 0.733,
+   "median_turn": 7,
+   "win_rate_drawn": 0.244,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 12,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Archfiend of Ifnir": {
+   "drawn": 63,
+   "played": 49,
+   "played_share": 0.778,
+   "median_turn": 8,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Creature - Demon"
+  },
+  "Puca's Covenant": {
+   "drawn": 41,
+   "played": 24,
+   "played_share": 0.585,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.268,
+   "win_rate_not_drawn": 0.214,
+   "held_at_loss": 14,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Flourishing Defenses": {
+   "drawn": 43,
+   "played": 26,
+   "played_share": 0.605,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.279,
+   "win_rate_not_drawn": 0.21,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Enchantment"
+  },
+  "Eventide's Shadow": {
+   "drawn": 60,
+   "played": 42,
+   "played_share": 0.7,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.193,
+   "held_at_loss": 18,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Assassin's Trophy": {
+   "drawn": 77,
+   "played": 70,
+   "played_share": 0.909,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.221,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Chimil, the Inner Sun": {
+   "drawn": 48,
+   "played": 35,
+   "played_share": 0.729,
+   "median_turn": 9,
+   "win_rate_drawn": 0.354,
+   "win_rate_not_drawn": 0.184,
+   "held_at_loss": 2,
+   "mv": 6,
+   "type": "Legendary Artifact"
+  },
+  "Infernal Grasp": {
+   "drawn": 68,
+   "played": 64,
+   "played_share": 0.941,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.212,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Sinister Gnarlbark": {
+   "drawn": 66,
+   "played": 46,
+   "played_share": 0.697,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.303,
+   "win_rate_not_drawn": 0.187,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Creature - Treefolk Warlock"
+  },
+  "Sol Ring": {
+   "drawn": 49,
+   "played": 45,
+   "played_share": 0.918,
+   "median_turn": 6,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.225,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Kulrath Knight": {
+   "drawn": 53,
+   "played": 37,
+   "played_share": 0.698,
+   "median_turn": 9,
+   "win_rate_drawn": 0.34,
+   "win_rate_not_drawn": 0.184,
+   "held_at_loss": 7,
+   "mv": 5,
+   "type": "Creature - Elemental Knight"
+  }
+ },
+ "list": {
+  "Aberrant Return": {
+   "count": 1,
+   "mv": 6,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Arcane Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Archfiend of Ifnir": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Demon",
+   "land": false
+  },
+  "Assassin's Trophy": {
+   "count": 1,
+   "mv": 2,
+   "type": "Instant",
+   "land": false
+  },
+  "Binding the Old Gods": {
+   "count": 1,
+   "mv": 4,
+   "type": "Enchantment - Saga",
+   "land": false
+  },
+  "Black Sun's Zenith": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Blowfly Infestation": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Burning Curiosity": {
+   "count": 1,
+   "mv": 3,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Canyon Slough": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Swamp Mountain",
+   "land": true
+  },
+  "Carnifex Demon": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Phyrexian Demon",
+   "land": false
+  },
+  "Cathartic Pyre": {
+   "count": 1,
+   "mv": 2,
+   "type": "Instant",
+   "land": false
+  },
+  "Cathartic Reunion": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Chain Reaction": {
+   "count": 1,
+   "mv": 4,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Channeler Initiate": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Druid",
+   "land": false
+  },
+  "Chimil, the Inner Sun": {
+   "count": 1,
+   "mv": 6,
+   "type": "Legendary Artifact",
+   "land": false
+  },
+  "Cinder Glade": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Mountain Forest",
+   "land": true
+  },
+  "Command Tower": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Commander's Sphere": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Contagion Clasp": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Devoted Druid": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Elf Druid",
+   "land": false
+  },
+  "Dragonskull Summit": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Dread Tiller": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact Creature - Scarecrow",
+   "land": false
+  },
+  "Dusk Urchins": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Ouphe",
+   "land": false
+  },
+  "Eventide's Shadow": {
+   "count": 1,
+   "mv": 5,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Everlasting Torment": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Evolution Sage": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Elf Druid",
+   "land": false
+  },
+  "Evolving Wilds": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Exotic Orchard": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Ferrafor, Young Yew": {
+   "count": 1,
+   "mv": 7,
+   "type": "Legendary Creature - Treefolk Druid",
+   "land": false
+  },
+  "Festering Thicket": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Swamp Forest",
+   "land": true
+  },
+  "Fire Covenant": {
+   "count": 1,
+   "mv": 3,
+   "type": "Instant",
+   "land": false
+  },
+  "Flourishing Defenses": {
+   "count": 1,
+   "mv": 5,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Forest": {
+   "count": 6,
+   "mv": 0,
+   "type": "Basic Land - Forest",
+   "land": true
+  },
+  "Glissa Sunslayer": {
+   "count": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Phyrexian Zombie Elf",
+   "land": false
+  },
+  "Golgari Rot Farm": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Grave Titan": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Giant",
+   "land": false
+  },
+  "Grave Venerations": {
+   "count": 1,
+   "mv": 4,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Grim Poppet": {
+   "count": 1,
+   "mv": 7,
+   "type": "Artifact Creature - Scarecrow",
+   "land": false
+  },
+  "Gruul Turf": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Hapatra, Vizier of Poisons": {
+   "count": 1,
+   "mv": 2,
+   "type": "Legendary Creature - Human Cleric",
+   "land": false
+  },
+  "Harmonize": {
+   "count": 1,
+   "mv": 4,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Hoarder's Greed": {
+   "count": 1,
+   "mv": 4,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Ifnir Deadlands": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Desert",
+   "land": true
+  },
+  "Ignoble Hierarch": {
+   "count": 1,
+   "mv": 1,
+   "type": "Creature - Goblin Shaman",
+   "land": false
+  },
+  "Incremental Blight": {
+   "count": 1,
+   "mv": 5,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Infernal Grasp": {
+   "count": 1,
+   "mv": 2,
+   "type": "Instant",
+   "land": false
+  },
+  "Kulrath Knight": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Elemental Knight",
+   "land": false
+  },
+  "Lasting Tarfire": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Liliana, Death Wielder": {
+   "count": 1,
+   "mv": 7,
+   "type": "Legendary Planeswalker - Liliana",
+   "land": false
+  },
+  "Massacre Girl, Known Killer": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Human Assassin",
+   "land": false
+  },
+  "Midnight Banshee": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Spirit",
+   "land": false
+  },
+  "Mountain": {
+   "count": 4,
+   "mv": 0,
+   "type": "Basic Land - Mountain",
+   "land": true
+  },
+  "Necroskitter": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Elemental",
+   "land": false
+  },
+  "Nesting Grounds": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Night's Whisper": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Oft-Nabbed Goat": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Goat",
+   "land": false
+  },
+  "Painful Truths": {
+   "count": 1,
+   "mv": 3,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Path of Ancestry": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Persist": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Puca's Covenant": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Puppeteer Clique": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Faerie Wizard",
+   "land": false
+  },
+  "Putrefy": {
+   "count": 1,
+   "mv": 3,
+   "type": "Instant",
+   "land": false
+  },
+  "Rakdos Carnarium": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Riveteers Overlook": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Rootbound Crag": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Savage Lands": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Sheltered Thicket": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Mountain Forest",
+   "land": true
+  },
+  "Sinister Gnarlbark": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Treefolk Warlock",
+   "land": false
+  },
+  "Skinrender": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Phyrexian Zombie",
+   "land": false
+  },
+  "Smoldering Marsh": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Swamp Mountain",
+   "land": true
+  },
+  "Sol Ring": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact",
+   "land": false
+  },
+  "Soul Snuffers": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Elemental Shaman",
+   "land": false
+  },
+  "Swamp": {
+   "count": 8,
+   "mv": 0,
+   "type": "Basic Land - Swamp",
+   "land": true
+  },
+  "Terminate": {
+   "count": 1,
+   "mv": 2,
+   "type": "Instant",
+   "land": false
+  },
+  "Terramorphic Expanse": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "The Reaper, King No More": {
+   "count": 1,
+   "mv": 6,
+   "type": "Legendary Artifact Creature - Scarecrow",
+   "land": false
+  },
+  "The Scorpion God": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - God",
+   "land": false
+  },
+  "Tree of Perdition": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Plant",
+   "land": false
+  },
+  "Vernal Fen": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Swamp Forest",
+   "land": true
+  },
+  "Village Pillagers": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Goblin Warrior",
+   "land": false
+  },
+  "Vraska, Betrayal's Sting": {
+   "count": 1,
+   "mv": 6,
+   "type": "Legendary Planeswalker - Vraska",
+   "land": false
+  },
+  "Wickerbough Elder": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Treefolk Shaman",
+   "land": false
+  },
+  "Wickersmith's Tools": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Woodland Cemetery": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  }
+ },
+ "outcomes": {
+  "g0001": 0,
+  "g0002": 0,
+  "g0003": 0,
+  "g0004": 0,
+  "g0005": 0,
+  "g0006": 0,
+  "g0007": 0,
+  "g0008": 0,
+  "g0009": 0,
+  "g0010": 0,
+  "g0011": 0,
+  "g0012": 1,
+  "g0013": 0,
+  "g0014": 1,
+  "g0015": 0,
+  "g0016": 0,
+  "g0017": 0,
+  "g0018": 0,
+  "g0019": 0,
+  "g0020": 0,
+  "g0021": 0,
+  "g0022": 0,
+  "g0023": 0,
+  "g0024": 0,
+  "g0025": 1,
+  "g0026": 0,
+  "g0027": 0,
+  "g0028": 0,
+  "g0029": 0,
+  "g0030": 0,
+  "g0031": 0,
+  "g0032": 1,
+  "g0033": 0,
+  "g0034": 0,
+  "g0035": 0,
+  "g0036": 0,
+  "g0037": 1,
+  "g0038": 0,
+  "g0039": 0,
+  "g0040": 1,
+  "g0041": 1,
+  "g0042": 0,
+  "g0043": 0,
+  "g0044": 0,
+  "g0045": 0,
+  "g0046": 0,
+  "g0047": 0,
+  "g0048": 1,
+  "g0049": 0,
+  "g0050": 1,
+  "g0051": 0,
+  "g0052": 0,
+  "g0053": 0,
+  "g0054": 0,
+  "g0055": 0,
+  "g0056": 0,
+  "g0057": 0,
+  "g0058": 0,
+  "g0059": 1,
+  "g0060": 0,
+  "g0061": 0,
+  "g0062": 0,
+  "g0063": 0,
+  "g0064": 0,
+  "g0065": 0,
+  "g0066": 1,
+  "g0067": 0,
+  "g0068": 0,
+  "g0069": 0,
+  "g0070": 0,
+  "g0071": 0,
+  "g0072": 0,
+  "g0073": 1,
+  "g0074": 0,
+  "g0075": 1,
+  "g0076": 0,
+  "g0077": 0,
+  "g0078": 0,
+  "g0079": 0,
+  "g0080": 0,
+  "g0081": 1,
+  "g0082": 0,
+  "g0083": 0,
+  "g0084": 0,
+  "g0085": 1,
+  "g0086": 0,
+  "g0087": 1,
+  "g0088": 0,
+  "g0089": 0,
+  "g0090": 0,
+  "g0091": 0,
+  "g0092": 0,
+  "g0093": 0,
+  "g0094": 1,
+  "g0095": 1,
+  "g0096": 0,
+  "g0097": 0,
+  "g0098": 0,
+  "g0099": 0,
+  "g0100": 0,
+  "g0101": 0,
+  "g0102": 1,
+  "g0103": 0,
+  "g0104": 0,
+  "g0105": 0,
+  "g0106": 0,
+  "g0107": 0,
+  "g0108": 0,
+  "g0109": 0,
+  "g0110": 0,
+  "g0111": 0,
+  "g0112": 1,
+  "g0113": 0,
+  "g0114": 0,
+  "g0115": 0,
+  "g0116": 0,
+  "g0117": 0,
+  "g0118": 0,
+  "g0119": 0,
+  "g0120": 1,
+  "g0121": 0,
+  "g0122": 0,
+  "g0123": 1,
+  "g0124": 0,
+  "g0125": 0,
+  "g0126": 1,
+  "g0127": 0,
+  "g0128": 1,
+  "g0129": 1,
+  "g0130": 1,
+  "g0131": 0,
+  "g0132": 0,
+  "g0133": 0,
+  "g0134": 0,
+  "g0135": 0,
+  "g0136": 0,
+  "g0137": 1,
+  "g0138": 0,
+  "g0139": 1,
+  "g0140": 0,
+  "g0141": 0,
+  "g0142": 0,
+  "g0143": 0,
+  "g0144": 1,
+  "g0145": 0,
+  "g0146": 1,
+  "g0147": 0,
+  "g0148": 1,
+  "g0149": 0,
+  "g0150": 1,
+  "g0151": 0,
+  "g0152": 1,
+  "g0153": 1,
+  "g0154": 0,
+  "g0155": 1,
+  "g0156": 0,
+  "g0157": 0,
+  "g0158": 1,
+  "g0159": 0,
+  "g0160": 1,
+  "g0161": 0,
+  "g0162": 0,
+  "g0163": 1,
+  "g0164": 0,
+  "g0165": 0,
+  "g0166": 0,
+  "g0167": 0,
+  "g0168": 1,
+  "g0169": 0,
+  "g0170": 0,
+  "g0171": 0,
+  "g0172": 1,
+  "g0173": 0,
+  "g0174": 1,
+  "g0175": 0,
+  "g0176": 1,
+  "g0177": 0,
+  "g0178": 0,
+  "g0179": 0,
+  "g0180": 0,
+  "g0181": 1,
+  "g0182": 0,
+  "g0183": 0,
+  "g0184": 0,
+  "g0185": 1,
+  "g0186": 0,
+  "g0187": 0,
+  "g0188": 0,
+  "g0189": 0,
+  "g0190": 0,
+  "g0191": 0,
+  "g0192": 0,
+  "g0193": 0,
+  "g0194": 0,
+  "g0195": 0,
+  "g0196": 0,
+  "g0197": 0,
+  "g0198": 1,
+  "g0199": 0,
+  "g0200": 0
+ }
+}
