@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""finish_candidate.py DECK NAME BASE: check a candidate against its validation run, write its Forge-attack sibling,
+"""finish_candidate.py DECK NAME BASE [PLAYBOOK_RUN]: check a candidate against its validation run, write its Forge-attack sibling,
 copy the goldfish pair into demo-data. BASE is the validation seed base (e.g. 21101)."""
 import json, os, shutil, subprocess, sys, collections
 deck, name, base = sys.argv[1], sys.argv[2], int(sys.argv[3])
 R = '/home/user/vibefish'; S = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W = f'{S}/batch/{deck}'
-out = subprocess.run(['python3', '-I', f'{S}/bin/verify_batch.py', deck, name], capture_output=True, text=True, cwd=R)
+pbdir = sys.argv[4] if len(sys.argv) > 4 else 'val-playbook'   # the validation run of the final rules
+out = subprocess.run(['python3', '-I', f'{S}/bin/verify_batch.py', deck, name, f'{W}/results/val-stock', f'{W}/results/{pbdir}'], capture_output=True, text=True, cwd=R)
 print((out.stdout + out.stderr)[-1500:])
 cand_p = f'{R}/playbook/variants/{deck}-{name}.json'
 cand = json.load(open(cand_p), object_pairs_hook=collections.OrderedDict)
@@ -24,7 +25,7 @@ else:
 pairs = [f for f in os.listdir(W) if f.endswith('pair.json')]
 dst_dir = f'{R}/demo-data/goldfish/2026-11-13'; os.makedirs(dst_dir, exist_ok=True)
 if pairs:
-    src = os.path.join(W, sorted(pairs)[0]); dst = f'{dst_dir}/{deck}-seeds-{base}-{base+39}.json'
+    src = os.path.join(W, f'{deck}-pair.json') if os.path.exists(os.path.join(W, f'{deck}-pair.json')) else os.path.join(W, sorted(pairs)[0]); dst = f'{dst_dir}/{deck}-seeds-{base}-{base+39}.json'
     shutil.copy(src, dst); p = json.load(open(dst))
     print('pair copied:', os.path.relpath(dst, R), '|', json.dumps({k: v for k, v in p['paired'].items()})[:300],
           '| stock', p['a'].get('kill_turn_mean'), 'candidate', p['b'].get('kill_turn_mean'), 'games', p['a'].get('games'), p['b'].get('games'))
