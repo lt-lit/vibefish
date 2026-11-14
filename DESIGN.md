@@ -1159,3 +1159,25 @@ Every interval is clear of zero, which is what goldfish can say: the seat runs i
 **Checked.** The report on the 200 playbook-arm games of Goblin Storm in `ab-run` #17 gives the recorded 48 wins and puts the known gaps at the top of its card table (Goblin Bombardment cast in none of the 55 games it was drawn, Past in Flames in none of 44, Grapeshot in 3% of 63 and in hand at 41 losses). The Blight Curse precon written out as a bare list and converted back loads 100 of 100 cards; a test list with a split card and a double-faced card comes out right. That converted list, under the id `my-blight`, played two tables against bots under their playbooks through `--deck-file`, and rolled up and reported.
 
 **What it is not yet.** A new list is piloted by stock Forge AI unless someone writes it a playbook, and §22 to §28 are the measure of what that costs: the report on such a list describes Forge's pilot as much as the deck. The pool should be the owner's table, which exists as a league once its ten decks are shipped. The 200 tables of one playtest are three to four hours on a session's machine; `ab-run.yml` takes league ids and candidate playbooks, not deck files, so Actions cannot play one yet. There is no dashboard view. And the report is one list at a time: for two lists the win rates come from `join` and the card tables are read side by side.
+
+**The first four at the tables, and what engine rules crowd out (2026-11-14, 03:00 UTC).** The stock and go-wide arms of the first four decks were complete while `ab-run` #27 was still playing their side arms, and were rolled up from the ten shard artifacts of each deck (the run's own rollup will repeat these figures; the attack is not decided until the `-forgeattack` arms are in):
+
+| Deck | Stock pilot | Candidate, go-wide | Difference (95%), exact test |
+|---|---|---|---|
+| Ahoy Mateys `crew` | 36 of 200 | 52 | +8.0 (+1 to +15), 37 against 21 of the discordant tables, 0.048 |
+| Mutant Menace `mothman` | 46 | 55 | +4.5 (-4 to +12), 0.33 |
+| Squirreled Away `acorns` | 46 | 47 | +0.5 (-7 to +8), 1.0 |
+| Blight Curse `wretch` | 46 | 41 | -2.5 (-10 to +5), 0.60 |
+
+A turn of goldfish speed bought eight points for one deck and nothing for two, and the deck the owner plays most is no better piloted than by stock AI. `runner/playtest.py` on each arm and `docs/agents/arm_card_diff.py` on the pair say why, card by card: the share of the games a card was drawn in which it was cast, under each pilot on the same tables. Every one of the four candidates casts its engine far more than stock AI does (Blight Curse: Devoted Druid in 70 of 73 games against none of 66, Harmonize 49 of 55 against 18 of 62, Cathartic Reunion 58 of 66 against 13 of 58) and casts the rest of the deck far less:
+
+| Deck | Cast less under the candidate (games cast of games drawn: stock, then candidate) |
+|---|---|
+| Blight Curse | Incremental Blight 49/56 to 10/54, Aberrant Return 51/66 to 16/62, Liliana, Death Wielder 34/53 to 8/56, Binding the Old Gods 30/44 to 8/42, Puppeteer Clique 46/52 to 24/60, Chain Reaction 41/67 to 14/59, Skinrender 28/57 to 15/58 |
+| Mutant Menace | Nightkin Ambusher 34/40 to 7/42, Alpha Deathclaw 39/47 to 10/55, The Master, Transcendent 23/24 to 13/38, Casualties of War 31/36 to 16/39 |
+| Squirreled Away | Skyfisher Spider 45/50 to 22/60, Casualties of War 39/45 to 17/48, Poison-Tip Archer 40/55 to 16/56, Swarmyard Massacre 45/46 to 28/45, Binding the Old Gods 27/56 to 9/51 |
+| Ahoy Mateys | Dire Fleet Ravager 41/50 to 12/54, Blood Money 27/42 to 3/48, Hostage Taker 45/49 to 18/49, Coercive Recruiter 40/56 to 12/47, Blasphemous Act 25/38 to 11/44 |
+
+The mechanism is in `PlaybookController.chooseSpellAbilityToPlay`: in the seat's own main phase a `play` or `activate` rule that has something to do always goes first, and Forge's own choice, which is the only way a card no rule names gets cast, is taken only when every rule is idle. An engine that always has something to do (a draw spell, a mana rock, an activation) therefore starves every card the rules do not name: the removal, the wipes and the large threats, which is most of how a deck plays the table. Blight Curse's seat under the candidate holds six cards at the start of its turn 8 and loses with 4.9 nonland cards in hand, 4.5 of them affordable. Goldfish cannot show any of it: against three decks that do nothing, a turn spent drawing is never the wrong turn and a removal spell has no target. The twelve of §27 and §28 were written the same way, so the same comparison is owed for them (the shard artifacts of `ab-run` #26 are being fetched for it).
+
+So the second pass for the owner's decks is two jobs in one file: the answer rules of §27, and a rule at the right place for every card the engine crowds out. The four agents started at 03:05 UTC with their deck's two reports and its card comparison in hand (`docs/agents/answer-rules-brief-exam.md` and a prompt that names both jobs; they may reorder the base's rules and must say what they changed). Their candidates are judged against stock and against the engine-only candidate on tables of their own.
