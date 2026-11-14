@@ -291,7 +291,9 @@ def render(res, min_drawn, gf=None):
                f"{r['not_finished']} games were not finished (turn cap or clock).")
     out.append('')
     out.append("By seat (first to act is seat 1): " + ', '.join(f"{s['wins']} of {s['games']}" for s in r['by_seat']) + '.')
-    out.append(f"Games ran {r['game_turns']} turns in all. It won on its own turn {r['own_turns_when_won']} on average and was out by its own turn {r['own_turns_when_lost']} when it lost.")
+    out.append(f"Games ran {r['game_turns']} turns in all."
+               + (f" It won on its own turn {r['own_turns_when_won']} on average." if r['own_turns_when_won'] is not None else '')
+               + (f" When it lost it was out by its own turn {r['own_turns_when_lost']}." if r['own_turns_when_lost'] is not None else ''))
     if r['losses']:
         out.append(f"Of its {r['losses']} losses it was the first player out in {r['out_first']}, the second in {r['out_second']}, the last opponent standing in {r['out_third']}. "
                    "What took it out: " + ', '.join(f"{k} {v}" for k, v in r['loss_reasons'].items()) + '.')
