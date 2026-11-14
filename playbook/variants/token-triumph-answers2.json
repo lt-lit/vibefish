@@ -1,0 +1,294 @@
+{
+ "schema": 1,
+ "deck": "token-triumph",
+ "variant": "answers2",
+ "of": "playbook/precons/token-triumph.json",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data. Only the playbook object is read; the deck's data stays in its own file.",
+ "playbook": {
+  "version": 5,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 0",
+      "creatures <= 3",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 2",
+      "creatures <= 5",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 4",
+      "creatures <= 7",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 6",
+      "creatures <= 9",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 8",
+      "creatures <= 11",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 10",
+      "creatures <= 13",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 12",
+      "creatures <= 15",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Hour of Reckoning"
+     ],
+     "when": [
+      "tokens >= 14",
+      "creatures <= 17",
+      "opp_power > power",
+      "opp_power >= 8",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Citywide Bust"
+     ],
+     "when": [
+      "opp_power > power",
+      "opp_power >= 8",
+      "not controls Thunderfoot Baloth",
+      "not controls Verdant Force",
+      "not controls Trostani Discordant",
+      "not controls Loyal Guardian",
+      "not controls Great Oak Guardian",
+      "not controls Champion of Lambholt",
+      "not controls Nullmage Shepherd",
+      "not controls Collective Blessing",
+      "not controls Dictate of Heliod"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Conclave Tribunal"
+     ],
+     "when": [
+      "opp_power > power",
+      "opp_power >= 6"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Avacyn's Pilgrim",
+      "Jaspera Sentinel",
+      "Arcane Signet",
+      "Talisman of Unity",
+      "Leafkin Druid"
+     ]
+    },
+    {
+     "play": [
+      "Emmara, Soul of the Accord"
+     ]
+    },
+    {
+     "play": [
+      "Karametra's Favor",
+      "Presence of Gond"
+     ],
+     "target": "Emmara, Soul of the Accord"
+    },
+    {
+     "hold": [
+      "Karametra's Favor",
+      "Presence of Gond"
+     ],
+     "until": [
+      "turn >= 9"
+     ]
+    },
+    {
+     "activate": [
+      "Emmara, Soul of the Accord"
+     ],
+     "ability": "Elf Warrior",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "library >= 15"
+     ]
+    },
+    {
+     "play": [
+      "Collective Unconscious",
+      "Camaraderie"
+     ],
+     "when": [
+      "creatures >= 5",
+      "creatures <= 12",
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Collective Unconscious",
+      "Camaraderie"
+     ],
+     "until": [
+      "creatures >= 4",
+      "creatures <= 12",
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Overrun"
+     ],
+     "when": [
+      "attackers >= 5"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Overrun"
+     ],
+     "until": [
+      "attackers >= 5",
+      "main == 1"
+     ]
+    },
+    {
+     "play": [
+      "Collective Blessing",
+      "Trostani Discordant",
+      "Maja, Bretagard Protector",
+      "Thunderfoot Baloth",
+      "Dictate of Heliod",
+      "Commander's Insignia",
+      "Felidar Retreat",
+      "Valor in Akros",
+      "Hornet Queen",
+      "Verdant Force",
+      "Champion of Lambholt",
+      "Citanul Hierophants",
+      "Mentor of the Meek",
+      "Rishkar, Peema Renegade",
+      "Selesnya Evangel",
+      "Sporemound",
+      "Jade Mage",
+      "Loyal Guardian",
+      "Voice of Many",
+      "Harmonize",
+      "Farhaven Elf",
+      "Overwhelming Instinct",
+      "Idol of Oblivion",
+      "Dawn of Hope",
+      "Selesnya Guildmage",
+      "Eternal Witness",
+      "Scavenging Ooze",
+      "Dauntless Escort",
+      "Nullmage Shepherd",
+      "Hornet Nest",
+      "Commander's Sphere",
+      "Slate of Ancestry",
+      "Great Oak Guardian"
+     ]
+    },
+    {
+     "activate": [
+      "Slate of Ancestry"
+     ],
+     "when": [
+      "creatures >= 6",
+      "hand <= 2",
+      "creatures <= 12",
+      "library >= 40"
+     ]
+    },
+    {
+     "activate": [
+      "Nullmage Shepherd"
+     ],
+     "ability": "Destroy target artifact or enchantment",
+     "phase": "main2",
+     "when": [
+      "attackers >= 4",
+      "life > threat"
+     ]
+    }
+   ]
+  },
+  "notes": "DRAFT",
+  "on": "2026-11-14"
+ }
+}
