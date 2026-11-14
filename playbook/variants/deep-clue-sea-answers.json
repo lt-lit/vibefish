@@ -1,0 +1,400 @@
+{
+  "schema": 1,
+  "deck": "deep-clue-sea",
+  "variant": "answers",
+  "of": "playbook/precons/deep-clue-sea.json",
+  "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped version 1 with answer rules for its three wipes and Aerial Extortionist. Only the playbook object is read; the deck's data stays in its own file.",
+  "playbook": {
+    "version": 2,
+    "cast": {
+      "rules": [
+        {
+          "play": [
+            "Organic Extinction"
+          ],
+          "when": [
+            "opp_creatures >= 8",
+            "opp_creatures > creatures"
+          ]
+        },
+        {
+          "play": [
+            "Organic Extinction"
+          ],
+          "when": [
+            "threat >= life"
+          ]
+        },
+        {
+          "play": [
+            "Organic Extinction"
+          ],
+          "when": [
+            "life <= 20",
+            "opp_creatures >= 6",
+            "opp_power > power"
+          ]
+        },
+        {
+          "play": [
+            "Fumigate"
+          ],
+          "when": [
+            "opp_creatures >= 8",
+            "opp_creatures > creatures",
+            "not controls Tangletrove Kelp"
+          ]
+        },
+        {
+          "play": [
+            "Fumigate"
+          ],
+          "when": [
+            "threat >= life",
+            "opp_power > power"
+          ]
+        },
+        {
+          "play": [
+            "Fumigate"
+          ],
+          "when": [
+            "life <= 20",
+            "opp_creatures >= 6",
+            "opp_power > power"
+          ]
+        },
+        {
+          "play": [
+            "Farewell"
+          ],
+          "when": [
+            "opp_creatures >= 10",
+            "opp_creatures > creatures",
+            "opp_power > power",
+            "not controls Mechanized Production",
+            "not controls Tangletrove Kelp"
+          ]
+        },
+        {
+          "play": [
+            "Farewell"
+          ],
+          "when": [
+            "threat >= life",
+            "opp_power > power",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "hold": [
+            "Farewell"
+          ],
+          "until": [
+            "opp_power > power",
+            "opp_creatures >= 3"
+          ]
+        },
+        {
+          "hold": [
+            "Lonis, Cryptozoologist"
+          ],
+          "ability": "reveals the top"
+        },
+        {
+          "hold": [
+            "Tezzeret, Betrayer of Flesh"
+          ],
+          "ability": "emblem"
+        },
+        {
+          "play": [
+            "Sol Ring"
+          ]
+        },
+        {
+          "play": [
+            "Arcane Signet",
+            "Talisman of Unity",
+            "Talisman of Curiosity",
+            "Talisman of Progress",
+            "Simic Signet",
+            "Azorius Signet"
+          ],
+          "when": [
+            "turn <= 5"
+          ]
+        },
+        {
+          "play": [
+            "Morska, Undersea Sleuth"
+          ]
+        },
+        {
+          "play": [
+            "Aerial Extortionist"
+          ],
+          "when": [
+            "opp_power >= 8"
+          ]
+        },
+        {
+          "activate": [
+            "Krosan Verge"
+          ],
+          "ability": "Search your library",
+          "when": [
+            "lands <= 7"
+          ]
+        },
+        {
+          "play": [
+            "Mechanized Production"
+          ],
+          "target": "Clue Token"
+        },
+        {
+          "hold": [
+            "Mechanized Production"
+          ]
+        },
+        {
+          "activate": [
+            "Selvala, Explorer Returned"
+          ],
+          "phase": "main1",
+          "when": [
+            "library >= 20"
+          ]
+        },
+        {
+          "activate": [
+            "Idol of Oblivion"
+          ],
+          "ability": "Draw a card",
+          "when": [
+            "library >= 20"
+          ]
+        },
+        {
+          "play": [
+            "On the Trail"
+          ],
+          "when": [
+            "turn <= 5"
+          ]
+        },
+        {
+          "play": [
+            "Tangletrove Kelp",
+            "Selvala, Explorer Returned",
+            "Idol of Oblivion",
+            "Jolrael, Mwonvuli Recluse",
+            "Detective of the Month",
+            "Alandra, Sky Dreamer",
+            "Ethereal Investigator",
+            "Tezzeret, Betrayer of Flesh",
+            "Knowledge Is Power",
+            "Chulane, Teller of Tales",
+            "Thought Monitor"
+          ]
+        },
+        {
+          "activate": [
+            "Clue Token"
+          ],
+          "ability": "Draw a card",
+          "when": [
+            "drawn <= 1",
+            "library >= 20",
+            "not controls Bennie Bracks, Zoologist",
+            "not controls Chulane, Teller of Tales",
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "activate": [
+            "Jolrael, Mwonvuli Recluse"
+          ],
+          "ability": "base power and toughness",
+          "phase": "main1",
+          "when": [
+            "attackers >= 4",
+            "hand >= 7"
+          ]
+        },
+        {
+          "activate": [
+            "Clue Token"
+          ],
+          "ability": "Draw a card",
+          "phase": "main1",
+          "when": [
+            "controls Knowledge Is Power",
+            "attackers >= 6",
+            "library >= 20",
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "play": [
+            "Bennie Bracks, Zoologist"
+          ],
+          "when": [
+            "attackers == 0"
+          ]
+        },
+        {
+          "play": [
+            "Koma, Cosmos Serpent",
+            "Hornet Queen",
+            "Adrix and Nev, Twincasters",
+            "Psychosis Crawler",
+            "Kappa Cannoneer",
+            "Shimmer Dragon",
+            "Junk Winder",
+            "Teferi's Ageless Insight",
+            "Academy Manufactor",
+            "Nadir Kraken",
+            "Erdwal Illuminator",
+            "Tireless Tracker",
+            "Lonis, Cryptozoologist",
+            "Ongoing Investigation",
+            "Wavesifter",
+            "Innocuous Researcher",
+            "Sophia, Dogged Detective",
+            "Merchant of Truth",
+            "Whirler Rogue",
+            "Nettlecyst",
+            "Ulvenwald Mysteries",
+            "Serene Sleuth",
+            "Armed with Proof",
+            "Inspiring Statuary",
+            "Graf Mole",
+            "Killer Service",
+            "Wilderness Reclamation",
+            "Aerial Extortionist",
+            "On the Trail",
+            "Arcane Signet",
+            "Talisman of Unity",
+            "Talisman of Curiosity",
+            "Talisman of Progress",
+            "Simic Signet",
+            "Azorius Signet",
+            "Search the Premises",
+            "Magnifying Glass",
+            "Ransom Note",
+            "Follow the Bodies"
+          ]
+        },
+        {
+          "play": [
+            "Hydroid Krasis"
+          ],
+          "x": "max",
+          "x_min": 4
+        },
+        {
+          "play": [
+            "Finale of Revelation"
+          ],
+          "x": 9,
+          "x_min": 4,
+          "when": [
+            "hand <= 3",
+            "library >= 30"
+          ]
+        },
+        {
+          "activate": [
+            "Clue Token"
+          ],
+          "ability": "Draw a card",
+          "when": [
+            "drawn <= 1",
+            "library >= 20",
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "activate": [
+            "Clue Token"
+          ],
+          "ability": "Draw a card",
+          "phase": "main1",
+          "when": [
+            "controls Knowledge Is Power",
+            "attackers >= 4",
+            "library >= 20",
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "activate": [
+            "Clue Token"
+          ],
+          "ability": "Draw a card",
+          "when": [
+            "controls Psychosis Crawler",
+            "library >= 20",
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "activate": [
+            "Clue Token"
+          ],
+          "ability": "Draw a card",
+          "when": [
+            "hand <= 2",
+            "library >= 20",
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "hold": [
+            "Clue Token"
+          ],
+          "ability": "Draw a card",
+          "until": [
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        },
+        {
+          "hold": [
+            "Sophia, Dogged Detective"
+          ],
+          "ability": "counter on each Dog",
+          "until": [
+            "not controls Tangletrove Kelp",
+            "not controls Mechanized Production"
+          ]
+        }
+      ]
+    },
+    "triggers": [
+      {
+        "accept": [
+          "Nadir Kraken"
+        ]
+      },
+      {
+        "accept": [
+          "Killer Service"
+        ],
+        "when": [
+          "controls Food Token"
+        ]
+      }
+    ],
+    "notes": "DRAFT",
+    "on": "2026-11-13"
+  }
+}
