@@ -332,6 +332,19 @@
     "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins)"
    },
    "goldfish": "demo-data/goldfish/2026-11-14/blood-rites-answers-forgeattack-seeds-26101-26140.json"
+  },
+  {
+   "deck": "revenant-recon",
+   "status": "shipped (v4, 2026-11-14; the attack left to Forge); at tables of bots +5.0 points on its stock pilot (70 tables against 60, 95% -4 to +14, exact test 0.31), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 59 with the go-wide attack",
+   "playbook": "playbook/precons/revenant-recon.json",
+   "summary": "Mirko at once and the surveil engine, the paid copy Forge's AI declines; Black Sun's Zenith (never cast by Forge's AI) when it is behind a wide board, Massacre Wurm against four creatures, the removal creatures after the engine and the cheap creatures after Forge's own choice.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/revenant-recon-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (59 wins)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/revenant-recon-answers-forgeattack-seeds-25101-25140.json"
   }
  ]
 }

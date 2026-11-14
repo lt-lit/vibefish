@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.3",
- "generated": "2026-11-14T17:13:00Z",
+ "generated": "2026-11-14T17:51:21Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -760,6 +760,64 @@
      0.712
     ],
     "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "revenant-recon",
+   "name": "Revenant Recon",
+   "commanders": [
+    "Mirko, Obsessive Theorist"
+   ],
+   "status": "shipped (v4, 2026-11-14; the attack left to Forge); at tables of bots +5.0 points on its stock pilot (70 tables against 60, 95% -4 to +14, exact test 0.31), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 59 with the go-wide attack",
+   "playbook": "playbook/precons/revenant-recon.json",
+   "summary": "Mirko at once and the surveil engine, the paid copy Forge's AI declines; Black Sun's Zenith (never cast by Forge's AI) when it is behind a wide board, Massacre Wurm against four creatures, the removal creatures after the engine and the cheap creatures after Forge's own choice.",
+   "human": {
+    "win_rate": 0.256,
+    "games": 125
+   },
+   "tables": {
+    "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (59 wins)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/revenant-recon-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 60,
+     "win_rate": 0.3,
+     "win_rate_ci95": [
+      0.2407,
+      0.3668
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 70,
+     "win_rate": 0.35,
+     "win_rate_ci95": [
+      0.2873,
+      0.4184
+     ]
+    },
+    "difference": 0.05,
+    "difference_ci95": [
+     -0.0374,
+     0.1374
+    ],
+    "bot_only": 45,
+    "stock_only": 35,
+    "exact_p": 0.3143
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/revenant-recon-answers-forgeattack-seeds-25101-25140.json",
+    "games": 40,
+    "stock_kill_turn": 13.077,
+    "bot_kill_turn": 12.667,
+    "faster_by": 0.41,
+    "faster_by_ci95": [
+     0.116,
+     0.705
+    ],
+    "seeds_paired": 39
    }
   }
  ]
