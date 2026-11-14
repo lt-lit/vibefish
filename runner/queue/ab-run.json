@@ -1,15 +1,25 @@
 {
   "requested": "2026-11-14T18:33Z",
-  "note": "The round of the twelve on the pool as it is since 2026-11-14 (DESIGN §30): each pool deck at 200 tables of bots under stock AI and under its shipped playbook, opponents drawn from the other eleven under theirs. Nine of the twelve got answer rules on 2026-11-14 as their next version and have not met their stock pilot; Goblin Storm version 5, Hail, Caesar version 6 and Tricky Terrain version 8 are unchanged and meet the new pool here. These tables choose nothing: every playbook is the shipped one. playbook/bots.json takes these tables for the dashboard's bots card. 4,800 games in 120 shard jobs.",
-  "decks": "goblin-storm,token-triumph,hail-caesar,tricky-terrain,deep-clue-sea,planeswalker-party,limit-break,elven-council,quick-draw,wretched-ranks,eldrazi-incursion,enduring-enchantments",
+  "note": "The trial of the forge rule's wait option (harness 0.3.3, DESIGN §30): the first four engine-only candidates of the owner's table with {\"forge\": \"unnamed\"} after the commander's rule, as in ab-run #34, and the same files with \"wait\": \"main2\" on that rule (playbook/variants/<deck>-<name>-forgewait.json), on the same 200 tables, with the stock pilot as the control. A run of its own on a new seed: the pool's play changed on 2026-11-14, so arms on #27's seed would not be on #27's tables. Opponents drawn from bots-v2 under their shipped playbooks. The question: does making the rules below the forge rule wait for the second main phase give back the permanents Forge's AI casts after combat (card by card from the shard artifacts), and what does it do to wins. 2,400 games in 60 shard jobs.",
   "games": "200",
-  "arms": "stock,playbook",
-  "seed": "20261320",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
   "pool": "runner/leagues/bots-v2.json",
-  "opponent_playbooks": true
+  "opponent_playbooks": true,
+  "runs": [
+    {
+      "decks": "blight-curse@wretch-forge,mutant-menace@mothman-forge,squirreled-away@acorns-forge,ahoy-mateys@crew-forge",
+      "arms": "stock,playbook",
+      "seed": "20261340"
+    },
+    {
+      "decks": "blight-curse@wretch-forgewait,mutant-menace@mothman-forgewait,squirreled-away@acorns-forgewait,ahoy-mateys@crew-forgewait",
+      "arms": "playbook",
+      "seed": "20261340",
+      "shards_per_deck": "5"
+    }
+  ]
 }
