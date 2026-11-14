@@ -1,0 +1,891 @@
+{
+ "kind": "goldfish-pair",
+ "generated": "2026-11-14T16:57:24Z",
+ "deck": "veloci-ramp-tor",
+ "a": {
+  "run": "val-stock",
+  "deck": "veloci-ramp-tor",
+  "deck_file": "Veloci-Ramp-Tor [LCC] [2023].dck",
+  "vibefish": "0.3.1",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": null,
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 40,
+  "wins": 40,
+  "not_finished": 0,
+  "kill_turn_mean": 11.35,
+  "kill_turn_sd": 1.477,
+  "kill_turn_median": 11.0,
+  "kill_turn_min": 9,
+  "kill_turn_max": 15,
+  "kill_turn_distribution": {
+   "9": 1,
+   "10": 13,
+   "11": 11,
+   "12": 7,
+   "13": 4,
+   "14": 2,
+   "15": 2
+  },
+  "per_game": [
+   {
+    "seed": 22102,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 19194
+   },
+   {
+    "seed": 22103,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7238
+   },
+   {
+    "seed": 22104,
+    "kill_turn": 12,
+    "game_turns": 45,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9683
+   },
+   {
+    "seed": 22105,
+    "kill_turn": 11,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6362
+   },
+   {
+    "seed": 22106,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6308
+   },
+   {
+    "seed": 22107,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5027
+   },
+   {
+    "seed": 22108,
+    "kill_turn": 15,
+    "game_turns": 56,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 10402
+   },
+   {
+    "seed": 22109,
+    "kill_turn": 11,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 4813
+   },
+   {
+    "seed": 22110,
+    "kill_turn": 10,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5288
+   },
+   {
+    "seed": 22111,
+    "kill_turn": 15,
+    "game_turns": 56,
+    "reason": "AllOpponentsLost",
+    "mulligans": 3,
+    "duration_ms": 8231
+   },
+   {
+    "seed": 22112,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 5945
+   },
+   {
+    "seed": 22113,
+    "kill_turn": 11,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7913
+   },
+   {
+    "seed": 22114,
+    "kill_turn": 11,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6834
+   },
+   {
+    "seed": 22115,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 5287
+   },
+   {
+    "seed": 22116,
+    "kill_turn": 12,
+    "game_turns": 45,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6897
+   },
+   {
+    "seed": 22117,
+    "kill_turn": 12,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 5959
+   },
+   {
+    "seed": 22118,
+    "kill_turn": 12,
+    "game_turns": 41,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5843
+   },
+   {
+    "seed": 22119,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4870
+   },
+   {
+    "seed": 22120,
+    "kill_turn": 12,
+    "game_turns": 44,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5739
+   },
+   {
+    "seed": 22121,
+    "kill_turn": 14,
+    "game_turns": 49,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6748
+   },
+   {
+    "seed": 22122,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4622
+   },
+   {
+    "seed": 22123,
+    "kill_turn": 14,
+    "game_turns": 50,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6333
+   },
+   {
+    "seed": 22124,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4726
+   },
+   {
+    "seed": 22125,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4997
+   },
+   {
+    "seed": 22126,
+    "kill_turn": 13,
+    "game_turns": 47,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7497
+   },
+   {
+    "seed": 22127,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 4873
+   },
+   {
+    "seed": 22128,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6193
+   },
+   {
+    "seed": 22129,
+    "kill_turn": 12,
+    "game_turns": 44,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5060
+   },
+   {
+    "seed": 22130,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5658
+   },
+   {
+    "seed": 22131,
+    "kill_turn": 10,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4714
+   },
+   {
+    "seed": 22132,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9530
+   },
+   {
+    "seed": 22133,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5021
+   },
+   {
+    "seed": 22134,
+    "kill_turn": 13,
+    "game_turns": 47,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8106
+   },
+   {
+    "seed": 22135,
+    "kill_turn": 11,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7951
+   },
+   {
+    "seed": 22136,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6842
+   },
+   {
+    "seed": 22137,
+    "kill_turn": 12,
+    "game_turns": 45,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7583
+   },
+   {
+    "seed": 22138,
+    "kill_turn": 13,
+    "game_turns": 45,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6654
+   },
+   {
+    "seed": 22139,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4453
+   },
+   {
+    "seed": 22140,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5987
+   },
+   {
+    "seed": 22141,
+    "kill_turn": 13,
+    "game_turns": 47,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5995
+   }
+  ]
+ },
+ "b": {
+  "run": "gf-answers",
+  "deck": "veloci-ramp-tor",
+  "deck_file": "Veloci-Ramp-Tor [LCC] [2023].dck",
+  "vibefish": "0.3.3",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": {
+   "file": "veloci-ramp-tor-answers.json",
+   "version": 2,
+   "attack": {
+    "policy": "go_wide",
+    "target": "highest_life",
+    "min_attackers": 3,
+    "safety_margin": 5,
+    "max_reserve": 3,
+    "spread": true,
+    "damage_per_loss": 3
+   },
+   "mulligan": null,
+   "cast": {
+    "rules": [
+     {
+      "hold": [
+       "Mosswort Bridge"
+      ],
+      "ability": "play the exiled card",
+      "until": [
+       "power >= 10",
+       "lands >= 8"
+      ]
+     },
+     {
+      "play": [
+       "Sol Ring",
+       "Arcane Signet",
+       "Ixalli's Lorekeeper",
+       "Drover of the Mighty",
+       "Rampant Growth",
+       "Farseek",
+       "Thunderherd Migration",
+       "Cultivate",
+       "Migration Path",
+       "Progenitor's Icon"
+      ]
+     },
+     {
+      "play": [
+       "Pantlaza, Sun-Favored"
+      ]
+     },
+     {
+      "play": [
+       "Topiary Stomper",
+       "Wayward Swordtooth",
+       "Atzocan Seer"
+      ],
+      "when": [
+       "lands <= 5",
+       "not controls Pantlaza, Sun-Favored"
+      ]
+     },
+     {
+      "play": [
+       "Otepec Huntmaster",
+       "Lifecrafter's Bestiary",
+       "Rhythm of the Wild",
+       "Descendants' Path",
+       "Wayta, Trainer Prodigy"
+      ]
+     },
+     {
+      "play": [
+       "Wakening Sun's Avatar"
+      ],
+      "when": [
+       "opp_creatures >= 3"
+      ]
+     },
+     {
+      "play": [
+       "Chandra's Ignition"
+      ],
+      "when": [
+       "opp_creatures >= 3"
+      ]
+     },
+     {
+      "play": [
+       "Raging Swordtooth"
+      ],
+      "when": [
+       "opp_creatures >= 5"
+      ]
+     },
+     {
+      "forge": "unnamed"
+     },
+     {
+      "play": [
+       "Rishkar's Expertise"
+      ],
+      "when": [
+       "power >= 4",
+       "library >= 30"
+      ]
+     },
+     {
+      "play": [
+       "Return of the Wildspeaker"
+      ],
+      "when": [
+       "power >= 8",
+       "hand <= 5"
+      ]
+     },
+     {
+      "play": [
+       "Zacama, Primal Calamity",
+       "Zetalpa, Primal Dawn",
+       "Wakening Sun's Avatar",
+       "Apex Altisaur",
+       "Rampaging Brontodon",
+       "Thundering Spineback",
+       "Verdant Sun's Avatar",
+       "Etali, Primal Storm",
+       "Earthshaker Dreadmaw",
+       "Bellowing Aegisaur",
+       "Regal Behemoth",
+       "From the Rubble",
+       "Xenagos, God of Revels",
+       "Raging Swordtooth",
+       "Regisaur Alpha",
+       "Scion of Calamity",
+       "Quartzwood Crasher",
+       "Wrathful Raptors",
+       "Temple Altisaur",
+       "Curious Altisaur",
+       "Majestic Heliopterus",
+       "Raging Regisaur",
+       "Ripjaw Raptor",
+       "Shifting Ceratops",
+       "Bronzebeak Foragers",
+       "Kinjalli's Sunwing",
+       "Ranging Raptors",
+       "Runic Armasaur",
+       "Sunfrill Imitator",
+       "Thrashing Brontodon",
+       "Topiary Stomper",
+       "Wayward Swordtooth",
+       "Wayta, Trainer Prodigy",
+       "Atzocan Seer",
+       "Deathgorge Scavenger",
+       "Itzquinth, Firstborn of Gishath",
+       "Dinosaur Egg"
+      ]
+     },
+     {
+      "activate": [
+       "Thundering Spineback"
+      ],
+      "phase": "main2"
+     }
+    ]
+   },
+   "triggers": null
+  },
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 40,
+  "wins": 39,
+  "not_finished": 1,
+  "kill_turn_mean": 10.026,
+  "kill_turn_sd": 1.442,
+  "kill_turn_median": 10,
+  "kill_turn_min": 8,
+  "kill_turn_max": 15,
+  "kill_turn_distribution": {
+   "8": 3,
+   "9": 12,
+   "10": 15,
+   "11": 4,
+   "12": 2,
+   "13": 2,
+   "15": 1
+  },
+  "per_game": [
+   {
+    "seed": 22102,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 29842
+   },
+   {
+    "seed": 22103,
+    "kill_turn": 9,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8945
+   },
+   {
+    "seed": 22104,
+    "kill_turn": 13,
+    "game_turns": 51,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 15582
+   },
+   {
+    "seed": 22105,
+    "kill_turn": 12,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9795
+   },
+   {
+    "seed": 22106,
+    "kill_turn": 9,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7294
+   },
+   {
+    "seed": 22107,
+    "kill_turn": 11,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6928
+   },
+   {
+    "seed": 22108,
+    "kill_turn": null,
+    "game_turns": 81,
+    "reason": "TurnCap",
+    "mulligans": 0,
+    "duration_ms": 15917
+   },
+   {
+    "seed": 22109,
+    "kill_turn": 9,
+    "game_turns": 32,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5310
+   },
+   {
+    "seed": 22110,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6781
+   },
+   {
+    "seed": 22111,
+    "kill_turn": 11,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 3,
+    "duration_ms": 6897
+   },
+   {
+    "seed": 22112,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 6202
+   },
+   {
+    "seed": 22113,
+    "kill_turn": 9,
+    "game_turns": 32,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6157
+   },
+   {
+    "seed": 22114,
+    "kill_turn": 8,
+    "game_turns": 28,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4609
+   },
+   {
+    "seed": 22115,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 7069
+   },
+   {
+    "seed": 22116,
+    "kill_turn": 9,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6292
+   },
+   {
+    "seed": 22117,
+    "kill_turn": 12,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 6287
+   },
+   {
+    "seed": 22118,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7891
+   },
+   {
+    "seed": 22119,
+    "kill_turn": 8,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6424
+   },
+   {
+    "seed": 22120,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8700
+   },
+   {
+    "seed": 22121,
+    "kill_turn": 15,
+    "game_turns": 56,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 12149
+   },
+   {
+    "seed": 22122,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7454
+   },
+   {
+    "seed": 22123,
+    "kill_turn": 13,
+    "game_turns": 50,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 11363
+   },
+   {
+    "seed": 22124,
+    "kill_turn": 11,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 11120
+   },
+   {
+    "seed": 22125,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8505
+   },
+   {
+    "seed": 22126,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6353
+   },
+   {
+    "seed": 22127,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 8407
+   },
+   {
+    "seed": 22128,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7941
+   },
+   {
+    "seed": 22129,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9865
+   },
+   {
+    "seed": 22130,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7308
+   },
+   {
+    "seed": 22131,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9153
+   },
+   {
+    "seed": 22132,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 12204
+   },
+   {
+    "seed": 22133,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8461
+   },
+   {
+    "seed": 22134,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9373
+   },
+   {
+    "seed": 22135,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9843
+   },
+   {
+    "seed": 22136,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 9676
+   },
+   {
+    "seed": 22137,
+    "kill_turn": 9,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7818
+   },
+   {
+    "seed": 22138,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8017
+   },
+   {
+    "seed": 22139,
+    "kill_turn": 8,
+    "game_turns": 28,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5656
+   },
+   {
+    "seed": 22140,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8164
+   },
+   {
+    "seed": 22141,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7500
+   }
+  ]
+ },
+ "paired": {
+  "seeds": 39,
+  "not_finished_by_one": 1,
+  "a_minus_b_turns": 1.231,
+  "ci95": [
+   0.778,
+   1.683
+  ],
+  "sd": 1.441,
+  "b_faster": 27,
+  "same": 7,
+  "b_slower": 5
+ }
+}

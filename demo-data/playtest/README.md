@@ -20,7 +20,12 @@ the games it was cast under stock Forge AI and under the playbook, on the same t
   playbook arms only): `<deck>-shipped.json` is the report of the shipped playbook of 2026-11-13, `<deck>-answers.json`
   (`token-triumph-answers2.json`) of the candidate on the same tables, and `<deck>-check.txt` sets the two beside the
   stock arm of `ab-run` #26 for the cards the candidate's new rules name, then lists what the candidate casts fifteen
-  points less or more often than the shipped playbook and than stock AI. The candidates shipped on 2026-11-14.
+  points less or more often than the shipped playbook and than stock AI. The candidates shipped on 2026-11-14;
+- `second-pass/`: the second-pass exams of the owner's decks (`ab-run` #36 to #39, seed 20261310): for each deck the
+  reports of its three arms, `<deck>-stock.json`, `<deck>-gowide.json` and `<deck>-forgeattack.json` (the stock pilot,
+  the candidate with go-wide, the same rules with Forge's attack), and `<deck>-gowide-card-diff.txt` and
+  `<deck>-forgeattack-card-diff.txt`: what each attack arm casts fifteen points less or more often than the stock
+  pilot on the same tables. A shipped deck's notes quote the diff of the arm that shipped.
 
 The reports were made from shard artifacts merged the way the workflow's rollup merges them; the win counts in them
 are those of the published rollups in `demo-data/ab/`. Regenerated on 2026-11-14 05:55 UTC after `runner/playtest.py`

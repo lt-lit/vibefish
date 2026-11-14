@@ -66,3 +66,16 @@ Seed blocks used by this batch: 21001 to 30140 (in each thousand the audit from 
 `mutant-menace-answers-on-mothman-seeds-23101-23140.json` (10.45 against 10.43: 0.03 slower, -0.32 to +0.27);
 `squirreled-away-answers-on-acorns-seeds-24101-24140.json` (10.22 against 10.03: 0.20 slower, -0.49 to +0.09);
 `ahoy-mateys-answers-on-crew-seeds-29101-29140.json` (8.82 against 9.05: 0.23 faster, +0.08 to +0.37).
+
+Also in `2026-11-14/`: the second pass of all ten of the owner's decks beside stock AI, with both attacks (DESIGN §30). A is the stock validation run of 2026-11-13 (the 40 seeds the engine-only candidate was validated on), B the second-pass candidate on the same seeds: `<deck>-answers-seeds-<first>-<last>.json` with the go-wide attack it was written with, `<deck>-answers-forgeattack-seeds-<first>-<last>.json` with the attack left to Forge. Kill turns as stock, then the candidate with go-wide and with Forge's attack (turns faster than stock, 95%):
+Blight Curse 13.53, 12.49 (+1.09, +0.42 to +1.75), 13.03 (+0.42, -0.24 to +1.08);
+Veloci-Ramp-Tor 11.35, 10.03 (+1.23, +0.78 to +1.68), 10.82 (+0.44, -0.00 to +0.87);
+Mutant Menace 11.54, 10.45 (+1.23, +0.61 to +1.85), 11.08 (+0.49, -0.11 to +1.08);
+Squirreled Away 11.38, 10.22 (+1.15, +0.76 to +1.54), 10.95 (+0.42, -0.01 to +0.86);
+Revenant Recon 13.08, 12.21 (+0.87, +0.60 to +1.14), 12.67 (+0.41, +0.12 to +0.70);
+Blood Rites 12.07, 10.93 (+1.15, +0.83 to +1.47), 11.68 (+0.40, +0.09 to +0.71);
+Death Toll 12.03, 10.44 (+1.61, +1.04 to +2.19), 10.92 (+1.10, +0.45 to +1.76);
+Miracle Worker 13.97, 12.40 (+1.56, +1.01 to +2.10), 13.00 (+0.94, +0.34 to +1.55);
+Ahoy Mateys 10.12, 8.82 (+1.30, +0.93 to +1.67), 9.18 (+0.95, +0.59 to +1.31);
+Deadly Disguise 11.95, 11.13 (+0.82, +0.46 to +1.17), 11.68 (+0.26, -0.07 to +0.60).
+The same rules kill a table that does nothing half a turn to three quarters of a turn sooner with go-wide than with Forge's attack, and at tables of bots they win more with Forge's attack (DESIGN §30): goldfish says whether a seat runs its engine, not how it should attack. The pair of the shipped file is the one a deck's row in `playbook/bots.json` names.
