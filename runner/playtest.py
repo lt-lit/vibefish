@@ -4,6 +4,7 @@ Read-only; prints Markdown.
 
   runner/playtest.py RUN_DIR [RUN_DIR ...] [--arm ARM] [--goldfish GOLDFISH_DIR] [--min-drawn N]
                      [--md OUT.md] [--json OUT.json]
+  runner/playtest.py RUN_DIR [...] [--arm ARM] --against OTHER_RUN_DIR [...] [--against-arm ARM]   # two lists (or two pilots) side by side
 
 RUN_DIR is an ab.py run (ab.json, arm-*/g*/run.json): the deck under test in one seat of every table, its
 opponents drawn from a pool, as `runner/ab.py play --deck ID [--deck-file LIST.dck] --pool ... --opponent-playbooks`
@@ -30,12 +31,20 @@ side, and a difference under about fourteen points is inside the 95% interval of
 to be looked at, not believed: a card that is cast in few of the games it is drawn, or sits in hand at the losses,
 is the firmer finding. Who pilots the opponents is in the header: at a table of stock Forge AI nothing punishes a
 slow or open deck, so read a result against the pilots it was earned against. Standard library only.
+
+--against puts a second run beside the first: another list of the same deck id on the same seed (`ab.py play` with
+another --deck-file: the same tables, so the comparison is paired table by table), or the same run under another arm
+(--against-arm stock: the same list under the other pilot). It prints the two results, the paired difference with its
+interval and the exact test on the tables only one of them won, the tempo of both, the cards only one list holds
+with what the games say of them, and the shared cards one side casts much more often than the other. Runs on
+different seeds or pools are set side by side without the pairing, and the report says so.
 """
 import argparse
 import collections
 import glob
 import gzip
 import json
+import math
 import os
 import statistics as st
 import sys
@@ -93,6 +102,7 @@ def collect(run_dirs, arm=None):
     pilot = None
     opp_pilots = collections.Counter()
     reasons = collections.Counter()
+    outcomes = {}
     seen = set()
     for rd in run_dirs:
         for gd in sorted(glob.glob(os.path.join(rd, f'arm-{arm}', 'g*'))):
@@ -127,6 +137,7 @@ def collect(run_dirs, arm=None):
                     opp_pilots['playbook' if d.get('playbook') else 'stock'] += 1
             me = next(p for p in g['players'] if p['seat'] == fs)
             won = bool(me.get('won'))
+            outcomes[os.path.basename(gd)] = int(won)
             C['games'] += 1; C['wins'] += won; C['not_finished'] += g.get('winner') is None
             by_seat[fs][0] += 1; by_seat[fs][1] += won
             C['mulligan_games'] += bool(me.get('mulligans'))
@@ -265,6 +276,7 @@ def collect(run_dirs, arm=None):
                   'commander_damage_dealt_per_game': mean(S['commander_dealt'], 1),
                   'nonland_cards_in_hand_at_loss': mean(S['hand_at_loss']), 'of_them_affordable': mean(S['castable_at_loss'])},
         'cards': rows,
+        'outcomes': outcomes,
     }
 
 
@@ -349,16 +361,131 @@ def render(res, min_drawn, gf=None):
     return '\n'.join(out) + '\n'
 
 
+def pilot_text(res):
+    p = res['pilot'] or {}
+    return (f"playbook `{p['playbook']}` version {p.get('version')}" + (f", {p['attack']} attack" if p.get('attack') else ", Forge's attack")
+            if p.get('playbook') else "stock Forge AI")
+
+
+def pair(a, b):
+    """The paired comparison of two collect() results: table by table when they are the same tables, else None."""
+    ta, tb = a['table'], b['table']
+    same = (a['deck'], ta['seed'], ta['pool'], ta['seats']) == (b['deck'], tb['seed'], tb['pool'], tb['seats'])
+    if not same:
+        return None
+    shared = sorted(set(a['outcomes']) & set(b['outcomes']))
+    if not shared:
+        return None
+    both = sum(1 for t in shared if a['outcomes'][t] and b['outcomes'][t])
+    a_only = sum(1 for t in shared if a['outcomes'][t] and not b['outcomes'][t])
+    b_only = sum(1 for t in shared if b['outcomes'][t] and not a['outcomes'][t])
+    n = len(shared)
+    d = (a_only - b_only) / n
+    se = math.sqrt(max(0.0, (a_only + b_only) - (a_only - b_only) ** 2 / n)) / n
+    m = a_only + b_only
+    probs = [math.comb(m, k) / 2 ** m for k in range(m + 1)] if m else []
+    exact = round(min(1.0, sum(q for q in probs if q <= probs[a_only] * (1 + 1e-9))), 4) if m else None
+    return {'tables': n, 'both_won': both, 'this_only': a_only, 'against_only': b_only, 'neither': n - both - a_only - b_only,
+            'difference': round(d, 4), 'difference_ci95': [round(d - 1.96 * se, 4), round(d + 1.96 * se, 4)], 'exact_p': exact}
+
+
+def render_pair(a, b, pr, min_drawn):
+    ra, rb = a['result'], b['result']
+    same_list = a.get('deck_file_sha256') == b.get('deck_file_sha256') and a.get('deck_file') == b.get('deck_file')
+    out = [f"# Side by side: {a['deck']}" + ('' if a['deck'] == b['deck'] else f" and {b['deck']}"), '']
+    for name, r in (('This', a), ('Against', b)):
+        t = r['table']
+        out.append(f"- {name}: `{r['deck_file']}`" + (f" (sha256 {r['deck_file_sha256'][:12]})" if r.get('deck_file_sha256') else '')
+                   + f", piloted by {pilot_text(r)} (arm `{r['arm']}`); opponents drawn from `{t['pool']}`, {t['opponent_seats_under_a_playbook']} opponent seats under "
+                   f"their playbook and {t['opponent_seats_under_stock_ai']} under stock Forge AI; seed {t['seed']}, {t['forge_version']}")
+    out += ['', '## Result', '', '| | Wins | Tables | Win rate (95%) | Not finished |', '|---|---|---|---|---|']
+    for name, r in (('This', ra), ('Against', rb)):
+        lo, hi = r['win_rate_ci95']
+        out.append(f"| {name} | {r['wins']} | {r['games']} | {pct(r['win_rate'], 1)} ({pct(lo)} to {pct(hi)}) | {r['not_finished']} |")
+    out.append('')
+    if pr:
+        lo, hi = pr['difference_ci95']
+        out.append(f"The same {pr['tables']} tables (same seed, same opponents in the same seats): this one won {pr['this_only']} tables the other did not, the other "
+                   f"{pr['against_only']} this one did not, both won {pr['both_won']}. Difference {100 * pr['difference']:+.1f} points (95% {100 * lo:+.0f} to {100 * hi:+.0f})"
+                   + (f", exact test on the {pr['this_only'] + pr['against_only']} tables only one of them won: {pr['exact_p']}." if pr['exact_p'] is not None else '.'))
+        out.append(f"An interval that includes zero means these tables cannot tell the two apart; at 200 tables a difference has to be about "
+                   f"seven points or more to stand clear.")
+    else:
+        out.append("These are not the same tables (another deck id, seed, pool or table size), so the two results stand side by side unpaired: each has its own "
+                   "interval, and a difference between them needs to be larger than both.")
+    ta, tb = a['tempo'], b['tempo']
+    out += ['', '## Tempo', '', '| | This | Against |', '|---|---|---|']
+    rows = [("Games with a mulligan", pct(ta['games_with_a_mulligan']), pct(tb['games_with_a_mulligan'])),
+            ("Lands at own turns 4, 6, 8", ', '.join(str(ta['lands_at_own_turn'][k]) for k in ('4', '6', '8')), ', '.join(str(tb['lands_at_own_turn'][k]) for k in ('4', '6', '8'))),
+            ("Short of four lands at turn 5", pct(ta['short_of_four_lands_at_turn_5']), pct(tb['short_of_four_lands_at_turn_5'])),
+            ("Commander first cast (median own turn)", ta['commander_first_cast']['median'], tb['commander_first_cast']['median']),
+            ("Spells a game", ta['spells_per_game'], tb['spells_per_game']),
+            ("Idle turns", pct(ta['idle_turn_share']), pct(tb['idle_turn_share'])),
+            ("Damage dealt a game", ta['damage_dealt_per_game'], tb['damage_dealt_per_game']),
+            ("Damage taken a game", ta['damage_taken_per_game'], tb['damage_taken_per_game']),
+            ("Game length in turns", ra['game_turns'], rb['game_turns']),
+            ("Own turn of a win", ra['own_turns_when_won'], rb['own_turns_when_won']),
+            ("Nonland cards in hand at a loss", ta['nonland_cards_in_hand_at_loss'], tb['nonland_cards_in_hand_at_loss'])]
+    out += [f"| {k} | {'' if x is None else x} | {'' if y is None else y} |" for k, x, y in rows]
+
+    def line(c, x):
+        d = None if x['win_rate_drawn'] is None or x['win_rate_not_drawn'] is None else x['win_rate_drawn'] - x['win_rate_not_drawn']
+        return (f"| {c} | {x['mv'] if x['mv'] is not None else ''} | {x['drawn']} | {pct(x['played_share'])} | {x['median_turn'] if x['median_turn'] is not None else ''} "
+                f"| {pct(x['win_rate_drawn'])} | {pct(x['win_rate_not_drawn'])} | {'' if d is None else f'{100 * d:+.0f}'} | {x['held_at_loss']} |")
+
+    head = ['| Card | MV | Games drawn | Cast when drawn | Turn of first cast | Won when drawn | Won when not | Points | In hand at a loss |', '|---|---|---|---|---|---|---|---|---|']
+    ca, cb = a['cards'], b['cards']
+    if not same_list:
+        only_a = sorted((c for c in ca if c not in cb), key=lambda c: -ca[c]['drawn'])
+        only_b = sorted((c for c in cb if c not in ca), key=lambda c: -cb[c]['drawn'])
+        out += ['', '## The cards that differ', '',
+                "Nonland cards that were drawn in one list's games and never in the other's: the cards one list holds and the other does not (a card both hold "
+                "that one side happened never to draw would show here too; with a few hundred games that does not happen). The win-rate columns are noisy: "
+                "a card that is drawn and not cast, or sits in hand at the losses, is the firmer finding.", '']
+        out += [f"### Only in this list ({len(only_a)})", ''] + (head + [line(c, ca[c]) for c in only_a] if only_a else ['None.'])
+        out += ['', f"### Only in the other ({len(only_b)})", ''] + (head + [line(c, cb[c]) for c in only_b] if only_b else ['None.'])
+    diff = []
+    for c, x in ca.items():
+        y = cb.get(c)
+        if y and x['drawn'] >= min_drawn and y['drawn'] >= min_drawn:
+            d = 100 * ((x['played_share'] or 0) - (y['played_share'] or 0))
+            if abs(d) >= 15:
+                diff.append((d, c, x, y))
+    out += ['', '## Shared cards cast differently', '',
+            f"Cards both sides drew in at least {min_drawn} games whose share of games cast differs by fifteen points or more ({len(diff)} cards)."
+            + (" With the same list under two pilots this is what the pilot changes; with two lists it is what the swaps did to the rest of the deck "
+               "(a new card that eats the mana of an old one shows here)." if diff else ''), '']
+    if diff:
+        out += ['| Card | MV | This: cast of drawn | Against: cast of drawn | Points | In hand at a loss: this, against |', '|---|---|---|---|---|---|']
+        for d, c, x, y in sorted(diff, key=lambda r: r[0]):
+            out.append(f"| {c} | {x['mv'] if x['mv'] is not None else ''} | {x['played']} of {x['drawn']} | {y['played']} of {y['drawn']} | {d:+.0f} | {x['held_at_loss']}, {y['held_at_loss']} |")
+    return '\n'.join(out) + '\n'
+
+
 def main(argv):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('run_dirs', nargs='+')
     ap.add_argument('--arm')
+    ap.add_argument('--against', nargs='+', metavar='RUN_DIR', help='a second run to set beside the first: another list on the same seed, or the same run with --against-arm')
+    ap.add_argument('--against-arm')
     ap.add_argument('--goldfish', help='a runner/goldfish.sh run directory (or its goldfish.json) of the same list')
     ap.add_argument('--min-drawn', type=int, help='list cards drawn in at least this many games (default: a tenth of the games, at least 5)')
     ap.add_argument('--md', help='also write the report here')
     ap.add_argument('--json', help='also write the numbers here (kind "playtest")')
     a = ap.parse_args(argv)
     res = collect(a.run_dirs, a.arm)
+    if a.against:
+        other = collect(a.against, a.against_arm)
+        pr = pair(res, other)
+        md = render_pair(res, other, pr, a.min_drawn if a.min_drawn is not None else max(5, min(res['result']['games'], other['result']['games']) // 10))
+        sys.stdout.write(md)
+        if a.md:
+            with open(a.md, 'w', encoding='utf-8') as f:
+                f.write(md)
+        if a.json:
+            with open(a.json, 'w', encoding='utf-8') as f:
+                json.dump({'kind': 'playtest-pair', 'paired': pr, 'this': res, 'against': other}, f, indent=1)
+        return 0
     gf = goldfish(a.goldfish) if a.goldfish else None
     if gf:
         res['goldfish'] = {k: gf.get(k) for k in ('games', 'wins', 'not_finished', 'kill_turn_mean', 'kill_turn_median', 'kill_turn_min', 'kill_turn_max', 'kill_turn_distribution')}

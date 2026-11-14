@@ -1,6 +1,6 @@
 {
- "vibefish": "0.3.2",
- "generated": "2026-11-14T15:43:31Z",
+ "vibefish": "0.3.3",
+ "generated": "2026-11-14T17:13:00Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -702,6 +702,64 @@
      3.092
     ],
     "seeds_paired": 32
+   }
+  },
+  {
+   "deck": "blood-rites",
+   "name": "Blood Rites",
+   "commanders": [
+    "Clavileño, First of the Blessed"
+   ],
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +12.5 points on its stock pilot (91 tables against 66, 95% +4 to +21, exact test 0.0046), clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack",
+   "playbook": "playbook/precons/blood-rites.json",
+   "summary": "Clavileño at once, anthems and engines in order, March of the Canonized with X; Olivia's Wrath once it has three Vampires (it spares them), Austere Command and Damn through Forge's own judgement when it is behind, Patron of the Vein on a target.",
+   "human": {
+    "win_rate": 0.1902,
+    "games": 184
+   },
+   "tables": {
+    "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/blood-rites-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 66,
+     "win_rate": 0.33,
+     "win_rate_ci95": [
+      0.2686,
+      0.3978
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 91,
+     "win_rate": 0.455,
+     "win_rate_ci95": [
+      0.3875,
+      0.5242
+     ]
+    },
+    "difference": 0.125,
+    "difference_ci95": [
+     0.0431,
+     0.2069
+    ],
+    "bot_only": 49,
+    "stock_only": 24,
+    "exact_p": 0.0046
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/blood-rites-answers-forgeattack-seeds-26101-26140.json",
+    "games": 40,
+    "stock_kill_turn": 12.075,
+    "bot_kill_turn": 11.675,
+    "faster_by": 0.4,
+    "faster_by_ci95": [
+     0.088,
+     0.712
+    ],
+    "seeds_paired": 40
    }
   }
  ]

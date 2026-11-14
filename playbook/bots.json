@@ -319,6 +319,19 @@
     "bot": "answers",
     "run": "ab-run #31 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
    }
+  },
+  {
+   "deck": "blood-rites",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +12.5 points on its stock pilot (91 tables against 66, 95% +4 to +21, exact test 0.0046), clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack",
+   "playbook": "playbook/precons/blood-rites.json",
+   "summary": "Clavileño at once, anthems and engines in order, March of the Canonized with X; Olivia's Wrath once it has three Vampires (it spares them), Austere Command and Damn through Forge's own judgement when it is behind, Patron of the Vein on a target.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/blood-rites-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/blood-rites-answers-forgeattack-seeds-26101-26140.json"
   }
  ]
 }
