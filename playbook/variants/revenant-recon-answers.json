@@ -42,28 +42,6 @@
     },
     {
      "play": [
-      "Toxic Deluge"
-     ],
-     "when": [
-      "opp_creatures >= 6",
-      "opp_power > power",
-      "creatures <= 3",
-      "life >= 12"
-     ]
-    },
-    {
-     "play": [
-      "Toxic Deluge"
-     ],
-     "when": [
-      "opp_creatures >= 6",
-      "opp_creatures > creatures",
-      "threat >= life",
-      "life >= 8"
-     ]
-    },
-    {
-     "play": [
       "Sol Ring",
       "Arcane Signet",
       "Dimir Signet",
@@ -272,6 +250,6 @@
     ]
    }
   ],
-  "notes": "Version 3 (2026-11-13), for goldfish; answers left to Forge. Audit (12 stock goldfish games, seeds 25002-25013): kill turn 12.75, 52% of the mana unspent, Mirko cast on own turn 6 to 7 in four games and never in one, Sinister Starfish tapped on 1 of its 15 turns, Port of Karfell, Lazav and Enhanced Surveillance never used, Mission Briefing flagged never-cast. RULES: 1 mana rocks first. 2 Mirko at once (the commander's end-step reanimation needs him out and growing). 3 the surveil engine: Whispering Snitch (drain per surveil turn), Sinister Starfish, Case of the Shifting Visage (upkeep surveil, copies creatures once solved), Dimir Spybug, Enhanced Surveillance. 4 Phyrexian Arena while the library is deep. 5 tap Sinister Starfish every turn (surveil grows Mirko, Spybug, Phantasm and fills the graveyard Mirko returns from). 6 Mission Briefing (AI:RemoveDeck:All). 7 Rise of the Dark Realms whenever affordable. 8 creatures dearest first (the draft's order). 9 Disinformation Campaign after the creatures: in version 2 it sat with the engine and looped on every surveil, 42 casts on 12 games and two games a turn slower. 10 cheap card draw with a library guard. 11 Doom Whisperer's surveil while life >= 20. 12 Tocasia's Dig Site after combat. 13 Port of Karfell after combat with eight lands (never fired in tuning). TRIGGERS: Mirko's end-step return always; Master of Death's return at life >= 10; Marvo's free cast; Copy Catchers' {1}{U} copy with four mana spare and a deep library (64 to 74 copies paid in 12 games: it is what makes the board wide). Tuning on the audit seeds: version 1 1.67 turns faster than stock (95% +1.06 to +2.27, 10 faster, 2 same); version 2 (Disinformation in the engine rule, Port of Karfell added) 0.17 slower than version 1."
+  "notes": "Version 4 = the mirko candidate (version 3) with answer rules and rules for the cards its engine rules starved, written from the 200 tables of ab-run #29 (seed 20261290, pool bots-v2 under their playbooks; candidate 55 wins, stock pilot 47). WHAT WAS WRONG. A play or activate rule with something to do goes before every card no rule names, so under version 3 the unnamed cards were starved (cast/drawn, stock -> candidate): Amphin Mutineer 43/50 -> 23/54, Eye of Duskmantle 25/34 -> 10/31, Charnel Serenade 34/51 -> 14/48, Watcher of Hours 24/43 -> 8/38, Vizier of Many Faces 28/40 -> 12/34, Overseer of the Damned 34/42 -> 21/44, Phyrexian Metamorph 40/50 -> 24/51, Ravenous Chupacabra 43/45 -> 31/48, Deep Analysis 39/51 -> 21/45, Foreboding Steamboat 24/43 -> 14/47, Necromancy 31/49 -> 21/53, Dream Eater 32/36 -> 30/41. Black Sun's Zenith and Toxic Deluge (AI:RemoveDeck:All) were never cast by either pilot and were in hand at 29 and 32 of the candidate's 144 losses. By the logs' creature counts (zone events), on the seat's last own turn of a loss the widest opponent had a median 11 creatures to our 4, at 14 life. RULE ORDER (base rules in brackets): 1-2 Black Sun's Zenith, x max, x_min 3, when the widest opponent has six or more creatures and more power than we have and we have three or fewer (true on one of the last three own turns in 91 of 144 losses, 11 of 55 wins), or six or more and more creatures than we have and its attack could kill us next turn; above everything, since it wants all the mana. 3 mana rocks [1]. 4 Massacre Wurm once an opponent has four creatures (one-sided), above Mirko so a turn with six mana goes to the Wurm. 5 Mirko [2]. 6 engine [3]. 7 Phyrexian Arena [4]. 8 Sinister Starfish [5]. 9 Overseer of the Damned, Ravenous Chupacabra, Shriekmaw when an opponent has a creature (Forge aims the enter triggers; Overseer's optional destroy is accepted by trigger rule 5 when an opponent has a creature). 10 Amphin Mutineer when an opponent has a creature and 6+ power (it gives the exiled creature's controller a 4/3, so not on small boards). 11 Mission Briefing [6]. 12 Rise of the Dark Realms [7]. 13 the threats: base rule 8's first nine creatures with Eye of Duskmantle after Sphinx and Watcher of Hours last (hard cast; neither was named). 14 Reanimate and Animate Dead (Forge's logic picks the target, so cast only when it agrees). 15 Necromancy and Charnel Serenade from own turn 6 (neither targets as cast, so a rule casts them as they are; by turn 6 graveyards hold creatures). 16 {forge: unnamed}: Forge chooses among the rest (Phyrexian Metamorph, Vizier of Many Faces, Connive // Concoct, Foreboding Steamboat, Dream Eater, Price of Fame, Pile On, Ephara's Dispersal, Everflowing Chalice, Rogue's Passage, encore) before the cheap creatures and draw spells: clones and the split card need Forge's choice of what to copy or which half anyway. 17 base rule 8's cheap creatures (Unshakable Tail to Thoughtbound Phantasm), split off from the threats so they no longer starve the rest. 18 Disinformation Campaign [9]. 19 cheap draw [10] with Deep Analysis added (it targets a player: Forge's agreement). 20-22 [11-13]. TRIED AND DROPPED: Toxic Deluge on the same conditions as the Zenith. Its X is paid in life (PayLife<X>), which a rule cannot set: in the local tables it was cast once with X = 0, no life paid, nothing died. Left to Forge, which never casts it. NOT WRITTEN: Counterpoint, Dream Eater's flash, Final-Word Phantom's flash window (instant speed); which creature Mirko and the reanimation spells return; Foreboding Steamboat's choice of our exiled creatures. LOCAL CHECK: see the agent's report (docs/agents/reports/2026-11-14/revenant-recon-answers.md if saved)."
  }
 }
