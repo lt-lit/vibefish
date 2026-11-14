@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.3",
- "generated": "2026-11-14T17:51:21Z",
+ "generated": "2026-11-14T18:31:39Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -818,6 +818,122 @@
      0.705
     ],
     "seeds_paired": 39
+   }
+  },
+  {
+   "deck": "deadly-disguise",
+   "name": "Deadly Disguise",
+   "commanders": [
+    "Kaust, Eyes of the Glade"
+   ],
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +4.5 points on its stock pilot (29 tables against 20, 95% -2 to +11, exact test 0.21), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 22 with the go-wide attack",
+   "playbook": "playbook/precons/deadly-disguise.json",
+   "summary": "Kaust by turn 3, the engines and Panoptic Projektor used, and every morph and disguise card left to Forge, which casts them face down; Austere Command when it is behind a wide board.",
+   "human": {
+    "win_rate": 0.1554,
+    "games": 111
+   },
+   "tables": {
+    "run": "ab-run #37 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (22 wins)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/deadly-disguise-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 20,
+     "win_rate": 0.1,
+     "win_rate_ci95": [
+      0.0657,
+      0.1494
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 29,
+     "win_rate": 0.145,
+     "win_rate_ci95": [
+      0.1029,
+      0.2005
+     ]
+    },
+    "difference": 0.045,
+    "difference_ci95": [
+     -0.0174,
+     0.1074
+    ],
+    "bot_only": 25,
+    "stock_only": 16,
+    "exact_p": 0.211
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/deadly-disguise-answers-forgeattack-seeds-30101-30140.json",
+    "games": 40,
+    "stock_kill_turn": 11.947,
+    "bot_kill_turn": 11.684,
+    "faster_by": 0.263,
+    "faster_by_ci95": [
+     -0.073,
+     0.599
+    ],
+    "seeds_paired": 38
+   }
+  },
+  {
+   "deck": "miracle-worker",
+   "name": "Miracle Worker",
+   "commanders": [
+    "Aminatou, Veil Piercer"
+   ],
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +0.0 points on its stock pilot (48 tables against 48, 95% -8 to +8, exact test 1.0), level. The attack is the better of two on these tables: the same rules won 43 with the go-wide attack. Forty of the 200 tables of this arm (every fifth table, the first shard of five) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 160 tables Actions played, the arm won 39 against the stock pilot's 42",
+   "playbook": "playbook/precons/miracle-worker.json",
+   "summary": "Aminatou and the enchantment engine in order, the bodies Forge's AI never casts; Time Wipe or Terminus from hand against a lethal threat or a heavy board, Aminatou's Augury ahead of a recast of the commander, Timely Ward on Aminatou.",
+   "human": {
+    "win_rate": 0.2576,
+    "games": 148
+   },
+   "tables": {
+    "run": "ab-run #39 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (43 wins); forty of the arm's 200 tables were played on the session's machine from the run's commit (the Actions job that had them was lost with its runner)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/miracle-worker-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 48,
+     "win_rate": 0.24,
+     "win_rate_ci95": [
+      0.1861,
+      0.3037
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 48,
+     "win_rate": 0.24,
+     "win_rate_ci95": [
+      0.1861,
+      0.3037
+     ]
+    },
+    "difference": 0.0,
+    "difference_ci95": [
+     -0.0772,
+     0.0772
+    ],
+    "bot_only": 31,
+    "stock_only": 31,
+    "exact_p": 1.0
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/miracle-worker-answers-forgeattack-seeds-28101-28140.json",
+    "games": 40,
+    "stock_kill_turn": 13.973,
+    "bot_kill_turn": 13.0,
+    "faster_by": 0.944,
+    "faster_by_ci95": [
+     0.34,
+     1.549
+    ],
+    "seeds_paired": 36
    }
   }
  ]

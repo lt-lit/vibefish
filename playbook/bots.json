@@ -345,6 +345,32 @@
     "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (59 wins)"
    },
    "goldfish": "demo-data/goldfish/2026-11-14/revenant-recon-answers-forgeattack-seeds-25101-25140.json"
+  },
+  {
+   "deck": "deadly-disguise",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +4.5 points on its stock pilot (29 tables against 20, 95% -2 to +11, exact test 0.21), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 22 with the go-wide attack",
+   "playbook": "playbook/precons/deadly-disguise.json",
+   "summary": "Kaust by turn 3, the engines and Panoptic Projektor used, and every morph and disguise card left to Forge, which casts them face down; Austere Command when it is behind a wide board.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/deadly-disguise-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #37 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (22 wins)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/deadly-disguise-answers-forgeattack-seeds-30101-30140.json"
+  },
+  {
+   "deck": "miracle-worker",
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +0.0 points on its stock pilot (48 tables against 48, 95% -8 to +8, exact test 1.0), level. The attack is the better of two on these tables: the same rules won 43 with the go-wide attack. Forty of the 200 tables of this arm (every fifth table, the first shard of five) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 160 tables Actions played, the arm won 39 against the stock pilot's 42",
+   "playbook": "playbook/precons/miracle-worker.json",
+   "summary": "Aminatou and the enchantment engine in order, the bodies Forge's AI never casts; Time Wipe or Terminus from hand against a lethal threat or a heavy board, Aminatou's Augury ahead of a recast of the commander, Timely Ward on Aminatou.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/miracle-worker-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #39 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (43 wins); forty of the arm's 200 tables were played on the session's machine from the run's commit (the Actions job that had them was lost with its runner)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/miracle-worker-answers-forgeattack-seeds-28101-28140.json"
   }
  ]
 }
