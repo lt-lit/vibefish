@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T05:17Z",
-  "note": "The second pass of the owner's table, first part (DESIGN §30): Blight Curse, Mutant Menace, Squirreled Away, Ahoy Mateys and Death Toll, each engine-only candidate extended by an agent with answer rules and with rules for the cards its engine crowded out (playbook/variants/<deck>-answers.json, checked against its base and its local runs). Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, on tables of its own (seed 20261310, not the tables the rules were written from): the deck's seat under stock AI and under the second-pass candidate with the go-wide attack of its base, and the same rules with the attack left to Forge as a playbook-only arm (the -answers-forgeattack siblings). docs/agents/exam_summary.py joins stock, gowide and forgeattack. Harness 0.3.2; Death Toll's candidate has a forge rule.",
+  "requested": "2026-11-14T05:45Z",
+  "note": "The second pass of the owner's table, second part (DESIGN §30; ab-run #36 has five decks): Veloci-Ramp-Tor and Deadly Disguise, each engine-only candidate reworked by an agent with answer rules, with rules for the cards its engine crowded out and with a forge rule (playbook/variants/<deck>-answers.json, checked against its base and its local runs; Deadly Disguise's is a repair: the rule that cast its morph and disguise cards face up is gone). Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, on tables of its own (seed 20261310): the seat under stock AI and under the second-pass candidate with the go-wide attack of its base, and the same rules with the attack left to Forge as a playbook-only arm (the -answers-forgeattack siblings). Revenant Recon, Blood Rites and Miracle Worker follow.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,12 +11,12 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "blight-curse@answers,mutant-menace@answers,squirreled-away@answers,ahoy-mateys@answers,death-toll@answers",
+      "decks": "veloci-ramp-tor@answers,deadly-disguise@answers",
       "arms": "stock,playbook",
       "seed": "20261310"
     },
     {
-      "decks": "blight-curse@answers-forgeattack,mutant-menace@answers-forgeattack,squirreled-away@answers-forgeattack,ahoy-mateys@answers-forgeattack,death-toll@answers-forgeattack",
+      "decks": "veloci-ramp-tor@answers-forgeattack,deadly-disguise@answers-forgeattack",
       "arms": "playbook",
       "seed": "20261310",
       "shards_per_deck": "5"

@@ -1,0 +1,157 @@
+{
+ "schema": 1,
+ "deck": "veloci-ramp-tor",
+ "variant": "answers-forgeattack",
+ "of": "playbook/variants/veloci-ramp-tor-answers.json",
+ "about": "The answers candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Mosswort Bridge"
+     ],
+     "ability": "play the exiled card",
+     "until": [
+      "power >= 10",
+      "lands >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Ixalli's Lorekeeper",
+      "Drover of the Mighty",
+      "Rampant Growth",
+      "Farseek",
+      "Thunderherd Migration",
+      "Cultivate",
+      "Migration Path",
+      "Progenitor's Icon"
+     ]
+    },
+    {
+     "play": [
+      "Pantlaza, Sun-Favored"
+     ]
+    },
+    {
+     "play": [
+      "Topiary Stomper",
+      "Wayward Swordtooth",
+      "Atzocan Seer"
+     ],
+     "when": [
+      "lands <= 5",
+      "not controls Pantlaza, Sun-Favored"
+     ]
+    },
+    {
+     "play": [
+      "Otepec Huntmaster",
+      "Lifecrafter's Bestiary",
+      "Rhythm of the Wild",
+      "Descendants' Path",
+      "Wayta, Trainer Prodigy"
+     ]
+    },
+    {
+     "play": [
+      "Wakening Sun's Avatar"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Chandra's Ignition"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Raging Swordtooth"
+     ],
+     "when": [
+      "opp_creatures >= 5"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Rishkar's Expertise"
+     ],
+     "when": [
+      "power >= 4",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Return of the Wildspeaker"
+     ],
+     "when": [
+      "power >= 8",
+      "hand <= 5"
+     ]
+    },
+    {
+     "play": [
+      "Zacama, Primal Calamity",
+      "Zetalpa, Primal Dawn",
+      "Wakening Sun's Avatar",
+      "Apex Altisaur",
+      "Rampaging Brontodon",
+      "Thundering Spineback",
+      "Verdant Sun's Avatar",
+      "Etali, Primal Storm",
+      "Earthshaker Dreadmaw",
+      "Bellowing Aegisaur",
+      "Regal Behemoth",
+      "From the Rubble",
+      "Xenagos, God of Revels",
+      "Raging Swordtooth",
+      "Regisaur Alpha",
+      "Scion of Calamity",
+      "Quartzwood Crasher",
+      "Wrathful Raptors",
+      "Temple Altisaur",
+      "Curious Altisaur",
+      "Majestic Heliopterus",
+      "Raging Regisaur",
+      "Ripjaw Raptor",
+      "Shifting Ceratops",
+      "Bronzebeak Foragers",
+      "Kinjalli's Sunwing",
+      "Ranging Raptors",
+      "Runic Armasaur",
+      "Sunfrill Imitator",
+      "Thrashing Brontodon",
+      "Topiary Stomper",
+      "Wayward Swordtooth",
+      "Wayta, Trainer Prodigy",
+      "Atzocan Seer",
+      "Deathgorge Scavenger",
+      "Itzquinth, Firstborn of Gishath",
+      "Dinosaur Egg"
+     ]
+    },
+    {
+     "activate": [
+      "Thundering Spineback"
+     ],
+     "phase": "main2"
+    }
+   ]
+  },
+  "notes": "Version 2 of stampede: answer rules, and the cards the engine rules starved given back their place. Written from the 200 tables of bots of ab-run #28 (seed 20261280: stampede 80 wins, stock pilot 85), where the playbook cast Wakening Sun's Avatar in 9 of 51 games drawn (stock 35 of 46), Chandra's Ignition 11 of 47 (38 of 59), Fiery Confluence 12 of 77 (31 of 61), Savage Stomp 20 of 45 (38 of 48), Raging Swordtooth 22 of 58 (42 of 47), and lost holding Confluence 35 times, the Avatar 20, Swordtooth 19, Ignition 18; most of its losses came from token swarms (the top killing sources are Soldier, Goblin, Insect and Bird tokens; the largest single opponent had 7 to 8 creatures on the turns these cards sat in hand). Base rules 1 to 3 (Mosswort hold, ramp, Pantlaza) unchanged. Rule 4 (new): Topiary Stomper, Wayward Swordtooth and Atzocan Seer are ramp, played as ramp while we have 5 lands or fewer and no Pantlaza out; afterwards they stay in the creature list, dearest first, so the one discover a turn is not spent on them. Rule 5: the base engines plus Wayta, Trainer Prodigy (a 3-mana haste 1/5 that doubles the deck's enrage triggers; cast 38 of 44 by stock, 16 of 39 by stampede at the tail of the creature list). Answers, above the draw spell and the creatures: rule 6 Wakening Sun's Avatar when one opponent has 3 or more creatures (it spares our Dinosaurs; locally it took 22 and 13 opposing creatures for one of ours); rule 7 Chandra's Ignition when one opponent has 3 or more creatures, Forge choosing our creature and judging the cast (locally one cast took 23 opposing creatures for 2 of ours); rule 8 Raging Swordtooth when one opponent has 5 or more creatures (a token sweep on a 5/5 body). Rule 9 {forge: unnamed}: Forge's own choice among the cards no rule names, before Rishkar's Expertise and the creatures. That is where Fiery Confluence and Savage Stomp are cast now, with Path to Exile, Generous Gift, Zacama's abilities and the fetch lands: Forge chooses Confluence's modes and Stomp's fight targets and judges whether the cast is worth it. Both had rules in the first local run and both were dropped: a rule casts Confluence without asking Forge, and 3 of 6 such casts killed nothing (opponents' creatures too big for 1-damage modes), and every rule cast of Savage Stomp failed to happen (4 tries in one game, the card stayed in hand; Forge's own route casts it, 79% under stock). A finisher rule for Confluence (opp_life <= 6) went with them, since any rule naming the card keeps it out of the forge rule. Rule 10 Rishkar's Expertise unchanged. Rule 11 (new) Return of the Wildspeaker with 8 or more power and 5 or fewer cards in hand (Forge picks the mode; stock cast it 46 of 60, stampede 31 of 59 because the rules tap out before Forge sees it). Rule 12 the base creature list with Wakening Sun's Avatar (after Zetalpa), Raging Swordtooth (after Xenagos) and Itzquinth (before Dinosaur Egg) added: all three are Dinosaurs stock casts in 76 to 100% of games, left unnamed by stampede and starved. Rule 13 Thundering Spineback unchanged. Attack block unchanged. Left as they were: Marauding Raptor stays out (AI:RemoveDeck:All, burns our own creatures). Deathgorge Scavenger, Xenagos, Curious Altisaur, Shifting Ceratops, Quartzwood Crasher and Earthshaker Dreadmaw were already in the creature list: they are cast less because the mana goes to the dearer cards and to the ramp and draw the playbook plays more, which is the base's design, not a missing rule. What the format cannot say: an opponent's creature as a target (Savage Stomp, Wayta's fight, Itzquinth's trigger, Path, Gift are Forge's to aim), the toughness of the opponents' creatures (a 1-damage sweep is worth casting only against X/1s), the lowest opponent's life, responses on other turns (Akroma's Will, Return of the Wildspeaker at end of turn).",
+  "on": "2026-11-14"
+ }
+}
