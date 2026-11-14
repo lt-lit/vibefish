@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T02:31Z",
-  "note": "Answer rules for the pool decks that had none, first part (DESIGN §30; one agent a deck from the 600 games of league-run #3, each candidate checked against the shipped playbook and its local runs): Eldrazi Incursion, Quick Draw and Enduring Enchantments. Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, once under its shipped playbook and once under the candidate with the answer rules, playbook arms only, on the same tables (seed 20261300; ab.py join shipped=<deck>:playbook answers=<deck>@answers:playbook). No stock arm: the question is what the answer rules add to the shipped bot. The other six candidates follow on the same seed as their agents finish.",
+  "requested": "2026-11-14T02:55Z",
+  "note": "Answer rules for the pool decks that had none, second part (DESIGN §30; ab-run #31 has Eldrazi Incursion, Quick Draw and Enduring Enchantments): Planeswalker Party, Wretched Ranks and Elven Council. Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, once under its shipped playbook and once under the candidate with the answer rules, playbook arms only, on the same tables (seed 20261300; docs/agents/exam_summary.py joins them). Deep Clue Sea, Limit Break and Token Triumph follow as their agents finish.",
   "games": "200",
   "shards_per_deck": "5",
   "jobs_per_shard": "2",
@@ -11,12 +11,12 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "eldrazi-incursion,quick-draw,enduring-enchantments",
+      "decks": "planeswalker-party,wretched-ranks,elven-council",
       "arms": "playbook",
       "seed": "20261300"
     },
     {
-      "decks": "eldrazi-incursion@answers,quick-draw@answers,enduring-enchantments@answers",
+      "decks": "planeswalker-party@answers,wretched-ranks@answers,elven-council@answers",
       "arms": "playbook",
       "seed": "20261300"
     }
