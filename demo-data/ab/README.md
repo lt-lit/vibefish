@@ -173,3 +173,25 @@ against 57 (+4.0, 0.17); Wretched Ranks 38 against 27 (+5.5, 95% +0 to +11, 0.06
 tables against 119, exact test 0.0063), and the cards the new rules name cast in 77% of the games they were drawn against 34%
 (`demo-data/playtest/2026-11-14/pool-answers/`). All nine shipped on 2026-11-14 as the next version of each deck; none has met its
 stock pilot yet.
+
+`2026-11-14-ab-v18/`: the second pass of the owner's ten precons (DESIGN.md §30; `ab-run` #36 to #39, seed 20261310, opponents drawn
+from the twelve bots of `bots-v2` under their playbooks of 2026-11-13). `<deck>-answers.json` has the stock pilot and the second-pass
+candidate with its go-wide attack, `<deck>-answers-forgeattack.json` the same rules with the attack left to Forge on the same tables
+(playbook arm only), `<deck>-join.json` the three side by side (kind `ab-join`; arms `stock`, `gowide`, `forgeattack`). Wins of 200
+as stock / go-wide / Forge's attack, and the arm that shipped against the stock pilot: Blight Curse 45 / 66 / 69 (Forge's attack
++12.0 points, 95% +4 to +20, exact test 0.0088); Veloci-Ramp-Tor 79 / 86 / 87 (+4.0, -5 to +13, 0.44); Mutant Menace 51 / 55 / 68
+(+8.5, +1 to +16, 0.0498); Squirreled Away 49 / 54 / 56 (+3.5, -4 to +11, 0.44); Revenant Recon 60 / 59 / 70 (+5.0, -4 to +14,
+0.31); Blood Rites 66 / 86 / 91 (+12.5, +4 to +21, 0.0046); Death Toll 43 / 63 / 65 (+11.0, +3 to +19, 0.0115); Miracle Worker
+48 / 43 / 48 (level); Ahoy Mateys 37 / 72 / 64 (go-wide +17.5, +9 to +26, 0.0001); Deadly Disguise 20 / 22 / 29 (+4.5, -2 to +11,
+0.21). Over the 2,000 tables 498 / 606 / 647, and 655 for the arm that shipped. All ten shipped on 2026-11-14 with the better of
+their two attacks on these tables (Forge's for nine, go-wide for Ahoy Mateys), by a rule fixed before the runs were read: ahead of
+the stock pilot, or behind by no more than two tables.
+
+Two shard jobs of these runs were lost with their runners and their tables were played on the session's machine from the run's own
+commit: one shard of five of Miracle Worker's Forge's-attack arm (every fifth table, 40 tables) and one shard of ten of
+Veloci-Ramp-Tor's stock and go-wide arms (every tenth table, 20 tables in each). For those two decks the three files here were rolled
+up from the Actions shards and the replayed shard together; `miracle-worker-answers-forgeattack-actions.json` (160 tables: 39 wins,
+where the stock pilot won 42 of the same tables) and `veloci-ramp-tor-answers-actions.json` (180 tables: stock 69, go-wide 81) are
+the runs' own rollups of the cut arms. Every other file is the run's own rollup (Blood Rites and Revenant Recon: rolled up from
+`ab-run` #38's shard artifacts before its rollup job had run). The card check of each deck's three arms is in
+`demo-data/playtest/2026-11-14/second-pass/`, the goldfish pairs of the shipped files in `demo-data/goldfish/2026-11-14/`.
