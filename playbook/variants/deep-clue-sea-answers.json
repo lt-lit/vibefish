@@ -82,8 +82,7 @@
           ],
           "when": [
             "threat >= life",
-            "opp_power > power",
-            "not controls Mechanized Production"
+            "opp_power > power"
           ]
         },
         {
