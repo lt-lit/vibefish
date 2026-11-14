@@ -138,3 +138,14 @@ Storm 56 against 47 (+4.5, 30 discordant pairs against 21, exact test 0.26); Hai
 Tricky Terrain 58 against 40 (+9.0, 39 against 21, 0.027); Token Triumph 54 against 65 (-5.5, 17 against 28, 0.14); Quick Draw 43
 against 50 (-3.5, 20 against 27, 0.38). DESIGN.md §28 reads them. The league of the same twelve (`league-run` #3, seed 20261250) is
 `demo-data/runs/2026-11-12-bots-v2-snapshot-2026-11-10-s20261250-bots/`.
+
+`2026-11-14-ab-v17/`: the owner's table (DESIGN.md §30), collected run by run as Actions finishes them; this paragraph grows with them.
+The first exam of the ten engine-only candidates, each at 200 tables whose three opponents are drawn from the twelve bots of `bots-v2`
+under their shipped playbooks of 2026-11-13: `<deck>-<name>.json` has the stock pilot and the candidate with its go-wide attack,
+`<deck>-<name>-forgeattack.json` the same rules with the attack left to Forge on the same tables (playbook arm only), and
+`<deck>-join.json` the three side by side (kind `ab-join`; arms `stock`, `gowide`, `forgeattack`). Collected so far (`ab-run` #29 and
+#30, seed 20261290), wins of 200 as stock / go-wide / Forge's attack: Blood Rites `demons` 66 / 78 / 83 (go-wide +6.0 points, exact
+test 0.22; Forge's attack +8.5, 95% -1 to +18, 0.089; between the two attacks 0.61); Revenant Recon `mirko` 47 / 55 / 53 (+4.0, 0.37;
++3.0, 0.52); Miracle Worker `veil` 64 / 55 / 59 (-4.5, 0.29; -2.5, 0.63). None of these candidates is shipped: every one of them casts
+its removal and its large threats far less than its stock pilot on the same tables (§30), and each deck ships from the exam of its
+second pass (`<deck>-answers.json`, `ab-run` #36 to #39).
