@@ -181,17 +181,6 @@
   "of_them_affordable": 4.63
  },
  "cards": {
-  "The Wanderer": {
-   "drawn": 63,
-   "played": 45,
-   "played_share": 0.714,
-   "median_turn": 8,
-   "win_rate_drawn": 0.254,
-   "win_rate_not_drawn": 0.204,
-   "held_at_loss": 17,
-   "mv": 4,
-   "type": "Legendary Planeswalker"
-  },
   "Jace Beleren": {
    "drawn": 60,
    "played": 49,
@@ -202,17 +191,6 @@
    "held_at_loss": 9,
    "mv": 3,
    "type": "Legendary Planeswalker - Jace"
-  },
-  "Flux Channeler": {
-   "drawn": 56,
-   "played": 43,
-   "played_share": 0.768,
-   "median_turn": 8,
-   "win_rate_drawn": 0.286,
-   "win_rate_not_drawn": 0.194,
-   "held_at_loss": 14,
-   "mv": 3,
-   "type": "Creature - Human Wizard"
   },
   "Vronos, Masked Inquisitor": {
    "drawn": 62,
@@ -236,6 +214,17 @@
    "mv": 3,
    "type": "Legendary Planeswalker - Jace"
   },
+  "The Wanderer": {
+   "drawn": 63,
+   "played": 45,
+   "played_share": 0.714,
+   "median_turn": 8,
+   "win_rate_drawn": 0.254,
+   "win_rate_not_drawn": 0.204,
+   "held_at_loss": 17,
+   "mv": 4,
+   "type": "Legendary Planeswalker"
+  },
   "Teyo, Geometric Tactician": {
    "drawn": 54,
    "played": 42,
@@ -246,6 +235,39 @@
    "held_at_loss": 11,
    "mv": 3,
    "type": "Legendary Planeswalker - Teyo"
+  },
+  "Flux Channeler": {
+   "drawn": 56,
+   "played": 43,
+   "played_share": 0.768,
+   "median_turn": 8,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.194,
+   "held_at_loss": 14,
+   "mv": 3,
+   "type": "Creature - Human Wizard"
+  },
+  "Silent Arbiter": {
+   "drawn": 49,
+   "played": 17,
+   "played_share": 0.347,
+   "median_turn": 10,
+   "win_rate_drawn": 0.306,
+   "win_rate_not_drawn": 0.192,
+   "held_at_loss": 17,
+   "mv": 4,
+   "type": "Artifact Creature - Construct"
+  },
+  "Talisman of Conviction": {
+   "drawn": 53,
+   "played": 52,
+   "played_share": 0.981,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.321,
+   "win_rate_not_drawn": 0.184,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Artifact"
   },
   "Sarkhan the Masterless": {
    "drawn": 58,
@@ -269,27 +291,16 @@
    "mv": 3,
    "type": "Legendary Enchantment"
   },
-  "Talisman of Conviction": {
-   "drawn": 53,
-   "played": 52,
-   "played_share": 0.981,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.321,
-   "win_rate_not_drawn": 0.184,
-   "held_at_loss": 2,
+  "Onakke Oathkeeper": {
+   "drawn": 61,
+   "played": 44,
+   "played_share": 0.721,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.328,
+   "win_rate_not_drawn": 0.173,
+   "held_at_loss": 15,
    "mv": 2,
-   "type": "Artifact"
-  },
-  "Silent Arbiter": {
-   "drawn": 49,
-   "played": 17,
-   "played_share": 0.347,
-   "median_turn": 10,
-   "win_rate_drawn": 0.306,
-   "win_rate_not_drawn": 0.192,
-   "held_at_loss": 17,
-   "mv": 4,
-   "type": "Artifact Creature - Construct"
+   "type": "Creature - Ogre Spirit"
   },
   "Chandra, Torch of Defiance": {
    "drawn": 62,
@@ -301,17 +312,6 @@
    "held_at_loss": 8,
    "mv": 4,
    "type": "Legendary Planeswalker - Chandra"
-  },
-  "Onakke Oathkeeper": {
-   "drawn": 61,
-   "played": 44,
-   "played_share": 0.721,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.328,
-   "win_rate_not_drawn": 0.173,
-   "held_at_loss": 15,
-   "mv": 2,
-   "type": "Creature - Ogre Spirit"
   },
   "Gatewatch Beacon": {
    "drawn": 52,
@@ -335,6 +335,39 @@
    "mv": 3,
    "type": "Instant"
   },
+  "Cartographer's Hawk": {
+   "drawn": 67,
+   "played": 61,
+   "played_share": 0.91,
+   "median_turn": 8,
+   "win_rate_drawn": 0.299,
+   "win_rate_not_drawn": 0.18,
+   "held_at_loss": 13,
+   "mv": 2,
+   "type": "Creature - Bird"
+  },
+  "Sol Ring": {
+   "drawn": 60,
+   "played": 59,
+   "played_share": 0.983,
+   "median_turn": 3,
+   "win_rate_drawn": 0.4,
+   "win_rate_not_drawn": 0.143,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Izzet Signet": {
+   "drawn": 49,
+   "played": 47,
+   "played_share": 0.959,
+   "median_turn": 6,
+   "win_rate_drawn": 0.347,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Artifact"
+  },
   "Promise of Loyalty": {
    "drawn": 61,
    "played": 22,
@@ -345,6 +378,160 @@
    "held_at_loss": 19,
    "mv": 5,
    "type": "Sorcery"
+  },
+  "Narset, Parter of Veils": {
+   "drawn": 66,
+   "played": 56,
+   "played_share": 0.848,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Legendary Planeswalker - Narset"
+  },
+  "Elspeth, Sun's Champion": {
+   "drawn": 67,
+   "played": 54,
+   "played_share": 0.806,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.313,
+   "win_rate_not_drawn": 0.173,
+   "held_at_loss": 14,
+   "mv": 6,
+   "type": "Legendary Planeswalker - Elspeth"
+  },
+  "Fellwar Stone": {
+   "drawn": 52,
+   "played": 50,
+   "played_share": 0.962,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.288,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Talisman of Creativity": {
+   "drawn": 49,
+   "played": 48,
+   "played_share": 0.98,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.199,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Gideon Jura": {
+   "drawn": 56,
+   "played": 47,
+   "played_share": 0.839,
+   "median_turn": 9,
+   "win_rate_drawn": 0.429,
+   "win_rate_not_drawn": 0.139,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Legendary Planeswalker - Gideon"
+  },
+  "Sparkshaper Visionary": {
+   "drawn": 63,
+   "played": 45,
+   "played_share": 0.714,
+   "median_turn": 10,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 11,
+   "mv": 3,
+   "type": "Creature - Human Wizard"
+  },
+  "Repeated Reverberation": {
+   "drawn": 58,
+   "played": 22,
+   "played_share": 0.379,
+   "median_turn": 13.0,
+   "win_rate_drawn": 0.345,
+   "win_rate_not_drawn": 0.169,
+   "held_at_loss": 30,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Norn's Annex": {
+   "drawn": 56,
+   "played": 21,
+   "played_share": 0.375,
+   "median_turn": 10,
+   "win_rate_drawn": 0.357,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 18,
+   "mv": 5,
+   "type": "Artifact"
+  },
+  "Swords to Plowshares": {
+   "drawn": 61,
+   "played": 59,
+   "played_share": 0.967,
+   "median_turn": 5,
+   "win_rate_drawn": 0.295,
+   "win_rate_not_drawn": 0.187,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Oreskos Explorer": {
+   "drawn": 55,
+   "played": 47,
+   "played_share": 0.855,
+   "median_turn": 10,
+   "win_rate_drawn": 0.345,
+   "win_rate_not_drawn": 0.172,
+   "held_at_loss": 12,
+   "mv": 2,
+   "type": "Creature - Cat Scout"
+  },
+  "Chandra, Legacy of Fire": {
+   "drawn": 55,
+   "played": 45,
+   "played_share": 0.818,
+   "median_turn": 7,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 8,
+   "mv": 5,
+   "type": "Legendary Planeswalker - Chandra"
+  },
+  "Blasphemous Act": {
+   "drawn": 54,
+   "played": 32,
+   "played_share": 0.593,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.407,
+   "win_rate_not_drawn": 0.151,
+   "held_at_loss": 9,
+   "mv": 9,
+   "type": "Sorcery"
+  },
+  "Leori, Sparktouched Hunter": {
+   "drawn": 43,
+   "played": 37,
+   "played_share": 0.86,
+   "median_turn": 8,
+   "win_rate_drawn": 0.419,
+   "win_rate_not_drawn": 0.166,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Legendary Creature - Elemental Cat"
+  },
+  "Jaya's Phoenix": {
+   "drawn": 43,
+   "played": 37,
+   "played_share": 0.86,
+   "median_turn": 8,
+   "win_rate_drawn": 0.465,
+   "win_rate_not_drawn": 0.153,
+   "held_at_loss": 6,
+   "mv": 5,
+   "type": "Creature - Phoenix"
   },
   "Deploy the Gatewatch": {
    "drawn": 79,
@@ -368,38 +555,16 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Narset, Parter of Veils": {
-   "drawn": 66,
-   "played": 56,
-   "played_share": 0.848,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.333,
-   "win_rate_not_drawn": 0.164,
-   "held_at_loss": 9,
-   "mv": 3,
-   "type": "Legendary Planeswalker - Narset"
-  },
-  "Urza's Ruinous Blast": {
-   "drawn": 62,
-   "played": 11,
-   "played_share": 0.177,
-   "median_turn": 13,
-   "win_rate_drawn": 0.242,
-   "win_rate_not_drawn": 0.21,
-   "held_at_loss": 36,
-   "mv": 5,
-   "type": "Legendary Sorcery"
-  },
-  "Fellwar Stone": {
-   "drawn": 52,
-   "played": 50,
-   "played_share": 0.962,
-   "median_turn": 5.0,
-   "win_rate_drawn": 0.288,
-   "win_rate_not_drawn": 0.196,
-   "held_at_loss": 1,
-   "mv": 2,
-   "type": "Artifact"
+  "The Chain Veil": {
+   "drawn": 48,
+   "played": 23,
+   "played_share": 0.479,
+   "median_turn": 12,
+   "win_rate_drawn": 0.375,
+   "win_rate_not_drawn": 0.171,
+   "held_at_loss": 21,
+   "mv": 4,
+   "type": "Legendary Artifact"
   },
   "Honor-Worn Shaku": {
    "drawn": 58,
@@ -423,225 +588,16 @@
    "mv": 4,
    "type": "Instant"
   },
-  "Leori, Sparktouched Hunter": {
-   "drawn": 43,
-   "played": 37,
-   "played_share": 0.86,
-   "median_turn": 8,
-   "win_rate_drawn": 0.419,
-   "win_rate_not_drawn": 0.166,
-   "held_at_loss": 10,
-   "mv": 3,
-   "type": "Legendary Creature - Elemental Cat"
-  },
-  "The Chain Veil": {
-   "drawn": 48,
-   "played": 23,
-   "played_share": 0.479,
-   "median_turn": 12,
-   "win_rate_drawn": 0.375,
-   "win_rate_not_drawn": 0.171,
-   "held_at_loss": 21,
-   "mv": 4,
-   "type": "Legendary Artifact"
-  },
-  "Jaya's Phoenix": {
-   "drawn": 43,
-   "played": 37,
-   "played_share": 0.86,
-   "median_turn": 8,
-   "win_rate_drawn": 0.465,
-   "win_rate_not_drawn": 0.153,
-   "held_at_loss": 6,
+  "Urza's Ruinous Blast": {
+   "drawn": 62,
+   "played": 11,
+   "played_share": 0.177,
+   "median_turn": 13,
+   "win_rate_drawn": 0.242,
+   "win_rate_not_drawn": 0.21,
+   "held_at_loss": 36,
    "mv": 5,
-   "type": "Creature - Phoenix"
-  },
-  "Norn's Annex": {
-   "drawn": 56,
-   "played": 21,
-   "played_share": 0.375,
-   "median_turn": 10,
-   "win_rate_drawn": 0.357,
-   "win_rate_not_drawn": 0.167,
-   "held_at_loss": 18,
-   "mv": 5,
-   "type": "Artifact"
-  },
-  "Gideon Jura": {
-   "drawn": 56,
-   "played": 47,
-   "played_share": 0.839,
-   "median_turn": 9,
-   "win_rate_drawn": 0.429,
-   "win_rate_not_drawn": 0.139,
-   "held_at_loss": 9,
-   "mv": 5,
-   "type": "Legendary Planeswalker - Gideon"
-  },
-  "Cartographer's Hawk": {
-   "drawn": 67,
-   "played": 61,
-   "played_share": 0.91,
-   "median_turn": 8,
-   "win_rate_drawn": 0.299,
-   "win_rate_not_drawn": 0.18,
-   "held_at_loss": 13,
-   "mv": 2,
-   "type": "Creature - Bird"
-  },
-  "Swords to Plowshares": {
-   "drawn": 61,
-   "played": 59,
-   "played_share": 0.967,
-   "median_turn": 5,
-   "win_rate_drawn": 0.295,
-   "win_rate_not_drawn": 0.187,
-   "held_at_loss": 1,
-   "mv": 1,
-   "type": "Instant"
-  },
-  "Chandra, Legacy of Fire": {
-   "drawn": 55,
-   "played": 45,
-   "played_share": 0.818,
-   "median_turn": 7,
-   "win_rate_drawn": 0.327,
-   "win_rate_not_drawn": 0.179,
-   "held_at_loss": 8,
-   "mv": 5,
-   "type": "Legendary Planeswalker - Chandra"
-  },
-  "Izzet Signet": {
-   "drawn": 49,
-   "played": 47,
-   "played_share": 0.959,
-   "median_turn": 6,
-   "win_rate_drawn": 0.347,
-   "win_rate_not_drawn": 0.179,
-   "held_at_loss": 2,
-   "mv": 2,
-   "type": "Artifact"
-  },
-  "Repeated Reverberation": {
-   "drawn": 58,
-   "played": 22,
-   "played_share": 0.379,
-   "median_turn": 13.0,
-   "win_rate_drawn": 0.345,
-   "win_rate_not_drawn": 0.169,
-   "held_at_loss": 30,
-   "mv": 4,
-   "type": "Instant"
-  },
-  "Elspeth, Sun's Champion": {
-   "drawn": 67,
-   "played": 54,
-   "played_share": 0.806,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.313,
-   "win_rate_not_drawn": 0.173,
-   "held_at_loss": 14,
-   "mv": 6,
-   "type": "Legendary Planeswalker - Elspeth"
-  },
-  "Blasphemous Act": {
-   "drawn": 54,
-   "played": 32,
-   "played_share": 0.593,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.407,
-   "win_rate_not_drawn": 0.151,
-   "held_at_loss": 9,
-   "mv": 9,
-   "type": "Sorcery"
-  },
-  "Talisman of Creativity": {
-   "drawn": 49,
-   "played": 48,
-   "played_share": 0.98,
-   "median_turn": 6.0,
-   "win_rate_drawn": 0.286,
-   "win_rate_not_drawn": 0.199,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Artifact"
-  },
-  "Sol Ring": {
-   "drawn": 60,
-   "played": 59,
-   "played_share": 0.983,
-   "median_turn": 3,
-   "win_rate_drawn": 0.4,
-   "win_rate_not_drawn": 0.143,
-   "held_at_loss": 0,
-   "mv": 1,
-   "type": "Artifact"
-  },
-  "Sparkshaper Visionary": {
-   "drawn": 63,
-   "played": 45,
-   "played_share": 0.714,
-   "median_turn": 10,
-   "win_rate_drawn": 0.286,
-   "win_rate_not_drawn": 0.19,
-   "held_at_loss": 11,
-   "mv": 3,
-   "type": "Creature - Human Wizard"
-  },
-  "Oreskos Explorer": {
-   "drawn": 55,
-   "played": 47,
-   "played_share": 0.855,
-   "median_turn": 10,
-   "win_rate_drawn": 0.345,
-   "win_rate_not_drawn": 0.172,
-   "held_at_loss": 12,
-   "mv": 2,
-   "type": "Creature - Cat Scout"
-  },
-  "Nevinyrral's Disk": {
-   "drawn": 63,
-   "played": 25,
-   "played_share": 0.397,
-   "median_turn": 11,
-   "win_rate_drawn": 0.397,
-   "win_rate_not_drawn": 0.139,
-   "held_at_loss": 22,
-   "mv": 4,
-   "type": "Artifact"
-  },
-  "Talisman of Progress": {
-   "drawn": 53,
-   "played": 48,
-   "played_share": 0.906,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.283,
-   "win_rate_not_drawn": 0.197,
-   "held_at_loss": 2,
-   "mv": 2,
-   "type": "Artifact"
-  },
-  "Spark Double": {
-   "drawn": 50,
-   "played": 19,
-   "played_share": 0.38,
-   "median_turn": 12,
-   "win_rate_drawn": 0.3,
-   "win_rate_not_drawn": 0.193,
-   "held_at_loss": 22,
-   "mv": 4,
-   "type": "Creature - Illusion"
-  },
-  "Nahiri, the Harbinger": {
-   "drawn": 56,
-   "played": 53,
-   "played_share": 0.946,
-   "median_turn": 10,
-   "win_rate_drawn": 0.393,
-   "win_rate_not_drawn": 0.153,
-   "held_at_loss": 6,
-   "mv": 4,
-   "type": "Legendary Planeswalker - Nahiri"
+   "type": "Legendary Sorcery"
   },
   "Grateful Apparition": {
    "drawn": 50,
@@ -654,16 +610,27 @@
    "mv": 2,
    "type": "Creature - Spirit"
   },
-  "Narset of the Ancient Way": {
-   "drawn": 54,
+  "Arcane Signet": {
+   "drawn": 50,
    "played": 47,
-   "played_share": 0.87,
-   "median_turn": 9,
-   "win_rate_drawn": 0.352,
-   "win_rate_not_drawn": 0.171,
-   "held_at_loss": 9,
+   "played_share": 0.94,
+   "median_turn": 5,
+   "win_rate_drawn": 0.44,
+   "win_rate_not_drawn": 0.147,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Nahiri, the Harbinger": {
+   "drawn": 56,
+   "played": 53,
+   "played_share": 0.946,
+   "median_turn": 10,
+   "win_rate_drawn": 0.393,
+   "win_rate_not_drawn": 0.153,
+   "held_at_loss": 6,
    "mv": 4,
-   "type": "Legendary Planeswalker - Narset"
+   "type": "Legendary Planeswalker - Nahiri"
   },
   "Fog Bank": {
    "drawn": 54,
@@ -676,16 +643,49 @@
    "mv": 2,
    "type": "Creature - Wall"
   },
-  "Arcane Signet": {
-   "drawn": 50,
-   "played": 47,
-   "played_share": 0.94,
-   "median_turn": 5,
-   "win_rate_drawn": 0.44,
-   "win_rate_not_drawn": 0.147,
-   "held_at_loss": 1,
+  "Talisman of Progress": {
+   "drawn": 53,
+   "played": 48,
+   "played_share": 0.906,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 2,
    "mv": 2,
    "type": "Artifact"
+  },
+  "Nevinyrral's Disk": {
+   "drawn": 63,
+   "played": 25,
+   "played_share": 0.397,
+   "median_turn": 11,
+   "win_rate_drawn": 0.397,
+   "win_rate_not_drawn": 0.139,
+   "held_at_loss": 22,
+   "mv": 4,
+   "type": "Artifact"
+  },
+  "Narset of the Ancient Way": {
+   "drawn": 54,
+   "played": 47,
+   "played_share": 0.87,
+   "median_turn": 9,
+   "win_rate_drawn": 0.352,
+   "win_rate_not_drawn": 0.171,
+   "held_at_loss": 9,
+   "mv": 4,
+   "type": "Legendary Planeswalker - Narset"
+  },
+  "Spark Double": {
+   "drawn": 50,
+   "played": 19,
+   "played_share": 0.38,
+   "median_turn": 12,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.193,
+   "held_at_loss": 22,
+   "mv": 4,
+   "type": "Creature - Illusion"
   },
   "Ajani Steadfast": {
    "drawn": 57,
@@ -764,17 +764,6 @@
    "mv": 5,
    "type": "Legendary Enchantment"
   },
-  "Jace, Architect of Thought": {
-   "drawn": 53,
-   "played": 45,
-   "played_share": 0.849,
-   "median_turn": 10,
-   "win_rate_drawn": 0.358,
-   "win_rate_not_drawn": 0.17,
-   "held_at_loss": 10,
-   "mv": 4,
-   "type": "Legendary Planeswalker - Jace"
-  },
   "Path to Exile": {
    "drawn": 50,
    "played": 49,
@@ -786,16 +775,16 @@
    "mv": 1,
    "type": "Instant"
   },
-  "Chandra, Awakened Inferno": {
-   "drawn": 56,
-   "played": 42,
-   "played_share": 0.75,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.268,
-   "win_rate_not_drawn": 0.201,
-   "held_at_loss": 11,
-   "mv": 6,
-   "type": "Legendary Planeswalker - Chandra"
+  "Jace, Architect of Thought": {
+   "drawn": 53,
+   "played": 45,
+   "played_share": 0.849,
+   "median_turn": 10,
+   "win_rate_drawn": 0.358,
+   "win_rate_not_drawn": 0.17,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Legendary Planeswalker - Jace"
   },
   "Deepglow Skate": {
    "drawn": 50,
@@ -818,6 +807,17 @@
    "held_at_loss": 25,
    "mv": 3,
    "type": "Creature - Wall"
+  },
+  "Chandra, Awakened Inferno": {
+   "drawn": 56,
+   "played": 42,
+   "played_share": 0.75,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.268,
+   "win_rate_not_drawn": 0.201,
+   "held_at_loss": 11,
+   "mv": 6,
+   "type": "Legendary Planeswalker - Chandra"
   },
   "Azorius Signet": {
    "drawn": 45,

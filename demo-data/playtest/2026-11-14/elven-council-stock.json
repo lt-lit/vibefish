@@ -179,28 +179,6 @@
   "of_them_affordable": 2.7
  },
  "cards": {
-  "Devastation Tide": {
-   "drawn": 57,
-   "played": 45,
-   "played_share": 0.789,
-   "median_turn": 8,
-   "win_rate_drawn": 0.123,
-   "win_rate_not_drawn": 0.077,
-   "held_at_loss": 11,
-   "mv": 5,
-   "type": "Sorcery"
-  },
-  "Sail into the West": {
-   "drawn": 49,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.061,
-   "win_rate_not_drawn": 0.099,
-   "held_at_loss": 40,
-   "mv": 4,
-   "type": "Instant"
-  },
   "Mystic Confluence": {
    "drawn": 55,
    "played": 0,
@@ -234,6 +212,17 @@
    "mv": 6,
    "type": "Sorcery"
   },
+  "Devastation Tide": {
+   "drawn": 57,
+   "played": 45,
+   "played_share": 0.789,
+   "median_turn": 8,
+   "win_rate_drawn": 0.123,
+   "win_rate_not_drawn": 0.077,
+   "held_at_loss": 11,
+   "mv": 5,
+   "type": "Sorcery"
+  },
   "Learn from the Past": {
    "drawn": 61,
    "played": 59,
@@ -245,25 +234,14 @@
    "mv": 4,
    "type": "Instant"
   },
-  "Wood Elves": {
-   "drawn": 46,
-   "played": 34,
-   "played_share": 0.739,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.152,
-   "win_rate_not_drawn": 0.071,
-   "held_at_loss": 11,
-   "mv": 3,
-   "type": "Creature - Elf Scout"
-  },
-  "Galadhrim Ambush": {
-   "drawn": 51,
-   "played": 31,
-   "played_share": 0.608,
-   "median_turn": 9,
-   "win_rate_drawn": 0.078,
-   "win_rate_not_drawn": 0.094,
-   "held_at_loss": 13,
+  "Sail into the West": {
+   "drawn": 49,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.061,
+   "win_rate_not_drawn": 0.099,
+   "held_at_loss": 40,
    "mv": 4,
    "type": "Instant"
   },
@@ -289,27 +267,27 @@
    "mv": 4,
    "type": "Creature - Elf Shaman"
   },
-  "Windswift Slice": {
-   "drawn": 42,
-   "played": 40,
-   "played_share": 0.952,
-   "median_turn": 5.5,
-   "win_rate_drawn": 0.095,
-   "win_rate_not_drawn": 0.089,
-   "held_at_loss": 3,
+  "Wood Elves": {
+   "drawn": 46,
+   "played": 34,
+   "played_share": 0.739,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.152,
+   "win_rate_not_drawn": 0.071,
+   "held_at_loss": 11,
    "mv": 3,
-   "type": "Instant"
+   "type": "Creature - Elf Scout"
   },
-  "Overwhelming Stampede": {
+  "Galadhrim Ambush": {
    "drawn": 51,
-   "played": 36,
-   "played_share": 0.706,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.118,
-   "win_rate_not_drawn": 0.081,
-   "held_at_loss": 15,
-   "mv": 5,
-   "type": "Sorcery"
+   "played": 31,
+   "played_share": 0.608,
+   "median_turn": 9,
+   "win_rate_drawn": 0.078,
+   "win_rate_not_drawn": 0.094,
+   "held_at_loss": 13,
+   "mv": 4,
+   "type": "Instant"
   },
   "Elrond of the White Council": {
    "drawn": 54,
@@ -344,6 +322,28 @@
    "mv": 1,
    "type": "Instant"
   },
+  "Windswift Slice": {
+   "drawn": 42,
+   "played": 40,
+   "played_share": 0.952,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.095,
+   "win_rate_not_drawn": 0.089,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Realm Seekers": {
+   "drawn": 49,
+   "played": 28,
+   "played_share": 0.571,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.082,
+   "win_rate_not_drawn": 0.093,
+   "held_at_loss": 12,
+   "mv": 6,
+   "type": "Creature - Elf Scout"
+  },
   "Gandalf, Westward Voyager": {
    "drawn": 38,
    "played": 36,
@@ -366,17 +366,6 @@
    "mv": 1,
    "type": "Sorcery"
   },
-  "Realm Seekers": {
-   "drawn": 49,
-   "played": 28,
-   "played_share": 0.571,
-   "median_turn": 11.0,
-   "win_rate_drawn": 0.082,
-   "win_rate_not_drawn": 0.093,
-   "held_at_loss": 12,
-   "mv": 6,
-   "type": "Creature - Elf Scout"
-  },
   "Sol Ring": {
    "drawn": 49,
    "played": 46,
@@ -387,6 +376,17 @@
    "held_at_loss": 1,
    "mv": 1,
    "type": "Artifact"
+  },
+  "Overwhelming Stampede": {
+   "drawn": 51,
+   "played": 36,
+   "played_share": 0.706,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.118,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 15,
+   "mv": 5,
+   "type": "Sorcery"
   },
   "Beast Within": {
    "drawn": 52,
@@ -399,27 +399,16 @@
    "mv": 3,
    "type": "Instant"
   },
-  "Whispersilk Cloak": {
-   "drawn": 49,
-   "played": 47,
-   "played_share": 0.959,
+  "Lignify": {
+   "drawn": 50,
+   "played": 49,
+   "played_share": 0.98,
    "median_turn": 6,
-   "win_rate_drawn": 0.041,
-   "win_rate_not_drawn": 0.106,
-   "held_at_loss": 2,
-   "mv": 3,
-   "type": "Artifact - Equipment"
-  },
-  "Wose Pathfinder": {
-   "drawn": 44,
-   "played": 41,
-   "played_share": 0.932,
-   "median_turn": 6,
-   "win_rate_drawn": 0.045,
-   "win_rate_not_drawn": 0.103,
-   "held_at_loss": 2,
+   "win_rate_drawn": 0.1,
+   "win_rate_not_drawn": 0.087,
+   "held_at_loss": 3,
    "mv": 2,
-   "type": "Creature - Human Shaman"
+   "type": "Kindred Enchantment - Treefolk Aura"
   },
   "Model of Unity": {
    "drawn": 51,
@@ -443,38 +432,16 @@
    "mv": 1,
    "type": "Sorcery"
   },
-  "Lignify": {
-   "drawn": 50,
-   "played": 49,
-   "played_share": 0.98,
-   "median_turn": 6,
-   "win_rate_drawn": 0.1,
-   "win_rate_not_drawn": 0.087,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Kindred Enchantment - Treefolk Aura"
-  },
-  "Rampant Growth": {
-   "drawn": 55,
-   "played": 54,
-   "played_share": 0.982,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.127,
-   "win_rate_not_drawn": 0.076,
-   "held_at_loss": 2,
-   "mv": 2,
-   "type": "Sorcery"
-  },
-  "Inscription of Abundance": {
-   "drawn": 51,
-   "played": 49,
-   "played_share": 0.961,
-   "median_turn": 6,
-   "win_rate_drawn": 0.118,
-   "win_rate_not_drawn": 0.081,
-   "held_at_loss": 1,
-   "mv": 2,
-   "type": "Instant"
+  "Colossal Whale": {
+   "drawn": 52,
+   "played": 46,
+   "played_share": 0.885,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.096,
+   "win_rate_not_drawn": 0.088,
+   "held_at_loss": 7,
+   "mv": 7,
+   "type": "Creature - Whale"
   },
   "L\u00f3rien Revealed": {
    "drawn": 58,
@@ -487,6 +454,28 @@
    "mv": 5,
    "type": "Sorcery"
   },
+  "Whispersilk Cloak": {
+   "drawn": 49,
+   "played": 47,
+   "played_share": 0.959,
+   "median_turn": 6,
+   "win_rate_drawn": 0.041,
+   "win_rate_not_drawn": 0.106,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Artifact - Equipment"
+  },
+  "Inscription of Abundance": {
+   "drawn": 51,
+   "played": 49,
+   "played_share": 0.961,
+   "median_turn": 6,
+   "win_rate_drawn": 0.118,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Instant"
+  },
   "Genesis Wave": {
    "drawn": 44,
    "played": 35,
@@ -498,16 +487,16 @@
    "mv": 3,
    "type": "Sorcery"
   },
-  "Colossal Whale": {
-   "drawn": 52,
-   "played": 46,
-   "played_share": 0.885,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.096,
-   "win_rate_not_drawn": 0.088,
-   "held_at_loss": 7,
-   "mv": 7,
-   "type": "Creature - Whale"
+  "Rampant Growth": {
+   "drawn": 55,
+   "played": 54,
+   "played_share": 0.982,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.127,
+   "win_rate_not_drawn": 0.076,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Sorcery"
   },
   "Paradise Druid": {
    "drawn": 45,
@@ -520,16 +509,16 @@
    "mv": 2,
    "type": "Creature - Elf Druid"
   },
-  "Mirkwood Elk": {
-   "drawn": 49,
-   "played": 37,
-   "played_share": 0.755,
-   "median_turn": 10,
-   "win_rate_drawn": 0.122,
-   "win_rate_not_drawn": 0.079,
-   "held_at_loss": 8,
-   "mv": 6,
-   "type": "Creature - Elk"
+  "Wose Pathfinder": {
+   "drawn": 44,
+   "played": 41,
+   "played_share": 0.932,
+   "median_turn": 6,
+   "win_rate_drawn": 0.045,
+   "win_rate_not_drawn": 0.103,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Human Shaman"
   },
   "Erestor of the Council": {
    "drawn": 46,
@@ -542,82 +531,16 @@
    "mv": 3,
    "type": "Legendary Creature - Elf Noble"
   },
-  "Celeborn the Wise": {
-   "drawn": 61,
-   "played": 51,
-   "played_share": 0.836,
-   "median_turn": 8,
-   "win_rate_drawn": 0.115,
-   "win_rate_not_drawn": 0.079,
-   "held_at_loss": 11,
-   "mv": 4,
-   "type": "Legendary Creature - Elf Noble"
-  },
-  "Cultivate": {
-   "drawn": 51,
-   "played": 34,
-   "played_share": 0.667,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.098,
-   "win_rate_not_drawn": 0.087,
-   "held_at_loss": 13,
-   "mv": 3,
-   "type": "Sorcery"
-  },
-  "Commander's Sphere": {
-   "drawn": 42,
+  "Mirkwood Elk": {
+   "drawn": 49,
    "played": 37,
-   "played_share": 0.881,
-   "median_turn": 6,
-   "win_rate_drawn": 0.167,
-   "win_rate_not_drawn": 0.07,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Artifact"
-  },
-  "Seeds of Renewal": {
-   "drawn": 63,
-   "played": 48,
-   "played_share": 0.762,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.095,
-   "win_rate_not_drawn": 0.088,
-   "held_at_loss": 11,
-   "mv": 7,
-   "type": "Sorcery"
-  },
-  "Sylvan Offering": {
-   "drawn": 43,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.116,
-   "win_rate_not_drawn": 0.083,
-   "held_at_loss": 33,
-   "mv": 1,
-   "type": "Sorcery"
-  },
-  "Farhaven Elf": {
-   "drawn": 36,
-   "played": 31,
-   "played_share": 0.861,
-   "median_turn": 9,
-   "win_rate_drawn": 0.083,
-   "win_rate_not_drawn": 0.091,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Creature - Elf Druid"
-  },
-  "Growth Spiral": {
-   "drawn": 43,
-   "played": 38,
-   "played_share": 0.884,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.116,
-   "win_rate_not_drawn": 0.083,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Instant"
+   "played_share": 0.755,
+   "median_turn": 10,
+   "win_rate_drawn": 0.122,
+   "win_rate_not_drawn": 0.079,
+   "held_at_loss": 8,
+   "mv": 6,
+   "type": "Creature - Elk"
   },
   "Legolas Greenleaf": {
    "drawn": 56,
@@ -630,16 +553,82 @@
    "mv": 3,
    "type": "Legendary Creature - Elf Archer"
   },
-  "Elvish Warmaster": {
-   "drawn": 56,
-   "played": 53,
-   "played_share": 0.946,
-   "median_turn": 7,
-   "win_rate_drawn": 0.143,
-   "win_rate_not_drawn": 0.069,
-   "held_at_loss": 2,
+  "Cultivate": {
+   "drawn": 51,
+   "played": 34,
+   "played_share": 0.667,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.098,
+   "win_rate_not_drawn": 0.087,
+   "held_at_loss": 13,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Celeborn the Wise": {
+   "drawn": 61,
+   "played": 51,
+   "played_share": 0.836,
+   "median_turn": 8,
+   "win_rate_drawn": 0.115,
+   "win_rate_not_drawn": 0.079,
+   "held_at_loss": 11,
+   "mv": 4,
+   "type": "Legendary Creature - Elf Noble"
+  },
+  "Seeds of Renewal": {
+   "drawn": 63,
+   "played": 48,
+   "played_share": 0.762,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.095,
+   "win_rate_not_drawn": 0.088,
+   "held_at_loss": 11,
+   "mv": 7,
+   "type": "Sorcery"
+  },
+  "Growth Spiral": {
+   "drawn": 43,
+   "played": 38,
+   "played_share": 0.884,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.116,
+   "win_rate_not_drawn": 0.083,
+   "held_at_loss": 3,
    "mv": 2,
-   "type": "Creature - Elf Warrior"
+   "type": "Instant"
+  },
+  "Commander's Sphere": {
+   "drawn": 42,
+   "played": 37,
+   "played_share": 0.881,
+   "median_turn": 6,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.07,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Farhaven Elf": {
+   "drawn": 36,
+   "played": 31,
+   "played_share": 0.861,
+   "median_turn": 9,
+   "win_rate_drawn": 0.083,
+   "win_rate_not_drawn": 0.091,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Creature - Elf Druid"
+  },
+  "Sylvan Offering": {
+   "drawn": 43,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.116,
+   "win_rate_not_drawn": 0.083,
+   "held_at_loss": 33,
+   "mv": 1,
+   "type": "Sorcery"
   },
   "Elvish Visionary": {
    "drawn": 55,
@@ -651,6 +640,28 @@
    "held_at_loss": 5,
    "mv": 2,
    "type": "Creature - Elf Shaman"
+  },
+  "Elvish Warmaster": {
+   "drawn": 56,
+   "played": 53,
+   "played_share": 0.946,
+   "median_turn": 7,
+   "win_rate_drawn": 0.143,
+   "win_rate_not_drawn": 0.069,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Elf Warrior"
+  },
+  "Heroic Intervention": {
+   "drawn": 53,
+   "played": 33,
+   "played_share": 0.623,
+   "median_turn": 10,
+   "win_rate_drawn": 0.151,
+   "win_rate_not_drawn": 0.068,
+   "held_at_loss": 16,
+   "mv": 2,
+   "type": "Instant"
   },
   "Trap the Trespassers": {
    "drawn": 46,
@@ -685,17 +696,6 @@
    "mv": 3,
    "type": "Artifact - Equipment"
   },
-  "Heroic Intervention": {
-   "drawn": 53,
-   "played": 33,
-   "played_share": 0.623,
-   "median_turn": 10,
-   "win_rate_drawn": 0.151,
-   "win_rate_not_drawn": 0.068,
-   "held_at_loss": 16,
-   "mv": 2,
-   "type": "Instant"
-  },
   "Arwen, Weaver of Hope": {
    "drawn": 50,
    "played": 46,
@@ -706,17 +706,6 @@
    "held_at_loss": 4,
    "mv": 3,
    "type": "Legendary Creature - Elf Noble"
-  },
-  "Opt": {
-   "drawn": 46,
-   "played": 45,
-   "played_share": 0.978,
-   "median_turn": 7,
-   "win_rate_drawn": 0.065,
-   "win_rate_not_drawn": 0.097,
-   "held_at_loss": 1,
-   "mv": 1,
-   "type": "Instant"
   },
   "Haldir, L\u00f3rien Lieutenant": {
    "drawn": 45,
@@ -740,16 +729,16 @@
    "mv": 4,
    "type": "Sorcery"
   },
-  "Song of E\u00e4rendil": {
+  "Opt": {
    "drawn": 46,
-   "played": 36,
-   "played_share": 0.783,
-   "median_turn": 8.0,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 7,
    "win_rate_drawn": 0.065,
    "win_rate_not_drawn": 0.097,
-   "held_at_loss": 7,
-   "mv": 5,
-   "type": "Enchantment - Saga"
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Instant"
   },
   "Radagast, Wizard of Wilds": {
    "drawn": 46,
@@ -762,6 +751,17 @@
    "mv": 4,
    "type": "Legendary Creature - Avatar Wizard"
   },
+  "Song of E\u00e4rendil": {
+   "drawn": 46,
+   "played": 36,
+   "played_share": 0.783,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.065,
+   "win_rate_not_drawn": 0.097,
+   "held_at_loss": 7,
+   "mv": 5,
+   "type": "Enchantment - Saga"
+  },
   "Elvish Archdruid": {
    "drawn": 48,
    "played": 47,
@@ -773,17 +773,6 @@
    "mv": 3,
    "type": "Creature - Elf Druid"
   },
-  "C\u00edrdan the Shipwright": {
-   "drawn": 46,
-   "played": 45,
-   "played_share": 0.978,
-   "median_turn": 8,
-   "win_rate_drawn": 0.065,
-   "win_rate_not_drawn": 0.097,
-   "held_at_loss": 7,
-   "mv": 5,
-   "type": "Legendary Creature - Elf Noble"
-  },
   "Hornet Queen": {
    "drawn": 49,
    "played": 39,
@@ -794,6 +783,17 @@
    "held_at_loss": 12,
    "mv": 7,
    "type": "Creature - Insect"
+  },
+  "C\u00edrdan the Shipwright": {
+   "drawn": 46,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 8,
+   "win_rate_drawn": 0.065,
+   "win_rate_not_drawn": 0.097,
+   "held_at_loss": 7,
+   "mv": 5,
+   "type": "Legendary Creature - Elf Noble"
   },
   "Arbor Elf": {
    "drawn": 56,

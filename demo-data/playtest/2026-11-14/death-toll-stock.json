@@ -187,6 +187,17 @@
   "of_them_affordable": 2.31
  },
  "cards": {
+  "Demonic Covenant": {
+   "drawn": 39,
+   "played": 27,
+   "played_share": 0.692,
+   "median_turn": 8,
+   "win_rate_drawn": 0.205,
+   "win_rate_not_drawn": 0.18,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Kindred Enchantment - Demon"
+  },
   "Culling Ritual": {
    "drawn": 42,
    "played": 30,
@@ -209,17 +220,6 @@
    "mv": 2,
    "type": "Instant"
   },
-  "Demonic Covenant": {
-   "drawn": 39,
-   "played": 27,
-   "played_share": 0.692,
-   "median_turn": 8,
-   "win_rate_drawn": 0.205,
-   "win_rate_not_drawn": 0.18,
-   "held_at_loss": 7,
-   "mv": 6,
-   "type": "Kindred Enchantment - Demon"
-  },
   "Titania, Nature's Force": {
    "drawn": 42,
    "played": 36,
@@ -231,16 +231,16 @@
    "mv": 6,
    "type": "Legendary Creature - Elemental"
   },
-  "Deathcap Cultivator": {
-   "drawn": 43,
-   "played": 42,
-   "played_share": 0.977,
-   "median_turn": 4.0,
-   "win_rate_drawn": 0.14,
-   "win_rate_not_drawn": 0.197,
+  "Rampant Growth": {
+   "drawn": 47,
+   "played": 46,
+   "played_share": 0.979,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.163,
    "held_at_loss": 2,
    "mv": 2,
-   "type": "Creature - Human Druid"
+   "type": "Sorcery"
   },
   "Mind Stone": {
    "drawn": 45,
@@ -252,6 +252,17 @@
    "held_at_loss": 6,
    "mv": 2,
    "type": "Artifact"
+  },
+  "Deathcap Cultivator": {
+   "drawn": 43,
+   "played": 42,
+   "played_share": 0.977,
+   "median_turn": 4.0,
+   "win_rate_drawn": 0.14,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Human Druid"
   },
   "Sol Ring": {
    "drawn": 43,
@@ -297,49 +308,16 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Rampant Growth": {
-   "drawn": 47,
-   "played": 46,
-   "played_share": 0.979,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.255,
-   "win_rate_not_drawn": 0.163,
-   "held_at_loss": 2,
-   "mv": 2,
-   "type": "Sorcery"
-  },
-  "Binding the Old Gods": {
-   "drawn": 52,
-   "played": 42,
-   "played_share": 0.808,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.25,
-   "win_rate_not_drawn": 0.162,
-   "held_at_loss": 5,
-   "mv": 4,
-   "type": "Enchantment - Saga"
-  },
-  "Mulch": {
-   "drawn": 47,
-   "played": 39,
-   "played_share": 0.83,
-   "median_turn": 6,
-   "win_rate_drawn": 0.213,
-   "win_rate_not_drawn": 0.176,
-   "held_at_loss": 9,
-   "mv": 2,
-   "type": "Sorcery"
-  },
-  "Ishkanah, Grafwidow": {
-   "drawn": 47,
-   "played": 41,
-   "played_share": 0.872,
+  "Wrenn and Seven": {
+   "drawn": 45,
+   "played": 37,
+   "played_share": 0.822,
    "median_turn": 8,
-   "win_rate_drawn": 0.17,
-   "win_rate_not_drawn": 0.19,
-   "held_at_loss": 9,
+   "win_rate_drawn": 0.222,
+   "win_rate_not_drawn": 0.174,
+   "held_at_loss": 10,
    "mv": 5,
-   "type": "Legendary Creature - Spider"
+   "type": "Legendary Planeswalker - Wrenn"
   },
   "Whispersilk Cloak": {
    "drawn": 36,
@@ -363,16 +341,16 @@
    "mv": 2,
    "type": "Artifact Creature - Wall"
   },
-  "Grim Flayer": {
-   "drawn": 48,
-   "played": 45,
-   "played_share": 0.938,
-   "median_turn": 6,
-   "win_rate_drawn": 0.188,
-   "win_rate_not_drawn": 0.184,
+  "Binding the Old Gods": {
+   "drawn": 52,
+   "played": 42,
+   "played_share": 0.808,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.162,
    "held_at_loss": 5,
-   "mv": 2,
-   "type": "Creature - Human Warrior"
+   "mv": 4,
+   "type": "Enchantment - Saga"
   },
   "Putrefy": {
    "drawn": 49,
@@ -385,6 +363,17 @@
    "mv": 3,
    "type": "Instant"
   },
+  "Mulch": {
+   "drawn": 47,
+   "played": 39,
+   "played_share": 0.83,
+   "median_turn": 6,
+   "win_rate_drawn": 0.213,
+   "win_rate_not_drawn": 0.176,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Sorcery"
+  },
   "Obsessive Skinner": {
    "drawn": 48,
    "played": 48,
@@ -396,16 +385,38 @@
    "mv": 2,
    "type": "Creature - Human Rogue"
   },
-  "Wrenn and Seven": {
-   "drawn": 45,
-   "played": 37,
-   "played_share": 0.822,
+  "Ishkanah, Grafwidow": {
+   "drawn": 47,
+   "played": 41,
+   "played_share": 0.872,
    "median_turn": 8,
-   "win_rate_drawn": 0.222,
-   "win_rate_not_drawn": 0.174,
-   "held_at_loss": 10,
+   "win_rate_drawn": 0.17,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 9,
    "mv": 5,
-   "type": "Legendary Planeswalker - Wrenn"
+   "type": "Legendary Creature - Spider"
+  },
+  "Grim Flayer": {
+   "drawn": 48,
+   "played": 45,
+   "played_share": 0.938,
+   "median_turn": 6,
+   "win_rate_drawn": 0.188,
+   "win_rate_not_drawn": 0.184,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Creature - Human Warrior"
+  },
+  "Carrion Grub": {
+   "drawn": 40,
+   "played": 33,
+   "played_share": 0.825,
+   "median_turn": 7,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.181,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Creature - Insect"
   },
   "Noxious Gearhulk": {
    "drawn": 58,
@@ -429,27 +440,16 @@
    "mv": 2,
    "type": "Instant"
   },
-  "Carrion Grub": {
-   "drawn": 40,
-   "played": 33,
-   "played_share": 0.825,
-   "median_turn": 7,
-   "win_rate_drawn": 0.2,
-   "win_rate_not_drawn": 0.181,
-   "held_at_loss": 6,
-   "mv": 4,
-   "type": "Creature - Insect"
-  },
-  "Into the Pit": {
-   "drawn": 51,
-   "played": 44,
-   "played_share": 0.863,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.235,
-   "win_rate_not_drawn": 0.168,
-   "held_at_loss": 7,
-   "mv": 3,
-   "type": "Enchantment"
+  "Sakura-Tribe Elder": {
+   "drawn": 56,
+   "played": 54,
+   "played_share": 0.964,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.232,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Creature - Snake Shaman"
   },
   "Whip of Erebos": {
    "drawn": 51,
@@ -462,27 +462,16 @@
    "mv": 4,
    "type": "Legendary Artifact Enchantment"
   },
-  "Sakura-Tribe Elder": {
-   "drawn": 56,
-   "played": 54,
-   "played_share": 0.964,
-   "median_turn": 5.0,
-   "win_rate_drawn": 0.232,
-   "win_rate_not_drawn": 0.167,
-   "held_at_loss": 2,
-   "mv": 2,
-   "type": "Creature - Snake Shaman"
-  },
-  "Scavenging Ooze": {
-   "drawn": 50,
-   "played": 47,
-   "played_share": 0.94,
-   "median_turn": 6,
-   "win_rate_drawn": 0.1,
-   "win_rate_not_drawn": 0.213,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Creature - Ooze"
+  "Into the Pit": {
+   "drawn": 51,
+   "played": 44,
+   "played_share": 0.863,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.235,
+   "win_rate_not_drawn": 0.168,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Enchantment"
   },
   "Cemetery Tampering": {
    "drawn": 53,
@@ -495,6 +484,28 @@
    "mv": 3,
    "type": "Enchantment"
   },
+  "Scavenging Ooze": {
+   "drawn": 50,
+   "played": 47,
+   "played_share": 0.94,
+   "median_turn": 6,
+   "win_rate_drawn": 0.1,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Ooze"
+  },
+  "Formless Genesis": {
+   "drawn": 48,
+   "played": 39,
+   "played_share": 0.812,
+   "median_turn": 6,
+   "win_rate_drawn": 0.229,
+   "win_rate_not_drawn": 0.171,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Kindred Sorcery - Shapeshifter"
+  },
   "Nyx Weaver": {
    "drawn": 46,
    "played": 0,
@@ -505,6 +516,17 @@
    "held_at_loss": 36,
    "mv": 3,
    "type": "Enchantment Creature - Spider"
+  },
+  "Burnished Hart": {
+   "drawn": 49,
+   "played": 45,
+   "played_share": 0.918,
+   "median_turn": 4,
+   "win_rate_drawn": 0.204,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Artifact Creature - Elk"
   },
   "Arachnogenesis": {
    "drawn": 44,
@@ -528,60 +550,16 @@
    "mv": 5,
    "type": "Legendary Planeswalker - Nixilis"
   },
-  "Formless Genesis": {
-   "drawn": 48,
-   "played": 39,
-   "played_share": 0.812,
-   "median_turn": 6,
-   "win_rate_drawn": 0.229,
-   "win_rate_not_drawn": 0.171,
-   "held_at_loss": 4,
-   "mv": 3,
-   "type": "Kindred Sorcery - Shapeshifter"
-  },
-  "Burnished Hart": {
-   "drawn": 49,
-   "played": 45,
-   "played_share": 0.918,
-   "median_turn": 4,
-   "win_rate_drawn": 0.204,
-   "win_rate_not_drawn": 0.179,
-   "held_at_loss": 3,
-   "mv": 3,
-   "type": "Artifact Creature - Elk"
-  },
-  "Professor Onyx": {
-   "drawn": 29,
-   "played": 22,
-   "played_share": 0.759,
+  "Giant Adephage": {
+   "drawn": 38,
+   "played": 32,
+   "played_share": 0.842,
    "median_turn": 9.0,
-   "win_rate_drawn": 0.31,
-   "win_rate_not_drawn": 0.164,
-   "held_at_loss": 5,
-   "mv": 6,
-   "type": "Legendary Planeswalker - Liliana"
-  },
-  "Deathreap Ritual": {
-   "drawn": 41,
-   "played": 35,
-   "played_share": 0.854,
-   "median_turn": 8,
-   "win_rate_drawn": 0.293,
-   "win_rate_not_drawn": 0.157,
-   "held_at_loss": 5,
-   "mv": 4,
-   "type": "Enchantment"
-  },
-  "Golgari Signet": {
-   "drawn": 35,
-   "played": 31,
-   "played_share": 0.886,
-   "median_turn": 5,
-   "win_rate_drawn": 0.229,
-   "win_rate_not_drawn": 0.176,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Artifact"
+   "win_rate_drawn": 0.132,
+   "win_rate_not_drawn": 0.198,
+   "held_at_loss": 10,
+   "mv": 7,
+   "type": "Creature - Insect"
   },
   "Hornet Queen": {
    "drawn": 51,
@@ -594,6 +572,17 @@
    "mv": 7,
    "type": "Creature - Insect"
   },
+  "Golgari Signet": {
+   "drawn": 35,
+   "played": 31,
+   "played_share": 0.886,
+   "median_turn": 5,
+   "win_rate_drawn": 0.229,
+   "win_rate_not_drawn": 0.176,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Artifact"
+  },
   "Deadbridge Chant": {
    "drawn": 50,
    "played": 35,
@@ -604,17 +593,6 @@
    "held_at_loss": 15,
    "mv": 6,
    "type": "Enchantment"
-  },
-  "Arcane Signet": {
-   "drawn": 43,
-   "played": 39,
-   "played_share": 0.907,
-   "median_turn": 6,
-   "win_rate_drawn": 0.209,
-   "win_rate_not_drawn": 0.178,
-   "held_at_loss": 2,
-   "mv": 2,
-   "type": "Artifact"
   },
   "Skola Grovedancer": {
    "drawn": 44,
@@ -627,6 +605,17 @@
    "mv": 2,
    "type": "Enchantment Creature - Satyr Druid"
   },
+  "Arcane Signet": {
+   "drawn": 43,
+   "played": 39,
+   "played_share": 0.907,
+   "median_turn": 6,
+   "win_rate_drawn": 0.209,
+   "win_rate_not_drawn": 0.178,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Artifact"
+  },
   "Harrow": {
    "drawn": 49,
    "played": 49,
@@ -638,16 +627,27 @@
    "mv": 3,
    "type": "Instant"
   },
-  "Giant Adephage": {
-   "drawn": 38,
-   "played": 32,
-   "played_share": 0.842,
+  "Deathreap Ritual": {
+   "drawn": 41,
+   "played": 35,
+   "played_share": 0.854,
+   "median_turn": 8,
+   "win_rate_drawn": 0.293,
+   "win_rate_not_drawn": 0.157,
+   "held_at_loss": 5,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Professor Onyx": {
+   "drawn": 29,
+   "played": 22,
+   "played_share": 0.759,
    "median_turn": 9.0,
-   "win_rate_drawn": 0.132,
-   "win_rate_not_drawn": 0.198,
-   "held_at_loss": 10,
-   "mv": 7,
-   "type": "Creature - Insect"
+   "win_rate_drawn": 0.31,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 5,
+   "mv": 6,
+   "type": "Legendary Planeswalker - Liliana"
   },
   "Deluge of Doom": {
    "drawn": 57,
@@ -659,28 +659,6 @@
    "held_at_loss": 41,
    "mv": 3,
    "type": "Sorcery"
-  },
-  "Night's Whisper": {
-   "drawn": 38,
-   "played": 33,
-   "played_share": 0.868,
-   "median_turn": 7,
-   "win_rate_drawn": 0.237,
-   "win_rate_not_drawn": 0.173,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Sorcery"
-  },
-  "Demolisher Spawn": {
-   "drawn": 44,
-   "played": 40,
-   "played_share": 0.909,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.205,
-   "win_rate_not_drawn": 0.179,
-   "held_at_loss": 4,
-   "mv": 7,
-   "type": "Enchantment Creature - Horror"
   },
   "Vile Mutilator": {
    "drawn": 48,
@@ -704,24 +682,13 @@
    "mv": 1,
    "type": "Creature - Dryad Horror"
   },
-  "Stitcher's Supplier": {
-   "drawn": 51,
-   "played": 50,
-   "played_share": 0.98,
-   "median_turn": 6.0,
-   "win_rate_drawn": 0.157,
-   "win_rate_not_drawn": 0.195,
-   "held_at_loss": 2,
-   "mv": 1,
-   "type": "Creature - Zombie"
-  },
   "Polluted Cistern // Dim Oubliette": {
-   "drawn": 26,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.269,
-   "win_rate_not_drawn": 0.172,
+   "drawn": 47,
+   "played": 45,
+   "played_share": 0.957,
+   "median_turn": 7,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.163,
    "held_at_loss": 1,
    "mv": 7,
    "type": "Enchantment - Room"
@@ -737,27 +704,38 @@
    "mv": 2,
    "type": "Instant"
   },
-  "Ursine Monstrosity": {
-   "drawn": 49,
-   "played": 47,
-   "played_share": 0.959,
-   "median_turn": 6,
-   "win_rate_drawn": 0.204,
-   "win_rate_not_drawn": 0.179,
-   "held_at_loss": 2,
-   "mv": 3,
-   "type": "Creature - Bear Mutant"
-  },
-  "Haywire Mite": {
-   "drawn": 33,
+  "Night's Whisper": {
+   "drawn": 38,
    "played": 33,
-   "played_share": 1.0,
-   "median_turn": 5,
-   "win_rate_drawn": 0.212,
-   "win_rate_not_drawn": 0.18,
-   "held_at_loss": 1,
+   "played_share": 0.868,
+   "median_turn": 7,
+   "win_rate_drawn": 0.237,
+   "win_rate_not_drawn": 0.173,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Stitcher's Supplier": {
+   "drawn": 51,
+   "played": 50,
+   "played_share": 0.98,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.157,
+   "win_rate_not_drawn": 0.195,
+   "held_at_loss": 2,
    "mv": 1,
-   "type": "Artifact Creature - Insect"
+   "type": "Creature - Zombie"
+  },
+  "Demolisher Spawn": {
+   "drawn": 44,
+   "played": 40,
+   "played_share": 0.909,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.205,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 4,
+   "mv": 7,
+   "type": "Enchantment Creature - Horror"
   },
   "Commander's Sphere": {
    "drawn": 44,
@@ -770,6 +748,17 @@
    "mv": 3,
    "type": "Artifact"
   },
+  "Ursine Monstrosity": {
+   "drawn": 49,
+   "played": 47,
+   "played_share": 0.959,
+   "median_turn": 6,
+   "win_rate_drawn": 0.204,
+   "win_rate_not_drawn": 0.179,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Creature - Bear Mutant"
+  },
   "Reanimate": {
    "drawn": 51,
    "played": 49,
@@ -780,6 +769,17 @@
    "held_at_loss": 3,
    "mv": 1,
    "type": "Sorcery"
+  },
+  "Haywire Mite": {
+   "drawn": 33,
+   "played": 33,
+   "played_share": 1.0,
+   "median_turn": 5,
+   "win_rate_drawn": 0.212,
+   "win_rate_not_drawn": 0.18,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Artifact Creature - Insect"
   },
   "Convert to Slime": {
    "drawn": 36,
@@ -803,17 +803,6 @@
    "mv": 5,
    "type": "Creature - Insect Horror"
   },
-  "Solemn Simulacrum": {
-   "drawn": 43,
-   "played": 36,
-   "played_share": 0.837,
-   "median_turn": 6.5,
-   "win_rate_drawn": 0.116,
-   "win_rate_not_drawn": 0.204,
-   "held_at_loss": 6,
-   "mv": 4,
-   "type": "Artifact Creature - Golem"
-  },
   "Rendmaw, Creaking Nest": {
    "drawn": 52,
    "played": 49,
@@ -824,6 +813,17 @@
    "held_at_loss": 6,
    "mv": 5,
    "type": "Legendary Artifact Creature - Scarecrow"
+  },
+  "Solemn Simulacrum": {
+   "drawn": 43,
+   "played": 36,
+   "played_share": 0.837,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.116,
+   "win_rate_not_drawn": 0.204,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Artifact Creature - Golem"
   },
   "Moldgraf Monstrosity": {
    "drawn": 60,

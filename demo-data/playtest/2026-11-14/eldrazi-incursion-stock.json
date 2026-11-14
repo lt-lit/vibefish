@@ -179,6 +179,17 @@
   "of_them_affordable": 2.68
  },
  "cards": {
+  "Selective Obliteration": {
+   "drawn": 44,
+   "played": 3,
+   "played_share": 0.068,
+   "median_turn": 6,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.231,
+   "held_at_loss": 26,
+   "mv": 5,
+   "type": "Sorcery"
+  },
   "Ugin, the Ineffable": {
    "drawn": 46,
    "played": 35,
@@ -201,17 +212,6 @@
    "mv": 8,
    "type": "Creature - Eldrazi"
   },
-  "Selective Obliteration": {
-   "drawn": 44,
-   "played": 3,
-   "played_share": 0.068,
-   "median_turn": 6,
-   "win_rate_drawn": 0.273,
-   "win_rate_not_drawn": 0.231,
-   "held_at_loss": 26,
-   "mv": 5,
-   "type": "Sorcery"
-  },
   "Everflowing Chalice": {
    "drawn": 58,
    "played": 54,
@@ -223,6 +223,17 @@
    "mv": 0,
    "type": "Artifact"
   },
+  "Oblivion Sower": {
+   "drawn": 48,
+   "played": 38,
+   "played_share": 0.792,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.237,
+   "held_at_loss": 9,
+   "mv": 6,
+   "type": "Creature - Eldrazi"
+  },
   "Eldritch Immunity": {
    "drawn": 65,
    "played": 56,
@@ -233,6 +244,28 @@
    "held_at_loss": 6,
    "mv": 1,
    "type": "Kindred Instant - Eldrazi"
+  },
+  "Talisman of Curiosity": {
+   "drawn": 74,
+   "played": 66,
+   "played_share": 0.892,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.297,
+   "win_rate_not_drawn": 0.206,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "World Breaker": {
+   "drawn": 47,
+   "played": 42,
+   "played_share": 0.894,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.319,
+   "win_rate_not_drawn": 0.216,
+   "held_at_loss": 3,
+   "mv": 7,
+   "type": "Creature - Eldrazi"
   },
   "Bismuth Mindrender": {
    "drawn": 59,
@@ -256,49 +289,16 @@
    "mv": 5,
    "type": "Sorcery"
   },
-  "World Breaker": {
-   "drawn": 47,
-   "played": 42,
-   "played_share": 0.894,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.319,
-   "win_rate_not_drawn": 0.216,
-   "held_at_loss": 3,
-   "mv": 7,
-   "type": "Creature - Eldrazi"
-  },
-  "Imprisoned in the Moon": {
-   "drawn": 39,
-   "played": 35,
-   "played_share": 0.897,
-   "median_turn": 7,
-   "win_rate_drawn": 0.256,
-   "win_rate_not_drawn": 0.236,
-   "held_at_loss": 2,
+  "Eldrazi Displacer": {
+   "drawn": 52,
+   "played": 43,
+   "played_share": 0.827,
+   "median_turn": 8,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.209,
+   "held_at_loss": 11,
    "mv": 3,
-   "type": "Enchantment - Aura"
-  },
-  "Oblivion Sower": {
-   "drawn": 48,
-   "played": 38,
-   "played_share": 0.792,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.25,
-   "win_rate_not_drawn": 0.237,
-   "held_at_loss": 9,
-   "mv": 6,
    "type": "Creature - Eldrazi"
-  },
-  "Talisman of Curiosity": {
-   "drawn": 74,
-   "played": 66,
-   "played_share": 0.892,
-   "median_turn": 5.0,
-   "win_rate_drawn": 0.297,
-   "win_rate_not_drawn": 0.206,
-   "held_at_loss": 5,
-   "mv": 2,
-   "type": "Artifact"
   },
   "Skittering Invasion": {
    "drawn": 55,
@@ -311,38 +311,16 @@
    "mv": 7,
    "type": "Kindred Sorcery - Eldrazi"
   },
-  "Eldrazi Displacer": {
-   "drawn": 52,
-   "played": 43,
-   "played_share": 0.827,
-   "median_turn": 8,
-   "win_rate_drawn": 0.327,
-   "win_rate_not_drawn": 0.209,
-   "held_at_loss": 11,
+  "Imprisoned in the Moon": {
+   "drawn": 39,
+   "played": 35,
+   "played_share": 0.897,
+   "median_turn": 7,
+   "win_rate_drawn": 0.256,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 2,
    "mv": 3,
-   "type": "Creature - Eldrazi"
-  },
-  "Twins of Discord": {
-   "drawn": 41,
-   "played": 36,
-   "played_share": 0.878,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.293,
-   "win_rate_not_drawn": 0.226,
-   "held_at_loss": 5,
-   "mv": 7,
-   "type": "Creature - Eldrazi"
-  },
-  "Drowner of Hope": {
-   "drawn": 55,
-   "played": 34,
-   "played_share": 0.618,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.291,
-   "win_rate_not_drawn": 0.221,
-   "held_at_loss": 13,
-   "mv": 6,
-   "type": "Creature - Eldrazi"
+   "type": "Enchantment - Aura"
   },
   "Angelic Aberration": {
    "drawn": 52,
@@ -355,14 +333,14 @@
    "mv": 6,
    "type": "Creature - Eldrazi Angel"
   },
-  "Deepfathom Skulker": {
-   "drawn": 47,
-   "played": 35,
-   "played_share": 0.745,
-   "median_turn": 9,
-   "win_rate_drawn": 0.383,
-   "win_rate_not_drawn": 0.196,
-   "held_at_loss": 9,
+  "Drowner of Hope": {
+   "drawn": 55,
+   "played": 34,
+   "played_share": 0.618,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.291,
+   "win_rate_not_drawn": 0.221,
+   "held_at_loss": 13,
    "mv": 6,
    "type": "Creature - Eldrazi"
   },
@@ -388,16 +366,16 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Morophon, the Boundless": {
-   "drawn": 55,
-   "played": 47,
-   "played_share": 0.855,
-   "median_turn": 8,
-   "win_rate_drawn": 0.345,
-   "win_rate_not_drawn": 0.2,
-   "held_at_loss": 3,
-   "mv": 7,
-   "type": "Legendary Creature - Shapeshifter"
+  "Deepfathom Skulker": {
+   "drawn": 47,
+   "played": 35,
+   "played_share": 0.745,
+   "median_turn": 9,
+   "win_rate_drawn": 0.383,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 9,
+   "mv": 6,
+   "type": "Creature - Eldrazi"
   },
   "Benthic Anomaly": {
    "drawn": 51,
@@ -409,6 +387,17 @@
    "held_at_loss": 11,
    "mv": 7,
    "type": "Creature - Eldrazi Serpent"
+  },
+  "Twins of Discord": {
+   "drawn": 41,
+   "played": 36,
+   "played_share": 0.878,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.293,
+   "win_rate_not_drawn": 0.226,
+   "held_at_loss": 5,
+   "mv": 7,
+   "type": "Creature - Eldrazi"
   },
   "Suffer the Past": {
    "drawn": 47,
@@ -432,6 +421,17 @@
    "mv": 4,
    "type": "Artifact"
   },
+  "Morophon, the Boundless": {
+   "drawn": 55,
+   "played": 47,
+   "played_share": 0.855,
+   "median_turn": 8,
+   "win_rate_drawn": 0.345,
+   "win_rate_not_drawn": 0.2,
+   "held_at_loss": 3,
+   "mv": 7,
+   "type": "Legendary Creature - Shapeshifter"
+  },
   "Hideous Taskmaster": {
    "drawn": 43,
    "played": 39,
@@ -442,6 +442,17 @@
    "held_at_loss": 5,
    "mv": 7,
    "type": "Creature - Eldrazi"
+  },
+  "Snapping Voidcraw": {
+   "drawn": 45,
+   "played": 41,
+   "played_share": 0.911,
+   "median_turn": 4,
+   "win_rate_drawn": 0.222,
+   "win_rate_not_drawn": 0.245,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Creature - Eldrazi Turtle"
   },
   "Kozilek's Return": {
    "drawn": 37,
@@ -465,16 +476,16 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Snapping Voidcraw": {
-   "drawn": 45,
-   "played": 41,
-   "played_share": 0.911,
+  "Talisman of Dominance": {
+   "drawn": 38,
+   "played": 31,
+   "played_share": 0.816,
    "median_turn": 4,
-   "win_rate_drawn": 0.222,
-   "win_rate_not_drawn": 0.245,
-   "held_at_loss": 5,
-   "mv": 3,
-   "type": "Creature - Eldrazi Turtle"
+   "win_rate_drawn": 0.158,
+   "win_rate_not_drawn": 0.259,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact"
   },
   "Eldrazi Conscription": {
    "drawn": 48,
@@ -486,17 +497,6 @@
    "held_at_loss": 8,
    "mv": 8,
    "type": "Kindred Enchantment - Eldrazi Aura"
-  },
-  "Talisman of Dominance": {
-   "drawn": 38,
-   "played": 31,
-   "played_share": 0.816,
-   "median_turn": 4,
-   "win_rate_drawn": 0.158,
-   "win_rate_not_drawn": 0.259,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Artifact"
   },
   "Spawnbed Protector": {
    "drawn": 54,
@@ -520,17 +520,6 @@
    "mv": 5,
    "type": "Legendary Artifact"
   },
-  "Vile Redeemer": {
-   "drawn": 59,
-   "played": 43,
-   "played_share": 0.729,
-   "median_turn": 10,
-   "win_rate_drawn": 0.254,
-   "win_rate_not_drawn": 0.234,
-   "held_at_loss": 17,
-   "mv": 3,
-   "type": "Creature - Eldrazi"
-  },
   "Ulamog's Nullifier": {
    "drawn": 53,
    "played": 49,
@@ -541,28 +530,6 @@
    "held_at_loss": 3,
    "mv": 4,
    "type": "Creature - Eldrazi Processor"
-  },
-  "Endbringer": {
-   "drawn": 58,
-   "played": 50,
-   "played_share": 0.862,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.276,
-   "win_rate_not_drawn": 0.225,
-   "held_at_loss": 9,
-   "mv": 6,
-   "type": "Creature - Eldrazi"
-  },
-  "Return of the Wildspeaker": {
-   "drawn": 39,
-   "played": 36,
-   "played_share": 0.923,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.256,
-   "win_rate_not_drawn": 0.236,
-   "held_at_loss": 3,
-   "mv": 5,
-   "type": "Instant"
   },
   "Sol Ring": {
    "drawn": 51,
@@ -575,17 +542,6 @@
    "mv": 1,
    "type": "Artifact"
   },
-  "Inversion Behemoth": {
-   "drawn": 49,
-   "played": 42,
-   "played_share": 0.857,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.265,
-   "win_rate_not_drawn": 0.232,
-   "held_at_loss": 8,
-   "mv": 4,
-   "type": "Creature - Eldrazi"
-  },
   "Azlask, the Swelling Scourge": {
    "drawn": 48,
    "played": 42,
@@ -597,27 +553,16 @@
    "mv": 3,
    "type": "Legendary Creature - Eldrazi"
   },
-  "Eldrazi Monument": {
-   "drawn": 42,
-   "played": 29,
-   "played_share": 0.69,
-   "median_turn": 9,
-   "win_rate_drawn": 0.31,
-   "win_rate_not_drawn": 0.222,
-   "held_at_loss": 10,
-   "mv": 5,
-   "type": "Artifact"
-  },
-  "Wastescape Battlemage": {
-   "drawn": 51,
-   "played": 51,
-   "played_share": 1.0,
-   "median_turn": 6,
-   "win_rate_drawn": 0.235,
-   "win_rate_not_drawn": 0.242,
-   "held_at_loss": 6,
-   "mv": 2,
-   "type": "Creature - Eldrazi Wizard"
+  "Endbringer": {
+   "drawn": 58,
+   "played": 50,
+   "played_share": 0.862,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.276,
+   "win_rate_not_drawn": 0.225,
+   "held_at_loss": 9,
+   "mv": 6,
+   "type": "Creature - Eldrazi"
   },
   "Chittering Dispatcher": {
    "drawn": 54,
@@ -630,16 +575,60 @@
    "mv": 3,
    "type": "Creature - Eldrazi Drone"
   },
-  "Rishkar's Expertise": {
-   "drawn": 41,
-   "played": 11,
-   "played_share": 0.268,
+  "Inversion Behemoth": {
+   "drawn": 49,
+   "played": 42,
+   "played_share": 0.857,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.265,
+   "win_rate_not_drawn": 0.232,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Creature - Eldrazi"
+  },
+  "Wastescape Battlemage": {
+   "drawn": 51,
+   "played": 51,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.235,
+   "win_rate_not_drawn": 0.242,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Eldrazi Wizard"
+  },
+  "Return of the Wildspeaker": {
+   "drawn": 39,
+   "played": 36,
+   "played_share": 0.923,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.256,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 3,
+   "mv": 5,
+   "type": "Instant"
+  },
+  "Eldrazi Monument": {
+   "drawn": 42,
+   "played": 29,
+   "played_share": 0.69,
+   "median_turn": 9,
+   "win_rate_drawn": 0.31,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 10,
+   "mv": 5,
+   "type": "Artifact"
+  },
+  "Vile Redeemer": {
+   "drawn": 59,
+   "played": 43,
+   "played_share": 0.729,
    "median_turn": 10,
-   "win_rate_drawn": 0.195,
-   "win_rate_not_drawn": 0.252,
-   "held_at_loss": 22,
-   "mv": 6,
-   "type": "Sorcery"
+   "win_rate_drawn": 0.254,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 17,
+   "mv": 3,
+   "type": "Creature - Eldrazi"
   },
   "Elder Deep-Fiend": {
    "drawn": 39,
@@ -652,38 +641,16 @@
    "mv": 8,
    "type": "Creature - Eldrazi Octopus"
   },
-  "Crib Swap": {
-   "drawn": 56,
-   "played": 52,
-   "played_share": 0.929,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.214,
-   "win_rate_not_drawn": 0.25,
-   "held_at_loss": 3,
-   "mv": 3,
-   "type": "Kindred Instant - Shapeshifter"
-  },
-  "Artisan of Kozilek": {
-   "drawn": 50,
-   "played": 36,
-   "played_share": 0.72,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.24,
-   "win_rate_not_drawn": 0.24,
-   "held_at_loss": 9,
-   "mv": 9,
-   "type": "Creature - Eldrazi"
-  },
-  "Mutated Cultist": {
-   "drawn": 66,
-   "played": 57,
-   "played_share": 0.864,
-   "median_turn": 7,
-   "win_rate_drawn": 0.273,
-   "win_rate_not_drawn": 0.224,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Creature - Eldrazi Horror"
+  "Rishkar's Expertise": {
+   "drawn": 41,
+   "played": 11,
+   "played_share": 0.268,
+   "median_turn": 10,
+   "win_rate_drawn": 0.195,
+   "win_rate_not_drawn": 0.252,
+   "held_at_loss": 22,
+   "mv": 6,
+   "type": "Sorcery"
   },
   "Awakening Zone": {
    "drawn": 49,
@@ -696,6 +663,17 @@
    "mv": 3,
    "type": "Enchantment"
   },
+  "Artisan of Kozilek": {
+   "drawn": 50,
+   "played": 36,
+   "played_share": 0.72,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.24,
+   "win_rate_not_drawn": 0.24,
+   "held_at_loss": 9,
+   "mv": 9,
+   "type": "Creature - Eldrazi"
+  },
   "All Is Dust": {
    "drawn": 41,
    "played": 33,
@@ -706,6 +684,28 @@
    "held_at_loss": 3,
    "mv": 7,
    "type": "Kindred Sorcery - Eldrazi"
+  },
+  "Crib Swap": {
+   "drawn": 56,
+   "played": 52,
+   "played_share": 0.929,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.214,
+   "win_rate_not_drawn": 0.25,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Kindred Instant - Shapeshifter"
+  },
+  "Mutated Cultist": {
+   "drawn": 66,
+   "played": 57,
+   "played_share": 0.864,
+   "median_turn": 7,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.224,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Creature - Eldrazi Horror"
   },
   "Ulamog's Dreadsire": {
    "drawn": 47,
@@ -729,16 +729,16 @@
    "mv": 4,
    "type": "Creature - Eldrazi"
   },
-  "Herald's Horn": {
-   "drawn": 41,
-   "played": 34,
-   "played_share": 0.829,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.317,
-   "win_rate_not_drawn": 0.22,
-   "held_at_loss": 5,
-   "mv": 3,
-   "type": "Artifact"
+  "Titans' Vanguard": {
+   "drawn": 49,
+   "played": 37,
+   "played_share": 0.755,
+   "median_turn": 10,
+   "win_rate_drawn": 0.347,
+   "win_rate_not_drawn": 0.205,
+   "held_at_loss": 11,
+   "mv": 5,
+   "type": "Creature - Eldrazi"
   },
   "Ancient Stirrings": {
    "drawn": 50,
@@ -751,16 +751,16 @@
    "mv": 1,
    "type": "Sorcery"
   },
-  "Titans' Vanguard": {
-   "drawn": 49,
-   "played": 37,
-   "played_share": 0.755,
-   "median_turn": 10,
-   "win_rate_drawn": 0.347,
-   "win_rate_not_drawn": 0.205,
-   "held_at_loss": 11,
-   "mv": 5,
-   "type": "Creature - Eldrazi"
+  "Herald's Horn": {
+   "drawn": 41,
+   "played": 34,
+   "played_share": 0.829,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.317,
+   "win_rate_not_drawn": 0.22,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Artifact"
   },
   "Hedron Archive": {
    "drawn": 52,
@@ -806,17 +806,6 @@
    "mv": 2,
    "type": "Instant"
   },
-  "Eldrazi Confluence": {
-   "drawn": 53,
-   "played": 31,
-   "played_share": 0.585,
-   "median_turn": 8,
-   "win_rate_drawn": 0.302,
-   "win_rate_not_drawn": 0.218,
-   "held_at_loss": 14,
-   "mv": 4,
-   "type": "Instant"
-  },
   "Garruk's Uprising": {
    "drawn": 46,
    "played": 32,
@@ -827,6 +816,17 @@
    "held_at_loss": 9,
    "mv": 3,
    "type": "Enchantment"
+  },
+  "Eldrazi Confluence": {
+   "drawn": 53,
+   "played": 31,
+   "played_share": 0.585,
+   "median_turn": 8,
+   "win_rate_drawn": 0.302,
+   "win_rate_not_drawn": 0.218,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Instant"
   },
   "Dreamstone Hedron": {
    "drawn": 37,

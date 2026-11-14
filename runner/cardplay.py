@@ -56,7 +56,7 @@ def quartile(xs, p):
 def collect(rd, deck_id, arm, lands):
     dirs, arm = game_dirs(rd, arm)
     C = collections.defaultdict(lambda: {'drawn': 0, 'played': 0, 'turns': [], 'same': 0})
-    games = 0; info = {}
+    games = 0; info = {}; halves = {}
     for gd in dirs:
         rj = os.path.join(gd, 'run.json')
         if not os.path.exists(rj):
@@ -69,6 +69,9 @@ def collect(rd, deck_id, arm, lands):
         commanders = set(mine[0].get('commanders') or [])
         for c in mine[0]['cards']:
             info[c['name']] = c
+            if ' // ' in c['name']:                     # a split card is cast by the name of one half
+                for half in c['name'].split(' // '):
+                    halves[half] = c['name']
         for g in run['games']:
             evf = os.path.join(gd, 'games', os.path.basename(g['events']))
             if not os.path.exists(evf):
@@ -84,7 +87,7 @@ def collect(rd, deck_id, arm, lands):
                     for c in me.get('hand') or []:
                         first_in_hand.setdefault(c, own)
                 elif k == 'cast' and e.get('seat') == seat and e.get('spell') and not e.get('copy') and e.get('from') == 'Hand':
-                    first_cast.setdefault(e['card'], own)
+                    first_cast.setdefault(halves.get(e['card'], e['card']), own)
                 elif k == 'land' and e.get('seat') == seat and lands:
                     first_cast.setdefault(e['card'], own)
             for c in set(first_in_hand) | set(first_cast):

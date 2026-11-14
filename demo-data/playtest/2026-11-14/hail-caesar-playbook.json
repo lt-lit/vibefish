@@ -203,49 +203,16 @@
    "mv": 5,
    "type": "Enchantment"
   },
-  "Pitiless Plunderer": {
-   "drawn": 42,
-   "played": 30,
-   "played_share": 0.714,
-   "median_turn": 8.5,
-   "win_rate_drawn": 0.262,
-   "win_rate_not_drawn": 0.215,
-   "held_at_loss": 6,
-   "mv": 4,
-   "type": "Creature - Human Pirate"
-  },
-  "Colonel Autumn": {
-   "drawn": 34,
-   "played": 29,
-   "played_share": 0.853,
+  "Mysterious Stranger": {
+   "drawn": 48,
+   "played": 15,
+   "played_share": 0.312,
    "median_turn": 7,
-   "win_rate_drawn": 0.235,
-   "win_rate_not_drawn": 0.223,
-   "held_at_loss": 2,
-   "mv": 3,
-   "type": "Legendary Creature - Human Soldier"
-  },
-  "Yes Man, Personal Securitron": {
-   "drawn": 44,
-   "played": 31,
-   "played_share": 0.705,
-   "median_turn": 8,
-   "win_rate_drawn": 0.205,
-   "win_rate_not_drawn": 0.231,
-   "held_at_loss": 9,
-   "mv": 3,
-   "type": "Legendary Artifact Creature - Robot"
-  },
-  "Sol Ring": {
-   "drawn": 43,
-   "played": 43,
-   "played_share": 1.0,
-   "median_turn": 2,
-   "win_rate_drawn": 0.326,
-   "win_rate_not_drawn": 0.197,
-   "held_at_loss": 1,
-   "mv": 1,
-   "type": "Artifact"
+   "win_rate_drawn": 0.271,
+   "win_rate_not_drawn": 0.211,
+   "held_at_loss": 22,
+   "mv": 4,
+   "type": "Creature - Human Rogue"
   },
   "Talisman of Indulgence": {
    "drawn": 48,
@@ -258,16 +225,16 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Fervent Charge": {
-   "drawn": 50,
-   "played": 46,
-   "played_share": 0.92,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.3,
-   "win_rate_not_drawn": 0.2,
-   "held_at_loss": 4,
-   "mv": 4,
-   "type": "Enchantment"
+  "Colonel Autumn": {
+   "drawn": 34,
+   "played": 29,
+   "played_share": 0.853,
+   "median_turn": 7,
+   "win_rate_drawn": 0.235,
+   "win_rate_not_drawn": 0.223,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Legendary Creature - Human Soldier"
   },
   "Vault 11: Voter's Dilemma": {
    "drawn": 40,
@@ -280,16 +247,38 @@
    "mv": 4,
    "type": "Enchantment - Saga"
   },
-  "Heroic Reinforcements": {
-   "drawn": 41,
-   "played": 36,
-   "played_share": 0.878,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.22,
-   "win_rate_not_drawn": 0.226,
+  "Deadly Dispute": {
+   "drawn": 47,
+   "played": 43,
+   "played_share": 0.915,
+   "median_turn": 7,
+   "win_rate_drawn": 0.17,
+   "win_rate_not_drawn": 0.242,
    "held_at_loss": 5,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Fervent Charge": {
+   "drawn": 50,
+   "played": 46,
+   "played_share": 0.92,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.2,
+   "held_at_loss": 4,
    "mv": 4,
-   "type": "Sorcery"
+   "type": "Enchantment"
+  },
+  "Sol Ring": {
+   "drawn": 43,
+   "played": 43,
+   "played_share": 1.0,
+   "median_turn": 2,
+   "win_rate_drawn": 0.326,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Artifact"
   },
   "Talisman of Hierarchy": {
    "drawn": 46,
@@ -302,38 +291,27 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Deadly Dispute": {
-   "drawn": 47,
-   "played": 43,
-   "played_share": 0.915,
-   "median_turn": 7,
-   "win_rate_drawn": 0.17,
-   "win_rate_not_drawn": 0.242,
-   "held_at_loss": 5,
-   "mv": 2,
-   "type": "Instant"
-  },
-  "Morbid Opportunist": {
-   "drawn": 42,
-   "played": 33,
-   "played_share": 0.786,
+  "Yes Man, Personal Securitron": {
+   "drawn": 44,
+   "played": 31,
+   "played_share": 0.705,
    "median_turn": 8,
-   "win_rate_drawn": 0.214,
-   "win_rate_not_drawn": 0.228,
+   "win_rate_drawn": 0.205,
+   "win_rate_not_drawn": 0.231,
    "held_at_loss": 9,
    "mv": 3,
-   "type": "Creature - Human Rogue"
+   "type": "Legendary Artifact Creature - Robot"
   },
-  "Mysterious Stranger": {
-   "drawn": 48,
-   "played": 15,
-   "played_share": 0.312,
-   "median_turn": 7,
-   "win_rate_drawn": 0.271,
-   "win_rate_not_drawn": 0.211,
-   "held_at_loss": 22,
+  "Pitiless Plunderer": {
+   "drawn": 42,
+   "played": 30,
+   "played_share": 0.714,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 6,
    "mv": 4,
-   "type": "Creature - Human Rogue"
+   "type": "Creature - Human Pirate"
   },
   "Secure the Wastes": {
    "drawn": 40,
@@ -346,17 +324,6 @@
    "mv": 1,
    "type": "Instant"
   },
-  "General's Enforcer": {
-   "drawn": 45,
-   "played": 40,
-   "played_share": 0.889,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.289,
-   "win_rate_not_drawn": 0.206,
-   "held_at_loss": 5,
-   "mv": 2,
-   "type": "Creature - Human Soldier"
-  },
   "Captain of the Watch": {
    "drawn": 52,
    "played": 43,
@@ -368,16 +335,71 @@
    "mv": 6,
    "type": "Creature - Human Soldier"
   },
-  "Ruthless Radrat": {
-   "drawn": 44,
+  "General's Enforcer": {
+   "drawn": 45,
    "played": 40,
-   "played_share": 0.909,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.273,
-   "win_rate_not_drawn": 0.212,
-   "held_at_loss": 4,
+   "played_share": 0.889,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.289,
+   "win_rate_not_drawn": 0.206,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Creature - Human Soldier"
+  },
+  "Heroic Reinforcements": {
+   "drawn": 41,
+   "played": 36,
+   "played_share": 0.878,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.22,
+   "win_rate_not_drawn": 0.226,
+   "held_at_loss": 5,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Morbid Opportunist": {
+   "drawn": 42,
+   "played": 33,
+   "played_share": 0.786,
+   "median_turn": 8,
+   "win_rate_drawn": 0.214,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 9,
    "mv": 3,
-   "type": "Creature - Rat Mutant"
+   "type": "Creature - Human Rogue"
+  },
+  "Black Market": {
+   "drawn": 43,
+   "played": 25,
+   "played_share": 0.581,
+   "median_turn": 9,
+   "win_rate_drawn": 0.279,
+   "win_rate_not_drawn": 0.21,
+   "held_at_loss": 14,
+   "mv": 5,
+   "type": "Enchantment"
+  },
+  "Mr. House, President and CEO": {
+   "drawn": 43,
+   "played": 34,
+   "played_share": 0.791,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.256,
+   "win_rate_not_drawn": 0.217,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Legendary Artifact Creature - Human"
+  },
+  "MacCready, Lamplight Mayor": {
+   "drawn": 43,
+   "played": 40,
+   "played_share": 0.93,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.349,
+   "win_rate_not_drawn": 0.191,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Legendary Creature - Human Advisor"
   },
   "Butch DeLoria, Tunnel Snake": {
    "drawn": 43,
@@ -389,6 +411,39 @@
    "held_at_loss": 4,
    "mv": 2,
    "type": "Legendary Creature - Human Rogue"
+  },
+  "Charisma Bobblehead": {
+   "drawn": 45,
+   "played": 34,
+   "played_share": 0.756,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.232,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Artifact - Bobblehead"
+  },
+  "Vault 75: Middle School": {
+   "drawn": 46,
+   "played": 31,
+   "played_share": 0.674,
+   "median_turn": 9,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.208,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Enchantment - Saga"
+  },
+  "Ruthless Radrat": {
+   "drawn": 44,
+   "played": 40,
+   "played_share": 0.909,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.212,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Creature - Rat Mutant"
   },
   "Lethal Scheme": {
    "drawn": 42,
@@ -412,60 +467,16 @@
    "mv": 7,
    "type": "Sorcery"
   },
-  "MacCready, Lamplight Mayor": {
-   "drawn": 43,
-   "played": 40,
-   "played_share": 0.93,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.349,
-   "win_rate_not_drawn": 0.191,
-   "held_at_loss": 1,
-   "mv": 2,
-   "type": "Legendary Creature - Human Advisor"
-  },
-  "Vault 75: Middle School": {
-   "drawn": 46,
-   "played": 31,
-   "played_share": 0.674,
-   "median_turn": 9,
-   "win_rate_drawn": 0.283,
-   "win_rate_not_drawn": 0.208,
-   "held_at_loss": 8,
+  "V.A.T.S.": {
+   "drawn": 41,
+   "played": 38,
+   "played_share": 0.927,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.39,
+   "win_rate_not_drawn": 0.182,
+   "held_at_loss": 2,
    "mv": 4,
-   "type": "Enchantment - Saga"
-  },
-  "Mr. House, President and CEO": {
-   "drawn": 43,
-   "played": 34,
-   "played_share": 0.791,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.256,
-   "win_rate_not_drawn": 0.217,
-   "held_at_loss": 8,
-   "mv": 3,
-   "type": "Legendary Artifact Creature - Human"
-  },
-  "Black Market": {
-   "drawn": 43,
-   "played": 25,
-   "played_share": 0.581,
-   "median_turn": 9,
-   "win_rate_drawn": 0.279,
-   "win_rate_not_drawn": 0.21,
-   "held_at_loss": 14,
-   "mv": 5,
-   "type": "Enchantment"
-  },
-  "Charisma Bobblehead": {
-   "drawn": 45,
-   "played": 34,
-   "played_share": 0.756,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.2,
-   "win_rate_not_drawn": 0.232,
-   "held_at_loss": 8,
-   "mv": 3,
-   "type": "Artifact - Bobblehead"
+   "type": "Instant"
   },
   "Elder Arthur Maxson": {
    "drawn": 43,
@@ -475,6 +486,17 @@
    "win_rate_drawn": 0.233,
    "win_rate_not_drawn": 0.223,
    "held_at_loss": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Human Knight"
+  },
+  "Paladin Elizabeth Taggerdy": {
+   "drawn": 47,
+   "played": 41,
+   "played_share": 0.872,
+   "median_turn": 8,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.235,
+   "held_at_loss": 7,
    "mv": 3,
    "type": "Legendary Creature - Human Knight"
   },
@@ -489,27 +511,16 @@
    "mv": 3,
    "type": "Legendary Creature - Human Soldier"
   },
-  "Paladin Elizabeth Taggerdy": {
-   "drawn": 47,
-   "played": 41,
-   "played_share": 0.872,
-   "median_turn": 8,
-   "win_rate_drawn": 0.191,
-   "win_rate_not_drawn": 0.235,
-   "held_at_loss": 7,
-   "mv": 3,
-   "type": "Legendary Creature - Human Knight"
-  },
-  "Assemble the Legion": {
+  "Luck Bobblehead": {
    "drawn": 42,
-   "played": 40,
-   "played_share": 0.952,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.262,
-   "win_rate_not_drawn": 0.215,
-   "held_at_loss": 4,
-   "mv": 5,
-   "type": "Enchantment"
+   "played": 33,
+   "played_share": 0.786,
+   "median_turn": 9,
+   "win_rate_drawn": 0.19,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Artifact - Bobblehead"
   },
   "Entrapment Maneuver": {
    "drawn": 49,
@@ -522,49 +533,16 @@
    "mv": 4,
    "type": "Instant"
   },
-  "V.A.T.S.": {
-   "drawn": 41,
-   "played": 38,
-   "played_share": 0.927,
-   "median_turn": 6.0,
-   "win_rate_drawn": 0.39,
-   "win_rate_not_drawn": 0.182,
-   "held_at_loss": 2,
-   "mv": 4,
-   "type": "Instant"
-  },
-  "Luck Bobblehead": {
+  "Assemble the Legion": {
    "drawn": 42,
-   "played": 33,
-   "played_share": 0.786,
-   "median_turn": 9,
-   "win_rate_drawn": 0.19,
-   "win_rate_not_drawn": 0.234,
-   "held_at_loss": 3,
-   "mv": 3,
-   "type": "Artifact - Bobblehead"
-  },
-  "The Nipton Lottery": {
-   "drawn": 36,
-   "played": 21,
-   "played_share": 0.583,
-   "median_turn": 9,
-   "win_rate_drawn": 0.278,
-   "win_rate_not_drawn": 0.213,
-   "held_at_loss": 9,
-   "mv": 4,
-   "type": "Sorcery"
-  },
-  "Arcane Signet": {
-   "drawn": 46,
-   "played": 45,
-   "played_share": 0.978,
-   "median_turn": 5,
-   "win_rate_drawn": 0.261,
-   "win_rate_not_drawn": 0.214,
-   "held_at_loss": 1,
-   "mv": 2,
-   "type": "Artifact"
+   "played": 40,
+   "played_share": 0.952,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 4,
+   "mv": 5,
+   "type": "Enchantment"
   },
   "Legate Lanius, Caesar's Ace": {
    "drawn": 32,
@@ -577,6 +555,17 @@
    "mv": 4,
    "type": "Legendary Creature - Human Soldier"
   },
+  "Arcane Signet": {
+   "drawn": 46,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 5,
+   "win_rate_drawn": 0.261,
+   "win_rate_not_drawn": 0.214,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
   "ED-E, Lonesome Eyebot": {
    "drawn": 37,
    "played": 31,
@@ -587,6 +576,50 @@
    "held_at_loss": 4,
    "mv": 3,
    "type": "Legendary Artifact Creature - Robot"
+  },
+  "The Nipton Lottery": {
+   "drawn": 36,
+   "played": 21,
+   "played_share": 0.583,
+   "median_turn": 9,
+   "win_rate_drawn": 0.278,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 9,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Wild Wasteland": {
+   "drawn": 49,
+   "played": 29,
+   "played_share": 0.592,
+   "median_turn": 9,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.205,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Keeper of the Accord": {
+   "drawn": 41,
+   "played": 31,
+   "played_share": 0.756,
+   "median_turn": 7,
+   "win_rate_drawn": 0.341,
+   "win_rate_not_drawn": 0.195,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Creature - Human Soldier"
+  },
+  "Sierra, Nuka's Biggest Fan": {
+   "drawn": 47,
+   "played": 31,
+   "played_share": 0.66,
+   "median_turn": 9,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.216,
+   "held_at_loss": 12,
+   "mv": 4,
+   "type": "Legendary Creature - Human Citizen"
   },
   "Impassioned Orator": {
    "drawn": 45,
@@ -610,28 +643,6 @@
    "mv": 3,
    "type": "Legendary Creature - Human Advisor"
   },
-  "Sierra, Nuka's Biggest Fan": {
-   "drawn": 47,
-   "played": 31,
-   "played_share": 0.66,
-   "median_turn": 9,
-   "win_rate_drawn": 0.255,
-   "win_rate_not_drawn": 0.216,
-   "held_at_loss": 12,
-   "mv": 4,
-   "type": "Legendary Creature - Human Citizen"
-  },
-  "Wild Wasteland": {
-   "drawn": 49,
-   "played": 29,
-   "played_share": 0.592,
-   "median_turn": 9,
-   "win_rate_drawn": 0.286,
-   "win_rate_not_drawn": 0.205,
-   "held_at_loss": 8,
-   "mv": 3,
-   "type": "Enchantment"
-  },
   "Bastion of Remembrance": {
    "drawn": 40,
    "played": 40,
@@ -642,17 +653,6 @@
    "held_at_loss": 3,
    "mv": 3,
    "type": "Enchantment"
-  },
-  "Keeper of the Accord": {
-   "drawn": 41,
-   "played": 31,
-   "played_share": 0.756,
-   "median_turn": 7,
-   "win_rate_drawn": 0.341,
-   "win_rate_not_drawn": 0.195,
-   "held_at_loss": 8,
-   "mv": 4,
-   "type": "Creature - Human Soldier"
   },
   "Wasteland Raider": {
    "drawn": 40,
@@ -776,12 +776,12 @@
    "type": "Creature - Human Noble"
   },
   "Wear // Tear": {
-   "drawn": 27,
-   "played": 9,
-   "played_share": 0.333,
-   "median_turn": 8,
-   "win_rate_drawn": 0.259,
-   "win_rate_not_drawn": 0.22,
+   "drawn": 43,
+   "played": 41,
+   "played_share": 0.953,
+   "median_turn": 6,
+   "win_rate_drawn": 0.279,
+   "win_rate_not_drawn": 0.21,
    "held_at_loss": 1,
    "mv": 3,
    "type": "Instant"

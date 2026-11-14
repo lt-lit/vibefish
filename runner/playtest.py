@@ -88,6 +88,7 @@ def collect(run_dirs, arm=None):
     opp = collections.defaultdict(collections.Counter)
     cards = collections.defaultdict(lambda: {'drawn': 0, 'played': 0, 'turns': [], 'won_drawn': 0, 'held_at_loss': 0})
     info = {}
+    halves = {}
     commanders = set()
     pilot = None
     opp_pilots = collections.Counter()
@@ -114,6 +115,9 @@ def collect(run_dirs, arm=None):
             ids = {d['seat']: d['id'] for d in decks}
             for c in me_d['cards']:
                 info[c['name']] = c
+                if ' // ' in c['name']:                 # a split card is cast by the name of one half
+                    for half in c['name'].split(' // '):
+                        halves[half] = c['name']
             commanders |= set(me_d.get('commanders') or [])
             pb = me_d.get('playbook')
             pilot = pilot or ({'playbook': os.path.basename(pb.get('file') or ''), 'version': pb.get('version'),
@@ -172,7 +176,7 @@ def collect(run_dirs, arm=None):
                         if cmd_first is None:
                             cmd_first = own
                     elif e.get('from') == 'Hand':
-                        first_cast.setdefault(e['card'], own)
+                        first_cast.setdefault(halves.get(e['card'], e['card']), own)
                 elif k == 'damage':
                     if e['seat'] == fs:
                         n['taken'] += e['amount']; taken.append((e['t'], e.get('source_seat'), e['amount']))

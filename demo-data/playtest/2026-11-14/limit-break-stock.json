@@ -178,50 +178,6 @@
   "of_them_affordable": 3.33
  },
  "cards": {
-  "SOLDIER Military Program": {
-   "drawn": 61,
-   "played": 39,
-   "played_share": 0.639,
-   "median_turn": 9,
-   "win_rate_drawn": 0.197,
-   "win_rate_not_drawn": 0.158,
-   "held_at_loss": 15,
-   "mv": 3,
-   "type": "Enchantment"
-  },
-  "Dispatch": {
-   "drawn": 38,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.158,
-   "win_rate_not_drawn": 0.173,
-   "held_at_loss": 27,
-   "mv": 1,
-   "type": "Instant"
-  },
-  "Yuffie, Materia Hunter": {
-   "drawn": 47,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.255,
-   "win_rate_not_drawn": 0.144,
-   "held_at_loss": 21,
-   "mv": 3,
-   "type": "Legendary Creature - Human Ninja"
-  },
-  "Nature's Lore": {
-   "drawn": 47,
-   "played": 45,
-   "played_share": 0.957,
-   "median_turn": 6,
-   "win_rate_drawn": 0.213,
-   "win_rate_not_drawn": 0.157,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Sorcery"
-  },
   "Zack Fair": {
    "drawn": 47,
    "played": 43,
@@ -244,6 +200,17 @@
    "mv": 3,
    "type": "Legendary Creature - Assassin"
   },
+  "Nature's Lore": {
+   "drawn": 47,
+   "played": 45,
+   "played_share": 0.957,
+   "median_turn": 6,
+   "win_rate_drawn": 0.213,
+   "win_rate_not_drawn": 0.157,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Sorcery"
+  },
   "Red XIII, Proud Warrior": {
    "drawn": 54,
    "played": 28,
@@ -255,104 +222,38 @@
    "mv": 3,
    "type": "Legendary Creature - Beast Warrior"
   },
-  "Wrecking Ball Arm": {
-   "drawn": 53,
-   "played": 49,
-   "played_share": 0.925,
-   "median_turn": 7,
-   "win_rate_drawn": 0.264,
-   "win_rate_not_drawn": 0.136,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Legendary Artifact - Equipment"
-  },
-  "Cid, Freeflier Pilot": {
-   "drawn": 46,
-   "played": 41,
-   "played_share": 0.891,
-   "median_turn": 6,
-   "win_rate_drawn": 0.326,
-   "win_rate_not_drawn": 0.123,
-   "held_at_loss": 5,
-   "mv": 2,
-   "type": "Legendary Creature - Human Warrior Pilot"
-  },
-  "Mask of Memory": {
-   "drawn": 50,
-   "played": 47,
-   "played_share": 0.94,
-   "median_turn": 5,
-   "win_rate_drawn": 0.2,
-   "win_rate_not_drawn": 0.16,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Artifact - Equipment"
-  },
-  "Skullclamp": {
-   "drawn": 52,
-   "played": 49,
-   "played_share": 0.942,
-   "median_turn": 7,
-   "win_rate_drawn": 0.212,
-   "win_rate_not_drawn": 0.155,
-   "held_at_loss": 3,
-   "mv": 1,
-   "type": "Artifact - Equipment"
-  },
-  "Champion's Helm": {
-   "drawn": 50,
-   "played": 47,
-   "played_share": 0.94,
-   "median_turn": 6,
-   "win_rate_drawn": 0.22,
-   "win_rate_not_drawn": 0.153,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Artifact - Equipment"
-  },
-  "Barret Wallace": {
-   "drawn": 53,
-   "played": 45,
-   "played_share": 0.849,
-   "median_turn": 8,
-   "win_rate_drawn": 0.208,
-   "win_rate_not_drawn": 0.156,
-   "held_at_loss": 11,
-   "mv": 4,
-   "type": "Legendary Creature - Human Rebel"
-  },
-  "Professor Hojo": {
-   "drawn": 51,
-   "played": 43,
-   "played_share": 0.843,
-   "median_turn": 5,
-   "win_rate_drawn": 0.196,
-   "win_rate_not_drawn": 0.161,
-   "held_at_loss": 5,
-   "mv": 2,
-   "type": "Legendary Creature - Human Scientist"
-  },
-  "Ultimate Magic: Meteor": {
-   "drawn": 30,
+  "Yuffie, Materia Hunter": {
+   "drawn": 47,
    "played": 0,
    "played_share": 0.0,
    "median_turn": null,
-   "win_rate_drawn": 0.133,
-   "win_rate_not_drawn": 0.176,
-   "held_at_loss": 8,
-   "mv": 6,
-   "type": "Sorcery"
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.144,
+   "held_at_loss": 21,
+   "mv": 3,
+   "type": "Legendary Creature - Human Ninja"
   },
-  "Arcane Signet": {
+  "SOLDIER Military Program": {
    "drawn": 61,
-   "played": 53,
-   "played_share": 0.869,
-   "median_turn": 7,
+   "played": 39,
+   "played_share": 0.639,
+   "median_turn": 9,
    "win_rate_drawn": 0.197,
    "win_rate_not_drawn": 0.158,
-   "held_at_loss": 5,
-   "mv": 2,
-   "type": "Artifact"
+   "held_at_loss": 15,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Dispatch": {
+   "drawn": 38,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.158,
+   "win_rate_not_drawn": 0.173,
+   "held_at_loss": 27,
+   "mv": 1,
+   "type": "Instant"
   },
   "Heidegger, Shinra Executive": {
    "drawn": 61,
@@ -387,27 +288,104 @@
    "mv": 6,
    "type": "Sorcery"
   },
-  "Unfinished Business": {
-   "drawn": 48,
+  "Wrecking Ball Arm": {
+   "drawn": 53,
+   "played": 49,
+   "played_share": 0.925,
+   "median_turn": 7,
+   "win_rate_drawn": 0.264,
+   "win_rate_not_drawn": 0.136,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Legendary Artifact - Equipment"
+  },
+  "Cid, Freeflier Pilot": {
+   "drawn": 46,
+   "played": 41,
+   "played_share": 0.891,
+   "median_turn": 6,
+   "win_rate_drawn": 0.326,
+   "win_rate_not_drawn": 0.123,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Legendary Creature - Human Warrior Pilot"
+  },
+  "Champion's Helm": {
+   "drawn": 50,
+   "played": 47,
+   "played_share": 0.94,
+   "median_turn": 6,
+   "win_rate_drawn": 0.22,
+   "win_rate_not_drawn": 0.153,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Artifact - Equipment"
+  },
+  "Ultimate Magic: Meteor": {
+   "drawn": 30,
    "played": 0,
    "played_share": 0.0,
    "median_turn": null,
-   "win_rate_drawn": 0.25,
-   "win_rate_not_drawn": 0.145,
-   "held_at_loss": 31,
-   "mv": 5,
+   "win_rate_drawn": 0.133,
+   "win_rate_not_drawn": 0.176,
+   "held_at_loss": 8,
+   "mv": 6,
    "type": "Sorcery"
   },
-  "Harmonize": {
-   "drawn": 48,
-   "played": 24,
-   "played_share": 0.5,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.167,
-   "win_rate_not_drawn": 0.171,
-   "held_at_loss": 19,
+  "Barret Wallace": {
+   "drawn": 53,
+   "played": 45,
+   "played_share": 0.849,
+   "median_turn": 8,
+   "win_rate_drawn": 0.208,
+   "win_rate_not_drawn": 0.156,
+   "held_at_loss": 11,
    "mv": 4,
-   "type": "Sorcery"
+   "type": "Legendary Creature - Human Rebel"
+  },
+  "Professor Hojo": {
+   "drawn": 51,
+   "played": 43,
+   "played_share": 0.843,
+   "median_turn": 5,
+   "win_rate_drawn": 0.196,
+   "win_rate_not_drawn": 0.161,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Legendary Creature - Human Scientist"
+  },
+  "Arcane Signet": {
+   "drawn": 61,
+   "played": 53,
+   "played_share": 0.869,
+   "median_turn": 7,
+   "win_rate_drawn": 0.197,
+   "win_rate_not_drawn": 0.158,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Mask of Memory": {
+   "drawn": 50,
+   "played": 47,
+   "played_share": 0.94,
+   "median_turn": 5,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.16,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Artifact - Equipment"
+  },
+  "Skullclamp": {
+   "drawn": 52,
+   "played": 49,
+   "played_share": 0.942,
+   "median_turn": 7,
+   "win_rate_drawn": 0.212,
+   "win_rate_not_drawn": 0.155,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Artifact - Equipment"
   },
   "Bronze Guardian": {
    "drawn": 41,
@@ -420,27 +398,49 @@
    "mv": 5,
    "type": "Artifact Creature - Golem"
   },
-  "Summoning Materia": {
-   "drawn": 60,
-   "played": 54,
-   "played_share": 0.9,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.25,
-   "win_rate_not_drawn": 0.136,
-   "held_at_loss": 10,
-   "mv": 3,
-   "type": "Artifact - Equipment"
-  },
-  "Cait Sith, Fortune Teller": {
-   "drawn": 47,
-   "played": 39,
-   "played_share": 0.83,
-   "median_turn": 8,
-   "win_rate_drawn": 0.234,
-   "win_rate_not_drawn": 0.15,
-   "held_at_loss": 14,
+  "Harmonize": {
+   "drawn": 48,
+   "played": 24,
+   "played_share": 0.5,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.171,
+   "held_at_loss": 19,
    "mv": 4,
-   "type": "Legendary Artifact Creature - Cat Moogle"
+   "type": "Sorcery"
+  },
+  "Unfinished Business": {
+   "drawn": 48,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.145,
+   "held_at_loss": 31,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Avalanche of Sector 7": {
+   "drawn": 52,
+   "played": 47,
+   "played_share": 0.904,
+   "median_turn": 7,
+   "win_rate_drawn": 0.269,
+   "win_rate_not_drawn": 0.135,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Legendary Creature - Human Rebel"
+  },
+  "Furious Rise": {
+   "drawn": 43,
+   "played": 31,
+   "played_share": 0.721,
+   "median_turn": 8,
+   "win_rate_drawn": 0.279,
+   "win_rate_not_drawn": 0.14,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Enchantment"
   },
   "Bastion Protector": {
    "drawn": 48,
@@ -453,16 +453,27 @@
    "mv": 3,
    "type": "Creature - Human Soldier"
   },
-  "Avalanche of Sector 7": {
-   "drawn": 52,
-   "played": 47,
-   "played_share": 0.904,
-   "median_turn": 7,
-   "win_rate_drawn": 0.269,
-   "win_rate_not_drawn": 0.135,
-   "held_at_loss": 5,
+  "Cait Sith, Fortune Teller": {
+   "drawn": 47,
+   "played": 39,
+   "played_share": 0.83,
+   "median_turn": 8,
+   "win_rate_drawn": 0.234,
+   "win_rate_not_drawn": 0.15,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Legendary Artifact Creature - Cat Moogle"
+  },
+  "Summoning Materia": {
+   "drawn": 60,
+   "played": 54,
+   "played_share": 0.9,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.136,
+   "held_at_loss": 10,
    "mv": 3,
-   "type": "Legendary Creature - Human Rebel"
+   "type": "Artifact - Equipment"
   },
   "Aerith, Last Ancient": {
    "drawn": 47,
@@ -485,17 +496,6 @@
    "held_at_loss": 3,
    "mv": 2,
    "type": "Artifact - Equipment"
-  },
-  "Furious Rise": {
-   "drawn": 43,
-   "played": 31,
-   "played_share": 0.721,
-   "median_turn": 8,
-   "win_rate_drawn": 0.279,
-   "win_rate_not_drawn": 0.14,
-   "held_at_loss": 9,
-   "mv": 3,
-   "type": "Enchantment"
   },
   "Bugenhagen, Wise Elder": {
    "drawn": 53,
@@ -563,17 +563,6 @@
    "mv": 3,
    "type": "Artifact Creature - Construct"
   },
-  "Decimate": {
-   "drawn": 60,
-   "played": 44,
-   "played_share": 0.733,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.283,
-   "win_rate_not_drawn": 0.121,
-   "held_at_loss": 11,
-   "mv": 4,
-   "type": "Sorcery"
-  },
   "Vandalblast": {
    "drawn": 49,
    "played": 46,
@@ -583,6 +572,17 @@
    "win_rate_not_drawn": 0.159,
    "held_at_loss": 3,
    "mv": 1,
+   "type": "Sorcery"
+  },
+  "Decimate": {
+   "drawn": 60,
+   "played": 44,
+   "played_share": 0.733,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.121,
+   "held_at_loss": 11,
+   "mv": 4,
    "type": "Sorcery"
   },
   "Hellkite Tyrant": {
@@ -618,39 +618,6 @@
    "mv": 6,
    "type": "Enchantment Creature - Saga Ox"
   },
-  "Colossus Hammer": {
-   "drawn": 46,
-   "played": 41,
-   "played_share": 0.891,
-   "median_turn": 6,
-   "win_rate_drawn": 0.239,
-   "win_rate_not_drawn": 0.149,
-   "held_at_loss": 4,
-   "mv": 1,
-   "type": "Artifact - Equipment"
-  },
-  "Vanquish the Horde": {
-   "drawn": 49,
-   "played": 40,
-   "played_share": 0.816,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.224,
-   "win_rate_not_drawn": 0.152,
-   "held_at_loss": 5,
-   "mv": 8,
-   "type": "Sorcery"
-  },
-  "Behemoth Sledge": {
-   "drawn": 45,
-   "played": 41,
-   "played_share": 0.911,
-   "median_turn": 6,
-   "win_rate_drawn": 0.244,
-   "win_rate_not_drawn": 0.148,
-   "held_at_loss": 1,
-   "mv": 3,
-   "type": "Artifact - Equipment"
-  },
   "Secret Rendezvous": {
    "drawn": 60,
    "played": 0,
@@ -673,6 +640,50 @@
    "mv": 3,
    "type": "Artifact - Equipment"
   },
+  "Explorer's Scope": {
+   "drawn": 42,
+   "played": 41,
+   "played_share": 0.976,
+   "median_turn": 5,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.146,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Artifact - Equipment"
+  },
+  "Behemoth Sledge": {
+   "drawn": 45,
+   "played": 41,
+   "played_share": 0.911,
+   "median_turn": 6,
+   "win_rate_drawn": 0.244,
+   "win_rate_not_drawn": 0.148,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Artifact - Equipment"
+  },
+  "Colossus Hammer": {
+   "drawn": 46,
+   "played": 41,
+   "played_share": 0.891,
+   "median_turn": 6,
+   "win_rate_drawn": 0.239,
+   "win_rate_not_drawn": 0.149,
+   "held_at_loss": 4,
+   "mv": 1,
+   "type": "Artifact - Equipment"
+  },
+  "Vanquish the Horde": {
+   "drawn": 49,
+   "played": 40,
+   "played_share": 0.816,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.152,
+   "held_at_loss": 5,
+   "mv": 8,
+   "type": "Sorcery"
+  },
   "Chaos Warp": {
    "drawn": 44,
    "played": 41,
@@ -693,17 +704,6 @@
    "win_rate_not_drawn": 0.132,
    "held_at_loss": 3,
    "mv": 2,
-   "type": "Artifact - Equipment"
-  },
-  "Explorer's Scope": {
-   "drawn": 42,
-   "played": 41,
-   "played_share": 0.976,
-   "median_turn": 5,
-   "win_rate_drawn": 0.262,
-   "win_rate_not_drawn": 0.146,
-   "held_at_loss": 3,
-   "mv": 1,
    "type": "Artifact - Equipment"
   },
   "Cloud's Limit Break": {
@@ -739,17 +739,6 @@
    "mv": 2,
    "type": "Artifact - Equipment"
   },
-  "Rampant Growth": {
-   "drawn": 52,
-   "played": 48,
-   "played_share": 0.923,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.269,
-   "win_rate_not_drawn": 0.135,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Sorcery"
-  },
   "Tifa, Martial Artist": {
    "drawn": 48,
    "played": 42,
@@ -760,6 +749,17 @@
    "held_at_loss": 10,
    "mv": 4,
    "type": "Legendary Creature - Human Monk"
+  },
+  "Rampant Growth": {
+   "drawn": 52,
+   "played": 48,
+   "played_share": 0.923,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.269,
+   "win_rate_not_drawn": 0.135,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Sorcery"
   },
   "Trailblazer's Boots": {
    "drawn": 51,
@@ -783,28 +783,6 @@
    "mv": 1,
    "type": "Artifact"
   },
-  "Professional Face-Breaker": {
-   "drawn": 47,
-   "played": 39,
-   "played_share": 0.83,
-   "median_turn": 8,
-   "win_rate_drawn": 0.319,
-   "win_rate_not_drawn": 0.124,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Creature - Human Warrior"
-  },
-  "Elena, Turk Recruit": {
-   "drawn": 44,
-   "played": 26,
-   "played_share": 0.591,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.295,
-   "win_rate_not_drawn": 0.135,
-   "held_at_loss": 21,
-   "mv": 3,
-   "type": "Legendary Creature - Human Assassin"
-  },
   "Helitrooper": {
    "drawn": 53,
    "played": 44,
@@ -816,6 +794,17 @@
    "mv": 2,
    "type": "Creature - Human Soldier"
   },
+  "Professional Face-Breaker": {
+   "drawn": 47,
+   "played": 39,
+   "played_share": 0.83,
+   "median_turn": 8,
+   "win_rate_drawn": 0.319,
+   "win_rate_not_drawn": 0.124,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Creature - Human Warrior"
+  },
   "Lifestream's Blessing": {
    "drawn": 29,
    "played": 0,
@@ -826,6 +815,17 @@
    "held_at_loss": 2,
    "mv": 6,
    "type": "Instant"
+  },
+  "Elena, Turk Recruit": {
+   "drawn": 44,
+   "played": 26,
+   "played_share": 0.591,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.295,
+   "win_rate_not_drawn": 0.135,
+   "held_at_loss": 21,
+   "mv": 3,
+   "type": "Legendary Creature - Human Assassin"
   },
   "Hero's Blade": {
    "drawn": 55,

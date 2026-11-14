@@ -18,4 +18,6 @@ the games it was cast under stock Forge AI and under the playbook, on the same t
   `mirko`, `demons`): the same three files a deck.
 
 The reports were made from shard artifacts merged the way the workflow's rollup merges them; the win counts in them
-are those of the published rollups in `demo-data/ab/`.
+are those of the published rollups in `demo-data/ab/`. Regenerated on 2026-11-14 05:55 UTC after `runner/playtest.py`
+learnt that a split card is cast under the name of one half (until then Connive // Concoct, Find // Finality, Dusk //
+Dawn and the like read as never cast): three card comparisons gained an entry, nothing else changed.

@@ -182,27 +182,16 @@
   "of_them_affordable": 3.19
  },
  "cards": {
-  "Rampant Frogantua": {
-   "drawn": 60,
-   "played": 56,
-   "played_share": 0.933,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.15,
-   "win_rate_not_drawn": 0.221,
-   "held_at_loss": 5,
+  "Ramunap Excavator": {
+   "drawn": 73,
+   "played": 70,
+   "played_share": 0.959,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.247,
+   "win_rate_not_drawn": 0.173,
+   "held_at_loss": 7,
    "mv": 3,
-   "type": "Creature - Frog"
-  },
-  "Scute Swarm": {
-   "drawn": 75,
-   "played": 74,
-   "played_share": 0.987,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.24,
-   "win_rate_not_drawn": 0.176,
-   "held_at_loss": 2,
-   "mv": 3,
-   "type": "Creature - Insect"
+   "type": "Creature - Snake Cleric"
   },
   "Ulvenwald Hydra": {
    "drawn": 61,
@@ -215,16 +204,27 @@
    "mv": 6,
    "type": "Creature - Hydra"
   },
-  "Ramunap Excavator": {
-   "drawn": 73,
-   "played": 70,
-   "played_share": 0.959,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.247,
-   "win_rate_not_drawn": 0.173,
-   "held_at_loss": 7,
+  "Scute Swarm": {
+   "drawn": 75,
+   "played": 74,
+   "played_share": 0.987,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.24,
+   "win_rate_not_drawn": 0.176,
+   "held_at_loss": 2,
    "mv": 3,
-   "type": "Creature - Snake Cleric"
+   "type": "Creature - Insect"
+  },
+  "Rampant Frogantua": {
+   "drawn": 60,
+   "played": 56,
+   "played_share": 0.933,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.15,
+   "win_rate_not_drawn": 0.221,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Creature - Frog"
   },
   "Expedition Map": {
    "drawn": 62,
@@ -237,60 +237,16 @@
    "mv": 1,
    "type": "Artifact"
   },
-  "Fog Bank": {
-   "drawn": 64,
-   "played": 61,
-   "played_share": 0.953,
+  "Arcane Signet": {
+   "drawn": 58,
+   "played": 57,
+   "played_share": 0.983,
    "median_turn": 8,
-   "win_rate_drawn": 0.281,
-   "win_rate_not_drawn": 0.162,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Creature - Wall"
-  },
-  "Floriferous Vinewall": {
-   "drawn": 63,
-   "played": 63,
-   "played_share": 1.0,
-   "median_turn": 8,
-   "win_rate_drawn": 0.222,
-   "win_rate_not_drawn": 0.19,
-   "held_at_loss": 1,
-   "mv": 2,
-   "type": "Creature - Plant Wall"
-  },
-  "Beast Within": {
-   "drawn": 70,
-   "played": 70,
-   "played_share": 1.0,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.229,
-   "win_rate_not_drawn": 0.185,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Instant"
-  },
-  "Seer's Sundial": {
-   "drawn": 52,
-   "played": 52,
-   "played_share": 1.0,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.308,
-   "win_rate_not_drawn": 0.162,
+   "win_rate_drawn": 0.241,
+   "win_rate_not_drawn": 0.183,
    "held_at_loss": 0,
-   "mv": 4,
-   "type": "Artifact"
-  },
-  "Arcane Denial": {
-   "drawn": 69,
-   "played": 58,
-   "played_share": 0.841,
-   "median_turn": 9.5,
-   "win_rate_drawn": 0.188,
-   "win_rate_not_drawn": 0.206,
-   "held_at_loss": 7,
    "mv": 2,
-   "type": "Instant"
+   "type": "Artifact"
   },
   "Avenger of Zendikar": {
    "drawn": 63,
@@ -303,17 +259,6 @@
    "mv": 7,
    "type": "Creature - Elemental"
   },
-  "Arcane Signet": {
-   "drawn": 58,
-   "played": 57,
-   "played_share": 0.983,
-   "median_turn": 8,
-   "win_rate_drawn": 0.241,
-   "win_rate_not_drawn": 0.183,
-   "held_at_loss": 0,
-   "mv": 2,
-   "type": "Artifact"
-  },
   "Evacuation": {
    "drawn": 59,
    "played": 30,
@@ -324,6 +269,61 @@
    "held_at_loss": 14,
    "mv": 5,
    "type": "Instant"
+  },
+  "Fog Bank": {
+   "drawn": 64,
+   "played": 61,
+   "played_share": 0.953,
+   "median_turn": 8,
+   "win_rate_drawn": 0.281,
+   "win_rate_not_drawn": 0.162,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Wall"
+  },
+  "Seer's Sundial": {
+   "drawn": 52,
+   "played": 52,
+   "played_share": 1.0,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.308,
+   "win_rate_not_drawn": 0.162,
+   "held_at_loss": 0,
+   "mv": 4,
+   "type": "Artifact"
+  },
+  "Beast Within": {
+   "drawn": 70,
+   "played": 70,
+   "played_share": 1.0,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.229,
+   "win_rate_not_drawn": 0.185,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Arcane Denial": {
+   "drawn": 69,
+   "played": 58,
+   "played_share": 0.841,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.188,
+   "win_rate_not_drawn": 0.206,
+   "held_at_loss": 7,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Floriferous Vinewall": {
+   "drawn": 63,
+   "played": 63,
+   "played_share": 1.0,
+   "median_turn": 8,
+   "win_rate_drawn": 0.222,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Plant Wall"
   },
   "Hydra Broodmaster": {
    "drawn": 65,
@@ -336,26 +336,59 @@
    "mv": 6,
    "type": "Creature - Hydra"
   },
-  "Urban Evolution": {
-   "drawn": 72,
-   "played": 64,
-   "played_share": 0.889,
-   "median_turn": 8.5,
-   "win_rate_drawn": 0.25,
-   "win_rate_not_drawn": 0.172,
-   "held_at_loss": 7,
-   "mv": 5,
+  "Eureka Moment": {
+   "drawn": 60,
+   "played": 56,
+   "played_share": 0.933,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.2,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Nissa, Steward of Elements": {
+   "drawn": 67,
+   "played": 56,
+   "played_share": 0.836,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.194,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Legendary Planeswalker - Nissa"
+  },
+  "March from Velis Vel": {
+   "drawn": 62,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.194,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 33,
+   "mv": 3,
    "type": "Sorcery"
   },
-  "Aggressive Biomancy": {
-   "drawn": 61,
-   "played": 55,
-   "played_share": 0.902,
-   "median_turn": 9,
-   "win_rate_drawn": 0.262,
-   "win_rate_not_drawn": 0.173,
-   "held_at_loss": 8,
-   "mv": 2,
+  "Treasure Cruise": {
+   "drawn": 66,
+   "played": 39,
+   "played_share": 0.591,
+   "median_turn": 10,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.134,
+   "held_at_loss": 9,
+   "mv": 8,
+   "type": "Sorcery"
+  },
+  "Hour of Promise": {
+   "drawn": 77,
+   "played": 73,
+   "played_share": 0.948,
+   "median_turn": 8,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.146,
+   "held_at_loss": 5,
+   "mv": 5,
    "type": "Sorcery"
   },
   "Desert Warfare": {
@@ -369,48 +402,26 @@
    "mv": 4,
    "type": "Enchantment"
   },
-  "Drown in Dreams": {
-   "drawn": 59,
-   "played": 46,
-   "played_share": 0.78,
-   "median_turn": 11.0,
-   "win_rate_drawn": 0.203,
-   "win_rate_not_drawn": 0.199,
-   "held_at_loss": 8,
-   "mv": 3,
-   "type": "Instant"
-  },
-  "March from Velis Vel": {
-   "drawn": 62,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.194,
-   "win_rate_not_drawn": 0.203,
-   "held_at_loss": 33,
-   "mv": 3,
+  "Urban Evolution": {
+   "drawn": 72,
+   "played": 64,
+   "played_share": 0.889,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.172,
+   "held_at_loss": 7,
+   "mv": 5,
    "type": "Sorcery"
   },
-  "Dryad of the Ilysian Grove": {
-   "drawn": 78,
-   "played": 76,
-   "played_share": 0.974,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.231,
-   "win_rate_not_drawn": 0.18,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Enchantment Creature - Nymph Dryad"
-  },
-  "Treasure Cruise": {
-   "drawn": 66,
-   "played": 39,
-   "played_share": 0.591,
-   "median_turn": 10,
-   "win_rate_drawn": 0.333,
-   "win_rate_not_drawn": 0.134,
-   "held_at_loss": 9,
-   "mv": 8,
+  "Finale of Revelation": {
+   "drawn": 56,
+   "played": 20,
+   "played_share": 0.357,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.304,
+   "win_rate_not_drawn": 0.16,
+   "held_at_loss": 19,
+   "mv": 2,
    "type": "Sorcery"
   },
   "Tatyova, Benthic Druid": {
@@ -424,15 +435,15 @@
    "mv": 5,
    "type": "Legendary Creature - Merfolk Druid"
   },
-  "Summary Dismissal": {
-   "drawn": 66,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.258,
-   "win_rate_not_drawn": 0.172,
-   "held_at_loss": 36,
-   "mv": 4,
+  "Drown in Dreams": {
+   "drawn": 59,
+   "played": 46,
+   "played_share": 0.78,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.203,
+   "win_rate_not_drawn": 0.199,
+   "held_at_loss": 8,
+   "mv": 3,
    "type": "Instant"
   },
   "Replication Technique": {
@@ -446,28 +457,6 @@
    "mv": 5,
    "type": "Sorcery"
   },
-  "Rampaging Baloths": {
-   "drawn": 79,
-   "played": 72,
-   "played_share": 0.911,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.266,
-   "win_rate_not_drawn": 0.157,
-   "held_at_loss": 6,
-   "mv": 6,
-   "type": "Creature - Beast"
-  },
-  "Growth Spiral": {
-   "drawn": 58,
-   "played": 58,
-   "played_share": 1.0,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.259,
-   "win_rate_not_drawn": 0.176,
-   "held_at_loss": 0,
-   "mv": 2,
-   "type": "Instant"
-  },
   "Copy Land": {
    "drawn": 69,
    "played": 63,
@@ -478,39 +467,6 @@
    "held_at_loss": 4,
    "mv": 3,
    "type": "Enchantment"
-  },
-  "Eureka Moment": {
-   "drawn": 60,
-   "played": 56,
-   "played_share": 0.933,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.2,
-   "win_rate_not_drawn": 0.2,
-   "held_at_loss": 6,
-   "mv": 4,
-   "type": "Instant"
-  },
-  "Mana Reflection": {
-   "drawn": 57,
-   "played": 48,
-   "played_share": 0.842,
-   "median_turn": 9.0,
-   "win_rate_drawn": 0.316,
-   "win_rate_not_drawn": 0.154,
-   "held_at_loss": 7,
-   "mv": 6,
-   "type": "Enchantment"
-  },
-  "Poison Dart Frog": {
-   "drawn": 78,
-   "played": 76,
-   "played_share": 0.974,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.256,
-   "win_rate_not_drawn": 0.164,
-   "held_at_loss": 1,
-   "mv": 2,
-   "type": "Creature - Frog"
   },
   "Hydroid Krasis": {
    "drawn": 55,
@@ -523,16 +479,27 @@
    "mv": 2,
    "type": "Creature - Jellyfish Hydra Beast"
   },
-  "Finale of Revelation": {
-   "drawn": 56,
-   "played": 20,
-   "played_share": 0.357,
+  "Apex Devastator": {
+   "drawn": 68,
+   "played": 52,
+   "played_share": 0.765,
    "median_turn": 10.0,
-   "win_rate_drawn": 0.304,
-   "win_rate_not_drawn": 0.16,
-   "held_at_loss": 19,
+   "win_rate_drawn": 0.309,
+   "win_rate_not_drawn": 0.144,
+   "held_at_loss": 13,
+   "mv": 10,
+   "type": "Creature - Chimera Hydra"
+  },
+  "Growth Spiral": {
+   "drawn": 58,
+   "played": 58,
+   "played_share": 1.0,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.259,
+   "win_rate_not_drawn": 0.176,
+   "held_at_loss": 0,
    "mv": 2,
-   "type": "Sorcery"
+   "type": "Instant"
   },
   "Jyoti, Moag Ancient": {
    "drawn": 66,
@@ -545,38 +512,49 @@
    "mv": 4,
    "type": "Legendary Creature - Elemental"
   },
-  "Nissa, Steward of Elements": {
-   "drawn": 67,
-   "played": 56,
-   "played_share": 0.836,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.194,
-   "win_rate_not_drawn": 0.203,
-   "held_at_loss": 9,
-   "mv": 2,
-   "type": "Legendary Planeswalker - Nissa"
+  "Mana Reflection": {
+   "drawn": 57,
+   "played": 48,
+   "played_share": 0.842,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.316,
+   "win_rate_not_drawn": 0.154,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Enchantment"
   },
-  "Apex Devastator": {
-   "drawn": 68,
-   "played": 52,
-   "played_share": 0.765,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.309,
-   "win_rate_not_drawn": 0.144,
-   "held_at_loss": 13,
-   "mv": 10,
-   "type": "Creature - Chimera Hydra"
+  "Summary Dismissal": {
+   "drawn": 66,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.258,
+   "win_rate_not_drawn": 0.172,
+   "held_at_loss": 36,
+   "mv": 4,
+   "type": "Instant"
   },
-  "Hour of Promise": {
-   "drawn": 77,
-   "played": 73,
-   "played_share": 0.948,
-   "median_turn": 8,
-   "win_rate_drawn": 0.286,
-   "win_rate_not_drawn": 0.146,
-   "held_at_loss": 5,
-   "mv": 5,
-   "type": "Sorcery"
+  "Dryad of the Ilysian Grove": {
+   "drawn": 78,
+   "played": 76,
+   "played_share": 0.974,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.231,
+   "win_rate_not_drawn": 0.18,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Enchantment Creature - Nymph Dryad"
+  },
+  "Rampaging Baloths": {
+   "drawn": 79,
+   "played": 72,
+   "played_share": 0.911,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.266,
+   "win_rate_not_drawn": 0.157,
+   "held_at_loss": 6,
+   "mv": 6,
+   "type": "Creature - Beast"
   },
   "Oblivion Stone": {
    "drawn": 63,
@@ -588,6 +566,39 @@
    "held_at_loss": 1,
    "mv": 3,
    "type": "Artifact"
+  },
+  "Poison Dart Frog": {
+   "drawn": 78,
+   "played": 76,
+   "played_share": 0.974,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.256,
+   "win_rate_not_drawn": 0.164,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Frog"
+  },
+  "Aggressive Biomancy": {
+   "drawn": 61,
+   "played": 55,
+   "played_share": 0.902,
+   "median_turn": 9,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.173,
+   "held_at_loss": 8,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Pongify": {
+   "drawn": 66,
+   "played": 58,
+   "played_share": 0.879,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.197,
+   "win_rate_not_drawn": 0.201,
+   "held_at_loss": 7,
+   "mv": 1,
+   "type": "Instant"
   },
   "Uro, Titan of Nature's Wrath": {
    "drawn": 59,
@@ -644,28 +655,6 @@
    "mv": 1,
    "type": "Creature - Human Wizard"
   },
-  "Pongify": {
-   "drawn": 66,
-   "played": 58,
-   "played_share": 0.879,
-   "median_turn": 7.5,
-   "win_rate_drawn": 0.197,
-   "win_rate_not_drawn": 0.201,
-   "held_at_loss": 7,
-   "mv": 1,
-   "type": "Instant"
-  },
-  "Sol Ring": {
-   "drawn": 65,
-   "played": 65,
-   "played_share": 1.0,
-   "median_turn": 8,
-   "win_rate_drawn": 0.231,
-   "win_rate_not_drawn": 0.185,
-   "held_at_loss": 1,
-   "mv": 1,
-   "type": "Artifact"
-  },
   "Propaganda": {
    "drawn": 69,
    "played": 67,
@@ -677,27 +666,16 @@
    "mv": 3,
    "type": "Enchantment"
   },
-  "Skullwinder": {
-   "drawn": 60,
-   "played": 39,
-   "played_share": 0.65,
-   "median_turn": 11,
-   "win_rate_drawn": 0.233,
-   "win_rate_not_drawn": 0.186,
-   "held_at_loss": 18,
+  "Mirage Mirror": {
+   "drawn": 68,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.265,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 34,
    "mv": 3,
-   "type": "Creature - Snake"
-  },
-  "Harmonize": {
-   "drawn": 64,
-   "played": 55,
-   "played_share": 0.859,
-   "median_turn": 10,
-   "win_rate_drawn": 0.312,
-   "win_rate_not_drawn": 0.147,
-   "held_at_loss": 9,
-   "mv": 4,
-   "type": "Sorcery"
+   "type": "Artifact"
   },
   "Acidic Slime": {
    "drawn": 68,
@@ -710,6 +688,17 @@
    "mv": 5,
    "type": "Creature - Ooze"
   },
+  "Harmonize": {
+   "drawn": 64,
+   "played": 55,
+   "played_share": 0.859,
+   "median_turn": 10,
+   "win_rate_drawn": 0.312,
+   "win_rate_not_drawn": 0.147,
+   "held_at_loss": 9,
+   "mv": 4,
+   "type": "Sorcery"
+  },
   "Sylvan Scrying": {
    "drawn": 64,
    "played": 63,
@@ -720,6 +709,17 @@
    "held_at_loss": 1,
    "mv": 2,
    "type": "Sorcery"
+  },
+  "Skullwinder": {
+   "drawn": 60,
+   "played": 39,
+   "played_share": 0.65,
+   "median_turn": 11,
+   "win_rate_drawn": 0.233,
+   "win_rate_not_drawn": 0.186,
+   "held_at_loss": 18,
+   "mv": 3,
+   "type": "Creature - Snake"
   },
   "Vivien Reid": {
    "drawn": 73,
@@ -732,15 +732,15 @@
    "mv": 5,
    "type": "Legendary Planeswalker - Vivien"
   },
-  "Mirage Mirror": {
-   "drawn": 68,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.265,
-   "win_rate_not_drawn": 0.167,
-   "held_at_loss": 34,
-   "mv": 3,
+  "Sol Ring": {
+   "drawn": 65,
+   "played": 65,
+   "played_share": 1.0,
+   "median_turn": 8,
+   "win_rate_drawn": 0.231,
+   "win_rate_not_drawn": 0.185,
+   "held_at_loss": 1,
+   "mv": 1,
    "type": "Artifact"
   },
   "Satyr Wayfinder": {

@@ -209,6 +209,28 @@
    "mv": 2,
    "type": "Sorcery"
   },
+  "Shriekmaw": {
+   "drawn": 50,
+   "played": 43,
+   "played_share": 0.86,
+   "median_turn": 5,
+   "win_rate_drawn": 0.24,
+   "win_rate_not_drawn": 0.233,
+   "held_at_loss": 5,
+   "mv": 5,
+   "type": "Creature - Elemental"
+  },
+  "Final-Word Phantom": {
+   "drawn": 43,
+   "played": 27,
+   "played_share": 0.628,
+   "median_turn": 8,
+   "win_rate_drawn": 0.326,
+   "win_rate_not_drawn": 0.21,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Creature - Spirit Detective"
+  },
   "Ravenous Chupacabra": {
    "drawn": 45,
    "played": 43,
@@ -231,17 +253,6 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Final-Word Phantom": {
-   "drawn": 43,
-   "played": 27,
-   "played_share": 0.628,
-   "median_turn": 8,
-   "win_rate_drawn": 0.326,
-   "win_rate_not_drawn": 0.21,
-   "held_at_loss": 9,
-   "mv": 3,
-   "type": "Creature - Spirit Detective"
-  },
   "Marvo, Deep Operative": {
    "drawn": 51,
    "played": 45,
@@ -252,17 +263,6 @@
    "held_at_loss": 9,
    "mv": 5,
    "type": "Legendary Creature - Octopus Rogue"
-  },
-  "Shriekmaw": {
-   "drawn": 50,
-   "played": 43,
-   "played_share": 0.86,
-   "median_turn": 5,
-   "win_rate_drawn": 0.24,
-   "win_rate_not_drawn": 0.233,
-   "held_at_loss": 5,
-   "mv": 5,
-   "type": "Creature - Elemental"
   },
   "Overseer of the Damned": {
    "drawn": 42,
@@ -275,17 +275,6 @@
    "mv": 7,
    "type": "Creature - Demon"
   },
-  "Mission Briefing": {
-   "drawn": 51,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.373,
-   "win_rate_not_drawn": 0.188,
-   "held_at_loss": 27,
-   "mv": 2,
-   "type": "Instant"
-  },
   "Counterpoint": {
    "drawn": 62,
    "played": 29,
@@ -297,38 +286,38 @@
    "mv": 5,
    "type": "Instant"
   },
-  "Price of Fame": {
-   "drawn": 62,
-   "played": 58,
-   "played_share": 0.935,
-   "median_turn": 6.0,
-   "win_rate_drawn": 0.387,
-   "win_rate_not_drawn": 0.167,
-   "held_at_loss": 2,
-   "mv": 4,
+  "Mission Briefing": {
+   "drawn": 51,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.373,
+   "win_rate_not_drawn": 0.188,
+   "held_at_loss": 27,
+   "mv": 2,
    "type": "Instant"
   },
-  "Mind Stone": {
-   "drawn": 49,
-   "played": 44,
-   "played_share": 0.898,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.388,
-   "win_rate_not_drawn": 0.185,
+  "Sol Ring": {
+   "drawn": 42,
+   "played": 37,
+   "played_share": 0.881,
+   "median_turn": 6,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.222,
    "held_at_loss": 4,
-   "mv": 2,
+   "mv": 1,
    "type": "Artifact"
   },
-  "Ransom Note": {
-   "drawn": 57,
-   "played": 53,
-   "played_share": 0.93,
-   "median_turn": 6,
-   "win_rate_drawn": 0.333,
-   "win_rate_not_drawn": 0.196,
-   "held_at_loss": 0,
-   "mv": 1,
-   "type": "Artifact - Clue"
+  "Curate": {
+   "drawn": 44,
+   "played": 29,
+   "played_share": 0.659,
+   "median_turn": 5,
+   "win_rate_drawn": 0.227,
+   "win_rate_not_drawn": 0.237,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Instant"
   },
   "Arcane Signet": {
    "drawn": 61,
@@ -341,27 +330,27 @@
    "mv": 2,
    "type": "Artifact"
   },
-  "Syr Konrad, the Grim": {
-   "drawn": 53,
-   "played": 42,
-   "played_share": 0.792,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.34,
-   "win_rate_not_drawn": 0.197,
-   "held_at_loss": 6,
-   "mv": 5,
-   "type": "Legendary Creature - Human Knight"
-  },
-  "Sol Ring": {
-   "drawn": 42,
-   "played": 37,
-   "played_share": 0.881,
-   "median_turn": 6,
-   "win_rate_drawn": 0.286,
-   "win_rate_not_drawn": 0.222,
+  "Mind Stone": {
+   "drawn": 49,
+   "played": 44,
+   "played_share": 0.898,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.388,
+   "win_rate_not_drawn": 0.185,
    "held_at_loss": 4,
-   "mv": 1,
+   "mv": 2,
    "type": "Artifact"
+  },
+  "Price of Fame": {
+   "drawn": 62,
+   "played": 58,
+   "played_share": 0.935,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.387,
+   "win_rate_not_drawn": 0.167,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Instant"
   },
   "Enhanced Surveillance": {
    "drawn": 60,
@@ -385,16 +374,27 @@
    "mv": 0,
    "type": "Artifact"
   },
-  "Curate": {
-   "drawn": 44,
-   "played": 29,
-   "played_share": 0.659,
-   "median_turn": 5,
-   "win_rate_drawn": 0.227,
-   "win_rate_not_drawn": 0.237,
-   "held_at_loss": 11,
-   "mv": 2,
-   "type": "Instant"
+  "Syr Konrad, the Grim": {
+   "drawn": 53,
+   "played": 42,
+   "played_share": 0.792,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.34,
+   "win_rate_not_drawn": 0.197,
+   "held_at_loss": 6,
+   "mv": 5,
+   "type": "Legendary Creature - Human Knight"
+  },
+  "Ransom Note": {
+   "drawn": 57,
+   "played": 53,
+   "played_share": 0.93,
+   "median_turn": 6,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Artifact - Clue"
   },
   "Dogged Detective": {
    "drawn": 64,
@@ -406,50 +406,6 @@
    "held_at_loss": 14,
    "mv": 2,
    "type": "Creature - Human Rogue"
-  },
-  "Toxic Deluge": {
-   "drawn": 49,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.367,
-   "win_rate_not_drawn": 0.192,
-   "held_at_loss": 25,
-   "mv": 3,
-   "type": "Sorcery"
-  },
-  "Grave Titan": {
-   "drawn": 47,
-   "played": 36,
-   "played_share": 0.766,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.362,
-   "win_rate_not_drawn": 0.196,
-   "held_at_loss": 7,
-   "mv": 6,
-   "type": "Creature - Giant"
-  },
-  "Deep Analysis": {
-   "drawn": 51,
-   "played": 39,
-   "played_share": 0.765,
-   "median_turn": 9,
-   "win_rate_drawn": 0.294,
-   "win_rate_not_drawn": 0.215,
-   "held_at_loss": 8,
-   "mv": 4,
-   "type": "Sorcery"
-  },
-  "Dimir Spybug": {
-   "drawn": 39,
-   "played": 34,
-   "played_share": 0.872,
-   "median_turn": 7.0,
-   "win_rate_drawn": 0.231,
-   "win_rate_not_drawn": 0.236,
-   "held_at_loss": 6,
-   "mv": 2,
-   "type": "Creature - Insect"
   },
   "Whispering Snitch": {
    "drawn": 46,
@@ -473,16 +429,16 @@
    "mv": 4,
    "type": "Instant"
   },
-  "Dimir Signet": {
-   "drawn": 50,
-   "played": 42,
-   "played_share": 0.84,
+  "Grave Titan": {
+   "drawn": 47,
+   "played": 36,
+   "played_share": 0.766,
    "median_turn": 8.0,
-   "win_rate_drawn": 0.38,
-   "win_rate_not_drawn": 0.187,
-   "held_at_loss": 5,
-   "mv": 2,
-   "type": "Artifact"
+   "win_rate_drawn": 0.362,
+   "win_rate_not_drawn": 0.196,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Creature - Giant"
   },
   "Unshakable Tail": {
    "drawn": 47,
@@ -495,6 +451,72 @@
    "mv": 3,
    "type": "Creature - Zombie Detective"
   },
+  "Dimir Signet": {
+   "drawn": 50,
+   "played": 42,
+   "played_share": 0.84,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.38,
+   "win_rate_not_drawn": 0.187,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Deep Analysis": {
+   "drawn": 51,
+   "played": 39,
+   "played_share": 0.765,
+   "median_turn": 9,
+   "win_rate_drawn": 0.294,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Toxic Deluge": {
+   "drawn": 49,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.367,
+   "win_rate_not_drawn": 0.192,
+   "held_at_loss": 25,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Dimir Spybug": {
+   "drawn": 39,
+   "played": 34,
+   "played_share": 0.872,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.231,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Insect"
+  },
+  "Consider": {
+   "drawn": 47,
+   "played": 36,
+   "played_share": 0.766,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.229,
+   "held_at_loss": 6,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Connive // Concoct": {
+   "drawn": 53,
+   "played": 49,
+   "played_share": 0.925,
+   "median_turn": 7,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.218,
+   "held_at_loss": 4,
+   "mv": 9,
+   "type": "Sorcery"
+  },
   "Eye of Duskmantle": {
    "drawn": 34,
    "played": 25,
@@ -505,6 +527,17 @@
    "held_at_loss": 3,
    "mv": 7,
    "type": "Creature - Eye"
+  },
+  "Animate Dead": {
+   "drawn": 46,
+   "played": 42,
+   "played_share": 0.913,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.239,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Enchantment - Aura"
   },
   "Master of Death": {
    "drawn": 45,
@@ -517,25 +550,14 @@
    "mv": 3,
    "type": "Creature - Zombie Wizard"
   },
-  "Connive // Concoct": {
-   "drawn": 40,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.275,
-   "win_rate_not_drawn": 0.225,
-   "held_at_loss": 4,
-   "mv": 9,
-   "type": "Sorcery"
-  },
-  "Consider": {
-   "drawn": 47,
-   "played": 36,
-   "played_share": 0.766,
-   "median_turn": 4.5,
-   "win_rate_drawn": 0.255,
-   "win_rate_not_drawn": 0.229,
-   "held_at_loss": 6,
+  "Brainstorm": {
+   "drawn": 51,
+   "played": 49,
+   "played_share": 0.961,
+   "median_turn": 7,
+   "win_rate_drawn": 0.294,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 2,
    "mv": 1,
    "type": "Instant"
   },
@@ -549,28 +571,6 @@
    "held_at_loss": 7,
    "mv": 1,
    "type": "Sorcery"
-  },
-  "Brainstorm": {
-   "drawn": 51,
-   "played": 49,
-   "played_share": 0.961,
-   "median_turn": 7,
-   "win_rate_drawn": 0.294,
-   "win_rate_not_drawn": 0.215,
-   "held_at_loss": 2,
-   "mv": 1,
-   "type": "Instant"
-  },
-  "Animate Dead": {
-   "drawn": 46,
-   "played": 42,
-   "played_share": 0.913,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.239,
-   "win_rate_not_drawn": 0.234,
-   "held_at_loss": 3,
-   "mv": 2,
-   "type": "Enchantment - Aura"
   },
   "Foreboding Steamboat": {
    "drawn": 43,
@@ -594,6 +594,17 @@
    "mv": 4,
    "type": "Artifact Creature - Phyrexian Shapeshifter"
   },
+  "Discovery // Dispersal": {
+   "drawn": 51,
+   "played": 49,
+   "played_share": 0.961,
+   "median_turn": 7,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 1,
+   "mv": 7,
+   "type": "Instant Sorcery"
+  },
   "Mulldrifter": {
    "drawn": 36,
    "played": 34,
@@ -604,28 +615,6 @@
    "held_at_loss": 2,
    "mv": 5,
    "type": "Creature - Elemental"
-  },
-  "Nightveil Sprite": {
-   "drawn": 43,
-   "played": 39,
-   "played_share": 0.907,
-   "median_turn": 6,
-   "win_rate_drawn": 0.163,
-   "win_rate_not_drawn": 0.255,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Creature - Faerie Rogue"
-  },
-  "Rise of the Dark Realms": {
-   "drawn": 51,
-   "played": 27,
-   "played_share": 0.529,
-   "median_turn": 9,
-   "win_rate_drawn": 0.353,
-   "win_rate_not_drawn": 0.195,
-   "held_at_loss": 18,
-   "mv": 9,
-   "type": "Sorcery"
   },
   "Baleful Strix": {
    "drawn": 41,
@@ -638,16 +627,27 @@
    "mv": 2,
    "type": "Artifact Creature - Bird"
   },
-  "Phyrexian Arena": {
-   "drawn": 50,
-   "played": 31,
-   "played_share": 0.62,
-   "median_turn": 8,
-   "win_rate_drawn": 0.3,
-   "win_rate_not_drawn": 0.213,
-   "held_at_loss": 15,
-   "mv": 3,
-   "type": "Enchantment"
+  "Rise of the Dark Realms": {
+   "drawn": 51,
+   "played": 27,
+   "played_share": 0.529,
+   "median_turn": 9,
+   "win_rate_drawn": 0.353,
+   "win_rate_not_drawn": 0.195,
+   "held_at_loss": 18,
+   "mv": 9,
+   "type": "Sorcery"
+  },
+  "Nightveil Sprite": {
+   "drawn": 43,
+   "played": 39,
+   "played_share": 0.907,
+   "median_turn": 6,
+   "win_rate_drawn": 0.163,
+   "win_rate_not_drawn": 0.255,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Creature - Faerie Rogue"
   },
   "Doom Whisperer": {
    "drawn": 30,
@@ -659,6 +659,17 @@
    "held_at_loss": 5,
    "mv": 5,
    "type": "Creature - Nightmare Demon"
+  },
+  "Phyrexian Arena": {
+   "drawn": 50,
+   "played": 31,
+   "played_share": 0.62,
+   "median_turn": 8,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 15,
+   "mv": 3,
+   "type": "Enchantment"
   },
   "Dream Eater": {
    "drawn": 36,
@@ -693,17 +704,6 @@
    "mv": 1,
    "type": "Instant"
   },
-  "Disinformation Campaign": {
-   "drawn": 43,
-   "played": 29,
-   "played_share": 0.674,
-   "median_turn": 9,
-   "win_rate_drawn": 0.209,
-   "win_rate_not_drawn": 0.242,
-   "held_at_loss": 17,
-   "mv": 3,
-   "type": "Enchantment"
-  },
   "Thoughtbound Phantasm": {
    "drawn": 49,
    "played": 46,
@@ -715,16 +715,16 @@
    "mv": 1,
    "type": "Creature - Spirit"
   },
-  "Amphin Mutineer": {
-   "drawn": 50,
-   "played": 43,
-   "played_share": 0.86,
-   "median_turn": 7,
-   "win_rate_drawn": 0.2,
-   "win_rate_not_drawn": 0.247,
-   "held_at_loss": 8,
-   "mv": 4,
-   "type": "Creature - Salamander Pirate"
+  "Disinformation Campaign": {
+   "drawn": 43,
+   "played": 29,
+   "played_share": 0.674,
+   "median_turn": 9,
+   "win_rate_drawn": 0.209,
+   "win_rate_not_drawn": 0.242,
+   "held_at_loss": 17,
+   "mv": 3,
+   "type": "Enchantment"
   },
   "Watcher of Hours": {
    "drawn": 43,
@@ -737,16 +737,16 @@
    "mv": 6,
    "type": "Creature - Sphinx"
   },
-  "Discovery // Dispersal": {
-   "drawn": 30,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.267,
-   "win_rate_not_drawn": 0.229,
-   "held_at_loss": 1,
-   "mv": 7,
-   "type": "Instant Sorcery"
+  "Amphin Mutineer": {
+   "drawn": 50,
+   "played": 43,
+   "played_share": 0.86,
+   "median_turn": 7,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.247,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Creature - Salamander Pirate"
   },
   "Massacre Wurm": {
    "drawn": 48,
@@ -770,17 +770,6 @@
    "mv": 4,
    "type": "Creature - Shapeshifter Cleric"
   },
-  "Sinister Starfish": {
-   "drawn": 42,
-   "played": 39,
-   "played_share": 0.929,
-   "median_turn": 6,
-   "win_rate_drawn": 0.333,
-   "win_rate_not_drawn": 0.209,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Creature - Starfish"
-  },
   "Ephara's Dispersal": {
    "drawn": 53,
    "played": 53,
@@ -791,6 +780,17 @@
    "held_at_loss": 0,
    "mv": 3,
    "type": "Instant"
+  },
+  "Sinister Starfish": {
+   "drawn": 42,
+   "played": 39,
+   "played_share": 0.929,
+   "median_turn": 6,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.209,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Creature - Starfish"
   },
   "Charnel Serenade": {
    "drawn": 51,
@@ -803,17 +803,6 @@
    "mv": 6,
    "type": "Sorcery"
   },
-  "Notion Rain": {
-   "drawn": 46,
-   "played": 33,
-   "played_share": 0.717,
-   "median_turn": 6,
-   "win_rate_drawn": 0.283,
-   "win_rate_not_drawn": 0.221,
-   "held_at_loss": 6,
-   "mv": 3,
-   "type": "Sorcery"
-  },
   "Twilight Prophet": {
    "drawn": 37,
    "played": 32,
@@ -824,6 +813,17 @@
    "held_at_loss": 5,
    "mv": 4,
    "type": "Creature - Vampire Cleric"
+  },
+  "Notion Rain": {
+   "drawn": 46,
+   "played": 33,
+   "played_share": 0.717,
+   "median_turn": 6,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.221,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Sorcery"
   },
   "Copy Catchers": {
    "drawn": 55,

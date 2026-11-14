@@ -187,17 +187,6 @@
   "of_them_affordable": 3.25
  },
  "cards": {
-  "Austere Command": {
-   "drawn": 42,
-   "played": 18,
-   "played_share": 0.429,
-   "median_turn": 10.5,
-   "win_rate_drawn": 0.19,
-   "win_rate_not_drawn": 0.12,
-   "held_at_loss": 17,
-   "mv": 6,
-   "type": "Sorcery"
-  },
   "Saryth, the Viper's Fang": {
    "drawn": 45,
    "played": 30,
@@ -220,6 +209,17 @@
    "mv": 4,
    "type": "Legendary Creature - Elemental Dog"
   },
+  "Austere Command": {
+   "drawn": 42,
+   "played": 18,
+   "played_share": 0.429,
+   "median_turn": 10.5,
+   "win_rate_drawn": 0.19,
+   "win_rate_not_drawn": 0.12,
+   "held_at_loss": 17,
+   "mv": 6,
+   "type": "Sorcery"
+  },
   "Akroma, Angel of Fury": {
    "drawn": 23,
    "played": 0,
@@ -230,39 +230,6 @@
    "held_at_loss": 1,
    "mv": 8,
    "type": "Legendary Creature - Angel"
-  },
-  "Chaos Warp": {
-   "drawn": 40,
-   "played": 39,
-   "played_share": 0.975,
-   "median_turn": 7,
-   "win_rate_drawn": 0.15,
-   "win_rate_not_drawn": 0.131,
-   "held_at_loss": 2,
-   "mv": 3,
-   "type": "Instant"
-  },
-  "Sidar Kondo of Jamuraa": {
-   "drawn": 47,
-   "played": 42,
-   "played_share": 0.894,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.17,
-   "win_rate_not_drawn": 0.124,
-   "held_at_loss": 8,
-   "mv": 4,
-   "type": "Legendary Creature - Human Knight"
-  },
-  "Krosan Cloudscraper": {
-   "drawn": 35,
-   "played": 2,
-   "played_share": 0.057,
-   "median_turn": 17.5,
-   "win_rate_drawn": 0.171,
-   "win_rate_not_drawn": 0.127,
-   "held_at_loss": 5,
-   "mv": 10,
-   "type": "Creature - Beast Mutant"
   },
   "Mastery of the Unseen": {
    "drawn": 50,
@@ -275,6 +242,28 @@
    "mv": 2,
    "type": "Enchantment"
   },
+  "Chaos Warp": {
+   "drawn": 40,
+   "played": 39,
+   "played_share": 0.975,
+   "median_turn": 7,
+   "win_rate_drawn": 0.15,
+   "win_rate_not_drawn": 0.131,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Krosan Cloudscraper": {
+   "drawn": 35,
+   "played": 2,
+   "played_share": 0.057,
+   "median_turn": 17.5,
+   "win_rate_drawn": 0.171,
+   "win_rate_not_drawn": 0.127,
+   "held_at_loss": 5,
+   "mv": 10,
+   "type": "Creature - Beast Mutant"
+  },
   "Sol Ring": {
    "drawn": 36,
    "played": 34,
@@ -286,49 +275,16 @@
    "mv": 1,
    "type": "Artifact"
   },
-  "Toski, Bearer of Secrets": {
-   "drawn": 51,
-   "played": 35,
-   "played_share": 0.686,
-   "median_turn": 9,
-   "win_rate_drawn": 0.098,
-   "win_rate_not_drawn": 0.148,
-   "held_at_loss": 14,
-   "mv": 4,
-   "type": "Legendary Creature - Squirrel"
-  },
-  "Seedborn Muse": {
-   "drawn": 43,
-   "played": 22,
-   "played_share": 0.512,
+  "Sidar Kondo of Jamuraa": {
+   "drawn": 47,
+   "played": 42,
+   "played_share": 0.894,
    "median_turn": 8.0,
-   "win_rate_drawn": 0.163,
-   "win_rate_not_drawn": 0.127,
-   "held_at_loss": 20,
-   "mv": 5,
-   "type": "Creature - Spirit"
-  },
-  "Arcane Signet": {
-   "drawn": 52,
-   "played": 37,
-   "played_share": 0.712,
-   "median_turn": 6,
-   "win_rate_drawn": 0.173,
-   "win_rate_not_drawn": 0.122,
-   "held_at_loss": 11,
-   "mv": 2,
-   "type": "Artifact"
-  },
-  "Wild Growth": {
-   "drawn": 40,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.1,
-   "win_rate_not_drawn": 0.144,
-   "held_at_loss": 26,
-   "mv": 1,
-   "type": "Enchantment - Aura"
+   "win_rate_drawn": 0.17,
+   "win_rate_not_drawn": 0.124,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Legendary Creature - Human Knight"
   },
   "Ugin's Mastery": {
    "drawn": 56,
@@ -341,6 +297,28 @@
    "mv": 4,
    "type": "Enchantment"
   },
+  "Arcane Signet": {
+   "drawn": 52,
+   "played": 37,
+   "played_share": 0.712,
+   "median_turn": 6,
+   "win_rate_drawn": 0.173,
+   "win_rate_not_drawn": 0.122,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Seedborn Muse": {
+   "drawn": 43,
+   "played": 22,
+   "played_share": 0.512,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.163,
+   "win_rate_not_drawn": 0.127,
+   "held_at_loss": 20,
+   "mv": 5,
+   "type": "Creature - Spirit"
+  },
   "Hidden Dragonslayer": {
    "drawn": 37,
    "played": 17,
@@ -352,22 +330,33 @@
    "mv": 2,
    "type": "Creature - Human Warrior"
   },
-  "Unexplained Absence": {
-   "drawn": 52,
-   "played": 38,
-   "played_share": 0.731,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.115,
-   "win_rate_not_drawn": 0.142,
-   "held_at_loss": 15,
-   "mv": 4,
-   "type": "Instant"
-  },
-  "Dusk // Dawn": {
-   "drawn": 33,
+  "Wild Growth": {
+   "drawn": 40,
    "played": 0,
    "played_share": 0.0,
    "median_turn": null,
+   "win_rate_drawn": 0.1,
+   "win_rate_not_drawn": 0.144,
+   "held_at_loss": 26,
+   "mv": 1,
+   "type": "Enchantment - Aura"
+  },
+  "Toski, Bearer of Secrets": {
+   "drawn": 51,
+   "played": 35,
+   "played_share": 0.686,
+   "median_turn": 9,
+   "win_rate_drawn": 0.098,
+   "win_rate_not_drawn": 0.148,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Legendary Creature - Squirrel"
+  },
+  "Dusk // Dawn": {
+   "drawn": 33,
+   "played": 19,
+   "played_share": 0.576,
+   "median_turn": 10,
    "win_rate_drawn": 0.152,
    "win_rate_not_drawn": 0.132,
    "held_at_loss": 6,
@@ -385,6 +374,17 @@
    "mv": 1,
    "type": "Instant"
   },
+  "Unexplained Absence": {
+   "drawn": 52,
+   "played": 38,
+   "played_share": 0.731,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.115,
+   "win_rate_not_drawn": 0.142,
+   "held_at_loss": 15,
+   "mv": 4,
+   "type": "Instant"
+  },
   "Printlifter Ooze": {
    "drawn": 40,
    "played": 21,
@@ -396,17 +396,6 @@
    "mv": 2,
    "type": "Creature - Ooze"
   },
-  "Master of Pearls": {
-   "drawn": 28,
-   "played": 14,
-   "played_share": 0.5,
-   "median_turn": 2.5,
-   "win_rate_drawn": 0.179,
-   "win_rate_not_drawn": 0.128,
-   "held_at_loss": 4,
-   "mv": 2,
-   "type": "Creature - Human Monk"
-  },
   "Den Protector": {
    "drawn": 36,
    "played": 9,
@@ -417,6 +406,17 @@
    "held_at_loss": 3,
    "mv": 2,
    "type": "Creature - Human Warrior"
+  },
+  "Master of Pearls": {
+   "drawn": 28,
+   "played": 14,
+   "played_share": 0.5,
+   "median_turn": 2.5,
+   "win_rate_drawn": 0.179,
+   "win_rate_not_drawn": 0.128,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Creature - Human Monk"
   },
   "Ransom Note": {
    "drawn": 51,
@@ -451,28 +451,6 @@
    "mv": 2,
    "type": "Enchantment"
   },
-  "Trail of Mystery": {
-   "drawn": 42,
-   "played": 29,
-   "played_share": 0.69,
-   "median_turn": 9,
-   "win_rate_drawn": 0.238,
-   "win_rate_not_drawn": 0.108,
-   "held_at_loss": 8,
-   "mv": 2,
-   "type": "Enchantment"
-  },
-  "Yedora, Grave Gardener": {
-   "drawn": 40,
-   "played": 21,
-   "played_share": 0.525,
-   "median_turn": 10,
-   "win_rate_drawn": 0.275,
-   "win_rate_not_drawn": 0.1,
-   "held_at_loss": 11,
-   "mv": 5,
-   "type": "Legendary Creature - Treefolk Druid"
-  },
   "Obscuring Aether": {
    "drawn": 38,
    "played": 0,
@@ -484,39 +462,6 @@
    "mv": 1,
    "type": "Enchantment"
   },
-  "Lifecrafter's Bestiary": {
-   "drawn": 40,
-   "played": 23,
-   "played_share": 0.575,
-   "median_turn": 9,
-   "win_rate_drawn": 0.175,
-   "win_rate_not_drawn": 0.125,
-   "held_at_loss": 12,
-   "mv": 3,
-   "type": "Artifact"
-  },
-  "Scroll of Fate": {
-   "drawn": 40,
-   "played": 23,
-   "played_share": 0.575,
-   "median_turn": 8,
-   "win_rate_drawn": 0.125,
-   "win_rate_not_drawn": 0.138,
-   "held_at_loss": 11,
-   "mv": 3,
-   "type": "Artifact"
-  },
-  "Temur War Shaman": {
-   "drawn": 49,
-   "played": 22,
-   "played_share": 0.449,
-   "median_turn": 11.0,
-   "win_rate_drawn": 0.204,
-   "win_rate_not_drawn": 0.113,
-   "held_at_loss": 16,
-   "mv": 6,
-   "type": "Creature - Human Shaman"
-  },
   "Fell the Mighty": {
    "drawn": 45,
    "played": 38,
@@ -526,17 +471,6 @@
    "win_rate_not_drawn": 0.129,
    "held_at_loss": 5,
    "mv": 5,
-   "type": "Sorcery"
-  },
-  "Jeska's Will": {
-   "drawn": 42,
-   "played": 37,
-   "played_share": 0.881,
-   "median_turn": 7,
-   "win_rate_drawn": 0.167,
-   "win_rate_not_drawn": 0.127,
-   "held_at_loss": 8,
-   "mv": 3,
    "type": "Sorcery"
   },
   "Nantuko Vigilante": {
@@ -550,16 +484,27 @@
    "mv": 4,
    "type": "Creature - Insect Druid Mutant"
   },
-  "Deathmist Raptor": {
-   "drawn": 33,
-   "played": 2,
-   "played_share": 0.061,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.242,
-   "win_rate_not_drawn": 0.114,
-   "held_at_loss": 7,
+  "Scroll of Fate": {
+   "drawn": 40,
+   "played": 23,
+   "played_share": 0.575,
+   "median_turn": 8,
+   "win_rate_drawn": 0.125,
+   "win_rate_not_drawn": 0.138,
+   "held_at_loss": 11,
    "mv": 3,
-   "type": "Creature - Dinosaur Beast"
+   "type": "Artifact"
+  },
+  "Lifecrafter's Bestiary": {
+   "drawn": 40,
+   "played": 23,
+   "played_share": 0.575,
+   "median_turn": 9,
+   "win_rate_drawn": 0.175,
+   "win_rate_not_drawn": 0.125,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Artifact"
   },
   "Nature's Lore": {
    "drawn": 45,
@@ -572,6 +517,39 @@
    "mv": 2,
    "type": "Sorcery"
   },
+  "Deathmist Raptor": {
+   "drawn": 33,
+   "played": 2,
+   "played_share": 0.061,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.242,
+   "win_rate_not_drawn": 0.114,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Creature - Dinosaur Beast"
+  },
+  "Trail of Mystery": {
+   "drawn": 42,
+   "played": 29,
+   "played_share": 0.69,
+   "median_turn": 9,
+   "win_rate_drawn": 0.238,
+   "win_rate_not_drawn": 0.108,
+   "held_at_loss": 8,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Temur War Shaman": {
+   "drawn": 49,
+   "played": 22,
+   "played_share": 0.449,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.204,
+   "win_rate_not_drawn": 0.113,
+   "held_at_loss": 16,
+   "mv": 6,
+   "type": "Creature - Human Shaman"
+  },
   "Neheb, the Eternal": {
    "drawn": 45,
    "played": 41,
@@ -582,6 +560,28 @@
    "held_at_loss": 3,
    "mv": 5,
    "type": "Legendary Creature - Zombie Minotaur Warrior"
+  },
+  "Yedora, Grave Gardener": {
+   "drawn": 40,
+   "played": 21,
+   "played_share": 0.525,
+   "median_turn": 10,
+   "win_rate_drawn": 0.275,
+   "win_rate_not_drawn": 0.1,
+   "held_at_loss": 11,
+   "mv": 5,
+   "type": "Legendary Creature - Treefolk Druid"
+  },
+  "Jeska's Will": {
+   "drawn": 42,
+   "played": 37,
+   "played_share": 0.881,
+   "median_turn": 7,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.127,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Sorcery"
   },
   "Scourge of the Throne": {
    "drawn": 64,
@@ -594,17 +594,6 @@
    "mv": 6,
    "type": "Creature - Dragon"
   },
-  "Veiled Ascension": {
-   "drawn": 39,
-   "played": 11,
-   "played_share": 0.282,
-   "median_turn": 6,
-   "win_rate_drawn": 0.205,
-   "win_rate_not_drawn": 0.118,
-   "held_at_loss": 19,
-   "mv": 4,
-   "type": "Enchantment"
-  },
   "Decimate": {
    "drawn": 55,
    "played": 37,
@@ -615,6 +604,17 @@
    "held_at_loss": 16,
    "mv": 4,
    "type": "Sorcery"
+  },
+  "Veiled Ascension": {
+   "drawn": 39,
+   "played": 11,
+   "played_share": 0.282,
+   "median_turn": 6,
+   "win_rate_drawn": 0.205,
+   "win_rate_not_drawn": 0.118,
+   "held_at_loss": 19,
+   "mv": 4,
+   "type": "Enchantment"
   },
   "Experiment Twelve": {
    "drawn": 30,
@@ -627,17 +627,6 @@
    "mv": 4,
    "type": "Creature - Elf Lizard Warrior"
   },
-  "Beast Whisperer": {
-   "drawn": 42,
-   "played": 24,
-   "played_share": 0.571,
-   "median_turn": 8.0,
-   "win_rate_drawn": 0.19,
-   "win_rate_not_drawn": 0.12,
-   "held_at_loss": 16,
-   "mv": 4,
-   "type": "Creature - Elf Druid"
-  },
   "Root Elemental": {
    "drawn": 35,
    "played": 1,
@@ -648,17 +637,6 @@
    "held_at_loss": 4,
    "mv": 6,
    "type": "Creature - Elemental"
-  },
-  "Exalted Angel": {
-   "drawn": 31,
-   "played": 0,
-   "played_share": 0.0,
-   "median_turn": null,
-   "win_rate_drawn": 0.194,
-   "win_rate_not_drawn": 0.124,
-   "held_at_loss": 1,
-   "mv": 6,
-   "type": "Creature - Angel"
   },
   "Ohran Frostfang": {
    "drawn": 38,
@@ -671,38 +649,27 @@
    "mv": 5,
    "type": "Snow Creature - Snake"
   },
-  "Whisperwood Elemental": {
-   "drawn": 38,
-   "played": 19,
-   "played_share": 0.5,
-   "median_turn": 12,
-   "win_rate_drawn": 0.184,
-   "win_rate_not_drawn": 0.123,
-   "held_at_loss": 11,
-   "mv": 5,
-   "type": "Creature - Elemental"
+  "Beast Whisperer": {
+   "drawn": 42,
+   "played": 24,
+   "played_share": 0.571,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.19,
+   "win_rate_not_drawn": 0.12,
+   "held_at_loss": 16,
+   "mv": 4,
+   "type": "Creature - Elf Druid"
   },
-  "Return of the Wildspeaker": {
-   "drawn": 40,
-   "played": 29,
-   "played_share": 0.725,
-   "median_turn": 9,
-   "win_rate_drawn": 0.225,
-   "win_rate_not_drawn": 0.113,
-   "held_at_loss": 9,
-   "mv": 5,
-   "type": "Instant"
-  },
-  "Mirror Entity": {
-   "drawn": 47,
+  "Exalted Angel": {
+   "drawn": 31,
    "played": 0,
    "played_share": 0.0,
    "median_turn": null,
-   "win_rate_drawn": 0.234,
-   "win_rate_not_drawn": 0.105,
-   "held_at_loss": 31,
-   "mv": 3,
-   "type": "Creature - Shapeshifter"
+   "win_rate_drawn": 0.194,
+   "win_rate_not_drawn": 0.124,
+   "held_at_loss": 1,
+   "mv": 6,
+   "type": "Creature - Angel"
   },
   "Imperial Hellkite": {
    "drawn": 46,
@@ -726,16 +693,38 @@
    "mv": 4,
    "type": "Creature - Goblin Wizard"
   },
-  "Hooded Hydra": {
-   "drawn": 48,
-   "played": 20,
-   "played_share": 0.417,
-   "median_turn": 10.0,
-   "win_rate_drawn": 0.188,
-   "win_rate_not_drawn": 0.118,
-   "held_at_loss": 17,
-   "mv": 2,
-   "type": "Creature - Snake Hydra"
+  "Return of the Wildspeaker": {
+   "drawn": 40,
+   "played": 29,
+   "played_share": 0.725,
+   "median_turn": 9,
+   "win_rate_drawn": 0.225,
+   "win_rate_not_drawn": 0.113,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Instant"
+  },
+  "Mirror Entity": {
+   "drawn": 47,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.234,
+   "win_rate_not_drawn": 0.105,
+   "held_at_loss": 31,
+   "mv": 3,
+   "type": "Creature - Shapeshifter"
+  },
+  "Whisperwood Elemental": {
+   "drawn": 38,
+   "played": 19,
+   "played_share": 0.5,
+   "median_turn": 12,
+   "win_rate_drawn": 0.184,
+   "win_rate_not_drawn": 0.123,
+   "held_at_loss": 11,
+   "mv": 5,
+   "type": "Creature - Elemental"
   },
   "Ainok Survivalist": {
    "drawn": 36,
@@ -759,6 +748,17 @@
    "mv": 2,
    "type": "Creature - Snake Shaman"
   },
+  "Three Visits": {
+   "drawn": 42,
+   "played": 39,
+   "played_share": 0.929,
+   "median_turn": 6,
+   "win_rate_drawn": 0.214,
+   "win_rate_not_drawn": 0.114,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Sorcery"
+  },
   "Welcoming Vampire": {
    "drawn": 54,
    "played": 39,
@@ -770,16 +770,16 @@
    "mv": 3,
    "type": "Creature - Vampire"
   },
-  "Three Visits": {
-   "drawn": 42,
-   "played": 39,
-   "played_share": 0.929,
-   "median_turn": 6,
-   "win_rate_drawn": 0.214,
-   "win_rate_not_drawn": 0.114,
-   "held_at_loss": 3,
+  "Hooded Hydra": {
+   "drawn": 48,
+   "played": 20,
+   "played_share": 0.417,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.188,
+   "win_rate_not_drawn": 0.118,
+   "held_at_loss": 17,
    "mv": 2,
-   "type": "Sorcery"
+   "type": "Creature - Snake Hydra"
   },
   "Broodhatch Nantuko": {
    "drawn": 34,
