@@ -14,6 +14,9 @@ are that session's and have to be replaced by the new session's scratch director
   bot league and tried at a few local tables of bots. This copy points at the league of twelve (`league-run` #3) and the
   pool `bots-v2`; give it the games of the latest league. The four of 2026-11-11 were Fable agents at 630k to 760k tokens
   each; nothing in the brief needs that.
+- `answer-rules-brief-exam.md`: the same job for a deck whose engine rules are still a candidate at the tables (the owner's
+  ten, 2026-11-14): the material is the deck's own exam games as far as they are in, the base is the candidate file, and
+  it asks for eight local tables in one run (sixteen at most), because local tables were what the first batch waited for.
 - `slot.sh`: every command that starts Forge goes behind it, so that the machine never plays more than three games however
   many agents are working. Goldfish runs queue shortest first (the `-n` of the command), then by arrival: with two slots
   and a plain race, ten agents starved one deck for half an hour and timed out its foreground runs. Table runs (`ab.py`,
