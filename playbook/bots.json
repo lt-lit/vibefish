@@ -397,6 +397,45 @@
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (55 wins)"
    },
    "goldfish": "demo-data/goldfish/2026-11-14/mutant-menace-answers-forgeattack-seeds-23101-23140.json"
+  },
+  {
+   "deck": "squirreled-away",
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +3.5 points on its stock pilot (56 tables against 49, 95% -4 to +11, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 54 with the go-wide attack",
+   "playbook": "playbook/precons/squirreled-away.json",
+   "summary": "Hazel on turn 4, the token engine in order, Skullclamp and Idol of Oblivion used; Decree of Pain when it is about to die or badly outnumbered, Swarmyard Massacre against three creatures, Casualties of War and Binding the Old Gods on targets.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/squirreled-away-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (54 wins)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/squirreled-away-answers-forgeattack-seeds-24101-24140.json"
+  },
+  {
+   "deck": "ahoy-mateys",
+   "status": "shipped (v2, 2026-11-14; the go-wide attack); at tables of bots +17.5 points on its stock pilot (72 tables against 37, 95% +9 to +26, exact test 0.0001), clear of noise. The attack is the better of two on these tables: the same rules won 64 with the attack left to Forge",
+   "playbook": "playbook/precons/ahoy-mateys.json",
+   "summary": "Admiral Brass on turn 5, the lords, Windfall and Faithless Looting (which Forge's AI never casts); Blood Money and Blasphemous Act when it is about to die or outnumbered, Evacuation held for a lethal threat, the removal Pirates ahead of the filler.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/ahoy-mateys-join.json",
+    "stock": "stock",
+    "bot": "gowide",
+    "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the go-wide attack, chosen on these tables over the same rules with the attack left to Forge (64 wins)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/ahoy-mateys-answers-seeds-29101-29140.json"
+  },
+  {
+   "deck": "death-toll",
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +11.0 points on its stock pilot (65 tables against 43, 95% +3 to +19, exact test 0.011), clear of noise. The attack is the better of two on these tables: the same rules won 63 with the go-wide attack",
+   "playbook": "playbook/precons/death-toll.json",
+   "summary": "Winter, which Forge's AI never casts, at once, and the mill engine with a guard on the library; Culling Ritual and Deluge of Doom against a wide board or a lethal threat, Binding the Old Gods, Putrefy and the removal creatures after the engine.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/death-toll-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (63 wins)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/death-toll-answers-forgeattack-seeds-27101-27140.json"
   }
  ]
 }

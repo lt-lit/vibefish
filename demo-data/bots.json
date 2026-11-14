@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.3",
- "generated": "2026-11-14T18:40:28Z",
+ "generated": "2026-11-14T19:28:46Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -1050,6 +1050,180 @@
      1.083
     ],
     "seeds_paired": 37
+   }
+  },
+  {
+   "deck": "squirreled-away",
+   "name": "Squirreled Away",
+   "commanders": [
+    "Hazel of the Rootbloom"
+   ],
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +3.5 points on its stock pilot (56 tables against 49, 95% -4 to +11, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 54 with the go-wide attack",
+   "playbook": "playbook/precons/squirreled-away.json",
+   "summary": "Hazel on turn 4, the token engine in order, Skullclamp and Idol of Oblivion used; Decree of Pain when it is about to die or badly outnumbered, Swarmyard Massacre against three creatures, Casualties of War and Binding the Old Gods on targets.",
+   "human": {
+    "win_rate": 0.2115,
+    "games": 494
+   },
+   "tables": {
+    "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (54 wins)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/squirreled-away-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 49,
+     "win_rate": 0.245,
+     "win_rate_ci95": [
+      0.1906,
+      0.309
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 56,
+     "win_rate": 0.28,
+     "win_rate_ci95": [
+      0.2224,
+      0.3459
+     ]
+    },
+    "difference": 0.035,
+    "difference_ci95": [
+     -0.0414,
+     0.1114
+    ],
+    "bot_only": 34,
+    "stock_only": 27,
+    "exact_p": 0.4426
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/squirreled-away-answers-forgeattack-seeds-24101-24140.json",
+    "games": 40,
+    "stock_kill_turn": 11.375,
+    "bot_kill_turn": 10.95,
+    "faster_by": 0.425,
+    "faster_by_ci95": [
+     -0.013,
+     0.863
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "ahoy-mateys",
+   "name": "Ahoy Mateys",
+   "commanders": [
+    "Admiral Brass, Unsinkable"
+   ],
+   "status": "shipped (v2, 2026-11-14; the go-wide attack); at tables of bots +17.5 points on its stock pilot (72 tables against 37, 95% +9 to +26, exact test 0.0001), clear of noise. The attack is the better of two on these tables: the same rules won 64 with the attack left to Forge",
+   "playbook": "playbook/precons/ahoy-mateys.json",
+   "summary": "Admiral Brass on turn 5, the lords, Windfall and Faithless Looting (which Forge's AI never casts); Blood Money and Blasphemous Act when it is about to die or outnumbered, Evacuation held for a lethal threat, the removal Pirates ahead of the filler.",
+   "human": {
+    "win_rate": 0.1928,
+    "games": 142
+   },
+   "tables": {
+    "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the go-wide attack, chosen on these tables over the same rules with the attack left to Forge (64 wins)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/ahoy-mateys-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 37,
+     "win_rate": 0.185,
+     "win_rate_ci95": [
+      0.1373,
+      0.2446
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 72,
+     "win_rate": 0.36,
+     "win_rate_ci95": [
+      0.2967,
+      0.4286
+     ]
+    },
+    "difference": 0.175,
+    "difference_ci95": [
+     0.0925,
+     0.2575
+    ],
+    "bot_only": 56,
+    "stock_only": 21,
+    "exact_p": 0.0001
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/ahoy-mateys-answers-seeds-29101-29140.json",
+    "games": 40,
+    "stock_kill_turn": 10.125,
+    "bot_kill_turn": 8.825,
+    "faster_by": 1.3,
+    "faster_by_ci95": [
+     0.927,
+     1.673
+    ],
+    "seeds_paired": 40
+   }
+  },
+  {
+   "deck": "death-toll",
+   "name": "Death Toll",
+   "commanders": [
+    "Winter, Cynical Opportunist"
+   ],
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +11.0 points on its stock pilot (65 tables against 43, 95% +3 to +19, exact test 0.011), clear of noise. The attack is the better of two on these tables: the same rules won 63 with the go-wide attack",
+   "playbook": "playbook/precons/death-toll.json",
+   "summary": "Winter, which Forge's AI never casts, at once, and the mill engine with a guard on the library; Culling Ritual and Deluge of Doom against a wide board or a lethal threat, Binding the Old Gods, Putrefy and the removal creatures after the engine.",
+   "human": {
+    "win_rate": 0.227,
+    "games": 190
+   },
+   "tables": {
+    "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (63 wins)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/death-toll-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 43,
+     "win_rate": 0.215,
+     "win_rate_ci95": [
+      0.1637,
+      0.277
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 65,
+     "win_rate": 0.325,
+     "win_rate_ci95": [
+      0.2639,
+      0.3927
+     ]
+    },
+    "difference": 0.11,
+    "difference_ci95": [
+     0.0294,
+     0.1906
+    ],
+    "bot_only": 46,
+    "stock_only": 24,
+    "exact_p": 0.0115
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/death-toll-answers-forgeattack-seeds-27101-27140.json",
+    "games": 40,
+    "stock_kill_turn": 12.025,
+    "bot_kill_turn": 10.921,
+    "faster_by": 1.105,
+    "faster_by_ci95": [
+     0.453,
+     1.757
+    ],
+    "seeds_paired": 38
    }
   }
  ]

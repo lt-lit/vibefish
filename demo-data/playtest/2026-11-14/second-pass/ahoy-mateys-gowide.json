@@ -1,0 +1,1600 @@
+{
+ "kind": "playtest",
+ "deck": "ahoy-mateys",
+ "deck_file": "Ahoy Mateys [LCC] [2023].dck",
+ "deck_file_sha256": null,
+ "arm": "playbook",
+ "pilot": {
+  "playbook": "ahoy-mateys-answers.json",
+  "version": 2,
+  "attack": "go_wide"
+ },
+ "commanders": [
+  "Admiral Brass, Unsinkable"
+ ],
+ "table": {
+  "pool": "bots-v2",
+  "seats": 4,
+  "seed": 20261310,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 72,
+  "win_rate": 0.36,
+  "win_rate_ci95": [
+   0.2967,
+   0.4286
+  ],
+  "even_share": 0.25,
+  "not_finished": 1,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 20
+   },
+   {
+    "games": 50,
+    "wins": 19
+   },
+   {
+    "games": 50,
+    "wins": 13
+   },
+   {
+    "games": 50,
+    "wins": 20
+   }
+  ],
+  "losses": 127,
+  "out_first": 44,
+  "out_second": 38,
+  "out_third": 45,
+  "loss_reasons": {
+   "LifeReachedZero": 122,
+   "OpponentWon": 4,
+   "CommanderDamage": 2
+  },
+  "game_turns": 42.1,
+  "own_turns_when_won": 10.9,
+  "own_turns_when_lost": 10.6
+ },
+ "opponents": {
+  "planeswalker-party": {
+   "tables": 49,
+   "focus_wins": 22,
+   "focus_win_rate": 0.449,
+   "its_wins": 11,
+   "its_win_rate": 0.224,
+   "took_it_out": 8
+  },
+  "quick-draw": {
+   "tables": 58,
+   "focus_wins": 24,
+   "focus_win_rate": 0.414,
+   "its_wins": 17,
+   "its_win_rate": 0.293,
+   "took_it_out": 13
+  },
+  "wretched-ranks": {
+   "tables": 56,
+   "focus_wins": 23,
+   "focus_win_rate": 0.411,
+   "its_wins": 7,
+   "its_win_rate": 0.125,
+   "took_it_out": 6
+  },
+  "hail-caesar": {
+   "tables": 45,
+   "focus_wins": 18,
+   "focus_win_rate": 0.4,
+   "its_wins": 9,
+   "its_win_rate": 0.2,
+   "took_it_out": 8
+  },
+  "limit-break": {
+   "tables": 41,
+   "focus_wins": 16,
+   "focus_win_rate": 0.39,
+   "its_wins": 5,
+   "its_win_rate": 0.122,
+   "took_it_out": 5
+  },
+  "elven-council": {
+   "tables": 56,
+   "focus_wins": 21,
+   "focus_win_rate": 0.375,
+   "its_wins": 5,
+   "its_win_rate": 0.089,
+   "took_it_out": 10
+  },
+  "enduring-enchantments": {
+   "tables": 59,
+   "focus_wins": 21,
+   "focus_win_rate": 0.356,
+   "its_wins": 17,
+   "its_win_rate": 0.288,
+   "took_it_out": 13
+  },
+  "goblin-storm": {
+   "tables": 43,
+   "focus_wins": 14,
+   "focus_win_rate": 0.326,
+   "its_wins": 10,
+   "its_win_rate": 0.233,
+   "took_it_out": 9
+  },
+  "token-triumph": {
+   "tables": 48,
+   "focus_wins": 15,
+   "focus_win_rate": 0.312,
+   "its_wins": 9,
+   "its_win_rate": 0.188,
+   "took_it_out": 10
+  },
+  "deep-clue-sea": {
+   "tables": 45,
+   "focus_wins": 14,
+   "focus_win_rate": 0.311,
+   "its_wins": 14,
+   "its_win_rate": 0.311,
+   "took_it_out": 12
+  },
+  "eldrazi-incursion": {
+   "tables": 48,
+   "focus_wins": 14,
+   "focus_win_rate": 0.292,
+   "its_wins": 12,
+   "its_win_rate": 0.25,
+   "took_it_out": 15
+  },
+  "tricky-terrain": {
+   "tables": 52,
+   "focus_wins": 14,
+   "focus_win_rate": 0.269,
+   "its_wins": 11,
+   "its_win_rate": 0.212,
+   "took_it_out": 6
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.27,
+  "lands_at_own_turn": {
+   "4": 2.98,
+   "6": 4.59,
+   "8": 5.92
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.19,
+   "6": 4.45,
+   "8": 4.34
+  },
+  "short_of_four_lands_at_turn_5": 0.205,
+  "commander_first_cast": {
+   "median": 5.0,
+   "p25": 5,
+   "p75": 6,
+   "never_cast": 0.01,
+   "casts_per_game": 2.07
+  },
+  "spells_per_game": 15.0,
+  "idle_turn_share": 0.036,
+  "damage_dealt_per_game": 74.9,
+  "damage_taken_per_game": 40.2,
+  "commander_damage_dealt_per_game": 10.2,
+  "nonland_cards_in_hand_at_loss": 3.22,
+  "of_them_affordable": 3.08
+ },
+ "cards": {
+  "Wayfarer's Bauble": {
+   "drawn": 39,
+   "played": 39,
+   "played_share": 1.0,
+   "median_turn": 7,
+   "win_rate_drawn": 0.462,
+   "win_rate_not_drawn": 0.335,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Departed Deckhand": {
+   "drawn": 49,
+   "played": 42,
+   "played_share": 0.857,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.388,
+   "win_rate_not_drawn": 0.351,
+   "held_at_loss": 7,
+   "mv": 2,
+   "type": "Creature - Spirit Pirate"
+  },
+  "Azure Fleet Admiral": {
+   "drawn": 46,
+   "played": 26,
+   "played_share": 0.565,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.435,
+   "win_rate_not_drawn": 0.338,
+   "held_at_loss": 12,
+   "mv": 4,
+   "type": "Creature - Human Pirate"
+  },
+  "Spectral Sailor": {
+   "drawn": 45,
+   "played": 41,
+   "played_share": 0.911,
+   "median_turn": 8,
+   "win_rate_drawn": 0.378,
+   "win_rate_not_drawn": 0.355,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Creature - Spirit Pirate"
+  },
+  "Merchant Raiders": {
+   "drawn": 43,
+   "played": 34,
+   "played_share": 0.791,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.349,
+   "win_rate_not_drawn": 0.363,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Creature - Human Pirate"
+  },
+  "Amphin Mutineer": {
+   "drawn": 44,
+   "played": 36,
+   "played_share": 0.818,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.386,
+   "win_rate_not_drawn": 0.353,
+   "held_at_loss": 5,
+   "mv": 4,
+   "type": "Creature - Salamander Pirate"
+  },
+  "Don Andres, the Renegade": {
+   "drawn": 61,
+   "played": 42,
+   "played_share": 0.689,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.492,
+   "win_rate_not_drawn": 0.302,
+   "held_at_loss": 16,
+   "mv": 4,
+   "type": "Legendary Creature - Vampire Pirate"
+  },
+  "Rakdos Charm": {
+   "drawn": 42,
+   "played": 22,
+   "played_share": 0.524,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.323,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Kari Zev, Skyship Raider": {
+   "drawn": 64,
+   "played": 58,
+   "played_share": 0.906,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.453,
+   "win_rate_not_drawn": 0.316,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Legendary Creature - Human Pirate"
+  },
+  "Zara, Renegade Recruiter": {
+   "drawn": 46,
+   "played": 27,
+   "played_share": 0.587,
+   "median_turn": 9,
+   "win_rate_drawn": 0.348,
+   "win_rate_not_drawn": 0.364,
+   "held_at_loss": 20,
+   "mv": 5,
+   "type": "Legendary Creature - Human Pirate"
+  },
+  "Timestream Navigator": {
+   "drawn": 53,
+   "played": 39,
+   "played_share": 0.736,
+   "median_turn": 6,
+   "win_rate_drawn": 0.358,
+   "win_rate_not_drawn": 0.361,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Creature - Human Pirate Wizard"
+  },
+  "Arcane Signet": {
+   "drawn": 47,
+   "played": 46,
+   "played_share": 0.979,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.426,
+   "win_rate_not_drawn": 0.34,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Chaos Warp": {
+   "drawn": 41,
+   "played": 41,
+   "played_share": 1.0,
+   "median_turn": 7,
+   "win_rate_drawn": 0.537,
+   "win_rate_not_drawn": 0.314,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Francisco, Fowl Marauder": {
+   "drawn": 54,
+   "played": 48,
+   "played_share": 0.889,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.389,
+   "win_rate_not_drawn": 0.349,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Legendary Creature - Bird Pirate"
+  },
+  "Commander's Sphere": {
+   "drawn": 50,
+   "played": 46,
+   "played_share": 0.92,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.38,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Distant Melody": {
+   "drawn": 52,
+   "played": 44,
+   "played_share": 0.846,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.462,
+   "win_rate_not_drawn": 0.324,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Vanquisher's Banner": {
+   "drawn": 53,
+   "played": 40,
+   "played_share": 0.755,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.396,
+   "win_rate_not_drawn": 0.347,
+   "held_at_loss": 5,
+   "mv": 5,
+   "type": "Artifact"
+  },
+  "Siren Stormtamer": {
+   "drawn": 49,
+   "played": 46,
+   "played_share": 0.939,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.408,
+   "win_rate_not_drawn": 0.344,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Creature - Siren Pirate Wizard"
+  },
+  "Captivating Crew": {
+   "drawn": 50,
+   "played": 35,
+   "played_share": 0.7,
+   "median_turn": 9,
+   "win_rate_drawn": 0.44,
+   "win_rate_not_drawn": 0.333,
+   "held_at_loss": 11,
+   "mv": 4,
+   "type": "Creature - Human Pirate"
+  },
+  "The Grim Captain's Locker": {
+   "drawn": 54,
+   "played": 32,
+   "played_share": 0.593,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.407,
+   "win_rate_not_drawn": 0.342,
+   "held_at_loss": 9,
+   "mv": 4,
+   "type": "Legendary Artifact"
+  },
+  "Shared Animosity": {
+   "drawn": 40,
+   "played": 38,
+   "played_share": 0.95,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.525,
+   "win_rate_not_drawn": 0.319,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Fathom Fleet Captain": {
+   "drawn": 47,
+   "played": 41,
+   "played_share": 0.872,
+   "median_turn": 7,
+   "win_rate_drawn": 0.362,
+   "win_rate_not_drawn": 0.359,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Human Pirate"
+  },
+  "Evacuation": {
+   "drawn": 48,
+   "played": 25,
+   "played_share": 0.521,
+   "median_turn": 9,
+   "win_rate_drawn": 0.354,
+   "win_rate_not_drawn": 0.362,
+   "held_at_loss": 8,
+   "mv": 5,
+   "type": "Instant"
+  },
+  "Pitiless Plunderer": {
+   "drawn": 44,
+   "played": 22,
+   "played_share": 0.5,
+   "median_turn": 10.5,
+   "win_rate_drawn": 0.409,
+   "win_rate_not_drawn": 0.346,
+   "held_at_loss": 13,
+   "mv": 4,
+   "type": "Creature - Human Pirate"
+  },
+  "Storm Fleet Negotiator": {
+   "drawn": 56,
+   "played": 45,
+   "played_share": 0.804,
+   "median_turn": 8,
+   "win_rate_drawn": 0.375,
+   "win_rate_not_drawn": 0.354,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Creature - Siren Pirate"
+  },
+  "Skeleton Crew": {
+   "drawn": 46,
+   "played": 36,
+   "played_share": 0.783,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.391,
+   "win_rate_not_drawn": 0.351,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Creature - Skeleton Pirate"
+  },
+  "Broadside Bombardiers": {
+   "drawn": 41,
+   "played": 32,
+   "played_share": 0.78,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.488,
+   "win_rate_not_drawn": 0.327,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Creature - Goblin Pirate"
+  },
+  "Admiral Beckett Brass": {
+   "drawn": 55,
+   "played": 51,
+   "played_share": 0.927,
+   "median_turn": 7,
+   "win_rate_drawn": 0.418,
+   "win_rate_not_drawn": 0.338,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Legendary Creature - Human Pirate"
+  },
+  "Warkite Marauder": {
+   "drawn": 44,
+   "played": 35,
+   "played_share": 0.795,
+   "median_turn": 7,
+   "win_rate_drawn": 0.341,
+   "win_rate_not_drawn": 0.365,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Creature - Human Pirate"
+  },
+  "Enterprising Scallywag": {
+   "drawn": 43,
+   "played": 34,
+   "played_share": 0.791,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.488,
+   "win_rate_not_drawn": 0.325,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Goblin Pirate"
+  },
+  "Prismari Command": {
+   "drawn": 47,
+   "played": 40,
+   "played_share": 0.851,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.362,
+   "win_rate_not_drawn": 0.359,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Black Market Connections": {
+   "drawn": 55,
+   "played": 44,
+   "played_share": 0.8,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.382,
+   "win_rate_not_drawn": 0.352,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Bident of Thassa": {
+   "drawn": 45,
+   "played": 31,
+   "played_share": 0.689,
+   "median_turn": 8,
+   "win_rate_drawn": 0.378,
+   "win_rate_not_drawn": 0.355,
+   "held_at_loss": 4,
+   "mv": 4,
+   "type": "Legendary Artifact Enchantment"
+  },
+  "Coercive Recruiter": {
+   "drawn": 65,
+   "played": 49,
+   "played_share": 0.754,
+   "median_turn": 8,
+   "win_rate_drawn": 0.4,
+   "win_rate_not_drawn": 0.341,
+   "held_at_loss": 13,
+   "mv": 5,
+   "type": "Creature - Orc Pirate"
+  },
+  "Breeches, Brazen Plunderer": {
+   "drawn": 61,
+   "played": 53,
+   "played_share": 0.869,
+   "median_turn": 7,
+   "win_rate_drawn": 0.328,
+   "win_rate_not_drawn": 0.374,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Legendary Creature - Goblin Pirate"
+  },
+  "Ghost of Ramirez DePietro": {
+   "drawn": 48,
+   "played": 32,
+   "played_share": 0.667,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.368,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Legendary Creature - Spirit Pirate"
+  },
+  "Hostage Taker": {
+   "drawn": 50,
+   "played": 47,
+   "played_share": 0.94,
+   "median_turn": 7,
+   "win_rate_drawn": 0.38,
+   "win_rate_not_drawn": 0.353,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Creature - Human Pirate"
+  },
+  "Port Razer": {
+   "drawn": 48,
+   "played": 38,
+   "played_share": 0.792,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.368,
+   "held_at_loss": 12,
+   "mv": 5,
+   "type": "Creature - Orc Pirate"
+  },
+  "Izzet Signet": {
+   "drawn": 53,
+   "played": 51,
+   "played_share": 0.962,
+   "median_turn": 5,
+   "win_rate_drawn": 0.396,
+   "win_rate_not_drawn": 0.347,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Blood Money": {
+   "drawn": 46,
+   "played": 30,
+   "played_share": 0.652,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.391,
+   "win_rate_not_drawn": 0.351,
+   "held_at_loss": 4,
+   "mv": 7,
+   "type": "Sorcery"
+  },
+  "Gemcutter Buccaneer": {
+   "drawn": 34,
+   "played": 28,
+   "played_share": 0.824,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.324,
+   "win_rate_not_drawn": 0.367,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Creature - Orc Pirate Artificer"
+  },
+  "The Indomitable": {
+   "drawn": 49,
+   "played": 35,
+   "played_share": 0.714,
+   "median_turn": 7,
+   "win_rate_drawn": 0.449,
+   "win_rate_not_drawn": 0.331,
+   "held_at_loss": 11,
+   "mv": 4,
+   "type": "Legendary Artifact - Vehicle"
+  },
+  "Faithless Looting": {
+   "drawn": 45,
+   "played": 37,
+   "played_share": 0.822,
+   "median_turn": 7,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.368,
+   "held_at_loss": 8,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Ramirez DePietro, Pillager": {
+   "drawn": 61,
+   "played": 53,
+   "played_share": 0.869,
+   "median_turn": 8,
+   "win_rate_drawn": 0.377,
+   "win_rate_not_drawn": 0.353,
+   "held_at_loss": 12,
+   "mv": 4,
+   "type": "Legendary Creature - Human Pirate"
+  },
+  "Rakdos Signet": {
+   "drawn": 44,
+   "played": 44,
+   "played_share": 1.0,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.295,
+   "win_rate_not_drawn": 0.378,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Malcolm, Keen-Eyed Navigator": {
+   "drawn": 50,
+   "played": 46,
+   "played_share": 0.92,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.38,
+   "win_rate_not_drawn": 0.353,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Legendary Creature - Siren Pirate"
+  },
+  "Windfall": {
+   "drawn": 49,
+   "played": 21,
+   "played_share": 0.429,
+   "median_turn": 9,
+   "win_rate_drawn": 0.429,
+   "win_rate_not_drawn": 0.338,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Dire Fleet Daredevil": {
+   "drawn": 54,
+   "played": 47,
+   "played_share": 0.87,
+   "median_turn": 6,
+   "win_rate_drawn": 0.37,
+   "win_rate_not_drawn": 0.356,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Human Pirate"
+  },
+  "Corsair Captain": {
+   "drawn": 59,
+   "played": 56,
+   "played_share": 0.949,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.407,
+   "win_rate_not_drawn": 0.34,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Creature - Human Pirate"
+  },
+  "King Narfi's Betrayal": {
+   "drawn": 46,
+   "played": 28,
+   "played_share": 0.609,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.413,
+   "win_rate_not_drawn": 0.344,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Enchantment - Saga"
+  },
+  "Sol Ring": {
+   "drawn": 46,
+   "played": 46,
+   "played_share": 1.0,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.318,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Captain Lannery Storm": {
+   "drawn": 52,
+   "played": 39,
+   "played_share": 0.75,
+   "median_turn": 7,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.372,
+   "held_at_loss": 7,
+   "mv": 3,
+   "type": "Legendary Creature - Human Pirate"
+  },
+  "Icon of Ancestry": {
+   "drawn": 40,
+   "played": 37,
+   "played_share": 0.925,
+   "median_turn": 6,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.325,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Dire Fleet Ravager": {
+   "drawn": 57,
+   "played": 27,
+   "played_share": 0.474,
+   "median_turn": 9,
+   "win_rate_drawn": 0.281,
+   "win_rate_not_drawn": 0.392,
+   "held_at_loss": 24,
+   "mv": 5,
+   "type": "Creature - Orc Pirate Wizard"
+  },
+  "Herald's Horn": {
+   "drawn": 43,
+   "played": 41,
+   "played_share": 0.953,
+   "median_turn": 7,
+   "win_rate_drawn": 0.419,
+   "win_rate_not_drawn": 0.344,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Arm-Mounted Anchor": {
+   "drawn": 39,
+   "played": 34,
+   "played_share": 0.872,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.366,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Artifact - Equipment"
+  },
+  "Feed the Swarm": {
+   "drawn": 48,
+   "played": 45,
+   "played_share": 0.938,
+   "median_turn": 6,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.395,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Blasphemous Act": {
+   "drawn": 43,
+   "played": 26,
+   "played_share": 0.605,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.372,
+   "win_rate_not_drawn": 0.357,
+   "held_at_loss": 4,
+   "mv": 9,
+   "type": "Sorcery"
+  },
+  "Daring Saboteur": {
+   "drawn": 49,
+   "played": 44,
+   "played_share": 0.898,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.367,
+   "win_rate_not_drawn": 0.358,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Human Pirate"
+  },
+  "Dimir Signet": {
+   "drawn": 39,
+   "played": 39,
+   "played_share": 1.0,
+   "median_turn": 3,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.366,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Lethal Scheme": {
+   "drawn": 57,
+   "played": 53,
+   "played_share": 0.93,
+   "median_turn": 6,
+   "win_rate_drawn": 0.281,
+   "win_rate_not_drawn": 0.392,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Angrath's Marauders": {
+   "drawn": 62,
+   "played": 40,
+   "played_share": 0.645,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.484,
+   "win_rate_not_drawn": 0.304,
+   "held_at_loss": 13,
+   "mv": 7,
+   "type": "Creature - Human Pirate"
+  }
+ },
+ "list": {
+  "Admiral Beckett Brass": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Human Pirate",
+   "land": false
+  },
+  "Amphin Mutineer": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Salamander Pirate",
+   "land": false
+  },
+  "Angrath's Marauders": {
+   "count": 1,
+   "mv": 7,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Arcane Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Arm-Mounted Anchor": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact - Equipment",
+   "land": false
+  },
+  "Azure Fleet Admiral": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Bident of Thassa": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Artifact Enchantment",
+   "land": false
+  },
+  "Black Market Connections": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Blasphemous Act": {
+   "count": 1,
+   "mv": 9,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Blood Money": {
+   "count": 1,
+   "mv": 7,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Breeches, Brazen Plunderer": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Goblin Pirate",
+   "land": false
+  },
+  "Broadside Bombardiers": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Goblin Pirate",
+   "land": false
+  },
+  "Captain Lannery Storm": {
+   "count": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Human Pirate",
+   "land": false
+  },
+  "Captivating Crew": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Chaos Warp": {
+   "count": 1,
+   "mv": 3,
+   "type": "Instant",
+   "land": false
+  },
+  "Choked Estuary": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Coercive Recruiter": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Orc Pirate",
+   "land": false
+  },
+  "Command Tower": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Commander's Sphere": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Corsair Captain": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Crumbling Necropolis": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Daring Saboteur": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Departed Deckhand": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Spirit Pirate",
+   "land": false
+  },
+  "Desolate Lighthouse": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Dimir Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Dire Fleet Daredevil": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Dire Fleet Ravager": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Orc Pirate Wizard",
+   "land": false
+  },
+  "Distant Melody": {
+   "count": 1,
+   "mv": 4,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Don Andres, the Renegade": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Vampire Pirate",
+   "land": false
+  },
+  "Enterprising Scallywag": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Goblin Pirate",
+   "land": false
+  },
+  "Evacuation": {
+   "count": 1,
+   "mv": 5,
+   "type": "Instant",
+   "land": false
+  },
+  "Evolving Wilds": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Exotic Orchard": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Faithless Looting": {
+   "count": 1,
+   "mv": 1,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Fathom Fleet Captain": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Feed the Swarm": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Foreboding Ruins": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Francisco, Fowl Marauder": {
+   "count": 1,
+   "mv": 2,
+   "type": "Legendary Creature - Bird Pirate",
+   "land": false
+  },
+  "Frostboil Snarl": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Geier Reach Sanitarium": {
+   "count": 1,
+   "mv": 0,
+   "type": "Legendary Land",
+   "land": true
+  },
+  "Gemcutter Buccaneer": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Orc Pirate Artificer",
+   "land": false
+  },
+  "Ghost of Ramirez DePietro": {
+   "count": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Spirit Pirate",
+   "land": false
+  },
+  "Herald's Horn": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Hostage Taker": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Icon of Ancestry": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Island": {
+   "count": 3,
+   "mv": 0,
+   "type": "Basic Land - Island",
+   "land": true
+  },
+  "Izzet Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Kari Zev, Skyship Raider": {
+   "count": 1,
+   "mv": 2,
+   "type": "Legendary Creature - Human Pirate",
+   "land": false
+  },
+  "King Narfi's Betrayal": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment - Saga",
+   "land": false
+  },
+  "Lethal Scheme": {
+   "count": 1,
+   "mv": 4,
+   "type": "Instant",
+   "land": false
+  },
+  "Malcolm, Keen-Eyed Navigator": {
+   "count": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Siren Pirate",
+   "land": false
+  },
+  "Merchant Raiders": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Mountain": {
+   "count": 2,
+   "mv": 0,
+   "type": "Basic Land - Mountain",
+   "land": true
+  },
+  "Nephalia Drownyard": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Path of Ancestry": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Pitiless Plunderer": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Port Razer": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Orc Pirate",
+   "land": false
+  },
+  "Port of Karfell": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Prismari Command": {
+   "count": 1,
+   "mv": 3,
+   "type": "Instant",
+   "land": false
+  },
+  "Rakdos Charm": {
+   "count": 1,
+   "mv": 2,
+   "type": "Instant",
+   "land": false
+  },
+  "Rakdos Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Ramirez DePietro, Pillager": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Human Pirate",
+   "land": false
+  },
+  "Rogue's Passage": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Secluded Courtyard": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Shared Animosity": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Siren Stormtamer": {
+   "count": 1,
+   "mv": 1,
+   "type": "Creature - Siren Pirate Wizard",
+   "land": false
+  },
+  "Skeleton Crew": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Skeleton Pirate",
+   "land": false
+  },
+  "Smoldering Marsh": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Swamp Mountain",
+   "land": true
+  },
+  "Sol Ring": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact",
+   "land": false
+  },
+  "Spectral Sailor": {
+   "count": 1,
+   "mv": 1,
+   "type": "Creature - Spirit Pirate",
+   "land": false
+  },
+  "Storm Fleet Negotiator": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Siren Pirate",
+   "land": false
+  },
+  "Sulfur Falls": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Sunken Hollow": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Island Swamp",
+   "land": true
+  },
+  "Swamp": {
+   "count": 2,
+   "mv": 0,
+   "type": "Basic Land - Swamp",
+   "land": true
+  },
+  "Terramorphic Expanse": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "The Grim Captain's Locker": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Artifact",
+   "land": false
+  },
+  "The Indomitable": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Artifact - Vehicle",
+   "land": false
+  },
+  "Thriving Bluff": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Thriving Isle": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Thriving Moor": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Timestream Navigator": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Pirate Wizard",
+   "land": false
+  },
+  "Unclaimed Territory": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Vanquisher's Banner": {
+   "count": 1,
+   "mv": 5,
+   "type": "Artifact",
+   "land": false
+  },
+  "Warkite Marauder": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Pirate",
+   "land": false
+  },
+  "Wayfarer's Bauble": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact",
+   "land": false
+  },
+  "Windfall": {
+   "count": 1,
+   "mv": 3,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Zara, Renegade Recruiter": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Human Pirate",
+   "land": false
+  }
+ },
+ "outcomes": {
+  "g0001": 1,
+  "g0002": 1,
+  "g0003": 0,
+  "g0004": 1,
+  "g0005": 0,
+  "g0006": 0,
+  "g0007": 0,
+  "g0008": 0,
+  "g0009": 1,
+  "g0010": 0,
+  "g0011": 0,
+  "g0012": 0,
+  "g0013": 1,
+  "g0014": 0,
+  "g0015": 0,
+  "g0016": 0,
+  "g0017": 0,
+  "g0018": 1,
+  "g0019": 1,
+  "g0020": 1,
+  "g0021": 0,
+  "g0022": 1,
+  "g0023": 0,
+  "g0024": 0,
+  "g0025": 1,
+  "g0026": 0,
+  "g0027": 1,
+  "g0028": 0,
+  "g0029": 1,
+  "g0030": 0,
+  "g0031": 0,
+  "g0032": 0,
+  "g0033": 0,
+  "g0034": 0,
+  "g0035": 0,
+  "g0036": 1,
+  "g0037": 0,
+  "g0038": 0,
+  "g0039": 0,
+  "g0040": 0,
+  "g0041": 1,
+  "g0042": 1,
+  "g0043": 0,
+  "g0044": 0,
+  "g0045": 0,
+  "g0046": 0,
+  "g0047": 1,
+  "g0048": 1,
+  "g0049": 0,
+  "g0050": 0,
+  "g0051": 1,
+  "g0052": 0,
+  "g0053": 0,
+  "g0054": 0,
+  "g0055": 0,
+  "g0056": 0,
+  "g0057": 0,
+  "g0058": 0,
+  "g0059": 0,
+  "g0060": 0,
+  "g0061": 0,
+  "g0062": 0,
+  "g0063": 0,
+  "g0064": 0,
+  "g0065": 1,
+  "g0066": 1,
+  "g0067": 0,
+  "g0068": 1,
+  "g0069": 1,
+  "g0070": 1,
+  "g0071": 1,
+  "g0072": 0,
+  "g0073": 1,
+  "g0074": 1,
+  "g0075": 0,
+  "g0076": 1,
+  "g0077": 1,
+  "g0078": 1,
+  "g0079": 1,
+  "g0080": 0,
+  "g0081": 0,
+  "g0082": 0,
+  "g0083": 1,
+  "g0084": 0,
+  "g0085": 0,
+  "g0086": 0,
+  "g0087": 1,
+  "g0088": 0,
+  "g0089": 1,
+  "g0090": 1,
+  "g0091": 0,
+  "g0092": 0,
+  "g0093": 0,
+  "g0094": 0,
+  "g0095": 1,
+  "g0096": 1,
+  "g0097": 0,
+  "g0098": 0,
+  "g0099": 0,
+  "g0100": 0,
+  "g0101": 0,
+  "g0102": 0,
+  "g0103": 0,
+  "g0104": 1,
+  "g0105": 1,
+  "g0106": 0,
+  "g0107": 0,
+  "g0108": 1,
+  "g0109": 1,
+  "g0110": 0,
+  "g0111": 1,
+  "g0112": 0,
+  "g0113": 0,
+  "g0114": 0,
+  "g0115": 0,
+  "g0116": 0,
+  "g0117": 0,
+  "g0118": 0,
+  "g0119": 0,
+  "g0120": 1,
+  "g0121": 1,
+  "g0122": 0,
+  "g0123": 0,
+  "g0124": 0,
+  "g0125": 1,
+  "g0126": 0,
+  "g0127": 1,
+  "g0128": 1,
+  "g0129": 0,
+  "g0130": 1,
+  "g0131": 1,
+  "g0132": 0,
+  "g0133": 1,
+  "g0134": 1,
+  "g0135": 1,
+  "g0136": 0,
+  "g0137": 0,
+  "g0138": 0,
+  "g0139": 0,
+  "g0140": 1,
+  "g0141": 0,
+  "g0142": 0,
+  "g0143": 0,
+  "g0144": 0,
+  "g0145": 1,
+  "g0146": 0,
+  "g0147": 0,
+  "g0148": 0,
+  "g0149": 0,
+  "g0150": 1,
+  "g0151": 0,
+  "g0152": 0,
+  "g0153": 0,
+  "g0154": 1,
+  "g0155": 0,
+  "g0156": 1,
+  "g0157": 0,
+  "g0158": 0,
+  "g0159": 0,
+  "g0160": 0,
+  "g0161": 0,
+  "g0162": 1,
+  "g0163": 0,
+  "g0164": 1,
+  "g0165": 0,
+  "g0166": 1,
+  "g0167": 0,
+  "g0168": 0,
+  "g0169": 0,
+  "g0170": 0,
+  "g0171": 0,
+  "g0172": 1,
+  "g0173": 0,
+  "g0174": 1,
+  "g0175": 0,
+  "g0176": 1,
+  "g0177": 1,
+  "g0178": 1,
+  "g0179": 0,
+  "g0180": 1,
+  "g0181": 0,
+  "g0182": 0,
+  "g0183": 0,
+  "g0184": 0,
+  "g0185": 0,
+  "g0186": 1,
+  "g0187": 0,
+  "g0188": 1,
+  "g0189": 1,
+  "g0190": 0,
+  "g0191": 0,
+  "g0192": 0,
+  "g0193": 0,
+  "g0194": 1,
+  "g0195": 0,
+  "g0196": 1,
+  "g0197": 1,
+  "g0198": 0,
+  "g0199": 0,
+  "g0200": 1
+ }
+}
