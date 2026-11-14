@@ -150,7 +150,11 @@ public final class Playbook {
      * plays no rule names: the spells of cards no play rule lists and the abilities no activate rule covers, the
      * holds in force left out. When it wants none of them the rules below are read. Without such a rule everything
      * the rules do not name waits until every rule is idle, which starves it behind an engine that always has
-     * something to do (DESIGN.md section 30).
+     * something to do (DESIGN.md section 30). With {@code "wait": "main2"} the rule also keeps the mana for what
+     * Forge's AI casts after combat: in the first main phase, when Forge wants none of the unnamed plays now but
+     * says of an unnamed card it could pay for that it is waiting for its second main phase, the rules below are
+     * not read and the seat passes; they are read in the second main phase, after Forge has made its choice there.
+     * Without it the rules below spend in the first main phase the mana Forge would have used in the second.
      */
     public static final class CastRule {
         public final String kind;           // play | activate | hold | forge
@@ -163,6 +167,7 @@ public final class Playbook {
         public final boolean beforeLand;    // play, activate: tried before the turn's land is played (landfall first)
         public final int x;                 // play, activate: the most X the rule pays (-1: X is Forge's; "max": all the mana left)
         public final int xMin;              // ... and the least X worth casting for (default 1)
+        public final boolean waitMain2;     // forge: the rules below wait for main 2 while Forge keeps an unnamed card for it
         public final int index;             // 1-based position in the file, for the counters
 
         CastRule(JsonObject o, int index) {
@@ -188,10 +193,16 @@ public final class Playbook {
                 }
                 for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until")) {
                     if (o.has(key)) {
-                        throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\" and \"phase\"");
+                        throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\", \"phase\" and \"wait\"");
                     }
                 }
+                if (o.has("wait") && (!o.get("wait").isJsonPrimitive() || !"main2".equals(o.get("wait").getAsString()))) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": \"wait\" takes \"main2\" (the rules below wait for the second main phase)");
+                }
+            } else if (o.has("wait")) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": only a forge rule takes \"wait\"");
             }
+            waitMain2 = forge && o.has("wait");
             cards = forge ? Collections.emptyList() : strings(o.get(kind));
             if (cards.isEmpty() && !forge) {
                 throw new IllegalArgumentException("playbook cast rule " + index + " names no cards");
@@ -418,7 +429,7 @@ public final class Playbook {
             sb.append(" cast=").append(plays).append(" play, ").append(activations).append(" activate, ").append(holds).append(" hold rule(s)");
             for (CastRule r : cast.rules) {
                 if (r.isForge()) {
-                    sb.append(", Forge's choice among the unnamed at rule ").append(r.index);
+                    sb.append(", Forge's choice among the unnamed at rule ").append(r.index).append(r.waitMain2 ? " (the rules below wait for main 2)" : "");
                 }
             }
         }

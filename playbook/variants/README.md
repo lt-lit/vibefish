@@ -90,3 +90,4 @@ it came from, kept as the record of what was measured.
 
 Keep this table current when a candidate is added, measured or shipped: it is what stops the next session
 measuring a dead end twice.
+| `<deck>-<name>-forgewait.json` for Blight Curse `wretch`, Mutant Menace `mothman`, Squirreled Away `acorns`, Ahoy Mateys `crew` | written 2026-11-14 (harness 0.3.3), not at the tables yet; each parses, and Blight Curse's played ten local tables | the four `-forge` files with `"wait": "main2"` on the `forge` rule and nothing else changed (`docs/agents/add_forge_rule.py --wait`): the rules below the rule wait for the second main phase while Forge's AI keeps an unnamed permanent for it that the seat could pay for (DESIGN §30: Forge casts most permanents after combat, and the rules spend the mana before it). Their exam: beside the `-forge` files on the same tables, playbook arms, with the stock pilot, on a seed of their own (20261340) |

@@ -2,12 +2,14 @@
 """A variant of a playbook with a `{"forge": "unnamed"}` rule put in mechanically. A session helper.
 
     python3 -I docs/agents/add_forge_rule.py DECK [--base playbook/variants/DECK-NAME.json] [--name forge]
-                                             [--after commander|top|N] [--print]
+                                             [--after commander|top|N] [--wait] [--print]
 
 The base is the deck's shipped playbook (playbook/precons/DECK.json) unless --base names a candidate file. The rule
 goes after the first play rule that lists the deck's commander (--after commander, the default; at the top when no
 rule does), at the top (--after top) or after rule N of the base. Writes playbook/variants/DECK-<name>.json with the
-version one higher and a line in the notes; a base that already has a forge rule is refused.
+version one higher and a line in the notes; a base that already has a forge rule is refused. With --wait the rule is
+`{"forge": "unnamed", "wait": "main2"}`: the rules below it wait for the second main phase while Forge's AI keeps an
+unnamed card for it (harness 0.3.3; DESIGN.md section 30).
 
 This is the mechanical remedy for what engine rules crowd out (DESIGN.md section 30): everything the rules do not
 name is Forge's to choose at that place instead of after every rule. Where the place should be is a judgement about
@@ -27,6 +29,7 @@ def main(argv):
     ap.add_argument("--base")
     ap.add_argument("--name", default="forge")
     ap.add_argument("--after", default="commander")
+    ap.add_argument("--wait", action="store_true", help='the rule gets "wait": "main2"')
     ap.add_argument("--print", action="store_true", help="say where the rule would go and write nothing")
     a = ap.parse_args(argv)
     precon = json.load(open(os.path.join(ROOT, "playbook", "precons", a.deck + ".json"), encoding="utf-8"))
@@ -53,17 +56,21 @@ def main(argv):
     print(f"{a.deck}: {len(rules)} rules in {base_path}; the forge rule goes {where}")
     if a.print:
         return 0
-    rules.insert(at, {"forge": "unnamed"})
+    rule = {"forge": "unnamed", "wait": "main2"} if a.wait else {"forge": "unnamed"}
+    rules.insert(at, rule)
     pb["version"] = int(pb.get("version") or 1) + 1
     pb.pop("on", None)
     line = (f"Variant {a.name} (not shipped): the rules of {base_path} unchanged and in their order, with one rule added {where}: "
-            "{\"forge\": \"unnamed\"}, Forge's own choice among the plays no rule names, at that place instead of after every rule "
-            "(DESIGN.md section 30: engine rules crowd out the cards they do not name). Put in mechanically by docs/agents/add_forge_rule.py; "
-            "its place was not chosen for this deck.")
+            + json.dumps(rule) + ", Forge's own choice among the plays no rule names, at that place instead of after every rule "
+            "(DESIGN.md section 30: engine rules crowd out the cards they do not name)"
+            + ("; with the wait, the rules below it are not read in the first main phase while Forge keeps an unnamed card it could pay for "
+               "for its second" if a.wait else "")
+            + ". Put in mechanically by docs/agents/add_forge_rule.py; its place was not chosen for this deck.")
     notes = pb.get("notes")
     pb["notes"] = (notes + [line]) if isinstance(notes, list) else ((notes + " " if notes else "") + line)
     out = {"schema": base.get("schema"), "deck": a.deck, "variant": a.name, "of": base_path,
-           "about": f"{base_path} with a forge rule {where}: what the rules do not name is Forge's choice there, not last.",
+           "about": f"{base_path} with a forge rule {where}: what the rules do not name is Forge's choice there, not last."
+                    + (" The rule waits for the second main phase (\"wait\": \"main2\")." if a.wait else ""),
            "playbook": pb}
     path = os.path.join(ROOT, "playbook", "variants", f"{a.deck}-{a.name}.json")
     with open(path, "w", encoding="utf-8") as f:

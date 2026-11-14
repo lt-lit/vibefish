@@ -16,6 +16,7 @@ import forge.ai.ComputerUtilCombat;
 import forge.ai.ComputerUtilCost;
 import forge.ai.ComputerUtilMana;
 import forge.ai.PlayerControllerAi;
+import forge.ai.SpellApiToAi;
 import forge.game.Game;
 import forge.game.card.Card;
 import forge.game.card.CardCollection;
@@ -584,6 +585,10 @@ public class PlaybookController extends PlayerControllerAi {
     private final Map<Integer, Integer> castActivations = new LinkedHashMap<>();
     private final Map<String, Integer> castByName = new LinkedHashMap<>();
     private boolean castRetargeted;
+    private boolean castWaiting;            // a forge rule with "wait" stopped the rules for this decision: the seat passes
+    private int castWaitCard = -1;          // the card the rules waited for this turn, until Forge has chosen in main 2
+    private int castWaitTurn = -1;
+    private final Set<Integer> castWaitDeclined = new HashSet<>();   // cards waited for that Forge then did not cast: not waited for again
 
     /**
      * The seat's next play. Hold rules bind Forge's own choice on every call; play rules run on the seat's own main
@@ -633,6 +638,7 @@ public class PlaybookController extends PlayerControllerAi {
         count("cast_decisions", 1);
         SpellAbility pick = null;
         castRetargeted = false;
+        castWaiting = false;
         try {
             pick = castByRule(cast, ph, false);
         } catch (RuntimeException e) {
@@ -643,6 +649,9 @@ public class PlaybookController extends PlayerControllerAi {
             List<SpellAbility> one = new ArrayList<>();
             one.add(pick);
             return one;
+        }
+        if (castWaiting) {
+            return null;                                // pass: the mana is kept for what Forge casts after combat
         }
         // Forge's earlier answer stands unless a rule tried a spell and changed its targets on the way to giving up.
         return asked && !castRetargeted ? forge : forgeChoice(cast);
@@ -859,6 +868,73 @@ public class PlaybookController extends PlayerControllerAi {
         }
     }
 
+    /**
+     * For a {@code forge} rule with {@code "wait": "main2"}, in the first main phase: a permanent card no rule names
+     * or holds that Forge's AI keeps for its second main phase and that can be paid for now, or null. Forge's AI
+     * casts most permanents after combat; asked in the first main phase it declines them, and unless the rules below
+     * wait, they spend the mana before Forge is asked again. Forge's general answer ({@code AiController.canPlaySa})
+     * says only that the AI will not play the card; the reason is the answer of the card's own AI class, which is
+     * {@link AiPlayDecision#MissingPhaseRestrictions} for a permanent it wants in another phase and something else
+     * for a card it does not want at all (snapshot 2026-11-10: every permanent kept for after combat read so, and
+     * a wipe with nothing to destroy read {@code CantPlayAi}).
+     */
+    private Card forgeKeepsForMain2(Playbook.Cast cast) {
+        List<Playbook.CastRule> holds = holdsInForce(cast);
+        for (Card c : castable()) {
+            if (c.isLand() || !c.isPermanent() || castWaitDeclined.contains(c.getId())) {
+                continue;                               // an instant Forge keeps is kept for another turn, not for main 2
+            }
+            List<SpellAbility> spells = new ArrayList<>();
+            for (SpellAbility sa : c.getAllPossibleAbilities(player, true)) {
+                if (sa.isSpell() && sa.getAlternativeCost() == null) {
+                    spells.add(sa);
+                }
+            }
+            if (spells.isEmpty()) {
+                continue;
+            }
+            for (SpellAbility sa : ComputerUtilAbility.getOriginalAndAltCostAbilities(spells, player)) {
+                if (!sa.isSpell() || sa.getAlternativeCost() != null || isNamed(sa, cast) || isHeld(sa, holds)) {
+                    continue;
+                }
+                sa.setActivatingPlayer(player);
+                if (!sa.canPlay()) {
+                    continue;
+                }
+                castRetargeted = true;                  // Forge's logic may choose targets while it judges the spell
+                AiPlayDecision api;
+                try {
+                    api = SpellApiToAi.Converter.get(sa).canPlayWithSubs(player, sa).decision();
+                } catch (RuntimeException e) {
+                    continue;
+                }
+                if ((api == AiPlayDecision.MissingPhaseRestrictions || api == AiPlayDecision.WaitForMain2)
+                        && ComputerUtilCost.canPayCost(sa, player, false)) {
+                    return c;
+                }
+            }
+        }
+        return null;
+    }
+
+    /** Whether the card is still in hand (or the command zone) with a spell that is legal and can be paid for now. */
+    private boolean stillPayable(int cardId) {
+        for (Card c : castable()) {
+            if (c.getId() != cardId) {
+                continue;
+            }
+            for (SpellAbility sa : c.getAllPossibleAbilities(player, true)) {
+                if (sa.isSpell() && sa.getAlternativeCost() == null) {
+                    sa.setActivatingPlayer(player);
+                    if (sa.canPlay() && ComputerUtilCost.canPayCost(sa, player, false)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     /** The cards a rule can cast: the hand and the commanders in the command zone. */
     private List<Card> castable() {
         List<Card> cards = new ArrayList<>();
@@ -910,8 +986,31 @@ public class PlaybookController extends PlayerControllerAi {
                     castPlays++;
                     count("cast_rule_" + rule.index, 1);
                     count("cast_forge_unnamed", 1);
+                    if (ph.is(PhaseType.MAIN2)) {
+                        count("cast_forge_unnamed_main2", 1);
+                    }
                     trace("rule " + rule.index + " leaves the choice to Forge among the unnamed: " + sa.getHostCard().getName() + ": " + sa);
                     return sa;
+                }
+                if (rule.waitMain2 && !beforeLandOnly && ph.is(PhaseType.MAIN1)) {
+                    Card kept = forgeKeepsForMain2(cast);
+                    if (kept != null) {
+                        count("cast_forge_wait", 1);
+                        trace("rule " + rule.index + ": Forge keeps " + kept.getName() + " for its second main phase; the rules below wait for it");
+                        castWaitCard = kept.getId();
+                        castWaitTurn = turn;
+                        castWaiting = true;
+                        return null;
+                    }
+                } else if (rule.waitMain2 && castWaitCard >= 0 && castWaitTurn == turn && ph.is(PhaseType.MAIN2)) {
+                    // Forge has made its choices after combat. A card the rules waited for that it could still pay for
+                    // and did not cast is one it does not want after all: the rules do not wait for it again.
+                    if (stillPayable(castWaitCard)) {
+                        castWaitDeclined.add(castWaitCard);
+                        count("cast_forge_wait_unused", 1);
+                        trace("rule " + rule.index + ": Forge did not cast the card the rules waited for (card " + castWaitCard + "); not waiting for it again");
+                    }
+                    castWaitCard = -1;
                 }
                 continue;
             }

@@ -106,11 +106,26 @@ at the place in the order where everything else belongs, typically after the com
 and before the draw spells, the filler creatures and the mana sinks. `docs/agents/arm_card_diff.py` on the two arms of
 an exam lists the cards a playbook casts less than stock AI does.
 
+**Forge's AI casts most permanents after combat.** On the turns it attacks, stock AI makes seven of ten casts in its
+second main phase: creatures, planeswalkers and sagas that do nothing for the combat wait for it. The rules are read in
+both main phases and spend the mana in the first, so a `forge` rule that asks Forge there gets back only the cards
+Forge casts before combat (the sorceries, the creatures whose arrival matters for the attack); `ab-run` #34 measured
+that (`DESIGN.md` §30). `"wait": "main2"` on the rule is the remedy: in the first main phase, when Forge wants none
+of the unnamed plays now but says of an unnamed card it could pay for that it is waiting for its second main phase,
+the rules below the `forge` rule are not read and the seat passes; after combat the rules are read from the top
+again, Forge chooses among the unnamed first, and the rules below get what is left. "Waiting for its second main
+phase" is read off the card's own AI class (`MissingPhaseRestrictions` for a permanent, where a card Forge does not
+want at all reads `CantPlayAi`; Forge's general answer does not tell the two apart). Forge sometimes keeps a card and
+then does not cast it after combat either (Soul Snuffers in a deck of -1/-1 counters): the rules wait for such a card
+once and not again in that game. What the option costs is that the plays below the rule happen after combat on a turn
+it waits, so the rules whose cards matter for the attack (an anthem, haste, an equip) belong above it. Without the
+option nothing changes for a playbook that was measured without it.
+
 | rule | does | keys |
 |---|---|---|
 | `{"play": [cards]}` | casts the first listed card that is in hand (or is the commander in the command zone), legal and affordable. Forge's own opinion of the card is not asked, so this is also how a card flagged `AI:RemoveDeck:All` gets cast | `when`, `target`, `phase`, `times` (casts of one card a turn, default 1: only a card that comes back to hand, a buyback spell, can be cast again) |
 | `{"activate": [permanents]}` | uses an activated ability of a listed permanent of ours (mana abilities stay Forge's to tap) | `ability` (a piece of the ability's text, when the card has several), `times` (per permanent per turn, default 1), `when`, `target`, `phase` |
-| `{"forge": "unnamed"}` | at this place in the order Forge's own AI chooses among the plays no rule names: the spells of cards no `play` rule lists and the abilities no `activate` rule covers, the holds in force left out. It casts what it would have cast with only those to choose from (its own judgement of each card and its own targets); when it wants none of them, the rules below are read. A card a `play` rule lists with a `when` that does not hold is still a named card: it waits for its rule, or for the end of the rules | `when`, `phase` |
+| `{"forge": "unnamed"}` | at this place in the order Forge's own AI chooses among the plays no rule names: the spells of cards no `play` rule lists and the abilities no `activate` rule covers, the holds in force left out. It casts what it would have cast with only those to choose from (its own judgement of each card and its own targets); when it wants none of them, the rules below are read. A card a `play` rule lists with a `when` that does not hold is still a named card: it waits for its rule, or for the end of the rules. With `"wait": "main2"` the rules below are not read in the first main phase while Forge's AI keeps an unnamed card it could pay for for its second main phase (above) | `when`, `phase`, `wait` |
 | `{"hold": [cards]}` | Forge's AI may not cast these cards, from any zone, nor use the activated abilities of these permanents (`ability`: only the one whose text it quotes). A `play` or `activate` rule still may, which is how "only this way" is written. A card named by several hold rules is released as soon as one of them is | `until` (released when all of these hold; never, without it), `ability` |
 
 - `target`: the name of a permanent we control (a token by Forge's name for it, `Goblin Token`). The spell must have
@@ -153,8 +168,11 @@ policy's counters per game (`games[].playbook_stats`): `attack_decisions`, `atta
 cast rules `cast_decisions` (times the rules were read), `cast_policy` (times one fired), `cast_rule_<n>` (per rule, by
 its position in the file), `cast_hold_vetoes` (a Forge choice that a hold turned down), `cast_hold_stuck` (a hold that
 could only be kept by passing), `cast_failed`, `cast_forge_declined`, `cast_turn_limit`, `cast_errors`, and for a
-`forge` rule `cast_forge_unnamed` (times Forge took a play at it) and `cast_forge_stuck` (Forge kept choosing a named
-play and the rules below decided).
+`forge` rule `cast_forge_unnamed` (times Forge took a play at it), `cast_forge_unnamed_main2` (those of them in the
+second main phase), `cast_forge_wait` (times a rule with `"wait": "main2"` made the rules below it wait),
+`cast_forge_wait_unused` (waits after which Forge did not cast the card it had kept, though it could still pay for
+it: the rules do not wait for that card again) and `cast_forge_stuck` (Forge kept choosing a named play and the rules
+below decided).
 `FORGE_JAVA_OPTS=-Dvibefish.trace=true` prints one line per rule decision to the shard log.
 
 ### `triggers`: the seat's answer to "you may"

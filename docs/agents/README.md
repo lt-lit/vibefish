@@ -57,6 +57,10 @@ are that session's and have to be replaced by the new session's scratch director
   with `--base-commit=304db09`, the commit before the nine shipped), and `cast_phase.py RUN_DIR ARM DECK CARD...`
   (whether a seat's casts on its own turn come before or after its attack: the logs have no phase, and this is how
   §30 found that Forge's AI casts most permanents after combat).
+- `add_forge_rule.py DECK [--base FILE] [--name NAME] [--after commander|top|N] [--wait]`: a variant of a playbook with a
+  `forge` rule put in mechanically (after the commander's rule unless told otherwise; `--wait` gives the rule
+  `"wait": "main2"`). `playbook_check.sh [RUNTIME_DIR] [FILE...]` parses every playbook file with the harness's own
+  loader (`PbCheck.java`): run it after a change to the playbook format and before a candidate goes to the tables.
 - `reports/<date>/`: the agents' reports as handed back: the audit, the rules, the validation, what the rule format could
   not say, the deck's answers for the second pass, and where the candidate falls short of a person.
 
