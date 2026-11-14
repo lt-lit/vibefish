@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""verify_answers.py DECK: the candidate playbook/variants/DECK-answers.json against the shipped playbook and
-against the playbook recorded in each of its agent's local runs."""
+"""verify_answers.py DECK [BASE.json]: the candidate playbook/variants/DECK-answers.json against the shipped playbook
+(or against BASE.json, a candidate file, when the deck's engine rules are not shipped yet) and against the playbook
+recorded in each of its agent's local runs."""
 import json, glob, os, hashlib, sys
 deck=sys.argv[1]
 R='/home/user/vibefish'
-W=f'/tmp/claude-0/-home-user/2b458bb3-a9c8-5f77-a5b8-a723b31f9b47/scratchpad/batch/answers-{deck}'
+W=f'/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/batch/answers-{deck}'
 cand=json.load(open(f'{R}/playbook/variants/{deck}-answers.json'))
-ship=json.load(open(f'{R}/playbook/precons/{deck}.json'))
+ship=json.load(open(sys.argv[2] if len(sys.argv)>2 else f'{R}/playbook/precons/{deck}.json'))
 pb=cand['playbook']; sp=ship['playbook']
 rules=lambda b: b['cast']['rules'] if isinstance(b.get('cast'),dict) else b.get('cast')
 print('top keys',list(cand.keys()),'| deck',cand.get('deck'),'| variant',cand.get('variant'),'| of',cand.get('of'),'| version',pb.get('version'),'(shipped',sp.get('version'),')')
