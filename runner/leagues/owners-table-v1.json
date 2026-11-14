@@ -1,0 +1,144 @@
+{
+ "name": "owners-table-v1",
+ "status": "frozen",
+ "chosen_on": "2026-11-14",
+ "chosen_with": "snapshot-2026-11-10",
+ "description": "The owner's table: the ten precons the owner's group plays (DESIGN.md section 29: seven identified from photographs of the deck boxes on 2026-11-12, each commander checked against its card image and Forge's deck file, and three named as popular; Blight Curse, Veloci-Ramp-Tor, Mutant Menace and Squirreled Away are also the frozen benchmark pod). A league of these decks alone, and the pool a playtest of one of the owner's own lists draws its opponents from (runner/ab.py --deck-file ... --pool runner/leagues/owners-table-v1.json --opponent-playbooks): a deck that has a shipped playbook (playbook/precons/<id>.json) is seated under it, the others under stock Forge AI, so what this table is depends on the day; DESIGN.md section 30 and playbook/bots.json say which decks have one. If this list ever changes, that is a new league with a new name.",
+ "schedule": "runner/league.py: ten decks are two tables a round with two byes that rotate through the list. A cycle is four rounds, eight games; every deck that is not sitting out sits in every seat once a cycle. 63 cycles = 504 games, about 200 per deck.",
+ "precon_dir": "res/quest/commanderprecons",
+ "reference": "runner/reference/playgroup-commander.json",
+ "checked": "The ten decks are league-v1 decks (runner/precon-league.json): same files, same checks.",
+ "decks": [
+  {
+   "id": "blight-curse",
+   "file": "Blight Curse [ECC] [2026].dck",
+   "name": "Blight Curse",
+   "commanders": [
+    "Auntie Ool, Cursewretch"
+   ],
+   "set": "ECC",
+   "year": 2026,
+   "reference_name": "Blight Curse",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "veloci-ramp-tor",
+   "file": "Veloci-Ramp-Tor [LCC] [2023].dck",
+   "name": "Veloci-Ramp-Tor",
+   "commanders": [
+    "Pantlaza, Sun-Favored"
+   ],
+   "set": "LCC",
+   "year": 2023,
+   "reference_name": "Veloci-Ramp-Tor",
+   "ai_never": 1,
+   "ai_random": 4
+  },
+  {
+   "id": "mutant-menace",
+   "file": "Mutant Menace [PIP] [2024].dck",
+   "name": "Mutant Menace",
+   "commanders": [
+    "The Wise Mothman"
+   ],
+   "set": "PIP",
+   "year": 2024,
+   "reference_name": "Mutant Menace",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "squirreled-away",
+   "file": "Squirreled Away [BLC] [2024].dck",
+   "name": "Squirreled Away",
+   "commanders": [
+    "Hazel of the Rootbloom"
+   ],
+   "set": "BLC",
+   "year": 2024,
+   "reference_name": "Squirreled Away",
+   "ai_never": 1,
+   "ai_random": 2,
+   "note": "Chatterfang, Squirrel General is in the 99 as shipped"
+  },
+  {
+   "id": "miracle-worker",
+   "file": "Miracle Worker [DSC] [2024].dck",
+   "name": "Miracle Worker",
+   "commanders": [
+    "Aminatou, Veil Piercer"
+   ],
+   "set": "DSC",
+   "year": 2024,
+   "reference_name": "Miracle Worker",
+   "ai_never": 1,
+   "ai_random": 1
+  },
+  {
+   "id": "death-toll",
+   "file": "Death Toll [DSC] [2024].dck",
+   "name": "Death Toll",
+   "commanders": [
+    "Winter, Cynical Opportunist"
+   ],
+   "set": "DSC",
+   "year": 2024,
+   "reference_name": "Death Toll",
+   "ai_never": 2,
+   "ai_random": 1
+  },
+  {
+   "id": "deadly-disguise",
+   "file": "Deadly Disguise [MKC] [2024].dck",
+   "name": "Deadly Disguise",
+   "commanders": [
+    "Kaust, Eyes of the Glade"
+   ],
+   "set": "MKC",
+   "year": 2024,
+   "reference_name": "Deadly Disguise",
+   "ai_never": 4,
+   "ai_random": 5
+  },
+  {
+   "id": "revenant-recon",
+   "file": "Revenant Recon [MKC] [2024].dck",
+   "name": "Revenant Recon",
+   "commanders": [
+    "Mirko, Obsessive Theorist"
+   ],
+   "set": "MKC",
+   "year": 2024,
+   "reference_name": "Revenant Recon",
+   "ai_never": 3,
+   "ai_random": 2
+  },
+  {
+   "id": "blood-rites",
+   "file": "Blood Rites [LCC] [2023].dck",
+   "name": "Blood Rites",
+   "commanders": [
+    "Clavileño, First of the Blessed"
+   ],
+   "set": "LCC",
+   "year": 2023,
+   "reference_name": "Blood Rites",
+   "ai_never": 2,
+   "ai_random": 5
+  },
+  {
+   "id": "ahoy-mateys",
+   "file": "Ahoy Mateys [LCC] [2023].dck",
+   "name": "Ahoy Mateys",
+   "commanders": [
+    "Admiral Brass, Unsinkable"
+   ],
+   "set": "LCC",
+   "year": 2023,
+   "reference_name": "Ahoy Mateys",
+   "ai_never": 3,
+   "ai_random": 4
+  }
+ ]
+}
