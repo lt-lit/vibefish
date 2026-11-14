@@ -1,0 +1,1319 @@
+{
+ "kind": "goldfish-pair",
+ "generated": "2026-11-14T04:47:56Z",
+ "deck": "squirreled-away",
+ "a": {
+  "run": "val-playbook",
+  "deck": "squirreled-away",
+  "deck_file": "Squirreled Away [BLC] [2024].dck",
+  "vibefish": "0.3.1",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": {
+   "file": "squirreled-away-acorns.json",
+   "version": 2,
+   "attack": {
+    "policy": "go_wide",
+    "target": "highest_life",
+    "min_attackers": 3,
+    "safety_margin": 5,
+    "max_reserve": 3,
+    "spread": true,
+    "damage_per_loss": 3
+   },
+   "mulligan": null,
+   "cast": {
+    "rules": [
+     {
+      "play": [
+       "Sol Ring",
+       "Arcane Signet",
+       "Golgari Signet",
+       "Talisman of Resilience"
+      ]
+     },
+     {
+      "play": [
+       "Hazel of the Rootbloom"
+      ]
+     },
+     {
+      "play": [
+       "End-Raze Forerunners"
+      ],
+      "when": [
+       "attackers >= 4"
+      ],
+      "phase": "main1"
+     },
+     {
+      "hold": [
+       "End-Raze Forerunners"
+      ],
+      "until": [
+       "attackers >= 4",
+       "main == 1"
+      ]
+     },
+     {
+      "play": [
+       "Chatterfang, Squirrel General",
+       "Squirrel Sovereign",
+       "Deep Forest Hermit",
+       "Chitterspitter",
+       "Toski, Bearer of Secrets",
+       "The Odd Acorn Gang",
+       "Beastmaster Ascension",
+       "Academy Manufactor",
+       "Idol of Oblivion",
+       "Skullclamp",
+       "Bastion of Remembrance",
+       "Zulaport Cutthroat",
+       "Nadier's Nightblade",
+       "Squirrel Nest",
+       "Gourmand's Talent",
+       "Prosperous Innkeeper",
+       "Tireless Provisioner",
+       "Beledros Witherbloom",
+       "Garruk, Cursed Huntsman",
+       "Ogre Slumlord",
+       "Moonstone Eulogist",
+       "Chittering Witch",
+       "Swarmyard Massacre",
+       "Honored Dreyleader",
+       "Scurry of Squirrels",
+       "Morbid Opportunist",
+       "Moldervine Reclamation",
+       "Maskwood Nexus",
+       "Arasta of the Endless Web",
+       "Hazel's Brewmaster",
+       "Insatiable Frugivore",
+       "Woe Strider",
+       "Sword of the Squeak",
+       "Ravenous Squirrel",
+       "Nested Shambler",
+       "Gilded Goose"
+      ]
+     },
+     {
+      "play": [
+       "Second Harvest"
+      ],
+      "when": [
+       "tokens >= 4"
+      ]
+     },
+     {
+      "play": [
+       "Shamanic Revelation"
+      ],
+      "when": [
+       "creatures >= 5",
+       "library >= 30"
+      ]
+     },
+     {
+      "activate": [
+       "Gourmand's Talent"
+      ],
+      "ability": "Level 2"
+     },
+     {
+      "activate": [
+       "Gourmand's Talent"
+      ],
+      "ability": "Level 3"
+     },
+     {
+      "activate": [
+       "Skullclamp"
+      ],
+      "ability": "Equip",
+      "target": "Squirrel Token",
+      "times": 3,
+      "when": [
+       "not controls Squirrel Sovereign",
+       "not controls Deep Forest Hermit",
+       "library >= 30"
+      ]
+     },
+     {
+      "activate": [
+       "Idol of Oblivion"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "library >= 20"
+      ]
+     },
+     {
+      "play": [
+       "Chatterstorm"
+      ],
+      "when": [
+       "storm >= 2"
+      ]
+     },
+     {
+      "play": [
+       "Chatterstorm"
+      ],
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Chitterspitter"
+      ],
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Maskwood Nexus"
+      ],
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Forest",
+       "Swamp",
+       "Barren Moor",
+       "Bojuka Bog",
+       "Command Tower",
+       "Exotic Orchard",
+       "Golgari Rot Farm",
+       "Grim Backwoods",
+       "Haunted Mire",
+       "Jungle Hollow",
+       "Llanowar Wastes",
+       "Necroblossom Snarl",
+       "Oran-Rief, the Vastwood",
+       "Path of Ancestry",
+       "Swarmyard",
+       "Tainted Wood",
+       "Temple of Malady",
+       "Tranquil Thicket",
+       "Twilight Mire",
+       "Viridescent Bog",
+       "Woodland Cemetery"
+      ],
+      "ability": "Squirrel creature token",
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Idol of Oblivion"
+      ],
+      "ability": "Draw a card",
+      "phase": "main2",
+      "when": [
+       "library >= 20"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Zulaport Cutthroat"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Bastion of Remembrance"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Nadier's Nightblade"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Poison-Tip Archer"
+      ]
+     }
+    ]
+   },
+   "triggers": [
+    {
+     "accept": [
+      "Beastmaster Ascension"
+     ]
+    },
+    {
+     "accept": [
+      "Chitterspitter"
+     ],
+     "when": [
+      "tokens >= 3"
+     ]
+    }
+   ]
+  },
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 40,
+  "wins": 40,
+  "not_finished": 0,
+  "kill_turn_mean": 10.025,
+  "kill_turn_sd": 1.527,
+  "kill_turn_median": 10.0,
+  "kill_turn_min": 7,
+  "kill_turn_max": 16,
+  "kill_turn_distribution": {
+   "7": 1,
+   "8": 3,
+   "9": 10,
+   "10": 15,
+   "11": 7,
+   "12": 2,
+   "13": 1,
+   "16": 1
+  },
+  "per_game": [
+   {
+    "seed": 24102,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 14133
+   },
+   {
+    "seed": 24103,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7958
+   },
+   {
+    "seed": 24104,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 12025
+   },
+   {
+    "seed": 24105,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6124
+   },
+   {
+    "seed": 24106,
+    "kill_turn": 16,
+    "game_turns": 60,
+    "reason": "AllOpponentsLost",
+    "mulligans": 3,
+    "duration_ms": 13162
+   },
+   {
+    "seed": 24107,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5547
+   },
+   {
+    "seed": 24108,
+    "kill_turn": 11,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6732
+   },
+   {
+    "seed": 24109,
+    "kill_turn": 11,
+    "game_turns": 44,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6474
+   },
+   {
+    "seed": 24110,
+    "kill_turn": 10,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5780
+   },
+   {
+    "seed": 24111,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5307
+   },
+   {
+    "seed": 24112,
+    "kill_turn": 8,
+    "game_turns": 29,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4680
+   },
+   {
+    "seed": 24113,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6496
+   },
+   {
+    "seed": 24114,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6973
+   },
+   {
+    "seed": 24115,
+    "kill_turn": 13,
+    "game_turns": 51,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 11394
+   },
+   {
+    "seed": 24116,
+    "kill_turn": 10,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5732
+   },
+   {
+    "seed": 24117,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5040
+   },
+   {
+    "seed": 24118,
+    "kill_turn": 8,
+    "game_turns": 30,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4665
+   },
+   {
+    "seed": 24119,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7809
+   },
+   {
+    "seed": 24120,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6449
+   },
+   {
+    "seed": 24121,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5491
+   },
+   {
+    "seed": 24122,
+    "kill_turn": 9,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5386
+   },
+   {
+    "seed": 24123,
+    "kill_turn": 11,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 7037
+   },
+   {
+    "seed": 24124,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5402
+   },
+   {
+    "seed": 24125,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5753
+   },
+   {
+    "seed": 24126,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5534
+   },
+   {
+    "seed": 24127,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6068
+   },
+   {
+    "seed": 24128,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 6582
+   },
+   {
+    "seed": 24129,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 6223
+   },
+   {
+    "seed": 24130,
+    "kill_turn": 8,
+    "game_turns": 31,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5343
+   },
+   {
+    "seed": 24131,
+    "kill_turn": 11,
+    "game_turns": 41,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7351
+   },
+   {
+    "seed": 24132,
+    "kill_turn": 9,
+    "game_turns": 32,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7183
+   },
+   {
+    "seed": 24133,
+    "kill_turn": 12,
+    "game_turns": 44,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 9474
+   },
+   {
+    "seed": 24134,
+    "kill_turn": 11,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5710
+   },
+   {
+    "seed": 24135,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5320
+   },
+   {
+    "seed": 24136,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5904
+   },
+   {
+    "seed": 24137,
+    "kill_turn": 12,
+    "game_turns": 45,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7388
+   },
+   {
+    "seed": 24138,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7065
+   },
+   {
+    "seed": 24139,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5849
+   },
+   {
+    "seed": 24140,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7304
+   },
+   {
+    "seed": 24141,
+    "kill_turn": 7,
+    "game_turns": 26,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 4776
+   }
+  ]
+ },
+ "b": {
+  "run": "gf-answers",
+  "deck": "squirreled-away",
+  "deck_file": "Squirreled Away [BLC] [2024].dck",
+  "vibefish": "0.3.2",
+  "forge_version": "snapshot-2026-11-10",
+  "forge_build": "2.0.16-SNAPSHOT-11.10",
+  "clock_s": 900,
+  "turn_cap": 80,
+  "profile": "Default",
+  "playbook": {
+   "file": "squirreled-away-answers.json",
+   "version": 3,
+   "attack": {
+    "policy": "go_wide",
+    "target": "highest_life",
+    "min_attackers": 3,
+    "safety_margin": 5,
+    "max_reserve": 3,
+    "spread": true,
+    "damage_per_loss": 3
+   },
+   "mulligan": null,
+   "cast": {
+    "rules": [
+     {
+      "play": [
+       "Sol Ring",
+       "Arcane Signet",
+       "Golgari Signet",
+       "Talisman of Resilience"
+      ]
+     },
+     {
+      "play": [
+       "Hazel of the Rootbloom"
+      ]
+     },
+     {
+      "play": [
+       "Decree of Pain"
+      ],
+      "when": [
+       "opp_power > power",
+       "threat >= life"
+      ]
+     },
+     {
+      "play": [
+       "Decree of Pain"
+      ],
+      "when": [
+       "opp_creatures >= 8",
+       "opp_power > power",
+       "opp_creatures > creatures"
+      ]
+     },
+     {
+      "play": [
+       "Swarmyard Massacre"
+      ],
+      "when": [
+       "opp_creatures >= 3"
+      ]
+     },
+     {
+      "play": [
+       "Casualties of War"
+      ],
+      "when": [
+       "opp_creatures >= 1",
+       "not controls Garruk, Cursed Huntsman"
+      ]
+     },
+     {
+      "play": [
+       "Binding the Old Gods"
+      ],
+      "when": [
+       "opp_power > power"
+      ]
+     },
+     {
+      "play": [
+       "Skyfisher Spider"
+      ],
+      "when": [
+       "opp_power > power",
+       "tokens >= 1"
+      ]
+     },
+     {
+      "play": [
+       "End-Raze Forerunners"
+      ],
+      "when": [
+       "attackers >= 3"
+      ],
+      "phase": "main1"
+     },
+     {
+      "hold": [
+       "End-Raze Forerunners"
+      ],
+      "until": [
+       "attackers >= 3",
+       "main == 1"
+      ]
+     },
+     {
+      "play": [
+       "Beledros Witherbloom",
+       "Garruk, Cursed Huntsman",
+       "Chatterfang, Squirrel General",
+       "Squirrel Sovereign",
+       "Deep Forest Hermit",
+       "Chitterspitter",
+       "Toski, Bearer of Secrets",
+       "The Odd Acorn Gang",
+       "Beastmaster Ascension",
+       "Skyfisher Spider",
+       "Poison-Tip Archer",
+       "Binding the Old Gods",
+       "Academy Manufactor",
+       "Idol of Oblivion",
+       "Skullclamp",
+       "Bastion of Remembrance",
+       "Zulaport Cutthroat",
+       "Nadier's Nightblade",
+       "Squirrel Nest",
+       "Gourmand's Talent",
+       "Prosperous Innkeeper",
+       "Tireless Provisioner",
+       "Hazel's Brewmaster",
+       "Arasta of the Endless Web",
+       "Ogre Slumlord",
+       "Moonstone Eulogist",
+       "Chittering Witch",
+       "Rootcast Apprenticeship",
+       "Honored Dreyleader",
+       "Scurry of Squirrels",
+       "Morbid Opportunist",
+       "Moldervine Reclamation",
+       "Maskwood Nexus",
+       "Woe Strider",
+       "Insatiable Frugivore",
+       "Sword of the Squeak",
+       "Ravenous Squirrel",
+       "Nested Shambler",
+       "Gilded Goose"
+      ]
+     },
+     {
+      "play": [
+       "Second Harvest"
+      ],
+      "when": [
+       "tokens >= 4"
+      ]
+     },
+     {
+      "play": [
+       "Shamanic Revelation"
+      ],
+      "when": [
+       "creatures >= 5",
+       "library >= 30"
+      ]
+     },
+     {
+      "activate": [
+       "Gourmand's Talent"
+      ],
+      "ability": "Level 2"
+     },
+     {
+      "activate": [
+       "Gourmand's Talent"
+      ],
+      "ability": "Level 3"
+     },
+     {
+      "activate": [
+       "Skullclamp"
+      ],
+      "ability": "Equip",
+      "target": "Squirrel Token",
+      "times": 3,
+      "when": [
+       "not controls Squirrel Sovereign",
+       "not controls Deep Forest Hermit",
+       "library >= 30"
+      ]
+     },
+     {
+      "activate": [
+       "Idol of Oblivion"
+      ],
+      "ability": "Draw a card",
+      "when": [
+       "library >= 20"
+      ]
+     },
+     {
+      "play": [
+       "Chatterstorm"
+      ],
+      "when": [
+       "storm >= 2"
+      ]
+     },
+     {
+      "play": [
+       "Plaguecrafter"
+      ],
+      "when": [
+       "tokens >= 1"
+      ]
+     },
+     {
+      "play": [
+       "Cache Grab"
+      ],
+      "phase": "main2"
+     },
+     {
+      "play": [
+       "Chatterstorm"
+      ],
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Chitterspitter"
+      ],
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Maskwood Nexus"
+      ],
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Forest",
+       "Swamp",
+       "Barren Moor",
+       "Bojuka Bog",
+       "Command Tower",
+       "Exotic Orchard",
+       "Golgari Rot Farm",
+       "Grim Backwoods",
+       "Haunted Mire",
+       "Jungle Hollow",
+       "Llanowar Wastes",
+       "Necroblossom Snarl",
+       "Oran-Rief, the Vastwood",
+       "Path of Ancestry",
+       "Swarmyard",
+       "Tainted Wood",
+       "Temple of Malady",
+       "Tranquil Thicket",
+       "Twilight Mire",
+       "Viridescent Bog",
+       "Woodland Cemetery"
+      ],
+      "ability": "Squirrel creature token",
+      "phase": "main2"
+     },
+     {
+      "activate": [
+       "Idol of Oblivion"
+      ],
+      "ability": "Draw a card",
+      "phase": "main2",
+      "when": [
+       "library >= 20"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Zulaport Cutthroat"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Bastion of Remembrance"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Nadier's Nightblade"
+      ]
+     },
+     {
+      "hold": [
+       "Woe Strider"
+      ],
+      "ability": "Scry",
+      "until": [
+       "controls Poison-Tip Archer"
+      ]
+     }
+    ]
+   },
+   "triggers": [
+    {
+     "accept": [
+      "Beastmaster Ascension"
+     ]
+    },
+    {
+     "accept": [
+      "Chitterspitter"
+     ],
+     "when": [
+      "tokens >= 3"
+     ]
+    },
+    {
+     "accept": [
+      "Skyfisher Spider"
+     ],
+     "ability": "sacrifice another creature",
+     "when": [
+      "tokens >= 1"
+     ]
+    }
+   ]
+  },
+  "data": null,
+  "opponents": [
+   "goldfish-1",
+   "goldfish-2",
+   "goldfish-3"
+  ],
+  "games": 40,
+  "wins": 40,
+  "not_finished": 0,
+  "kill_turn_mean": 10.225,
+  "kill_turn_sd": 1.593,
+  "kill_turn_median": 10.0,
+  "kill_turn_min": 7,
+  "kill_turn_max": 16,
+  "kill_turn_distribution": {
+   "7": 1,
+   "8": 2,
+   "9": 12,
+   "10": 8,
+   "11": 11,
+   "12": 4,
+   "13": 1,
+   "16": 1
+  },
+  "per_game": [
+   {
+    "seed": 24102,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 17518
+   },
+   {
+    "seed": 24103,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 10466
+   },
+   {
+    "seed": 24104,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 15371
+   },
+   {
+    "seed": 24105,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7195
+   },
+   {
+    "seed": 24106,
+    "kill_turn": 16,
+    "game_turns": 60,
+    "reason": "AllOpponentsLost",
+    "mulligans": 3,
+    "duration_ms": 17969
+   },
+   {
+    "seed": 24107,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5583
+   },
+   {
+    "seed": 24108,
+    "kill_turn": 13,
+    "game_turns": 50,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8592
+   },
+   {
+    "seed": 24109,
+    "kill_turn": 12,
+    "game_turns": 47,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7052
+   },
+   {
+    "seed": 24110,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6393
+   },
+   {
+    "seed": 24111,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6378
+   },
+   {
+    "seed": 24112,
+    "kill_turn": 8,
+    "game_turns": 28,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4827
+   },
+   {
+    "seed": 24113,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 9469
+   },
+   {
+    "seed": 24114,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7945
+   },
+   {
+    "seed": 24115,
+    "kill_turn": 11,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 9416
+   },
+   {
+    "seed": 24116,
+    "kill_turn": 11,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6716
+   },
+   {
+    "seed": 24117,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4805
+   },
+   {
+    "seed": 24118,
+    "kill_turn": 8,
+    "game_turns": 30,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5103
+   },
+   {
+    "seed": 24119,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 8312
+   },
+   {
+    "seed": 24120,
+    "kill_turn": 10,
+    "game_turns": 36,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 4965
+   },
+   {
+    "seed": 24121,
+    "kill_turn": 12,
+    "game_turns": 46,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6201
+   },
+   {
+    "seed": 24122,
+    "kill_turn": 9,
+    "game_turns": 34,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 5421
+   },
+   {
+    "seed": 24123,
+    "kill_turn": 11,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 6493
+   },
+   {
+    "seed": 24124,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 5474
+   },
+   {
+    "seed": 24125,
+    "kill_turn": 12,
+    "game_turns": 46,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 8063
+   },
+   {
+    "seed": 24126,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4853
+   },
+   {
+    "seed": 24127,
+    "kill_turn": 9,
+    "game_turns": 33,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 6722
+   },
+   {
+    "seed": 24128,
+    "kill_turn": 12,
+    "game_turns": 44,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 6855
+   },
+   {
+    "seed": 24129,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 2,
+    "duration_ms": 6301
+   },
+   {
+    "seed": 24130,
+    "kill_turn": 9,
+    "game_turns": 35,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 4474
+   },
+   {
+    "seed": 24131,
+    "kill_turn": 11,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6704
+   },
+   {
+    "seed": 24132,
+    "kill_turn": 9,
+    "game_turns": 32,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7044
+   },
+   {
+    "seed": 24133,
+    "kill_turn": 11,
+    "game_turns": 41,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7957
+   },
+   {
+    "seed": 24134,
+    "kill_turn": 11,
+    "game_turns": 42,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6606
+   },
+   {
+    "seed": 24135,
+    "kill_turn": 11,
+    "game_turns": 43,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7206
+   },
+   {
+    "seed": 24136,
+    "kill_turn": 11,
+    "game_turns": 40,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7286
+   },
+   {
+    "seed": 24137,
+    "kill_turn": 11,
+    "game_turns": 41,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6579
+   },
+   {
+    "seed": 24138,
+    "kill_turn": 10,
+    "game_turns": 38,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 7875
+   },
+   {
+    "seed": 24139,
+    "kill_turn": 10,
+    "game_turns": 39,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 6973
+   },
+   {
+    "seed": 24140,
+    "kill_turn": 10,
+    "game_turns": 37,
+    "reason": "AllOpponentsLost",
+    "mulligans": 0,
+    "duration_ms": 7628
+   },
+   {
+    "seed": 24141,
+    "kill_turn": 7,
+    "game_turns": 26,
+    "reason": "AllOpponentsLost",
+    "mulligans": 1,
+    "duration_ms": 4651
+   }
+  ]
+ },
+ "paired": {
+  "seeds": 40,
+  "not_finished_by_one": 0,
+  "a_minus_b_turns": -0.2,
+  "ci95": [
+   -0.491,
+   0.091
+  ],
+  "sd": 0.939,
+  "b_faster": 8,
+  "same": 19,
+  "b_slower": 13
+ }
+}

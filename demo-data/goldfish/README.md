@@ -60,3 +60,9 @@ Seed blocks used by this batch: 2001 to 2140, 2301 to 2440, 2601 to 2740, 3101 t
 `ahoy-mateys-seeds-29101-29140.json` (`ahoy-mateys-crew.json`: 9.05 against 10.12, +1.07, +0.74 to +1.41);
 `deadly-disguise-seeds-30101-30140.json` (`deadly-disguise-veil.json`: 11.13 against 11.95, +0.82 on 38 seeds, +0.45 to +1.18).
 Seed blocks used by this batch: 21001 to 30140 (in each thousand the audit from x001, tuning from x021, validation x101 to x140).
+
+`2026-11-14/`: the second pass of the owner's first four decks (DESIGN §30) on the validation seeds of their engine-only candidates, to see whether the added rules cost the engine its speed (A is the engine-only candidate's validation run of 2026-11-13, B the second-pass candidate on the same seeds; these seeds are not unseen for the base, and in goldfish the answer rules have nothing to fire at):
+`blight-curse-answers-on-wretch-seeds-21101-21140.json` (12.49 turns against 12.56: 0.08 faster, 95% -0.20 to +0.35);
+`mutant-menace-answers-on-mothman-seeds-23101-23140.json` (10.45 against 10.43: 0.03 slower, -0.32 to +0.27);
+`squirreled-away-answers-on-acorns-seeds-24101-24140.json` (10.22 against 10.03: 0.20 slower, -0.49 to +0.09);
+`ahoy-mateys-answers-on-crew-seeds-29101-29140.json` (8.82 against 9.05: 0.23 faster, +0.08 to +0.37).
