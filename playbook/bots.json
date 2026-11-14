@@ -436,6 +436,19 @@
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (63 wins)"
    },
    "goldfish": "demo-data/goldfish/2026-11-14/death-toll-answers-forgeattack-seeds-27101-27140.json"
+  },
+  {
+   "deck": "veloci-ramp-tor",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +4.0 points on its stock pilot (87 tables against 79, 95% -5 to +13, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack. Twenty of the 200 tables of the stock and go-wide arms (every tenth table, one shard of ten) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 180 tables Actions played, the stock pilot won 69, go-wide 81 and this arm 79",
+   "playbook": "playbook/precons/veloci-ramp-tor.json",
+   "summary": "Pantlaza on turn 5 with the ramp creatures before it and the cards Forge's AI never casts; Wakening Sun's Avatar and Chandra's Ignition against a board of three, Raging Swordtooth against five, and the rest of the removal left to Forge at a place of its own in the order.",
+   "tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v18/veloci-ramp-tor-join.json",
+    "stock": "stock",
+    "bot": "forgeattack",
+    "run": "ab-run #37 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins); twenty of the 200 tables of the stock arm were played on the session's machine from the run's commit (the Actions job that had them was lost with its runner)"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/veloci-ramp-tor-answers-forgeattack-seeds-22101-22140.json"
   }
  ]
 }

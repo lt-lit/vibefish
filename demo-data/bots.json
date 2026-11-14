@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.3",
- "generated": "2026-11-14T19:28:46Z",
+ "generated": "2026-11-14T19:48:39Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -1224,6 +1224,64 @@
      1.757
     ],
     "seeds_paired": 38
+   }
+  },
+  {
+   "deck": "veloci-ramp-tor",
+   "name": "Veloci-Ramp-Tor",
+   "commanders": [
+    "Pantlaza, Sun-Favored"
+   ],
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +4.0 points on its stock pilot (87 tables against 79, 95% -5 to +13, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack. Twenty of the 200 tables of the stock and go-wide arms (every tenth table, one shard of ten) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 180 tables Actions played, the stock pilot won 69, go-wide 81 and this arm 79",
+   "playbook": "playbook/precons/veloci-ramp-tor.json",
+   "summary": "Pantlaza on turn 5 with the ramp creatures before it and the cards Forge's AI never casts; Wakening Sun's Avatar and Chandra's Ignition against a board of three, Raging Swordtooth against five, and the rest of the removal left to Forge at a place of its own in the order.",
+   "human": {
+    "win_rate": 0.2463,
+    "games": 540
+   },
+   "tables": {
+    "run": "ab-run #37 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins); twenty of the 200 tables of the stock arm were played on the session's machine from the run's commit (the Actions job that had them was lost with its runner)",
+    "seed": 20261310,
+    "forge_version": "snapshot-2026-11-10",
+    "source": "demo-data/ab/2026-11-14-ab-v18/veloci-ramp-tor-join.json",
+    "stock": {
+     "games": 200,
+     "wins": 79,
+     "win_rate": 0.395,
+     "win_rate_ci95": [
+      0.3298,
+      0.4641
+     ]
+    },
+    "bot": {
+     "games": 200,
+     "wins": 87,
+     "win_rate": 0.435,
+     "win_rate_ci95": [
+      0.3682,
+      0.5043
+     ]
+    },
+    "difference": 0.04,
+    "difference_ci95": [
+     -0.0486,
+     0.1286
+    ],
+    "bot_only": 45,
+    "stock_only": 37,
+    "exact_p": 0.4397
+   },
+   "goldfish": {
+    "source": "demo-data/goldfish/2026-11-14/veloci-ramp-tor-answers-forgeattack-seeds-22101-22140.json",
+    "games": 40,
+    "stock_kill_turn": 11.35,
+    "bot_kill_turn": 10.821,
+    "faster_by": 0.436,
+    "faster_by_ci95": [
+     -0.001,
+     0.873
+    ],
+    "seeds_paired": 39
    }
   }
  ]
