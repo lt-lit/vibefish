@@ -1,25 +1,15 @@
 {
-  "requested": "2026-11-14T18:33Z",
-  "note": "The trial of the forge rule's wait option (harness 0.3.3, DESIGN §30): the first four engine-only candidates of the owner's table with {\"forge\": \"unnamed\"} after the commander's rule, as in ab-run #34, and the same files with \"wait\": \"main2\" on that rule (playbook/variants/<deck>-<name>-forgewait.json), on the same 200 tables, with the stock pilot as the control. A run of its own on a new seed: the pool's play changed on 2026-11-14, so arms on #27's seed would not be on #27's tables. Opponents drawn from bots-v2 under their shipped playbooks. The question: does making the rules below the forge rule wait for the second main phase give back the permanents Forge's AI casts after combat (card by card from the shard artifacts), and what does it do to wins. 2,400 games in 60 shard jobs.",
+  "requested": "2026-11-14T19:50Z",
+  "note": "The round of the owner's ten at the owner's table (DESIGN §30): each of the ten precons the owner's group plays at 200 tables under stock AI and under its shipped playbook, opponents drawn from the other nine of runner/leagues/owners-table-v1.json under their shipped playbooks. The ten shipped on 2026-11-14 from exams at tables of the pool of twelve, each with the better of two attacks on those same tables; these tables choose nothing and are the table the owner's decks will meet, so this is each playbook's confirming run and the games a playtest report of each deck at the owner's table is read from (runner/playtest.py on the shard artifacts). Blight Curse, the deck the owner plays most, is among them. Seed 20261350, 4,000 games in 100 shard jobs.",
+  "decks": "blight-curse,veloci-ramp-tor,mutant-menace,squirreled-away,revenant-recon,blood-rites,death-toll,miracle-worker,ahoy-mateys,deadly-disguise",
   "games": "200",
+  "arms": "stock,playbook",
+  "seed": "20261350",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
-  "pool": "runner/leagues/bots-v2.json",
-  "opponent_playbooks": true,
-  "runs": [
-    {
-      "decks": "blight-curse@wretch-forge,mutant-menace@mothman-forge,squirreled-away@acorns-forge,ahoy-mateys@crew-forge",
-      "arms": "stock,playbook",
-      "seed": "20261340"
-    },
-    {
-      "decks": "blight-curse@wretch-forgewait,mutant-menace@mothman-forgewait,squirreled-away@acorns-forgewait,ahoy-mateys@crew-forgewait",
-      "arms": "playbook",
-      "seed": "20261340",
-      "shards_per_deck": "5"
-    }
-  ]
+  "pool": "runner/leagues/owners-table-v1.json",
+  "opponent_playbooks": true
 }
