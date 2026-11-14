@@ -276,6 +276,7 @@ def collect(run_dirs, arm=None):
                   'commander_damage_dealt_per_game': mean(S['commander_dealt'], 1),
                   'nonland_cards_in_hand_at_loss': mean(S['hand_at_loss']), 'of_them_affordable': mean(S['castable_at_loss'])},
         'cards': rows,
+        'list': {n: {'count': c.get('count', 1), 'mv': c.get('cmc'), 'type': c.get('type'), 'land': bool(c.get('land'))} for n, c in sorted(info.items())},
         'outcomes': outcomes,
     }
 
@@ -435,15 +436,25 @@ def render_pair(a, b, pr, min_drawn):
 
     head = ['| Card | MV | Games drawn | Cast when drawn | Turn of first cast | Won when drawn | Won when not | Points | In hand at a loss |', '|---|---|---|---|---|---|---|---|---|']
     ca, cb = a['cards'], b['cards']
-    if not same_list:
-        only_a = sorted((c for c in ca if c not in cb), key=lambda c: -ca[c]['drawn'])
-        only_b = sorted((c for c in cb if c not in ca), key=lambda c: -cb[c]['drawn'])
+    la, lb = a.get('list') or {}, b.get('list') or {}
+    if not same_list and la and lb:
+        def only(mine, other, cards):
+            names = sorted((c for c in mine if c not in other and not mine[c]['land']), key=lambda c: (-(cards[c]['drawn'] if c in cards else -1), c))
+            lands = sorted(c for c in mine if c not in other and mine[c]['land'])
+            return names, lands
+
+        def never(c, x):
+            return f"| {c} | {x['mv'] if x['mv'] is not None else ''} | 0 | | | | | | |"
+
+        only_a, lands_a = only(la, lb, ca)
+        only_b, lands_b = only(lb, la, cb)
         out += ['', '## The cards that differ', '',
-                "Nonland cards that were drawn in one list's games and never in the other's: the cards one list holds and the other does not (a card both hold "
-                "that one side happened never to draw would show here too; with a few hundred games that does not happen). The win-rate columns are noisy: "
+                "The nonland cards one list holds and the other does not, each with what its own list's games say of it. The win-rate columns are noisy: "
                 "a card that is drawn and not cast, or sits in hand at the losses, is the firmer finding.", '']
-        out += [f"### Only in this list ({len(only_a)})", ''] + (head + [line(c, ca[c]) for c in only_a] if only_a else ['None.'])
-        out += ['', f"### Only in the other ({len(only_b)})", ''] + (head + [line(c, cb[c]) for c in only_b] if only_b else ['None.'])
+        out += [f"### Only in this list ({len(only_a)})", ''] + (head + [line(c, ca[c]) if c in ca else never(c, la[c]) for c in only_a] if only_a else ['None.'])
+        out += ['', f"### Only in the other ({len(only_b)})", ''] + (head + [line(c, cb[c]) if c in cb else never(c, lb[c]) for c in only_b] if only_b else ['None.'])
+        if lands_a or lands_b:
+            out += ['', "Lands: only in this list " + (', '.join(lands_a) or 'none') + "; only in the other " + (', '.join(lands_b) or 'none') + '.']
     diff = []
     for c, x in ca.items():
         y = cb.get(c)
