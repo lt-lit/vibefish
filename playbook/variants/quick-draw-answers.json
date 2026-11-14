@@ -30,7 +30,8 @@
       "Curse of the Swine"
      ],
      "when": [
-      "threat >= 12"
+      "threat >= 12",
+      "opp_creatures <= 6"
      ]
     },
     {

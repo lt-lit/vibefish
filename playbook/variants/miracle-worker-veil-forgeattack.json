@@ -1,0 +1,135 @@
+{
+ "schema": 1,
+ "deck": "miracle-worker",
+ "variant": "veil-forgeattack",
+ "of": "playbook/variants/miracle-worker-veil.json",
+ "about": "The veil candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "playbook": {
+  "version": 2,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Aminatou, Veil Piercer"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Azorius Signet",
+      "Orzhov Signet",
+      "Mind Stone",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "Sigil of the Empty Throne",
+      "Secret Arcade // Dusty Parlor",
+      "Starfield Mystic",
+      "Mesa Enchantress",
+      "Soaring Lightbringer",
+      "Demon of Fate's Design",
+      "Ondu Spiritdancer",
+      "Ancient Cellarspawn",
+      "One with the Multiverse",
+      "Extravagant Replication"
+     ]
+    },
+    {
+     "play": [
+      "Entreat the Angels"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "The Master of Keys"
+     ],
+     "x": 4,
+     "x_min": 2,
+     "when": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Fear of Sleep Paralysis",
+      "Archetype of Imagination",
+      "Athreos, Shroud-Veiled",
+      "Dream Eater",
+      "Doomwake Giant",
+      "Prognostic Sphinx",
+      "Metamorphosis Fanatic",
+      "Nightmare Shepherd",
+      "Phenomenon Investigators",
+      "Solemn Simulacrum",
+      "Moon-Blessed Cleric",
+      "Verge Rangers",
+      "Burnished Hart",
+      "Life Insurance",
+      "Sphere of Safety",
+      "Spirit-Sister's Call",
+      "Shark Typhoon",
+      "Cramped Vents // Access Maze",
+      "Bottomless Pool // Locker Room"
+     ]
+    },
+    {
+     "play": [
+      "Read the Bones",
+      "Diabolic Vision",
+      "Ponder"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Hall of Heliod's Generosity"
+     ],
+     "ability": "enchantment card",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Mind Stone",
+      "Commander's Sphere"
+     ],
+     "ability": "Draw a card",
+     "phase": "main2",
+     "when": [
+      "lands >= 8",
+      "hand <= 1",
+      "library >= 30"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Mesa Enchantress"
+    ],
+    "when": [
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Moon-Blessed Cleric",
+     "Ondu Spiritdancer",
+     "Solemn Simulacrum"
+    ]
+   }
+  ],
+  "notes": "Version 2 (candidate, 2026-11-13). Written from 12 stock goldfish games (seeds 28001-28012) and tuned on the same seeds. Stock already takes every miracle it is offered (27 of 27 miracle triggers ended in the cast; 15 of 15 under this file), so the miracle draw needs no rule, and the rule format could not reach it anyway: the reveal is a static Drawn trigger and the cast is an optional Play effect decided by Forge's confirmAction, not by chooseSpellAbilityToPlay. What stock leaves undone in goldfish: the commander waits behind other plays (first cast on own turns 3 to 14, median 4.5), 50% of the mana goes unspent, and several bodies are never cast at all (Fear of Sleep Paralysis 7 games drawn, 0 cast; Dream Eater 6/0; Phenomenon Investigators 4/0; Doomwake Giant 3/0; the Rooms from hand 12/0). Rules: Sol Ring, then Aminatou the turn she is affordable, then the rocks; the enchantment engine with Sigil of the Empty Throne first and Secret Arcade (every permanent an enchantment, so every permanent spell feeds Sigil and Mesa); Entreat the Angels from hand at the largest X of two or more; The Master of Keys at X 2 to 4 while the library is deep; the bodies Forge sits on, and the Rooms (their first door); card selection guarded by library size; Hall of Heliod's Generosity after combat to put an enchantment card on top for next turn's miracle; Mind Stone and Commander's Sphere cracked late with an empty hand. Triggers: Mesa Enchantress's draw while the library is deep, the searches and copy of Moon-Blessed Cleric, Ondu Spiritdancer and Solemn. Tried and dropped: an activate rule to unlock the second door of a Room (an unlock is a static ability, ST$ UnlockDoor, which the activate rule does not see; Forge unlocks on its own). Answers (Swords, Utter End, Cast Out, Return to Dust, Arcane Denial, Terminus, Time Wipe, Inkshield) left to Forge for the second pass."
+ }
+}

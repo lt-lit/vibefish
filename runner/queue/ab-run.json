@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T00:22Z",
-  "note": "The owner's table, third exam (DESIGN §30; ab-run #27 on seed 20261260 and #28 on seed 20261280 are the first two). Revenant Recon and Blood Rites, each candidate at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks: the deck's own seat under stock AI and under the candidate with the go-wide attack it was written with (revenant-recon@mirko, blood-rites@demons; 0.9 and 1.1 turns faster than stock in goldfish on 40 unseen seeds), and the same rules with the attack left to Forge as a playbook-only arm on the same tables (the -forgeattack siblings). Miracle Worker, the tenth deck, follows on the same seed when its validation is done.",
+  "requested": "2026-11-14T01:29Z",
+  "note": "The owner's table, fourth exam (DESIGN §30; ab-run #27 on seed 20261260, #28 on seed 20261280 and #29 on seed 20261290 are the first three). Miracle Worker, the tenth of the owner's decks, at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks: the deck's own seat under stock AI and under the candidate with the go-wide attack it was written with (miracle-worker@veil; 1.6 turns faster than stock in goldfish on 40 unseen seeds), and the same rules with the attack left to Forge as a playbook-only arm on the same tables (the -forgeattack sibling).",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,12 +11,12 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "revenant-recon@mirko,blood-rites@demons",
+      "decks": "miracle-worker@veil",
       "arms": "stock,playbook",
       "seed": "20261290"
     },
     {
-      "decks": "revenant-recon@mirko-forgeattack,blood-rites@demons-forgeattack",
+      "decks": "miracle-worker@veil-forgeattack",
       "arms": "playbook",
       "seed": "20261290"
     }
