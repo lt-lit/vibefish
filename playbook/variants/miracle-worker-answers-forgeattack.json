@@ -1,0 +1,193 @@
+{
+ "schema": 1,
+ "deck": "miracle-worker",
+ "variant": "answers-forgeattack",
+ "of": "playbook/variants/miracle-worker-answers.json",
+ "about": "The answers candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "playbook": {
+  "version": 3,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Time Wipe",
+      "Terminus"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Time Wipe",
+      "Terminus"
+     ],
+     "phase": "main2",
+     "when": [
+      "threat >= life",
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Time Wipe",
+      "Terminus"
+     ],
+     "when": [
+      "opp_power >= 20",
+      "opp_power > power",
+      "opp_creatures >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Aminatou's Augury"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Aminatou, Veil Piercer"
+     ]
+    },
+    {
+     "play": [
+      "Timely Ward"
+     ],
+     "target": "Aminatou, Veil Piercer"
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Azorius Signet",
+      "Orzhov Signet",
+      "Mind Stone",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "The Eldest Reborn"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Sigil of the Empty Throne",
+      "Secret Arcade // Dusty Parlor",
+      "Starfield Mystic",
+      "Mesa Enchantress",
+      "Soaring Lightbringer",
+      "Demon of Fate's Design",
+      "Ondu Spiritdancer",
+      "Ancient Cellarspawn",
+      "One with the Multiverse",
+      "Extravagant Replication"
+     ]
+    },
+    {
+     "play": [
+      "Entreat the Angels"
+     ],
+     "x": "max",
+     "x_min": 2
+    },
+    {
+     "play": [
+      "The Master of Keys"
+     ],
+     "x": 4,
+     "x_min": 2,
+     "when": [
+      "library >= 40"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Fear of Sleep Paralysis",
+      "Archetype of Imagination",
+      "Athreos, Shroud-Veiled",
+      "Dream Eater",
+      "Doomwake Giant",
+      "Prognostic Sphinx",
+      "Metamorphosis Fanatic",
+      "Nightmare Shepherd",
+      "Phenomenon Investigators",
+      "Solemn Simulacrum",
+      "Moon-Blessed Cleric",
+      "Verge Rangers",
+      "Burnished Hart",
+      "Life Insurance",
+      "Sphere of Safety",
+      "Spirit-Sister's Call",
+      "Shark Typhoon",
+      "Cramped Vents // Access Maze",
+      "Bottomless Pool // Locker Room",
+      "Mind Flayer, the Shadow"
+     ]
+    },
+    {
+     "play": [
+      "Read the Bones",
+      "Diabolic Vision",
+      "Ponder"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Hall of Heliod's Generosity"
+     ],
+     "ability": "enchantment card",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Mind Stone",
+      "Commander's Sphere"
+     ],
+     "ability": "Draw a card",
+     "phase": "main2",
+     "when": [
+      "lands >= 8",
+      "hand <= 1",
+      "library >= 30"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Mesa Enchantress"
+    ],
+    "when": [
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Moon-Blessed Cleric",
+     "Ondu Spiritdancer",
+     "Solemn Simulacrum"
+    ]
+   }
+  ],
+  "notes": "Version 3 (answers candidate, 2026-11-14), built on veil version 2 and written from the first 120 tables of its exam (ab-run #30, seed 20261290, six of ten shards: candidate 37 wins, stock pilot 42; 20 tables won by stock only, 15 by the candidate only). What the base did differently from stock in those games: (a) its play rules starved the cards no rule names (Aminatou's Augury cast in 11 of 26 games drawn against stock's 23 of 28, Redress Fate 10/28 against 21/30, The Eldest Reborn 14/21 against 28/28, Time Wipe 1/25 against 8/28, Otherworldly Gaze 16/22 against 22/24); on the own turns those cards sat in hand with the lands for them, the card most often cast instead was a recast of Aminatou (8 of the Augury turns, 14 of Redress Fate's, 11 of Eldest Reborn's, 14 of Time Wipe's); (b) the seat drew 30% of the table's attackers against stock's 23% (15.4 attackers a game against 9.9), took 39.8 combat damage a game against 30.1 and was first out in 34 of 80 losses against 25 of 76; Aminatou attacked 257 times against 132, left the battlefield 135 times against 91 (41 of them on turns she attacked, against 14) and was cast 1.99 times a game against 1.23. Part of (b) is the go-wide attack, which this file keeps as it is (the attack is being decided by the forgeattack arm). Time Wipe was castable in hand at 17 losses. Changes to the base: Aminatou's rule moved below the wipes and below Aminatou's Augury (no other base rule moved, removed or changed, apart from Sphere of Safety's place, unchanged, and Mind Flayer, the Shadow added to the end of the bodies list: cast in 0 of 38 games drawn by either pilot, a 7-mana enchantment that feeds Sigil and the constellation cards). New rules: 2: Time Wipe or Terminus from hand when an opponent could kill us next turn (threat >= life) and has more power than we do; 3: the same after combat (main2) with threat >= life whatever the power, written from a local game where the seat died at 7 life holding Time Wipe with five lands while its own power (Dusty Parlor counters) was the larger and the creatures had attacked; 4: the same on a board that kills in two swings (an opponent with 20 power or more, more than ours, four creatures or more). Time Wipe returns one of our creatures to hand first (Forge picks), so it can save Aminatou without commander tax. The miracle Terminus stays Forge's (confirmAction, out of the rules' reach). 5: Aminatou's Augury while the library has 20 cards (exiles eight), above Aminatou's recast so an 8-mana turn takes the eight-card play. 7: Timely Ward on Aminatou (indestructible; flagged AI:RemoveDeck:All, so stock cast it only as a miracle: 10 times in 33 games, in hand at 12 losses). 9: The Eldest Reborn when an opponent has a creature (each opponent sacrifices one, then discards); stock casts it in every game it draws it. 13: {forge: unnamed} after the engine, Entreat and The Master of Keys and before the bodies list: Forge then chooses among the unnamed (Redress Fate, which needs a judgement of the graveyard no condition can make; Swords, Utter End, Cast Out, Return to Dust; Otherworldly Gaze, Brainstorm, Portent, Telling Time, Thirst for Meaning; Monologue Tax, Mirrormade, Auramancer, Brainstone; the Rooms' door unlocks, which no activate rule can reach). In the first local run it took Utter End twice, Secret Arcade's and Dusty Parlor's unlocks, Brainstone, fetch lands, Portent, Mirrormade, Auramancer, Brainstorm, Thirst. Left to Forge, not drivable by the format: Inkshield (a fog, instant, on an opponent's turn), Arcane Denial (a counter), the instants' timing at end of turn, the miracle decision itself, and which creature Time Wipe returns."
+ }
+}

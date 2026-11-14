@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-14T05:50Z",
-  "note": "The second pass of the owner's table, third part (DESIGN §30; ab-run #36 and #37 have seven decks): Revenant Recon and Blood Rites, each engine-only candidate reworked by an agent with answer rules, with rules for the cards its engine crowded out and with forge rules (playbook/variants/<deck>-answers.json, checked against its base and its local runs). Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, on tables of its own (seed 20261310): the seat under stock AI and under the second-pass candidate with the go-wide attack of its base, and the same rules with the attack left to Forge as a playbook-only arm (the -answers-forgeattack siblings). Miracle Worker, the tenth, follows.",
+  "requested": "2026-11-14T06:35Z",
+  "note": "The second pass of the owner's table, last part (DESIGN §30; ab-run #36 to #38 have nine decks): Miracle Worker, its engine-only candidate reworked by an agent with answer rules, with rules for the cards its engine crowded out and with a forge rule (playbook/variants/miracle-worker-answers.json, checked against its base and its local runs). The deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, on tables of its own (seed 20261310): the seat under stock AI and under the second-pass candidate with the go-wide attack of its base, and the same rules with the attack left to Forge as a playbook-only arm (the -answers-forgeattack sibling). With this all ten second-pass candidates are at the tables.",
   "games": "200",
   "shards_per_deck": "10",
   "jobs_per_shard": "2",
@@ -11,12 +11,12 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "revenant-recon@answers,blood-rites@answers",
+      "decks": "miracle-worker@answers",
       "arms": "stock,playbook",
       "seed": "20261310"
     },
     {
-      "decks": "revenant-recon@answers-forgeattack,blood-rites@answers-forgeattack",
+      "decks": "miracle-worker@answers-forgeattack",
       "arms": "playbook",
       "seed": "20261310",
       "shards_per_deck": "5"
