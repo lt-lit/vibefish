@@ -1,8 +1,8 @@
 {
-  "requested": "2026-11-14T03:47Z",
-  "note": "Answer rules for the pool decks, last part (DESIGN §30; ab-run #31 to #33 have eight decks): Token Triumph's second attempt. The deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, once under its shipped playbook and once under token-triumph@answers2, playbook arms only, on the same tables (seed 20261300; docs/agents/exam_summary.py joins them).",
+  "requested": "2026-11-14T05:17Z",
+  "note": "The second pass of the owner's table, first part (DESIGN §30): Blight Curse, Mutant Menace, Squirreled Away, Ahoy Mateys and Death Toll, each engine-only candidate extended by an agent with answer rules and with rules for the cards its engine crowded out (playbook/variants/<deck>-answers.json, checked against its base and its local runs). Each deck at 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their shipped playbooks, on tables of its own (seed 20261310, not the tables the rules were written from): the deck's seat under stock AI and under the second-pass candidate with the go-wide attack of its base, and the same rules with the attack left to Forge as a playbook-only arm (the -answers-forgeattack siblings). docs/agents/exam_summary.py joins stock, gowide and forgeattack. Harness 0.3.2; Death Toll's candidate has a forge rule.",
   "games": "200",
-  "shards_per_deck": "5",
+  "shards_per_deck": "10",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
@@ -11,14 +11,15 @@
   "opponent_playbooks": true,
   "runs": [
     {
-      "decks": "token-triumph",
-      "arms": "playbook",
-      "seed": "20261300"
+      "decks": "blight-curse@answers,mutant-menace@answers,squirreled-away@answers,ahoy-mateys@answers,death-toll@answers",
+      "arms": "stock,playbook",
+      "seed": "20261310"
     },
     {
-      "decks": "token-triumph@answers2",
+      "decks": "blight-curse@answers-forgeattack,mutant-menace@answers-forgeattack,squirreled-away@answers-forgeattack,ahoy-mateys@answers-forgeattack,death-toll@answers-forgeattack",
       "arms": "playbook",
-      "seed": "20261300"
+      "seed": "20261310",
+      "shards_per_deck": "5"
     }
   ]
 }

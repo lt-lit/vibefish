@@ -87,17 +87,6 @@
      ]
     },
     {
-     "activate": [
-      "Panoptic Projektor"
-     ],
-     "when": [
-      "hand:facedown >= 1"
-     ]
-    },
-    {
-     "forge": "unnamed"
-    },
-    {
      "play": [
       "Obscuring Aether",
       "Panoptic Projektor",
@@ -109,6 +98,17 @@
       "Mastery of the Unseen",
       "Ransom Note"
      ]
+    },
+    {
+     "activate": [
+      "Panoptic Projektor"
+     ],
+     "when": [
+      "hand:facedown >= 1"
+     ]
+    },
+    {
+     "forge": "unnamed"
     },
     {
      "play": [

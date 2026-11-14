@@ -1,0 +1,271 @@
+{
+ "schema": 1,
+ "deck": "death-toll",
+ "variant": "answers-forgeattack",
+ "of": "playbook/variants/death-toll-answers.json",
+ "about": "The answers candidate's cast and trigger rules with the attack left to Forge (no attack policy), for a side-by-side run on the same tables. Only the playbook object is read.",
+ "playbook": {
+  "version": 3,
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Nyx Weaver"
+     ],
+     "when": [
+      "library <= 30"
+     ]
+    },
+    {
+     "play": [
+      "Culling Ritual"
+     ],
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Deluge of Doom"
+     ],
+     "phase": "main2",
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures",
+      "opp_power > power"
+     ]
+    },
+    {
+     "play": [
+      "Deluge of Doom"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_power > power",
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Culling Ritual"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Golgari Signet",
+      "Talisman of Resilience",
+      "Mind Stone",
+      "Deathcap Cultivator",
+      "Rampant Growth",
+      "Commander's Sphere",
+      "Harrow"
+     ]
+    },
+    {
+     "play": [
+      "Winter, Cynical Opportunist"
+     ]
+    },
+    {
+     "play": [
+      "Polluted Cistern // Dim Oubliette",
+      "Stitcher's Supplier",
+      "Nyx Weaver",
+      "Crawling Sensation",
+      "Cemetery Tampering"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Binding the Old Gods",
+      "Putrefy",
+      "Convert to Slime"
+     ]
+    },
+    {
+     "play": [
+      "Demonic Covenant"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Titania, Nature's Force",
+      "Grist, the Hunger Tide",
+      "Ob Nixilis Reignited",
+      "Whip of Erebos",
+      "Deathreap Ritual",
+      "Into the Pit"
+     ]
+    },
+    {
+     "play": [
+      "Deadbridge Chant"
+     ],
+     "when": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Noxious Gearhulk"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Vile Mutilator"
+     ],
+     "when": [
+      "tokens >= 1",
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Hornet Queen",
+      "Demolisher Spawn",
+      "Giant Adephage",
+      "Moldgraf Monstrosity",
+      "Professor Onyx",
+      "Wrenn and Seven",
+      "Ishkanah, Grafwidow",
+      "Rendmaw, Creaking Nest"
+     ]
+    },
+    {
+     "play": [
+      "Old Stickfingers"
+     ],
+     "x": 5,
+     "x_min": 3,
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Whip of Erebos"
+     ]
+    },
+    {
+     "play": [
+      "Mulch",
+      "Grisly Salvage",
+      "Grapple with the Past"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Moldgraf Millipede",
+      "Carrion Grub",
+      "Ursine Monstrosity"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Grim Flayer",
+      "Burnished Hart"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize",
+      "Night's Whisper"
+     ],
+     "when": [
+      "library >= 15"
+     ]
+    },
+    {
+     "hold": [
+      "Deadbridge Chant"
+     ],
+     "until": [
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Nyx Weaver",
+      "Cemetery Tampering",
+      "Crawling Sensation",
+      "Stitcher's Supplier",
+      "Old Stickfingers"
+     ],
+     "until": [
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Mulch",
+      "Grisly Salvage",
+      "Grapple with the Past"
+     ],
+     "until": [
+      "library >= 25"
+     ]
+    },
+    {
+     "hold": [
+      "Moldgraf Millipede",
+      "Carrion Grub",
+      "Ursine Monstrosity"
+     ],
+     "until": [
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Demonic Covenant"
+     ],
+     "until": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Deathreap Ritual"
+    ],
+    "when": [
+     "library >= 10"
+    ]
+   },
+   {
+    "accept": [
+     "Solemn Simulacrum"
+    ]
+   }
+  ],
+  "notes": "The answers candidate: version 2 (winter) with rules for the deck's wipes and removal and for the threats the engine rules starved, written from the 200 tables of bots of ab-run #28 (seed 20261280: candidate 59 wins, stock pilot 37). There the candidate cast 20 cards in a smaller share of the games they were drawn than stock AI (docs/agents/arm_card_diff.py): every play rule that has something to do goes before Forge's own choice, and the base names only ramp, Winter, the mill engine and a few engines, so Forge was asked last with little mana left. Winter's recasts from the command zone took the mana on 256 of the 1,248 turns a starved card was affordable. WIPES (rules 2 to 5). Deluge of Doom was cast in none of the 111 games it was drawn under either pilot (Forge's AI never casts it) and was in hand at 31 and 41 losses. Its X is the card types in our graveyard, and Winter's end-step trigger exiles the whole graveyard (Forge chooses), so at the start of our turn X was 0 to 1 on 59% of the turns it was in hand; before the end step, after Winter's attack mill, it was 4 or more in 156 of the 179 turns her delirium trigger fired. So rule 3 casts it in the second main phase on a board worth it (an opponent with 6 creatures and more creatures and power than we have; in the losses the largest opposing board had 15 nonland permanents on the seat's last two turns, median, against 6 of ours, and in the wins 8 against 6), and rule 4 in either main phase when an opponent could kill us next turn (threat >= life) with more power than we have. Culling Ritual (destroys every nonland permanent of mana value 2 or less: every token) on the same board (rule 2) and on a lethal threat (rule 5); it costs our cheap rocks, which is why it wants a board worth it. REMOVAL (rule 9): Binding the Old Gods, Putrefy and Convert to Slime after the mill engine; Putrefy and Convert to Slime are cast only if Forge's logic finds a target, which it picks (Binding's chapter I target is Forge's too). Binding was cast in 19 of 42 games drawn under the base, 28 of 38 under stock. THREATS AND EDICTS (rules 13 to 15), after the engines and Deadbridge Chant: Noxious Gearhulk when an opponent has a creature (Forge took its enters trigger at 75 of 76 casts in the exam, always on an opponent's creature, so no trigger rule), Vile Mutilator when we have a token to sacrifice for it and an opponent has a creature, then Hornet Queen, Demolisher Spawn, Giant Adephage, Moldgraf Monstrosity, Professor Onyx, Wrenn and Seven, Ishkanah and Rendmaw, biggest first. Planeswalker abilities stay Forge's. Rule 19 {forge: unnamed} after the base's mill spells: Forge then picks among the cards no rule names (Reanimate, Formless Genesis, whose X is the lands in a graveyard Winter keeps emptying, Inscription of Abundance, Sakura-Tribe Elder, Solemn, the two-drops) and the abilities no rule covers, before the mid creatures and draw spells. Rules 20 to 22: Moldgraf Millipede, Carrion Grub and Ursine Monstrosity with 30 cards in the library (they mill; held below that, rule 26), Grim Flayer and Burnished Hart, then Harmonize and Night's Whisper with 15. CHANGED FROM THE BASE: Demonic Covenant is taken out of the base's engine rule into a rule of its own just before it (rule 10, library >= 20) and held below 20 cards (rule 27): it mills two every end step, and the base seat lost 12 of its 139 losses to an empty library against 3 of 161 for stock. Everything else of the base is kept, in its order, with the new rules between. Arachnogenesis (an instant fog) is left to Forge: the rules act only in our own main phase, where it makes no spiders.",
+  "on": "2026-11-14"
+ }
+}
