@@ -123,8 +123,8 @@ option nothing changes for a playbook that was measured without it.
 
 | rule | does | keys |
 |---|---|---|
-| `{"play": [cards]}` | casts the first listed card that is in hand (or is the commander in the command zone), legal and affordable. Forge's own opinion of the card is not asked, so this is also how a card flagged `AI:RemoveDeck:All` gets cast | `when`, `target`, `phase`, `times` (casts of one card a turn, default 1: only a card that comes back to hand, a buyback spell, can be cast again) |
-| `{"activate": [permanents]}` | uses an activated ability of a listed permanent of ours (mana abilities stay Forge's to tap) | `ability` (a piece of the ability's text, when the card has several), `times` (per permanent per turn, default 1), `when`, `target`, `phase` |
+| `{"play": [cards]}` | casts the first listed card that is in hand (or is the commander in the command zone), legal and affordable. Forge's own opinion of the card is not asked, so this is also how a card flagged `AI:RemoveDeck:All` gets cast | `when`, `target` or `aim`, `phase`, `times` (casts of one card a turn, default 1: only a card that comes back to hand, a buyback spell, can be cast again) |
+| `{"activate": [permanents]}` | uses an activated ability of a listed permanent of ours (mana abilities stay Forge's to tap) | `ability` (a piece of the ability's text, when the card has several), `times` (per permanent per turn, default 1), `when`, `target` or `aim`, `phase` |
 | `{"forge": "unnamed"}` | at this place in the order Forge's own AI chooses among the plays no rule names: the spells of cards no `play` rule lists and the abilities no `activate` rule covers, the holds in force left out. It casts what it would have cast with only those to choose from (its own judgement of each card and its own targets); when it wants none of them, the rules below are read. A card a `play` rule lists with a `when` that does not hold is still a named card: it waits for its rule, or for the end of the rules. With `"wait": "main2"` the rules below are not read in the first main phase while Forge's AI keeps an unnamed card it could pay for for its second main phase (above) | `when`, `phase`, `wait` |
 | `{"hold": [cards]}` | Forge's AI may not cast these cards, from any zone, nor use the activated abilities of these permanents (`ability`: only the one whose text it quotes). A `play` or `activate` rule still may, which is how "only this way" is written. A card named by several hold rules is released as soon as one of them is | `until` (released when all of these hold; never, without it), `ability` |
 
@@ -134,9 +134,29 @@ option nothing changes for a playbook that was measured without it.
   check paid for the same equip every turn). Without `target`, a spell
   that needs no choice is cast as it is; one that needs targets or an X is cast only if Forge's own logic for the card
   agrees, since that logic is what picks them.
+- `aim` (play, activate; harness 0.3.4): the spell's one target is an opponent's permanent, chosen by the harness:
+  `"aim": "permanent"` (any nonland permanent), `"creature"`, `"noncreature"`, `"artifact"`, `"enchantment"` or
+  `"planeswalker"`. As with `target`, the spell must have exactly one part that takes a target; the candidates are the
+  opponents' permanents of that kind that the spell can legally target (and, for a destroy effect, that are not
+  indestructible). `aim_min` (default 0) is the least a permanent must be worth to be aimed at: its mana value, or a
+  creature's power when that is more, so that removal is not spent on the first mana rock. `aim_at` says whose:
+  `"danger"` (the default) takes the opponents in the order of how dangerous they look and aims at the best such
+  permanent of the first opponent that has one; `"any"` aims at the best one on any opponent's side. "Best" is Forge's
+  own rating (`ComputerUtilCard.getBestAI`: the best creature by its evaluation of creatures, else the most expensive
+  permanent). **How dangerous an opponent looks** is its life plus twice its nonland permanents, which in the games of
+  the owner's table picks the player who goes on to win in 42% of the turns of rounds 7 to 9 and 52% later, where the
+  widest board alone, which is where Forge's AI sends most of its attackers and removal, picks 32% and 40% (`DESIGN.md`
+  §33). The two weights are the playbook's: `"cast": {"danger": {"life": 1, "permanents": 2}, "rules": [...]}`. An aim
+  is for removal that works on whatever it hits (destroy, exile, steal, bounce): the harness does not ask whether three
+  damage kills the creature, so damage and -X/-X spells stay with Forge's own aiming (no `aim`, no `target`). It is
+  also the way to cast a targeted card Forge's AI never casts (Maelstrom Pulse, Atomize, New Blood). A rule takes
+  `target` or `aim`, not both. `{"play": ["Maelstrom Pulse"], "aim": "permanent", "aim_min": 4}`. Counters: `cast_aim`,
+  `cast_aim_most_dangerous`, `cast_aim_next` (the permanent chosen belonged to the opponent that looked most dangerous,
+  or that opponent had nothing to aim at and a later one did), `cast_aim_none` (nothing to aim at: the rule did not
+  fire).
 - `phase`: `main` (either main phase, the default), `main1` or `main2`.
 - `before_land` (play, activate): `true` tries the rule before the turn's land is played as well, while a land can still be played. The rules otherwise run after the land drop, since they all want the mana; a landfall deck wants its payoffs down first so the land triggers them (`{"play": ["Tatyova, Benthic Druid", "Scute Swarm"], "before_land": true}`). Counter: `cast_before_land`.
-- `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it.
+- `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it. Since harness 0.3.4 `x` can also be a metric, and X is then that number: `"x": "opp_toughness"` sizes a wipe to the largest creature an opponent has. And an X that is paid in life (Toxic Deluge: "pay X life, all creatures get -X/-X") is the rule's to name the same way; the mana cap does not apply to it, `x_keep_life` (default 10) does: the rule never pays the seat below that much life. `{"play": ["Toxic Deluge"], "x": "opp_toughness", "x_min": 3, "x_keep_life": 12, "when": ["opp_creatures >= 6", "opp_power > power"]}`. A spell that divides its X among targets (Fire Covenant) is still out of reach.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:
   `"<metric> <op> <number>"` with `>= <= > < == !=`, `"<metric> <op> <metric>"` (`"opp_power > power"`), or
   `"controls <card name>"` / `"not controls <card name>"` (a permanent of ours on the battlefield).
@@ -155,6 +175,7 @@ option nothing changes for a playbook that was measured without it.
 | `power` | total power of our creatures |
 | `opp_creatures`, `opp_power`, `opp_life` | the most creatures, the most total power, the highest life any one opponent has |
 | `threat` | the most damage one opponent could attack us with next turn |
+| `opp_toughness` | the largest toughness among the opponents' creatures (also as an `x`) |
 | `hand:<group>` | cards in hand from a named list: `"cast": {"groups": {"zada_spells": ["Expedite", ...]}, "rules": [...]}`, then `"hand:zada_spells >= 1"` |
 
 A rule that names a card that is not in the deck, an unknown metric or a malformed condition stops the harness before
@@ -172,7 +193,8 @@ could only be kept by passing), `cast_failed`, `cast_forge_declined`, `cast_turn
 second main phase), `cast_forge_wait` (times a rule with `"wait": "main2"` made the rules below it wait),
 `cast_forge_wait_unused` (waits after which Forge did not cast the card it had kept, though it could still pay for
 it: the rules do not wait for that card again) and `cast_forge_stuck` (Forge kept choosing a named play and the rules
-below decided).
+below decided), and for an aimed rule `cast_aim`, `cast_aim_most_dangerous`, `cast_aim_next` and `cast_aim_none`
+(above).
 `FORGE_JAVA_OPTS=-Dvibefish.trace=true` prints one line per rule decision to the shard log.
 
 ### `triggers`: the seat's answer to "you may"

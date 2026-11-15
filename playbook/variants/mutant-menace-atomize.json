@@ -1,0 +1,254 @@
+{
+ "schema": 1,
+ "deck": "mutant-menace",
+ "variant": "atomize",
+ "of": "playbook/precons/mutant-menace.json (version 2)",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped playbook with the changes its notes list (the third pass of 2026-11-15, DESIGN.md section 33). Only the playbook object is read.",
+ "playbook": {
+  "version": 3,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Nuclear Fallout"
+     ],
+     "x": 3,
+     "x_min": 3,
+     "when": [
+      "opp_power > power",
+      "opp_creatures >= 4"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Nuclear Fallout"
+     ],
+     "x": 2,
+     "x_min": 2,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Find // Finality"
+     ],
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Dominance",
+      "Talisman of Resilience",
+      "Talisman of Curiosity",
+      "Rampant Growth",
+      "Farseek",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "The Wise Mothman"
+     ]
+    },
+    {
+     "play": [
+      "Hardened Scales",
+      "Winding Constrictor",
+      "Branching Evolution",
+      "Corpsejack Menace"
+     ]
+    },
+    {
+     "play": [
+      "Casualties of War",
+      "Alpha Deathclaw"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Atomize"
+     ],
+     "aim": "permanent",
+     "aim_min": 4
+    },
+    {
+     "play": [
+      "Vault 87: Forced Evolution"
+     ],
+     "when": [
+      "opp_creatures >= 1",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Raul, Trouble Shooter",
+      "Hancock, Ghoulish Mayor",
+      "Guardian Project",
+      "Inexorable Tide",
+      "Marcus, Mutant Mayor",
+      "Screeching Scorchbeast",
+      "Mirelurk Queen"
+     ]
+    },
+    {
+     "activate": [
+      "Raul, Trouble Shooter"
+     ],
+     "when": [
+      "library >= 30"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "The Master, Transcendent"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Rampaging Yao Guai"
+     ],
+     "x": "max",
+     "x_min": 3
+    },
+    {
+     "play": [
+      "Lumbering Megasloth",
+      "Agent Frank Horrigan",
+      "Strong, the Brutish Thespian",
+      "Nightkin Ambusher",
+      "The Master, Transcendent",
+      "Bloatfly Swarm",
+      "Lily Bowen, Raging Grandma",
+      "Young Deathclaws",
+      "Vault 12: The Necropolis",
+      "Recon Craft Theta",
+      "Harold and Bob, First Numens",
+      "Tireless Tracker",
+      "Glowing One",
+      "Feral Ghoul",
+      "Watchful Radstag",
+      "Infesting Radroach",
+      "Fraying Sanity",
+      "Vexing Radgull",
+      "Piper Wright, Publick Reporter",
+      "Tato Farmer",
+      "Cathedral Acolyte",
+      "Jason Bright, Glowing Prophet",
+      "Strength Bobblehead",
+      "Power Fist"
+     ]
+    },
+    {
+     "play": [
+      "Struggle for Project Purity"
+     ],
+     "when": [
+      "library >= 45"
+     ]
+    },
+    {
+     "play": [
+      "Biomass Mutation"
+     ],
+     "x": "max",
+     "x_min": 6,
+     "when": [
+      "attackers >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Mutational Advantage"
+     ],
+     "when": [
+      "attackers >= 4",
+      "opp_creatures >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Contaminated Drink"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "hand <= 4",
+      "library >= 35"
+     ]
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Strength Bobblehead"
+     ],
+     "ability": "Put X",
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Contagion Clasp"
+     ],
+     "ability": "Proliferate",
+     "phase": "main2"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Screeching Scorchbeast"
+    ]
+   },
+   {
+    "accept": [
+     "Infesting Radroach"
+    ]
+   },
+   {
+    "accept": [
+     "Tato Farmer"
+    ],
+    "when": [
+     "controls The Wise Mothman",
+     "library >= 50",
+     "life >= 20"
+    ]
+   },
+   {
+    "accept": [
+     "Tato Farmer"
+    ],
+    "when": [
+     "controls Screeching Scorchbeast",
+     "library >= 50",
+     "life >= 20"
+    ]
+   }
+  ],
+  "notes": "Version 3 = version 2 with Atomize taken out of the rule it shared with Casualties of War and Alpha Deathclaw (which left its aiming to Forge, and Forge never cast it: 0 of the 36 games it was drawn at the owner's table in ab-run #42, in hand at 23 losses; 0 of 42 under the stock pilot) and given a rule of its own right after: aimed at an opponent's nonland permanent worth four or more, the best one of the opponent that looks most dangerous (harness 0.3.4: aim). Nothing else is changed."
+ }
+}

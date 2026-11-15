@@ -57,6 +57,11 @@ are that session's and have to be replaced by the new session's scratch director
   with `--base-commit=304db09`, the commit before the nine shipped), and `cast_phase.py RUN_DIR ARM DECK CARD...`
   (whether a seat's casts on its own turn come before or after its attack: the logs have no phase, and this is how
   §30 found that Forge's AI casts most permanents after combat).
+- `named_split.py VARIANT.json STOCK.json BASE.json NEW.json`: three arms' casts summed over the cards the playbook
+  names above its `forge` rule, the cards it names below it and the cards no rule names: how §32 read what the `forge`
+  rule's wait moved from one group to the other. `leader.py DIR...`: which thing a table can see says who goes on to
+  win (the seat with the most nonland permanents, the highest life, the most damage dealt, sums of them), turn by turn
+  from the event logs; the default of an aim's judgement of danger comes from it (DESIGN §33).
 - `add_forge_rule.py DECK [--base FILE] [--name NAME] [--after commander|top|N] [--wait]`: a variant of a playbook with a
   `forge` rule put in mechanically (after the commander's rule unless told otherwise; `--wait` gives the rule
   `"wait": "main2"`). `playbook_check.sh [RUNTIME_DIR] [FILE...]` parses every playbook file with the harness's own

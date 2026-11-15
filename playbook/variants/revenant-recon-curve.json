@@ -1,0 +1,275 @@
+{
+ "schema": 1,
+ "deck": "revenant-recon",
+ "variant": "curve",
+ "of": "playbook/precons/revenant-recon.json (version 4)",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped playbook with the changes its notes list (the third pass of 2026-11-15, DESIGN.md section 33). Only the playbook object is read.",
+ "playbook": {
+  "version": 5,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_power > power",
+      "creatures <= 3"
+     ]
+    },
+    {
+     "play": [
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Toxic Deluge"
+     ],
+     "x": "opp_toughness",
+     "x_min": 3,
+     "x_keep_life": 12,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_power > power",
+      "creatures <= 3"
+     ]
+    },
+    {
+     "play": [
+      "Toxic Deluge"
+     ],
+     "x": "opp_toughness",
+     "x_min": 3,
+     "x_keep_life": 12,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Dimir Signet",
+      "Talisman of Dominance",
+      "Mind Stone",
+      "Thought Vessel"
+     ]
+    },
+    {
+     "play": [
+      "Massacre Wurm"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Mirko, Obsessive Theorist"
+     ]
+    },
+    {
+     "play": [
+      "Whispering Snitch",
+      "Sinister Starfish",
+      "Case of the Shifting Visage",
+      "Dimir Spybug",
+      "Enhanced Surveillance"
+     ]
+    },
+    {
+     "play": [
+      "Sphinx of the Second Sun",
+      "Eye of Duskmantle",
+      "Grave Titan",
+      "Massacre Wurm",
+      "Doom Whisperer",
+      "Syr Konrad, the Grim",
+      "Marvo, Deep Operative",
+      "Twilight Prophet",
+      "Mulldrifter",
+      "Master of Death",
+      "Watcher of Hours",
+      "Dream Eater",
+      "Foreboding Steamboat"
+     ]
+    },
+    {
+     "play": [
+      "Phyrexian Arena"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Sinister Starfish"
+     ],
+     "ability": "Surveil"
+    },
+    {
+     "play": [
+      "Overseer of the Damned",
+      "Ravenous Chupacabra",
+      "Shriekmaw"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Amphin Mutineer"
+     ],
+     "when": [
+      "opp_creatures >= 1",
+      "opp_power >= 6"
+     ]
+    },
+    {
+     "play": [
+      "Mission Briefing"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Rise of the Dark Realms"
+     ]
+    },
+    {
+     "play": [
+      "Reanimate",
+      "Animate Dead"
+     ]
+    },
+    {
+     "play": [
+      "Necromancy",
+      "Charnel Serenade"
+     ],
+     "when": [
+      "turn >= 6"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Unshakable Tail",
+      "Dogged Detective",
+      "Baleful Strix",
+      "Lazav, the Multifarious",
+      "Copy Catchers",
+      "Nightveil Sprite",
+      "Final-Word Phantom",
+      "Thoughtbound Phantasm"
+     ]
+    },
+    {
+     "play": [
+      "Disinformation Campaign"
+     ]
+    },
+    {
+     "play": [
+      "Notion Rain",
+      "Discovery // Dispersal",
+      "Curate",
+      "Consider",
+      "Deep Analysis"
+     ],
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Doom Whisperer"
+     ],
+     "ability": "Surveil",
+     "when": [
+      "life >= 20",
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Tocasia's Dig Site"
+     ],
+     "ability": "Surveil",
+     "phase": "main2",
+     "when": [
+      "library >= 25"
+     ]
+    },
+    {
+     "activate": [
+      "Port of Karfell"
+     ],
+     "ability": "Mill four",
+     "phase": "main2",
+     "when": [
+      "lands >= 8",
+      "library >= 25"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Mirko, Obsessive Theorist"
+    ]
+   },
+   {
+    "accept": [
+     "Master of Death"
+    ],
+    "when": [
+     "life >= 10"
+    ]
+   },
+   {
+    "accept": [
+     "Marvo, Deep Operative"
+    ]
+   },
+   {
+    "accept": [
+     "Copy Catchers"
+    ],
+    "when": [
+     "mana >= 4",
+     "library >= 25"
+    ]
+   },
+   {
+    "accept": [
+     "Overseer of the Damned"
+    ],
+    "when": [
+     "opp_creatures >= 1"
+    ]
+   }
+  ],
+  "notes": "Version 5 = version 4 with three changes. (1) The rule for the deck's large creatures (Sphinx of the Second Sun to Watcher of Hours) moves up from below Phyrexian Arena, the removal creatures, Mission Briefing and Rise of the Dark Realms to just below the surveil engine's pieces, and takes Dream Eater and Foreboding Steamboat, which no rule named. (2) Toxic Deluge gets two rules with the conditions of the Black Sun's Zenith rules: X is the largest toughness among the opponents' creatures, paid in life, never below 12 life left and not for less than 3 (harness 0.3.4: an X paid in life, and x as a metric). Neither pilot ever cast it: 0 of the 44 games it was drawn under version 4, 0 of 46 under the stock pilot, in hand at 27 losses. (3) Nothing else. Why: version 4 is the one playbook of the owner's ten that was behind its stock pilot at the owner's table (ab-run #42: 48 wins against 64, -8.0 points, 95% -17 to +1; with its exam 118 against 124 of 400), and what it casts less than that pilot is its creatures of four mana and more (Foreboding Steamboat 25 of 59 against 43 of 52, Dream Eater 34 of 47 against 49 of 51, Twilight Prophet 32 of 47 against 48 of 55, Mulldrifter 29 of 41 against 44 of 49)."
+ }
+}

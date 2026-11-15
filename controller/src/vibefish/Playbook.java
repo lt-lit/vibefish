@@ -68,7 +68,7 @@ public final class Playbook {
         /** Everything a comparison may be made on; anything else is a mistake in the file and stops the run. */
         public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
                 "storm", "drawn", "turn", "life", "mana", "opponents", "power", "opp_creatures", "opp_power", "opp_life",
-                "threat", "main");
+                "threat", "main", "opp_toughness");
         private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
         private static final Pattern COMPARE = Pattern.compile(
                 "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");
@@ -141,7 +141,12 @@ public final class Playbook {
      * marked {@code before_land} is also tried before the turn's land is played, when a land could still be played,
      * which is how a landfall deck says "the payoff first, then the land". With {@code x} a rule casts an untargeted
      * spell that has X in its cost for as much as the mana left pays for ({@code "max"}) or at most the number given,
-     * and not at all below {@code x_min}; without it X spells are cast only when Forge's own logic would. {@code hold}: Forge's
+     * and not at all below {@code x_min}; without it X spells are cast only when Forge's own logic would. {@code x} may
+     * also name a metric (X is that number), and an X that is paid in life is the rule's to name the same way, never
+     * below {@code x_keep_life} life left. With {@code aim} (a kind of permanent) the spell's one target is an
+     * opponent's permanent of that kind, worth at least {@code aim_min}: the best one of the opponent that looks most
+     * dangerous ({@code aim_at danger}, the default; the weights are {@code cast.danger}) or the best on any
+     * opponent's side ({@code any}); a rule takes {@code target} or {@code aim}, not both. {@code hold}: Forge's
      * own AI may not cast the listed cards, nor use the activated abilities of the listed permanents of ours (all of
      * them, or the one {@code ability} quotes), until every {@code until} condition holds (never, with no
      * {@code until}); a card named by several hold rules is released as soon as one of them is, and a play or
@@ -167,8 +172,16 @@ public final class Playbook {
         public final boolean beforeLand;    // play, activate: tried before the turn's land is played (landfall first)
         public final int x;                 // play, activate: the most X the rule pays (-1: X is Forge's; "max": all the mana left)
         public final int xMin;              // ... and the least X worth casting for (default 1)
+        public final String xMetric;        // x given as a metric: X is that number (opp_toughness: a wipe sized to the largest creature)
+        public final int xKeepLife;         // an X paid in life: never paid below this much life left (default 10)
         public final boolean waitMain2;     // forge: the rules below wait for main 2 while Forge keeps an unnamed card for it
+        public final String aim;            // play, activate: the one target is an opponent's permanent of this kind (null: no aim)
+        public final String aimAt;          // danger: of the opponent judged most dangerous first | any: the best on any opponent's side
+        public final int aimMin;            // the least worth of a permanent the rule aims at (mana value; a creature's power if more)
         public final int index;             // 1-based position in the file, for the counters
+
+        /** The kinds of permanent an aim can ask for. */
+        public static final List<String> AIM_KINDS = List.of("creature", "permanent", "noncreature", "artifact", "enchantment", "planeswalker");
 
         CastRule(JsonObject o, int index) {
             this.index = index;
@@ -191,7 +204,7 @@ public final class Playbook {
                 if (!o.get("forge").isJsonPrimitive() || !"unnamed".equals(o.get("forge").getAsString())) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": \"forge\" takes \"unnamed\" (Forge's choice among the plays no rule names)");
                 }
-                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until")) {
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min")) {
                     if (o.has(key)) {
                         throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\", \"phase\" and \"wait\"");
                     }
@@ -208,19 +221,40 @@ public final class Playbook {
                 throw new IllegalArgumentException("playbook cast rule " + index + " names no cards");
             }
             target = hold ? null : str(o, "target", null);
+            aim = hold || forge ? null : str(o, "aim", null);
+            aimAt = str(o, "aim_at", "danger");
+            aimMin = num(o, "aim_min", 0);
+            if (aim == null && (o.has("aim") || o.has("aim_at") || o.has("aim_min"))) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": only a play or activate rule takes \"aim\", and \"aim_at\" and \"aim_min\" need it");
+            }
+            if (aim != null) {
+                if (!AIM_KINDS.contains(aim)) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": aim must be one of " + AIM_KINDS + " (an opponent's permanent of that kind)");
+                }
+                if (target != null) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": \"target\" names a permanent of the seat's own and \"aim\" an opponent's; a rule takes one of them");
+                }
+                if (!List.of("danger", "any").contains(aimAt)) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": aim_at must be danger or any");
+                }
+            }
             ability = "play".equals(kind) ? null : str(o, "ability", null);
             times = num(o, "times", 1);
             phase = hold ? null : str(o, "phase", "main");
             beforeLand = !hold && o.has("before_land") && o.get("before_land").isJsonPrimitive() && o.get("before_land").getAsBoolean();
             if (!hold && o.has("x") && o.get("x").isJsonPrimitive()) {
                 String xs = o.get("x").getAsString().trim();
-                if (!xs.equals("max") && !xs.matches("\\d+")) {
-                    throw new IllegalArgumentException("playbook cast rule " + index + ": x must be a number or \"max\"");
+                boolean metric = !xs.equals("max") && !xs.matches("\\d+");
+                if (metric && !Cond.METRICS.contains(xs)) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": x must be a number, \"max\" or a metric (" + Cond.METRICS + ")");
                 }
-                x = xs.equals("max") ? Integer.MAX_VALUE : Integer.parseInt(xs);
+                x = xs.equals("max") || metric ? Integer.MAX_VALUE : Integer.parseInt(xs);
+                xMetric = metric ? xs : null;
             } else {
                 x = -1;
+                xMetric = null;
             }
+            xKeepLife = num(o, "x_keep_life", 10);
             xMin = num(o, "x_min", 1);
             if (hold && (o.has("x") || o.has("x_min") || o.has("before_land"))) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": a hold rule takes no \"x\", \"x_min\" or \"before_land\"");
@@ -265,10 +299,15 @@ public final class Playbook {
         public final java.util.Map<String, List<String>> groups;   // named lists of cards, for hand:<group> conditions
         public final JsonObject source;     // as written, recorded in run.json
         public final boolean hasBeforeLand; // some rule is tried before the land drop
+        public final int dangerLife;        // how dangerous an opponent looks: this times its life ...
+        public final int dangerPermanents;  // ... plus this times its nonland permanents (an aim reads it; DESIGN.md section 33)
 
         Cast(JsonObject o) {
             source = o;
             maxPerTurn = num(o, "max_per_turn", 60);
+            JsonObject danger = o.has("danger") && o.get("danger").isJsonObject() ? o.getAsJsonObject("danger") : new JsonObject();
+            dangerLife = num(danger, "life", 1);
+            dangerPermanents = num(danger, "permanents", 2);
             java.util.Map<String, List<String>> g = new java.util.LinkedHashMap<>();
             if (o.has("groups") && o.get("groups").isJsonObject()) {
                 for (java.util.Map.Entry<String, JsonElement> e : o.getAsJsonObject("groups").entrySet()) {
@@ -427,6 +466,14 @@ public final class Playbook {
                 holds += r.isHold() ? 1 : 0;
             }
             sb.append(" cast=").append(plays).append(" play, ").append(activations).append(" activate, ").append(holds).append(" hold rule(s)");
+            int aims = 0;
+            for (CastRule r : cast.rules) {
+                aims += r.aim != null ? 1 : 0;
+            }
+            if (aims > 0) {
+                sb.append(", ").append(aims).append(" aimed at an opponent's permanent (danger = ").append(cast.dangerLife).append(" x life + ")
+                  .append(cast.dangerPermanents).append(" x nonland permanents)");
+            }
             for (CastRule r : cast.rules) {
                 if (r.isForge()) {
                     sb.append(", Forge's choice among the unnamed at rule ").append(r.index).append(r.waitMain2 ? " (the rules below wait for main 2)" : "");

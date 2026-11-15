@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "deck": "blood-rites",
+ "variant": "newblood",
+ "of": "playbook/precons/blood-rites.json (version 2)",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped playbook with the changes its notes list (the third pass of 2026-11-15, DESIGN.md section 33). Only the playbook object is read.",
+ "playbook": {
+  "version": 3,
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Hierarchy",
+      "Orzhov Signet",
+      "Mind Stone",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "Clavileño, First of the Blessed"
+     ]
+    },
+    {
+     "play": [
+      "Olivia's Wrath"
+     ],
+     "when": [
+      "type:Vampire >= 3",
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "forge": "unnamed",
+     "when": [
+      "opp_power > power",
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Patron of the Vein"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Damn"
+     ]
+    },
+    {
+     "play": [
+      "New Blood"
+     ],
+     "aim": "creature",
+     "aim_min": 4
+    },
+    {
+     "play": [
+      "Legion Lieutenant",
+      "Radiant Destiny",
+      "Etchings of the Chosen",
+      "Glass-Cast Heart",
+      "Sanctum Seeker",
+      "Mavren Fein, Dusk Apostle",
+      "Kindred Boon",
+      "Cordial Vampire",
+      "Drana, Liberator of Malakir",
+      "Elenda, the Dusk Rose",
+      "Exquisite Blood",
+      "Crossway Troublemakers",
+      "Timothar, Baron of Bats",
+      "Promise of Aclazotz"
+     ]
+    },
+    {
+     "play": [
+      "Sorin, Lord of Innistrad",
+      "Heirloom Blade",
+      "Swiftfoot Boots"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Champion of Dusk"
+     ],
+     "when": [
+      "type:Vampire >= 3",
+      "library >= 30",
+      "life >= 15"
+     ]
+    },
+    {
+     "play": [
+      "Butcher of Malakir",
+      "Order of Sacred Dusk",
+      "Carmen, Cruel Skymarcher",
+      "Vona, Butcher of Magan",
+      "Twilight Prophet",
+      "Falkenrath Noble",
+      "Nighthawk Scavenger",
+      "Bloodtracker",
+      "Elenda's Hierophant",
+      "Welcoming Vampire",
+      "Yahenni, Undying Partisan",
+      "Bloodline Necromancer",
+      "Redemption Choir",
+      "Blood Artist",
+      "Cruel Celebrant",
+      "Bartolomé del Presidio",
+      "Charismatic Conqueror",
+      "Indulgent Aristocrat",
+      "Dusk Legion Zealot",
+      "Dusk Legion Sergeant",
+      "Martyr of Dusk",
+      "Oathsworn Vampire",
+      "Bloodghast",
+      "Master of Dark Rites",
+      "Viscera Seer",
+      "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "play": [
+      "Patron of the Vein"
+     ]
+    },
+    {
+     "play": [
+      "March of the Canonized"
+     ],
+     "x": "max",
+     "x_min": 3
+    },
+    {
+     "hold": [
+      "Viscera Seer"
+     ],
+     "ability": "Scry"
+    },
+    {
+     "activate": [
+      "Glass-Cast Heart"
+     ],
+     "ability": "Create a 1/1",
+     "when": [
+      "life >= 10"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Blade of the Bloodchief",
+      "Heirloom Blade"
+     ],
+     "ability": "Equip",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Rogue's Passage"
+     ],
+     "phase": "main1"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Bloodghast"
+    ]
+   },
+   {
+    "accept": [
+     "Heirloom Blade"
+    ]
+   },
+   {
+    "accept": [
+     "Bloodline Necromancer"
+    ]
+   },
+   {
+    "accept": [
+     "Timothar, Baron of Bats"
+    ]
+   },
+   {
+    "accept": [
+     "Crossway Troublemakers"
+    ],
+    "when": [
+     "life >= 15",
+     "library >= 30",
+     "hand <= 5"
+    ]
+   },
+   {
+    "accept": [
+     "Promise of Aclazotz"
+    ],
+    "when": [
+     "tokens >= 1",
+     "creatures >= 4"
+    ]
+   }
+  ],
+  "notes": "Version 3 = version 2 with one rule added after the Damn rule: New Blood (its cost taps a Vampire), aimed at an opponent's creature worth four or more, the best one of the opponent that looks most dangerous (harness 0.3.4: aim). Neither pilot ever cast it at the owner's table (ab-run #42): 0 of the 40 games it was drawn under version 2, in hand at 16 losses; 0 of 41 under the stock pilot. Pact of the Serpent, the deck's other card no pilot casts, aims at a player and names a creature type, which a rule cannot do yet. Nothing else is changed."
+ }
+}

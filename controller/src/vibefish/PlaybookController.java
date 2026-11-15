@@ -18,11 +18,15 @@ import forge.ai.ComputerUtilMana;
 import forge.ai.PlayerControllerAi;
 import forge.ai.SpellApiToAi;
 import forge.game.Game;
+import forge.game.ability.ApiType;
 import forge.game.card.Card;
 import forge.game.card.CardCollection;
 import forge.game.combat.Combat;
 import forge.game.combat.CombatUtil;
 import forge.game.cost.Cost;
+import forge.game.cost.CostPart;
+import forge.game.cost.CostPayLife;
+import forge.game.keyword.Keyword;
 import forge.game.phase.PhaseHandler;
 import forge.game.phase.PhaseType;
 import forge.game.player.Player;
@@ -585,6 +589,7 @@ public class PlaybookController extends PlayerControllerAi {
     private final Map<Integer, Integer> castActivations = new LinkedHashMap<>();
     private final Map<String, Integer> castByName = new LinkedHashMap<>();
     private boolean castRetargeted;
+    private Card castAimed;                 // the opponent's permanent the last aimed rule chose (for the trace and the counters)
     private boolean castWaiting;            // a forge rule with "wait" stopped the rules for this decision: the seat passes
     private int castWaitCard = -1;          // the card the rules waited for this turn, until Forge has chosen in main 2
     private int castWaitTurn = -1;
@@ -1027,12 +1032,14 @@ public class PlaybookController extends PlayerControllerAi {
                         if (!c.getName().equals(name) || castActivations.getOrDefault(c.getId(), 0) >= rule.times) {
                             continue;
                         }
+                        castAimed = null;
                         SpellAbility sa = activatable(c, rule.ability, target, rule);
                         if (sa != null) {
                             castActivations.merge(c.getId(), 1, Integer::sum);
                             castPlays++;
                             count("cast_rule_" + rule.index, 1);
-                            trace("rule " + rule.index + " activates " + name + ": " + sa);
+                            countAim(rule);
+                            trace("rule " + rule.index + " activates " + name + ": " + sa + aimText());
                             return sa;
                         }
                     }
@@ -1046,6 +1053,7 @@ public class PlaybookController extends PlayerControllerAi {
                     if (!c.getName().equals(name) || castTried.contains(c.getId())) {
                         continue;
                     }
+                    castAimed = null;
                     SpellAbility sa = playable(c, target, rule);
                     if (sa != null) {
                         castPendingId = c.getId();
@@ -1053,13 +1061,33 @@ public class PlaybookController extends PlayerControllerAi {
                         castByName.merge(playKey, 1, Integer::sum);
                         castPlays++;
                         count("cast_rule_" + rule.index, 1);
-                        trace("rule " + rule.index + " casts " + name + (target == null ? "" : " at " + target.getName()));
+                        countAim(rule);
+                        trace("rule " + rule.index + " casts " + name + (target == null ? "" : " at " + target.getName()) + aimText());
                         return sa;
                     }
                 }
             }
         }
         return null;
+    }
+
+    /** An aimed rule fired: counted, and whether the permanent it chose belongs to the opponent that looks most dangerous. */
+    private void countAim(Playbook.CastRule rule) {
+        if (rule.aim == null || castAimed == null) {
+            return;
+        }
+        count("cast_aim", 1);
+        Player owner = castAimed.getController();
+        boolean top = true;
+        for (Player opp : player.getOpponents()) {
+            top &= opp == owner || danger(opp) <= danger(owner);
+        }
+        count(top ? "cast_aim_most_dangerous" : "cast_aim_next", 1);
+    }
+
+    private String aimText() {
+        return castAimed == null ? "" : " aimed at " + castAimed.getName() + " of " + castAimed.getController().getName()
+                + " (danger " + danger(castAimed.getController()) + ")";
     }
 
     private boolean stillCastable(int cardId) {
@@ -1124,6 +1152,29 @@ public class PlaybookController extends PlayerControllerAi {
         }
         SpellAbility aimed = null;
         SpellAbility paidX = null;
+        if (target == null && rule.aim != null) {
+            // The rule aims at an opponent's permanent: the one part of the spell that takes a target says which are legal.
+            SpellAbility part = null;
+            int parts = 0;
+            for (SpellAbility p = sa; p != null; p = p.getSubAbility()) {
+                if (p.usesTargeting()) {
+                    part = p;
+                    parts++;
+                }
+            }
+            if (parts != 1) {
+                return false;
+            }
+            part.setActivatingPlayer(player);
+            castRetargeted = true;
+            part.resetTargets();
+            target = aimTarget(part, rule);
+            if (target == null) {
+                count("cast_aim_none", 1);
+                return false;
+            }
+            castAimed = target;
+        }
         if (target != null) {
             // An Equip aimed at the creature that already wears the equipment attaches nothing and costs the mana
             // (Limit Break, 2026-11-12: 308 of 429 firings of its equip rule re-attached what Cloud already wore).
@@ -1155,12 +1206,17 @@ public class PlaybookController extends PlayerControllerAi {
                 return false;
             }
         }
-        boolean hasX = sa.costHasManaX();
+        boolean manaX = sa.costHasManaX();
+        boolean lifeX = !manaX && paysXLife(sa);
+        boolean hasX = manaX || lifeX;
         if (hasX && rule.x >= 0 && (target != null || (!sa.usesTargeting() && !subTargets(sa)))) {
-            // The rule names X: all the mana the rest of the cost leaves (Forge's own count), capped by the rule.
+            // The rule names X: all the mana the rest of the cost leaves (Forge's own count) or, for an X paid in life,
+            // the life above what the rule keeps; capped by the rule's number or set by its metric.
             castRetargeted = true;
             SpellAbility root = sa.getRootAbility();
-            int x = Math.min(ComputerUtilCost.setMaxXValue(sa, player, false), rule.x);
+            int want = rule.xMetric == null ? rule.x : metric(rule.xMetric);
+            int most = manaX ? ComputerUtilCost.setMaxXValue(sa, player, false) : player.getLife() - rule.xKeepLife;
+            int x = Math.min(most, want);
             if (x < Math.max(rule.xMin, 0)) {
                 root.setXManaCostPaid(null);
                 if (aimed != null) {
@@ -1190,6 +1246,73 @@ public class PlaybookController extends PlayerControllerAi {
             return false;
         }
         return true;
+    }
+
+    /** An X in the cost that is paid in life (Toxic Deluge), which the card's script reads back as the X of its effect. */
+    private static boolean paysXLife(SpellAbility sa) {
+        if (sa.getPayCosts() == null || !sa.getPayCosts().hasXInAnyCostPart()) {
+            return false;
+        }
+        for (CostPart part : sa.getPayCosts().getCostParts()) {
+            if (part instanceof CostPayLife && "X".equals(part.getAmount())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** How dangerous an opponent looks to this seat: the playbook's weights on its life and its nonland permanents. */
+    private int danger(Player opp) {
+        int permanents = 0;
+        for (Card c : opp.getCardsIn(ZoneType.Battlefield)) {
+            permanents += c.isLand() ? 0 : 1;
+        }
+        return playbook.cast.dangerLife * opp.getLife() + playbook.cast.dangerPermanents * permanents;
+    }
+
+    private static boolean aimKind(Card c, String kind) {
+        switch (kind) {
+            case "creature": return c.isCreature();
+            case "noncreature": return !c.isCreature();
+            case "artifact": return c.isArtifact();
+            case "enchantment": return c.isEnchantment();
+            case "planeswalker": return c.isPlaneswalker();
+            default: return true;
+        }
+    }
+
+    /**
+     * The opponent's permanent an aimed rule hits: of the rule's kind, a legal target of the spell, worth at least the
+     * rule's floor (mana value, or a creature's power when that is more). With {@code aim_at danger} the opponents are
+     * taken in the order of how dangerous they look and the first that has such a permanent gives its best one, by
+     * Forge's own rating of cards; with {@code any} the best one on any opponent's side. Null when there is none.
+     */
+    private Card aimTarget(SpellAbility part, Playbook.CastRule rule) {
+        List<Player> opps = new ArrayList<>(player.getOpponents());
+        boolean byDanger = "danger".equals(rule.aimAt);
+        if (byDanger) {
+            opps.sort((a, b) -> Integer.compare(danger(b), danger(a)));
+        }
+        boolean destroys = part.getApi() == ApiType.Destroy;
+        List<Card> pool = new ArrayList<>();
+        for (Player opp : opps) {
+            List<Card> theirs = new ArrayList<>();
+            for (Card c : opp.getCardsIn(ZoneType.Battlefield)) {
+                if (c.isLand() || !aimKind(c, rule.aim)) {
+                    continue;
+                }
+                int worth = Math.max(c.getCMC(), c.isCreature() ? c.getNetPower() : 0);
+                if (worth < rule.aimMin || (destroys && c.hasKeyword(Keyword.INDESTRUCTIBLE)) || !part.canTarget(c)) {
+                    continue;
+                }
+                theirs.add(c);
+            }
+            if (byDanger && !theirs.isEmpty()) {
+                return ComputerUtilCard.getBestAI(theirs);
+            }
+            pool.addAll(theirs);
+        }
+        return pool.isEmpty() ? null : ComputerUtilCard.getBestAI(pool);
     }
 
     private static boolean subTargets(SpellAbility sa) {
@@ -1308,6 +1431,15 @@ public class PlaybookController extends PlayerControllerAi {
                 int n = 0;
                 for (Player opp : player.getOpponents()) {
                     n = Math.max(n, opp.getLife());
+                }
+                return n;
+            }
+            case "opp_toughness": {                     // the largest toughness among the opponents' creatures
+                int n = 0;
+                for (Player opp : player.getOpponents()) {
+                    for (Card c : opp.getCreaturesInPlay()) {
+                        n = Math.max(n, c.getNetToughness());
+                    }
                 }
                 return n;
             }

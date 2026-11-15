@@ -9,16 +9,20 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status (2026-11-14):** twenty-two precons have a per-deck bot: a playbook for one deck that says which card to cast
+**Status (2026-11-15):** twenty-two precons have a per-deck bot: a playbook for one deck that says which card to cast
 when and aimed at what, which of the deck's optional triggers to take, and when to use its board wipes and removal;
-three of them also choose their own attacks, and everything else stays Forge's. Each was judged at 200 four-player
-tables whose other three seats are bots too, against the same deck under Forge's stock AI: among the first twelve the
-playbooks won 557 of 2,400 tables and the stock pilots of the same decks 419, nine decks ahead of their stock pilot
-(four of them clear of noise), one level and two a point or two behind. On 2026-11-14 the nine bots that had no rules
-for their answers got them: beside the versions before them on the same tables, they cast those cards in 77% of the
-games they draw them (34% before) and won 493 of 1,800 tables to 446. Ten more precons got a playbook the same day, after two passes each: at
-200 tables of bots each their playbooks won 655 of 2,000 tables to the stock pilots' 498, five decks ahead beyond noise,
-four inside it, one level (`DESIGN.md` §30). The dashboard shows all twenty-two in one table. Underneath: the benchmark pod
+three of them also choose their own attacks, and everything else stays Forge's. Each has been set against the same
+deck under Forge's stock AI at 200 four-player tables whose other three seats are bots too, on tables that chose
+nothing: the twelve of the first pool won 573 of 2,400 tables to their stock pilots' 405 (four decks ahead beyond
+noise, none behind), and the ten precons of one playgroup, at a table drawn from those ten, 511 of 2,000 to 439 (two
+ahead beyond noise, three inside it, four level, one behind inside noise); together 24.6% of 4,400 tables against
+19.2% (`DESIGN.md` §32). Those ten have also played a league among themselves, which is on the dashboard, and each has
+a playtest report at that table (`demo-data/playtest/2026-11-15/owners-table/`): the report a list of your own gets
+(`runner/decklist.py`, `runner/playbook.py adapt`, `runner/ab.py --deck-file`, `runner/playtest.py`; `DESIGN.md` §31).
+What the bots still lack is the table itself: their attacks and most of their removal go where Forge's AI sends them,
+at the widest board and the lowest life, and at the player who goes on to win less often than chance. The first piece
+against that is in (`DESIGN.md` §33): a rule can aim a spell at the best permanent of the opponent that looks most
+dangerous. The dashboard shows all twenty-two in one table. Underneath: the benchmark pod
 (four bundled Commander precons) plays itself through a Java harness that records every game as a JSON event
 stream; the dashboard shows per-deck win rates, mulligans, land drops, commander timing and the cards that never
 get cast, with card images from Scryfall; Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI
