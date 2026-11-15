@@ -4,14 +4,14 @@
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped (v5: answer rules, the attack left to Forge); among the twelve +13.5 points on its stock pilot, confirmed. The same rules with the go-wide attack won nine tables more on these tables (exact test 0.26, inside noise): left as it is",
+   "status": "shipped (v5: answer rules, the attack left to Forge); on the pool of 2026-11-14 +7.5 points on its stock pilot (34 tables against 19, 95% +1 to +14, exact test 0.032), clear of noise",
    "playbook": "playbook/precons/goblin-storm.json",
    "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment; version 5 leaves the attack to Forge.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/goblin-storm.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/goblin-storm.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 4, the same rules with the go-wide attack, won 56 of the same tables)"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/goblin-storm-v3-seeds-9001-9100.json",
    "stock_tables": {
@@ -25,18 +25,24 @@
     "stock": "stock",
     "bot": "answers",
     "run": "ab-run #21 joined with #20: 200 tables whose three opponents are the other three bots under their playbooks (version 3 of this deck won 30 of the same tables)"
+   },
+   "earlier_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/goblin-storm.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 4, the same rules with the go-wide attack, won 56 of the same tables)"
    }
   },
   {
    "deck": "token-triumph",
-   "status": "shipped (v5, 2026-11-14: version 4 with rules for its answers). On the same 200 tables of bots version 5 won 65 against version 4's 57 (+4.0 points, exact test 0.17) and cast the cards its new rules name in 123 of the 153 games it drew them, version 4 in 75 of 150. The table figures on this row are version 4's against its stock pilot (+11.0 points, confirmed); version 5 has not been set against its stock pilot yet",
+   "status": "shipped (v5, 2026-11-14: version 4 with rules for its answers); on the pool of 2026-11-14 +6.5 points on its stock pilot (58 tables against 45, 95% -1 to +14, exact test 0.11), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 5 won 65 against version 4's 57 (+4.0 points, exact test 0.17) and cast the cards its new rules name in 123 of the 153 games it drew them, version 4 in 75 of 150",
    "playbook": "playbook/precons/token-triumph.json",
    "summary": "Emmara at once with the two auras that let her tap, her token ability every turn, anthems, Overrun only with attackers to pump; version 4 leaves the attack to Forge. Version 5 also casts Hour of Reckoning when it has the tokens to come out ahead, Citywide Bust and Conclave Tribunal when the table has more power than it, and uses Nullmage Shepherd.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/token-triumph.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/token-triumph.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (the same rules with the go-wide attack won 54)"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/token-triumph-seeds-5001-5040.json",
    "stock_tables": {
@@ -56,18 +62,24 @@
     "stock": "shipped",
     "bot": "answers2",
     "run": "ab-run #35 (seed 20261300): the shipped version 4 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/token-triumph.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (the same rules with the go-wide attack won 54)"
    }
   },
   {
    "deck": "hail-caesar",
-   "status": "shipped (v6, 2026-11-13: the answer rules with the go-wide attack put back); on tables of its own +12.0 points on its stock pilot (54 tables against 30, 95% +4 to +20, exact test 0.0032), confirmed. The attack was chosen on other tables of the same pool, where these rules won 66 with go-wide and 45 with the attack left to Forge (exact test 0.0046)",
+   "status": "shipped (v6, 2026-11-13: the answer rules with the go-wide attack put back); on the pool of 2026-11-14 +15.5 points on its stock pilot (59 tables against 28, 95% +9 to +22, exact test under 0.0001), clear of noise. On tables of its own on the pool before: +12.0 points on its stock pilot (54 tables against 30, 95% +4 to +20, exact test 0.0032), confirmed",
    "playbook": "playbook/precons/hail-caesar.json",
    "summary": "Cast rules plus one trigger rule: Caesar's attack trigger is taken whenever there is a token to give up (Forge's AI declines it four times in five); version 4 also casts its board wipes (Ruinous Ultimatum, Martial Coup, Vault 75, Hour of Reckoning, The Nipton Lottery) when the table calls for them; version 5 left the attack to Forge and version 6 attacks go-wide again.",
    "tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/hail-caesar.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/hail-caesar.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #27, the run of version 6 on tables of its own (seed 20261270): 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/hail-caesar-shipped-seeds-6001-6040.json",
    "stock_tables": {
@@ -87,19 +99,25 @@
     "stock": "stock",
     "bot": "gowide",
     "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots; the go-wide arm, chosen on these tables over the same rules with Forge's attack (45 wins)"
+   },
+   "earlier_tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v17/hail-caesar.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #27, the run of version 6 on tables of its own (seed 20261270): 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
    }
   },
   {
    "deck": "tricky-terrain",
-   "status": "shipped (v8, 2026-11-13: the answer rules with the go-wide attack put back); on tables of its own +7.0 points on its stock pilot (48 tables against 34, 95% -0 to +14, exact test 0.081), ahead, not clear of noise. The attack was chosen on other tables of the same pool, where these rules won 58 with go-wide and 40 with the attack left to Forge (exact test 0.027)",
+   "status": "shipped (v8, 2026-11-13: the answer rules with the go-wide attack put back); on the pool of 2026-11-14 +7.0 points on its stock pilot (47 tables against 33, 95% -0 to +14, exact test 0.087), ahead, not clear of noise. On tables of its own on the pool before: +7.0 points on its stock pilot (48 tables against 34, 95% -0 to +14, exact test 0.081), ahead, not clear of noise",
    "playbook": "playbook/precons/tricky-terrain.json",
    "summary": "Omo at once, landfall payoffs before the land, the big creatures on curve, X spells as mana sinks, Thespian's Stage on Dark Depths; version 6 also plays Oblivion Stone and Propaganda early and uses the Stone and Evacuation against a wide board; version 7 left the attack to Forge and version 8 attacks go-wide again.",
    "goldfish": "demo-data/goldfish/2026-11-11/tricky-terrain-shipped-seeds-8001-8040.json",
    "tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/tricky-terrain.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/tricky-terrain.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #27, the run of version 8 on tables of its own (seed 20261270): 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "stock_tables": {
     "file": "demo-data/ab/2026-11-11-ab-v8/tricky-terrain.json",
@@ -118,18 +136,24 @@
     "stock": "stock",
     "bot": "gowide",
     "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots; the go-wide arm, chosen on these tables over the same rules with Forge's attack (40 wins)"
+   },
+   "earlier_tables": {
+    "file": "demo-data/ab/2026-11-14-ab-v17/tricky-terrain.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #27, the run of version 8 on tables of its own (seed 20261270): 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
    }
   },
   {
    "deck": "deep-clue-sea",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 71 against version 1's 67 (+2.0 points, exact test 0.57) and cast the cards its new rules name in 97 of the 161 games it drew them, version 1 in 4 of 157. The table figures on this row are version 1's against its stock pilot (among the twelve +8.0 points, exact test 0.08); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +7.5 points on its stock pilot (57 tables against 42, 95% -0 to +15, exact test 0.077), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 71 against version 1's 67 (+2.0 points, exact test 0.57) and cast the cards its new rules name in 97 of the 161 games it drew them, version 1 in 4 of 157",
    "playbook": "playbook/precons/deep-clue-sea.json",
    "summary": "Morska out on turn 4, one Clue cracked a turn for her second-card trigger, Selvala and Idol of Oblivion tapped, Mechanized Production on a Clue, Farewell held unless behind; the attack is Forge's. Version 2 also casts its three wipes (Organic Extinction, Fumigate, Farewell) when the opposing board is wide or the seat is about to die, and Aerial Extortionist ahead of a recast of Morska.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/deep-clue-sea.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/deep-clue-sea.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/deep-clue-sea-seeds-3201-3240.json",
    "pool_of_four_tables": {
@@ -143,18 +167,24 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #33 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/deep-clue-sea.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
    }
   },
   {
    "deck": "planeswalker-party",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 52 against version 1's 42 (+5.0 points, exact test 0.13) and cast the cards its new rules name in 446 of the 544 games it drew them, version 1 in 247 of 490. The table figures on this row are version 1's against its stock pilot (level with it, 44 tables each); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +11.5 points on its stock pilot (65 tables against 42, 95% +3 to +20, exact test 0.011), clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 52 against version 1's 42 (+5.0 points, exact test 0.13) and cast the cards its new rules name in 446 of the 544 games it drew them, version 1 in 247 of 490",
    "playbook": "playbook/precons/planeswalker-party.json",
    "summary": "Commodore Guff on turn 4, the planeswalkers in a fixed order, three loyalty abilities by rule, the cards Forge never casts; the attack is Forge's, which keeps creatures home for the planeswalkers. Version 2 also casts its wipes against a stronger board (Urza's Ruinous Blast, Blasphemous Act, Nevinyrral's Disk and its activation, the sweeping loyalty abilities of Chandra and Elspeth) and the cards that keep attackers off its planeswalkers (Norn's Annex, Silent Arbiter, Promise of Loyalty, Onakke Oathkeeper).",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/planeswalker-party.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/planeswalker-party.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-11/planeswalker-party-forge-attack-seeds-2701-2740.json",
    "pool_of_four_tables": {
@@ -168,18 +198,24 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #32 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/planeswalker-party.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
    }
   },
   {
    "deck": "limit-break",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 51 against version 1's 44 (+3.5 points, exact test 0.30) and cast the cards its new rules name in 185 of the 284 games it drew them, version 1 in 72 of 275. The table figures on this row are version 1's against its stock pilot (+2.5 points, a lean); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +4.0 points on its stock pilot (37 tables against 29, 95% -3 to +11, exact test 0.31), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 51 against version 1's 44 (+3.5 points, exact test 0.30) and cast the cards its new rules name in 185 of the 284 games it drew them, version 1 in 72 of 275",
    "playbook": "playbook/precons/limit-break.json",
    "summary": "Cloud at once, the big equipment before him so his trigger has something to attach, every equip aimed at Cloud and never paid twice; the attack is Forge's. Version 2 also casts its wipes when it is behind on the board (Vanquish the Horde, Ultimate Magic: Meteor and Holy), Decimate, Summon: Kujata and Yuffie; Meteor and Yuffie are cards Forge's AI never casts.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/limit-break.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/limit-break.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-12/limit-break-fix-seeds-12201-12240.json",
    "pool_of_four_tables": {
@@ -193,18 +229,24 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #33 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/limit-break.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
    }
   },
   {
    "deck": "elven-council",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 32 against version 1's 34 (-1.0 points, exact test 0.82) and cast the cards its new rules name in 163 of the 186 games it drew them, version 1 in 70 of 189. The table figures on this row are version 1's against its stock pilot (+4.5 points, a lean); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +2.5 points on its stock pilot (28 tables against 23, 95% -4 to +9, exact test 0.52), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 32 against version 1's 34 (-1.0 points, exact test 0.82) and cast the cards its new rules name in 163 of the 186 games it drew them, version 1 in 70 of 189",
    "playbook": "playbook/precons/elven-council.json",
    "summary": "The ramp cast, Galadriel at once, the payoffs ahead of the five-drops, Elvish Piper used, Genesis Wave and Haldir with all the mana; votes, the instants and the attack are Forge's. Version 2 also casts Devastation Tide when it is behind a wide board, Raise the Palisade when it holds the Elves, and Beast Within, which Forge's AI never casts.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/elven-council.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/elven-council.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-12/elven-council-seeds-13101-13140.json",
    "pool_of_four_tables": {
@@ -218,19 +260,25 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #32 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/elven-council.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
    }
   },
   {
    "deck": "quick-draw",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 58 against version 1's 59 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 155 of the 211 games it drew them, version 1 in 69 of 209. The table figures on this row are version 1's against its stock pilot (+8.0 points, exact test 0.05); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +3.5 points on its stock pilot (42 tables against 35, 95% -4 to +11, exact test 0.43), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 58 against version 1's 59 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 155 of the 211 games it drew them, version 1 in 69 of 209",
    "playbook": "playbook/precons/quick-draw.json",
    "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts. Version 2 also casts Volcanic Torrent against a board, Baral's Expertise when it is about to die, Propaganda, and Curse of the Swine, which Forge's AI never casts.",
    "goldfish": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/quick-draw.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/quick-draw.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (the same rules with the go-wide attack won 43)"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "pool_of_four_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v14/quick-draw-spells.json",
@@ -243,18 +291,24 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #31 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/quick-draw.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (the same rules with the go-wide attack won 43)"
    }
   },
   {
    "deck": "wretched-ranks",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 38 against version 1's 27 (+5.5 points, exact test 0.061) and cast the cards its new rules name in 190 of the 247 games it drew them, version 1 in 61 of 248. The table figures on this row are version 1's against its stock pilot (level with it, 34 tables against 39); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 -0.5 points on its stock pilot (29 tables against 30, 95% -7 to +6, exact test 1.0), level. Beside the version before it on the same tables of the earlier pool, version 2 won 38 against version 1's 27 (+5.5 points, exact test 0.061) and cast the cards its new rules name in 190 of the 247 games it drew them, version 1 in 61 of 248",
    "playbook": "playbook/precons/wretched-ranks.json",
    "summary": "Casts the commander Forge never casts, Ghoulcaller Gisa, and uses her every turn ahead of the lords; the lords' abilities, Cryptbreaker, the draw spells with a library guard; God-Eternal Bontu held; the attack is Forge's. Version 2 also casts Noxious Ghoul, Necrotic Hex, Mutilate, Syphon Flesh and Fleshbag Marauder once there are creatures to answer.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/wretched-ranks.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/wretched-ranks.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-12/wretched-ranks-seeds-11101-11140.json",
    "pool_of_four_tables": {
@@ -268,18 +322,24 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #32 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/wretched-ranks.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
    }
   },
   {
    "deck": "eldrazi-incursion",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 63 against version 1's 64 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 116 of the 138 games it drew them, version 1 in 43 of 133. The table figures on this row are version 1's against its stock pilot (level with it, 46 tables against 48); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +12.5 points on its stock pilot (59 tables against 34, 95% +5 to +20, exact test 0.0026), clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 63 against version 1's 64 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 116 of the 138 games it drew them, version 1 in 43 of 133",
    "playbook": "playbook/precons/eldrazi-incursion.json",
    "summary": "Pays for Ulalek's copy trigger, which Forge never does, while ten mana or less is available; Ulalek ahead of the rocks; Eldrazi Monument held for a board of tokens; the attack is Forge's. Open defect: a chain of copies can deck the seat. Version 2 also casts All Is Dust, Kozilek's Return and Selective Obliteration (which Forge's AI never casts) against a board of creatures.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/eldrazi-incursion.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/eldrazi-incursion.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-12/eldrazi-incursion-seeds-15101-15140.json",
    "pool_of_four_tables": {
@@ -293,18 +353,24 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #31 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/eldrazi-incursion.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
    }
   },
   {
    "deck": "enduring-enchantments",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers). On the same 200 tables of bots version 2 won 63 against version 1's 52 (+5.5 points, exact test 0.16) and cast the cards its new rules name in 415 of the 535 games it drew them, version 1 in 164 of 498. The table figures on this row are version 1's against its stock pilot (+11.0 points, confirmed); version 2 has not been set against its stock pilot yet",
+   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +6.5 points on its stock pilot (58 tables against 45, 95% -2 to +15, exact test 0.17), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 63 against version 1's 52 (+5.5 points, exact test 0.16) and cast the cards its new rules name in 415 of the 535 games it drew them, version 1 in 164 of 498",
    "playbook": "playbook/precons/enduring-enchantments.json",
    "summary": "Casts the commander Forge never casts, Anikthea, lays the enchantress engine in order, uses the land searches and holds every enchantment once the library is under 25 cards; the attack is Forge's. Version 2 also casts its wipes when it is outnumbered (Extinguish All Hope, Cacophony Unleashed, Culling Ritual) and its removal and Calix once there is something to aim at.",
    "tables": {
-    "file": "demo-data/ab/2026-11-12-ab-v16/enduring-enchantments.json",
+    "file": "demo-data/ab/2026-11-15-ab-v19/enduring-enchantments.json",
     "stock": "stock",
     "bot": "playbook",
-    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
+    "run": "ab-run #40 (seed 20261320): 200 tables whose three opponents are drawn from the other eleven bots under their shipped playbooks of 2026-11-14, every one of them with answer rules; these tables chose nothing"
    },
    "goldfish": "demo-data/goldfish/2026-11-12/enduring-enchantments-seeds-16101-16140.json",
    "pool_of_four_tables": {
@@ -318,137 +384,203 @@
     "stock": "shipped",
     "bot": "answers",
     "run": "ab-run #31 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+   },
+   "previous_version_tables": {
+    "file": "demo-data/ab/2026-11-12-ab-v16/enduring-enchantments.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook"
    }
   },
   {
    "deck": "blood-rites",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +12.5 points on its stock pilot (91 tables against 66, 95% +4 to +21, exact test 0.0046), clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +1.5 points on its stock pilot (75 tables against 72, 95% -7 to +10, exact test 0.83), ahead, not clear of noise. The exam it shipped on, at tables of the pool of twelve: +12.5 points on its stock pilot (91 tables against 66, 95% +4 to +21, exact test 0.0046), clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack",
    "playbook": "playbook/precons/blood-rites.json",
    "summary": "Clavileño at once, anthems and engines in order, March of the Canonized with X; Olivia's Wrath once it has three Vampires (it spares them), Austere Command and Damn through Forge's own judgement when it is behind, Patron of the Vein on a target.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/blood-rites.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/blood-rites-answers-forgeattack-seeds-26101-26140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/blood-rites-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/blood-rites-answers-forgeattack-seeds-26101-26140.json"
+   }
   },
   {
    "deck": "revenant-recon",
-   "status": "shipped (v4, 2026-11-14; the attack left to Forge); at tables of bots +5.0 points on its stock pilot (70 tables against 60, 95% -4 to +14, exact test 0.31), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 59 with the go-wide attack",
+   "status": "shipped (v4, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, -8.0 points on its stock pilot (48 tables against 64, 95% -17 to +1, exact test 0.093), behind, inside noise: it stays by the rule fixed before the round and is first into the next pass. The exam it shipped on, at tables of the pool of twelve: +5.0 points on its stock pilot (70 tables against 60, 95% -4 to +14, exact test 0.31), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 59 with the go-wide attack",
    "playbook": "playbook/precons/revenant-recon.json",
    "summary": "Mirko at once and the surveil engine, the paid copy Forge's AI declines; Black Sun's Zenith (never cast by Forge's AI) when it is behind a wide board, Massacre Wurm against four creatures, the removal creatures after the engine and the cheap creatures after Forge's own choice.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/revenant-recon.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/revenant-recon-answers-forgeattack-seeds-25101-25140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/revenant-recon-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (59 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/revenant-recon-answers-forgeattack-seeds-25101-25140.json"
+   }
   },
   {
    "deck": "deadly-disguise",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +4.5 points on its stock pilot (29 tables against 20, 95% -2 to +11, exact test 0.21), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 22 with the go-wide attack",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, -1.0 points on its stock pilot (18 tables against 20, 95% -6 to +4, exact test 0.86), level. The exam it shipped on, at tables of the pool of twelve: +4.5 points on its stock pilot (29 tables against 20, 95% -2 to +11, exact test 0.21), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 22 with the go-wide attack",
    "playbook": "playbook/precons/deadly-disguise.json",
    "summary": "Kaust by turn 3, the engines and Panoptic Projektor used, and every morph and disguise card left to Forge, which casts them face down; Austere Command when it is behind a wide board.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/deadly-disguise.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/deadly-disguise-answers-forgeattack-seeds-30101-30140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/deadly-disguise-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #37 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (22 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/deadly-disguise-answers-forgeattack-seeds-30101-30140.json"
+   }
   },
   {
    "deck": "miracle-worker",
-   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +0.0 points on its stock pilot (48 tables against 48, 95% -8 to +8, exact test 1.0), level. The attack is the better of two on these tables: the same rules won 43 with the go-wide attack. Forty of the 200 tables of this arm (every fifth table, the first shard of five) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 160 tables Actions played, the arm won 39 against the stock pilot's 42",
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +0.5 points on its stock pilot (52 tables against 51, 95% -8 to +9, exact test 1.0), level. The exam it shipped on, at tables of the pool of twelve: +0.0 points on its stock pilot (48 tables against 48, 95% -8 to +8, exact test 1.0), level. The attack is the better of two on these tables: the same rules won 43 with the go-wide attack. Forty of the 200 tables of this arm (every fifth table, the first shard of five) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 160 tables Actions played, the arm won 39 against the stock pilot's 42",
    "playbook": "playbook/precons/miracle-worker.json",
    "summary": "Aminatou and the enchantment engine in order, the bodies Forge's AI never casts; Time Wipe or Terminus from hand against a lethal threat or a heavy board, Aminatou's Augury ahead of a recast of the commander, Timely Ward on Aminatou.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/miracle-worker.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/miracle-worker-answers-forgeattack-seeds-28101-28140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/miracle-worker-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #39 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (43 wins); forty of the arm's 200 tables were played on the session's machine from the run's commit (the Actions job that had them was lost with its runner)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/miracle-worker-answers-forgeattack-seeds-28101-28140.json"
+   }
   },
   {
    "deck": "blight-curse",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +12.0 points on its stock pilot (69 tables against 45, 95% +4 to +20, exact test 0.0088), clear of noise. The attack is the better of two on these tables: the same rules won 66 with the go-wide attack",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +6.0 points on its stock pilot (53 tables against 41, 95% -2 to +14, exact test 0.19), ahead, not clear of noise. The exam it shipped on, at tables of the pool of twelve: +12.0 points on its stock pilot (69 tables against 45, 95% +4 to +20, exact test 0.0088), clear of noise. The attack is the better of two on these tables: the same rules won 66 with the go-wide attack",
    "playbook": "playbook/precons/blight-curse.json",
    "summary": "Auntie Ool on turn 4 and her engines in order, counters put on its own throwaway creatures for cards, holds on two cards that hurt it; Chain Reaction or Black Sun's Zenith (which Forge's AI never casts) when it is behind a wide board, its removal creatures once there is something to answer, and rules for the removal and the threats its first rules crowded out.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/blight-curse.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/blight-curse-answers-forgeattack-seeds-21101-21140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/blight-curse-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (66 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/blight-curse-answers-forgeattack-seeds-21101-21140.json"
+   }
   },
   {
    "deck": "mutant-menace",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +8.5 points on its stock pilot (68 tables against 51, 95% +1 to +16, exact test 0.050), clear of noise. The attack is the better of two on these tables: the same rules won 55 with the go-wide attack",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +6.0 points on its stock pilot (40 tables against 28, 95% -1 to +13, exact test 0.13), ahead, not clear of noise. The exam it shipped on, at tables of the pool of twelve: +8.5 points on its stock pilot (68 tables against 51, 95% +1 to +16, exact test 0.050), clear of noise. The attack is the better of two on these tables: the same rules won 55 with the go-wide attack",
    "playbook": "playbook/precons/mutant-menace.json",
    "summary": "The Wise Mothman at once and the counter doublers before the creatures; Nuclear Fallout and Find // Finality (neither is ever cast by Forge's AI) against a stronger board, Casualties of War, Alpha Deathclaw and Atomize as soon as there is something to aim at.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/mutant-menace.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/mutant-menace-answers-forgeattack-seeds-23101-23140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/mutant-menace-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (55 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/mutant-menace-answers-forgeattack-seeds-23101-23140.json"
+   }
   },
   {
    "deck": "squirreled-away",
-   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +3.5 points on its stock pilot (56 tables against 49, 95% -4 to +11, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 54 with the go-wide attack",
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +4.5 points on its stock pilot (36 tables against 27, 95% -2 to +11, exact test 0.25), ahead, not clear of noise. The exam it shipped on, at tables of the pool of twelve: +3.5 points on its stock pilot (56 tables against 49, 95% -4 to +11, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 54 with the go-wide attack",
    "playbook": "playbook/precons/squirreled-away.json",
    "summary": "Hazel on turn 4, the token engine in order, Skullclamp and Idol of Oblivion used; Decree of Pain when it is about to die or badly outnumbered, Swarmyard Massacre against three creatures, Casualties of War and Binding the Old Gods on targets.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/squirreled-away.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/squirreled-away-answers-forgeattack-seeds-24101-24140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/squirreled-away-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (54 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/squirreled-away-answers-forgeattack-seeds-24101-24140.json"
+   }
   },
   {
    "deck": "ahoy-mateys",
-   "status": "shipped (v2, 2026-11-14; the go-wide attack); at tables of bots +17.5 points on its stock pilot (72 tables against 37, 95% +9 to +26, exact test 0.0001), clear of noise. The attack is the better of two on these tables: the same rules won 64 with the attack left to Forge",
+   "status": "shipped (v2, 2026-11-14; the go-wide attack); at the owner's table, on tables that chose nothing, +15.5 points on its stock pilot (65 tables against 34, 95% +7 to +24, exact test 0.0004), clear of noise. The exam it shipped on, at tables of the pool of twelve: +17.5 points on its stock pilot (72 tables against 37, 95% +9 to +26, exact test 0.0001), clear of noise. The attack is the better of two on these tables: the same rules won 64 with the attack left to Forge",
    "playbook": "playbook/precons/ahoy-mateys.json",
    "summary": "Admiral Brass on turn 5, the lords, Windfall and Faithless Looting (which Forge's AI never casts); Blood Money and Blasphemous Act when it is about to die or outnumbered, Evacuation held for a lethal threat, the removal Pirates ahead of the filler.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/ahoy-mateys.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/ahoy-mateys-answers-seeds-29101-29140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/ahoy-mateys-join.json",
     "stock": "stock",
     "bot": "gowide",
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the go-wide attack, chosen on these tables over the same rules with the attack left to Forge (64 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/ahoy-mateys-answers-seeds-29101-29140.json"
+   }
   },
   {
    "deck": "death-toll",
-   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at tables of bots +11.0 points on its stock pilot (65 tables against 43, 95% +3 to +19, exact test 0.011), clear of noise. The attack is the better of two on these tables: the same rules won 63 with the go-wide attack",
+   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +11.0 points on its stock pilot (56 tables against 34, 95% +3 to +19, exact test 0.0092), clear of noise. The exam it shipped on, at tables of the pool of twelve: +11.0 points on its stock pilot (65 tables against 43, 95% +3 to +19, exact test 0.011), clear of noise. The attack is the better of two on these tables: the same rules won 63 with the go-wide attack",
    "playbook": "playbook/precons/death-toll.json",
    "summary": "Winter, which Forge's AI never casts, at once, and the mill engine with a guard on the library; Culling Ritual and Deluge of Doom against a wide board or a lethal threat, Binding the Old Gods, Putrefy and the removal creatures after the engine.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/death-toll.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/death-toll-answers-forgeattack-seeds-27101-27140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/death-toll-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (63 wins)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/death-toll-answers-forgeattack-seeds-27101-27140.json"
+   }
   },
   {
    "deck": "veloci-ramp-tor",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at tables of bots +4.0 points on its stock pilot (87 tables against 79, 95% -5 to +13, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack. Twenty of the 200 tables of the stock and go-wide arms (every tenth table, one shard of ten) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 180 tables Actions played, the stock pilot won 69, go-wide 81 and this arm 79",
+   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +0.0 points on its stock pilot (68 tables against 68, 95% -9 to +9, exact test 1.0), level. The exam it shipped on, at tables of the pool of twelve: +4.0 points on its stock pilot (87 tables against 79, 95% -5 to +13, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack. Twenty of the 200 tables of the stock and go-wide arms (every tenth table, one shard of ten) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 180 tables Actions played, the stock pilot won 69, go-wide 81 and this arm 79",
    "playbook": "playbook/precons/veloci-ramp-tor.json",
    "summary": "Pantlaza on turn 5 with the ramp creatures before it and the cards Forge's AI never casts; Wakening Sun's Avatar and Chandra's Ignition against a board of three, Raging Swordtooth against five, and the rest of the removal left to Forge at a place of its own in the order.",
    "tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v20/veloci-ramp-tor.json",
+    "stock": "stock",
+    "bot": "playbook",
+    "run": "ab-run #42 (seed 20261350), the confirming round at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks; these tables chose nothing"
+   },
+   "goldfish": "demo-data/goldfish/2026-11-14/veloci-ramp-tor-answers-forgeattack-seeds-22101-22140.json",
+   "chosen_on_tables": {
     "file": "demo-data/ab/2026-11-14-ab-v18/veloci-ramp-tor-join.json",
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #37 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins); twenty of the 200 tables of the stock arm were played on the session's machine from the run's commit (the Actions job that had them was lost with its runner)"
-   },
-   "goldfish": "demo-data/goldfish/2026-11-14/veloci-ramp-tor-answers-forgeattack-seeds-22101-22140.json"
+   }
   }
  ]
 }
