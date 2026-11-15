@@ -43,6 +43,15 @@ the games it was cast under stock Forge AI and under the playbook, on the same t
   no rule names, the cards named below the `forge` rule and the cards named above it: `docs/agents/named_split.py`) and
   `cast-phase.txt` (each arm's casts before and after its attack: `docs/agents/cast_phase.py`).
 
+- `third-pass/`: the third pass at the owner's table (`ab-run` #43, seed 20261360, playbook arms only; DESIGN.md §33):
+  for each of six decks `<deck>-shipped.json` (the report of the playbook shipped on 2026-11-14), `<deck>-<variant>.json`
+  (the candidate on the same tables: `curve`, `pulse`, `atomize`, `newblood`, `raptor`) and
+  `<deck>-<variant>-card-diff.txt` (what the candidate casts fifteen points less or more often than the shipped
+  playbook). `check.txt` is the card check the candidates were read by: the cards each change was for, under both arms
+  and beside the two arms of `ab-run` #42, and the cards the shipped version cast less than its stock pilot there,
+  summed for all four. Four candidates shipped on 2026-11-15 (Squirreled Away, Mutant Menace, Blood Rites,
+  Veloci-Ramp-Tor); the two `curve` candidates did not.
+
 The reports were made from shard artifacts merged the way the workflow's rollup merges them; the win counts in them
 are those of the published rollups in `demo-data/ab/`. Regenerated on 2026-11-14 05:55 UTC after `runner/playtest.py`
 learnt that a split card is cast under the name of one half (until then Connive // Concoct, Find // Finality, Dusk //

@@ -1,0 +1,1533 @@
+{
+ "kind": "playtest",
+ "deck": "blood-rites",
+ "deck_file": "Blood Rites [LCC] [2023].dck",
+ "deck_file_sha256": null,
+ "arm": "playbook",
+ "pilot": {
+  "playbook": "blood-rites.json",
+  "version": 2,
+  "attack": null
+ },
+ "commanders": [
+  "Clavile\u00f1o, First of the Blessed"
+ ],
+ "table": {
+  "pool": "owners-table-v1",
+  "seats": 4,
+  "seed": 20261360,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 65,
+  "win_rate": 0.325,
+  "win_rate_ci95": [
+   0.2639,
+   0.3927
+  ],
+  "even_share": 0.25,
+  "not_finished": 3,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 19
+   },
+   {
+    "games": 50,
+    "wins": 16
+   },
+   {
+    "games": 50,
+    "wins": 17
+   },
+   {
+    "games": 50,
+    "wins": 13
+   }
+  ],
+  "losses": 132,
+  "out_first": 44,
+  "out_second": 40,
+  "out_third": 48,
+  "loss_reasons": {
+   "LifeReachedZero": 129,
+   "CommanderDamage": 4
+  },
+  "game_turns": 45.4,
+  "own_turns_when_won": 13.6,
+  "own_turns_when_lost": 10.6
+ },
+ "opponents": {
+  "death-toll": {
+   "tables": 70,
+   "focus_wins": 29,
+   "focus_win_rate": 0.414,
+   "its_wins": 12,
+   "its_win_rate": 0.171,
+   "took_it_out": 7
+  },
+  "squirreled-away": {
+   "tables": 74,
+   "focus_wins": 30,
+   "focus_win_rate": 0.405,
+   "its_wins": 11,
+   "its_win_rate": 0.149,
+   "took_it_out": 9
+  },
+  "mutant-menace": {
+   "tables": 64,
+   "focus_wins": 22,
+   "focus_win_rate": 0.344,
+   "its_wins": 17,
+   "its_win_rate": 0.266,
+   "took_it_out": 18
+  },
+  "ahoy-mateys": {
+   "tables": 69,
+   "focus_wins": 23,
+   "focus_win_rate": 0.333,
+   "its_wins": 17,
+   "its_win_rate": 0.246,
+   "took_it_out": 21
+  },
+  "blight-curse": {
+   "tables": 53,
+   "focus_wins": 17,
+   "focus_win_rate": 0.321,
+   "its_wins": 6,
+   "its_win_rate": 0.113,
+   "took_it_out": 3
+  },
+  "miracle-worker": {
+   "tables": 75,
+   "focus_wins": 24,
+   "focus_win_rate": 0.32,
+   "its_wins": 22,
+   "its_win_rate": 0.293,
+   "took_it_out": 16
+  },
+  "deadly-disguise": {
+   "tables": 58,
+   "focus_wins": 18,
+   "focus_win_rate": 0.31,
+   "its_wins": 6,
+   "its_win_rate": 0.103,
+   "took_it_out": 7
+  },
+  "revenant-recon": {
+   "tables": 67,
+   "focus_wins": 18,
+   "focus_win_rate": 0.269,
+   "its_wins": 18,
+   "its_win_rate": 0.269,
+   "took_it_out": 18
+  },
+  "veloci-ramp-tor": {
+   "tables": 70,
+   "focus_wins": 14,
+   "focus_win_rate": 0.2,
+   "its_wins": 23,
+   "its_win_rate": 0.329,
+   "took_it_out": 25
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.29,
+  "lands_at_own_turn": {
+   "4": 2.95,
+   "6": 4.57,
+   "8": 5.85
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.63,
+   "6": 4.37,
+   "8": 3.48
+  },
+  "short_of_four_lands_at_turn_5": 0.25,
+  "commander_first_cast": {
+   "median": 3,
+   "p25": 3,
+   "p75": 4,
+   "never_cast": 0.005,
+   "casts_per_game": 2.7
+  },
+  "spells_per_game": 15.0,
+  "idle_turn_share": 0.045,
+  "damage_dealt_per_game": 42.6,
+  "damage_taken_per_game": 47.9,
+  "commander_damage_dealt_per_game": 4.5,
+  "nonland_cards_in_hand_at_loss": 2.61,
+  "of_them_affordable": 2.29
+ },
+ "cards": {
+  "Blade of the Bloodchief": {
+   "drawn": 44,
+   "played": 42,
+   "played_share": 0.955,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.409,
+   "win_rate_not_drawn": 0.301,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Artifact - Equipment"
+  },
+  "Elenda, the Dusk Rose": {
+   "drawn": 40,
+   "played": 39,
+   "played_share": 0.975,
+   "median_turn": 7,
+   "win_rate_drawn": 0.5,
+   "win_rate_not_drawn": 0.281,
+   "held_at_loss": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Vampire Knight"
+  },
+  "Yahenni, Undying Partisan": {
+   "drawn": 42,
+   "played": 35,
+   "played_share": 0.833,
+   "median_turn": 8,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.323,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Legendary Creature - Aetherborn Vampire"
+  },
+  "Mavren Fein, Dusk Apostle": {
+   "drawn": 52,
+   "played": 49,
+   "played_share": 0.942,
+   "median_turn": 7,
+   "win_rate_drawn": 0.365,
+   "win_rate_not_drawn": 0.311,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Legendary Creature - Vampire Cleric"
+  },
+  "Pact of the Serpent": {
+   "drawn": 37,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.432,
+   "win_rate_not_drawn": 0.301,
+   "held_at_loss": 18,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Swords to Plowshares": {
+   "drawn": 43,
+   "played": 43,
+   "played_share": 1.0,
+   "median_turn": 5,
+   "win_rate_drawn": 0.372,
+   "win_rate_not_drawn": 0.312,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Master of Dark Rites": {
+   "drawn": 60,
+   "played": 57,
+   "played_share": 0.95,
+   "median_turn": 6,
+   "win_rate_drawn": 0.45,
+   "win_rate_not_drawn": 0.271,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Creature - Vampire Cleric"
+  },
+  "March of the Canonized": {
+   "drawn": 50,
+   "played": 28,
+   "played_share": 0.56,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.36,
+   "win_rate_not_drawn": 0.313,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Viscera Seer": {
+   "drawn": 46,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 5,
+   "win_rate_drawn": 0.457,
+   "win_rate_not_drawn": 0.286,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Creature - Vampire Wizard"
+  },
+  "Patron of the Vein": {
+   "drawn": 46,
+   "played": 41,
+   "played_share": 0.891,
+   "median_turn": 9,
+   "win_rate_drawn": 0.326,
+   "win_rate_not_drawn": 0.325,
+   "held_at_loss": 3,
+   "mv": 6,
+   "type": "Creature - Vampire Shaman"
+  },
+  "Glass-Cast Heart": {
+   "drawn": 55,
+   "played": 48,
+   "played_share": 0.873,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.382,
+   "win_rate_not_drawn": 0.303,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Legion Lieutenant": {
+   "drawn": 46,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 6,
+   "win_rate_drawn": 0.413,
+   "win_rate_not_drawn": 0.299,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Creature - Vampire Knight"
+  },
+  "Falkenrath Noble": {
+   "drawn": 42,
+   "played": 31,
+   "played_share": 0.738,
+   "median_turn": 8,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.323,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Creature - Vampire Noble"
+  },
+  "Blood Artist": {
+   "drawn": 47,
+   "played": 44,
+   "played_share": 0.936,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.383,
+   "win_rate_not_drawn": 0.307,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Creature - Vampire"
+  },
+  "Redemption Choir": {
+   "drawn": 46,
+   "played": 35,
+   "played_share": 0.761,
+   "median_turn": 9,
+   "win_rate_drawn": 0.391,
+   "win_rate_not_drawn": 0.305,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Creature - Vampire Cleric"
+  },
+  "Oathsworn Vampire": {
+   "drawn": 52,
+   "played": 45,
+   "played_share": 0.865,
+   "median_turn": 8,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.351,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Creature - Vampire Knight"
+  },
+  "Talisman of Hierarchy": {
+   "drawn": 55,
+   "played": 55,
+   "played_share": 1.0,
+   "median_turn": 5,
+   "win_rate_drawn": 0.4,
+   "win_rate_not_drawn": 0.297,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Charismatic Conqueror": {
+   "drawn": 50,
+   "played": 43,
+   "played_share": 0.86,
+   "median_turn": 7,
+   "win_rate_drawn": 0.48,
+   "win_rate_not_drawn": 0.273,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier"
+  },
+  "Commander's Sphere": {
+   "drawn": 43,
+   "played": 42,
+   "played_share": 0.977,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.488,
+   "win_rate_not_drawn": 0.28,
+   "held_at_loss": 0,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Butcher of Malakir": {
+   "drawn": 48,
+   "played": 33,
+   "played_share": 0.688,
+   "median_turn": 10,
+   "win_rate_drawn": 0.396,
+   "win_rate_not_drawn": 0.303,
+   "held_at_loss": 15,
+   "mv": 7,
+   "type": "Creature - Vampire Warrior"
+  },
+  "Cruel Celebrant": {
+   "drawn": 55,
+   "played": 50,
+   "played_share": 0.909,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.345,
+   "win_rate_not_drawn": 0.317,
+   "held_at_loss": 8,
+   "mv": 2,
+   "type": "Creature - Vampire"
+  },
+  "Martyr of Dusk": {
+   "drawn": 53,
+   "played": 43,
+   "played_share": 0.811,
+   "median_turn": 8,
+   "win_rate_drawn": 0.396,
+   "win_rate_not_drawn": 0.299,
+   "held_at_loss": 7,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier"
+  },
+  "Bartolom\u00e9 del Presidio": {
+   "drawn": 40,
+   "played": 35,
+   "played_share": 0.875,
+   "median_turn": 6,
+   "win_rate_drawn": 0.475,
+   "win_rate_not_drawn": 0.287,
+   "held_at_loss": 7,
+   "mv": 2,
+   "type": "Legendary Creature - Vampire Knight"
+  },
+  "Arcane Signet": {
+   "drawn": 62,
+   "played": 62,
+   "played_share": 1.0,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.371,
+   "win_rate_not_drawn": 0.304,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Cordial Vampire": {
+   "drawn": 49,
+   "played": 44,
+   "played_share": 0.898,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.469,
+   "win_rate_not_drawn": 0.278,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Vampire"
+  },
+  "New Blood": {
+   "drawn": 49,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.388,
+   "win_rate_not_drawn": 0.305,
+   "held_at_loss": 20,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Indulgent Aristocrat": {
+   "drawn": 53,
+   "played": 47,
+   "played_share": 0.887,
+   "median_turn": 7,
+   "win_rate_drawn": 0.396,
+   "win_rate_not_drawn": 0.299,
+   "held_at_loss": 6,
+   "mv": 1,
+   "type": "Creature - Vampire Noble"
+  },
+  "Dusk Legion Sergeant": {
+   "drawn": 48,
+   "played": 41,
+   "played_share": 0.854,
+   "median_turn": 6,
+   "win_rate_drawn": 0.396,
+   "win_rate_not_drawn": 0.303,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier"
+  },
+  "Bloodghast": {
+   "drawn": 42,
+   "played": 25,
+   "played_share": 0.595,
+   "median_turn": 7,
+   "win_rate_drawn": 0.357,
+   "win_rate_not_drawn": 0.316,
+   "held_at_loss": 8,
+   "mv": 2,
+   "type": "Creature - Vampire Spirit"
+  },
+  "Twilight Prophet": {
+   "drawn": 45,
+   "played": 33,
+   "played_share": 0.733,
+   "median_turn": 8,
+   "win_rate_drawn": 0.4,
+   "win_rate_not_drawn": 0.303,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Creature - Vampire Cleric"
+  },
+  "Orzhov Signet": {
+   "drawn": 39,
+   "played": 39,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.41,
+   "win_rate_not_drawn": 0.304,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Village Rites": {
+   "drawn": 53,
+   "played": 39,
+   "played_share": 0.736,
+   "median_turn": 9,
+   "win_rate_drawn": 0.415,
+   "win_rate_not_drawn": 0.293,
+   "held_at_loss": 12,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Vona, Butcher of Magan": {
+   "drawn": 47,
+   "played": 32,
+   "played_share": 0.681,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.447,
+   "win_rate_not_drawn": 0.288,
+   "held_at_loss": 8,
+   "mv": 5,
+   "type": "Legendary Creature - Vampire Knight"
+  },
+  "Wayfarer's Bauble": {
+   "drawn": 46,
+   "played": 42,
+   "played_share": 0.913,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.283,
+   "win_rate_not_drawn": 0.338,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Nighthawk Scavenger": {
+   "drawn": 43,
+   "played": 38,
+   "played_share": 0.884,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.326,
+   "win_rate_not_drawn": 0.325,
+   "held_at_loss": 6,
+   "mv": 3,
+   "type": "Creature - Vampire Rogue"
+  },
+  "Elenda's Hierophant": {
+   "drawn": 40,
+   "played": 37,
+   "played_share": 0.925,
+   "median_turn": 8,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.331,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Creature - Vampire Cleric"
+  },
+  "Drana, Liberator of Malakir": {
+   "drawn": 45,
+   "played": 44,
+   "played_share": 0.978,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.511,
+   "win_rate_not_drawn": 0.271,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Vampire Ally"
+  },
+  "Timothar, Baron of Bats": {
+   "drawn": 52,
+   "played": 41,
+   "played_share": 0.788,
+   "median_turn": 9,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.324,
+   "held_at_loss": 14,
+   "mv": 6,
+   "type": "Legendary Creature - Vampire Noble"
+  },
+  "Welcoming Vampire": {
+   "drawn": 54,
+   "played": 50,
+   "played_share": 0.926,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.352,
+   "win_rate_not_drawn": 0.315,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Creature - Vampire"
+  },
+  "Bloodtracker": {
+   "drawn": 46,
+   "played": 38,
+   "played_share": 0.826,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.391,
+   "win_rate_not_drawn": 0.305,
+   "held_at_loss": 5,
+   "mv": 4,
+   "type": "Creature - Vampire Wizard"
+  },
+  "Mind Stone": {
+   "drawn": 31,
+   "played": 31,
+   "played_share": 1.0,
+   "median_turn": 4,
+   "win_rate_drawn": 0.323,
+   "win_rate_not_drawn": 0.325,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Exquisite Blood": {
+   "drawn": 55,
+   "played": 45,
+   "played_share": 0.818,
+   "median_turn": 8,
+   "win_rate_drawn": 0.491,
+   "win_rate_not_drawn": 0.262,
+   "held_at_loss": 5,
+   "mv": 5,
+   "type": "Enchantment"
+  },
+  "Damn": {
+   "drawn": 48,
+   "played": 45,
+   "played_share": 0.938,
+   "median_turn": 8,
+   "win_rate_drawn": 0.417,
+   "win_rate_not_drawn": 0.296,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Order of Sacred Dusk": {
+   "drawn": 43,
+   "played": 26,
+   "played_share": 0.605,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.442,
+   "win_rate_not_drawn": 0.293,
+   "held_at_loss": 8,
+   "mv": 8,
+   "type": "Creature - Vampire Knight"
+  },
+  "Austere Command": {
+   "drawn": 47,
+   "played": 29,
+   "played_share": 0.617,
+   "median_turn": 10,
+   "win_rate_drawn": 0.447,
+   "win_rate_not_drawn": 0.288,
+   "held_at_loss": 11,
+   "mv": 6,
+   "type": "Sorcery"
+  },
+  "Olivia's Wrath": {
+   "drawn": 47,
+   "played": 33,
+   "played_share": 0.702,
+   "median_turn": 8,
+   "win_rate_drawn": 0.447,
+   "win_rate_not_drawn": 0.288,
+   "held_at_loss": 11,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Promise of Aclazotz": {
+   "drawn": 44,
+   "played": 41,
+   "played_share": 0.932,
+   "median_turn": 6,
+   "win_rate_drawn": 0.386,
+   "win_rate_not_drawn": 0.308,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Return to Dust": {
+   "drawn": 41,
+   "played": 35,
+   "played_share": 0.854,
+   "median_turn": 8,
+   "win_rate_drawn": 0.268,
+   "win_rate_not_drawn": 0.34,
+   "held_at_loss": 4,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Utter End": {
+   "drawn": 44,
+   "played": 43,
+   "played_share": 0.977,
+   "median_turn": 7,
+   "win_rate_drawn": 0.455,
+   "win_rate_not_drawn": 0.288,
+   "held_at_loss": 1,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Sanctum Seeker": {
+   "drawn": 41,
+   "played": 37,
+   "played_share": 0.902,
+   "median_turn": 7,
+   "win_rate_drawn": 0.463,
+   "win_rate_not_drawn": 0.289,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Creature - Vampire Knight"
+  },
+  "Dusk Legion Zealot": {
+   "drawn": 40,
+   "played": 29,
+   "played_share": 0.725,
+   "median_turn": 7,
+   "win_rate_drawn": 0.35,
+   "win_rate_not_drawn": 0.319,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier"
+  },
+  "Carmen, Cruel Skymarcher": {
+   "drawn": 52,
+   "played": 41,
+   "played_share": 0.788,
+   "median_turn": 9,
+   "win_rate_drawn": 0.365,
+   "win_rate_not_drawn": 0.311,
+   "held_at_loss": 10,
+   "mv": 5,
+   "type": "Legendary Creature - Vampire Soldier"
+  },
+  "Swiftfoot Boots": {
+   "drawn": 38,
+   "played": 37,
+   "played_share": 0.974,
+   "median_turn": 5,
+   "win_rate_drawn": 0.158,
+   "win_rate_not_drawn": 0.364,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact - Equipment"
+  },
+  "Heirloom Blade": {
+   "drawn": 41,
+   "played": 36,
+   "played_share": 0.878,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.268,
+   "win_rate_not_drawn": 0.34,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Artifact - Equipment"
+  },
+  "Sol Ring": {
+   "drawn": 45,
+   "played": 45,
+   "played_share": 1.0,
+   "median_turn": 6,
+   "win_rate_drawn": 0.356,
+   "win_rate_not_drawn": 0.316,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Sorin, Lord of Innistrad": {
+   "drawn": 56,
+   "played": 47,
+   "played_share": 0.839,
+   "median_turn": 8,
+   "win_rate_drawn": 0.393,
+   "win_rate_not_drawn": 0.299,
+   "held_at_loss": 7,
+   "mv": 4,
+   "type": "Legendary Planeswalker - Sorin"
+  },
+  "Etchings of the Chosen": {
+   "drawn": 51,
+   "played": 47,
+   "played_share": 0.922,
+   "median_turn": 6,
+   "win_rate_drawn": 0.314,
+   "win_rate_not_drawn": 0.329,
+   "held_at_loss": 4,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Radiant Destiny": {
+   "drawn": 50,
+   "played": 48,
+   "played_share": 0.96,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.333,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Bloodline Necromancer": {
+   "drawn": 45,
+   "played": 26,
+   "played_share": 0.578,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.444,
+   "win_rate_not_drawn": 0.29,
+   "held_at_loss": 15,
+   "mv": 5,
+   "type": "Creature - Vampire Wizard"
+  },
+  "Crossway Troublemakers": {
+   "drawn": 41,
+   "played": 27,
+   "played_share": 0.659,
+   "median_turn": 9,
+   "win_rate_drawn": 0.341,
+   "win_rate_not_drawn": 0.321,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Creature - Vampire"
+  },
+  "Kindred Boon": {
+   "drawn": 41,
+   "played": 34,
+   "played_share": 0.829,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.415,
+   "win_rate_not_drawn": 0.302,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Champion of Dusk": {
+   "drawn": 30,
+   "played": 21,
+   "played_share": 0.7,
+   "median_turn": 10,
+   "win_rate_drawn": 0.333,
+   "win_rate_not_drawn": 0.324,
+   "held_at_loss": 4,
+   "mv": 5,
+   "type": "Creature - Vampire Knight"
+  }
+ },
+ "list": {
+  "Arcane Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Austere Command": {
+   "count": 1,
+   "mv": 6,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Bartolom\u00e9 del Presidio": {
+   "count": 1,
+   "mv": 2,
+   "type": "Legendary Creature - Vampire Knight",
+   "land": false
+  },
+  "Blade of the Bloodchief": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact - Equipment",
+   "land": false
+  },
+  "Blood Artist": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire",
+   "land": false
+  },
+  "Bloodghast": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Spirit",
+   "land": false
+  },
+  "Bloodline Necromancer": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Vampire Wizard",
+   "land": false
+  },
+  "Bloodtracker": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Vampire Wizard",
+   "land": false
+  },
+  "Bojuka Bog": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Butcher of Malakir": {
+   "count": 1,
+   "mv": 7,
+   "type": "Creature - Vampire Warrior",
+   "land": false
+  },
+  "Carmen, Cruel Skymarcher": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Vampire Soldier",
+   "land": false
+  },
+  "Champion of Dusk": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Vampire Knight",
+   "land": false
+  },
+  "Charismatic Conqueror": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier",
+   "land": false
+  },
+  "Command Tower": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Commander's Sphere": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Cordial Vampire": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire",
+   "land": false
+  },
+  "Crossway Troublemakers": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Vampire",
+   "land": false
+  },
+  "Cruel Celebrant": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire",
+   "land": false
+  },
+  "Damn": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Drana, Liberator of Malakir": {
+   "count": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Vampire Ally",
+   "land": false
+  },
+  "Dusk Legion Sergeant": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier",
+   "land": false
+  },
+  "Dusk Legion Zealot": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier",
+   "land": false
+  },
+  "Elenda's Hierophant": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Vampire Cleric",
+   "land": false
+  },
+  "Elenda, the Dusk Rose": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Vampire Knight",
+   "land": false
+  },
+  "Etchings of the Chosen": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Exquisite Blood": {
+   "count": 1,
+   "mv": 5,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Falkenrath Noble": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Vampire Noble",
+   "land": false
+  },
+  "Glass-Cast Heart": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Heirloom Blade": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact - Equipment",
+   "land": false
+  },
+  "Indulgent Aristocrat": {
+   "count": 1,
+   "mv": 1,
+   "type": "Creature - Vampire Noble",
+   "land": false
+  },
+  "Isolated Chapel": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Kindred Boon": {
+   "count": 1,
+   "mv": 4,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Legion Lieutenant": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Knight",
+   "land": false
+  },
+  "March of the Canonized": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Martyr of Dusk": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Soldier",
+   "land": false
+  },
+  "Master of Dark Rites": {
+   "count": 1,
+   "mv": 1,
+   "type": "Creature - Vampire Cleric",
+   "land": false
+  },
+  "Mavren Fein, Dusk Apostle": {
+   "count": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Vampire Cleric",
+   "land": false
+  },
+  "Mind Stone": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Myriad Landscape": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "New Blood": {
+   "count": 1,
+   "mv": 4,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Nighthawk Scavenger": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Vampire Rogue",
+   "land": false
+  },
+  "Oathsworn Vampire": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Knight",
+   "land": false
+  },
+  "Olivia's Wrath": {
+   "count": 1,
+   "mv": 5,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Order of Sacred Dusk": {
+   "count": 1,
+   "mv": 8,
+   "type": "Creature - Vampire Knight",
+   "land": false
+  },
+  "Orzhov Basilica": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Orzhov Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Pact of the Serpent": {
+   "count": 1,
+   "mv": 3,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Path of Ancestry": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Patron of the Vein": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Vampire Shaman",
+   "land": false
+  },
+  "Plains": {
+   "count": 4,
+   "mv": 0,
+   "type": "Basic Land - Plains",
+   "land": true
+  },
+  "Promise of Aclazotz": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Radiant Destiny": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Redemption Choir": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Vampire Cleric",
+   "land": false
+  },
+  "Return to Dust": {
+   "count": 1,
+   "mv": 4,
+   "type": "Instant",
+   "land": false
+  },
+  "Rogue's Passage": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Sanctum Seeker": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Vampire Knight",
+   "land": false
+  },
+  "Secluded Courtyard": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Shineshadow Snarl": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Sol Ring": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact",
+   "land": false
+  },
+  "Sorin, Lord of Innistrad": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Planeswalker - Sorin",
+   "land": false
+  },
+  "Swamp": {
+   "count": 6,
+   "mv": 0,
+   "type": "Basic Land - Swamp",
+   "land": true
+  },
+  "Swiftfoot Boots": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact - Equipment",
+   "land": false
+  },
+  "Swords to Plowshares": {
+   "count": 1,
+   "mv": 1,
+   "type": "Instant",
+   "land": false
+  },
+  "Tainted Field": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Talisman of Hierarchy": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Temple of Silence": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Temple of the False God": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Timothar, Baron of Bats": {
+   "count": 1,
+   "mv": 6,
+   "type": "Legendary Creature - Vampire Noble",
+   "land": false
+  },
+  "Twilight Prophet": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Vampire Cleric",
+   "land": false
+  },
+  "Unclaimed Territory": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Utter End": {
+   "count": 1,
+   "mv": 4,
+   "type": "Instant",
+   "land": false
+  },
+  "Vault of the Archangel": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Village Rites": {
+   "count": 1,
+   "mv": 1,
+   "type": "Instant",
+   "land": false
+  },
+  "Viscera Seer": {
+   "count": 1,
+   "mv": 1,
+   "type": "Creature - Vampire Wizard",
+   "land": false
+  },
+  "Voldaren Estate": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Vona, Butcher of Magan": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Vampire Knight",
+   "land": false
+  },
+  "Wayfarer's Bauble": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact",
+   "land": false
+  },
+  "Welcoming Vampire": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Vampire",
+   "land": false
+  },
+  "Windbrisk Heights": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Yahenni, Undying Partisan": {
+   "count": 1,
+   "mv": 3,
+   "type": "Legendary Creature - Aetherborn Vampire",
+   "land": false
+  }
+ },
+ "outcomes": {
+  "g0001": 1,
+  "g0002": 0,
+  "g0003": 1,
+  "g0004": 0,
+  "g0005": 1,
+  "g0006": 0,
+  "g0007": 1,
+  "g0008": 0,
+  "g0009": 0,
+  "g0010": 0,
+  "g0011": 0,
+  "g0012": 0,
+  "g0013": 0,
+  "g0014": 0,
+  "g0015": 0,
+  "g0016": 1,
+  "g0017": 0,
+  "g0018": 0,
+  "g0019": 1,
+  "g0020": 1,
+  "g0021": 1,
+  "g0022": 0,
+  "g0023": 1,
+  "g0024": 0,
+  "g0025": 0,
+  "g0026": 1,
+  "g0027": 0,
+  "g0028": 0,
+  "g0029": 1,
+  "g0030": 1,
+  "g0031": 0,
+  "g0032": 0,
+  "g0033": 0,
+  "g0034": 0,
+  "g0035": 0,
+  "g0036": 0,
+  "g0037": 0,
+  "g0038": 1,
+  "g0039": 1,
+  "g0040": 1,
+  "g0041": 0,
+  "g0042": 0,
+  "g0043": 0,
+  "g0044": 0,
+  "g0045": 1,
+  "g0046": 1,
+  "g0047": 1,
+  "g0048": 0,
+  "g0049": 0,
+  "g0050": 0,
+  "g0051": 1,
+  "g0052": 0,
+  "g0053": 0,
+  "g0054": 1,
+  "g0055": 0,
+  "g0056": 0,
+  "g0057": 0,
+  "g0058": 0,
+  "g0059": 1,
+  "g0060": 1,
+  "g0061": 1,
+  "g0062": 0,
+  "g0063": 0,
+  "g0064": 0,
+  "g0065": 0,
+  "g0066": 0,
+  "g0067": 1,
+  "g0068": 0,
+  "g0069": 0,
+  "g0070": 1,
+  "g0071": 0,
+  "g0072": 0,
+  "g0073": 1,
+  "g0074": 1,
+  "g0075": 0,
+  "g0076": 0,
+  "g0077": 0,
+  "g0078": 1,
+  "g0079": 0,
+  "g0080": 0,
+  "g0081": 0,
+  "g0082": 0,
+  "g0083": 0,
+  "g0084": 0,
+  "g0085": 0,
+  "g0086": 1,
+  "g0087": 0,
+  "g0088": 1,
+  "g0089": 0,
+  "g0090": 1,
+  "g0091": 0,
+  "g0092": 1,
+  "g0093": 0,
+  "g0094": 0,
+  "g0095": 1,
+  "g0096": 0,
+  "g0097": 0,
+  "g0098": 0,
+  "g0099": 0,
+  "g0100": 0,
+  "g0101": 0,
+  "g0102": 0,
+  "g0103": 0,
+  "g0104": 0,
+  "g0105": 1,
+  "g0106": 1,
+  "g0107": 1,
+  "g0108": 1,
+  "g0109": 1,
+  "g0110": 0,
+  "g0111": 0,
+  "g0112": 1,
+  "g0113": 0,
+  "g0114": 0,
+  "g0115": 0,
+  "g0116": 0,
+  "g0117": 1,
+  "g0118": 0,
+  "g0119": 1,
+  "g0120": 0,
+  "g0121": 0,
+  "g0122": 0,
+  "g0123": 0,
+  "g0124": 0,
+  "g0125": 0,
+  "g0126": 0,
+  "g0127": 0,
+  "g0128": 0,
+  "g0129": 0,
+  "g0130": 0,
+  "g0131": 1,
+  "g0132": 0,
+  "g0133": 1,
+  "g0134": 1,
+  "g0135": 1,
+  "g0136": 1,
+  "g0137": 0,
+  "g0138": 1,
+  "g0139": 0,
+  "g0140": 0,
+  "g0141": 0,
+  "g0142": 0,
+  "g0143": 0,
+  "g0144": 1,
+  "g0145": 1,
+  "g0146": 0,
+  "g0147": 0,
+  "g0148": 1,
+  "g0149": 1,
+  "g0150": 0,
+  "g0151": 1,
+  "g0152": 0,
+  "g0153": 0,
+  "g0154": 0,
+  "g0155": 0,
+  "g0156": 1,
+  "g0157": 0,
+  "g0158": 0,
+  "g0159": 0,
+  "g0160": 0,
+  "g0161": 0,
+  "g0162": 1,
+  "g0163": 0,
+  "g0164": 1,
+  "g0165": 1,
+  "g0166": 1,
+  "g0167": 0,
+  "g0168": 0,
+  "g0169": 1,
+  "g0170": 1,
+  "g0171": 0,
+  "g0172": 0,
+  "g0173": 1,
+  "g0174": 0,
+  "g0175": 0,
+  "g0176": 0,
+  "g0177": 1,
+  "g0178": 0,
+  "g0179": 0,
+  "g0180": 0,
+  "g0181": 0,
+  "g0182": 0,
+  "g0183": 0,
+  "g0184": 0,
+  "g0185": 1,
+  "g0186": 0,
+  "g0187": 0,
+  "g0188": 0,
+  "g0189": 1,
+  "g0190": 0,
+  "g0191": 1,
+  "g0192": 0,
+  "g0193": 0,
+  "g0194": 0,
+  "g0195": 0,
+  "g0196": 0,
+  "g0197": 0,
+  "g0198": 0,
+  "g0199": 1,
+  "g0200": 0
+ }
+}

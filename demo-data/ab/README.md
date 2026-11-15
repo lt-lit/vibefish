@@ -230,3 +230,19 @@ rule (playbook arm only); `<deck>-wait-join.json` the three side by side (kind `
 rule names are cast as often as the stock pilot casts them again (72% of the games drawn against the stock pilot's 70% and the plain
 `forge` rule's 62%), and the cards the rules below the `forge` rule name lose as much (70% against 76%). No shipped playbook takes
 the option on this trial.
+
+`2026-11-15-ab-v22/`: the third pass at the owner's table (DESIGN.md §33; `ab-run` #43, seed 20261360, opponents drawn from the other
+nine decks of `owners-table-v1` under their shipped playbooks of 2026-11-14, harness 0.3.4). `<deck>.json` is the shipped playbook
+(playbook arm only), `<deck>-<variant>.json` the candidate on the same tables, `<deck>-join.json` the two side by side (kind
+`ab-join`; arms `shipped` and the variant's name). Candidate against shipped, wins of 200: Blight Curse `curve` 35 against 35;
+Revenant Recon `curve` 56 against 55 (+0.5 points, 95% -5 to +6, exact test 1.0); Squirreled Away `pulse` 32 against 30 (+1.0, -2 to
++4, 0.75); Mutant Menace `atomize` 43 against 42 (+0.5, -2 to +3, 1.0); Blood Rites `newblood` 68 against 65 (+1.5, -2 to +5, 0.55);
+Veloci-Ramp-Tor `raptor` 76 against 74 (+1.0, -4 to +6, 0.84). Summed 310 against 301 of 1,200 (57 tables only the candidate won
+against 48). The rule fixed before the run asked for two things: level with or ahead of the shipped arm, which all six are, and the
+change doing what it was for (`demo-data/playtest/2026-11-15/third-pass/check.txt`). The four that cast a card neither pilot had
+cast do: Maelstrom Pulse in 49 of the 53 games it was drawn, Atomize in 26 of 30, New Blood in 47 of 49, Marauding Raptor in all 68;
+they shipped on 2026-11-15 as the next version of each deck. The two `curve` candidates do not: the cards their decks cast less
+than their stock pilots are cast 3.3 points more often (Blight Curse) and 0.9 points more often (Revenant Recon) where the rule asked
+for ten; they did not ship. The aimed rules' counters, summed over the three candidates' 200 games each: 122 aimed casts, 101 at the
+opponent that looked most dangerous, 21 at the next one that had something worth aiming at; none fizzled.
+

@@ -394,9 +394,9 @@
   },
   {
    "deck": "blood-rites",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +1.5 points on its stock pilot (75 tables against 72, 95% -7 to +10, exact test 0.83), ahead, not clear of noise. The exam it shipped on, at tables of the pool of twelve: +12.5 points on its stock pilot (91 tables against 66, 95% +4 to +21, exact test 0.0046), clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack",
+   "status": "shipped (v3, 2026-11-15: version 2 with New Blood cast by a rule that aims it; the attack left to Forge). Beside version 2 on the same 200 tables at the owner's table it won 68 tables against 65 (+1.5 points, 95% -2 to +5, exact test 0.55) and cast New Blood in 47 of the 49 games it was drawn, where neither pilot had cast it before (0 of 49 under version 2 on these tables). The comparison with the stock pilot is version 2's: at the owner's table, on tables that chose nothing, +1.5 points on its stock pilot (75 tables against 72, 95% -7 to +10, exact test 0.83), ahead, not clear of noise. The exam version 2 shipped on, at tables of the pool of twelve: +12.5 points on its stock pilot (91 tables against 66, 95% +4 to +21, exact test 0.0046), clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack",
    "playbook": "playbook/precons/blood-rites.json",
-   "summary": "Clavileño at once, anthems and engines in order, March of the Canonized with X; Olivia's Wrath once it has three Vampires (it spares them), Austere Command and Damn through Forge's own judgement when it is behind, Patron of the Vein on a target.",
+   "summary": "Clavileño at once, anthems and engines in order, March of the Canonized with X; Olivia's Wrath once it has three Vampires (it spares them), Austere Command and Damn through Forge's own judgement when it is behind, Patron of the Vein on a target. Version 3 also casts New Blood, which neither pilot ever cast: it takes the best creature worth four or more of the opponent that looks most dangerous.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v20/blood-rites.json",
     "stock": "stock",
@@ -409,6 +409,12 @@
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #38 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins)"
+   },
+   "version_tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v22/blood-rites-join.json",
+    "stock": "shipped",
+    "bot": "newblood",
+    "run": "ab-run #43 (seed 20261360), the third pass at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks of 2026-11-14, played once under the version before and once under this one; playbook arms only"
    }
   },
   {
@@ -489,9 +495,9 @@
   },
   {
    "deck": "mutant-menace",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +6.0 points on its stock pilot (40 tables against 28, 95% -1 to +13, exact test 0.13), ahead, not clear of noise. The exam it shipped on, at tables of the pool of twelve: +8.5 points on its stock pilot (68 tables against 51, 95% +1 to +16, exact test 0.050), clear of noise. The attack is the better of two on these tables: the same rules won 55 with the go-wide attack",
+   "status": "shipped (v3, 2026-11-15: version 2 with Atomize cast by a rule that aims it; the attack left to Forge). Beside version 2 on the same 200 tables at the owner's table it won 43 tables against 42 (+0.5 points, 95% -2 to +3, exact test 1.0) and cast Atomize in 26 of the 30 games it was drawn, where neither pilot had cast it before (0 of 30 under version 2 on these tables). The comparison with the stock pilot is version 2's: at the owner's table, on tables that chose nothing, +6.0 points on its stock pilot (40 tables against 28, 95% -1 to +13, exact test 0.13), ahead, not clear of noise. The exam version 2 shipped on, at tables of the pool of twelve: +8.5 points on its stock pilot (68 tables against 51, 95% +1 to +16, exact test 0.050), clear of noise. The attack is the better of two on these tables: the same rules won 55 with the go-wide attack",
    "playbook": "playbook/precons/mutant-menace.json",
-   "summary": "The Wise Mothman at once and the counter doublers before the creatures; Nuclear Fallout and Find // Finality (neither is ever cast by Forge's AI) against a stronger board, Casualties of War, Alpha Deathclaw and Atomize as soon as there is something to aim at.",
+   "summary": "The Wise Mothman at once and the counter doublers before the creatures; Nuclear Fallout and Find // Finality (neither is ever cast by Forge's AI) against a stronger board, Casualties of War, Alpha Deathclaw and Atomize as soon as there is something to aim at. Version 3 gives Atomize a rule of its own that aims it (the best permanent worth four or more of the opponent that looks most dangerous): left to Forge's aiming it was never cast.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v20/mutant-menace.json",
     "stock": "stock",
@@ -504,13 +510,19 @@
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (55 wins)"
+   },
+   "version_tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v22/mutant-menace-join.json",
+    "stock": "shipped",
+    "bot": "atomize",
+    "run": "ab-run #43 (seed 20261360), the third pass at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks of 2026-11-14, played once under the version before and once under this one; playbook arms only"
    }
   },
   {
    "deck": "squirreled-away",
-   "status": "shipped (v3, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +4.5 points on its stock pilot (36 tables against 27, 95% -2 to +11, exact test 0.25), ahead, not clear of noise. The exam it shipped on, at tables of the pool of twelve: +3.5 points on its stock pilot (56 tables against 49, 95% -4 to +11, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 54 with the go-wide attack",
+   "status": "shipped (v4, 2026-11-15: version 3 with Maelstrom Pulse cast by a rule that aims it; the attack left to Forge). Beside version 3 on the same 200 tables at the owner's table it won 32 tables against 30 (+1.0 points, 95% -2 to +4, exact test 0.75) and cast Maelstrom Pulse in 49 of the 53 games it was drawn, where neither pilot had cast it before (0 of 53 under version 3 on these tables). The comparison with the stock pilot is version 3's: at the owner's table, on tables that chose nothing, +4.5 points on its stock pilot (36 tables against 27, 95% -2 to +11, exact test 0.25), ahead, not clear of noise. The exam version 3 shipped on, at tables of the pool of twelve: +3.5 points on its stock pilot (56 tables against 49, 95% -4 to +11, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 54 with the go-wide attack",
    "playbook": "playbook/precons/squirreled-away.json",
-   "summary": "Hazel on turn 4, the token engine in order, Skullclamp and Idol of Oblivion used; Decree of Pain when it is about to die or badly outnumbered, Swarmyard Massacre against three creatures, Casualties of War and Binding the Old Gods on targets.",
+   "summary": "Hazel on turn 4, the token engine in order, Skullclamp and Idol of Oblivion used; Decree of Pain when it is about to die or badly outnumbered, Swarmyard Massacre against three creatures, Casualties of War and Binding the Old Gods on targets. Version 4 also casts Maelstrom Pulse, which neither pilot ever cast: at the best permanent worth four or more of the opponent that looks most dangerous.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v20/squirreled-away.json",
     "stock": "stock",
@@ -523,6 +535,12 @@
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (54 wins)"
+   },
+   "version_tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v22/squirreled-away-join.json",
+    "stock": "shipped",
+    "bot": "pulse",
+    "run": "ab-run #43 (seed 20261360), the third pass at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks of 2026-11-14, played once under the version before and once under this one; playbook arms only"
    }
   },
   {
@@ -565,9 +583,9 @@
   },
   {
    "deck": "veloci-ramp-tor",
-   "status": "shipped (v2, 2026-11-14; the attack left to Forge); at the owner's table, on tables that chose nothing, +0.0 points on its stock pilot (68 tables against 68, 95% -9 to +9, exact test 1.0), level. The exam it shipped on, at tables of the pool of twelve: +4.0 points on its stock pilot (87 tables against 79, 95% -5 to +13, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack. Twenty of the 200 tables of the stock and go-wide arms (every tenth table, one shard of ten) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 180 tables Actions played, the stock pilot won 69, go-wide 81 and this arm 79",
+   "status": "shipped (v3, 2026-11-15: version 2 with Marauding Raptor cast by a rule; the attack left to Forge). Beside version 2 on the same 200 tables at the owner's table it won 76 tables against 74 (+1.0 points, 95% -4 to +6, exact test 0.84) and cast Marauding Raptor in all 68 games it was drawn, where neither pilot had cast it before (0 of 65 under version 2 on these tables). The comparison with the stock pilot is version 2's: at the owner's table, on tables that chose nothing, +0.0 points on its stock pilot (68 tables against 68, 95% -9 to +9, exact test 1.0), level. The exam version 2 shipped on, at tables of the pool of twelve: +4.0 points on its stock pilot (87 tables against 79, 95% -5 to +13, exact test 0.44), ahead, not clear of noise. The attack is the better of two on these tables: the same rules won 86 with the go-wide attack. Twenty of the 200 tables of the stock and go-wide arms (every tenth table, one shard of ten) were played on the session's machine from the run's commit, because the Actions job that had them was lost with its runner; on the 180 tables Actions played, the stock pilot won 69, go-wide 81 and this arm 79",
    "playbook": "playbook/precons/veloci-ramp-tor.json",
-   "summary": "Pantlaza on turn 5 with the ramp creatures before it and the cards Forge's AI never casts; Wakening Sun's Avatar and Chandra's Ignition against a board of three, Raging Swordtooth against five, and the rest of the removal left to Forge at a place of its own in the order.",
+   "summary": "Pantlaza on turn 5 with the ramp creatures before it and the cards Forge's AI never casts; Wakening Sun's Avatar and Chandra's Ignition against a board of three, Raging Swordtooth against five, and the rest of the removal left to Forge at a place of its own in the order. Version 3 also casts Marauding Raptor from its third turn (Forge's AI is told never to play it) and keeps Ixalli's Lorekeeper and Otepec Huntmaster, which it would kill as they enter, for when it is not out.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v20/veloci-ramp-tor.json",
     "stock": "stock",
@@ -580,6 +598,12 @@
     "stock": "stock",
     "bot": "forgeattack",
     "run": "ab-run #37 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (86 wins); twenty of the 200 tables of the stock arm were played on the session's machine from the run's commit (the Actions job that had them was lost with its runner)"
+   },
+   "version_tables": {
+    "file": "demo-data/ab/2026-11-15-ab-v22/veloci-ramp-tor-join.json",
+    "stock": "shipped",
+    "bot": "raptor",
+    "run": "ab-run #43 (seed 20261360), the third pass at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their shipped playbooks of 2026-11-14, played once under the version before and once under this one; playbook arms only"
    }
   }
  ]
