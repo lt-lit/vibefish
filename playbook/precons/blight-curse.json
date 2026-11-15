@@ -63,7 +63,7 @@
  },
  "curated": {},
  "playbook": {
-  "version": 2,
+  "version": 3,
   "cast": {
    "rules": [
     {
@@ -166,19 +166,6 @@
     },
     {
      "play": [
-      "Hapatra, Vizier of Poisons",
-      "Lasting Tarfire",
-      "Sinister Gnarlbark",
-      "Grave Venerations",
-      "Chimil, the Inner Sun",
-      "Vraska, Betrayal's Sting",
-      "Evolution Sage",
-      "Oft-Nabbed Goat",
-      "Puca's Covenant"
-     ]
-    },
-    {
-     "play": [
       "Binding the Old Gods",
       "Incremental Blight"
      ]
@@ -189,6 +176,43 @@
      ],
      "when": [
       "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Grave Titan",
+      "Liliana, Death Wielder",
+      "Ferrafor, Young Yew",
+      "Grim Poppet",
+      "Aberrant Return",
+      "Midnight Banshee",
+      "Carnifex Demon",
+      "Archfiend of Ifnir",
+      "Puppeteer Clique",
+      "Kulrath Knight",
+      "The Scorpion God",
+      "Village Pillagers",
+      "Massacre Girl, Known Killer",
+      "Tree of Perdition",
+      "Wickerbough Elder",
+      "The Reaper, King No More",
+      "Glissa Sunslayer",
+      "Dusk Urchins",
+      "Necroskitter",
+      "Dread Tiller"
+     ]
+    },
+    {
+     "play": [
+      "Hapatra, Vizier of Poisons",
+      "Lasting Tarfire",
+      "Sinister Gnarlbark",
+      "Grave Venerations",
+      "Chimil, the Inner Sun",
+      "Vraska, Betrayal's Sting",
+      "Evolution Sage",
+      "Oft-Nabbed Goat",
+      "Puca's Covenant"
      ]
     },
     {
@@ -249,33 +273,6 @@
     },
     {
      "play": [
-      "Grave Titan",
-      "Liliana, Death Wielder",
-      "Ferrafor, Young Yew",
-      "Grim Poppet",
-      "Aberrant Return",
-      "Midnight Banshee",
-      "Carnifex Demon",
-      "Archfiend of Ifnir",
-      "Puppeteer Clique",
-      "Kulrath Knight",
-      "The Scorpion God",
-      "Village Pillagers",
-      "Massacre Girl, Known Killer",
-      "Tree of Perdition",
-      "Wickerbough Elder",
-      "The Reaper, King No More",
-      "Glissa Sunslayer",
-      "Dusk Urchins",
-      "Necroskitter",
-      "Dread Tiller"
-     ],
-     "when": [
-      "opp_power > power"
-     ]
-    },
-    {
-     "play": [
       "Painful Truths",
       "Harmonize",
       "Night's Whisper",
@@ -303,30 +300,6 @@
      "when": [
       "library >= 30",
       "hand >= 4"
-     ]
-    },
-    {
-     "play": [
-      "Grave Titan",
-      "Liliana, Death Wielder",
-      "Ferrafor, Young Yew",
-      "Grim Poppet",
-      "Aberrant Return",
-      "Midnight Banshee",
-      "Carnifex Demon",
-      "Archfiend of Ifnir",
-      "Puppeteer Clique",
-      "Kulrath Knight",
-      "The Scorpion God",
-      "Village Pillagers",
-      "Massacre Girl, Known Killer",
-      "Tree of Perdition",
-      "Wickerbough Elder",
-      "The Reaper, King No More",
-      "Glissa Sunslayer",
-      "Dusk Urchins",
-      "Necroskitter",
-      "Dread Tiller"
      ]
     },
     {
@@ -388,7 +361,7 @@
     ]
    }
   ],
-  "notes": "Version 2 = the wretch candidate (version 1: its attack and both trigger rules unchanged) with eleven rules added and the base's nineteen cast rules kept in their relative order (base rules 1-5 are rules 1-3, 6, 7; base 6 is 12; base 7-12 are 16-21; base 13 is 23; base 14 is 25; base 15 is 26 with five cards added; base 16-19 are 27-30). Written from the 200 tables of ab-run #27 (seed 20261260, pool bots-v2 under their playbooks), where the candidate won 41 and the stock pilot of the same deck 46. WHAT WAS WRONG. A play or activate rule with something to do always goes before a card no rule names, so under version 1 the cards it did not name were starved: Incremental Blight cast in 10 of 54 games drawn (stock 49 of 56), Aberrant Return 16/62 (51/66), Liliana 8/56 (34/53), Binding the Old Gods 8/42 (30/44), Puppeteer Clique 24/60 (46/52), Chain Reaction 14/59 (41/67), Midnight Banshee 18/61 (36/54); the seat lost holding 4.9 nonland cards. Black Sun's Zenith and Fire Covenant (AI:RemoveDeck:All) were never cast by either pilot and were in hand at 38 and 42 of the candidate's losses, Soul Snuffers (cast 2 of 64) at 37. On the seat's last own turn of a loss the median board was 2-3 creatures of ours against 10-11 for the widest opponent, at 10-15 life. THE CONDITION FOR A WIPE THAT HITS US TOO: the widest opponent has six or more creatures and more power than we have, and we have three creatures or fewer: by the logs' creature counts it held on one of the last three own turns in 113 of 159 losses and 10 of 41 wins (first true on own turn 7, median); or that opponent has more creatures than we have and could kill us next turn. RULES 4-5, Chain Reaction (X = every creature on the battlefield, so at six or more opposing creatures it kills nearly all of them) and else Black Sun's Zenith for all the mana (x max, at least 3), on those conditions, above the commander: Auntie would die to them, so she is cast after. RULE 8, the wipes that spare most of our side, once an opponent has four creatures: Village Pillagers (1 wither damage to each opposing creature: with Auntie each is also a life lost), Soul Snuffers (a counter on every creature: our side draws a card each through Auntie, the other side's x/1s die and each opposing creature costs its controller a life), Midnight Banshee (a counter on each nonblack creature every upkeep; Auntie is black). Below the commander so turn 4 stays Auntie's. RULE 9, Carnifex Demon's {B} ability (a counter on every other creature), never used by either pilot, with Auntie out and an opponent wider than us with four or more. RULES 10-11, Liliana's -3 (destroy a creature with a -1/-1 counter: Forge picks it) and else her +2, since an unnamed planeswalker ability is also starved. RULE 13, Binding the Old Gods (chapter I destroys an opponent's nonland permanent) and Incremental Blight: Forge's own logic aims the Blight, so the rule casts them when Forge agrees; after the engines (rule 12). RULE 14, Skinrender while an opponent has a creature. RULE 15, Blowfly Infestation once an opponent has three creatures (the base's hold, released at two, stays). RULE 22, the threats before the draw spells while an opponent has more power than we have: the base drew while being attacked to death (hand of six on turn 8). RULE 24, Eventide's Shadow as a draw spell only with 40 cards left, 25 life and three cards or fewer in hand (it costs a life a counter; the base's hold stays). RULE 26, the base's threats with Liliana, Ferrafor, Aberrant Return, Midnight Banshee and Puppeteer Clique added: none of them was named by a rule. Not written: Fire Covenant (its X is paid in life, which a rule cannot set, and Forge's logic declined it every time it was offered in the local tables: 0 casts in 4 games drawn, so it was taken out of rule 13);  Vraska's -2 (Forge's targets; the base's +0 rule still takes her every turn), the instants (Infernal Grasp, Putrefy, Terminate, Assassin's Trophy, Cathartic Pyre are cast by Forge on other players' turns in 92-98% of games already). LOCAL CHECK (16 tables of bots, seeds 20263110 and 20263111, 8 each; the second on this file exactly, the first with Fire Covenant still in rule 13 and Carnifex's rule narrowed by an ability text): drawn/cast Black Sun's Zenith 5/5, Soul Snuffers 8/8, Midnight Banshee 8/6, Skinrender 9/8, Incremental Blight 8/6 (Forge aimed all three counters at opposing creatures each time), Village Pillagers 5/4, Chain Reaction 3/1, Binding the Old Gods 4/2, Aberrant Return 4/2, Carnifex Demon 8/4 (its ability fired twice, by rule 9, in the second run), Liliana 4/0 (seven mana, never affordable with her in hand), Eventide's Shadow 6/0, Fire Covenant 6/0. Chain Reaction killed 17 creatures in its one cast; Black Sun's Zenith 15 in one of a game the seat won. The seat won 6 of 16: too few games to mean anything. Shipped as version 2 on 2026-11-14 from ab-run #36: at 200 tables of bots (seed 20261310, opponents drawn from bots-v2 under their playbooks of 2026-11-13) 69 wins against its stock pilot's 45 (+12.0 points, 95% +4 to +20, exact test 0.0088) with the attack left to Forge, the better of the two attacks on these tables (the same rules won 66 with the go-wide attack). What it casts in a share of games 15 points or more below its stock pilot on the same tables, 16 cards: Eventide's Shadow (11 of 68 games drawn against 42 of 60), The Scorpion God (33 of 68 games drawn against 52 of 56), Carnifex Demon (29 of 64 games drawn against 41 of 50), Burning Curiosity (42 of 64 games drawn against 46 of 47), Hoarder's Greed (40 of 63 games drawn against 53 of 56), Wickerbough Elder (28 of 57 games drawn against 39 of 51), Archfiend of Ifnir (36 of 68 games drawn against 49 of 63), Dread Tiller (33 of 54 games drawn against 53 of 62) and 8 more. It casts 20 cards that much more often (demo-data/playtest/2026-11-14/second-pass/blight-curse-forgeattack-card-diff.txt).",
-  "on": "2026-11-14"
+  "notes": "Version 2 = the wretch candidate (version 1: its attack and both trigger rules unchanged) with eleven rules added and the base's nineteen cast rules kept in their relative order (base rules 1-5 are rules 1-3, 6, 7; base 6 is 12; base 7-12 are 16-21; base 13 is 23; base 14 is 25; base 15 is 26 with five cards added; base 16-19 are 27-30). Written from the 200 tables of ab-run #27 (seed 20261260, pool bots-v2 under their playbooks), where the candidate won 41 and the stock pilot of the same deck 46. WHAT WAS WRONG. A play or activate rule with something to do always goes before a card no rule names, so under version 1 the cards it did not name were starved: Incremental Blight cast in 10 of 54 games drawn (stock 49 of 56), Aberrant Return 16/62 (51/66), Liliana 8/56 (34/53), Binding the Old Gods 8/42 (30/44), Puppeteer Clique 24/60 (46/52), Chain Reaction 14/59 (41/67), Midnight Banshee 18/61 (36/54); the seat lost holding 4.9 nonland cards. Black Sun's Zenith and Fire Covenant (AI:RemoveDeck:All) were never cast by either pilot and were in hand at 38 and 42 of the candidate's losses, Soul Snuffers (cast 2 of 64) at 37. On the seat's last own turn of a loss the median board was 2-3 creatures of ours against 10-11 for the widest opponent, at 10-15 life. THE CONDITION FOR A WIPE THAT HITS US TOO: the widest opponent has six or more creatures and more power than we have, and we have three creatures or fewer: by the logs' creature counts it held on one of the last three own turns in 113 of 159 losses and 10 of 41 wins (first true on own turn 7, median); or that opponent has more creatures than we have and could kill us next turn. RULES 4-5, Chain Reaction (X = every creature on the battlefield, so at six or more opposing creatures it kills nearly all of them) and else Black Sun's Zenith for all the mana (x max, at least 3), on those conditions, above the commander: Auntie would die to them, so she is cast after. RULE 8, the wipes that spare most of our side, once an opponent has four creatures: Village Pillagers (1 wither damage to each opposing creature: with Auntie each is also a life lost), Soul Snuffers (a counter on every creature: our side draws a card each through Auntie, the other side's x/1s die and each opposing creature costs its controller a life), Midnight Banshee (a counter on each nonblack creature every upkeep; Auntie is black). Below the commander so turn 4 stays Auntie's. RULE 9, Carnifex Demon's {B} ability (a counter on every other creature), never used by either pilot, with Auntie out and an opponent wider than us with four or more. RULES 10-11, Liliana's -3 (destroy a creature with a -1/-1 counter: Forge picks it) and else her +2, since an unnamed planeswalker ability is also starved. RULE 13, Binding the Old Gods (chapter I destroys an opponent's nonland permanent) and Incremental Blight: Forge's own logic aims the Blight, so the rule casts them when Forge agrees; after the engines (rule 12). RULE 14, Skinrender while an opponent has a creature. RULE 15, Blowfly Infestation once an opponent has three creatures (the base's hold, released at two, stays). RULE 22, the threats before the draw spells while an opponent has more power than we have: the base drew while being attacked to death (hand of six on turn 8). RULE 24, Eventide's Shadow as a draw spell only with 40 cards left, 25 life and three cards or fewer in hand (it costs a life a counter; the base's hold stays). RULE 26, the base's threats with Liliana, Ferrafor, Aberrant Return, Midnight Banshee and Puppeteer Clique added: none of them was named by a rule. Not written: Fire Covenant (its X is paid in life, which a rule cannot set, and Forge's logic declined it every time it was offered in the local tables: 0 casts in 4 games drawn, so it was taken out of rule 13);  Vraska's -2 (Forge's targets; the base's +0 rule still takes her every turn), the instants (Infernal Grasp, Putrefy, Terminate, Assassin's Trophy, Cathartic Pyre are cast by Forge on other players' turns in 92-98% of games already). LOCAL CHECK (16 tables of bots, seeds 20263110 and 20263111, 8 each; the second on this file exactly, the first with Fire Covenant still in rule 13 and Carnifex's rule narrowed by an ability text): drawn/cast Black Sun's Zenith 5/5, Soul Snuffers 8/8, Midnight Banshee 8/6, Skinrender 9/8, Incremental Blight 8/6 (Forge aimed all three counters at opposing creatures each time), Village Pillagers 5/4, Chain Reaction 3/1, Binding the Old Gods 4/2, Aberrant Return 4/2, Carnifex Demon 8/4 (its ability fired twice, by rule 9, in the second run), Liliana 4/0 (seven mana, never affordable with her in hand), Eventide's Shadow 6/0, Fire Covenant 6/0. Chain Reaction killed 17 creatures in its one cast; Black Sun's Zenith 15 in one of a game the seat won. The seat won 6 of 16: too few games to mean anything. Shipped as version 2 on 2026-11-14 from ab-run #36: at 200 tables of bots (seed 20261310, opponents drawn from bots-v2 under their playbooks of 2026-11-13) 69 wins against its stock pilot's 45 (+12.0 points, 95% +4 to +20, exact test 0.0088) with the attack left to Forge, the better of the two attacks on these tables (the same rules won 66 with the go-wide attack). What it casts in a share of games 15 points or more below its stock pilot on the same tables, 16 cards: Eventide's Shadow (11 of 68 games drawn against 42 of 60), The Scorpion God (33 of 68 games drawn against 52 of 56), Carnifex Demon (29 of 64 games drawn against 41 of 50), Burning Curiosity (42 of 64 games drawn against 46 of 47), Hoarder's Greed (40 of 63 games drawn against 53 of 56), Wickerbough Elder (28 of 57 games drawn against 39 of 51), Archfiend of Ifnir (36 of 68 games drawn against 49 of 63), Dread Tiller (33 of 54 games drawn against 53 of 62) and 8 more. It casts 20 cards that much more often (demo-data/playtest/2026-11-14/second-pass/blight-curse-forgeattack-card-diff.txt). VERSION 3 CANDIDATE `threats` (2026-11-15). Version 2 with three rules moved above the rule for the engine pieces (Hapatra, Lasting Tarfire, Sinister Gnarlbark, Grave Venerations, Chimil, Vraska, Evolution Sage, Oft-Nabbed Goat, Puca's Covenant): the removal (Binding the Old Gods and Incremental Blight; Skinrender), then the rule for the twenty large creatures and permanents (Grave Titan to Dread Tiller). The same twenty cards' second rule, which held only while an opponent's board was stronger, is taken out: with the unconditional rule above it it could never be the first to fire. So the order is: mana, the wipes, the commander, the answers, the top of the curve, then the engine and the card draw with what mana is left. Why: version 2 casts nineteen cards fifteen points less often than its stock pilot at the owner's table, nearly all of them in that rule (50% of the games drawn against the stock pilot's 80% in ab-run #42), and loses holding 4.5 nonland cards; the `curve` candidate moved the rule above the draw spells only and changed next to nothing (51.9% against 48.6% on the same tables of ab-run #43, 35 wins each), which says the engine rules above it are what keeps those cards in hand. Whether casting them first wins more than the engine does is what this file is for: the `forge` rule's wait made the same kind of trade for the cards no rule names and won nothing by it (ab-run #41). Shipped as version 3 on 2026-11-15 from ab-run #44 (seed 20261370, the owner's table, opponents under their shipped playbooks of 2026-11-15): 39 wins of 200 against version 2's 37 on the same tables (+1.0 points, 95% -5 to +7, exact test 0.87): level. The nineteen cards version 2 cast less than its stock pilot are cast in 60.6% of the games they are drawn (633 of 1,045) against 50.4% (525 of 1,041), the stock pilot's 80%: Tree of Perdition 48 of 67 games against 30 of 62, Massacre Girl 40 of 57 against 26 of 52, The Scorpion God 35 of 60 against 21 of 54, Aberrant Return 42 of 65 against 27 of 60, Puppeteer Clique 40 of 64 against 27 of 63. What pays for it is the engine (Flourishing Defenses 11 of 48 against 30 of 45, Puca's Covenant 25 of 50 against 46 of 52, Chimil 14 of 46 against 30 of 45, Vraska 16 of 50 against 33 of 50, Grave Venerations 30 of 56 against 53 of 61, Evolution Sage 36 of 52 against 54 of 58, Sinister Gnarlbark 30 of 44 against 41 of 47) and Painful Truths (34 of 55 against 46 of 61). The removal is cast as before (Binding the Old Gods 49 of 60, Incremental Blight 45 of 59, Skinrender 53 of 62). The seat deals 18.4 damage a game against 16.4 and holds 4.3 nonland cards at a loss against 4.4. Fire Covenant is still never cast (0 of 51, in hand at 32 losses): its X is divided among targets, which a rule cannot do yet. The rule it was read by was fixed before the run: level with or ahead of the shipped arm, and those nineteen cards cast ten points more often.",
+  "on": "2026-11-15"
  }
 }

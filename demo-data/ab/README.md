@@ -246,3 +246,14 @@ than their stock pilots are cast 3.3 points more often (Blight Curse) and 0.9 po
 for ten; they did not ship. The aimed rules' counters, summed over the three candidates' 200 games each: 122 aimed casts, 101 at the
 opponent that looked most dangerous, 21 at the next one that had something worth aiming at; none fizzled.
 
+`2026-11-15-ab-v23/`: two follow-ups to the third pass (DESIGN.md §33; `ab-run` #44, seed 20261370, opponents drawn from the other
+nine decks of `owners-table-v1` under their shipped playbooks of 2026-11-15, the four versions of that day among them). `<deck>.json`
+is the shipped playbook (playbook arm only), `<deck>-<variant>.json` the candidate on the same tables, `<deck>-join.json` the two
+side by side (arms `shipped` and the variant's name). Blight Curse `threats` (its removal and its large creatures above the engine
+pieces): 39 wins of 200 against the shipped version's 37 (+1.0 points, 95% -5 to +7, exact test 0.87), and the nineteen cards
+version 2 casts less than its stock pilot cast in 60.6% of the games they were drawn against 50.4% on the same tables, +10.1 points:
+by the rule fixed before the run it shipped as version 3 on 2026-11-15. Revenant Recon `deluge` (Toxic Deluge by a rule, two
+creatures named, no rule moved): 47 against 52 (-2.5 points, -7 to +2, 0.38), five tables behind where the rule allowed two; Toxic
+Deluge was cast in 18 of the 52 games it was drawn. It did not ship. The card check is
+`demo-data/playtest/2026-11-15/follow-ups/check.txt`.
+

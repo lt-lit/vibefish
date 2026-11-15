@@ -1,0 +1,1550 @@
+{
+ "kind": "playtest",
+ "deck": "revenant-recon",
+ "deck_file": "Revenant Recon [MKC] [2024].dck",
+ "deck_file_sha256": null,
+ "arm": "playbook",
+ "pilot": {
+  "playbook": "revenant-recon-deluge.json",
+  "version": 5,
+  "attack": null
+ },
+ "commanders": [
+  "Mirko, Obsessive Theorist"
+ ],
+ "table": {
+  "pool": "owners-table-v1",
+  "seats": 4,
+  "seed": 20261370,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 47,
+  "win_rate": 0.235,
+  "win_rate_ci95": [
+   0.1816,
+   0.2984
+  ],
+  "even_share": 0.25,
+  "not_finished": 4,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 13
+   },
+   {
+    "games": 50,
+    "wins": 11
+   },
+   {
+    "games": 50,
+    "wins": 13
+   },
+   {
+    "games": 50,
+    "wins": 10
+   }
+  ],
+  "losses": 149,
+  "out_first": 44,
+  "out_second": 52,
+  "out_third": 53,
+  "loss_reasons": {
+   "LifeReachedZero": 151
+  },
+  "game_turns": 45.7,
+  "own_turns_when_won": 12.9,
+  "own_turns_when_lost": 11.1
+ },
+ "opponents": {
+  "mutant-menace": {
+   "tables": 58,
+   "focus_wins": 18,
+   "focus_win_rate": 0.31,
+   "its_wins": 15,
+   "its_win_rate": 0.259,
+   "took_it_out": 14
+  },
+  "blood-rites": {
+   "tables": 65,
+   "focus_wins": 19,
+   "focus_win_rate": 0.292,
+   "its_wins": 19,
+   "its_win_rate": 0.292,
+   "took_it_out": 10
+  },
+  "deadly-disguise": {
+   "tables": 59,
+   "focus_wins": 16,
+   "focus_win_rate": 0.271,
+   "its_wins": 5,
+   "its_win_rate": 0.085,
+   "took_it_out": 3
+  },
+  "veloci-ramp-tor": {
+   "tables": 73,
+   "focus_wins": 18,
+   "focus_win_rate": 0.247,
+   "its_wins": 26,
+   "its_win_rate": 0.356,
+   "took_it_out": 26
+  },
+  "blight-curse": {
+   "tables": 60,
+   "focus_wins": 14,
+   "focus_win_rate": 0.233,
+   "its_wins": 7,
+   "its_win_rate": 0.117,
+   "took_it_out": 6
+  },
+  "miracle-worker": {
+   "tables": 75,
+   "focus_wins": 16,
+   "focus_win_rate": 0.213,
+   "its_wins": 14,
+   "its_win_rate": 0.187,
+   "took_it_out": 8
+  },
+  "ahoy-mateys": {
+   "tables": 76,
+   "focus_wins": 15,
+   "focus_win_rate": 0.197,
+   "its_wins": 24,
+   "its_win_rate": 0.316,
+   "took_it_out": 26
+  },
+  "squirreled-away": {
+   "tables": 77,
+   "focus_wins": 15,
+   "focus_win_rate": 0.195,
+   "its_wins": 18,
+   "its_win_rate": 0.234,
+   "took_it_out": 11
+  },
+  "death-toll": {
+   "tables": 57,
+   "focus_wins": 10,
+   "focus_win_rate": 0.175,
+   "its_wins": 21,
+   "its_win_rate": 0.368,
+   "took_it_out": 12
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.405,
+  "lands_at_own_turn": {
+   "4": 2.87,
+   "6": 4.38,
+   "8": 5.61
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 5.8,
+   "6": 4.65,
+   "8": 3.97
+  },
+  "short_of_four_lands_at_turn_5": 0.285,
+  "commander_first_cast": {
+   "median": 3.0,
+   "p25": 3,
+   "p75": 4,
+   "never_cast": 0.01,
+   "casts_per_game": 2.62
+  },
+  "spells_per_game": 15.7,
+  "idle_turn_share": 0.052,
+  "damage_dealt_per_game": 35.3,
+  "damage_taken_per_game": 35.4,
+  "commander_damage_dealt_per_game": 10.0,
+  "nonland_cards_in_hand_at_loss": 3.45,
+  "of_them_affordable": 3.02
+ },
+ "cards": {
+  "Syr Konrad, the Grim": {
+   "drawn": 53,
+   "played": 39,
+   "played_share": 0.736,
+   "median_turn": 9,
+   "win_rate_drawn": 0.358,
+   "win_rate_not_drawn": 0.19,
+   "held_at_loss": 8,
+   "mv": 5,
+   "type": "Legendary Creature - Human Knight"
+  },
+  "Reanimate": {
+   "drawn": 63,
+   "played": 60,
+   "played_share": 0.952,
+   "median_turn": 7.5,
+   "win_rate_drawn": 0.238,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 10,
+   "mv": 1,
+   "type": "Sorcery"
+  },
+  "Black Sun's Zenith": {
+   "drawn": 64,
+   "played": 34,
+   "played_share": 0.531,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.203,
+   "win_rate_not_drawn": 0.25,
+   "held_at_loss": 17,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Arcane Signet": {
+   "drawn": 63,
+   "played": 60,
+   "played_share": 0.952,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.27,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Case of the Shifting Visage": {
+   "drawn": 49,
+   "played": 45,
+   "played_share": 0.918,
+   "median_turn": 7,
+   "win_rate_drawn": 0.265,
+   "win_rate_not_drawn": 0.225,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Enchantment - Case"
+  },
+  "Whispering Snitch": {
+   "drawn": 56,
+   "played": 56,
+   "played_share": 1.0,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.286,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Creature - Vampire Rogue"
+  },
+  "Ephara's Dispersal": {
+   "drawn": 52,
+   "played": 50,
+   "played_share": 0.962,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.327,
+   "win_rate_not_drawn": 0.203,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Final-Word Phantom": {
+   "drawn": 49,
+   "played": 37,
+   "played_share": 0.755,
+   "median_turn": 8,
+   "win_rate_drawn": 0.265,
+   "win_rate_not_drawn": 0.225,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Creature - Spirit Detective"
+  },
+  "Overseer of the Damned": {
+   "drawn": 57,
+   "played": 38,
+   "played_share": 0.667,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.298,
+   "win_rate_not_drawn": 0.21,
+   "held_at_loss": 10,
+   "mv": 7,
+   "type": "Creature - Demon"
+  },
+  "Mind Stone": {
+   "drawn": 49,
+   "played": 49,
+   "played_share": 1.0,
+   "median_turn": 4,
+   "win_rate_drawn": 0.265,
+   "win_rate_not_drawn": 0.225,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Lazav, the Multifarious": {
+   "drawn": 34,
+   "played": 27,
+   "played_share": 0.794,
+   "median_turn": 7,
+   "win_rate_drawn": 0.206,
+   "win_rate_not_drawn": 0.241,
+   "held_at_loss": 7,
+   "mv": 2,
+   "type": "Legendary Creature - Shapeshifter"
+  },
+  "Massacre Wurm": {
+   "drawn": 37,
+   "played": 32,
+   "played_share": 0.865,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.324,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Creature - Phyrexian Wurm"
+  },
+  "Brainstorm": {
+   "drawn": 52,
+   "played": 45,
+   "played_share": 0.865,
+   "median_turn": 7,
+   "win_rate_drawn": 0.25,
+   "win_rate_not_drawn": 0.23,
+   "held_at_loss": 5,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Dream Eater": {
+   "drawn": 44,
+   "played": 37,
+   "played_share": 0.841,
+   "median_turn": 9,
+   "win_rate_drawn": 0.364,
+   "win_rate_not_drawn": 0.199,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Creature - Nightmare Sphinx"
+  },
+  "Shriekmaw": {
+   "drawn": 47,
+   "played": 43,
+   "played_share": 0.915,
+   "median_turn": 7,
+   "win_rate_drawn": 0.213,
+   "win_rate_not_drawn": 0.242,
+   "held_at_loss": 3,
+   "mv": 5,
+   "type": "Creature - Elemental"
+  },
+  "Dimir Signet": {
+   "drawn": 50,
+   "played": 50,
+   "played_share": 1.0,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Baleful Strix": {
+   "drawn": 42,
+   "played": 31,
+   "played_share": 0.738,
+   "median_turn": 7,
+   "win_rate_drawn": 0.262,
+   "win_rate_not_drawn": 0.228,
+   "held_at_loss": 11,
+   "mv": 2,
+   "type": "Artifact Creature - Bird"
+  },
+  "Mulldrifter": {
+   "drawn": 48,
+   "played": 40,
+   "played_share": 0.833,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.292,
+   "win_rate_not_drawn": 0.217,
+   "held_at_loss": 6,
+   "mv": 5,
+   "type": "Creature - Elemental"
+  },
+  "Sphinx of the Second Sun": {
+   "drawn": 45,
+   "played": 29,
+   "played_share": 0.644,
+   "median_turn": 11,
+   "win_rate_drawn": 0.356,
+   "win_rate_not_drawn": 0.2,
+   "held_at_loss": 15,
+   "mv": 8,
+   "type": "Creature - Sphinx"
+  },
+  "Phyrexian Metamorph": {
+   "drawn": 50,
+   "played": 25,
+   "played_share": 0.5,
+   "median_turn": 9,
+   "win_rate_drawn": 0.3,
+   "win_rate_not_drawn": 0.213,
+   "held_at_loss": 20,
+   "mv": 4,
+   "type": "Artifact Creature - Phyrexian Shapeshifter"
+  },
+  "Dogged Detective": {
+   "drawn": 62,
+   "played": 55,
+   "played_share": 0.887,
+   "median_turn": 7,
+   "win_rate_drawn": 0.29,
+   "win_rate_not_drawn": 0.21,
+   "held_at_loss": 23,
+   "mv": 2,
+   "type": "Creature - Human Rogue"
+  },
+  "Amphin Mutineer": {
+   "drawn": 46,
+   "played": 42,
+   "played_share": 0.913,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.239,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 1,
+   "mv": 4,
+   "type": "Creature - Salamander Pirate"
+  },
+  "Thoughtbound Phantasm": {
+   "drawn": 46,
+   "played": 44,
+   "played_share": 0.957,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.239,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Creature - Spirit"
+  },
+  "Copy Catchers": {
+   "drawn": 43,
+   "played": 37,
+   "played_share": 0.86,
+   "median_turn": 5,
+   "win_rate_drawn": 0.326,
+   "win_rate_not_drawn": 0.21,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Faerie"
+  },
+  "Ransom Note": {
+   "drawn": 53,
+   "played": 48,
+   "played_share": 0.906,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.245,
+   "win_rate_not_drawn": 0.231,
+   "held_at_loss": 4,
+   "mv": 1,
+   "type": "Artifact - Clue"
+  },
+  "Thought Vessel": {
+   "drawn": 59,
+   "played": 58,
+   "played_share": 0.983,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.237,
+   "win_rate_not_drawn": 0.234,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Connive // Concoct": {
+   "drawn": 57,
+   "played": 43,
+   "played_share": 0.754,
+   "median_turn": 8,
+   "win_rate_drawn": 0.368,
+   "win_rate_not_drawn": 0.182,
+   "held_at_loss": 11,
+   "mv": 9,
+   "type": "Sorcery"
+  },
+  "Sinister Starfish": {
+   "drawn": 45,
+   "played": 44,
+   "played_share": 0.978,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.289,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Creature - Starfish"
+  },
+  "Price of Fame": {
+   "drawn": 48,
+   "played": 46,
+   "played_share": 0.958,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.208,
+   "win_rate_not_drawn": 0.243,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Everflowing Chalice": {
+   "drawn": 52,
+   "played": 33,
+   "played_share": 0.635,
+   "median_turn": 9,
+   "win_rate_drawn": 0.288,
+   "win_rate_not_drawn": 0.216,
+   "held_at_loss": 16,
+   "mv": 0,
+   "type": "Artifact"
+  },
+  "Twilight Prophet": {
+   "drawn": 47,
+   "played": 32,
+   "played_share": 0.681,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.319,
+   "win_rate_not_drawn": 0.209,
+   "held_at_loss": 8,
+   "mv": 4,
+   "type": "Creature - Vampire Cleric"
+  },
+  "Otherworldly Gaze": {
+   "drawn": 57,
+   "played": 40,
+   "played_share": 0.702,
+   "median_turn": 4.0,
+   "win_rate_drawn": 0.351,
+   "win_rate_not_drawn": 0.189,
+   "held_at_loss": 7,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Pile On": {
+   "drawn": 54,
+   "played": 51,
+   "played_share": 0.944,
+   "median_turn": 8,
+   "win_rate_drawn": 0.278,
+   "win_rate_not_drawn": 0.219,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Animate Dead": {
+   "drawn": 54,
+   "played": 49,
+   "played_share": 0.907,
+   "median_turn": 9,
+   "win_rate_drawn": 0.37,
+   "win_rate_not_drawn": 0.185,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Enchantment - Aura"
+  },
+  "Nightveil Sprite": {
+   "drawn": 41,
+   "played": 32,
+   "played_share": 0.78,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.195,
+   "win_rate_not_drawn": 0.245,
+   "held_at_loss": 6,
+   "mv": 2,
+   "type": "Creature - Faerie Rogue"
+  },
+  "Counterpoint": {
+   "drawn": 54,
+   "played": 20,
+   "played_share": 0.37,
+   "median_turn": 11.0,
+   "win_rate_drawn": 0.389,
+   "win_rate_not_drawn": 0.178,
+   "held_at_loss": 24,
+   "mv": 5,
+   "type": "Instant"
+  },
+  "Master of Death": {
+   "drawn": 47,
+   "played": 40,
+   "played_share": 0.851,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.277,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 15,
+   "mv": 3,
+   "type": "Creature - Zombie Wizard"
+  },
+  "Deep Analysis": {
+   "drawn": 56,
+   "played": 16,
+   "played_share": 0.286,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.214,
+   "win_rate_not_drawn": 0.243,
+   "held_at_loss": 32,
+   "mv": 4,
+   "type": "Sorcery"
+  },
+  "Watcher of Hours": {
+   "drawn": 41,
+   "played": 15,
+   "played_share": 0.366,
+   "median_turn": 11,
+   "win_rate_drawn": 0.317,
+   "win_rate_not_drawn": 0.214,
+   "held_at_loss": 7,
+   "mv": 6,
+   "type": "Creature - Sphinx"
+  },
+  "Enhanced Surveillance": {
+   "drawn": 62,
+   "played": 59,
+   "played_share": 0.952,
+   "median_turn": 7,
+   "win_rate_drawn": 0.21,
+   "win_rate_not_drawn": 0.246,
+   "held_at_loss": 4,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Doom Whisperer": {
+   "drawn": 34,
+   "played": 22,
+   "played_share": 0.647,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.206,
+   "win_rate_not_drawn": 0.241,
+   "held_at_loss": 9,
+   "mv": 5,
+   "type": "Creature - Nightmare Demon"
+  },
+  "Ravenous Chupacabra": {
+   "drawn": 46,
+   "played": 36,
+   "played_share": 0.783,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.261,
+   "win_rate_not_drawn": 0.227,
+   "held_at_loss": 5,
+   "mv": 4,
+   "type": "Creature - Beast Horror"
+  },
+  "Eye of Duskmantle": {
+   "drawn": 42,
+   "played": 26,
+   "played_share": 0.619,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.31,
+   "win_rate_not_drawn": 0.215,
+   "held_at_loss": 8,
+   "mv": 7,
+   "type": "Creature - Eye"
+  },
+  "Necromancy": {
+   "drawn": 47,
+   "played": 37,
+   "played_share": 0.787,
+   "median_turn": 9,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.248,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Notion Rain": {
+   "drawn": 60,
+   "played": 33,
+   "played_share": 0.55,
+   "median_turn": 10,
+   "win_rate_drawn": 0.433,
+   "win_rate_not_drawn": 0.15,
+   "held_at_loss": 18,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Marvo, Deep Operative": {
+   "drawn": 47,
+   "played": 30,
+   "played_share": 0.638,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.277,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 15,
+   "mv": 5,
+   "type": "Legendary Creature - Octopus Rogue"
+  },
+  "Grave Titan": {
+   "drawn": 52,
+   "played": 36,
+   "played_share": 0.692,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.365,
+   "win_rate_not_drawn": 0.189,
+   "held_at_loss": 11,
+   "mv": 6,
+   "type": "Creature - Giant"
+  },
+  "Talisman of Dominance": {
+   "drawn": 56,
+   "played": 56,
+   "played_share": 1.0,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.232,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Curate": {
+   "drawn": 47,
+   "played": 38,
+   "played_share": 0.809,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.191,
+   "win_rate_not_drawn": 0.248,
+   "held_at_loss": 9,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Foreboding Steamboat": {
+   "drawn": 47,
+   "played": 29,
+   "played_share": 0.617,
+   "median_turn": 10,
+   "win_rate_drawn": 0.277,
+   "win_rate_not_drawn": 0.222,
+   "held_at_loss": 10,
+   "mv": 5,
+   "type": "Artifact - Vehicle"
+  },
+  "Mission Briefing": {
+   "drawn": 58,
+   "played": 55,
+   "played_share": 0.948,
+   "median_turn": 8,
+   "win_rate_drawn": 0.31,
+   "win_rate_not_drawn": 0.204,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Instant"
+  },
+  "Rise of the Dark Realms": {
+   "drawn": 54,
+   "played": 20,
+   "played_share": 0.37,
+   "median_turn": 11.5,
+   "win_rate_drawn": 0.296,
+   "win_rate_not_drawn": 0.212,
+   "held_at_loss": 16,
+   "mv": 9,
+   "type": "Sorcery"
+  },
+  "Charnel Serenade": {
+   "drawn": 49,
+   "played": 24,
+   "played_share": 0.49,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.367,
+   "win_rate_not_drawn": 0.192,
+   "held_at_loss": 8,
+   "mv": 6,
+   "type": "Sorcery"
+  },
+  "Toxic Deluge": {
+   "drawn": 52,
+   "played": 18,
+   "played_share": 0.346,
+   "median_turn": 8.5,
+   "win_rate_drawn": 0.365,
+   "win_rate_not_drawn": 0.189,
+   "held_at_loss": 13,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Consider": {
+   "drawn": 58,
+   "played": 50,
+   "played_share": 0.862,
+   "median_turn": 6.5,
+   "win_rate_drawn": 0.362,
+   "win_rate_not_drawn": 0.183,
+   "held_at_loss": 8,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Unshakable Tail": {
+   "drawn": 41,
+   "played": 32,
+   "played_share": 0.78,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.415,
+   "win_rate_not_drawn": 0.189,
+   "held_at_loss": 5,
+   "mv": 3,
+   "type": "Creature - Zombie Detective"
+  },
+  "Disinformation Campaign": {
+   "drawn": 49,
+   "played": 30,
+   "played_share": 0.612,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.224,
+   "win_rate_not_drawn": 0.238,
+   "held_at_loss": 24,
+   "mv": 3,
+   "type": "Enchantment"
+  },
+  "Discovery // Dispersal": {
+   "drawn": 47,
+   "played": 43,
+   "played_share": 0.915,
+   "median_turn": 8,
+   "win_rate_drawn": 0.255,
+   "win_rate_not_drawn": 0.229,
+   "held_at_loss": 2,
+   "mv": 7,
+   "type": "Instant Sorcery"
+  },
+  "Vizier of Many Faces": {
+   "drawn": 39,
+   "played": 19,
+   "played_share": 0.487,
+   "median_turn": 9,
+   "win_rate_drawn": 0.231,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Creature - Shapeshifter Cleric"
+  },
+  "Sol Ring": {
+   "drawn": 39,
+   "played": 38,
+   "played_share": 0.974,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.231,
+   "win_rate_not_drawn": 0.236,
+   "held_at_loss": 2,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Dimir Spybug": {
+   "drawn": 44,
+   "played": 43,
+   "played_share": 0.977,
+   "median_turn": 6,
+   "win_rate_drawn": 0.159,
+   "win_rate_not_drawn": 0.256,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Creature - Insect"
+  },
+  "Phyrexian Arena": {
+   "drawn": 46,
+   "played": 41,
+   "played_share": 0.891,
+   "median_turn": 7,
+   "win_rate_drawn": 0.217,
+   "win_rate_not_drawn": 0.24,
+   "held_at_loss": 3,
+   "mv": 3,
+   "type": "Enchantment"
+  }
+ },
+ "list": {
+  "Amphin Mutineer": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Salamander Pirate",
+   "land": false
+  },
+  "Animate Dead": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment - Aura",
+   "land": false
+  },
+  "Arcane Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Ash Barrens": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Baleful Strix": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact Creature - Bird",
+   "land": false
+  },
+  "Black Sun's Zenith": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Bojuka Bog": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Brainstorm": {
+   "count": 1,
+   "mv": 1,
+   "type": "Instant",
+   "land": false
+  },
+  "Case of the Shifting Visage": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment - Case",
+   "land": false
+  },
+  "Charnel Serenade": {
+   "count": 1,
+   "mv": 6,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Choked Estuary": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Command Tower": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Connive // Concoct": {
+   "count": 1,
+   "mv": 9,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Consider": {
+   "count": 1,
+   "mv": 1,
+   "type": "Instant",
+   "land": false
+  },
+  "Copy Catchers": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Faerie",
+   "land": false
+  },
+  "Counterpoint": {
+   "count": 1,
+   "mv": 5,
+   "type": "Instant",
+   "land": false
+  },
+  "Curate": {
+   "count": 1,
+   "mv": 2,
+   "type": "Instant",
+   "land": false
+  },
+  "Darkwater Catacombs": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Deep Analysis": {
+   "count": 1,
+   "mv": 4,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Dimir Aqueduct": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Dimir Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Dimir Spybug": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Insect",
+   "land": false
+  },
+  "Discovery // Dispersal": {
+   "count": 1,
+   "mv": 7,
+   "type": "Instant Sorcery",
+   "land": false
+  },
+  "Disinformation Campaign": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Dogged Detective": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Rogue",
+   "land": false
+  },
+  "Doom Whisperer": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Nightmare Demon",
+   "land": false
+  },
+  "Dream Eater": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Nightmare Sphinx",
+   "land": false
+  },
+  "Drownyard Temple": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Enhanced Surveillance": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Ephara's Dispersal": {
+   "count": 1,
+   "mv": 3,
+   "type": "Instant",
+   "land": false
+  },
+  "Everflowing Chalice": {
+   "count": 1,
+   "mv": 0,
+   "type": "Artifact",
+   "land": false
+  },
+  "Eye of Duskmantle": {
+   "count": 1,
+   "mv": 7,
+   "type": "Creature - Eye",
+   "land": false
+  },
+  "Fetid Pools": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Island Swamp",
+   "land": true
+  },
+  "Final-Word Phantom": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Spirit Detective",
+   "land": false
+  },
+  "Foreboding Steamboat": {
+   "count": 1,
+   "mv": 5,
+   "type": "Artifact - Vehicle",
+   "land": false
+  },
+  "Grave Titan": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Giant",
+   "land": false
+  },
+  "Hostile Desert": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Desert",
+   "land": true
+  },
+  "Island": {
+   "count": 3,
+   "mv": 0,
+   "type": "Basic Land - Island",
+   "land": true
+  },
+  "Lazav, the Multifarious": {
+   "count": 1,
+   "mv": 2,
+   "type": "Legendary Creature - Shapeshifter",
+   "land": false
+  },
+  "Marvo, Deep Operative": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Octopus Rogue",
+   "land": false
+  },
+  "Massacre Wurm": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Phyrexian Wurm",
+   "land": false
+  },
+  "Master of Death": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Zombie Wizard",
+   "land": false
+  },
+  "Mind Stone": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Mission Briefing": {
+   "count": 1,
+   "mv": 2,
+   "type": "Instant",
+   "land": false
+  },
+  "Mulldrifter": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Elemental",
+   "land": false
+  },
+  "Myriad Landscape": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Mystic Sanctuary": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Island",
+   "land": true
+  },
+  "Necromancy": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Nightveil Sprite": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Faerie Rogue",
+   "land": false
+  },
+  "Notion Rain": {
+   "count": 1,
+   "mv": 3,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Otherworldly Gaze": {
+   "count": 1,
+   "mv": 1,
+   "type": "Instant",
+   "land": false
+  },
+  "Overseer of the Damned": {
+   "count": 1,
+   "mv": 7,
+   "type": "Creature - Demon",
+   "land": false
+  },
+  "Phyrexian Arena": {
+   "count": 1,
+   "mv": 3,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Phyrexian Metamorph": {
+   "count": 1,
+   "mv": 4,
+   "type": "Artifact Creature - Phyrexian Shapeshifter",
+   "land": false
+  },
+  "Pile On": {
+   "count": 1,
+   "mv": 4,
+   "type": "Instant",
+   "land": false
+  },
+  "Port of Karfell": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Price of Fame": {
+   "count": 1,
+   "mv": 4,
+   "type": "Instant",
+   "land": false
+  },
+  "Ransom Note": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact - Clue",
+   "land": false
+  },
+  "Ravenous Chupacabra": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Beast Horror",
+   "land": false
+  },
+  "Reanimate": {
+   "count": 1,
+   "mv": 1,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Reliquary Tower": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Rise of the Dark Realms": {
+   "count": 1,
+   "mv": 9,
+   "type": "Sorcery",
+   "land": false
+  },
+  "River of Tears": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Rogue's Passage": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Shriekmaw": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Elemental",
+   "land": false
+  },
+  "Sinister Starfish": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Starfish",
+   "land": false
+  },
+  "Sol Ring": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact",
+   "land": false
+  },
+  "Sphinx of the Second Sun": {
+   "count": 1,
+   "mv": 8,
+   "type": "Creature - Sphinx",
+   "land": false
+  },
+  "Sunken Hollow": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Island Swamp",
+   "land": true
+  },
+  "Swamp": {
+   "count": 3,
+   "mv": 0,
+   "type": "Basic Land - Swamp",
+   "land": true
+  },
+  "Syr Konrad, the Grim": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Human Knight",
+   "land": false
+  },
+  "Tainted Isle": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Talisman of Dominance": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Temple of the False God": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Thought Vessel": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Thoughtbound Phantasm": {
+   "count": 1,
+   "mv": 1,
+   "type": "Creature - Spirit",
+   "land": false
+  },
+  "Tocasia's Dig Site": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Toxic Deluge": {
+   "count": 1,
+   "mv": 3,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Twilight Prophet": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Vampire Cleric",
+   "land": false
+  },
+  "Unshakable Tail": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Zombie Detective",
+   "land": false
+  },
+  "Vizier of Many Faces": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Shapeshifter Cleric",
+   "land": false
+  },
+  "Watcher of Hours": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Sphinx",
+   "land": false
+  },
+  "Whispering Snitch": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Vampire Rogue",
+   "land": false
+  }
+ },
+ "outcomes": {
+  "g0001": 1,
+  "g0002": 0,
+  "g0003": 0,
+  "g0004": 0,
+  "g0005": 0,
+  "g0006": 0,
+  "g0007": 0,
+  "g0008": 1,
+  "g0009": 1,
+  "g0010": 1,
+  "g0011": 0,
+  "g0012": 0,
+  "g0013": 0,
+  "g0014": 0,
+  "g0015": 0,
+  "g0016": 0,
+  "g0017": 0,
+  "g0018": 0,
+  "g0019": 0,
+  "g0020": 0,
+  "g0021": 0,
+  "g0022": 0,
+  "g0023": 0,
+  "g0024": 0,
+  "g0025": 0,
+  "g0026": 0,
+  "g0027": 1,
+  "g0028": 1,
+  "g0029": 0,
+  "g0030": 0,
+  "g0031": 0,
+  "g0032": 0,
+  "g0033": 0,
+  "g0034": 0,
+  "g0035": 0,
+  "g0036": 0,
+  "g0037": 0,
+  "g0038": 0,
+  "g0039": 0,
+  "g0040": 0,
+  "g0041": 0,
+  "g0042": 0,
+  "g0043": 0,
+  "g0044": 0,
+  "g0045": 1,
+  "g0046": 1,
+  "g0047": 0,
+  "g0048": 0,
+  "g0049": 0,
+  "g0050": 0,
+  "g0051": 0,
+  "g0052": 0,
+  "g0053": 0,
+  "g0054": 1,
+  "g0055": 1,
+  "g0056": 0,
+  "g0057": 1,
+  "g0058": 0,
+  "g0059": 0,
+  "g0060": 1,
+  "g0061": 0,
+  "g0062": 0,
+  "g0063": 1,
+  "g0064": 0,
+  "g0065": 0,
+  "g0066": 1,
+  "g0067": 0,
+  "g0068": 0,
+  "g0069": 1,
+  "g0070": 0,
+  "g0071": 0,
+  "g0072": 1,
+  "g0073": 1,
+  "g0074": 0,
+  "g0075": 0,
+  "g0076": 1,
+  "g0077": 0,
+  "g0078": 1,
+  "g0079": 0,
+  "g0080": 1,
+  "g0081": 1,
+  "g0082": 0,
+  "g0083": 0,
+  "g0084": 0,
+  "g0085": 0,
+  "g0086": 0,
+  "g0087": 0,
+  "g0088": 0,
+  "g0089": 1,
+  "g0090": 0,
+  "g0091": 0,
+  "g0092": 0,
+  "g0093": 1,
+  "g0094": 0,
+  "g0095": 0,
+  "g0096": 0,
+  "g0097": 0,
+  "g0098": 0,
+  "g0099": 1,
+  "g0100": 0,
+  "g0101": 0,
+  "g0102": 1,
+  "g0103": 0,
+  "g0104": 1,
+  "g0105": 0,
+  "g0106": 0,
+  "g0107": 1,
+  "g0108": 0,
+  "g0109": 0,
+  "g0110": 0,
+  "g0111": 0,
+  "g0112": 0,
+  "g0113": 0,
+  "g0114": 0,
+  "g0115": 1,
+  "g0116": 0,
+  "g0117": 0,
+  "g0118": 0,
+  "g0119": 1,
+  "g0120": 0,
+  "g0121": 0,
+  "g0122": 1,
+  "g0123": 1,
+  "g0124": 0,
+  "g0125": 1,
+  "g0126": 0,
+  "g0127": 0,
+  "g0128": 0,
+  "g0129": 0,
+  "g0130": 1,
+  "g0131": 0,
+  "g0132": 1,
+  "g0133": 0,
+  "g0134": 0,
+  "g0135": 0,
+  "g0136": 0,
+  "g0137": 0,
+  "g0138": 0,
+  "g0139": 0,
+  "g0140": 0,
+  "g0141": 0,
+  "g0142": 0,
+  "g0143": 1,
+  "g0144": 0,
+  "g0145": 1,
+  "g0146": 0,
+  "g0147": 0,
+  "g0148": 0,
+  "g0149": 0,
+  "g0150": 0,
+  "g0151": 0,
+  "g0152": 0,
+  "g0153": 0,
+  "g0154": 1,
+  "g0155": 1,
+  "g0156": 0,
+  "g0157": 0,
+  "g0158": 0,
+  "g0159": 0,
+  "g0160": 1,
+  "g0161": 1,
+  "g0162": 0,
+  "g0163": 0,
+  "g0164": 0,
+  "g0165": 0,
+  "g0166": 0,
+  "g0167": 0,
+  "g0168": 0,
+  "g0169": 1,
+  "g0170": 0,
+  "g0171": 1,
+  "g0172": 1,
+  "g0173": 0,
+  "g0174": 0,
+  "g0175": 0,
+  "g0176": 0,
+  "g0177": 0,
+  "g0178": 0,
+  "g0179": 0,
+  "g0180": 0,
+  "g0181": 0,
+  "g0182": 0,
+  "g0183": 0,
+  "g0184": 0,
+  "g0185": 0,
+  "g0186": 1,
+  "g0187": 0,
+  "g0188": 0,
+  "g0189": 0,
+  "g0190": 0,
+  "g0191": 0,
+  "g0192": 0,
+  "g0193": 0,
+  "g0194": 0,
+  "g0195": 1,
+  "g0196": 0,
+  "g0197": 0,
+  "g0198": 1,
+  "g0199": 1,
+  "g0200": 0
+ }
+}

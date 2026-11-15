@@ -52,6 +52,12 @@ the games it was cast under stock Forge AI and under the playbook, on the same t
   summed for all four. Four candidates shipped on 2026-11-15 (Squirreled Away, Mutant Menace, Blood Rites,
   Veloci-Ramp-Tor); the two `curve` candidates did not.
 
+- `follow-ups/`: the two follow-ups to the third pass (`ab-run` #44, seed 20261370, playbook arms only, opponents under
+  their shipped playbooks of 2026-11-15; DESIGN.md §33): `blight-curse-shipped.json` and `blight-curse-threats.json`,
+  `revenant-recon-shipped.json` and `revenant-recon-deluge.json` (the shipped playbook and the candidate on the same
+  tables), the two `-card-diff.txt` files and `check.txt`, the card check they were read by. Blight Curse `threats`
+  shipped on 2026-11-15 as version 3; Revenant Recon `deluge` did not ship.
+
 The reports were made from shard artifacts merged the way the workflow's rollup merges them; the win counts in them
 are those of the published rollups in `demo-data/ab/`. Regenerated on 2026-11-14 05:55 UTC after `runner/playtest.py`
 learnt that a split card is cast under the name of one half (until then Connive // Concoct, Find // Finality, Dusk //
