@@ -22,7 +22,8 @@ a playtest report at that table (`demo-data/playtest/2026-11-15/owners-table/`):
 What the bots still lack is the table itself: their attacks and most of their removal go where Forge's AI sends them,
 at the widest board and the lowest life, and at the player who goes on to win less often than chance. The first piece
 against that is in (`DESIGN.md` §33): a rule can aim a spell at the best permanent of the opponent that looks most
-dangerous. The dashboard shows all twenty-two in one table. Underneath: the benchmark pod
+dangerous, and three bots use it since 2026-11-15 to cast removal that neither Forge's AI nor their earlier versions
+ever cast. The dashboard shows all twenty-two in one table. Underneath: the benchmark pod
 (four bundled Commander precons) plays itself through a Java harness that records every game as a JSON event
 stream; the dashboard shows per-deck win rates, mulligans, land drops, commander timing and the cards that never
 get cast, with card images from Scryfall; Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI
