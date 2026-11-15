@@ -1,6 +1,6 @@
 {
  "vibefish": "0.3.4",
- "generated": "2026-11-15T14:30:33Z",
+ "generated": "2026-11-15T14:36:25Z",
  "kind": "bots",
  "reference": {
   "source": "Playgroup.gg",
@@ -982,16 +982,16 @@
     "exact_p": 0.1882
    },
    "goldfish": {
-    "source": "demo-data/goldfish/2026-11-14/blight-curse-answers-forgeattack-seeds-21101-21140.json",
+    "source": "demo-data/goldfish/2026-11-15/blight-curse-v3-seeds-21101-21140.json",
     "games": 40,
     "stock_kill_turn": 13.528,
-    "bot_kill_turn": 13.027,
-    "faster_by": 0.424,
+    "bot_kill_turn": 12.553,
+    "faster_by": 0.971,
     "faster_by_ci95": [
-     -0.237,
-     1.085
+     0.412,
+     1.529
     ],
-    "seeds_paired": 33
+    "seeds_paired": 34
    }
   },
   {
@@ -1272,14 +1272,14 @@
     "exact_p": 1.0
    },
    "goldfish": {
-    "source": "demo-data/goldfish/2026-11-14/veloci-ramp-tor-answers-forgeattack-seeds-22101-22140.json",
+    "source": "demo-data/goldfish/2026-11-15/veloci-ramp-tor-v3-seeds-22101-22140.json",
     "games": 40,
     "stock_kill_turn": 11.35,
-    "bot_kill_turn": 10.821,
-    "faster_by": 0.436,
+    "bot_kill_turn": 10.744,
+    "faster_by": 0.513,
     "faster_by_ci95": [
-     -0.001,
-     0.873
+     0.064,
+     0.962
     ],
     "seeds_paired": 39
    }

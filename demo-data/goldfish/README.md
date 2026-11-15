@@ -79,3 +79,14 @@ Miracle Worker 13.97, 12.40 (+1.56, +1.01 to +2.10), 13.00 (+0.94, +0.34 to +1.5
 Ahoy Mateys 10.12, 8.82 (+1.30, +0.93 to +1.67), 9.18 (+0.95, +0.59 to +1.31);
 Deadly Disguise 11.95, 11.13 (+0.82, +0.46 to +1.17), 11.68 (+0.26, -0.07 to +0.60).
 The same rules kill a table that does nothing half a turn to three quarters of a turn sooner with go-wide than with Forge's attack, and at tables of bots they win more with Forge's attack (DESIGN §30): goldfish says whether a seat runs its engine, not how it should attack. The pair of the shipped file is the one a deck's row in `playbook/bots.json` names.
+
+`2026-11-15/`: the two versions shipped on 2026-11-15 whose rules change what the deck does against opponents that do nothing, each
+on the 40 validation seeds of its deck beside the stock validation run of 2026-11-13 (A stock, B the shipped file; neither file was
+tuned on these seeds):
+`blight-curse-v3-seeds-21101-21140.json` (version 3, the removal and the large creatures above the engine pieces: 12.55 turns against
+13.53, 0.97 faster on the 34 seeds both finished, 95% +0.41 to +1.53; version 2 was 13.03 against 13.53, +0.42, -0.24 to +1.08) and
+`veloci-ramp-tor-v3-seeds-22101-22140.json` (version 3, Marauding Raptor by a rule: 10.74 against 11.35, 0.51 faster on 39 seeds,
++0.06 to +0.96; version 2 was 10.82 against 11.35, +0.44, -0.00 to +0.87). The other three versions of that day (Squirreled Away 4,
+Mutant Menace 3, Blood Rites 3) add a spell aimed at an opponent's permanent, which has nothing to aim at here: their rows keep the
+pair of the version before.
+
