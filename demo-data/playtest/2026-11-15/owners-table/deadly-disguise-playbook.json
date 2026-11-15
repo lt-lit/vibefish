@@ -1,0 +1,1599 @@
+{
+ "kind": "playtest",
+ "deck": "deadly-disguise",
+ "deck_file": "Deadly Disguise [MKC] [2024].dck",
+ "deck_file_sha256": null,
+ "arm": "playbook",
+ "pilot": {
+  "playbook": "deadly-disguise.json",
+  "version": 2,
+  "attack": null
+ },
+ "commanders": [
+  "Kaust, Eyes of the Glade"
+ ],
+ "table": {
+  "pool": "owners-table-v1",
+  "seats": 4,
+  "seed": 20261350,
+  "forge_version": "snapshot-2026-11-10",
+  "opponent_seats_under_a_playbook": 600,
+  "opponent_seats_under_stock_ai": 0
+ },
+ "result": {
+  "games": 200,
+  "wins": 18,
+  "win_rate": 0.09,
+  "win_rate_ci95": [
+   0.0577,
+   0.1378
+  ],
+  "even_share": 0.25,
+  "not_finished": 5,
+  "by_seat": [
+   {
+    "games": 50,
+    "wins": 6
+   },
+   {
+    "games": 50,
+    "wins": 3
+   },
+   {
+    "games": 50,
+    "wins": 4
+   },
+   {
+    "games": 50,
+    "wins": 5
+   }
+  ],
+  "losses": 177,
+  "out_first": 41,
+  "out_second": 76,
+  "out_third": 60,
+  "loss_reasons": {
+   "LifeReachedZero": 175,
+   "CommanderDamage": 5
+  },
+  "game_turns": 45.8,
+  "own_turns_when_won": 14.5,
+  "own_turns_when_lost": 10.9
+ },
+ "opponents": {
+  "miracle-worker": {
+   "tables": 61,
+   "focus_wins": 8,
+   "focus_win_rate": 0.131,
+   "its_wins": 8,
+   "its_win_rate": 0.131,
+   "took_it_out": 9
+  },
+  "squirreled-away": {
+   "tables": 75,
+   "focus_wins": 9,
+   "focus_win_rate": 0.12,
+   "its_wins": 20,
+   "its_win_rate": 0.267,
+   "took_it_out": 12
+  },
+  "revenant-recon": {
+   "tables": 66,
+   "focus_wins": 7,
+   "focus_win_rate": 0.106,
+   "its_wins": 16,
+   "its_win_rate": 0.242,
+   "took_it_out": 16
+  },
+  "blight-curse": {
+   "tables": 76,
+   "focus_wins": 8,
+   "focus_win_rate": 0.105,
+   "its_wins": 18,
+   "its_win_rate": 0.237,
+   "took_it_out": 10
+  },
+  "mutant-menace": {
+   "tables": 68,
+   "focus_wins": 6,
+   "focus_win_rate": 0.088,
+   "its_wins": 21,
+   "its_win_rate": 0.309,
+   "took_it_out": 23
+  },
+  "blood-rites": {
+   "tables": 65,
+   "focus_wins": 5,
+   "focus_win_rate": 0.077,
+   "its_wins": 26,
+   "its_win_rate": 0.4,
+   "took_it_out": 18
+  },
+  "veloci-ramp-tor": {
+   "tables": 62,
+   "focus_wins": 4,
+   "focus_win_rate": 0.065,
+   "its_wins": 16,
+   "its_win_rate": 0.258,
+   "took_it_out": 17
+  },
+  "death-toll": {
+   "tables": 65,
+   "focus_wins": 4,
+   "focus_win_rate": 0.062,
+   "its_wins": 25,
+   "its_win_rate": 0.385,
+   "took_it_out": 14
+  },
+  "ahoy-mateys": {
+   "tables": 62,
+   "focus_wins": 3,
+   "focus_win_rate": 0.048,
+   "its_wins": 27,
+   "its_win_rate": 0.435,
+   "took_it_out": 27
+  }
+ },
+ "tempo": {
+  "games_with_a_mulligan": 0.165,
+  "lands_at_own_turn": {
+   "4": 2.96,
+   "6": 4.47,
+   "8": 5.8
+  },
+  "cards_in_hand_at_own_turn": {
+   "4": 6.02,
+   "6": 4.79,
+   "8": 4.12
+  },
+  "short_of_four_lands_at_turn_5": 0.34,
+  "commander_first_cast": {
+   "median": 3,
+   "p25": 2,
+   "p75": 4,
+   "never_cast": 0.005,
+   "casts_per_game": 2.58
+  },
+  "spells_per_game": 12.6,
+  "idle_turn_share": 0.118,
+  "damage_dealt_per_game": 20.2,
+  "damage_taken_per_game": 42.9,
+  "commander_damage_dealt_per_game": 2.3,
+  "nonland_cards_in_hand_at_loss": 2.68,
+  "of_them_affordable": 2.36
+ },
+ "cards": {
+  "Sol Ring": {
+   "drawn": 50,
+   "played": 49,
+   "played_share": 0.98,
+   "median_turn": 5,
+   "win_rate_drawn": 0.16,
+   "win_rate_not_drawn": 0.067,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Artifact"
+  },
+  "Wild Growth": {
+   "drawn": 48,
+   "played": 48,
+   "played_share": 1.0,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.146,
+   "win_rate_not_drawn": 0.072,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Enchantment - Aura"
+  },
+  "Beast Whisperer": {
+   "drawn": 39,
+   "played": 22,
+   "played_share": 0.564,
+   "median_turn": 9.5,
+   "win_rate_drawn": 0.179,
+   "win_rate_not_drawn": 0.068,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Creature - Elf Druid"
+  },
+  "Jeska's Will": {
+   "drawn": 44,
+   "played": 32,
+   "played_share": 0.727,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.136,
+   "win_rate_not_drawn": 0.077,
+   "held_at_loss": 10,
+   "mv": 3,
+   "type": "Sorcery"
+  },
+  "Chaos Warp": {
+   "drawn": 39,
+   "played": 38,
+   "played_share": 0.974,
+   "median_turn": 7.0,
+   "win_rate_drawn": 0.154,
+   "win_rate_not_drawn": 0.075,
+   "held_at_loss": 0,
+   "mv": 3,
+   "type": "Instant"
+  },
+  "Panoptic Projektor": {
+   "drawn": 39,
+   "played": 36,
+   "played_share": 0.923,
+   "median_turn": 5.0,
+   "win_rate_drawn": 0.128,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Artifact"
+  },
+  "Seedborn Muse": {
+   "drawn": 33,
+   "played": 13,
+   "played_share": 0.394,
+   "median_turn": 9,
+   "win_rate_drawn": 0.273,
+   "win_rate_not_drawn": 0.054,
+   "held_at_loss": 8,
+   "mv": 5,
+   "type": "Creature - Spirit"
+  },
+  "Duskana, the Rage Mother": {
+   "drawn": 44,
+   "played": 21,
+   "played_share": 0.477,
+   "median_turn": 9,
+   "win_rate_drawn": 0.136,
+   "win_rate_not_drawn": 0.077,
+   "held_at_loss": 15,
+   "mv": 5,
+   "type": "Legendary Creature - Bear"
+  },
+  "Return of the Wildspeaker": {
+   "drawn": 51,
+   "played": 27,
+   "played_share": 0.529,
+   "median_turn": 7,
+   "win_rate_drawn": 0.137,
+   "win_rate_not_drawn": 0.074,
+   "held_at_loss": 16,
+   "mv": 5,
+   "type": "Instant"
+  },
+  "Scourge of the Throne": {
+   "drawn": 66,
+   "played": 15,
+   "played_share": 0.227,
+   "median_turn": 11,
+   "win_rate_drawn": 0.106,
+   "win_rate_not_drawn": 0.082,
+   "held_at_loss": 34,
+   "mv": 6,
+   "type": "Creature - Dragon"
+  },
+  "Den Protector": {
+   "drawn": 29,
+   "played": 7,
+   "played_share": 0.241,
+   "median_turn": 3,
+   "win_rate_drawn": 0.138,
+   "win_rate_not_drawn": 0.082,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Human Warrior"
+  },
+  "Hooded Hydra": {
+   "drawn": 35,
+   "played": 15,
+   "played_share": 0.429,
+   "median_turn": 11,
+   "win_rate_drawn": 0.2,
+   "win_rate_not_drawn": 0.067,
+   "held_at_loss": 12,
+   "mv": 2,
+   "type": "Creature - Snake Hydra"
+  },
+  "Krosan Cloudscraper": {
+   "drawn": 35,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.114,
+   "win_rate_not_drawn": 0.085,
+   "held_at_loss": 4,
+   "mv": 10,
+   "type": "Creature - Beast Mutant"
+  },
+  "Boltbender": {
+   "drawn": 44,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.159,
+   "win_rate_not_drawn": 0.071,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Creature - Goblin Wizard"
+  },
+  "Exalted Angel": {
+   "drawn": 35,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.114,
+   "win_rate_not_drawn": 0.085,
+   "held_at_loss": 3,
+   "mv": 6,
+   "type": "Creature - Angel"
+  },
+  "Toski, Bearer of Secrets": {
+   "drawn": 42,
+   "played": 23,
+   "played_share": 0.548,
+   "median_turn": 8,
+   "win_rate_drawn": 0.143,
+   "win_rate_not_drawn": 0.076,
+   "held_at_loss": 11,
+   "mv": 4,
+   "type": "Legendary Creature - Squirrel"
+  },
+  "Ohran Frostfang": {
+   "drawn": 40,
+   "played": 13,
+   "played_share": 0.325,
+   "median_turn": 10,
+   "win_rate_drawn": 0.125,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 18,
+   "mv": 5,
+   "type": "Snow Creature - Snake"
+  },
+  "Sidar Kondo of Jamuraa": {
+   "drawn": 36,
+   "played": 11,
+   "played_share": 0.306,
+   "median_turn": 9,
+   "win_rate_drawn": 0.083,
+   "win_rate_not_drawn": 0.091,
+   "held_at_loss": 14,
+   "mv": 4,
+   "type": "Legendary Creature - Human Knight"
+  },
+  "Scroll of Fate": {
+   "drawn": 47,
+   "played": 45,
+   "played_share": 0.957,
+   "median_turn": 6,
+   "win_rate_drawn": 0.128,
+   "win_rate_not_drawn": 0.078,
+   "held_at_loss": 2,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Veiled Ascension": {
+   "drawn": 47,
+   "played": 43,
+   "played_share": 0.915,
+   "median_turn": 7,
+   "win_rate_drawn": 0.17,
+   "win_rate_not_drawn": 0.065,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Printlifter Ooze": {
+   "drawn": 22,
+   "played": 7,
+   "played_share": 0.318,
+   "median_turn": 3,
+   "win_rate_drawn": 0.182,
+   "win_rate_not_drawn": 0.079,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Ooze"
+  },
+  "Welcoming Vampire": {
+   "drawn": 45,
+   "played": 29,
+   "played_share": 0.644,
+   "median_turn": 8,
+   "win_rate_drawn": 0.156,
+   "win_rate_not_drawn": 0.071,
+   "held_at_loss": 8,
+   "mv": 3,
+   "type": "Creature - Vampire"
+  },
+  "Sakura-Tribe Elder": {
+   "drawn": 47,
+   "played": 47,
+   "played_share": 1.0,
+   "median_turn": 5,
+   "win_rate_drawn": 0.085,
+   "win_rate_not_drawn": 0.092,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Snake Shaman"
+  },
+  "Ransom Note": {
+   "drawn": 36,
+   "played": 36,
+   "played_share": 1.0,
+   "median_turn": 4.0,
+   "win_rate_drawn": 0.083,
+   "win_rate_not_drawn": 0.091,
+   "held_at_loss": 0,
+   "mv": 1,
+   "type": "Artifact - Clue"
+  },
+  "Path to Exile": {
+   "drawn": 46,
+   "played": 45,
+   "played_share": 0.978,
+   "median_turn": 4,
+   "win_rate_drawn": 0.152,
+   "win_rate_not_drawn": 0.071,
+   "held_at_loss": 1,
+   "mv": 1,
+   "type": "Instant"
+  },
+  "Arcane Signet": {
+   "drawn": 44,
+   "played": 42,
+   "played_share": 0.955,
+   "median_turn": 5.5,
+   "win_rate_drawn": 0.136,
+   "win_rate_not_drawn": 0.077,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Artifact"
+  },
+  "Yedora, Grave Gardener": {
+   "drawn": 47,
+   "played": 9,
+   "played_share": 0.191,
+   "median_turn": 9,
+   "win_rate_drawn": 0.128,
+   "win_rate_not_drawn": 0.078,
+   "held_at_loss": 23,
+   "mv": 5,
+   "type": "Legendary Creature - Treefolk Druid"
+  },
+  "Neheb, the Eternal": {
+   "drawn": 45,
+   "played": 27,
+   "played_share": 0.6,
+   "median_turn": 8,
+   "win_rate_drawn": 0.022,
+   "win_rate_not_drawn": 0.11,
+   "held_at_loss": 11,
+   "mv": 5,
+   "type": "Legendary Creature - Zombie Minotaur Warrior"
+  },
+  "Nature's Lore": {
+   "drawn": 38,
+   "played": 38,
+   "played_share": 1.0,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.132,
+   "win_rate_not_drawn": 0.08,
+   "held_at_loss": 0,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Mirror Entity": {
+   "drawn": 53,
+   "played": 35,
+   "played_share": 0.66,
+   "median_turn": 9,
+   "win_rate_drawn": 0.113,
+   "win_rate_not_drawn": 0.082,
+   "held_at_loss": 12,
+   "mv": 3,
+   "type": "Creature - Shapeshifter"
+  },
+  "Ainok Survivalist": {
+   "drawn": 28,
+   "played": 11,
+   "played_share": 0.393,
+   "median_turn": 5,
+   "win_rate_drawn": 0.036,
+   "win_rate_not_drawn": 0.099,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Dog Shaman"
+  },
+  "Dusk // Dawn": {
+   "drawn": 45,
+   "played": 19,
+   "played_share": 0.422,
+   "median_turn": 9,
+   "win_rate_drawn": 0.044,
+   "win_rate_not_drawn": 0.103,
+   "held_at_loss": 17,
+   "mv": 9,
+   "type": "Sorcery"
+  },
+  "Tesak, Judith's Hellhound": {
+   "drawn": 49,
+   "played": 21,
+   "played_share": 0.429,
+   "median_turn": 9,
+   "win_rate_drawn": 0.082,
+   "win_rate_not_drawn": 0.093,
+   "held_at_loss": 23,
+   "mv": 4,
+   "type": "Legendary Creature - Elemental Dog"
+  },
+  "Whisperwood Elemental": {
+   "drawn": 50,
+   "played": 22,
+   "played_share": 0.44,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.12,
+   "win_rate_not_drawn": 0.08,
+   "held_at_loss": 16,
+   "mv": 5,
+   "type": "Creature - Elemental"
+  },
+  "Thelonite Hermit": {
+   "drawn": 42,
+   "played": 20,
+   "played_share": 0.476,
+   "median_turn": 10.0,
+   "win_rate_drawn": 0.167,
+   "win_rate_not_drawn": 0.07,
+   "held_at_loss": 6,
+   "mv": 4,
+   "type": "Creature - Elf Shaman"
+  },
+  "Unexplained Absence": {
+   "drawn": 33,
+   "played": 15,
+   "played_share": 0.455,
+   "median_turn": 12,
+   "win_rate_drawn": 0.121,
+   "win_rate_not_drawn": 0.084,
+   "held_at_loss": 13,
+   "mv": 4,
+   "type": "Instant"
+  },
+  "Hidden Dragonslayer": {
+   "drawn": 37,
+   "played": 13,
+   "played_share": 0.351,
+   "median_turn": 4,
+   "win_rate_drawn": 0.135,
+   "win_rate_not_drawn": 0.08,
+   "held_at_loss": 5,
+   "mv": 2,
+   "type": "Creature - Human Warrior"
+  },
+  "Showstopping Surprise": {
+   "drawn": 45,
+   "played": 10,
+   "played_share": 0.222,
+   "median_turn": 9.0,
+   "win_rate_drawn": 0.156,
+   "win_rate_not_drawn": 0.071,
+   "held_at_loss": 31,
+   "mv": 5,
+   "type": "Instant"
+  },
+  "Austere Command": {
+   "drawn": 41,
+   "played": 25,
+   "played_share": 0.61,
+   "median_turn": 10,
+   "win_rate_drawn": 0.098,
+   "win_rate_not_drawn": 0.088,
+   "held_at_loss": 13,
+   "mv": 6,
+   "type": "Sorcery"
+  },
+  "True Identity": {
+   "drawn": 32,
+   "played": 16,
+   "played_share": 0.5,
+   "median_turn": 4.0,
+   "win_rate_drawn": 0.125,
+   "win_rate_not_drawn": 0.083,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Trail of Mystery": {
+   "drawn": 50,
+   "played": 48,
+   "played_share": 0.96,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.12,
+   "win_rate_not_drawn": 0.08,
+   "held_at_loss": 2,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Ugin's Mastery": {
+   "drawn": 35,
+   "played": 31,
+   "played_share": 0.886,
+   "median_turn": 8,
+   "win_rate_drawn": 0.086,
+   "win_rate_not_drawn": 0.091,
+   "held_at_loss": 3,
+   "mv": 4,
+   "type": "Enchantment"
+  },
+  "Master of Pearls": {
+   "drawn": 25,
+   "played": 9,
+   "played_share": 0.36,
+   "median_turn": 7,
+   "win_rate_drawn": 0.12,
+   "win_rate_not_drawn": 0.086,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Human Monk"
+  },
+  "Mastery of the Unseen": {
+   "drawn": 41,
+   "played": 35,
+   "played_share": 0.854,
+   "median_turn": 7,
+   "win_rate_drawn": 0.171,
+   "win_rate_not_drawn": 0.069,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Enchantment"
+  },
+  "Krosan Colossus": {
+   "drawn": 34,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.147,
+   "win_rate_not_drawn": 0.078,
+   "held_at_loss": 6,
+   "mv": 9,
+   "type": "Creature - Beast"
+  },
+  "Temur War Shaman": {
+   "drawn": 44,
+   "played": 15,
+   "played_share": 0.341,
+   "median_turn": 11,
+   "win_rate_drawn": 0.068,
+   "win_rate_not_drawn": 0.096,
+   "held_at_loss": 18,
+   "mv": 6,
+   "type": "Creature - Human Shaman"
+  },
+  "Nervous Gardener": {
+   "drawn": 35,
+   "played": 17,
+   "played_share": 0.486,
+   "median_turn": 4,
+   "win_rate_drawn": 0.086,
+   "win_rate_not_drawn": 0.091,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Creature - Dryad"
+  },
+  "Akroma, Angel of Fury": {
+   "drawn": 39,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.205,
+   "win_rate_not_drawn": 0.062,
+   "held_at_loss": 1,
+   "mv": 8,
+   "type": "Legendary Creature - Angel"
+  },
+  "Root Elemental": {
+   "drawn": 30,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.133,
+   "win_rate_not_drawn": 0.082,
+   "held_at_loss": 3,
+   "mv": 6,
+   "type": "Creature - Elemental"
+  },
+  "Experiment Twelve": {
+   "drawn": 26,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.231,
+   "win_rate_not_drawn": 0.069,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Creature - Elf Lizard Warrior"
+  },
+  "Deathmist Raptor": {
+   "drawn": 38,
+   "played": 3,
+   "played_share": 0.079,
+   "median_turn": 6,
+   "win_rate_drawn": 0.053,
+   "win_rate_not_drawn": 0.099,
+   "held_at_loss": 9,
+   "mv": 3,
+   "type": "Creature - Dinosaur Beast"
+  },
+  "Ashcloud Phoenix": {
+   "drawn": 21,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.095,
+   "win_rate_not_drawn": 0.089,
+   "held_at_loss": 2,
+   "mv": 4,
+   "type": "Creature - Phoenix"
+  },
+  "Lifecrafter's Bestiary": {
+   "drawn": 41,
+   "played": 38,
+   "played_share": 0.927,
+   "median_turn": 6.0,
+   "win_rate_drawn": 0.146,
+   "win_rate_not_drawn": 0.075,
+   "held_at_loss": 1,
+   "mv": 3,
+   "type": "Artifact"
+  },
+  "Saryth, the Viper's Fang": {
+   "drawn": 40,
+   "played": 17,
+   "played_share": 0.425,
+   "median_turn": 11,
+   "win_rate_drawn": 0.125,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 15,
+   "mv": 4,
+   "type": "Legendary Creature - Human Warlock"
+  },
+  "Obscuring Aether": {
+   "drawn": 43,
+   "played": 39,
+   "played_share": 0.907,
+   "median_turn": 5,
+   "win_rate_drawn": 0.093,
+   "win_rate_not_drawn": 0.089,
+   "held_at_loss": 3,
+   "mv": 1,
+   "type": "Enchantment"
+  },
+  "Salt Road Ambushers": {
+   "drawn": 32,
+   "played": 0,
+   "played_share": 0.0,
+   "median_turn": null,
+   "win_rate_drawn": 0.031,
+   "win_rate_not_drawn": 0.101,
+   "held_at_loss": 5,
+   "mv": 4,
+   "type": "Creature - Dog Warrior"
+  },
+  "Broodhatch Nantuko": {
+   "drawn": 26,
+   "played": 10,
+   "played_share": 0.385,
+   "median_turn": 4.0,
+   "win_rate_drawn": 0.115,
+   "win_rate_not_drawn": 0.086,
+   "held_at_loss": 1,
+   "mv": 2,
+   "type": "Creature - Insect Druid"
+  },
+  "Imperial Hellkite": {
+   "drawn": 28,
+   "played": 1,
+   "played_share": 0.036,
+   "median_turn": 16,
+   "win_rate_drawn": 0.143,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 2,
+   "mv": 7,
+   "type": "Creature - Dragon"
+  },
+  "Nantuko Vigilante": {
+   "drawn": 39,
+   "played": 1,
+   "played_share": 0.026,
+   "median_turn": 10,
+   "win_rate_drawn": 0.128,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 10,
+   "mv": 4,
+   "type": "Creature - Insect Druid Mutant"
+  },
+  "Three Visits": {
+   "drawn": 45,
+   "played": 40,
+   "played_share": 0.889,
+   "median_turn": 4.5,
+   "win_rate_drawn": 0.111,
+   "win_rate_not_drawn": 0.084,
+   "held_at_loss": 3,
+   "mv": 2,
+   "type": "Sorcery"
+  },
+  "Fell the Mighty": {
+   "drawn": 40,
+   "played": 32,
+   "played_share": 0.8,
+   "median_turn": 8.0,
+   "win_rate_drawn": 0.125,
+   "win_rate_not_drawn": 0.081,
+   "held_at_loss": 4,
+   "mv": 5,
+   "type": "Sorcery"
+  },
+  "Decimate": {
+   "drawn": 35,
+   "played": 25,
+   "played_share": 0.714,
+   "median_turn": 10,
+   "win_rate_drawn": 0.143,
+   "win_rate_not_drawn": 0.079,
+   "held_at_loss": 9,
+   "mv": 4,
+   "type": "Sorcery"
+  }
+ },
+ "list": {
+  "Ainok Survivalist": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Dog Shaman",
+   "land": false
+  },
+  "Akroma, Angel of Fury": {
+   "count": 1,
+   "mv": 8,
+   "type": "Legendary Creature - Angel",
+   "land": false
+  },
+  "Arcane Signet": {
+   "count": 1,
+   "mv": 2,
+   "type": "Artifact",
+   "land": false
+  },
+  "Ashcloud Phoenix": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Phoenix",
+   "land": false
+  },
+  "Austere Command": {
+   "count": 1,
+   "mv": 6,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Beast Whisperer": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Elf Druid",
+   "land": false
+  },
+  "Boltbender": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Goblin Wizard",
+   "land": false
+  },
+  "Boros Garrison": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Branch of Vitu-Ghazi": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Broodhatch Nantuko": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Insect Druid",
+   "land": false
+  },
+  "Canopy Vista": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Forest Plains",
+   "land": true
+  },
+  "Chaos Warp": {
+   "count": 1,
+   "mv": 3,
+   "type": "Instant",
+   "land": false
+  },
+  "Cinder Glade": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Mountain Forest",
+   "land": true
+  },
+  "Command Tower": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Deathmist Raptor": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Dinosaur Beast",
+   "land": false
+  },
+  "Decimate": {
+   "count": 1,
+   "mv": 4,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Den Protector": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Warrior",
+   "land": false
+  },
+  "Dusk // Dawn": {
+   "count": 1,
+   "mv": 9,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Duskana, the Rage Mother": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Bear",
+   "land": false
+  },
+  "Exalted Angel": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Angel",
+   "land": false
+  },
+  "Exotic Orchard": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Experiment Twelve": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Elf Lizard Warrior",
+   "land": false
+  },
+  "Fell the Mighty": {
+   "count": 1,
+   "mv": 5,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Forest": {
+   "count": 1,
+   "mv": 0,
+   "type": "Basic Land - Forest",
+   "land": true
+  },
+  "Fortified Village": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Furycalm Snarl": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Game Trail": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Gruul Turf": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Hidden Dragonslayer": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Warrior",
+   "land": false
+  },
+  "Hooded Hydra": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Snake Hydra",
+   "land": false
+  },
+  "Imperial Hellkite": {
+   "count": 1,
+   "mv": 7,
+   "type": "Creature - Dragon",
+   "land": false
+  },
+  "Jeska's Will": {
+   "count": 1,
+   "mv": 3,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Jungle Shrine": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Kessig Wolf Run": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Krosan Cloudscraper": {
+   "count": 1,
+   "mv": 10,
+   "type": "Creature - Beast Mutant",
+   "land": false
+  },
+  "Krosan Colossus": {
+   "count": 1,
+   "mv": 9,
+   "type": "Creature - Beast",
+   "land": false
+  },
+  "Krosan Verge": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Lifecrafter's Bestiary": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Master of Pearls": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Human Monk",
+   "land": false
+  },
+  "Mastery of the Unseen": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Mirror Entity": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Shapeshifter",
+   "land": false
+  },
+  "Mossfire Valley": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Mosswort Bridge": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Mountain": {
+   "count": 1,
+   "mv": 0,
+   "type": "Basic Land - Mountain",
+   "land": true
+  },
+  "Nantuko Vigilante": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Insect Druid Mutant",
+   "land": false
+  },
+  "Nature's Lore": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Neheb, the Eternal": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Zombie Minotaur Warrior",
+   "land": false
+  },
+  "Nervous Gardener": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Dryad",
+   "land": false
+  },
+  "Obscuring Aether": {
+   "count": 1,
+   "mv": 1,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Ohran Frostfang": {
+   "count": 1,
+   "mv": 5,
+   "type": "Snow Creature - Snake",
+   "land": false
+  },
+  "Panoptic Projektor": {
+   "count": 1,
+   "mv": 4,
+   "type": "Artifact",
+   "land": false
+  },
+  "Path to Exile": {
+   "count": 1,
+   "mv": 1,
+   "type": "Instant",
+   "land": false
+  },
+  "Plains": {
+   "count": 2,
+   "mv": 0,
+   "type": "Basic Land - Plains",
+   "land": true
+  },
+  "Printlifter Ooze": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Ooze",
+   "land": false
+  },
+  "Ransom Note": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact - Clue",
+   "land": false
+  },
+  "Return of the Wildspeaker": {
+   "count": 1,
+   "mv": 5,
+   "type": "Instant",
+   "land": false
+  },
+  "Root Elemental": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Elemental",
+   "land": false
+  },
+  "Sacred Peaks": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Mountain Plains",
+   "land": true
+  },
+  "Sakura-Tribe Elder": {
+   "count": 1,
+   "mv": 2,
+   "type": "Creature - Snake Shaman",
+   "land": false
+  },
+  "Salt Road Ambushers": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Dog Warrior",
+   "land": false
+  },
+  "Saryth, the Viper's Fang": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Human Warlock",
+   "land": false
+  },
+  "Scattered Groves": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Forest Plains",
+   "land": true
+  },
+  "Scourge of the Throne": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Dragon",
+   "land": false
+  },
+  "Scroll of Fate": {
+   "count": 1,
+   "mv": 3,
+   "type": "Artifact",
+   "land": false
+  },
+  "Seedborn Muse": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Spirit",
+   "land": false
+  },
+  "Selesnya Sanctuary": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Sheltered Thicket": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land - Mountain Forest",
+   "land": true
+  },
+  "Showstopping Surprise": {
+   "count": 1,
+   "mv": 5,
+   "type": "Instant",
+   "land": false
+  },
+  "Shrine of the Forsaken Gods": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Sidar Kondo of Jamuraa": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Human Knight",
+   "land": false
+  },
+  "Sol Ring": {
+   "count": 1,
+   "mv": 1,
+   "type": "Artifact",
+   "land": false
+  },
+  "Sungrass Prairie": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Temple of Abandon": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Temple of Plenty": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Temple of Triumph": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Temple of the False God": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  },
+  "Temur War Shaman": {
+   "count": 1,
+   "mv": 6,
+   "type": "Creature - Human Shaman",
+   "land": false
+  },
+  "Tesak, Judith's Hellhound": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Elemental Dog",
+   "land": false
+  },
+  "Thelonite Hermit": {
+   "count": 1,
+   "mv": 4,
+   "type": "Creature - Elf Shaman",
+   "land": false
+  },
+  "Three Visits": {
+   "count": 1,
+   "mv": 2,
+   "type": "Sorcery",
+   "land": false
+  },
+  "Toski, Bearer of Secrets": {
+   "count": 1,
+   "mv": 4,
+   "type": "Legendary Creature - Squirrel",
+   "land": false
+  },
+  "Trail of Mystery": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment",
+   "land": false
+  },
+  "True Identity": {
+   "count": 1,
+   "mv": 2,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Ugin's Mastery": {
+   "count": 1,
+   "mv": 4,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Unexplained Absence": {
+   "count": 1,
+   "mv": 4,
+   "type": "Instant",
+   "land": false
+  },
+  "Veiled Ascension": {
+   "count": 1,
+   "mv": 4,
+   "type": "Enchantment",
+   "land": false
+  },
+  "Welcoming Vampire": {
+   "count": 1,
+   "mv": 3,
+   "type": "Creature - Vampire",
+   "land": false
+  },
+  "Whisperwood Elemental": {
+   "count": 1,
+   "mv": 5,
+   "type": "Creature - Elemental",
+   "land": false
+  },
+  "Wild Growth": {
+   "count": 1,
+   "mv": 1,
+   "type": "Enchantment - Aura",
+   "land": false
+  },
+  "Yedora, Grave Gardener": {
+   "count": 1,
+   "mv": 5,
+   "type": "Legendary Creature - Treefolk Druid",
+   "land": false
+  },
+  "Zoetic Cavern": {
+   "count": 1,
+   "mv": 0,
+   "type": "Land",
+   "land": true
+  }
+ },
+ "outcomes": {
+  "g0001": 1,
+  "g0002": 0,
+  "g0003": 0,
+  "g0004": 0,
+  "g0005": 0,
+  "g0006": 0,
+  "g0007": 0,
+  "g0008": 1,
+  "g0009": 0,
+  "g0010": 0,
+  "g0011": 0,
+  "g0012": 0,
+  "g0013": 0,
+  "g0014": 0,
+  "g0015": 0,
+  "g0016": 0,
+  "g0017": 1,
+  "g0018": 0,
+  "g0019": 0,
+  "g0020": 0,
+  "g0021": 0,
+  "g0022": 0,
+  "g0023": 0,
+  "g0024": 0,
+  "g0025": 0,
+  "g0026": 1,
+  "g0027": 0,
+  "g0028": 0,
+  "g0029": 0,
+  "g0030": 0,
+  "g0031": 0,
+  "g0032": 0,
+  "g0033": 0,
+  "g0034": 0,
+  "g0035": 0,
+  "g0036": 0,
+  "g0037": 0,
+  "g0038": 0,
+  "g0039": 0,
+  "g0040": 0,
+  "g0041": 0,
+  "g0042": 0,
+  "g0043": 1,
+  "g0044": 0,
+  "g0045": 0,
+  "g0046": 0,
+  "g0047": 0,
+  "g0048": 0,
+  "g0049": 0,
+  "g0050": 0,
+  "g0051": 0,
+  "g0052": 0,
+  "g0053": 0,
+  "g0054": 0,
+  "g0055": 0,
+  "g0056": 0,
+  "g0057": 0,
+  "g0058": 0,
+  "g0059": 0,
+  "g0060": 1,
+  "g0061": 0,
+  "g0062": 0,
+  "g0063": 0,
+  "g0064": 0,
+  "g0065": 0,
+  "g0066": 0,
+  "g0067": 0,
+  "g0068": 0,
+  "g0069": 0,
+  "g0070": 0,
+  "g0071": 0,
+  "g0072": 0,
+  "g0073": 0,
+  "g0074": 0,
+  "g0075": 0,
+  "g0076": 0,
+  "g0077": 0,
+  "g0078": 0,
+  "g0079": 0,
+  "g0080": 0,
+  "g0081": 0,
+  "g0082": 0,
+  "g0083": 1,
+  "g0084": 0,
+  "g0085": 0,
+  "g0086": 0,
+  "g0087": 0,
+  "g0088": 0,
+  "g0089": 0,
+  "g0090": 0,
+  "g0091": 0,
+  "g0092": 0,
+  "g0093": 0,
+  "g0094": 0,
+  "g0095": 0,
+  "g0096": 0,
+  "g0097": 0,
+  "g0098": 0,
+  "g0099": 0,
+  "g0100": 0,
+  "g0101": 1,
+  "g0102": 0,
+  "g0103": 0,
+  "g0104": 0,
+  "g0105": 0,
+  "g0106": 0,
+  "g0107": 0,
+  "g0108": 0,
+  "g0109": 0,
+  "g0110": 0,
+  "g0111": 0,
+  "g0112": 0,
+  "g0113": 0,
+  "g0114": 0,
+  "g0115": 0,
+  "g0116": 0,
+  "g0117": 0,
+  "g0118": 0,
+  "g0119": 0,
+  "g0120": 1,
+  "g0121": 0,
+  "g0122": 0,
+  "g0123": 0,
+  "g0124": 0,
+  "g0125": 1,
+  "g0126": 0,
+  "g0127": 0,
+  "g0128": 0,
+  "g0129": 0,
+  "g0130": 0,
+  "g0131": 0,
+  "g0132": 0,
+  "g0133": 1,
+  "g0134": 0,
+  "g0135": 0,
+  "g0136": 0,
+  "g0137": 0,
+  "g0138": 0,
+  "g0139": 0,
+  "g0140": 0,
+  "g0141": 0,
+  "g0142": 0,
+  "g0143": 0,
+  "g0144": 0,
+  "g0145": 1,
+  "g0146": 0,
+  "g0147": 0,
+  "g0148": 0,
+  "g0149": 0,
+  "g0150": 1,
+  "g0151": 0,
+  "g0152": 0,
+  "g0153": 0,
+  "g0154": 0,
+  "g0155": 1,
+  "g0156": 0,
+  "g0157": 0,
+  "g0158": 0,
+  "g0159": 0,
+  "g0160": 1,
+  "g0161": 0,
+  "g0162": 0,
+  "g0163": 0,
+  "g0164": 0,
+  "g0165": 0,
+  "g0166": 0,
+  "g0167": 0,
+  "g0168": 0,
+  "g0169": 0,
+  "g0170": 0,
+  "g0171": 0,
+  "g0172": 1,
+  "g0173": 0,
+  "g0174": 0,
+  "g0175": 0,
+  "g0176": 0,
+  "g0177": 0,
+  "g0178": 0,
+  "g0179": 0,
+  "g0180": 0,
+  "g0181": 0,
+  "g0182": 1,
+  "g0183": 0,
+  "g0184": 0,
+  "g0185": 0,
+  "g0186": 0,
+  "g0187": 0,
+  "g0188": 0,
+  "g0189": 0,
+  "g0190": 0,
+  "g0191": 0,
+  "g0192": 0,
+  "g0193": 0,
+  "g0194": 0,
+  "g0195": 0,
+  "g0196": 0,
+  "g0197": 0,
+  "g0198": 0,
+  "g0199": 1,
+  "g0200": 0
+ }
+}

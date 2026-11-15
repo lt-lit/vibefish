@@ -195,3 +195,38 @@ where the stock pilot won 42 of the same tables) and `veloci-ramp-tor-answers-ac
 the runs' own rollups of the cut arms. Every other file is the run's own rollup (Blood Rites and Revenant Recon: rolled up from
 `ab-run` #38's shard artifacts before its rollup job had run). The card check of each deck's three arms is in
 `demo-data/playtest/2026-11-14/second-pass/`, the goldfish pairs of the shipped files in `demo-data/goldfish/2026-11-14/`.
+
+`2026-11-15-ab-v19/`: the round of the twelve on the pool as it is since 2026-11-14 (DESIGN.md §32; `ab-run` #40, seed 20261320,
+opponents drawn from the other eleven decks of `bots-v2` under their shipped playbooks). `<deck>.json` has the stock pilot and the
+shipped playbook on the same 200 tables; the tables chose nothing. It is the first time the nine versions with answer rules of
+2026-11-14 met their stock pilots. Wins of 200 as stock pilot / playbook: Hail, Caesar 28 / 59 (+15.5 points, 95% +9 to +22, exact
+test under 0.0001); Eldrazi Incursion 34 / 59 (+12.5, +5 to +20, 0.0026); Planeswalker Party 42 / 65 (+11.5, +3 to +20, 0.011);
+Goblin Storm 19 / 34 (+7.5, +1 to +14, 0.032); Deep Clue Sea 42 / 57 (+7.5, -0 to +15, 0.077); Tricky Terrain 33 / 47 (+7.0, -0 to
++14, 0.087); Token Triumph 45 / 58 (+6.5, -1 to +14, 0.11); Enduring Enchantments 45 / 58 (+6.5, -2 to +15, 0.17); Limit Break
+29 / 37 (+4.0, -3 to +11, 0.31); Quick Draw 35 / 42 (+3.5, -4 to +11, 0.43); Elven Council 23 / 28 (+2.5, -4 to +9, 0.52); Wretched
+Ranks 30 / 29 (-0.5, -7 to +6, 1.0). Over the 2,400 tables 405 / 573: 16.9% against 23.9% (423 tables only the playbook won
+against 255 only the stock pilot won). By the rule fixed before the round was read (ahead or level stays) all twelve stay.
+
+`2026-11-15-ab-v20/`: the round of the owner's ten at the owner's table (DESIGN.md §32; `ab-run` #42, seed 20261350, opponents drawn
+from the other nine decks of `owners-table-v1` under their shipped playbooks). `<deck>.json` has the stock pilot and the shipped
+playbook on the same 200 tables; the tables chose nothing, so this is the confirming run of the ten, at the table they are for. Wins
+of 200 as stock pilot / playbook: Ahoy Mateys 34 / 65 (+15.5, 95% +7 to +24, exact test 0.0004); Death Toll 34 / 56 (+11.0, +3 to
++19, 0.0092); Mutant Menace 28 / 40 (+6.0, -1 to +13, 0.13); Blight Curse 41 / 53 (+6.0, -2 to +14, 0.19); Squirreled Away 27 / 36
+(+4.5, -2 to +11, 0.25); Blood Rites 72 / 75 (+1.5, -7 to +10, 0.83); Miracle Worker 51 / 52 (+0.5, -8 to +9, 1.0); Veloci-Ramp-Tor
+68 / 68; Deadly Disguise 20 / 18 (-1.0, -6 to +4, 0.86); Revenant Recon 64 / 48 (-8.0, -17 to +1, 0.093). Over the 2,000 tables
+439 / 511: 22.0% against 25.6% (363 tables only the playbook won against 291 only the stock pilot won, exact test 0.0055). By the
+same rule all ten stay; Revenant Recon is behind, inside noise, and goes first into the next pass. The exam each of the ten shipped
+on is the row above (`2026-11-14-ab-v18/`): there the shipped arms were 157 tables ahead of the stock pilots over the ten decks, here
+72, which is what choosing the better of two attacks on the tables that measured it costs, and another table.
+
+`2026-11-15-ab-v21/`: the trial of the `forge` rule's wait option (DESIGN.md §32; `ab-run` #41, seed 20261340, opponents drawn from
+`bots-v2` under their shipped playbooks, harness 0.3.3). `<deck>-<name>-forge.json` has the stock pilot and the first go-wide
+candidate with a `forge` rule after its commander's rule; `<deck>-<name>-forgewait.json` the same file with `"wait": "main2"` on that
+rule (playbook arm only); `<deck>-wait-join.json` the three side by side (kind `ab-join`; arms `stock`, `forge`, `forgewait`). Wins of
+200 as stock / forge / forgewait: Blight Curse `wretch` 43 / 42 / 49 (the wait on the rule without it +3.5, 95% -4 to +11, exact test
+0.42); Mutant Menace `mothman` 41 / 60 / 55 (-2.5, 0.50); Squirreled Away `acorns` 55 / 54 / 48 (-3.0, 0.44); Ahoy Mateys `crew`
+32 / 63 / 59 (-2.0, 0.63). Over the 800 tables 171 / 219 / 211; the wait won 81 tables the rule without it lost and lost 89 it won
+(exact test 0.59): no difference in wins. What it does to the cards is in `demo-data/playtest/2026-11-15/wait-trial/`: the cards no
+rule names are cast as often as the stock pilot casts them again (72% of the games drawn against the stock pilot's 70% and the plain
+`forge` rule's 62%), and the cards the rules below the `forge` rule name lose as much (70% against 76%). No shipped playbook takes
+the option on this trial.
