@@ -19,9 +19,15 @@ public final class Playbook {
     /** Attack policy. {@code go_wide}: attack the chosen opponent with every creature not needed to survive the
      *  strongest opponent's counter-attack, as long as at least {@code minAttackers} can go. {@code pressure}: the
      *  same reserve, but an attacker a blocker would kill stays home unless the damage the swing gets through pays
-     *  for the creatures it loses ({@code damagePerLoss}), and the swing goes at the opponent it scores best on. */
+     *  for the creatures it loses ({@code damagePerLoss}), and the swing goes at the opponent it scores best on.
+     *  {@code forge}: Forge's own attack, which is also what a playbook without an attack block gets; the block is
+     *  then there for {@code finish}. With {@code finish}, whatever the policy declared, an opponent the seat is
+     *  sure to kill is killed: enough attackers are put on it that the damage gets through whatever it blocks
+     *  (one blocker an attacker, Forge's own rules for who may block whom), the opponent that looks most dangerous
+     *  first and then any other the creatures that are left can kill the same way. */
     public static final class Attack {
-        public final String policy;        // go_wide | pressure
+        public final String policy;        // go_wide | pressure | forge
+        public final boolean finish;       // take a kill no block prevents
         public final String target;        // lowest_life | weakest_board | highest_life | biggest_board
         public final int minAttackers;     // fewer than this: Forge decides
         public final int safetyMargin;     // life to keep above the strongest opponent's possible attack
@@ -31,9 +37,10 @@ public final class Playbook {
 
         Attack(JsonObject o) {
             policy = str(o, "policy", "go_wide");
-            if (!List.of("go_wide", "pressure").contains(policy)) {
-                throw new IllegalArgumentException("playbook attack policy must be go_wide or pressure");
+            if (!List.of("go_wide", "pressure", "forge").contains(policy)) {
+                throw new IllegalArgumentException("playbook attack policy must be go_wide, pressure or forge");
             }
+            finish = o.has("finish") && o.get("finish").isJsonPrimitive() && o.get("finish").getAsBoolean();
             target = str(o, "target", "lowest_life");
             if (!List.of("lowest_life", "weakest_board", "highest_life", "biggest_board").contains(target)) {
                 throw new IllegalArgumentException("playbook attack target must be lowest_life, weakest_board, highest_life or biggest_board");
@@ -451,9 +458,14 @@ public final class Playbook {
     public String describe() {
         StringBuilder sb = new StringBuilder("v" + version);
         if (attack != null) {
-            sb.append(" attack=").append(attack.policy).append('/').append(attack.target)
-              .append(" min=").append(attack.minAttackers).append(" margin=").append(attack.safetyMargin).append(" reserve<=").append(attack.maxReserve)
-              .append(attack.spread ? " spread" : "").append("pressure".equals(attack.policy) ? " damage/loss>=" + attack.damagePerLoss : "");
+            if ("forge".equals(attack.policy)) {
+                sb.append(" attack=forge's own");
+            } else {
+                sb.append(" attack=").append(attack.policy).append('/').append(attack.target)
+                  .append(" min=").append(attack.minAttackers).append(" margin=").append(attack.safetyMargin).append(" reserve<=").append(attack.maxReserve)
+                  .append(attack.spread ? " spread" : "").append("pressure".equals(attack.policy) ? " damage/loss>=" + attack.damagePerLoss : "");
+            }
+            sb.append(attack.finish ? ", takes a sure kill" : "");
         }
         if (mulligan != null) {
             sb.append(" mulligan=lands ").append(mulligan.minLands).append('-').append(mulligan.maxLands).append(" max ").append(mulligan.maxMulligans);

@@ -337,7 +337,9 @@ def summarise(arms, per_arm):
                           "avg_turn_lost": rl.mean([g["focus_lost_turn"] for g in games.values() if g["focus_lost_turn"] is not None]),
                           "wins_by_seat": [sum(1 for g in games.values() if g["won"] and g["focus_seat"] == s)
                                            for s in range(max([len(g["seats"]) for g in games.values()] or [4]))],
-                          "playbook": sum_stats([g["playbook_stats"] for g in games.values() if g.get("playbook_stats")])}
+                          "playbook": sum_stats([g["playbook_stats"] for g in games.values() if g.get("playbook_stats")]),
+                          # 0.4.0: the seat under test's own counters (the sum above is over every playbook seat of a game)
+                          "playbook_focus": sum_stats([g["playbook_focus"] for g in games.values() if g.get("playbook_focus")])}
     pairs = {}
     if len(arms) >= 2:
         base, other_arms = arms[0], arms[1:]
@@ -394,7 +396,8 @@ def cmd_rollup(args):
                                              "reason": gm.get("reason"), "duration_ms": gm.get("duration_ms"),
                                              "focus_lost_turn": next((p.get("turn_lost") for p in gm.get("players", []) if p.get("seat") == fs), None),
                                              "data": (run["decks"][fs].get("data") or {}).get("key_cards_applied"), "ai_lists": run.get("ai_lists"),
-                                             "playbook_stats": gm.get("playbook_stats")}
+                                             "playbook_stats": gm.get("playbook_stats"),
+                                             "playbook_focus": (gm.get("playbook_stats_by_seat") or {}).get(deck)}
         per_arm[arm] = games
     arm_stats, pairs = summarise(meta["arms"], per_arm)
     result = {"vibefish": rl.VERSION, "generated": lg.now(), "kind": "ab", **{k: v for k, v in meta.items() if k != "data_effective"},

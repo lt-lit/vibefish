@@ -66,7 +66,7 @@ import forge.util.MyRandom;
  * Relative paths resolve against $VIBEFISH_CWD when set (the launcher cds into the Forge runtime).
  */
 public final class Sim {
-    public static final String VERSION = "0.3.4";
+    public static final String VERSION = "0.4.0";
     static final Gson GSON = new GsonBuilder().disableHtmlEscaping().serializeNulls().create();
     static final Gson GSON_PRETTY = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
 
@@ -300,7 +300,7 @@ public final class Sim {
                 playbookInfo = obj("file", pf.getName(), "version", playbook.version, "attack", playbook.attack == null ? null
                         : obj("policy", playbook.attack.policy, "target", playbook.attack.target, "min_attackers", playbook.attack.minAttackers,
                               "safety_margin", playbook.attack.safetyMargin, "max_reserve", playbook.attack.maxReserve, "spread", playbook.attack.spread,
-                              "damage_per_loss", playbook.attack.damagePerLoss),
+                              "damage_per_loss", playbook.attack.damagePerLoss, "finish", playbook.attack.finish),
                         "mulligan", playbook.mulligan == null ? null
                         : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans),
                         "cast", playbook.cast == null ? null : playbook.cast.source,
@@ -468,6 +468,7 @@ public final class Sim {
                 }
                 if (!playbookFiles.isEmpty()) {
                     summary.put("playbook_stats", PlaybookController.statsSnapshot());
+                    summary.put("playbook_stats_by_seat", PlaybookController.statsBySeatSnapshot());
                 }
                 gameList.add(summary);
                 System.err.printf("[vibefish] game %d done: %s, turn %d, winner %s, %d s%n", g, endReason, turns,

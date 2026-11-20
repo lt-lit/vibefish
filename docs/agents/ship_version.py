@@ -10,7 +10,8 @@ For a candidate that was judged against the shipped playbook of its own deck on 
 stock pilot. What it does:
   1. reads playbook/variants/DECK-NAME.json and refuses it unless its version is the shipped version plus one and it has
      the same attack block as the shipped playbook (the tables played the candidate as it is; an attack is not changed
-     on the way in);
+     on the way in), unless --attack-changes says the attack block is the change that was examined (a `finish`
+     candidate, 2026-11-20);
   2. writes that playbook, with `on` and the note, as the `playbook` object of playbook/precons/DECK.json;
   3. in the deck's row of playbook/bots.json: the new status, the summary with --summary-add appended, and the tables of
      this exam under `version_tables` (file, old arm, new arm, run). The row's `tables` stay: they are the last
@@ -57,6 +58,8 @@ def main(argv):
     ap.add_argument("--summary-add")
     ap.add_argument("--note", required=True)
     ap.add_argument("--on", default=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d"))
+    ap.add_argument("--attack-changes", action="store_true",
+                    help="the candidate's attack block is the change (a `finish` candidate): do not refuse it for differing from the shipped one")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args(argv)
     new_arm = a.new_arm or a.name
@@ -70,8 +73,8 @@ def main(argv):
     pb = dict(var["playbook"])
     if pb.get("version") != old.get("version", 0) + 1:
         raise SystemExit(f"the candidate is version {pb.get('version')}, the shipped playbook version {old.get('version')}")
-    if pb.get("attack") != old.get("attack"):
-        raise SystemExit("the candidate's attack block is not the shipped one")
+    if pb.get("attack") != old.get("attack") and not a.attack_changes:
+        raise SystemExit("the candidate's attack block is not the shipped one (--attack-changes when that is the change)")
     notes = pb.get("notes")
     notes = (notes + [a.note]) if isinstance(notes, list) else ((notes + " " if notes else "") + a.note)
     shipped = {k: v for k, v in pb.items() if k not in ("notes", "on")}

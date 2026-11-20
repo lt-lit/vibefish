@@ -85,6 +85,25 @@ Forge declares. `min_attackers` defaults to 1 for this policy; `spread` is not u
 Against no blockers it plays exactly as `go_wide` with `spread`. Counters: `attack_none`, `attack_held`,
 `attack_lethal`, `attack_expected_losses`, `attack_forced`.
 
+`forge` (harness 0.4.0) is Forge's own attack, which is also what a playbook without an `attack` block gets; the
+block is then there to carry `finish`.
+
+`"finish": true` (harness 0.4.0), on any policy, takes a kill no block prevents. After the policy has declared its
+attack, each opponent the seat is sure to kill gets enough attackers that the damage reaches its life whatever it
+blocks: who may attack and block whom is Forge's own (`CombatUtil.canAttack`, `canBlock(attacker, blocker)`, so flying,
+reach, protection and the like count), every blocker is assumed to stop one attacker whole (no trample is credited,
+and an attacker that needs two blockers is assumed stopped by one), infect counts for nothing and an attack that
+costs something is left out, so the count errs low. The opponent that looks most dangerous (life plus twice its
+nonland permanents, the weights of `cast.danger`) is killed first, then any other the creatures still unassigned
+can kill the same way; the heaviest attackers go first and only as many as it takes. Creatures the policy had sent
+elsewhere are moved, everything else stays as the policy declared it, and if the changed attack is not a legal one
+the policy's own is put back. It was built from a count: at the owner's table a bot that could kill an opponent this
+way did not in three of ten such turns, and went on to lose most of those games (`runner/mistakes.py`, `DESIGN.md`
+§34). A fog, a flash blocker or a life gain can still undo it. Counters: `attack_kill_seen` (turns with such a kill),
+`attack_kill` (attackers were added or moved for it), `attack_kill_moved` (how many), `attack_kill_already` (the
+policy's own attack already had them there), `attack_kill_invalid`, `attack_kill_errors`.
+`{"attack": {"policy": "forge", "finish": true}}`.
+
 The `mulligan` rule keeps a hand whose land count is within the range and never mulligans past `max_mulligans`;
 without it Forge's own mulligan logic runs.
 

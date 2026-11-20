@@ -18,6 +18,7 @@ import forge.ai.ComputerUtilMana;
 import forge.ai.PlayerControllerAi;
 import forge.ai.SpellApiToAi;
 import forge.game.Game;
+import forge.game.GameEntity;
 import forge.game.ability.ApiType;
 import forge.game.card.Card;
 import forge.game.card.CardCollection;
@@ -60,12 +61,29 @@ public class PlaybookController extends PlayerControllerAi {
         this.playbook = playbook;
     }
 
+    /** The same counters for each playbook seat by itself, keyed by the seat's name, which is its deck id (0.4.0). */
+    private static final Map<String, Map<String, Integer>> BY_SEAT = new LinkedHashMap<>();
+
     public static synchronized void resetStats() {
         STATS.clear();
+        BY_SEAT.clear();
     }
 
-    private static synchronized void count(String key, int by) {
+    private static synchronized void add(String seat, String key, int by) {
         STATS.merge(key, by, Integer::sum);
+        BY_SEAT.computeIfAbsent(seat, k -> new LinkedHashMap<>()).merge(key, by, Integer::sum);
+    }
+
+    private void count(String key, int by) {
+        add(player.getName(), key, by);
+    }
+
+    public static synchronized Map<String, Map<String, Integer>> statsBySeatSnapshot() {
+        Map<String, Map<String, Integer>> copy = new LinkedHashMap<>();
+        for (Map.Entry<String, Map<String, Integer>> e : BY_SEAT.entrySet()) {
+            copy.put(e.getKey(), new LinkedHashMap<>(e.getValue()));
+        }
+        return copy;
     }
 
     public static synchronized Map<String, Integer> statsSnapshot() {
@@ -82,19 +100,116 @@ public class PlaybookController extends PlayerControllerAi {
             return;
         }
         count("attack_decisions", 1);
-        try {
-            if ("pressure".equals(policy.policy) ? pressure(attacker, combat, policy) : goWide(attacker, combat, policy)) {
-                count("attack_policy", 1);
-                return;
+        boolean declared = false;
+        if ("forge".equals(policy.policy)) {
+            super.declareAttackers(attacker, combat);   // Forge's own attack; the block is there for what follows it
+            declared = true;
+        } else {
+            try {
+                if ("pressure".equals(policy.policy) ? pressure(attacker, combat, policy) : goWide(attacker, combat, policy)) {
+                    count("attack_policy", 1);
+                    declared = true;
+                }
+            } catch (RuntimeException e) {
+                count("attack_errors", 1);
+                for (Card c : new ArrayList<>(combat.getAttackers())) {
+                    combat.removeFromCombat(c);
+                }
             }
-        } catch (RuntimeException e) {
-            count("attack_errors", 1);
+            if (!declared) {
+                count("attack_fallback", 1);
+                super.declareAttackers(attacker, combat);
+            }
+        }
+        if (policy.finish) {
+            try {
+                finish(attacker, combat);
+            } catch (RuntimeException e) {
+                count("attack_kill_errors", 1);
+            }
+        }
+    }
+
+    /**
+     * Take a kill no block prevents. After the policy has declared its attack, each opponent the seat is sure to
+     * kill gets enough attackers that the damage reaches its life whatever it blocks: the opponent that looks most
+     * dangerous first, then any other that the creatures still unassigned can kill the same way. Creatures the
+     * policy sent elsewhere are moved; everything else stays as declared. If the changed attack is not a legal
+     * one the policy's own declaration is put back.
+     */
+    private void finish(Player attacker, Combat combat) {
+        List<Player> opps = new ArrayList<>();
+        for (Player opp : attacker.getOpponents()) {
+            if (!opp.hasLost() && opp.getLife() > 0) {
+                opps.add(opp);
+            }
+        }
+        opps.sort((a, b) -> Integer.compare(danger(b), danger(a)));
+        Map<Card, Player> plan = new LinkedHashMap<>();
+        StringBuilder what = new StringBuilder();
+        for (Player d : opps) {
+            List<Card> can = new ArrayList<>();
+            for (Card c : CombatMath.freeAttackers(getGame(), attacker, d)) {
+                if (!plan.containsKey(c)) {
+                    can.add(c);
+                }
+            }
+            can.sort((x, y) -> Integer.compare(CombatMath.hits(y), CombatMath.hits(x)));
+            List<Card> blockers = CombatMath.ableBlockers(d);
+            if (CombatMath.through(can, blockers) < d.getLife()) {
+                continue;
+            }
+            List<Card> chosen = new ArrayList<>();
+            for (Card c : can) {                        // the heaviest first, until what is sure to get through is enough
+                chosen.add(c);
+                if (CombatMath.through(chosen, blockers) >= d.getLife()) {
+                    break;
+                }
+            }
+            for (Card c : chosen) {
+                plan.put(c, d);
+            }
+            what.append(what.length() == 0 ? "" : "; ").append(chosen.size()).append(" at ").append(d.getName())
+                .append(" (life ").append(d.getLife()).append(", ").append(CombatMath.through(chosen, blockers)).append(" sure through ")
+                .append(blockers.size()).append(" blockers)");
+        }
+        if (plan.isEmpty()) {
+            return;
+        }
+        count("attack_kill_seen", 1);
+        Map<Card, GameEntity> before = new LinkedHashMap<>();
+        for (Card c : combat.getAttackers()) {
+            before.put(c, combat.getDefenderByAttacker(c));
+        }
+        int moved = 0;
+        for (Map.Entry<Card, Player> e : plan.entrySet()) {
+            GameEntity now = before.get(e.getKey());
+            if (now == e.getValue()) {
+                continue;
+            }
+            if (now != null) {
+                combat.removeFromCombat(e.getKey());
+            }
+            combat.addAttacker(e.getKey(), e.getValue());
+            moved++;
+        }
+        if (moved == 0) {
+            count("attack_kill_already", 1);            // the policy's own attack had them there
+            return;
+        }
+        if (!CombatUtil.validateAttackers(combat)) {
             for (Card c : new ArrayList<>(combat.getAttackers())) {
                 combat.removeFromCombat(c);
             }
+            for (Map.Entry<Card, GameEntity> e : before.entrySet()) {
+                combat.addAttacker(e.getKey(), e.getValue());
+            }
+            count("attack_kill_invalid", 1);
+            return;
         }
-        count("attack_fallback", 1);
-        super.declareAttackers(attacker, combat);
+        count("attack_kill", 1);
+        count("attack_kill_moved", moved);
+        trace("takes the kill: " + what + " (" + moved + " attacker(s) added or moved)");
     }
 
     /** Attack the chosen opponent with every creature the reserve does not need. True when the policy declared. */
@@ -1267,7 +1382,9 @@ public class PlaybookController extends PlayerControllerAi {
         for (Card c : opp.getCardsIn(ZoneType.Battlefield)) {
             permanents += c.isLand() ? 0 : 1;
         }
-        return playbook.cast.dangerLife * opp.getLife() + playbook.cast.dangerPermanents * permanents;
+        int life = playbook.cast == null ? 1 : playbook.cast.dangerLife;
+        int perms = playbook.cast == null ? 2 : playbook.cast.dangerPermanents;
+        return life * opp.getLife() + perms * permanents;
     }
 
     private static boolean aimKind(Card c, String kind) {

@@ -9,7 +9,7 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status (2026-11-15):** twenty-two precons have a per-deck bot: a playbook for one deck that says which card to cast
+**Status (2026-11-20):** twenty-two precons have a per-deck bot: a playbook for one deck that says which card to cast
 when and aimed at what, which of the deck's optional triggers to take, and when to use its board wipes and removal;
 three of them also choose their own attacks, and everything else stays Forge's. Each has been set against the same
 deck under Forge's stock AI at 200 four-player tables whose other three seats are bots too, on tables that chose
@@ -23,7 +23,7 @@ What the bots still lack is the table itself: their attacks and most of their re
 at the widest board and the lowest life, and at the player who goes on to win less often than chance. The first piece
 against that is in (`DESIGN.md` §33): a rule can aim a spell at the best permanent of the opponent that looks most
 dangerous, and three bots use it since 2026-11-15 to cast removal that neither Forge's AI nor their earlier versions
-ever cast. The dashboard shows all twenty-two in one table. Underneath: the benchmark pod
+ever cast. The bar from here on is play at the level of a person, and it is counted in mistakes that need no human to define (`runner/mistakes.py`, `DESIGN.md` §34: an opponent left alive whom the seat was sure to kill, a death by a block not made, a death with its own blockers tapped): in a first count a bot that could kill a player did not in three of ten such turns, and the first fix for it is at the tables. The dashboard shows all twenty-two in one table. Underneath: the benchmark pod
 (four bundled Commander precons) plays itself through a Java harness that records every game as a JSON event
 stream; the dashboard shows per-deck win rates, mulligans, land drops, commander timing and the cards that never
 get cast, with card images from Scryfall; Forge's Flat Monte Carlo AI has been A/B-tested against its heuristic AI

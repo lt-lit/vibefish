@@ -17,6 +17,7 @@ import forge.game.GameEndReason;
 import forge.game.GameEntityView;
 import forge.game.card.Card;
 import forge.game.card.CardView;
+import forge.game.combat.Combat;
 import forge.game.event.GameEvent;
 import forge.game.event.GameEventAttackersDeclared;
 import forge.game.event.GameEventBlockersDeclared;
@@ -31,6 +32,8 @@ import forge.game.event.GameEventPlayerPoisoned;
 import forge.game.event.GameEventSpellAbilityCast;
 import forge.game.event.GameEventSpellResolved;
 import forge.game.event.GameEventTurnBegan;
+import forge.game.event.GameEventTurnPhase;
+import forge.game.phase.PhaseType;
 import forge.game.player.Player;
 import forge.game.player.PlayerOutcome;
 import forge.game.player.PlayerView;
@@ -46,6 +49,10 @@ import forge.game.zone.ZoneView;
  * Seats are indices into the deck list the harness was given. At the start of every turn a
  * snapshot of all players (life, hand, lands, zone sizes, commanders in the command zone) is
  * written, read straight from the live game, so the rollup never has to reconstruct state.
+ * Since 0.4.0 a "combat" line is written when a player's declare-attackers step begins: for each
+ * opponent, what that player could attack it with and how much of it is sure to get through,
+ * and a "block" line says what the defender's blocks let through and what its best blocks would
+ * have (DESIGN.md section 6); both come from Forge's own rules for who may attack and block whom.
  *
  * Also enforces the turn cap: when a turn beyond the cap begins, the game is declared a draw.
  */
@@ -57,6 +64,7 @@ public final class JsonGameLogger {
     private final int turnCap;
 
     private int turn = 0;
+    private int combatTurn = -1;
     private final Map<Integer, Integer> ownTurn = new HashMap<>();
     private final Map<Integer, Integer> turnLost = new HashMap<>();
     private final Map<Integer, ZoneType> zoneByCard = new HashMap<>();
@@ -112,6 +120,14 @@ public final class JsonGameLogger {
                 emit(obj("e", "cap", "t", turn, "turn_cap", turnCap));
                 game.setGameOver(GameEndReason.Draw);
             }
+        } else if (ev instanceof GameEventTurnPhase e) {
+            if (e.phase() == PhaseType.COMBAT_DECLARE_ATTACKERS && combatTurn != turn) {
+                combatTurn = turn;                      // once a turn (an extra combat is not looked at)
+                Player a = game.getPhaseHandler().getPlayerTurn();
+                if (a != null && !a.hasLost()) {
+                    emitCombat(a);
+                }
+            }
         } else if (ev instanceof GameEventMulligan e) {
             emit(obj("e", "mulligan", "t", turn, "seat", seat(e.player())));
         } else if (ev instanceof GameEventLandPlayed e) {
@@ -134,12 +150,14 @@ public final class JsonGameLogger {
             if (si != null) {
                 // The target can sit on a sub-ability (Fists of Flame draws first, then pumps its target).
                 List<String> targets = new ArrayList<>();
+                List<Integer> targetCtrl = new ArrayList<>();
                 List<Integer> targetSeats = new ArrayList<>();
                 int depth = 0;
                 for (StackItemView part = si; part != null && depth < 8; part = part.getSubInstance(), depth++) {
                     if (part.getTargetCards() != null) {
                         for (CardView t : part.getTargetCards()) {
                             targets.add(name(t));
+                            targetCtrl.add(t == null ? null : seat(t.getController()));
                         }
                     }
                     if (part.getTargetPlayers() != null) {
@@ -150,6 +168,7 @@ public final class JsonGameLogger {
                 }
                 if (!targets.isEmpty()) {
                     m.put("targets", targets);
+                    m.put("target_ctrl", targetCtrl);   // 0.4.0: the seat that controls each target card
                 }
                 if (!targetSeats.isEmpty()) {
                     m.put("target_seats", targetSeats);
@@ -209,6 +228,7 @@ public final class JsonGameLogger {
             }
         } else if (ev instanceof GameEventBlockersDeclared e) {
             List<Map<String, Object>> blocks = new ArrayList<>();
+            java.util.Set<Integer> blockedIds = new java.util.HashSet<>();
             Map<GameEntityView, Multimap<CardView, CardView>> map = e.blockers();
             if (map != null) {
                 for (Map.Entry<GameEntityView, Multimap<CardView, CardView>> en : map.entrySet()) {
@@ -224,12 +244,17 @@ public final class JsonGameLogger {
                             }
                             blockers.add(name(b));
                         }
+                        if (!blockers.isEmpty()) {
+                            blockedIds.add(attacker.getId());
+                        }
                         blocks.add(obj("attacker", name(attacker), "blockers", blockers));
                     }
                 }
             }
             if (!blocks.isEmpty()) {
-                emit(obj("e", "block", "t", turn, "seat", seat(e.defendingPlayer()), "blocks", blocks));
+                Map<String, Object> m = obj("e", "block", "t", turn, "seat", seat(e.defendingPlayer()), "blocks", blocks);
+                blockFacts(m, e.defendingPlayer(), blockedIds);
+                emit(m);
             }
         } else if (ev instanceof GameEventGameOutcome e) {
             emit(obj("e", "outcome", "t", e.lastTurnNumber(), "winner_name", e.winningPlayerName(), "lines", e.outcomeStrings()));
@@ -250,14 +275,85 @@ public final class JsonGameLogger {
         }
     }
 
+    /**
+     * The active player's options as its declare-attackers step begins: for each opponent still in the game, the
+     * creatures that may attack it at no cost, their damage, the opponent's creatures that may block, and
+     * {@code through}: the damage that gets through whatever that opponent blocks (one blocker an attacker).
+     * {@code through >= life} is a kill no block prevents.
+     */
+    private void emitCombat(Player a) throws IOException {
+        List<Map<String, Object>> defenders = new ArrayList<>();
+        Map<Integer, Card> able = new LinkedHashMap<>();
+        for (Player d : a.getOpponents()) {
+            if (d.hasLost()) {
+                continue;
+            }
+            List<Card> attackers = CombatMath.freeAttackers(game, a, d);
+            for (Card c : attackers) {
+                able.put(c.getId(), c);
+            }
+            List<Card> blockers = CombatMath.ableBlockers(d);
+            defenders.add(obj("seat", seatByPlayerId.get(d.getView().getId()), "life", d.getLife(), "attackers", attackers.size(),
+                    "power", CombatMath.hits(attackers), "blockers", blockers.size(), "through", CombatMath.through(attackers, blockers)));
+        }
+        List<List<Object>> mine = new ArrayList<>();
+        for (Card c : able.values()) {
+            List<Object> one = new ArrayList<>();
+            one.add(c.getName());
+            one.add(CombatMath.hits(c));
+            mine.add(one);
+        }
+        emit(obj("e", "combat", "t", turn, "seat", seatByPlayerId.get(a.getView().getId()), "able", mine, "defenders", defenders));
+    }
+
+    /**
+     * What a defender's declared blocks leave unblocked ({@code incoming}, against its {@code life}) and the least
+     * its able blockers could have left ({@code best}): with {@code incoming >= life > best} it died with a block
+     * it did not make. {@code best_untapped} is the same with its tapped creatures counted as able to block:
+     * {@code best >= life > best_untapped} is a death its own tapped creatures would have prevented. Trample is not
+     * counted on either side.
+     */
+    private void blockFacts(Map<String, Object> m, PlayerView defender, java.util.Set<Integer> blockedIds) {
+        Combat combat = game.getCombat();
+        Player d = null;
+        for (Player p : game.getRegisteredPlayers()) {
+            if (defender != null && p.getView().getId() == defender.getId()) {
+                d = p;
+            }
+        }
+        if (combat == null || d == null) {
+            return;
+        }
+        List<Card> attackers = new ArrayList<>(combat.getAttackersOf(d));
+        int total = 0;
+        int incoming = 0;
+        for (Card c : attackers) {
+            total += CombatMath.hits(c);
+            if (!blockedIds.contains(c.getId())) {      // the event's own map: Combat.isBlocked is not set yet when it fires
+                incoming += CombatMath.hits(c);
+            }
+        }
+        m.put("life", d.getLife());
+        m.put("incoming", incoming);
+        m.put("best", total - CombatMath.mostStopped(attackers, CombatMath.ableBlockers(d), d, false));
+        // had its tapped creatures been untapped too: what a seat that kept its attackers at home could have blocked
+        m.put("best_untapped", total - CombatMath.mostStopped(attackers, new ArrayList<>(d.getCreaturesInPlay()), d, true));
+    }
+
     private List<Map<String, Object>> snapshot() {
         List<Map<String, Object>> state = new ArrayList<>();
         for (Player p : game.getRegisteredPlayers()) {
             Integer s = seatByPlayerId.get(p.getView().getId());
             int lands = 0;
+            int creatures = 0;
+            int power = 0;
             for (Card c : p.getCardsIn(ZoneType.Battlefield)) {
                 if (c.isLand()) {
                     lands++;
+                }
+                if (c.isCreature()) {
+                    creatures++;
+                    power += Math.max(0, c.getNetPower());
                 }
             }
             int handLands = 0;
@@ -275,7 +371,8 @@ public final class JsonGameLogger {
             state.add(obj("seat", s, "alive", !p.hasLost(), "life", p.getLife(), "poison", p.getPoisonCounters(),
                     "hand", names(p.getCardsIn(ZoneType.Hand)), "hand_lands", handLands, "lands", lands,
                     "bf", p.getCardsIn(ZoneType.Battlefield).size(), "lib", p.getCardsIn(ZoneType.Library).size(),
-                    "gy", p.getCardsIn(ZoneType.Graveyard).size(), "cmd", commanders));
+                    "gy", p.getCardsIn(ZoneType.Graveyard).size(), "cmd", commanders,
+                    "creatures", creatures, "power", power));
         }
         return state;
     }

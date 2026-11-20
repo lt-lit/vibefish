@@ -62,6 +62,9 @@ are that session's and have to be replaced by the new session's scratch director
   rule's wait moved from one group to the other. `leader.py DIR...`: which thing a table can see says who goes on to
   win (the seat with the most nonland permanents, the highest life, the most damage dealt, sums of them), turn by turn
   from the event logs; the default of an aim's judgement of danger comes from it (DESIGN §33).
+- `add_finish.py DECK [DECK ...] [--name finish]`: a candidate that is a deck's shipped playbook with `finish` on its
+  attack (`{"policy": "forge", "finish": true}` for a playbook that leaves the attack to Forge): the kill no block
+  prevents, harness 0.4.0. Nothing else is changed.
 - `add_forge_rule.py DECK [--base FILE] [--name NAME] [--after commander|top|N] [--wait]`: a variant of a playbook with a
   `forge` rule put in mechanically (after the commander's rule unless told otherwise; `--wait` gives the rule
   `"wait": "main2"`). `playbook_check.sh [RUNTIME_DIR] [FILE...]` parses every playbook file with the harness's own
