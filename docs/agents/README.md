@@ -65,6 +65,15 @@ are that session's and have to be replaced by the new session's scratch director
 - `add_finish.py DECK [DECK ...] [--name finish]`: a candidate that is a deck's shipped playbook with `finish` on its
   attack (`{"policy": "forge", "finish": true}` for a playbook that leaves the attack to Forge): the kill no block
   prevents, harness 0.4.0. Nothing else is changed.
+- Reading an exam of a hook that changes one decision (DESIGN §34): `first_difference.py EXAM_RESULTS_DIR VARIANT DECK...`
+  reads the two games of every table side by side to the first event that differs and files the table by it: the same
+  game to the end, the seat's own attack declaration (the hook's doing; filed further by whether the seat was sure to
+  kill its last opponent, the most dangerous of several, a less dangerous one, or nobody), or anything else (Forge's
+  own run-to-run differences, which only add noise to the paired count). It is how `ab-run` #45 was found to hold two
+  opposite effects. `kill_chances.py RUN_DIR...` counts a seat's sure kills once an opponent instead of once a turn and
+  says what became of the opponents let live; `tapped_out.py RUN_DIR...` says what a seat did on its own turn before it
+  died tapped out, and how often an attack leaves the attacker open to one opponent; `block_check.py CARDSFOLDER_ZIP
+  RUN_DIR...` checks the deaths by a block not made against trample.
 - `add_forge_rule.py DECK [--base FILE] [--name NAME] [--after commander|top|N] [--wait]`: a variant of a playbook with a
   `forge` rule put in mechanically (after the commander's rule unless told otherwise; `--wait` gives the rule
   `"wait": "main2"`). `playbook_check.sh [RUNTIME_DIR] [FILE...]` parses every playbook file with the harness's own

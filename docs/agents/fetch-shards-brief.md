@@ -22,7 +22,8 @@ destination and the counts; one agent a run, several at once.
 >    within a few minutes, so use it right away (keep the URL in single quotes exactly as returned; the helper fixes
 >    `&`): `REPO/docs/agents/fetch_artifact.sh DEST '<artifact name>' '<download_url>'`. It prints
 >    `ok <name> N files` or `FAILED <name> (...)`. On FAILED, get a fresh download URL for that artifact and try once
->    more.
+>    more. One artifact at a time: ask for a URL, download it, then ask for the next. A URL is good for about a
+>    minute, and URLs asked for in a batch have expired by the time their turn comes (HTTP 403).
 > 5. When all are done, run `ls DEST | wc -l` and report how many artifact directories are there and the names of any
 >    artifact that could not be fetched.
 >

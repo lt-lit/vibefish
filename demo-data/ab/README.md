@@ -257,3 +257,25 @@ creatures named, no rule moved): 47 against 52 (-2.5 points, -7 to +2, 0.38), fi
 Deluge was cast in 18 of the 52 games it was drawn. It did not ship. The card check is
 `demo-data/playtest/2026-11-15/follow-ups/check.txt`.
 
+
+`2026-11-20-ab-v24/`: the exam of `finish`, the first hook written for a counted mistake (DESIGN.md §34; `ab-run` #45, run id
+44801095534, commit 772c943, harness 0.4.0, seed 20261380, opponents drawn from the other nine decks of `owners-table-v1` under
+their shipped playbooks). `<deck>.json` is the shipped playbook (playbook arm only), `<deck>-finish.json` the same playbook with
+`finish` on its attack on the same 200 tables, `<deck>-join.json` the two side by side (arms `shipped` and `finish`),
+`reading.json` the rule applied deck by deck with the seat under test's sure kills in each arm (`runner/mistakes.py --deck`),
+`first-difference.json` every table filed by the first event at which its two games differ (`docs/agents/first_difference.py`).
+`finish` against shipped, wins of 200: Ahoy Mateys 63 against 60 (+1.5 points, 95% -3 to +6, exact test 0.69); Blight Curse 43
+against 43; Blood Rites 70 against 76 (-3.0, -7 to +1, 0.24); Deadly Disguise 14 against 14; Death Toll 52 against 51 (+0.5, 1.0);
+Miracle Worker 65 against 64 (+0.5, 1.0); Mutant Menace 41 against 47 (-3.0, -6 to -0, 0.070); Revenant Recon 44 against 43 (+0.5,
+1.0); Squirreled Away 27 against 31 (-2.0, -4 to +0, 0.22); Veloci-Ramp-Tor 86 against 83 (+1.5, -3 to +6, 0.68). Summed 505 against
+512 of 2,000 (56 tables only `finish` won against 63, exact test 0.58). The seat under test passed up 527 of the 1,558 turns on
+which it was sure to kill an opponent under the shipped playbooks (34%) and 55 of 1,317 with `finish` (4%, 53 of them kills it
+went for and did not get). By the rule fixed before the run seven candidates pass both halves and three are behind by more than
+two tables (Blood Rites, Mutant Menace, Squirreled Away). None shipped, because of what the tables show when they are read by where
+the two games first differ, a reading made after the result: 1,406 of the 2,000 pairs are the same game to the last event and 137
+differ for a reason that is not the hook (10 against 10). Where the hook made the difference and the opponent it killed was the most
+dangerous one alive (83 tables), `finish` alone won 14 and the shipped playbook alone 2 (exact test 0.0042); where it was a less
+dangerous opponent while a more dangerous one lived (358 tables), 30 against 50 (0.033), and the seat was out of the game before
+its own next turn on 91 of those tables where the shipped playbook's seat, from the same position, was on 59. The two halves
+differ beyond chance (Fisher's exact test 0.0003). So the hook as it was built does two opposite things and the count of "kills
+not taken" held two different things; the narrower hook that takes only the first kind goes to tables of its own.

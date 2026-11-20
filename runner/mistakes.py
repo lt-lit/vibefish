@@ -17,8 +17,14 @@ What is counted, per seat:
                      and at the end of the turn no opponent was out of the game (when another opponent than the
                      one it was sure to kill went out that turn, the turn is listed apart and not as a miss).
                      Split by what the seat did: it did not attack that opponent at all, or it did and with too
-                     little. Tricks, fogs and life gain can undo a sure kill, so read the count as "nearly always a
-                     mistake"; a seat that takes the kill and is stopped by one of those is counted as having missed.
+                     little. Tricks, fogs and life gain can undo a sure kill (about one in twenty-five of the kills
+                     a seat goes for), and a seat that takes the kill and is stopped is counted as having missed.
+                     Not every such turn is a mistake, and the count says which are (DESIGN.md §34, the exam of
+                     `finish`): the turns are split by where the table stood. The opponent that could be killed was
+                     the last one (the kill wins the game), the most dangerous of several (the highest life + 2 x
+                     nonland permanents among the opponents alive), or a less dangerous one while a more dangerous
+                     one lived. A miss of the first two is a mistake. The third is not: at 2,000 tables a seat that
+                     took every such kill lost more games than the same seat leaving the weaker opponent alive.
   a death by a block not made
                      The seat was attacked, what its blocks left unblocked was at least its life, it lost that turn,
                      and the best blocks its creatures could have made would have left less than its life.
@@ -53,8 +59,19 @@ def run_files(roots, arm):
 
 KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent',
         'kill_turns', 'kill_taken', 'kill_other', 'kill_missed', 'kill_missed_no_attack', 'kill_missed_short', 'kill_missed_then_lost', 'kill_missed_then_won',
+        'kill_last_turns', 'kill_last_missed', 'kill_top_turns', 'kill_top_missed', 'kill_lesser_turns', 'kill_lesser_missed',
         'open_turns', 'open_attacked',
         'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out')
+
+
+def danger(d, turn):
+    """How dangerous an opponent looks: its life + 2 x its nonland permanents (DESIGN.md §33; a playbook's default weights).
+    The permanents are on the combat line since harness 0.4.1 and are taken from the start of the turn before."""
+    n = d.get('permanents')
+    if n is None:
+        st = (turn.get('state') or {}).get(d['seat']) or {}
+        n = st.get('bf', 0) - st.get('lands', 0)
+    return d['life'] + 2 * n
 
 
 def close_turn(G, label, turn, lost_at, examples, where):
@@ -88,17 +105,22 @@ def close_turn(G, label, turn, lost_at, examples, where):
         killable = [d for d in defenders if d['life'] > 0 and d['through'] >= d['life']]
         if killable:
             g['kill_turns'] += 1
+            live = [d for d in defenders if d['life'] > 0]
+            top = max(danger(d, turn) for d in live)
+            stood = 'last' if len(live) == 1 else ('top' if any(danger(d, turn) == top for d in killable) else 'lesser')
+            g[f'kill_{stood}_turns'] += 1
             if any(lost_at.get(d['seat']) == turn['t'] for d in killable):
                 g['kill_taken'] += 1
             elif any(lost_at.get(d['seat']) == turn['t'] for d in defenders):
                 g['kill_other'] += 1                     # another opponent went out that turn instead: not counted as missed
             else:
                 g['kill_missed'] += 1
+                g[f'kill_{stood}_missed'] += 1
                 attacked = any(turn['attacks'].get(d['seat']) for d in killable)
                 g['kill_missed_short' if attacked else 'kill_missed_no_attack'] += 1
                 turn['missed'] = True
                 if len(examples) < 400:
-                    examples.append({'where': where, 't': turn['t'], 'seat': a, 'deck': label(a),
+                    examples.append({'where': where, 't': turn['t'], 'seat': a, 'deck': label(a), 'stood': stood,
                                      'killable': [{k: d[k] for k in ('seat', 'life', 'power', 'blockers', 'through')} for d in killable],
                                      'attacked': {str(k): len(v) for k, v in turn['attacks'].items()}})
         open_def = [d for d in defenders if d['blockers'] == 0 and d['attackers'] > 0 and d['power'] > 0]
@@ -152,7 +174,8 @@ def collect(roots, arm=None, by_deck=False, deck=None):
             for e in evs:
                 k = e['e']
                 if k == 'turn':
-                    cur = {'seat': e.get('seat'), 't': e['t'], 'combat': None, 'attacks': collections.defaultdict(list), 'blocks': []}
+                    cur = {'seat': e.get('seat'), 't': e['t'], 'combat': None, 'attacks': collections.defaultdict(list), 'blocks': [],
+                           'state': {x['seat']: x for x in e.get('state') or []}}
                     turns.append(cur)
                 elif cur is None:
                     continue
@@ -200,6 +223,15 @@ def render(G, games, old, examples, show):
         out.append(f'  {n:{w}} {g["kill_turns"]:>6} {g["kill_taken"]:>6} {g["kill_other"]:>8} {g["kill_missed"]:>7} {pct(g["kill_missed"], g["kill_turns"]):>6} '
                    f'{g["kill_missed_no_attack"]:>10} {g["kill_missed_short"]:>11} {g["kill_missed_then_lost"]:>13}   '
                    f'{g["kill_missed"] / g["seat_games"]:.2f} missed' if g['seat_games'] else '')
+    out += ['', 'KILLS BY WHERE THE TABLE STOOD: the opponent that could be killed was the last one (the kill wins the game); the most dangerous of several',
+            '       (life + 2 x nonland permanents); a less dangerous one while a more dangerous one lived. A miss of the first two is a mistake; the third is not (DESIGN §34)',
+            f'  {"":{w}} {"last":>6} {"missed":>7} {"share":>6}   {"most dangerous":>15} {"missed":>7} {"share":>6}   {"a lesser one":>13} {"missed":>7} {"share":>6}   mistakes a seat-game']
+    for n in names:
+        g = G[n]
+        out.append(f'  {n:{w}} {g["kill_last_turns"]:>6} {g["kill_last_missed"]:>7} {pct(g["kill_last_missed"], g["kill_last_turns"]):>6}   '
+                   f'{g["kill_top_turns"]:>15} {g["kill_top_missed"]:>7} {pct(g["kill_top_missed"], g["kill_top_turns"]):>6}   '
+                   f'{g["kill_lesser_turns"]:>13} {g["kill_lesser_missed"]:>7} {pct(g["kill_lesser_missed"], g["kill_lesser_turns"]):>6}   '
+                   + (f'{(g["kill_last_missed"] + g["kill_top_missed"]) / g["seat_games"]:.3f}' if g['seat_games'] else ''))
     out += ['', 'BLOCKS: attacks that left at least the seat\'s life unblocked; the seat lost that turn; of those, its creatures could have blocked enough to live;',
             '        and those no block could stop that its own tapped creatures would have, had they stayed home',
             f'  {"":{w}} {"lethal attacks":>15} {"died":>6} {"a block not made":>17} {"tapped out":>11}']
