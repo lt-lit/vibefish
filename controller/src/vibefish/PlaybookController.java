@@ -2891,6 +2891,9 @@ public class PlaybookController extends PlayerControllerAi {
             }
             return forge;
         }
+        if (rule.accept && rule.perTurn > 0) {
+            triggerAccepts.merge(rule.index, 1, Integer::sum);      // triggerRule() has set the turn these are counted for
+        }
         count("trigger_decisions", 1);
         count(rule.accept ? "trigger_accepted" : "trigger_declined", 1);
         count("trigger_rule_" + rule.index, 1);
@@ -2918,11 +2921,27 @@ public class PlaybookController extends PlayerControllerAi {
                 }
             }
             if (allHold(rule.when)) {
+                if (rule.accept && rule.perTurn > 0) {
+                    // a trigger that feeds itself has no end under a rule that always says yes: the rule stops answering
+                    // once it has said yes perTurn times this turn, and the next rule that names the card answers
+                    int turn = getGame().getPhaseHandler().getTurn();
+                    if (turn != triggerAcceptsTurn) {
+                        triggerAcceptsTurn = turn;
+                        triggerAccepts.clear();
+                    }
+                    if (triggerAccepts.getOrDefault(rule.index, 0) >= rule.perTurn) {
+                        count("trigger_limit", 1);
+                        continue;
+                    }
+                }
                 return rule;
             }
         }
         return null;
     }
+
+    private final Map<Integer, Integer> triggerAccepts = new LinkedHashMap<>();   // accept rules with a limit: times they said yes this turn
+    private int triggerAcceptsTurn = -1;
 
     // ------------------------------------------------------------------ mulligan
 

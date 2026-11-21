@@ -404,7 +404,19 @@ clock (DESIGN.md §35). Give such a rule a count and a `decline` after it:
 ```
 
 A count of permanents does not stop a chain whose pieces die as they are made (Blight Curse's Blowfly Infestation with
-Flourishing Defenses); that wants a limit a turn, which the format does not have yet.
+Flourishing Defenses: a -1/-1 counter kills a 1/1 token, the death puts a counter on the next, the counter makes a new
+token). For that an `accept` rule takes `"per_turn": N` (harness 0.4.11): it says yes at most N times in one turn and
+then stops answering, so that the next rule that names the card does:
+
+```
+{"accept":  ["Flourishing Defenses"], "per_turn": 30},
+{"decline": ["Flourishing Defenses"]}
+```
+
+Without a rule after it Forge's AI answers once the limit is reached, which may be yes again. The limit is counted for
+each rule by itself and starts anew with every turn of the game, anybody's. Counter: `trigger_limit` (the times a rule
+was passed over because it had reached its limit). A chain whose trigger is not optional cannot be capped by a rule
+(Hapatra's Snake with Blowfly Infestation); only its target can end it, which the rules do not choose yet.
 
 ### `targets`: where the seat's removal triggers aim
 

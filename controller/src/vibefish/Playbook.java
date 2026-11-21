@@ -537,6 +537,7 @@ public final class Playbook {
         public final List<String> cards;
         public final String ability;        // text the trigger's description contains (null: any trigger of the card)
         public final List<Cond> when;
+        public final int perTurn;           // an accept rule says yes at most this often in one turn (0: no limit)
         public final int index;             // 1-based position in the file, for the counters
 
         TriggerRule(JsonObject o, int index) {
@@ -555,6 +556,10 @@ public final class Playbook {
                 conds.add(new Cond(c));
             }
             when = Collections.unmodifiableList(conds);
+            perTurn = num(o, "per_turn", 0);
+            if (perTurn < 0 || (perTurn > 0 && !accept)) {
+                throw new IllegalArgumentException("playbook trigger rule " + index + ": \"per_turn\" is a positive number on an accept rule");
+            }
         }
     }
 
