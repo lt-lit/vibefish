@@ -244,7 +244,10 @@ public final class Playbook {
      * {@code "own": "minus_counter"} (0.4.9) a permanent of the seat's own that has -1/-1 counters and no other
      * kind, a creature before anything else. A rule with {@code own} and {@code aim} (0.4.9) is for a spell or
      * ability with two targets, in that order: the first is the seat's own permanent, the second an opponent's
-     * (Nesting Grounds: move a counter from the one onto the other). {@code aim_toughness} (0.4.9) keeps an aim
+     * (Nesting Grounds: move a counter from the one onto the other). {@code own_except} (0.4.10) lists permanents
+     * of the seat's own that an {@code own} selector never takes: a deck that puts counters on some of its own
+     * creatures on purpose (Tree of Perdition, whose toughness an opponent's life is exchanged with) does not want
+     * them moved off. {@code aim_toughness} (0.4.9) keeps an aim
      * to creatures of at most that toughness, for an effect that kills by a fixed amount. {@code keep} (0.4.8; its
      * value is {@code "mana"}): in the seat's first main phase, while every {@code when} condition holds, the rules
      * below are not read and the seat goes to combat with its mana, for a play written for its combat; they are
@@ -286,6 +289,7 @@ public final class Playbook {
         public final boolean targetSelf;    // play: the spell's one target is the seat itself ("target_player": "self")
         public final String own;            // play, activate: a target that is a permanent of ours of this kind (face_down | attacker | minus_counter), chosen by the harness
         public final int aimToughness;      // an aimed creature has at most this toughness (0: any)
+        public final List<String> ownExcept; // permanents of ours an "own" selector never takes (the deck wants them as they are)
         public final int divide;            // an aimed spell that divides its X: the most targets (0: not a dividing rule)
         public final int divideMin;         // ... and the fewest worth casting for (default 1)
         public final int index;             // 1-based position in the file, for the counters
@@ -324,7 +328,7 @@ public final class Playbook {
                 if (!o.get("forge").isJsonPrimitive() || !"unnamed".equals(o.get("forge").getAsString())) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": \"forge\" takes \"unnamed\" (Forge's choice among the plays no rule names)");
                 }
-                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player", "own", "aim_toughness")) {
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player", "own", "aim_toughness", "own_except")) {
                     if (o.has(key)) {
                         throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\", \"phase\" and \"wait\"");
                     }
@@ -367,6 +371,10 @@ public final class Playbook {
             own = hold || forge ? null : str(o, "own", null);
             if (o.has("own") && (own == null || !List.of("face_down", "attacker", "minus_counter").contains(own) || target != null || tp != null)) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": \"own\" takes \"face_down\", \"attacker\" or \"minus_counter\", on a play or activate rule without \"target\" or \"target_player\"");
+            }
+            ownExcept = Collections.unmodifiableList(strings(o.get("own_except")));
+            if (!ownExcept.isEmpty() && own == null) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"own_except\" needs \"own\"");
             }
             if (own != null && aim != null && o.has("divide")) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": a rule with \"own\" and \"aim\" names two targets and takes no \"divide\"");
@@ -503,6 +511,7 @@ public final class Playbook {
                 if (rule.target != null) {
                     names.add(rule.target);
                 }
+                names.addAll(rule.ownExcept);           // a misspelt name here would leave the card unprotected
                 for (Cond c : rule.when) {
                     if (c.card != null) {
                         names.add(c.card);

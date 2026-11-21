@@ -2499,6 +2499,9 @@ public class PlaybookController extends PlayerControllerAi {
         Card best = null;
         int bestScore = Integer.MIN_VALUE;
         for (Card c : player.getCardsIn(ZoneType.Battlefield)) {
+            if (rule.ownExcept.contains(c.getName())) {
+                continue;                               // the playbook wants this one left as it is
+            }
             if (counters) {
                 if (c.getCounters(forge.game.card.CounterEnumType.M1M1) <= 0 || c.getCounters().elementSet().size() != 1) {
                     continue;

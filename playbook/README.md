@@ -316,7 +316,11 @@ option nothing changes for a playbook that was measured without it.
   is for a spell or ability with two targets, in that order. Its first part that takes a target gets the seat's own
   permanent, its second an opponent's, chosen as any aim is: `{"activate": ["Nesting Grounds"], "ability": "Move a
   counter", "own": "minus_counter", "aim": "creature", "aim_toughness": 1}` moves a -1/-1 counter from a creature of
-  ours onto a creature it kills. Nothing is cast unless both are found. Counters: `cast_own`, `cast_own_unblocked`,
+  ours onto a creature it kills. Nothing is cast unless both are found. `own_except` (0.4.10) lists permanents of the
+  seat's own that an `own` selector never takes: a deck that puts counters on some of its own creatures on purpose
+  (Tree of Perdition, whose toughness an opponent's life is exchanged with; Carnifex Demon and Grim Poppet, whose
+  counters are what their abilities spend) does not want them moved off, and a selector cannot know that. Counters:
+  `cast_own`, `cast_own_unblocked`,
   `cast_own_blocked`, `cast_own_attacking` (before blocks), `cast_own_none` (no such creature: the rule did not fire).
 - `keep` (harness 0.4.8): `{"keep": "mana", "when": [...]}` is a rule of its own kind. In the seat's first main phase,
   while every condition holds, the rules below it are not read and the seat goes to combat with its mana unspent; they

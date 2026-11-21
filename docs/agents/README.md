@@ -65,10 +65,16 @@ are that session's and have to be replaced by the new session's scratch director
   (numpy): the same question on harness 0.4.0 logs with more counts (creatures, their power, lands, hand, damage
   dealt) and a model fitted on half the games and scored on the other half; nothing beat life + 2 x nonland
   permanents (DESIGN §34).
-- `add_rules.py DECK NAME --at N --rules JSON --note TEXT [--attack JSON] [--groups JSON] [--on DATE]`: a candidate
-  that is a deck's shipped playbook with cast rules put in before its rule N, keys set on its attack block with
-  `--attack`, named card lists added with `--groups`, and the note at the end of its notes (the five single-deck
-  candidates of 2026-11-21 were written with it).
+- `add_rules.py DECK NAME --at N --rules JSON --note TEXT [--end JSON] [--attack JSON] [--groups JSON] [--on DATE]`: a
+  candidate that is a deck's shipped playbook with cast rules put in before its rule N (counted from one: it prints
+  the rules on either side, after a candidate of 2026-11-21 went in one place too high, above its commander), more
+  appended with `--end`, keys set on its attack block with `--attack`, named card lists added with `--groups`, and the
+  note at the end of its notes.
+- `deck_exam.py BASE_RUN_DIR CAND_RUN_DIR --deck ID [--card NAME]... [--ability 'CARD|TEXT']... [--counters PREFIX,...]`:
+  one deck's own candidate beside its shipped playbook on the same tables: wins, discordant tables and the exact test,
+  game length, and what the candidate was written for (a card's casts of the games it was held, an ability's uses, the
+  seat's counters). `first_change.py BASE_RUN_DIR CAND_RUN_DIR DECK`: table by table, the first event at which the two
+  games differ, whose it was and how both ended: what a candidate's rule actually changed.
 - `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--swing danger] [--open]
   [--targets danger] [--block survive] [--name NAME]`: a candidate that is a deck's shipped playbook with a hook on
   its attack (`{"policy": "forge", ...}` for a playbook that leaves the attack to Forge), on its triggers' targets or
