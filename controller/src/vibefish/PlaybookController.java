@@ -125,6 +125,13 @@ public class PlaybookController extends PlayerControllerAi {
                 super.declareAttackers(attacker, combat);
             }
         }
+        if (policy.enableWith != null) {
+            try {
+                enableAttack(attacker, combat, policy);
+            } catch (RuntimeException e) {
+                count("attack_enable_errors", 1);
+            }
+        }
         if (policy.aimDanger) {
             try {
                 aimAttack(attacker, combat);
@@ -153,6 +160,107 @@ public class PlaybookController extends PlayerControllerAi {
                 count("attack_guard_errors", 1);
             }
         }
+    }
+
+    /**
+     * An attacker for a permanent whose ability wants one. {@code "enable": {"with": NAME, "send": "face_down"}}: a
+     * permanent of the seat's own (Kaust, Eyes of the Glade: "{T}: turn target face-down attacking creature you
+     * control face up") is worth more untapped than attacking, and its ability needs a face-down creature in the
+     * attack. After the policy has declared, on a turn that permanent could be tapped for its ability (on the
+     * battlefield, untapped, not summoning-sick) and the seat has a face-down creature that is a creature card
+     * face up and may attack: if no such creature is attacking, the one with the greatest power face up joins the
+     * attack, at the opponent with the fewest creatures that could block it (the most dangerous of them on a tie);
+     * and the named permanent, if the policy sent it, is taken out of the attack. The rule that uses the ability is
+     * the playbook's own (a cast rule with a combat {@code phase}); this only sees to it that there is something
+     * for it to do. A declaration Forge's rules refuse is put back as the policy made it.
+     */
+    private void enableAttack(Player me, Combat combat, Playbook.Attack policy) {
+        Card with = controlled(policy.enableWith);
+        if (with == null || with.isTapped() || with.isSick()) {
+            return;                                     // its ability cannot be used this turn: nothing to arrange
+        }
+        List<Card> faceDown = new ArrayList<>();
+        boolean attacking = false;
+        for (Card c : me.getCreaturesInPlay()) {
+            if (c == with || faceUpPower(c) < 0) {
+                continue;
+            }
+            faceDown.add(c);
+            attacking |= combat.isAttacking(c);
+        }
+        if (faceDown.isEmpty()) {
+            return;
+        }
+        count("attack_enable_seen", 1);
+        Map<Card, GameEntity> before = new LinkedHashMap<>();
+        for (Card c : combat.getAttackers()) {
+            before.put(c, combat.getDefenderByAttacker(c));
+        }
+        Card sent = null;
+        Player at = null;
+        if (!attacking) {
+            List<Player> opps = new ArrayList<>();
+            for (Player opp : me.getOpponents()) {
+                if (!opp.hasLost() && opp.getLife() > 0) {
+                    opps.add(opp);
+                }
+            }
+            opps.sort((a, b) -> Integer.compare(danger(b), danger(a)));
+            faceDown.sort((x, y) -> Integer.compare(faceUpPower(y), faceUpPower(x)));
+            for (Card c : faceDown) {
+                int fewest = Integer.MAX_VALUE;
+                Player where = null;
+                for (Player opp : opps) {
+                    if (!canSwingAt(c, opp)) {
+                        continue;
+                    }
+                    List<Card> one = new ArrayList<>();
+                    one.add(c);
+                    int n = canBlockAny(one, CombatMath.ableBlockers(opp));
+                    if (n < fewest) {
+                        fewest = n;
+                        where = opp;
+                    }
+                }
+                if (where != null) {
+                    sent = c;
+                    at = where;
+                    break;
+                }
+            }
+            if (sent == null) {
+                count("attack_enable_none", 1);         // no face-down creature may attack: the attack stays as it is
+                return;
+            }
+            combat.addAttacker(sent, at);
+        }
+        boolean home = combat.isAttacking(with);
+        if (home) {
+            combat.removeFromCombat(with);
+        }
+        if (sent == null && !home) {
+            count("attack_enable_ready", 1);            // a face-down creature attacks and the permanent is home already
+            return;
+        }
+        if (!CombatUtil.validateAttackers(combat)) {
+            for (Card c : new ArrayList<>(combat.getAttackers())) {
+                combat.removeFromCombat(c);
+            }
+            for (Map.Entry<Card, GameEntity> e : before.entrySet()) {
+                combat.addAttacker(e.getKey(), e.getValue());
+            }
+            count("attack_enable_invalid", 1);
+            return;
+        }
+        count("attack_enable", 1);
+        if (sent != null) {
+            count("attack_enable_sent", 1);
+        }
+        if (home) {
+            count("attack_enable_home", 1);
+        }
+        trace("enable " + with.getName() + ": " + (sent == null ? "" : "our face-down " + sent.getState(forge.card.CardStateName.Original).getName()
+                + " (power " + faceUpPower(sent) + " face up) attacks " + at.getName() + "; ") + (home ? with.getName() + " stays home" : with.getName() + " was home"));
     }
 
     /**
@@ -1358,6 +1466,7 @@ public class PlaybookController extends PlayerControllerAi {
     private boolean castRetargeted;
     private Card castAimed;                 // the opponent's permanent the last aimed rule chose (for the trace and the counters)
     private String castDivided;             // what the last dividing rule chose: X and each target's share (null: not a dividing cast)
+    private Card castOwn;                   // the creature of ours the last "own" rule chose (for the trace)
     private int castDividedTargets;
     private int castDividedX;
     private boolean castWaiting;            // a forge rule with "wait" stopped the rules for this decision: the seat passes
@@ -1380,6 +1489,24 @@ public class PlaybookController extends PlayerControllerAi {
         PhaseHandler ph = game.getPhaseHandler();
         boolean ownMain = ph.isPlayerTurn(player) && (ph.is(PhaseType.MAIN1) || ph.is(PhaseType.MAIN2)) && game.getStack().isEmpty();
         if (!ownMain) {
+            if (cast.hasCombat && ph.isPlayerTurn(player) && game.getStack().isEmpty() && ph.inCombat()
+                    && (ph.is(PhaseType.COMBAT_DECLARE_ATTACKERS) || ph.is(PhaseType.COMBAT_DECLARE_BLOCKERS))) {
+                // The seat's own combat: the rules written for it (phase attack or blocks) go before Forge's choice.
+                SpellAbility pick = null;
+                castRetargeted = false;
+                try {
+                    pick = castByRule(cast, ph, false);
+                } catch (RuntimeException e) {
+                    count("cast_errors", 1);
+                }
+                if (pick != null) {
+                    count("cast_policy", 1);
+                    count("cast_combat", 1);
+                    List<SpellAbility> one = new ArrayList<>();
+                    one.add(pick);
+                    return one;
+                }
+            }
             return forgeChoice(cast);
         }
         List<SpellAbility> forge = null;
@@ -1804,13 +1931,15 @@ public class PlaybookController extends PlayerControllerAi {
                         }
                         castAimed = null;
                         castDivided = null;
+                        castOwn = null;
                         SpellAbility sa = activatable(c, rule.ability, target, rule);
                         if (sa != null) {
                             castActivations.merge(c.getId(), 1, Integer::sum);
                             castPlays++;
                             count("cast_rule_" + rule.index, 1);
                             countAim(rule);
-                            trace("rule " + rule.index + " activates " + name + ": " + sa + aimText());
+                            countOwn();
+                            trace("rule " + rule.index + " activates " + name + ": " + sa + aimText() + ownText());
                             return sa;
                         }
                     }
@@ -1826,6 +1955,7 @@ public class PlaybookController extends PlayerControllerAi {
                     }
                     castAimed = null;
                     castDivided = null;
+                    castOwn = null;
                     SpellAbility sa = playable(c, target, rule);
                     if (sa != null) {
                         castPendingId = c.getId();
@@ -1834,7 +1964,8 @@ public class PlaybookController extends PlayerControllerAi {
                         castPlays++;
                         count("cast_rule_" + rule.index, 1);
                         countAim(rule);
-                        trace("rule " + rule.index + " casts " + name + (target == null ? "" : " at " + target.getName()) + aimText());
+                        countOwn();
+                        trace("rule " + rule.index + " casts " + name + (target == null ? "" : " at " + target.getName()) + aimText() + ownText());
                         return sa;
                     }
                 }
@@ -1862,6 +1993,27 @@ public class PlaybookController extends PlayerControllerAi {
         }
     }
 
+    /** A rule that chose a face-down creature of ours fired: counted, and whether that creature was an unblocked attacker. */
+    private void countOwn() {
+        if (castOwn == null) {
+            return;
+        }
+        count("cast_own", 1);
+        Combat combat = getGame().getPhaseHandler().getCombat();
+        if (combat != null && combat.isAttacking(castOwn)) {
+            count(combat.isUnblocked(castOwn) ? "cast_own_unblocked" : combat.isBlocked(castOwn) ? "cast_own_blocked" : "cast_own_attacking", 1);
+        }
+    }
+
+    private String ownText() {
+        if (castOwn == null) {
+            return "";
+        }
+        Combat combat = getGame().getPhaseHandler().getCombat();
+        String where = combat == null || !combat.isAttacking(castOwn) ? "" : combat.isUnblocked(castOwn) ? ", unblocked" : combat.isBlocked(castOwn) ? ", blocked" : ", attacking";
+        return " on our face-down " + castOwn.getState(forge.card.CardStateName.Original).getName() + " (power " + faceUpPower(castOwn) + " face up" + where + ")";
+    }
+
     private String aimText() {
         return castAimed == null ? "" : " aimed at " + castAimed.getName() + " of " + castAimed.getController().getName()
                 + " (danger " + danger(castAimed.getController()) + ")" + (castDivided == null ? "" : ", " + castDivided);
@@ -1877,7 +2029,14 @@ public class PlaybookController extends PlayerControllerAi {
     }
 
     private static boolean phaseFits(Playbook.CastRule rule, PhaseHandler ph) {
-        return "main".equals(rule.phase) || ("main1".equals(rule.phase) ? ph.is(PhaseType.MAIN1) : ph.is(PhaseType.MAIN2));
+        switch (rule.phase) {
+            case "main": return ph.is(PhaseType.MAIN1) || ph.is(PhaseType.MAIN2);
+            case "main1": return ph.is(PhaseType.MAIN1);
+            case "main2": return ph.is(PhaseType.MAIN2);
+            case "attack": return ph.is(PhaseType.COMBAT_DECLARE_ATTACKERS);
+            case "blocks": return ph.is(PhaseType.COMBAT_DECLARE_BLOCKERS);
+            default: return false;
+        }
     }
 
     /**
@@ -1929,6 +2088,35 @@ public class PlaybookController extends PlayerControllerAi {
         }
         if (target == null && rule.aim != null && rule.divide > 0) {
             return readyDivided(sa, rule);
+        }
+        if (rule.own != null) {
+            // The rule aims at a creature of the seat's own, chosen here: the one part that takes a target says which are legal.
+            SpellAbility part = null;
+            int parts = 0;
+            for (SpellAbility p = sa; p != null; p = p.getSubAbility()) {
+                if (p.usesTargeting()) {
+                    part = p;
+                    parts++;
+                }
+            }
+            if (parts != 1) {
+                return false;
+            }
+            part.setActivatingPlayer(player);
+            castRetargeted = true;
+            part.resetTargets();
+            Card mine = ownTarget(part, rule);
+            if (mine == null) {
+                count("cast_own_none", 1);
+                return false;
+            }
+            part.getTargets().add(mine);
+            if (!part.isTargetNumberValid() || !ComputerUtilCost.canPayCost(sa, player, false)) {
+                part.resetTargets();
+                return false;
+            }
+            castOwn = mine;
+            return true;
         }
         if (rule.targetSelf) {
             // The rule aims the spell at the seat itself: the one part that takes a target must take a player.
@@ -2222,6 +2410,41 @@ public class PlaybookController extends PlayerControllerAi {
     /** Forge's rating of a card for the choice of a dividing spell's targets (a creature's evaluation; a rough one for anything else). */
     private static int rating(Card card) {
         return card.isCreature() ? ComputerUtilCard.evaluateCreature(card) : 100 + 20 * card.getCMC();
+    }
+
+    /**
+     * The face-down creature of the seat's own that a rule with {@code "own": "face_down"} turns face up: a legal
+     * target of the spell or ability that is a creature card face up; once blocks are declared an unblocked attacker
+     * before any other (it then deals its damage to a player as what it really is), then the greater power face up.
+     */
+    private Card ownTarget(SpellAbility part, Playbook.CastRule rule) {
+        Combat combat = getGame().getPhaseHandler().getCombat();
+        Card best = null;
+        int bestScore = Integer.MIN_VALUE;
+        for (Card c : player.getCardsIn(ZoneType.Battlefield)) {
+            if (!c.isFaceDown() || faceUpPower(c) < 0 || !part.canTarget(c)) {
+                continue;
+            }
+            boolean unblocked = combat != null && combat.isAttacking(c) && combat.isUnblocked(c);
+            int score = (unblocked ? 1000 : 0) + faceUpPower(c);
+            if (score > bestScore) {
+                best = c;
+                bestScore = score;
+            }
+        }
+        return best;
+    }
+
+    /** The power a face-down permanent of ours has once face up, or -1 when it is no creature card or cannot be turned face up. */
+    private static int faceUpPower(Card c) {
+        if (!c.isFaceDown() || !c.canBeTurnedFaceUp()) {
+            return -1;
+        }
+        forge.game.card.CardState up = c.getState(forge.card.CardStateName.Original);
+        if (up == null || up.getType() == null || !up.getType().isCreature()) {
+            return -1;
+        }
+        return Math.max(0, up.getBasePower());
     }
 
     /** An X in the cost that is paid in life (Toxic Deluge), which the card's script reads back as the X of its effect. */

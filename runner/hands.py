@@ -195,6 +195,13 @@ def cmd_held(args):
 # ------------------------------------------------------------------------------------------- abilities
 
 ACTIVATION = re.compile(r'^[^.]{1,90}?: ')     # "cost: effect" at the start of the text; a trigger's text starts with When/Whenever/At
+NAMED = re.compile(r'^.{1,80}? \(\d+\): ')     # Forge writes some triggers as "Card Name (id): Whenever ...": the prefix is no cost
+
+
+def is_activation(text):
+    """True for the text of an activated ability as the logs carry it, false for a trigger's (either way Forge writes one)."""
+    text = NAMED.sub('', text or '', count=1)
+    return bool(ACTIVATION.match(text)) and not re.match(r'^(When|Whenever|At) ', text)
 
 
 def activated_abilities(card):
@@ -237,7 +244,7 @@ def cmd_abilities(args):
                     for name in on.values():
                         if known.get(name):
                             turns_on[name] += 1
-                elif e['e'] == 'cast' and e.get('seat') == seat and not e.get('spell') and ACTIVATION.match(e.get('ability') or ''):
+                elif e['e'] == 'cast' and e.get('seat') == seat and not e.get('spell') and is_activation(e.get('ability')):
                     used[e['card']] += 1                # whatever zone it is logged from: a sacrifice cost has moved it by then
     if not games:
         sys.exit('no games found (check the directory, --deck and --arm)')

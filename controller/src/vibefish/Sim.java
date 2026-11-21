@@ -66,7 +66,7 @@ import forge.util.MyRandom;
  * Relative paths resolve against $VIBEFISH_CWD when set (the launcher cds into the Forge runtime).
  */
 public final class Sim {
-    public static final String VERSION = "0.4.6";
+    public static final String VERSION = "0.4.7";
     static final Gson GSON = new GsonBuilder().disableHtmlEscaping().serializeNulls().create();
     static final Gson GSON_PRETTY = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
 
@@ -305,7 +305,7 @@ public final class Sim {
                               "guard", !playbook.attack.guard ? (Object) Boolean.FALSE : playbook.attack.guardTable ? "table" : Boolean.TRUE,
                               "guard_margin", playbook.attack.guardMargin,
                               "aim", playbook.attack.aimDanger ? (Object) "danger" : Boolean.FALSE, "aim_margin", playbook.attack.aimMargin,
-                              "open", playbook.attack.open),
+                              "open", playbook.attack.open, "enable", playbook.attack.enableWith),
                         "mulligan", playbook.mulligan == null ? null
                         : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans),
                         "cast", playbook.cast == null ? null : playbook.cast.source,

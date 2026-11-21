@@ -129,6 +129,22 @@ policy had declared no attack at all), `attack_open_home` (creatures Forge wante
 (creatures with an ability that taps them), `attack_open_kill_left`, `attack_open_invalid`, `attack_open_errors`.
 `{"attack": {"policy": "forge", "open": true}}`.
 
+`"enable": {"with": "<a permanent of ours>", "send": "face_down"}` (harness 0.4.7), on any policy and before `aim`,
+arranges an attacker for a permanent whose ability wants one. It is written for Kaust, Eyes of the Glade ("{T}: turn
+target face-down attacking creature you control face up"): Forge's AI attacks with Kaust itself on a quarter of the
+turns the ability could be used and sends a face-down creature on three in ten, so the deck's engine fires on a
+tenth of the turns its commander is on the battlefield. On a turn the named permanent could be tapped for its ability
+(on the battlefield, untapped, not summoning-sick) and the seat has a face-down creature that is a creature card face
+up and may attack: if none is attacking, the one with the greatest power face up joins the attack, at the opponent
+with the fewest creatures that could block it (the most dangerous of those on a tie); and the named permanent is
+taken out of the attack if the policy sent it. The ability itself is used by a cast rule of the playbook with a combat
+`phase` (above); this only sees to it that there is something for it to do. A declaration Forge's rules refuse is put
+back. Counters: `attack_enable_seen` (the permanent was ready and a face-down creature was there), `attack_enable`
+(the attack was changed), `attack_enable_sent` (a face-down creature was added), `attack_enable_home` (the permanent
+was taken out of the attack), `attack_enable_ready` (nothing to change), `attack_enable_none` (no face-down creature
+may attack), `attack_enable_invalid`, `attack_enable_errors`.
+`{"attack": {"policy": "forge", "enable": {"with": "Kaust, Eyes of the Glade", "send": "face_down"}}}`.
+
 `"finish": true` (harness 0.4.0), on any policy, takes a kill no block prevents. After the policy has declared its
 attack, each opponent the seat is sure to kill gets enough attackers that the damage reaches its life whatever it
 blocks: who may attack and block whom is Forge's own (`CombatUtil.canAttack`, `canBlock(attacker, blocker)`, so flying,
@@ -275,7 +291,18 @@ option nothing changes for a playbook that was measured without it.
   resolves is Forge's to answer (it names the creature type the seat's deck holds most of). A rule takes `target`,
   `aim` or `target_player`, one of them. `{"play": ["Pact of the Serpent"], "target_player": "self",
   "when": ["type:Vampire >= 3", "life >= 20"]}`. Counter: `cast_self`.
-- `phase`: `main` (either main phase, the default), `main1` or `main2`.
+- `phase`: `main` (either main phase, the default), `main1` or `main2`; or, since harness 0.4.7, a step of the seat's
+  own combat, with an empty stack: `attack`, after its attackers are declared, or `blocks`, after the blocks are
+  declared. A play or activate rule with a combat phase is read only there and goes before Forge's own choice at that
+  moment (an instant, a creature with flash, an activated ability); the main-phase rules are not read in combat. It is
+  how a deck says "after blocks" (`{"activate": ["Kaust, Eyes of the Glade"], "own": "face_down", "phase": "blocks"}`).
+  Counter: `cast_combat`.
+- `own` (play, activate; harness 0.4.7): `"own": "face_down"` makes the spell's or ability's one target a face-down
+  creature of the seat's own, chosen by the harness among those it can legally target: one that is a creature card face
+  up (a manifested land is not turned up in combat), an unblocked attacker before any other once blocks are declared (it
+  deals its damage to a player as what it really is), then the greater power face up. A rule takes `target`, `aim`,
+  `target_player` or `own`, one of them. Counters: `cast_own`, `cast_own_unblocked`, `cast_own_blocked`,
+  `cast_own_attacking` (before blocks), `cast_own_none` (no such creature: the rule did not fire).
 - `before_land` (play, activate): `true` tries the rule before the turn's land is played as well, while a land can still be played. The rules otherwise run after the land drop, since they all want the mana; a landfall deck wants its payoffs down first so the land triggers them (`{"play": ["Tatyova, Benthic Druid", "Scute Swarm"], "before_land": true}`). Counter: `cast_before_land`.
 - `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it. Since harness 0.3.4 `x` can also be a metric, and X is then that number: `"x": "opp_toughness"` sizes a wipe to the largest creature an opponent has. And an X that is paid in life (Toxic Deluge: "pay X life, all creatures get -X/-X") is the rule's to name the same way; the mana cap does not apply to it, `x_keep_life` (default 10) does: the rule never pays the seat below that much life. `{"play": ["Toxic Deluge"], "x": "opp_toughness", "x_min": 3, "x_keep_life": 12, "when": ["opp_creatures >= 6", "opp_power > power"]}`. A spell that divides its X among targets (Fire Covenant) takes `divide`, above.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:

@@ -59,6 +59,8 @@ public final class Playbook {
         public final int maxReserve;       // creatures kept home at most
         public final boolean spread;       // once a defender is dead through its blockers, the rest attack the next one
         public final int damagePerLoss;    // pressure: damage through that one lost attacker must buy
+        public final String enableWith;    // "enable": a permanent of ours whose tap ability wants an attacker: it stays home (null: none)
+        public final String enableSend;    // ... and the kind of creature that attacks for it: face_down
 
         Attack(JsonObject o) {
             policy = str(o, "policy", "go_wide");
@@ -91,6 +93,12 @@ public final class Playbook {
             aimDanger = "danger".equals(aim);
             aimMargin = num(o, "aim_margin", 5);
             open = o.has("open") && o.get("open").isJsonPrimitive() && o.get("open").getAsBoolean();
+            JsonObject en = o.has("enable") && o.get("enable").isJsonObject() ? o.getAsJsonObject("enable") : null;
+            enableWith = en == null ? null : str(en, "with", null);
+            enableSend = en == null ? null : str(en, "send", "face_down");
+            if (o.has("enable") && (enableWith == null || !"face_down".equals(enableSend))) {
+                throw new IllegalArgumentException("playbook attack enable is {\"with\": a permanent of ours, \"send\": \"face_down\"}");
+            }
             target = str(o, "target", "lowest_life");
             if (!List.of("lowest_life", "weakest_board", "highest_life", "biggest_board").contains(target)) {
                 throw new IllegalArgumentException("playbook attack target must be lowest_life, weakest_board, highest_life or biggest_board");
@@ -228,7 +236,12 @@ public final class Playbook {
      * every opponent's side at once ({@code any}), and the rule casts only for at least {@code divide_min} of them
      * (default 1). With {@code "target_player": "self"} (since 0.4.6) the spell's one target is the seat itself
      * (Pact of the Serpent: the cards are the seat's to draw); anything else such a spell asks as it resolves is
-     * Forge's to answer. {@code hold}: Forge's
+     * Forge's to answer. With {@code "own": "face_down"} (since 0.4.7) the one target is a face-down creature of
+     * the seat's own that the spell or ability can target: one that is a creature card face up, an unblocked
+     * attacker before a blocked one once blocks are declared, then the greater power face up. A rule's
+     * {@code phase} is {@code main} (either main phase, the default), {@code main1} or {@code main2}, or since
+     * 0.4.7 a step of the seat's own combat with an empty stack: {@code attack}, after its attackers are declared,
+     * or {@code blocks}, after the blocks. {@code hold}: Forge's
      * own AI may not cast the listed cards, nor use the activated abilities of the listed permanents of ours (all of
      * them, or the one {@code ability} quotes), until every {@code until} condition holds (never, with no
      * {@code until}); a card named by several hold rules is released as soon as one of them is, and a play or
@@ -261,6 +274,7 @@ public final class Playbook {
         public final String aimAt;          // danger: of the opponent judged most dangerous first | any: the best on any opponent's side
         public final int aimMin;            // the least worth of a permanent the rule aims at (mana value; a creature's power if more)
         public final boolean targetSelf;    // play: the spell's one target is the seat itself ("target_player": "self")
+        public final String own;            // play, activate: the one target is a creature of ours of this kind (face_down), chosen by the harness
         public final int divide;            // an aimed spell that divides its X: the most targets (0: not a dividing rule)
         public final int divideMin;         // ... and the fewest worth casting for (default 1)
         public final int index;             // 1-based position in the file, for the counters
@@ -289,7 +303,7 @@ public final class Playbook {
                 if (!o.get("forge").isJsonPrimitive() || !"unnamed".equals(o.get("forge").getAsString())) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": \"forge\" takes \"unnamed\" (Forge's choice among the plays no rule names)");
                 }
-                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player")) {
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player", "own")) {
                     if (o.has(key)) {
                         throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\", \"phase\" and \"wait\"");
                     }
@@ -328,6 +342,10 @@ public final class Playbook {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": \"target_player\" takes \"self\", on a play rule without \"target\" or \"aim\"");
             }
             targetSelf = tp != null;
+            own = hold || forge ? null : str(o, "own", null);
+            if (o.has("own") && (own == null || !"face_down".equals(own) || target != null || aim != null || tp != null)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"own\" takes \"face_down\", on a play or activate rule without \"target\", \"aim\" or \"target_player\"");
+            }
             divide = num(o, "divide", 0);
             divideMin = num(o, "divide_min", 1);
             if ((o.has("divide") || o.has("divide_min")) && (aim == null || divide < 1 || divideMin < 1 || divideMin > divide)) {
@@ -354,8 +372,11 @@ public final class Playbook {
             if (hold && (o.has("x") || o.has("x_min") || o.has("before_land"))) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": a hold rule takes no \"x\", \"x_min\" or \"before_land\"");
             }
-            if (!hold && !List.of("main", "main1", "main2").contains(phase)) {
-                throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1 or main2");
+            if (!hold && !List.of("main", "main1", "main2", "attack", "blocks").contains(phase)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1, main2, attack or blocks");
+            }
+            if (forge && isCombat()) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule is for the main phases");
             }
             List<Cond> conds = new ArrayList<>();
             for (String c : strings(o.get(hold ? "until" : "when"))) {
@@ -385,6 +406,11 @@ public final class Playbook {
         public boolean isForge() {
             return "forge".equals(kind);
         }
+
+        /** A rule for the seat's own combat: after its attackers are declared ({@code attack}) or after the blocks ({@code blocks}). */
+        public boolean isCombat() {
+            return "attack".equals(phase) || "blocks".equals(phase);
+        }
     }
 
     /** The cast rules, in the file's order: the first play rule that can cast something does. */
@@ -394,6 +420,7 @@ public final class Playbook {
         public final java.util.Map<String, List<String>> groups;   // named lists of cards, for hand:<group> conditions
         public final JsonObject source;     // as written, recorded in run.json
         public final boolean hasBeforeLand; // some rule is tried before the land drop
+        public final boolean hasCombat;     // some rule acts in the seat's own combat (phase attack or blocks)
         public final int dangerLife;        // how dangerous an opponent looks: this times its life ...
         public final int dangerPermanents;  // ... plus this times its nonland permanents (an aim reads it; DESIGN.md section 33)
 
@@ -424,6 +451,11 @@ public final class Playbook {
                 early |= rule.beforeLand;
             }
             hasBeforeLand = early;
+            boolean fight = false;
+            for (CastRule rule : rules) {
+                fight |= !rule.isHold() && rule.isCombat();
+            }
+            hasCombat = fight;
             for (CastRule rule : rules) {
                 for (Cond c : rule.when) {
                     if (c.group() != null && !groups.containsKey(c.group())) {

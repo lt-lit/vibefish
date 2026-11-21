@@ -1,0 +1,216 @@
+{
+ "schema": 1,
+ "deck": "deadly-disguise",
+ "variant": "kaust",
+ "of": "playbook/precons/deadly-disguise.json (version 2)",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped playbook with cast rules added (docs/agents/add_rules.py). Only the playbook object is read.",
+ "playbook": {
+  "version": 3,
+  "attack": {
+   "policy": "forge",
+   "enable": {
+    "with": "Kaust, Eyes of the Glade",
+    "send": "face_down"
+   }
+  },
+  "cast": {
+   "groups": {
+    "facedown": [
+     "Ainok Survivalist",
+     "Broodhatch Nantuko",
+     "Den Protector",
+     "Hidden Dragonslayer",
+     "Master of Pearls",
+     "Nervous Gardener",
+     "Printlifter Ooze",
+     "Deathmist Raptor",
+     "Boltbender",
+     "Experiment Twelve",
+     "Nantuko Vigilante",
+     "Salt Road Ambushers",
+     "Thelonite Hermit",
+     "Exalted Angel",
+     "Root Elemental",
+     "Imperial Hellkite",
+     "Akroma, Angel of Fury",
+     "Krosan Colossus",
+     "Krosan Cloudscraper",
+     "Hooded Hydra",
+     "Ashcloud Phoenix",
+     "True Identity"
+    ]
+   },
+   "rules": [
+    {
+     "hold": [
+      "Kaust, Eyes of the Glade"
+     ],
+     "ability": "Turn target face-down"
+    },
+    {
+     "activate": [
+      "Kaust, Eyes of the Glade"
+     ],
+     "own": "face_down",
+     "phase": "blocks"
+    },
+    {
+     "play": [
+      "Austere Command"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Austere Command"
+     ],
+     "when": [
+      "opp_power > power",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Dusk // Dawn"
+     ],
+     "when": [
+      "opp_power > power",
+      "threat >= life",
+      "opp_creatures <= 6"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Three Visits",
+      "Nature's Lore",
+      "Wild Growth",
+      "Sakura-Tribe Elder"
+     ]
+    },
+    {
+     "play": [
+      "Kaust, Eyes of the Glade"
+     ]
+    },
+    {
+     "play": [
+      "Obscuring Aether",
+      "Panoptic Projektor",
+      "Trail of Mystery",
+      "Ugin's Mastery",
+      "Veiled Ascension",
+      "Lifecrafter's Bestiary",
+      "Scroll of Fate",
+      "Mastery of the Unseen",
+      "Ransom Note"
+     ]
+    },
+    {
+     "activate": [
+      "Panoptic Projektor"
+     ],
+     "when": [
+      "hand:facedown >= 1"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Duskana, the Rage Mother",
+      "Beast Whisperer",
+      "Seedborn Muse",
+      "Ohran Frostfang",
+      "Whisperwood Elemental",
+      "Temur War Shaman",
+      "Toski, Bearer of Secrets",
+      "Mirror Entity",
+      "Welcoming Vampire",
+      "Tesak, Judith's Hellhound",
+      "Saryth, the Viper's Fang",
+      "Sidar Kondo of Jamuraa",
+      "Yedora, Grave Gardener",
+      "Scourge of the Throne"
+     ]
+    },
+    {
+     "play": [
+      "Boltbender"
+     ],
+     "when": [
+      "mana <= 3"
+     ]
+    },
+    {
+     "activate": [
+      "Scroll of Fate"
+     ]
+    },
+    {
+     "activate": [
+      "Krosan Verge"
+     ]
+    },
+    {
+     "activate": [
+      "Mirror Entity"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "phase": "main1",
+     "when": [
+      "attackers >= 3"
+     ]
+    },
+    {
+     "activate": [
+      "Mastery of the Unseen"
+     ],
+     "times": 4,
+     "phase": "main2",
+     "when": [
+      "library >= 20"
+     ]
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Trail of Mystery"
+    ],
+    "when": [
+     "library >= 20"
+    ]
+   },
+   {
+    "accept": [
+     "Lifecrafter's Bestiary"
+    ],
+    "when": [
+     "library >= 30"
+    ]
+   },
+   {
+    "accept": [
+     "Ugin's Mastery",
+     "Imperial Hellkite",
+     "Deathmist Raptor",
+     "Veiled Ascension",
+     "Yedora, Grave Gardener",
+     "Broodhatch Nantuko",
+     "Temur War Shaman",
+     "Root Elemental"
+    ]
+   }
+  ],
+  "notes": "Version 2, the answers candidate, of veil (version 1). Written from the 200 tables of ab-run #28 (seed 20261280, bots-v2 opponents under their playbooks), where veil won 20 and the stock pilot of the same deck 27 (18 against 25 discordant tables, exact test 0.36). WHAT VEIL COST. Its rule 6 (play every morph and disguise card) cast the face-up spell whenever it was affordable: face-down casts fell from 4.0 a game under stock to 1.8, and Den Protector, Hidden Dragonslayer, Ainok Survivalist, Printlifter Ooze, Nervous Gardener, Master of Pearls, Broodhatch Nantuko and Deathmist Raptor went down face up 27 to 39 times each where stock put them down face down 30 to 47 times (their turned-face-up triggers, Hidden Dragonslayer's and Ainok Survivalist's removal among them, lost). Stock's 27 wins averaged 5.6 face-down casts, its losses 3.8. And because a rule that has something to do always goes before Forge's own choice, the engine, payoff and morph rules starved every card no rule named: Fell the Mighty cast in 9 of 50 games drawn (stock 38 of 46), Decimate 11 of 55 (37 of 58), Jeska's Will 20 of 52 (37 of 46), Neheb 21 of 52 (41 of 47), Return of the Wildspeaker 22 of 55 (29 of 43), Dusk 5 of 42 (19 of 37), Austere Command 5 of 48 (18 of 45), Showstopping Surprise 8 of 49 (15 of 48); held at a loss 21 to 31 times each. WHAT CHANGED. (a) Veil's rule 6 is removed: every morph and disguise card is left to Forge, which chooses face down or face up itself (the rule format cannot cast face down). (b) A forge rule (rule 8) after the ramp, Kaust, the engines and the Projektor tap, and before the payoffs, Boltbender and the mana sinks: Forge's own choice among the unnamed plays (the removal, Jeska's Will, Return of the Wildspeaker, Neheb, Showstopping Surprise, Fell the Mighty, Decimate, Hooded Hydra, the morphs with their face-down casts) comes before every rule that fires again and again; Forge's own logic for each removal spell (FellTheMighty, Destroy, PowerDmg, the charms) picks the moment and the targets, as it did for stock. The engines (each cast once) stay ahead of it: in a first local run with the forge rule above them Forge spent the mana on face-down creatures and Panoptic Projektor, Ugin's Mastery, Veiled Ascension and Bestiary waited in hand (Projektor four turns in one game). The payoffs stay after it (Duskana wants the face-down creatures down first). (c) Panoptic Projektor's tap (veil rule 4, now 7) stays right after the engines and before the forge rule, so the reduction is there when Forge casts a face-down creature. (d) Neheb, the Eternal is taken out of the payoff rule (left to Forge, which cast it in 41 of 47 games). Everything else of veil is unchanged and in its order (ramp rule 4, Kaust 5, engines 6, payoffs 9, then 11 to 14): ramp, Kaust, engines, payoffs, Scroll of Fate, Krosan Verge, Mirror Entity, Mastery of the Unseen, the triggers and the go-wide attack. NEW RULES. Rules 1-2, Austere Command (Forge cast it in 18 of 45 games under stock and lost 18 holding it): when an opponent has seven creatures or more, more power than ours and we have four creatures or fewer, or when an opponent could kill us next turn with more power than ours (its mana value 4-or-more mode also answers the large creatures of Eldrazi Incursion and Limit Break). Forge's AI picks the two modes as it resolves (mandatory choice), so face-down creatures (mana value 0) can die to the 3-or-less mode with the opposing tokens. Rule 3, Dusk only as the emergency against a few large creatures: an opponent could kill us next turn with six creatures or fewer and more power than ours (Dusk spares the 2/2 face-down creatures and the opposing 1/1 tokens alike). Thresholds: being behind on board is this deck's normal state at this table (on its last three own turns an opponent had six creatures or more against four or fewer of ours in 128 of 173 stock losses and in 18 of 27 stock wins), so the wipe conditions are the emergencies, not a board count. Rule 10, Boltbender (flagged never-cast; veil cast it face up 16 times): played only when the mana left is three or less, when the face-up spell (four) is unaffordable and the rule casts the face-down one; its turn-up is Forge's.  LOCAL TABLES (16, seeds 20263170 and 20263171, bots-v2 under their playbooks; too few to say anything about wins: 0 of 16). First run (forge rule above the engines): 5.9 face-down casts a game (exam: stock 4.0, veil 1.8); Austere Command cast twice by rule 1, once countered by Swan Song, once with an opponent at seven or more creatures: its modes were artifacts and mana value 4 or more, which destroyed eleven opposing permanents (Hornet Queen, Galadriel, two hydras, Rampaging Baloths, Oblivion Stone, four equipment) and nothing of ours; Boltbender went down face down twice by rule 10. Second run (this order): 3.5 face-down casts a game; the engines were cast in every game they were drawn; Dusk drawn in four losses and never cast (rule 3 never held: in one loss the seat died at 2 life with Dusk and Fell the Mighty in hand against seven creatures, where rule 3's cap of six creatures failed and Forge's own logic declined Fell the Mighty). The rule-3 cap is the first thing to drop if Dusk stays in hand at the 200 tables. Shipped as version 2 on 2026-11-14 from ab-run #37: at 200 tables of bots (seed 20261310, opponents drawn from bots-v2 under their playbooks of 2026-11-13) 29 wins against its stock pilot's 20 (+4.5 points, 95% -2 to +11, exact test 0.21) with the attack left to Forge, the better of the two attacks on these tables (the same rules won 22 with the go-wide attack). What it casts in a share of games 15 points or more below its stock pilot on the same tables, 13 cards: Sidar Kondo of Jamuraa (23 of 43 games drawn against 40 of 41), Dusk // Dawn (7 of 39 games drawn against 26 of 43), Scourge of the Throne (11 of 60 games drawn against 34 of 66), Ohran Frostfang (20 of 42 games drawn against 35 of 46), Welcoming Vampire (19 of 41 games drawn against 30 of 41), Yedora, Grave Gardener (15 of 51 games drawn against 30 of 57), Printlifter Ooze (9 of 27 games drawn against 15 of 27), Temur War Shaman (13 of 48 games drawn against 23 of 47) and 5 more. It casts 14 cards that much more often (demo-data/playtest/2026-11-14/second-pass/deadly-disguise-forgeattack-card-diff.txt). VERSION 3 CANDIDATE `kaust` (2026-11-21). Version 2 with 2 cast rules added as rules 1 to 2 (the shipped rules from 1 on move down by 2) and {\"enable\": {\"with\": \"Kaust, Eyes of the Glade\", \"send\": \"face_down\"}} set on its attack (Forge's own attack is declared first); nothing else is changed. WHY: the commander is the deck. Kaust, Eyes of the Glade taps to turn a face-down attacking creature of ours face up, for nothing, and draws a card when a creature turned face up that turn deals combat damage to a player; the deck casts its creatures face down for three mana and Kaust makes one of them what it is each turn. Forge's AI used that ability 8 times in the 200 games of ab-run #45's shipped arm, with Kaust on the battlefield for 1,075 of the seat's own turns; on the 365 turns Kaust could be tapped and a face-down creature could attack, a face-down creature attacked on 106 and Kaust itself on 84. A rule could not help before harness 0.4.7: rules acted in the main phases only. THE ATTACK (`enable`): on a turn Kaust could be tapped (untapped, not summoning-sick) and no face-down creature of ours that is a creature card face up is attacking, the one with the greatest power face up joins Forge's attack, at the opponent with the fewest creatures that could block it; and Kaust is taken out of the attack if Forge sent it. RULE 1 holds Kaust's ability from Forge's AI, so that it is used at one moment only. RULE 2, in the seat's own declare-blockers step: tap Kaust to turn a face-down attacker face up, an unblocked one before a blocked one (it deals its damage as what it is and Kaust draws), then the greater power face up. LOCAL CHECK: the eight tables of ab-run #45 on which Kaust and a face-down creature were both ready on the most own turns (5 to 9), replayed from their seed with this file: the ability used 15 times (nine on an unblocked attacker, six on a blocked one; Krosan Cloudscraper four times), Kaust's draw 13 times against 8 in the baseline's games of those tables; the attack option changed 13 attacks (a face-down creature sent seven times, Kaust kept home six) and found no face-down creature able to attack on 23 turns; nothing invalid. The seat won two of the eight and five in the baseline, on tables picked for the commander's long life: no measure of wins. One of the eight replayed again on the final build was the same game."
+ }
+}
