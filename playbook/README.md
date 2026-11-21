@@ -253,9 +253,31 @@ option nothing changes for a playbook that was measured without it.
   `cast_aim_most_dangerous`, `cast_aim_next` (the permanent chosen belonged to the opponent that looked most dangerous,
   or that opponent had nothing to aim at and a later one did), `cast_aim_none` (nothing to aim at: the rule did not
   fire).
+- `divide`, `divide_min` (play, activate, on a rule that has `aim`; harness 0.4.6): for a spell that divides an X among
+  any number of targets (Fire Covenant: "pay X life, X damage divided as you choose among any number of target
+  creatures"). `"divide": 3` is the most targets. The amount the rule may spend is what the cost allows (the mana the
+  rest of the cost leaves, or for an X paid in life the life above `x_keep_life`), capped by the rule's `x` when it
+  gives one. Each of the opponents' permanents of the aimed kind that the spell can target and that is worth `aim_min`
+  has a price, the least amount that destroys it by Forge's own arithmetic (`ComputerUtilCombat.getEnoughDamageToKill`:
+  damage already marked, indestructible and prevention are in it), and a rating (Forge's evaluation of a creature). The
+  rule takes the set of at most `divide` of them with the highest total rating that the amount pays for, the cheaper
+  set on a tie: with `aim_at` `"danger"` (the default) from the side of the opponent that looks most dangerous first
+  and then from the next opponent's with what is left, with `"any"` over every opponent's side at once. X is the sum
+  of the prices and each target is allocated its own. Nothing is cast for fewer than `divide_min` targets (default 1)
+  or an X below `x_min`. `{"play": ["Fire Covenant"], "aim": "creature", "aim_min": 4, "divide": 3, "divide_min": 2,
+  "x": 12, "x_keep_life": 18}`: two or three creatures worth four or more for at most twelve life, never paid below
+  eighteen. Counters: `cast_divide`, `cast_divide_targets`, `cast_divide_x` (casts, targets and X summed over them),
+  `cast_divide_few` (fewer targets than `divide_min` could be paid for), `cast_divide_invalid` (Forge refused the
+  targets or the cost), `cast_divide_unfit` (the card named does not divide an X).
+- `target_player` (play; harness 0.4.6): `"target_player": "self"` aims the spell's one target at the seat itself, for
+  a spell that asks for a player and is meant for its own caster (Pact of the Serpent: "target player draws X cards and
+  loses X life, where X is the number of creatures they control of the chosen type"). What such a spell asks as it
+  resolves is Forge's to answer (it names the creature type the seat's deck holds most of). A rule takes `target`,
+  `aim` or `target_player`, one of them. `{"play": ["Pact of the Serpent"], "target_player": "self",
+  "when": ["type:Vampire >= 3", "life >= 20"]}`. Counter: `cast_self`.
 - `phase`: `main` (either main phase, the default), `main1` or `main2`.
 - `before_land` (play, activate): `true` tries the rule before the turn's land is played as well, while a land can still be played. The rules otherwise run after the land drop, since they all want the mana; a landfall deck wants its payoffs down first so the land triggers them (`{"play": ["Tatyova, Benthic Druid", "Scute Swarm"], "before_land": true}`). Counter: `cast_before_land`.
-- `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it. Since harness 0.3.4 `x` can also be a metric, and X is then that number: `"x": "opp_toughness"` sizes a wipe to the largest creature an opponent has. And an X that is paid in life (Toxic Deluge: "pay X life, all creatures get -X/-X") is the rule's to name the same way; the mana cap does not apply to it, `x_keep_life` (default 10) does: the rule never pays the seat below that much life. `{"play": ["Toxic Deluge"], "x": "opp_toughness", "x_min": 3, "x_keep_life": 12, "when": ["opp_creatures >= 6", "opp_power > power"]}`. A spell that divides its X among targets (Fire Covenant) is still out of reach.
+- `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it. Since harness 0.3.4 `x` can also be a metric, and X is then that number: `"x": "opp_toughness"` sizes a wipe to the largest creature an opponent has. And an X that is paid in life (Toxic Deluge: "pay X life, all creatures get -X/-X") is the rule's to name the same way; the mana cap does not apply to it, `x_keep_life` (default 10) does: the rule never pays the seat below that much life. `{"play": ["Toxic Deluge"], "x": "opp_toughness", "x_min": 3, "x_keep_life": 12, "when": ["opp_creatures >= 6", "opp_power > power"]}`. A spell that divides its X among targets (Fire Covenant) takes `divide`, above.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:
   `"<metric> <op> <number>"` with `>= <= > < == !=`, `"<metric> <op> <metric>"` (`"opp_power > power"`), or
   `"controls <card name>"` / `"not controls <card name>"` (a permanent of ours on the battlefield).

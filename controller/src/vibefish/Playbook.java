@@ -219,7 +219,16 @@ public final class Playbook {
      * below {@code x_keep_life} life left. With {@code aim} (a kind of permanent) the spell's one target is an
      * opponent's permanent of that kind, worth at least {@code aim_min}: the best one of the opponent that looks most
      * dangerous ({@code aim_at danger}, the default; the weights are {@code cast.danger}) or the best on any
-     * opponent's side ({@code any}); a rule takes {@code target} or {@code aim}, not both. {@code hold}: Forge's
+     * opponent's side ({@code any}); a rule takes {@code target} or {@code aim}, not both. With {@code divide}
+     * (since 0.4.6; a number, on a rule that has {@code aim}) the spell is one that divides an X among any number
+     * of targets (Fire Covenant): the rule chooses up to that many of the opponents' permanents of the aimed kind,
+     * gives each the amount that destroys it and pays their sum as X, never more than {@code x} (when the rule
+     * gives one) and never below {@code x_keep_life} when the X is paid in life; the targets are the set with the
+     * highest total rating the amount pays for, the most dangerous opponent's first ({@code aim_at danger}) or over
+     * every opponent's side at once ({@code any}), and the rule casts only for at least {@code divide_min} of them
+     * (default 1). With {@code "target_player": "self"} (since 0.4.6) the spell's one target is the seat itself
+     * (Pact of the Serpent: the cards are the seat's to draw); anything else such a spell asks as it resolves is
+     * Forge's to answer. {@code hold}: Forge's
      * own AI may not cast the listed cards, nor use the activated abilities of the listed permanents of ours (all of
      * them, or the one {@code ability} quotes), until every {@code until} condition holds (never, with no
      * {@code until}); a card named by several hold rules is released as soon as one of them is, and a play or
@@ -251,6 +260,9 @@ public final class Playbook {
         public final String aim;            // play, activate: the one target is an opponent's permanent of this kind (null: no aim)
         public final String aimAt;          // danger: of the opponent judged most dangerous first | any: the best on any opponent's side
         public final int aimMin;            // the least worth of a permanent the rule aims at (mana value; a creature's power if more)
+        public final boolean targetSelf;    // play: the spell's one target is the seat itself ("target_player": "self")
+        public final int divide;            // an aimed spell that divides its X: the most targets (0: not a dividing rule)
+        public final int divideMin;         // ... and the fewest worth casting for (default 1)
         public final int index;             // 1-based position in the file, for the counters
 
         /** The kinds of permanent an aim can ask for. */
@@ -277,7 +289,7 @@ public final class Playbook {
                 if (!o.get("forge").isJsonPrimitive() || !"unnamed".equals(o.get("forge").getAsString())) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": \"forge\" takes \"unnamed\" (Forge's choice among the plays no rule names)");
                 }
-                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min")) {
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player")) {
                     if (o.has(key)) {
                         throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\", \"phase\" and \"wait\"");
                     }
@@ -310,6 +322,16 @@ public final class Playbook {
                 if (!List.of("danger", "any").contains(aimAt)) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": aim_at must be danger or any");
                 }
+            }
+            String tp = str(o, "target_player", null);
+            if (tp != null && (!"self".equals(tp) || !"play".equals(kind) || target != null || aim != null)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"target_player\" takes \"self\", on a play rule without \"target\" or \"aim\"");
+            }
+            targetSelf = tp != null;
+            divide = num(o, "divide", 0);
+            divideMin = num(o, "divide_min", 1);
+            if ((o.has("divide") || o.has("divide_min")) && (aim == null || divide < 1 || divideMin < 1 || divideMin > divide)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"divide\" (the most targets, at least 1) needs \"aim\", and \"divide_min\" is between 1 and it");
             }
             ability = "play".equals(kind) ? null : str(o, "ability", null);
             times = num(o, "times", 1);

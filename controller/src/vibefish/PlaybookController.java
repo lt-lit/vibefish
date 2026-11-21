@@ -1357,6 +1357,9 @@ public class PlaybookController extends PlayerControllerAi {
     private final Map<String, Integer> castByName = new LinkedHashMap<>();
     private boolean castRetargeted;
     private Card castAimed;                 // the opponent's permanent the last aimed rule chose (for the trace and the counters)
+    private String castDivided;             // what the last dividing rule chose: X and each target's share (null: not a dividing cast)
+    private int castDividedTargets;
+    private int castDividedX;
     private boolean castWaiting;            // a forge rule with "wait" stopped the rules for this decision: the seat passes
     private int castWaitCard = -1;          // the card the rules waited for this turn, until Forge has chosen in main 2
     private int castWaitTurn = -1;
@@ -1800,6 +1803,7 @@ public class PlaybookController extends PlayerControllerAi {
                             continue;
                         }
                         castAimed = null;
+                        castDivided = null;
                         SpellAbility sa = activatable(c, rule.ability, target, rule);
                         if (sa != null) {
                             castActivations.merge(c.getId(), 1, Integer::sum);
@@ -1821,6 +1825,7 @@ public class PlaybookController extends PlayerControllerAi {
                         continue;
                     }
                     castAimed = null;
+                    castDivided = null;
                     SpellAbility sa = playable(c, target, rule);
                     if (sa != null) {
                         castPendingId = c.getId();
@@ -1850,11 +1855,16 @@ public class PlaybookController extends PlayerControllerAi {
             top &= opp == owner || danger(opp) <= danger(owner);
         }
         count(top ? "cast_aim_most_dangerous" : "cast_aim_next", 1);
+        if (castDivided != null) {
+            count("cast_divide", 1);
+            count("cast_divide_targets", castDividedTargets);
+            count("cast_divide_x", castDividedX);
+        }
     }
 
     private String aimText() {
         return castAimed == null ? "" : " aimed at " + castAimed.getName() + " of " + castAimed.getController().getName()
-                + " (danger " + danger(castAimed.getController()) + ")";
+                + " (danger " + danger(castAimed.getController()) + ")" + (castDivided == null ? "" : ", " + castDivided);
     }
 
     private boolean stillCastable(int cardId) {
@@ -1916,6 +1926,36 @@ public class PlaybookController extends PlayerControllerAi {
         sa.setActivatingPlayer(player);
         if (!sa.canPlay()) {
             return false;
+        }
+        if (target == null && rule.aim != null && rule.divide > 0) {
+            return readyDivided(sa, rule);
+        }
+        if (rule.targetSelf) {
+            // The rule aims the spell at the seat itself: the one part that takes a target must take a player.
+            SpellAbility part = null;
+            int parts = 0;
+            for (SpellAbility p = sa; p != null; p = p.getSubAbility()) {
+                if (p.usesTargeting()) {
+                    part = p;
+                    parts++;
+                }
+            }
+            if (parts != 1) {
+                return false;
+            }
+            part.setActivatingPlayer(player);
+            castRetargeted = true;
+            part.resetTargets();
+            if (!part.canTarget(player)) {
+                return false;
+            }
+            part.getTargets().add(player);
+            if (!part.isTargetNumberValid() || !ComputerUtilCost.canPayCost(sa, player, false)) {
+                part.resetTargets();
+                return false;
+            }
+            count("cast_self", 1);
+            return true;
         }
         SpellAbility aimed = null;
         SpellAbility paidX = null;
@@ -2013,6 +2053,175 @@ public class PlaybookController extends PlayerControllerAi {
             return false;
         }
         return true;
+    }
+
+    /**
+     * A spell that divides its X among any number of targets (Fire Covenant: pay X life, X damage divided among
+     * target creatures), cast by a rule that has {@code aim} and {@code divide}. The amount the rule may spend is
+     * what the cost allows (the mana left, or the life above {@code x_keep_life}), capped by the rule's {@code x}.
+     * Each of the opponents' permanents of the aimed kind that is a legal target and worth the rule's floor has a
+     * price, the least amount that destroys it by Forge's own arithmetic ({@code getEnoughDamageToKill}:
+     * indestructible and prevention included), and a rating, Forge's evaluation of the card. The rule takes the set
+     * of at most {@code divide} of them with the highest total rating that the amount pays for: with
+     * {@code aim_at danger} from the most dangerous opponent's side first and from the next opponent's with what
+     * is left, with {@code any} over every opponent's side at once. X is the sum of the prices, each target is
+     * allocated its own, and nothing is cast for fewer than {@code divide_min} targets or an X below {@code x_min}.
+     */
+    private boolean readyDivided(SpellAbility sa, Playbook.CastRule rule) {
+        SpellAbility part = null;
+        int parts = 0;
+        for (SpellAbility p = sa; p != null; p = p.getSubAbility()) {
+            if (p.usesTargeting()) {
+                part = p;
+                parts++;
+            }
+        }
+        boolean manaX = sa.costHasManaX();
+        boolean lifeX = !manaX && paysXLife(sa);
+        if (parts != 1 || !part.isDividedAsYouChoose() || !(manaX || lifeX)) {
+            count("cast_divide_unfit", 1);              // not a spell that divides an X among its targets
+            return false;
+        }
+        part.setActivatingPlayer(player);
+        castRetargeted = true;
+        part.resetTargets();
+        SpellAbility root = sa.getRootAbility();
+        int most = manaX ? ComputerUtilCost.setMaxXValue(sa, player, false) : player.getLife() - rule.xKeepLife;
+        int want = rule.x < 0 ? Integer.MAX_VALUE : rule.xMetric == null ? rule.x : metric(rule.xMetric);
+        int left = Math.min(most, want);
+        if (left < Math.max(rule.xMin, 1)) {
+            root.setXManaCostPaid(null);
+            return false;
+        }
+        root.setXManaCostPaid(left);                    // the number of targets a spell allows may be read off its X
+        Card host = sa.getHostCard();
+        List<Player> opps = new ArrayList<>(player.getOpponents());
+        boolean byDanger = "danger".equals(rule.aimAt);
+        if (byDanger) {
+            opps.sort((a, b) -> Integer.compare(danger(b), danger(a)));
+        }
+        List<List<Card>> sides = new ArrayList<>();
+        if (!byDanger) {
+            sides.add(new ArrayList<>());
+        }
+        for (Player opp : opps) {
+            List<Card> side = byDanger ? new ArrayList<>() : sides.get(0);
+            for (Card c : opp.getCardsIn(ZoneType.Battlefield)) {
+                if (c.isLand() || !aimKind(c, rule.aim) || !part.canTarget(c)) {
+                    continue;
+                }
+                if (Math.max(c.getCMC(), c.isCreature() ? c.getNetPower() : 0) >= rule.aimMin) {
+                    side.add(c);
+                }
+            }
+            if (byDanger) {
+                sides.add(side);
+            }
+        }
+        Map<Card, Integer> chosen = new LinkedHashMap<>();
+        int slots = rule.divide;
+        for (List<Card> side : sides) {
+            if (slots <= 0 || left <= 0) {
+                break;
+            }
+            List<Card> cards = new ArrayList<>();
+            List<Integer> price = new ArrayList<>();
+            for (Card c : side) {
+                int kill = ComputerUtilCombat.getEnoughDamageToKill(c, left, host, false);
+                if (kill >= 1 && kill <= left) {
+                    cards.add(c);
+                    price.add(kill);
+                }
+            }
+            // the set with the highest total rating: best[k][w] over at most k targets costing exactly w
+            int n = cards.size();
+            long[][] best = new long[slots + 1][left + 1];
+            int[][][] take = new int[n][slots + 1][left + 1];
+            for (long[] row : best) {
+                java.util.Arrays.fill(row, -1);
+            }
+            best[0][0] = 0;
+            for (int i = 0; i < n; i++) {
+                int w = price.get(i);
+                long v = Math.max(1, rating(cards.get(i)));
+                for (int k = slots; k >= 1; k--) {
+                    for (int cost = left; cost >= w; cost--) {
+                        if (best[k - 1][cost - w] >= 0 && best[k - 1][cost - w] + v > best[k][cost]) {
+                            best[k][cost] = best[k - 1][cost - w] + v;
+                            take[i][k][cost] = 1;
+                        }
+                    }
+                }
+            }
+            int bk = 0;
+            int bc = 0;
+            for (int k = 1; k <= slots; k++) {
+                for (int cost = 1; cost <= left; cost++) {
+                    if (best[k][cost] > best[bk][bc] || (best[k][cost] == best[bk][bc] && best[k][cost] > 0 && cost < bc)) {
+                        bk = k;
+                        bc = cost;
+                    }
+                }
+            }
+            // walk the items back: the last one that improved a state is in that state's best set
+            for (int i = n - 1, k = bk, cost = bc; i >= 0 && k > 0; i--) {
+                if (take[i][k][cost] == 1) {
+                    chosen.put(cards.get(i), price.get(i));
+                    cost -= price.get(i);
+                    k--;
+                }
+            }
+            int spent = 0;
+            int got = 0;
+            for (Card c : cards) {
+                if (chosen.containsKey(c)) {
+                    spent += chosen.get(c);
+                    got++;
+                }
+            }
+            left -= spent;
+            slots -= got;
+        }
+        int total = 0;
+        for (int v : chosen.values()) {
+            total += v;
+        }
+        if (chosen.size() < rule.divideMin || total < Math.max(rule.xMin, 1)) {
+            root.setXManaCostPaid(null);
+            count(chosen.isEmpty() ? "cast_aim_none" : "cast_divide_few", 1);
+            return false;
+        }
+        root.setXManaCostPaid(total);
+        for (Map.Entry<Card, Integer> e : chosen.entrySet()) {
+            part.getTargets().add(e.getKey());
+            part.addDividedAllocation(e.getKey(), e.getValue());
+        }
+        if (!part.isTargetNumberValid()) {
+            part.resetTargets();
+            root.setXManaCostPaid(null);
+            count("cast_divide_invalid", 1);            // Forge's rules refuse this number of targets
+            return false;
+        }
+        if (!ComputerUtilCost.canPayCost(sa, player, false)) {
+            part.resetTargets();                        // the mana is not there this time
+            root.setXManaCostPaid(null);
+            return false;
+        }
+        castAimed = chosen.keySet().iterator().next();
+        StringBuilder what = new StringBuilder();
+        for (Map.Entry<Card, Integer> e : chosen.entrySet()) {
+            what.append(what.length() == 0 ? "" : ", ").append(e.getValue()).append(" at ").append(e.getKey().getName())
+                .append(" of ").append(e.getKey().getController().getName());
+        }
+        castDivided = "X " + total + " divided: " + what;
+        castDividedTargets = chosen.size();
+        castDividedX = total;
+        return true;
+    }
+
+    /** Forge's rating of a card for the choice of a dividing spell's targets (a creature's evaluation; a rough one for anything else). */
+    private static int rating(Card card) {
+        return card.isCreature() ? ComputerUtilCard.evaluateCreature(card) : 100 + 20 * card.getCMC();
     }
 
     /** An X in the cost that is paid in life (Toxic Deluge), which the card's script reads back as the X of its effect. */
