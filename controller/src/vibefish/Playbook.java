@@ -240,7 +240,12 @@ public final class Playbook {
      * the seat's own that the spell or ability can target: one that is a creature card face up, an unblocked
      * attacker before a blocked one once blocks are declared, then the greater power face up; with
      * {@code "own": "attacker"} (0.4.8) it is an attacking creature of the seat's own, an unblocked one first, then
-     * the greater power, and the rule's {@code x} applies as it does with {@code target}. {@code keep} (0.4.8; its
+     * the greater power, and the rule's {@code x} applies as it does with {@code target}; with
+     * {@code "own": "minus_counter"} (0.4.9) a permanent of the seat's own that has -1/-1 counters and no other
+     * kind, a creature before anything else. A rule with {@code own} and {@code aim} (0.4.9) is for a spell or
+     * ability with two targets, in that order: the first is the seat's own permanent, the second an opponent's
+     * (Nesting Grounds: move a counter from the one onto the other). {@code aim_toughness} (0.4.9) keeps an aim
+     * to creatures of at most that toughness, for an effect that kills by a fixed amount. {@code keep} (0.4.8; its
      * value is {@code "mana"}): in the seat's first main phase, while every {@code when} condition holds, the rules
      * below are not read and the seat goes to combat with its mana, for a play written for its combat; they are
      * read in the second main phase. A rule's
@@ -279,7 +284,8 @@ public final class Playbook {
         public final String aimAt;          // danger: of the opponent judged most dangerous first | any: the best on any opponent's side
         public final int aimMin;            // the least worth of a permanent the rule aims at (mana value; a creature's power if more)
         public final boolean targetSelf;    // play: the spell's one target is the seat itself ("target_player": "self")
-        public final String own;            // play, activate: the one target is a creature of ours of this kind (face_down | attacker), chosen by the harness
+        public final String own;            // play, activate: a target that is a permanent of ours of this kind (face_down | attacker | minus_counter), chosen by the harness
+        public final int aimToughness;      // an aimed creature has at most this toughness (0: any)
         public final int divide;            // an aimed spell that divides its X: the most targets (0: not a dividing rule)
         public final int divideMin;         // ... and the fewest worth casting for (default 1)
         public final int index;             // 1-based position in the file, for the counters
@@ -318,7 +324,7 @@ public final class Playbook {
                 if (!o.get("forge").isJsonPrimitive() || !"unnamed".equals(o.get("forge").getAsString())) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": \"forge\" takes \"unnamed\" (Forge's choice among the plays no rule names)");
                 }
-                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player", "own")) {
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player", "own", "aim_toughness")) {
                     if (o.has(key)) {
                         throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule takes only \"when\", \"phase\" and \"wait\"");
                     }
@@ -338,8 +344,9 @@ public final class Playbook {
             aim = hold || forge ? null : str(o, "aim", null);
             aimAt = str(o, "aim_at", "danger");
             aimMin = num(o, "aim_min", 0);
-            if (aim == null && (o.has("aim") || o.has("aim_at") || o.has("aim_min"))) {
-                throw new IllegalArgumentException("playbook cast rule " + index + ": only a play or activate rule takes \"aim\", and \"aim_at\" and \"aim_min\" need it");
+            aimToughness = num(o, "aim_toughness", 0);
+            if (aim == null && (o.has("aim") || o.has("aim_at") || o.has("aim_min") || o.has("aim_toughness"))) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": only a play or activate rule takes \"aim\", and \"aim_at\", \"aim_min\" and \"aim_toughness\" need it");
             }
             if (aim != null) {
                 if (!AIM_KINDS.contains(aim)) {
@@ -358,8 +365,11 @@ public final class Playbook {
             }
             targetSelf = tp != null;
             own = hold || forge ? null : str(o, "own", null);
-            if (o.has("own") && (own == null || !List.of("face_down", "attacker").contains(own) || target != null || aim != null || tp != null)) {
-                throw new IllegalArgumentException("playbook cast rule " + index + ": \"own\" takes \"face_down\" or \"attacker\", on a play or activate rule without \"target\", \"aim\" or \"target_player\"");
+            if (o.has("own") && (own == null || !List.of("face_down", "attacker", "minus_counter").contains(own) || target != null || tp != null)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"own\" takes \"face_down\", \"attacker\" or \"minus_counter\", on a play or activate rule without \"target\" or \"target_player\"");
+            }
+            if (own != null && aim != null && o.has("divide")) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": a rule with \"own\" and \"aim\" names two targets and takes no \"divide\"");
             }
             divide = num(o, "divide", 0);
             divideMin = num(o, "divide_min", 1);

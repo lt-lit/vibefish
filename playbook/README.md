@@ -254,7 +254,9 @@ option nothing changes for a playbook that was measured without it.
   `"planeswalker"`. As with `target`, the spell must have exactly one part that takes a target; the candidates are the
   opponents' permanents of that kind that the spell can legally target (and, for a destroy effect, that are not
   indestructible). `aim_min` (default 0) is the least a permanent must be worth to be aimed at: its mana value, or a
-  creature's power when that is more, so that removal is not spent on the first mana rock. `aim_at` says whose:
+  creature's power when that is more, so that removal is not spent on the first mana rock. `aim_toughness` (harness
+  0.4.9; default none) keeps the aim to creatures of at most that toughness, for an effect that kills by a fixed amount
+  (two -1/-1 counters: `"aim_toughness": 2`); the harness still does not work out what an amount kills, the rule says. `aim_at` says whose:
   `"danger"` (the default) takes the opponents in the order of how dangerous they look and aims at the best such
   permanent of the first opponent that has one; `"any"` aims at the best one on any opponent's side. "Best" is Forge's
   own rating (`ComputerUtilCard.getBestAI`: the best creature by its evaluation of creatures, else the most expensive
@@ -308,8 +310,13 @@ option nothing changes for a playbook that was measured without it.
   count of the mana left can run far ahead of what its payment then finds (two Regal Behemoths and the monarchy: a
   count of 28 where the untapped lands paid for four), and a payment that fails loses the play; so for a rule with
   `own`, when that count is more than three above one mana a source, X is what one mana a source pays for
-  (`cast_x_capped`). A rule takes
-  `target`, `aim`, `target_player` or `own`, one of them. Counters: `cast_own`, `cast_own_unblocked`,
+  (`cast_x_capped`). `"own": "minus_counter"` (0.4.9) makes it a permanent of the seat's own that has -1/-1 counters
+  and no other kind of counter, a creature before anything else, the better creature first. A rule takes
+  `target`, `aim`, `target_player` or `own`, one of them, with one exception since 0.4.9: a rule with `own` and `aim`
+  is for a spell or ability with two targets, in that order. Its first part that takes a target gets the seat's own
+  permanent, its second an opponent's, chosen as any aim is: `{"activate": ["Nesting Grounds"], "ability": "Move a
+  counter", "own": "minus_counter", "aim": "creature", "aim_toughness": 1}` moves a -1/-1 counter from a creature of
+  ours onto a creature it kills. Nothing is cast unless both are found. Counters: `cast_own`, `cast_own_unblocked`,
   `cast_own_blocked`, `cast_own_attacking` (before blocks), `cast_own_none` (no such creature: the rule did not fire).
 - `keep` (harness 0.4.8): `{"keep": "mana", "when": [...]}` is a rule of its own kind. In the seat's first main phase,
   while every condition holds, the rules below it are not read and the seat goes to combat with its mana unspent; they

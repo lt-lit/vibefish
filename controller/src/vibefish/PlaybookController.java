@@ -2097,6 +2097,9 @@ public class PlaybookController extends PlayerControllerAi {
         if (!sa.canPlay()) {
             return false;
         }
+        if (target == null && rule.aim != null && rule.own != null) {
+            return readyTwo(sa, rule);
+        }
         if (target == null && rule.aim != null && rule.divide > 0) {
             return readyDivided(sa, rule);
         }
@@ -2263,6 +2266,52 @@ public class PlaybookController extends PlayerControllerAi {
             }
             return false;
         }
+        return true;
+    }
+
+    /**
+     * A spell or ability with two targets, cast by a rule that has {@code own} and {@code aim}: its first part that
+     * takes a target gets the seat's own permanent ({@code own}), its second an opponent's ({@code aim}, with the
+     * rule's floor, kind, toughness cap and order of danger). Nesting Grounds is the case: "move a counter from
+     * target permanent you control onto another target permanent". Nothing is cast unless both are found.
+     */
+    private boolean readyTwo(SpellAbility sa, Playbook.CastRule rule) {
+        List<SpellAbility> parts = new ArrayList<>();
+        for (SpellAbility p = sa; p != null; p = p.getSubAbility()) {
+            if (p.usesTargeting()) {
+                parts.add(p);
+            }
+        }
+        if (parts.size() != 2 || sa.costHasManaX()) {
+            return false;
+        }
+        SpellAbility first = parts.get(0);
+        SpellAbility second = parts.get(1);
+        first.setActivatingPlayer(player);
+        second.setActivatingPlayer(player);
+        castRetargeted = true;
+        first.resetTargets();
+        second.resetTargets();
+        Card mine = ownTarget(first, rule);
+        if (mine == null) {
+            count("cast_own_none", 1);
+            return false;
+        }
+        first.getTargets().add(mine);
+        Card theirs = aimTarget(second, rule);
+        if (theirs == null) {
+            first.resetTargets();
+            count("cast_aim_none", 1);
+            return false;
+        }
+        second.getTargets().add(theirs);
+        if (!first.isTargetNumberValid() || !second.isTargetNumberValid() || !ComputerUtilCost.canPayCost(sa, player, false)) {
+            first.resetTargets();
+            second.resetTargets();
+            return false;
+        }
+        castOwn = mine;
+        castAimed = theirs;
         return true;
     }
 
@@ -2439,23 +2488,30 @@ public class PlaybookController extends PlayerControllerAi {
      * The creature of the seat's own that a rule with {@code own} points at. {@code face_down}: a face-down creature
      * that is a creature card face up; once blocks are declared an unblocked attacker before any other (it then
      * deals its damage to a player as what it really is), then the greater power face up. {@code attacker}: an
-     * attacking creature, an unblocked one first, then the greater power. Always a legal target of the spell or
-     * ability.
+     * attacking creature, an unblocked one first, then the greater power. {@code minus_counter}: a permanent with
+     * -1/-1 counters and no other kind of counter (so that which counter an effect takes is not a question), a
+     * creature before anything else, the better creature first. Always a legal target of the spell or ability.
      */
     private Card ownTarget(SpellAbility part, Playbook.CastRule rule) {
         Combat combat = getGame().getPhaseHandler().getCombat();
         boolean attackers = "attacker".equals(rule.own);        // an attacking creature of ours; else a face-down one
+        boolean counters = "minus_counter".equals(rule.own);    // a permanent of ours with -1/-1 counters and no other kind
         Card best = null;
         int bestScore = Integer.MIN_VALUE;
         for (Card c : player.getCardsIn(ZoneType.Battlefield)) {
-            if (attackers ? (combat == null || !c.isCreature() || !combat.isAttacking(c)) : (!c.isFaceDown() || faceUpPower(c) < 0)) {
+            if (counters) {
+                if (c.getCounters(forge.game.card.CounterEnumType.M1M1) <= 0 || c.getCounters().elementSet().size() != 1) {
+                    continue;
+                }
+            } else if (attackers ? (combat == null || !c.isCreature() || !combat.isAttacking(c)) : (!c.isFaceDown() || faceUpPower(c) < 0)) {
                 continue;
             }
             if (!part.canTarget(c)) {
                 continue;
             }
             boolean unblocked = combat != null && combat.isAttacking(c) && combat.isUnblocked(c);
-            int score = (unblocked ? 1000 : 0) + (attackers ? c.getNetPower() : faceUpPower(c));
+            int score = counters ? (c.isCreature() ? 100000 + ComputerUtilCard.evaluateCreature(c) : c.getCMC())
+                    : (unblocked ? 1000 : 0) + (attackers ? c.getNetPower() : faceUpPower(c));
             if (score > bestScore) {
                 best = c;
                 bestScore = score;
@@ -2534,6 +2590,9 @@ public class PlaybookController extends PlayerControllerAi {
                 int worth = Math.max(c.getCMC(), c.isCreature() ? c.getNetPower() : 0);
                 if (worth < rule.aimMin || (destroys && c.hasKeyword(Keyword.INDESTRUCTIBLE)) || !part.canTarget(c)) {
                     continue;
+                }
+                if (rule.aimToughness > 0 && (!c.isCreature() || c.getNetToughness() > rule.aimToughness)) {
+                    continue;                           // the effect kills by a fixed amount: this one would live
                 }
                 theirs.add(c);
             }

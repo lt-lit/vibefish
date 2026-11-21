@@ -16,7 +16,7 @@ import os
 import statistics
 import sys
 
-VERSION = "0.4.8"
+VERSION = "0.4.9"
 
 
 def load_json(path):
