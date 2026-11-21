@@ -61,7 +61,10 @@ are that session's and have to be replaced by the new session's scratch director
   names above its `forge` rule, the cards it names below it and the cards no rule names: how §32 read what the `forge`
   rule's wait moved from one group to the other. `leader.py DIR...`: which thing a table can see says who goes on to
   win (the seat with the most nonland permanents, the highest life, the most damage dealt, sums of them), turn by turn
-  from the event logs; the default of an aim's judgement of danger comes from it (DESIGN §33).
+  from the event logs; the default of an aim's judgement of danger comes from it (DESIGN §33). `danger_eval.py RUN_DIR...`
+  (numpy): the same question on harness 0.4.0 logs with more counts (creatures, their power, lands, hand, damage
+  dealt) and a model fitted on half the games and scored on the other half; nothing beat life + 2 x nonland
+  permanents (DESIGN §34).
 - `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--swing danger] [--open]
   [--targets danger] [--block survive] [--name NAME]`: a candidate that is a deck's shipped playbook with a hook on
   its attack (`{"policy": "forge", ...}` for a playbook that leaves the attack to Forge), on its triggers' targets or
