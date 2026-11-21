@@ -1,6 +1,7 @@
 package vibefish;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
@@ -10,6 +11,7 @@ import java.util.Set;
 
 import forge.LobbyPlayer;
 import forge.ai.AiPlayDecision;
+import forge.ai.ComputerUtil;
 import forge.ai.ComputerUtilAbility;
 import forge.ai.ComputerUtilCard;
 import forge.ai.ComputerUtilCombat;
@@ -1740,6 +1742,113 @@ public class PlaybookController extends PlayerControllerAi {
     }
 
     // ------------------------------------------------------------------ triggers
+
+    /**
+     * The seat's triggered abilities go on the stack here, and for Forge's AI this is where their targets are
+     * chosen ({@code prepareSingleSa}, then {@code ComputerUtil.playStack}). With {@code targets.triggers} set
+     * the same two steps are taken for the seat's own plain triggers with the aim in between; a copied spell, a
+     * charm, a trigger another player aims and anything a teammate plays go through Forge's method unchanged,
+     * one at a time and in the order Forge gave them.
+     */
+    @Override
+    public void orderAndPlaySimultaneousSa(List<SpellAbility> activePlayerSAs) {
+        if (playbook == null || playbook.targets == null || !playbook.targets.triggersByDanger) {
+            super.orderAndPlaySimultaneousSa(activePlayerSAs);
+            return;
+        }
+        for (SpellAbility sa : orderSimultaneousSa(activePlayerSAs)) {
+            boolean plain = sa.getActivatingPlayer() == player && sa.isTrigger() && !sa.isCopied()
+                    && sa.getApi() != ApiType.Charm && !sa.hasParam("TargetingPlayer");
+            if (!plain) {
+                super.orderAndPlaySimultaneousSa(Collections.singletonList(sa));
+                continue;
+            }
+            if (getAi().doTrigger(sa, true)) {
+                try {
+                    aimTrigger(sa);
+                } catch (RuntimeException e) {
+                    count("trigger_aim_errors", 1);
+                }
+                ComputerUtil.playStack(sa, player, getGame());
+            }
+        }
+    }
+
+    /**
+     * Aim a removal trigger by the judgement of danger. Each part of the trigger that has exactly one target, a
+     * permanent an opponent controls, and that destroys it, exiles it or returns it to hand or library: when
+     * another opponent looks more dangerous than that one by {@code targets.margin} or more, those are asked in turn for
+     * a permanent of the same kind (creature or not) the part can target, not indestructible if it is to be
+     * destroyed, and worth at least as much as Forge's choice or at least {@code targets.min}; the best of the
+     * first opponent that has one becomes the target. Otherwise Forge's target stands.
+     */
+    private void aimTrigger(SpellAbility sa) {
+        for (SpellAbility part = sa; part != null; part = part.getSubAbility()) {
+            if (!part.usesTargeting() || part.getTargets().size() != 1 || !removesOne(part)) {
+                continue;
+            }
+            Card now = part.getTargets().getFirstTargetedCard();
+            if (now == null || !now.isInPlay() || now.getController() == player || !player.isOpponentOf(now.getController())) {
+                continue;
+            }
+            count("trigger_aim_seen", 1);
+            Player owner = now.getController();
+            List<Player> opps = new ArrayList<>();
+            for (Player opp : player.getOpponents()) {
+                if (!opp.hasLost() && danger(opp) >= danger(owner) + Math.max(1, playbook.targets.margin)) {
+                    opps.add(opp);
+                }
+            }
+            if (opps.isEmpty()) {
+                count("trigger_aim_already", 1);        // Forge aimed at the most dangerous opponent, or at one that looks nearly as dangerous
+                continue;
+            }
+            opps.sort((x, y) -> Integer.compare(danger(y), danger(x)));
+            boolean destroys = part.getApi() == ApiType.Destroy;
+            int floor = Math.min(worth(now), playbook.targets.min);
+            Card best = null;
+            for (Player opp : opps) {
+                List<Card> theirs = new ArrayList<>();
+                for (Card c : opp.getCardsIn(ZoneType.Battlefield)) {
+                    if (c.isLand() || c.isCreature() != now.isCreature() || worth(c) < floor
+                            || (destroys && c.hasKeyword(Keyword.INDESTRUCTIBLE)) || !part.canTarget(c)) {
+                        continue;
+                    }
+                    theirs.add(c);
+                }
+                if (!theirs.isEmpty()) {
+                    best = ComputerUtilCard.getBestAI(theirs);
+                    break;
+                }
+            }
+            if (best == null) {
+                count("trigger_aim_kept", 1);           // nothing worth it on a more dangerous opponent's side
+                continue;
+            }
+            part.resetTargets();
+            part.getTargets().add(best);
+            count("trigger_aim_moved", 1);
+            trace("aims the trigger of " + sa.getHostCard().getName() + " at " + best.getName() + " of " + best.getController().getName()
+                    + " (danger " + danger(best.getController()) + ") instead of " + now.getName() + " of " + owner.getName() + " (" + danger(owner) + ")");
+        }
+    }
+
+    /** Destroys its target, or moves it from the battlefield to exile, a hand, a library or a graveyard. */
+    private static boolean removesOne(SpellAbility part) {
+        ApiType api = part.getApi();
+        if (api == ApiType.Destroy) {
+            return true;
+        }
+        if (api != ApiType.ChangeZone) {
+            return false;
+        }
+        String to = part.hasParam("Destination") ? part.getParam("Destination") : "";
+        return "Battlefield".equals(part.hasParam("Origin") ? part.getParam("Origin") : "") && !to.isEmpty() && !"Battlefield".equals(to);
+    }
+
+    private static int worth(Card c) {
+        return Math.max(c.getCMC(), c.isCreature() ? c.getNetPower() : 0);
+    }
 
     /**
      * An optional trigger of ours: the first trigger rule that names the card and whose conditions hold answers; with

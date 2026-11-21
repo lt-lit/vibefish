@@ -9,10 +9,12 @@ that differ for another reason (Forge's own run-to-run differences) only add noi
 of a table are read side by side to the first event that differs, and the table is filed by what that event is:
 
   identical    the two games are the same to the end
-  attack       the first difference is the seat under test's own attack declaration: the hook's doing. Filed further by where
-               the table stood on that turn: the seat was sure to kill its last opponent, the most dangerous of several
-               (life + 2 x nonland permanents), a less dangerous one, or nobody
-  other        anything else (the same position played differently by Forge, or a hook that is not about the attack)
+  attack       the first difference is the seat under test's own attack declaration: the doing of a hook on the attack. Filed
+               further by where the table stood on that turn: the seat was sure to kill its last opponent, the most dangerous
+               of several (life + 2 x nonland permanents), a less dangerous one, or nobody
+  target       the first difference is a spell or ability of the seat's that both games put on the stack, aimed at something
+               else: the doing of a hook on targets
+  other        anything else (the same position played differently by Forge)
 
 For each file: the tables, how the pair ended (both won, only the candidate, only the base, neither) with the exact test on the
 two middle counts, and from the same position, in each game: did an opponent the seat was sure to kill go out that turn, was the
@@ -96,6 +98,22 @@ def read(root, base, cand, deck, tables, arm):
         xa = ea[i] if i < len(ea) else None
         xb = eb[i] if i < len(eb) else None
         own = [x for x in (xa, xb) if x is not None and x['e'] == 'attack' and x.get('seat') == focus]
+        if (not own and xa is not None and xb is not None and xa['e'] == xb['e'] == 'cast' and xa.get('seat') == xb.get('seat') == focus
+                and xa.get('card') == xb.get('card') and xa.get('ability') == xb.get('ability')
+                and (xa.get('targets') != xb.get('targets') or xa.get('target_ctrl') != xb.get('target_ctrl'))):
+            state = {}
+            for x in eb[:i]:
+                if x['e'] == 'turn':
+                    state = {s['seat']: s for s in x.get('state') or []}
+            opps = [v for v in state.values() if v['seat'] != focus and v.get('alive')]
+            dg = {v['seat']: v['life'] + 2 * (v['bf'] - v['lands']) for v in opps}
+            top = max(dg.values()) if dg else None
+            def at_top(x):
+                tc = [c for c in x.get('target_ctrl') or [] if c is not None and c != focus]
+                return bool(tc) and top is not None and dg.get(tc[0]) == top
+            r.update({'file': 'target', 't': xb.get('t'), 'card': xb.get('card'), 'base_at_top': at_top(xa), 'cand_at_top': at_top(xb), 'opponents': len(opps)})
+            rows.append(r)
+            continue
         if not own:
             r['file'] = 'other'
             r['t'] = (xb or xa).get('t')
@@ -153,17 +171,23 @@ def main(argv):
     files = collections.defaultdict(list)
     for r in rows:
         files[r['file'] if r['file'] != 'attack' else 'attack: ' + r['stood']].append(r)
-    order = ['identical', 'other', 'attack: last', 'attack: top', 'attack: lesser', 'attack: nobody', 'missing']
+    order = ['identical', 'other', 'target', 'attack: last', 'attack: top', 'attack: lesser', 'attack: nobody', 'missing']
     print(f"{len(a.decks)} decks, {len(rows)} tables: {cn} beside {bn}; the two games of a table, filed by the first event that differs")
     for k in order:
         if files.get(k):
             print(line(k, files[k], bn, cn))
     att = [r for r in rows if r['file'] == 'attack']
-    print(line('attack, all', att, bn, cn))
+    if att:
+        print(line('attack, all', att, bn, cn))
+    tg = files.get('target') or []
+    if tg:
+        print(f"  on the {len(tg)} target tables the cast that differs was aimed at the opponent that looked most dangerous at the start of that turn: "
+              f"{cn} {sum(r['cand_at_top'] for r in tg)}, {bn} {sum(r['base_at_top'] for r in tg)}")
     print(line('every table', [r for r in rows if 'outcome' in r], bn, cn))
-    print()
-    print("From the same position (the turn of the first difference, the seat's own attack): in each game, tables on which an opponent it was sure to kill went out that turn;")
-    print("the seat was out before its own next turn; it was left where one opponent alone was sure to kill it before then; attackers sent")
+    if att:
+        print()
+        print("From the same position (the turn of the first difference, the seat's own attack): in each game, tables on which an opponent it was sure to kill went out that turn;")
+        print("the seat was out before its own next turn; it was left where one opponent alone was sure to kill it before then; attackers sent")
     for k in order:
         g = [r for r in files.get(k, []) if r['file'] == 'attack']
         if not g:
@@ -184,6 +208,8 @@ def main(argv):
             summary = {k: dict(collections.Counter(r['outcome'] for r in g if 'outcome' in r), tables=len(g)) for k, g in files.items()}
             summary['attack, all'] = dict(collections.Counter(r['outcome'] for r in att), tables=len(att),
                                           **{f'{side}_{k}': sum(r[side][k] for r in att) for side in ('base', 'cand') for k in ('kill', 'dead', 'exposed', 'sent')})
+            if tg:
+                summary['target'].update(cand_at_top=sum(r['cand_at_top'] for r in tg), base_at_top=sum(r['base_at_top'] for r in tg))
             for k, g in files.items():
                 if k.startswith('attack: '):
                     summary[k].update({f'{side}_{x}': sum(r[side][x] for r in g) for side in ('base', 'cand') for x in ('kill', 'dead', 'exposed', 'sent')})

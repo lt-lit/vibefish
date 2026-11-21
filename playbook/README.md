@@ -58,6 +58,7 @@ the harness is given `--playbook id=file`). Everything absent stays Forge's.
   "mulligan": {"min_lands": 2, "max_lands": 5, "max_mulligans": 2},
   "cast":     {"rules": [ ... ], "max_per_turn": 60},
   "triggers": [ ... ],
+  "targets":  {"triggers": "danger", "min": 4, "margin": 5},
   "notes": "why"
 }
 ```
@@ -273,6 +274,36 @@ sacrifices its lowest-rated creature and picks the modes and targets, so the con
 price is right (`tokens >= 1`: there is a token to give up). Mandatory triggers are never asked about. Counters:
 `trigger_decisions`, `trigger_accepted`, `trigger_declined`, `trigger_rule_<n>`, `trigger_errors`; the rules are
 recorded in `run.json` under `decks[].playbook.triggers`.
+
+### `targets`: where the seat's removal triggers aim
+
+A spell can be aimed by its rule (`aim`, above); most of the removal in these precons is not a spell but a creature's
+enters trigger, and its target is chosen by Forge's AI when the trigger goes on the stack. Counted at the owner's
+table (`docs/agents/aimed_at.py`, `DESIGN.md` §34): of 11,053 triggered abilities aimed at an opponent's permanent in
+2,000 games, 49% went at the opponent that looks most dangerous and 58% at the widest board, where a random opponent
+is 38%; about 4,000 of them destroy, exile or bounce one permanent.
+
+```
+"targets": {"triggers": "danger", "min": 4, "margin": 5}
+```
+
+With `"triggers": "danger"` (harness 0.4.2) a triggered ability of the seat that removes one permanent an opponent
+controls (it destroys it, exiles it, or returns it to hand or library; exactly one target) is aimed by the judgement
+of danger the cast rules use (`cast.danger`: life plus twice the nonland permanents by default). Forge's AI chooses
+first. When its target belongs to the most dangerous opponent, or to one that looks nearly as dangerous (within
+`margin`, default 5: a close table is left to Forge, whose pick of the permanent is as good as any), nothing changes.
+Otherwise the opponents that look more dangerous by that margin are asked in turn, the most dangerous first, for a
+permanent of the same kind (a creature for a creature, a noncreature for a
+noncreature) that the ability can target, that is not indestructible if it is to be destroyed, and that is worth at
+least as much as Forge's choice or at least `min` (mana value, or power if higher; default 4): the best of the first
+opponent that has one (`ComputerUtilCard.getBestAI`) is targeted instead. If none has one, Forge's target stands.
+Damage, -X/-X, fights, steals, taps and anything with several targets are left alone: what they should hit depends
+on more than who is ahead. The hook is Forge's public `orderAndPlaySimultaneousSa`: the seat's own plain triggers are
+prepared by Forge's AI (`AiController.doTrigger`) and put on the stack (`ComputerUtil.playStack`) exactly as Forge
+does, with the aim in between; charms, copies and triggers another player aims go through Forge's method untouched.
+Counters: `trigger_aim_seen` (a removal trigger aimed at an opponent's permanent), `trigger_aim_already` (at the most
+dangerous opponent already), `trigger_aim_moved`, `trigger_aim_kept` (nothing worth it on a more dangerous
+opponent's side), `trigger_aim_errors`; the block is recorded in `run.json` under `decks[].playbook.targets`.
 
 ### Writing one
 

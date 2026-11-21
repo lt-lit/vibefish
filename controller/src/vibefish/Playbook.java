@@ -427,10 +427,38 @@ public final class Playbook {
         }
     }
 
+    /**
+     * Where the seat's own triggered abilities aim. {@code "triggers": "danger"}: a triggered ability of the seat
+     * that removes one permanent an opponent controls (it destroys it, exiles it, or returns it to hand or
+     * library) is aimed at the opponent that looks most dangerous (life and nonland permanents by the weights of
+     * {@code cast.danger}). Forge's AI chooses its target first; when that target belongs to an opponent that
+     * looks less dangerous than another by at least {@code margin} (a close table is left to Forge), and the
+     * more dangerous one controls a permanent of the same kind (creature or not) that the ability can target
+     * and that is worth at least as much as Forge's choice or at least {@code min} (mana value, or power if
+     * higher), the best such permanent is targeted instead. Everything else about the trigger stays Forge's.
+     */
+    public static final class Targets {
+        public final boolean triggersByDanger;
+        public final int min;
+        public final int margin;
+
+        Targets(JsonObject o) {
+            String t = str(o, "triggers", "");
+            if (!t.isEmpty() && !"danger".equals(t)) {
+                throw new IllegalArgumentException("playbook targets.triggers must be \"danger\"");
+            }
+            triggersByDanger = "danger".equals(t);
+            min = num(o, "min", 4);
+            margin = num(o, "margin", 5);
+        }
+    }
+
     public final int version;
     public final Attack attack;
     public final Mulligan mulligan;
     public final Cast cast;
+    public final Targets targets;               // null when the playbook has none
+    public final JsonElement targetsSource;     // as written, recorded in run.json (null when none)
     public final List<TriggerRule> triggers;    // empty when the playbook has none
     public final JsonElement triggersSource;    // as written, recorded in run.json (null when none)
 
@@ -439,6 +467,8 @@ public final class Playbook {
         attack = o.has("attack") && o.get("attack").isJsonObject() ? new Attack(o.getAsJsonObject("attack")) : null;
         mulligan = o.has("mulligan") && o.get("mulligan").isJsonObject() ? new Mulligan(o.getAsJsonObject("mulligan")) : null;
         cast = o.has("cast") && o.get("cast").isJsonObject() ? new Cast(o.getAsJsonObject("cast")) : null;
+        targets = o.has("targets") && o.get("targets").isJsonObject() ? new Targets(o.getAsJsonObject("targets")) : null;
+        targetsSource = targets == null ? null : o.get("targets");
         List<TriggerRule> list = new ArrayList<>();
         if (o.has("triggers") && o.get("triggers").isJsonArray()) {
             JsonArray arr = o.getAsJsonArray("triggers");
@@ -523,6 +553,9 @@ public final class Playbook {
         }
         if (!triggers.isEmpty()) {
             sb.append(" triggers=").append(triggers.size()).append(" rule(s)");
+        }
+        if (targets != null && targets.triggersByDanger) {
+            sb.append(" targets=removal triggers by danger (min ").append(targets.min).append(", margin ").append(targets.margin).append(")");
         }
         return sb.toString();
     }
