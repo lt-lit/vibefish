@@ -1,0 +1,28 @@
+{
+ "kind": "deck-exam",
+ "deck": "blight-curse",
+ "tables": 200,
+ "only_candidate": 9,
+ "only_shipped": 7,
+ "both": 34,
+ "exact_p": 0.8036,
+ "shipped": {
+  "games": 200,
+  "wins": 41,
+  "turns": 9052,
+  "ability Tree of Perdition|Exchange": 45,
+  "ability Carnifex Demon|": 19
+ },
+ "candidate": {
+  "games": 200,
+  "wins": 43,
+  "turns": 8990,
+  "ability Devoted Druid|Untap": 92,
+  "ability Tree of Perdition|Exchange": 45,
+  "ability Carnifex Demon|": 19,
+  "ability Ifnir Deadlands|Put two": 4,
+  "counter cast_own_none": 394,
+  "counter cast_own": 25,
+  "ability Nesting Grounds|Move a counter": 25
+ }
+}

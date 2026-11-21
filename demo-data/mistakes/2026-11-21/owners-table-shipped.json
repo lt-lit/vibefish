@@ -1,0 +1,791 @@
+{
+ "kind": "mistakes",
+ "games": 2000,
+ "games_without_combat_lines": 0,
+ "arm": null,
+ "by_deck": false,
+ "deck": null,
+ "groups": {
+  "bot": {
+   "seat_games": 8000,
+   "turns_able": 52959,
+   "turns_attacked": 30392,
+   "power_able": 579091,
+   "power_sent": 357382,
+   "kill_turns": 6192,
+   "kill_taken": 3756,
+   "kill_other": 199,
+   "kill_missed": 2237,
+   "kill_missed_no_attack": 1912,
+   "kill_missed_short": 325,
+   "kill_missed_then_lost": 1387,
+   "kill_missed_then_won": 850,
+   "kill_last_turns": 1436,
+   "kill_last_missed": 78,
+   "kill_top_turns": 1093,
+   "kill_top_missed": 172,
+   "kill_lesser_turns": 3663,
+   "kill_lesser_missed": 1987,
+   "open_turns": 20145,
+   "open_attacked": 6201,
+   "open_elsewhere": 6853,
+   "attacked_lethal": 4366,
+   "combat_deaths": 4226,
+   "block_not_made": 6,
+   "died_tapped_out": 574,
+   "commander_deaths": 473
+  }
+ },
+ "kills_not_taken": [
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0001/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 2,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 23,
+     "blockers": 5,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0001/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 33,
+     "power": 33,
+     "blockers": 0,
+     "through": 33
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0001/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 0,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 2,
+     "power": 15,
+     "blockers": 12,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "1": 6
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0002/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 2,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 37,
+     "blockers": 2,
+     "through": 26
+    },
+    {
+     "seat": 1,
+     "life": 27,
+     "power": 37,
+     "blockers": 1,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "0": 8
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0003/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 0,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 19,
+     "blockers": 1,
+     "through": 10
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0004/games/game-001.events.jsonl",
+   "t": 54,
+   "seat": 1,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 8,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0004/games/game-001.events.jsonl",
+   "t": 55,
+   "seat": 2,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 6,
+     "blockers": 1,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0005/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 2,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 14,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0005/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 3,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0006/games/game-001.events.jsonl",
+   "t": 58,
+   "seat": 3,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 44,
+     "blockers": 9,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0008/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0009/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0010/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 0,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 2,
+     "power": 3,
+     "blockers": 2,
+     "through": 3
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0011/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 3,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 9,
+     "power": 47,
+     "blockers": 3,
+     "through": 27
+    },
+    {
+     "seat": 1,
+     "life": 21,
+     "power": 47,
+     "blockers": 3,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "2": 9
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0011/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 0,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0011/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 1,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0012/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 23,
+     "blockers": 1,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0013/games/game-001.events.jsonl",
+   "t": 20,
+   "seat": 1,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 18,
+     "power": 33,
+     "blockers": 0,
+     "through": 33
+    }
+   ],
+   "attacked": {
+    "3": 7
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 1,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 13,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 0,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 13,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 1,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 22,
+     "blockers": 0,
+     "through": 22
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 0,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 12,
+     "blockers": 0,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 16,
+     "blockers": 0,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 0,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 1,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 23,
+     "blockers": 0,
+     "through": 23
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0015/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 3,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0015/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 2,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 14,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0016/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 15,
+     "power": 16,
+     "blockers": 0,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0016/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 15,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0017/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 8,
+     "blockers": 0,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "3": 2
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0017/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 3,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 2,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 18,
+     "power": 49,
+     "blockers": 1,
+     "through": 18
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 3,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 19,
+     "blockers": 1,
+     "through": 16
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 56,
+   "seat": 3,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 21,
+     "blockers": 2,
+     "through": 13
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0026/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 3,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 38,
+     "power": 49,
+     "blockers": 0,
+     "through": 49
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0031/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 3,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 11,
+     "power": 22,
+     "blockers": 2,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0032/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 12,
+     "blockers": 0,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0032/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 18,
+     "blockers": 0,
+     "through": 18
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0032/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 1,
+   "deck": "deadly-disguise",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam46/results/ab-blight-curse/arm-playbook/g0032/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 2,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  }
+ ],
+ "run": "ab-run #46 (run id 44843287002, commit aa25502, harness 0.4.1, seed 20261390): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook of 2026-11-15",
+ "counted": "2026-11-21, runner/mistakes.py as of harness 0.4.5 on logs of harness 0.4.1: the block and tapped-out counts know trample (a blocked trampler's excess gets through), which the logs of the first baseline (0.4.0) did not carry"
+}

@@ -1,0 +1,27 @@
+{
+ "kind": "deck-exam",
+ "deck": "blight-curse",
+ "tables": 200,
+ "only_candidate": 5,
+ "only_shipped": 4,
+ "both": 37,
+ "exact_p": 1.0,
+ "shipped": {
+  "games": 200,
+  "wins": 41,
+  "turns": 9052,
+  "held Fire Covenant": 44,
+  "cast Fire Covenant": 0
+ },
+ "candidate": {
+  "games": 200,
+  "wins": 42,
+  "turns": 9067,
+  "counter cast_divide_few": 70,
+  "counter cast_divide": 36,
+  "counter cast_divide_targets": 81,
+  "counter cast_divide_x": 333,
+  "held Fire Covenant": 48,
+  "cast Fire Covenant": 36
+ }
+}

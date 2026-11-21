@@ -1,0 +1,25 @@
+{
+ "kind": "deck-exam",
+ "deck": "veloci-ramp-tor",
+ "tables": 200,
+ "only_candidate": 2,
+ "only_shipped": 2,
+ "both": 77,
+ "exact_p": 1.0,
+ "shipped": {
+  "games": 200,
+  "wins": 79,
+  "turns": 8933,
+  "ability Kessig Wolf Run|gets +X/+0": 28
+ },
+ "candidate": {
+  "games": 200,
+  "wins": 79,
+  "turns": 8919,
+  "ability Kessig Wolf Run|gets +X/+0": 32,
+  "counter cast_own": 21,
+  "counter cast_own_unblocked": 21,
+  "counter cast_combat": 21,
+  "counter cast_x_capped": 2
+ }
+}

@@ -393,6 +393,19 @@ price is right (`tokens >= 1`: there is a token to give up). Mandatory triggers 
 `trigger_decisions`, `trigger_accepted`, `trigger_declined`, `trigger_rule_<n>`, `trigger_errors`; the rules are
 recorded in `run.json` under `decks[].playbook.triggers`.
 
+An `accept` without a condition says yes every time, and a trigger that feeds itself then has no end. Miracle Worker's
+version 3 accepted Ondu Spiritdancer's copy that way; with Secret Arcade unlocked a Spiritdancer that enters copies
+itself, the copy does the same, and 22 of the 25 games without a winner in 2,000 were that chain, stopped by Forge's
+clock (DESIGN.md §35). Give such a rule a count and a `decline` after it:
+
+```
+{"accept":  ["Ondu Spiritdancer"], "when": ["type:Kor <= 20"]},
+{"decline": ["Ondu Spiritdancer"]}
+```
+
+A count of permanents does not stop a chain whose pieces die as they are made (Blight Curse's Blowfly Infestation with
+Flourishing Defenses); that wants a limit a turn, which the format does not have yet.
+
 ### `targets`: where the seat's removal triggers aim
 
 A spell can be aimed by its rule (`aim`, above); most of the removal in these precons is not a spell but a creature's

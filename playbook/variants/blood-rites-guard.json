@@ -1,0 +1,239 @@
+{
+ "schema": 1,
+ "deck": "blood-rites",
+ "variant": "guard",
+ "of": "playbook/precons/blood-rites.json (version 4)",
+ "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped playbook with a hook on its attack (docs/agents/add_finish.py; DESIGN.md section 34). Only the playbook object is read.",
+ "playbook": {
+  "version": 5,
+  "attack": {
+   "policy": "forge",
+   "aim": "danger",
+   "open": true,
+   "finish": "leader",
+   "guard": "table"
+  },
+  "targets": {
+   "triggers": "danger"
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Talisman of Hierarchy",
+      "Orzhov Signet",
+      "Mind Stone",
+      "Commander's Sphere"
+     ]
+    },
+    {
+     "play": [
+      "Clavileño, First of the Blessed"
+     ]
+    },
+    {
+     "play": [
+      "Olivia's Wrath"
+     ],
+     "when": [
+      "type:Vampire >= 3",
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "forge": "unnamed",
+     "when": [
+      "opp_power > power",
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Patron of the Vein"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Damn"
+     ]
+    },
+    {
+     "play": [
+      "New Blood"
+     ],
+     "aim": "creature",
+     "aim_min": 4
+    },
+    {
+     "play": [
+      "Legion Lieutenant",
+      "Radiant Destiny",
+      "Etchings of the Chosen",
+      "Glass-Cast Heart",
+      "Sanctum Seeker",
+      "Mavren Fein, Dusk Apostle",
+      "Kindred Boon",
+      "Cordial Vampire",
+      "Drana, Liberator of Malakir",
+      "Elenda, the Dusk Rose",
+      "Exquisite Blood",
+      "Crossway Troublemakers",
+      "Timothar, Baron of Bats",
+      "Promise of Aclazotz"
+     ]
+    },
+    {
+     "play": [
+      "Sorin, Lord of Innistrad",
+      "Heirloom Blade",
+      "Swiftfoot Boots"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Pact of the Serpent"
+     ],
+     "target_player": "self",
+     "when": [
+      "type:Vampire >= 3",
+      "life >= 20",
+      "library >= 30",
+      "type:Vampire < life"
+     ]
+    },
+    {
+     "play": [
+      "Champion of Dusk"
+     ],
+     "when": [
+      "type:Vampire >= 3",
+      "library >= 30",
+      "life >= 15"
+     ]
+    },
+    {
+     "play": [
+      "Butcher of Malakir",
+      "Order of Sacred Dusk",
+      "Carmen, Cruel Skymarcher",
+      "Vona, Butcher of Magan",
+      "Twilight Prophet",
+      "Falkenrath Noble",
+      "Nighthawk Scavenger",
+      "Bloodtracker",
+      "Elenda's Hierophant",
+      "Welcoming Vampire",
+      "Yahenni, Undying Partisan",
+      "Bloodline Necromancer",
+      "Redemption Choir",
+      "Blood Artist",
+      "Cruel Celebrant",
+      "Bartolomé del Presidio",
+      "Charismatic Conqueror",
+      "Indulgent Aristocrat",
+      "Dusk Legion Zealot",
+      "Dusk Legion Sergeant",
+      "Martyr of Dusk",
+      "Oathsworn Vampire",
+      "Bloodghast",
+      "Master of Dark Rites",
+      "Viscera Seer",
+      "Wayfarer's Bauble"
+     ]
+    },
+    {
+     "play": [
+      "Patron of the Vein"
+     ]
+    },
+    {
+     "play": [
+      "March of the Canonized"
+     ],
+     "x": "max",
+     "x_min": 3
+    },
+    {
+     "hold": [
+      "Viscera Seer"
+     ],
+     "ability": "Scry"
+    },
+    {
+     "activate": [
+      "Glass-Cast Heart"
+     ],
+     "ability": "Create a 1/1",
+     "when": [
+      "life >= 10"
+     ],
+     "phase": "main2"
+    },
+    {
+     "activate": [
+      "Blade of the Bloodchief",
+      "Heirloom Blade"
+     ],
+     "ability": "Equip",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Rogue's Passage"
+     ],
+     "phase": "main1"
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Bloodghast"
+    ]
+   },
+   {
+    "accept": [
+     "Heirloom Blade"
+    ]
+   },
+   {
+    "accept": [
+     "Bloodline Necromancer"
+    ]
+   },
+   {
+    "accept": [
+     "Timothar, Baron of Bats"
+    ]
+   },
+   {
+    "accept": [
+     "Crossway Troublemakers"
+    ],
+    "when": [
+     "life >= 15",
+     "library >= 30",
+     "hand <= 5"
+    ]
+   },
+   {
+    "accept": [
+     "Promise of Aclazotz"
+    ],
+    "when": [
+     "tokens >= 1",
+     "creatures >= 4"
+    ]
+   }
+  ],
+  "notes": "Clavileno makes an attacking Vampire a Demon that draws a card and leaves a 4/3 flier when it dies, so the deck is Vampires that attack every turn with drain and lifegain on top. Stock Forge plays it fairly well in goldfish (12.4 turns, 12 of 12 kills) and leaves 43% of its mana unspent, but most of that is answers it rightly holds against do-nothing opponents. What it does leave undone: the commander late behind rocks it has (Sol Ring and Talisman out, Clavileno on turn 5 and Elenda held for four turns in game 7), anthems and engine permanents held (Kindred Boon, Glass-Cast Heart, Elenda's Hierophant held for many turns), Viscera Seer never cast (flagged), March of the Canonized barely cast. The rules: rocks, then the commander, then the anthems and engine permanents in order of worth, Champion of Dusk only with three Vampires and a library and life to pay for it, then the bodies; March of the Canonized for all the mana at X 3 or more; Viscera Seer is cast as a 1-mana Vampire but its scry outlet stays shut (Forge would feed it creatures); Glass-Cast Heart makes a lifelink Vampire with mana left after combat. Trigger rules take Bloodghast, Heirloom Blade, Bloodline Necromancer and Timothar always and Crossway Troublemakers' card while life and library allow. Answers (Swords, Utter End, Return to Dust, New Blood, Damn, Austere Command, Olivia's Wrath, Patron of the Vein, Butcher of Malakir's sacrifice, Vona's ability) are left to Forge in this pass. Go-wide attack, highest life first. Rule 9 equips Blade of the Bloodchief and Heirloom Blade before combat where Forge's own logic agrees on a carrier (it declined most offers in tuning); the last trigger rule takes Promise of Aclazotz's end-step populate once there is a token to copy and four creatures. Tuning on the audit seeds: 0.9 turns faster than stock (12 seeds), the last two additions neutral. || Version 2 (answers, 2026-11-14), written from the 200 tables of ab-run #29 (seed 20261290, stock and demons arms). Engine rules starved the answers and threats no rule named (Damn 12/37 cast against stock's 29/33, Austere Command 6/37 against 32/45, Olivia's Wrath 15/45 against 33/43, Patron of the Vein 22/45 against 43/47). New rules, in order, after the rocks and the commander: (3) Olivia's Wrath with three Vampires and an opponent with three creatures: every creature in this deck is a Vampire, so it is a one-sided wipe; stock cast it in 33 games, killing 1 to 115 opposing permanents and none of ours, and won 19. (4) a forge rule when an opponent has more power than we do and three creatures: Forge's own pick among the unnamed, which is where Austere Command goes (a play rule cannot choose its modes); stock's 32 Austere Commands destroyed about 13 opposing permanents to 2 of ours on average and the seat won 18 of those games. (5) Patron of the Vein while an opponent has a creature (its ETB removal, aimed by Forge). (6) Damn, single-target, cast when Forge's own logic finds a target worth it (a play rule never overloads; stock never overloaded it either, 29 of 29 targeted: Avenger of Zendikar, Hornet Queen, Krenko, Caesar...). Then the base's engine rule; (8) Sorin, Lord of Innistrad, Heirloom Blade and Swiftfoot Boots, starved by the body list; (9) a forge rule with no condition before Champion of Dusk and the bodies, so Austere Command, the instant removal, Village Rites and the activations no rule names get Forge's judgement before the filler creatures and the mana sinks. Base changes: Butcher of Malakir moved to the front of the body list (35/56 stock against 23/52; seven mana is the deck's finisher with Clavileno's dying Demons), Nighthawk Scavenger moved ahead of Bloodtracker; Patron of the Vein also listed after the bodies with no condition. New Blood (Forge's logic never casts it, 0 of 91 games drawn in both arms) and Pact of the Serpent (AI:RemoveDeck:All, a targeted player) are left as they were. (17) Rogue's Passage is activated last, in the first main phase, only when nothing else is to be done: in the first local tables the conditional forge rule (4) spent four mana on it before the engine's casts. Shipped as version 2 on 2026-11-14 from ab-run #38: at 200 tables of bots (seed 20261310, opponents drawn from bots-v2 under their playbooks of 2026-11-13) 91 wins against its stock pilot's 66 (+12.5 points, 95% +4 to +21, exact test 0.0046) with the attack left to Forge, the better of the two attacks on these tables (the same rules won 86 with the go-wide attack). What it casts in a share of games 15 points or more below its stock pilot on the same tables, 1 card: Yahenni, Undying Partisan (41 of 54 games drawn against 58 of 58). It casts 19 cards that much more often (demo-data/playtest/2026-11-14/second-pass/blood-rites-forgeattack-card-diff.txt). VERSION 3 (2026-11-15). Version 3 = version 2 with one rule added after the Damn rule: New Blood (its cost taps a Vampire), aimed at an opponent's creature worth four or more, the best one of the opponent that looks most dangerous (harness 0.3.4: aim). Neither pilot ever cast it at the owner's table (ab-run #42): 0 of the 40 games it was drawn under version 2, in hand at 16 losses; 0 of 41 under the stock pilot. Pact of the Serpent, the deck's other card no pilot casts, aims at a player and names a creature type, which a rule cannot do yet. Nothing else is changed. Shipped as version 3 on 2026-11-15 from ab-run #43 (seed 20261360, the owner's table, opponents under their shipped playbooks): 68 wins of 200 against version 2's 65 on the same tables (+1.5 points, 95% -2 to +5, exact test 0.55); New Blood cast in 47 of the 49 games it was drawn (0 of 49 under version 2); its 47 casts went at the opponent that looked most dangerous 36 times and at the next one that had a creature worth four 11 times; 26 of them took a commander and none fizzled. The rule it was read by was fixed before the run: level with or ahead of the shipped arm, and the newly named card cast in a quarter or more of the games it is drawn. VERSION 4 (2026-11-21), the candidate `v4`: version 3 with what passed its exam, part by part. RULES: the cast rules of the candidate `pact` (rule 11 of this file). HOOKS: after Forge's own attack has been declared, the attackers sent at a player are sent at the opponent that looks most dangerous instead, when that opponent is ahead of the one attacked by five or more and the attack is no worse there: the damage sure to get through whatever is blocked is at least what it was, no more creatures there could block the attackers, and no attacker meets a blocker that would destroy it unless it met one where it was sent (`\"aim\": \"danger\"`; an attack that is sure to kill its target stays, and which creatures attack is not changed); and then the creatures that stayed home attack an opponent that has no creature that can block, the most dangerous such opponent first: those that deal damage, have no ability that taps them (or have vigilance) and are not wanted home by Forge's own judgement of the seat's defence (`\"open\": true`; a weaker opponent is not killed this way while a more dangerous one lives); and then a sure kill is taken from the most dangerous opponent down (`\"finish\": \"leader\"`: enough attackers are put on the opponent that looks most dangerous that the damage reaches its life whatever it blocks, then on the next one, and no weaker opponent is killed while a more dangerous one lives); a triggered ability of the seat that removes one permanent of an opponent (destroys it, exiles it, returns it to hand or library) is aimed at the opponent that looks most dangerous, when that opponent looks more dangerous than the one Forge aimed at by five or more and has a permanent of the same kind worth at least as much as Forge's choice or at least 4 (`\"targets\": {\"triggers\": \"danger\"}`). One condition was added to rule 11 (Pact of the Serpent) after its exam: `type:Vampire < life`. FROM THE CANDIDATE `pact` (its rule numbers are those of its own file, playbook/variants/blood-rites-pact.json): WHY: Pact of the Serpent (choose a creature type; target player draws X cards and loses X life, X the creatures of that type they control; Forge's AI is told never to play it) was drawn in 44 of the 200 games of ab-run #45's shipped arm and cast in none, in hand at 20 losses. Its target is a player, which a rule could not name before harness 0.4.6 (`target_player`, playbook/README.md). RULE 11: cast at the seat itself with three Vampires or more on the battlefield, twenty life or more and thirty cards or more in the library, just above Champion of Dusk, which is the same trade and has the same kind of conditions; Forge names the type as the spell resolves (the creature type the seat's deck holds most of: Vampire). LOCAL CHECK: the eight tables of ab-run #45 on which the seat held the card for the most own turns (8 to 17), replayed from their seed with this file: cast in seven, 3 to 6 cards drawn for as much life (28 cards in all), never on the eighth. One of the eight replayed again on the final build was the same game. SHIPPED 2026-11-21 as version 4. Every part passed its own exam beside version 3 on the same 200 tables at the owner's table (ab-run #46 to #55, seed 20261390; demo-data/ab/2026-11-21-ab-v25/, DESIGN.md section 35): wins of 200 where version 3 won 60: leader 61, aim 60, swing 62, open 77, pact 63. No two parts were played together; the version is at the tables beside version 3 in ab-run #57 (seed 20261410). VERSION 5 CANDIDATE `guard` (2026-11-21). Version 4 with one change: after Forge's own attack has been declared and the hooks the version already has have acted, attackers are taken back when the attack leaves the seat where the opponents one after another are sure to kill it before its next turn and keeping them home prevents that, or, when nothing kept home does, where one opponent alone is (`\"guard\": \"table\"`; a sure kill's attackers stay, and an attack stands when nothing kept home would save the seat). No cast or trigger rule is changed."
+ }
+}

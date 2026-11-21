@@ -36,6 +36,16 @@ def exact(a, b):
     return min(1.0, sum(q for q in pr if q <= pr[a] * (1 + 1e-9)))
 
 
+def paired(j, b, c):
+    """The pair of arms b (base) and c (candidate) of a join, whichever way round the join holds it."""
+    p = j['paired'].get(f'{c}_vs_{b}')
+    if p:
+        return {'cand_only': p[f'{c}_only'], 'base_only': p[f'{b}_only'], 'difference': p['difference'], 'ci95': p['difference_ci95'], 'exact_p': p['exact_p']}
+    p = j['paired'][f'{b}_vs_{c}']
+    lo, hi = p['difference_ci95']
+    return {'cand_only': p[f'{c}_only'], 'base_only': p[f'{b}_only'], 'difference': -p['difference'], 'ci95': [-hi, -lo], 'exact_p': p['exact_p']}
+
+
 def entry(deck, arm):
     return deck if arm == 'shipped' else f'{deck}@{arm}'
 
@@ -103,8 +113,7 @@ def main(argv):
                 row['hook'][arm] = {k: v for k, v in foc.items() if k.startswith(HOOKS)}
                 H[arm].update(row['hook'][arm])
         for b, c in pairs:
-            p = j['paired'][f'{c}_vs_{b}']
-            row['pairs'][f'{b}:{c}'] = {'cand_only': p[f'{c}_only'], 'base_only': p[f'{b}_only'], 'difference': p['difference'], 'ci95': p['difference_ci95'], 'exact_p': p['exact_p']}
+            row['pairs'][f'{b}:{c}'] = paired(j, b, c)
         res['decks'][d] = row
         print(f"{d}: wins " + ', '.join(f"{arm} {row['wins'][arm]} of {row['games'][arm]}" for arm in arms))
         for b, c in pairs:

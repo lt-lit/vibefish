@@ -16,7 +16,10 @@ stock pilot. What it does:
   3. in the deck's row of playbook/bots.json: the new status, the summary with --summary-add appended, and the tables of
      this exam under `version_tables` (file, old arm, new arm, run). The row's `tables` stay: they are the last
      measurement against the stock pilot, of the earlier version, and the status has to say so;
-  4. checks that the tables file is this deck's, has the two arms, and prints their wins.
+  4. checks that the tables file is this deck's, has the two arms, and prints their wins. With --parts a,b,c the candidate
+     is a version put together from parts that were each played beside the old arm on these tables and never together
+     (docs/agents/next_version.py): each part's arm is checked and printed, and `version_tables` names the parts in place
+     of one arm, so nothing reads as a measurement of the version itself.
 
 It decides nothing and writes no prose of its own. Afterwards: `python3 -I runner/bots.py`, the candidate's row in
 playbook/variants/README.md, DESIGN, CLAUDE.md.
@@ -58,6 +61,8 @@ def main(argv):
     ap.add_argument("--summary-add")
     ap.add_argument("--note", required=True)
     ap.add_argument("--on", default=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d"))
+    ap.add_argument("--parts", help="comma-separated arms of the tables file: the candidate is a version put together from parts that "
+                    "were each played beside --old-arm on these tables and never together (next_version.py); recorded as the version's parts")
     ap.add_argument("--attack-changes", action="store_true",
                     help="the candidate's attack block is the change (a `finish` candidate): do not refuse it for differing from the shipped one")
     ap.add_argument("--dry-run", action="store_true")
@@ -85,13 +90,16 @@ def main(argv):
     t = load(tpath)
     if t.get("deck") != a.deck:
         raise SystemExit(f"{a.tables} is a run of {t.get('deck')}, not of {a.deck}")
-    for arm in (a.old_arm, new_arm):
+    parts = [x for x in (a.parts or "").split(",") if x]
+    for arm in [a.old_arm] + (parts or [new_arm]):
         if arm not in t["arm_stats"]:
             raise SystemExit(f"{a.tables} has no arm {arm} (it has {list(t['arm_stats'])})")
-    ot, nt = t["arm_stats"][a.old_arm], t["arm_stats"][new_arm]
-    pair = (t.get("paired") or {}).get(f"{new_arm}_vs_{a.old_arm}") or {}
-    print(f"{a.deck}: {new_arm} {nt['wins']} of {nt['games']} against {a.old_arm} {ot['wins']} of {ot['games']}"
-          + (f"; {pair['difference'] * 100:+.1f} points ({pair['difference_ci95'][0] * 100:+.0f} to {pair['difference_ci95'][1] * 100:+.0f}), exact test {pair['exact_p']:.4f}" if pair else ""))
+    ot = t["arm_stats"][a.old_arm]
+    for arm in parts or [new_arm]:
+        nt = t["arm_stats"][arm]
+        pair = (t.get("paired") or {}).get(f"{arm}_vs_{a.old_arm}") or {}
+        print(f"{a.deck}: {arm} {nt['wins']} of {nt['games']} against {a.old_arm} {ot['wins']} of {ot['games']}"
+              + (f"; {pair['difference'] * 100:+.1f} points ({pair['difference_ci95'][0] * 100:+.0f} to {pair['difference_ci95'][1] * 100:+.0f}), " + (f"exact test {pair['exact_p']:.4f}" if pair.get('exact_p') is not None else "no discordant table") if pair else ""))
 
     bots_path = os.path.join(ROOT, "playbook", "bots.json")
     bots = load(bots_path)
@@ -102,7 +110,11 @@ def main(argv):
     row["status"] = a.status
     if a.summary_add:
         row["summary"] = row["summary"].rstrip() + " " + a.summary_add
-    row["version_tables"] = {"file": os.path.relpath(tpath, ROOT), "stock": a.old_arm, "bot": new_arm, "run": a.run}
+    row["version_tables"] = {"file": os.path.relpath(tpath, ROOT), "stock": a.old_arm, "run": a.run}
+    if parts:
+        row["version_tables"]["parts"] = parts      # each played beside the old arm by itself; the version itself has no tables yet
+    else:
+        row["version_tables"]["bot"] = new_arm
     kept = [r for r in rules(old) if r in rules(shipped)]
     print(f"playbook/precons/{a.deck}.json: playbook version {shipped['version']} (was {old.get('version')}), {len(rules(shipped))} cast rules "
           f"({len(kept)} of the {len(rules(old))} shipped rules kept as they were), {len(shipped.get('triggers') or [])} trigger rules, "

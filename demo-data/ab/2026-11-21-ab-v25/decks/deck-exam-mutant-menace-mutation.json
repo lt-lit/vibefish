@@ -1,0 +1,29 @@
+{
+ "kind": "deck-exam",
+ "deck": "mutant-menace",
+ "tables": 200,
+ "only_candidate": 1,
+ "only_shipped": 1,
+ "both": 39,
+ "exact_p": 1.0,
+ "shipped": {
+  "games": 200,
+  "wins": 40,
+  "turns": 8474,
+  "held Biomass Mutation": 44,
+  "cast Biomass Mutation": 4,
+  "offered Biomass Mutation": 18,
+  "offered and cast Biomass Mutation": 4
+ },
+ "candidate": {
+  "games": 200,
+  "wins": 40,
+  "turns": 8474,
+  "counter cast_keep": 41,
+  "held Biomass Mutation": 44,
+  "cast Biomass Mutation": 13,
+  "offered Biomass Mutation": 11,
+  "offered and cast Biomass Mutation": 6,
+  "counter cast_combat": 13
+ }
+}

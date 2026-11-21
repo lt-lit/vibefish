@@ -1,15 +1,15 @@
 {
-  "requested": "2026-11-21T17:15Z",
-  "note": "Miracle Worker's endless copy chain, capped (DESIGN §34). Its shipped playbook says yes to Ondu Spiritdancer's optional copy every time; with Secret Arcade unlocked the Spiritdancer copies itself, the copy does the same, and the game ends on the clock or in a draw: 22 of the 25 games without a winner in the 2,000 games of ab-run #46's shipped arms, and a sixth of their play time. playbook/variants/miracle-worker-cap.json accepts the copy while the seat controls at most 20 Kor and declines it after. Playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks as they were for #46: this run is queued before anything ships from #46 to #55), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 200 games in 5 shard jobs.",
-  "decks": "miracle-worker@cap",
+  "requested": "2026-11-21T18:12Z",
+  "note": "The confirming run of the next versions at the owner's table (DESIGN §35). Each of the ten precons three times on the same 200 tables: under the version it had until 2026-11-21 (playbook/variants/<deck>-before.json), under its next version (the shipped playbook: the version before with every part that passed its own exam in ab-run #46 to #56, never played together) and under the next version with the table guard on its attack (playbook/variants/<deck>-guard.json, the guard's second arithmetic, which has had no tables). Opponents drawn from the other nine of runner/leagues/owners-table-v1.json under their shipped playbooks, so every seat at these tables is a next version: the first table at which more than one seat takes the leader's kill and aims at the most dangerous opponent. Seed 20261410, tables that chose nothing, playbook arms only. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 6,000 games in 150 shard jobs.",
+  "decks": "blight-curse@before,blight-curse,blight-curse@guard,veloci-ramp-tor@before,veloci-ramp-tor,veloci-ramp-tor@guard,mutant-menace@before,mutant-menace,mutant-menace@guard,squirreled-away@before,squirreled-away,squirreled-away@guard,revenant-recon@before,revenant-recon,revenant-recon@guard,blood-rites@before,blood-rites,blood-rites@guard,death-toll@before,death-toll,death-toll@guard,miracle-worker@before,miracle-worker,miracle-worker@guard,ahoy-mateys@before,ahoy-mateys,ahoy-mateys@guard,deadly-disguise@before,deadly-disguise,deadly-disguise@guard",
+  "seed": "20261410",
+  "pool": "runner/leagues/owners-table-v1.json",
   "games": "200",
   "arms": "playbook",
-  "seed": "20261390",
   "shards_per_deck": "5",
   "jobs_per_shard": "2",
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
-  "pool": "runner/leagues/owners-table-v1.json",
   "opponent_playbooks": true
 }

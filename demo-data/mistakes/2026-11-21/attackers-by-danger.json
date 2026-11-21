@@ -1,0 +1,60 @@
+{
+ "kind": "attack-danger",
+ "games": 2000,
+ "arm": null,
+ "deck": null,
+ "counts": {
+  "3 declarations": 20181,
+  "3 attackers": 42914,
+  "3 at_top": 20921,
+  "3 all_at_top": 10578,
+  "3 none_at_top": 9456,
+  "else declarations": 11971,
+  "else attackers": 30848,
+  "else gap 1-4": 3806,
+  "else attacked_lower_life": 10703,
+  "else attacked_lowest_life": 8934,
+  "else top_no_blocker": 2434,
+  "else top_fewer_blockers": 5053,
+  "else top_as_many_blockers": 3182,
+  "else top_more_blockers": 3736,
+  "else sure_at_top_at_least": 8620,
+  "else sure_at_top_at_least gap5": 5803,
+  "3 attackers_seat_lost": 26806,
+  "3 at_winner": 6572,
+  "else gap 5-9": 2781,
+  "else gap 10-19": 2979,
+  "2 declarations": 5466,
+  "2 attackers": 19865,
+  "2 at_top": 10228,
+  "2 all_at_top": 2799,
+  "2 none_at_top": 2515,
+  "2 attackers_seat_lost": 7341,
+  "2 at_winner": 2189,
+  "ties": 2541,
+  "else gap 20+": 2405
+ },
+ "by_round": {
+  "1-4": {
+   "attackers": 3273,
+   "at_top": 2387,
+   "chance": 1099.5000000000143
+  },
+  "5-8": {
+   "attackers": 28715,
+   "at_top": 15072,
+   "chance": 10062.166666666637
+  },
+  "9-12": {
+   "attackers": 25257,
+   "at_top": 11095,
+   "chance": 10579.000000000044
+  },
+  "13+": {
+   "attackers": 5534,
+   "at_top": 2595,
+   "chance": 2496.499999999999
+  }
+ },
+ "run": "ab-run #46 (run id 44843287002, commit aa25502, harness 0.4.1, seed 20261390): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook of 2026-11-15"
+}

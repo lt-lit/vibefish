@@ -98,12 +98,18 @@ def main(argv):
             out_pb["attack"] = attack if touches_attack else base["attack"]
         if a.targets:
             out_pb["targets"] = {"triggers": a.targets}
+        elif base.get("targets"):
+            out_pb["targets"] = base["targets"]         # a hook the shipped playbook already has stays
         if a.block:
             out_pb["block"] = {"survive": True}
+        elif base.get("block"):
+            out_pb["block"] = base["block"]
         out_pb.update({k: v for k, v in pb.items() if k not in ("version", "attack", "targets", "block", "on", "notes")})
-        was = "its own attack (" + base["attack"].get("policy", "go_wide") + ")" if base.get("attack") else "Forge's own attack"
+        ba = base.get("attack") or {}
+        was = "its own attack (" + ba.get("policy", "go_wide") + ")" if ba and ba.get("policy", "go_wide") != "forge" else "Forge's own attack"
+        declared = f"after {was} has been declared" + (" and the hooks the version already has have acted" if any(k in ba for k in ("aim", "open", "finish", "enable")) else "") + ", "
         out_pb["notes"] = ((base.get("notes") or "") + f" VERSION {out_pb['version']} CANDIDATE `{a.name}`{' (' + a.on + ')' if a.on else ''}. Version {base['version']} with "
-                           f"{['', 'one change', 'two changes', 'three changes', 'four changes', 'five changes', 'six changes'][len(what)]}: " + (f"after {was} has been declared, " if touches_attack else "")
+                           f"{['', 'one change', 'two changes', 'three changes', 'four changes', 'five changes', 'six changes'][len(what)]}: " + (declared if touches_attack else "")
                            + f"{'; and then '.join(what)}. No cast or trigger rule is changed.")
         out = {"schema": 1, "deck": deck, "variant": a.name, "of": f"playbook/precons/{deck}.json (version {base['version']})",
                "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped playbook with a hook on its attack (docs/agents/add_finish.py; DESIGN.md section 34). Only the playbook object is read.",
@@ -113,6 +119,9 @@ def main(argv):
             json.dump(out, f, indent=1, ensure_ascii=False)
             f.write("\n")
         print(f"{p}: version {out_pb['version']}, attack {json.dumps(out_pb.get('attack'))}, targets {json.dumps(out_pb.get('targets'))}, block {json.dumps(out_pb.get('block'))}")
+        lost = [k for k in base if k not in out_pb and k != "on"]
+        if lost:
+            raise SystemExit(f"{deck}: the candidate lost {lost} of the shipped playbook")
     return 0
 
 

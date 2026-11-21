@@ -113,6 +113,18 @@ are that session's and have to be replaced by the new session's scratch director
   requests `DECK@VARIANT` with stock and playbook arms and `DECK@VARIANT-forgeattack`): the playtest report of the three
   arms and what each attack arm casts less or more often than the stock pilot. The second pass of the owner's ten was
   read with it (`demo-data/playtest/2026-11-14/second-pass/`).
+- `verify_shards.py EXAM_DIR --seed SEED [--date DAY] [--pool NAME]`: every downloaded shard directory against its
+  name: deck, candidate file, seed, start date, pool, the tables of one shard and none of another's. Run it before
+  anything is read (2026-11-21: five directories of the right name held another run's games).
+- `unfinished.py RUN_DIR... [-v]`: the games without a winner, by how they ended and by the card the last turn was made
+  of. It found the endless chain in Miracle Worker's trigger rule (22 of 25 such games in 2,000, a sixth of the play
+  time). On the base arm of every exam.
+- `next_version.py DECK --name vN [--rules VARIANT]... [--finish leader] [--swing] [--open] [--targets] [--block]
+  [--add-when 'CARD=CONDITION']`: a deck's next version put together from the candidates that passed: their cast rules
+  go in where they stood, the hooks as `add_finish.py` writes them; it prints the rule list around every insertion and
+  refuses a candidate that changes anything but cast rules, groups and attack keys. `keep_before.py DECK...` keeps the
+  shipped playbook as `<deck>-before.json` for the confirming run; `ship_version.py --parts a,b,c` records the parts
+  of the join a version is made of, in place of an arm. The versions of 2026-11-21 were made this way (DESIGN.md §35).
 - `reports/<date>/`: the agents' reports as handed back: the audit, the rules, the validation, what the rule format could
   not say, the deck's answers for the second pass, and where the candidate falls short of a person.
 
