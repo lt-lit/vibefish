@@ -65,9 +65,10 @@ final class CombatMath {
      * given a blocker if the ones already placed can be moved to make room, which finds the heaviest set.
      * A block counts as stopping all of an attacker's damage (trample is not credited to the attacker).
      * With a {@code defender} given, an attacker that one creature alone may not block (menace) counts as one
-     * that cannot be stopped: that is the reading for "could its blocks have saved it", where a block that was
-     * not possible must not be counted. Without one, such an attacker counts as stoppable by a single blocker,
-     * which is the careful reading for "is this damage sure to get through". {@code untapped} asks the question
+     * that cannot be stopped, and so does an attacker with trample, whose damage a block does not stop whole
+     * (since 0.4.1): that is the reading for "could its blocks have saved it", where a block that was not
+     * possible, or would not have been enough, must not be counted. Without one, such an attacker counts as
+     * stoppable by a single blocker, which is the careful reading for "is this damage sure to get through". {@code untapped} asks the question
      * as if every blocker were untapped (what the defender's creatures could have done had they stayed home).
      */
     static int mostStopped(List<Card> attackers, List<Card> blockers, Player defender, boolean untapped) {
@@ -76,7 +77,8 @@ final class CombatMath {
         int n = order.size();
         boolean[][] can = new boolean[n][blockers.size()];
         for (int i = 0; i < n; i++) {
-            boolean single = defender == null || CombatUtil.canAttackerBeBlockedWithAmount(order.get(i), 1, defender);
+            boolean single = defender == null
+                    || (CombatUtil.canAttackerBeBlockedWithAmount(order.get(i), 1, defender) && !order.get(i).hasKeyword(Keyword.TRAMPLE));
             for (int j = 0; j < blockers.size(); j++) {
                 can[i][j] = single && CombatUtil.canBlock(order.get(i), blockers.get(j), untapped);
             }
@@ -103,6 +105,26 @@ final class CombatMath {
             }
         }
         return false;
+    }
+
+    /** The creatures of {@code o} that may attack {@code target} on {@code o}'s next turn (Forge's own rule for it). */
+    static List<Card> nextTurnAttackers(Player o, Player target) {
+        List<Card> l = new ArrayList<>();
+        for (Card c : o.getCreaturesInPlay()) {
+            if (CombatUtil.canAttackNextTurn(c, target)) {
+                l.add(c);
+            }
+        }
+        return l;
+    }
+
+    /** A player's permanents that are not lands. */
+    static int nonlandPermanents(Player p) {
+        int n = 0;
+        for (Card c : p.getCardsIn(forge.game.zone.ZoneType.Battlefield)) {
+            n += c.isLand() ? 0 : 1;
+        }
+        return n;
     }
 
     /** The damage of these attackers that gets through whatever these blockers do (one blocker an attacker). */

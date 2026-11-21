@@ -128,6 +128,13 @@ public class PlaybookController extends PlayerControllerAi {
                 count("attack_kill_errors", 1);
             }
         }
+        if (policy.guard) {
+            try {
+                guard(attacker, combat);
+            } catch (RuntimeException e) {
+                count("attack_guard_errors", 1);
+            }
+        }
     }
 
     /**
@@ -135,7 +142,10 @@ public class PlaybookController extends PlayerControllerAi {
      * kill gets enough attackers that the damage reaches its life whatever it blocks: the opponent that looks most
      * dangerous first, then any other that the creatures still unassigned can kill the same way. Creatures the
      * policy sent elsewhere are moved; everything else stays as declared. If the changed attack is not a legal
-     * one the policy's own declaration is put back.
+     * one the policy's own declaration is put back. With {@code "finish": "leader"} the kills are taken only from
+     * the most dangerous opponent down: the walk stops at the first opponent that cannot be killed for sure, so a
+     * weaker opponent is left alone while a more dangerous one lives (DESIGN §34: at 2,000 tables the kill of
+     * the most dangerous opponent won games and the kill of a lesser one lost them).
      */
     private void finish(Player attacker, Combat combat) {
         List<Player> opps = new ArrayList<>();
@@ -157,6 +167,23 @@ public class PlaybookController extends PlayerControllerAi {
             can.sort((x, y) -> Integer.compare(CombatMath.hits(y), CombatMath.hits(x)));
             List<Card> blockers = CombatMath.ableBlockers(d);
             if (CombatMath.through(can, blockers) < d.getLife()) {
+                if (playbook.attack.finishLeader) {
+                    for (Player lesser : opps.subList(opps.indexOf(d) + 1, opps.size())) {     // for the count and the trace only
+                        List<Card> left = new ArrayList<>();
+                        for (Card c : CombatMath.freeAttackers(getGame(), attacker, lesser)) {
+                            if (!plan.containsKey(c)) {
+                                left.add(c);
+                            }
+                        }
+                        if (CombatMath.through(left, CombatMath.ableBlockers(lesser)) >= lesser.getLife()) {
+                            count("attack_kill_left", 1);
+                            trace("leaves " + lesser.getName() + " alive (life " + lesser.getLife() + ", danger " + danger(lesser) + "): "
+                                    + d.getName() + " is more dangerous (" + danger(d) + ") and cannot be killed for sure");
+                            break;
+                        }
+                    }
+                    break;                              // nothing below an opponent that lives
+                }
                 continue;
             }
             List<Card> chosen = new ArrayList<>();
@@ -210,6 +237,146 @@ public class PlaybookController extends PlayerControllerAi {
         count("attack_kill", 1);
         count("attack_kill_moved", moved);
         trace("takes the kill: " + what + " (" + moved + " attacker(s) added or moved)");
+    }
+
+    /**
+     * Do not tap out into a lethal answer. After the attack is declared (and after {@code finish}), look at each
+     * opponent the attack is not sure to kill: with the creatures that would stay untapped at home, is the damage
+     * it could send on its next turn sure to reach the seat's life, whatever the seat blocks? If so for any of
+     * them, and if keeping attackers home changes that, attackers are taken back until no single opponent is sure
+     * to kill the seat: each time the one whose staying home lowers the threat most, and among equals the one
+     * that deals least. With {@code "guard": "table"} the question is asked of the opponents one after another
+     * first (what each is sure to get through the same blockers, summed: a seat hit by one opponent is finished
+     * by the next), and of the worst single opponent when nothing kept home answers that. The attackers of a kill
+     * the attack is sure of are never taken back, and an attack that leaves the seat dead on board whatever stays
+     * home stands as declared (a race). The arithmetic is the logger's ({@code CombatMath.through}: one blocker
+     * an attacker, no trample credited), so "sure" errs to the side of not acting. If what is left is not a legal
+     * attack the declaration is put back.
+     */
+    private void guard(Player me, Combat combat) {
+        List<Card> tapping = new ArrayList<>();         // attackers that will be tapped during the opponents' turns
+        for (Card c : combat.getAttackers()) {
+            if (c.getController() == me && !c.hasKeyword(Keyword.VIGILANCE)) {
+                tapping.add(c);
+            }
+        }
+        if (tapping.isEmpty()) {
+            return;
+        }
+        List<Player> threats = new ArrayList<>();
+        List<Card> locked = new ArrayList<>();          // the attackers of a kill the attack is sure of
+        for (Player opp : me.getOpponents()) {
+            if (opp.hasLost() || opp.getLife() <= 0) {
+                continue;
+            }
+            List<Card> at = new ArrayList<>(combat.getAttackersOf(opp));
+            if (!at.isEmpty() && CombatMath.through(at, CombatMath.ableBlockers(opp)) >= opp.getLife()) {
+                locked.addAll(at);                      // it will not be there to answer
+            } else {
+                threats.add(opp);
+            }
+        }
+        if (threats.isEmpty()) {
+            return;                                     // the attack takes out everyone who is left
+        }
+        List<Card> home = new ArrayList<>();
+        for (Card c : me.getCreaturesInPlay()) {
+            if (!c.isTapped() && !tapping.contains(c) && CombatUtil.canBlock(c)) {
+                home.add(c);
+            }
+        }
+        Map<Player, List<Card>> theirs = new LinkedHashMap<>();
+        for (Player opp : threats) {
+            theirs.put(opp, CombatMath.nextTurnAttackers(opp, me));
+        }
+        int life = me.getLife();
+        boolean table = playbook.attack.guardTable;
+        if (answer(theirs, home, table) < life) {
+            return;                                     // nobody (or, for the table, not all of them together) is sure to kill the seat
+        }
+        count("attack_guard_seen", 1);
+        List<Card> cand = new ArrayList<>();
+        for (Card c : tapping) {
+            if (!locked.contains(c) && CombatUtil.canBlock(c)) {
+                cand.add(c);
+            }
+        }
+        List<Card> all = new ArrayList<>(home);
+        all.addAll(cand);
+        boolean sum = table;
+        if (sum && (cand.isEmpty() || answer(theirs, all, true) >= life)) {
+            sum = false;                                // the table cannot be held off: at least no single opponent
+            if (answer(theirs, home, false) < life) {
+                count("attack_guard_hopeless", 1);      // and none is sure to kill it alone as things are: the attack stands
+                return;
+            }
+        }
+        if (cand.isEmpty() || answer(theirs, all, sum) >= life) {
+            count("attack_guard_hopeless", 1);          // dead on board whatever stays home: the attack stands
+            return;
+        }
+        int was = answer(theirs, home, sum);
+        int now = was;
+        List<Card> back = new ArrayList<>();
+        while (now >= life && !cand.isEmpty()) {
+            Card best = null;
+            int bestNow = Integer.MAX_VALUE;
+            for (Card c : cand) {
+                List<Card> h = new ArrayList<>(home);
+                h.add(c);
+                int w = answer(theirs, h, sum);
+                if (best == null || w < bestNow || (w == bestNow && CombatMath.hits(c) < CombatMath.hits(best))) {
+                    best = c;
+                    bestNow = w;
+                }
+            }
+            home.add(best);
+            cand.remove(best);
+            back.add(best);
+            now = bestNow;
+        }
+        Map<Card, GameEntity> before = new LinkedHashMap<>();
+        for (Card c : combat.getAttackers()) {
+            before.put(c, combat.getDefenderByAttacker(c));
+        }
+        for (Card c : back) {
+            combat.removeFromCombat(c);
+        }
+        if (!CombatUtil.validateAttackers(combat)) {
+            for (Card c : new ArrayList<>(combat.getAttackers())) {
+                combat.removeFromCombat(c);
+            }
+            for (Map.Entry<Card, GameEntity> e : before.entrySet()) {
+                combat.addAttacker(e.getKey(), e.getValue());
+            }
+            count("attack_guard_invalid", 1);
+            return;
+        }
+        count("attack_guard", 1);
+        count("attack_guard_back", back.size());
+        if (table && !sum) {
+            count("attack_guard_single", 1);            // asked for the table, could only hold off the worst single opponent
+        }
+        if (combat.getAttackers().isEmpty()) {
+            count("attack_guard_all", 1);               // nothing attacks after all
+        }
+        trace("keeps " + back.size() + " of " + before.size() + " attacker(s) home: at " + life + " life, "
+                + (sum ? "the opponents in turn were" : "one opponent was") + " sure of " + was + " through what stayed home, now " + now);
+    }
+
+    /**
+     * What these opponents are sure to get through these blockers on their next turns: the most any one of them
+     * is, or with {@code sum} all of them one after another (each against the same blockers).
+     */
+    private static int answer(Map<Player, List<Card>> theirs, List<Card> home, boolean sum) {
+        int worst = 0;
+        int total = 0;
+        for (List<Card> at : theirs.values()) {
+            int t = CombatMath.through(at, home);
+            worst = Math.max(worst, t);
+            total += t;
+        }
+        return sum ? total : worst;
     }
 
     /** Attack the chosen opponent with every creature the reserve does not need. True when the policy declared. */

@@ -11,6 +11,7 @@ ROLLUPS_DIR is an unzipped `ab-rollups` artifact of ab-run: one `ab-<deck>/rollu
   <deck>@<v> (stock,playbook) + <deck>@<v>-forgeattack (playbook)   -> stock, gowide, forgeattack
   <deck> (stock,playbook) + <deck>@<v> (playbook)                    -> stock, shipped, <v>
   <deck> (playbook) + <deck>@<v> (playbook)                          -> shipped, <v>
+  <deck> (playbook) + <deck>@<v> + <deck>@<w> (playbook)             -> shipped, <v>, <w>, each pair of them
 
 Prints one block a deck: wins of the tables played for each arm, and each paired difference with its interval and
 the exact test on the discordant pairs. It decides nothing.
@@ -93,6 +94,8 @@ def main(argv):
                 arms = ([f"stock={paths[None]}:stock"] if "stock" in mine[None]["arm_stats"] else []) + [f"shipped={paths[None]}:playbook"]
                 arms += [f"{v}={paths[v]}:playbook" for v in sorted(same)]
                 spec = (["--against", "shipped"] if len(arms) > 2 else []) + arms
+                for v in sorted(same)[:-1]:          # several candidates: each also beside the ones after it
+                    spec = ["--against", v] + spec
         if not spec:
             continue
         out = os.path.join(a.out or os.path.dirname(found[(deck, None)] if (deck, None) in found else list(paths.values())[0]), f"{deck}-join.json")

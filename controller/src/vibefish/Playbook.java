@@ -24,10 +24,21 @@ public final class Playbook {
      *  then there for {@code finish}. With {@code finish}, whatever the policy declared, an opponent the seat is
      *  sure to kill is killed: enough attackers are put on it that the damage gets through whatever it blocks
      *  (one blocker an attacker, Forge's own rules for who may block whom), the opponent that looks most dangerous
-     *  first and then any other the creatures that are left can kill the same way. */
+     *  first and then any other the creatures that are left can kill the same way. {@code "finish": "leader"}
+     *  takes such a kill only from the most dangerous opponent down: the most dangerous one alive, then the next
+     *  if the first is taken, and none past the first opponent that cannot be killed for sure (a weaker opponent
+     *  is left alone while a more dangerous one lives). With {@code guard}, after all of that, attackers are taken
+     *  back when the attack as declared leaves the seat where one opponent alone is sure to kill it before its
+     *  next turn and keeping them home prevents that; a sure kill's attackers are never taken back, and an attack
+     *  stands when nothing kept home would save the seat. {@code "guard": "table"} asks the same of the opponents
+     *  one after another (what each is sure to get through, summed), and falls back to the one-opponent question
+     *  when nothing kept home answers that. */
     public static final class Attack {
         public final String policy;        // go_wide | pressure | forge
         public final boolean finish;       // take a kill no block prevents
+        public final boolean finishLeader; // ... only from the most dangerous opponent down
+        public final boolean guard;        // take attackers back when the attack leaves the seat dead on board to one opponent
+        public final boolean guardTable;   // ... or to the opponents one after another
         public final String target;        // lowest_life | weakest_board | highest_life | biggest_board
         public final int minAttackers;     // fewer than this: Forge decides
         public final int safetyMargin;     // life to keep above the strongest opponent's possible attack
@@ -40,7 +51,24 @@ public final class Playbook {
             if (!List.of("go_wide", "pressure", "forge").contains(policy)) {
                 throw new IllegalArgumentException("playbook attack policy must be go_wide, pressure or forge");
             }
-            finish = o.has("finish") && o.get("finish").isJsonPrimitive() && o.get("finish").getAsBoolean();
+            String fin = null;
+            if (o.has("finish") && o.get("finish").isJsonPrimitive()) {
+                fin = o.getAsJsonPrimitive("finish").isBoolean() ? (o.get("finish").getAsBoolean() ? "any" : null) : o.get("finish").getAsString();
+            }
+            if (fin != null && !List.of("any", "leader").contains(fin)) {
+                throw new IllegalArgumentException("playbook attack finish must be true, \"any\" or \"leader\"");
+            }
+            finish = fin != null;
+            finishLeader = "leader".equals(fin);
+            String grd = null;
+            if (o.has("guard") && o.get("guard").isJsonPrimitive()) {
+                grd = o.getAsJsonPrimitive("guard").isBoolean() ? (o.get("guard").getAsBoolean() ? "one" : null) : o.get("guard").getAsString();
+            }
+            if (grd != null && !List.of("one", "table").contains(grd)) {
+                throw new IllegalArgumentException("playbook attack guard must be true, \"one\" or \"table\"");
+            }
+            guard = grd != null;
+            guardTable = "table".equals(grd);
             target = str(o, "target", "lowest_life");
             if (!List.of("lowest_life", "weakest_board", "highest_life", "biggest_board").contains(target)) {
                 throw new IllegalArgumentException("playbook attack target must be lowest_life, weakest_board, highest_life or biggest_board");
@@ -465,7 +493,8 @@ public final class Playbook {
                   .append(" min=").append(attack.minAttackers).append(" margin=").append(attack.safetyMargin).append(" reserve<=").append(attack.maxReserve)
                   .append(attack.spread ? " spread" : "").append("pressure".equals(attack.policy) ? " damage/loss>=" + attack.damagePerLoss : "");
             }
-            sb.append(attack.finish ? ", takes a sure kill" : "");
+            sb.append(attack.finish ? (attack.finishLeader ? ", takes a sure kill of the most dangerous opponent" : ", takes a sure kill") : "");
+            sb.append(attack.guard ? (attack.guardTable ? ", keeps attackers home against the table's lethal answer" : ", keeps attackers home against one opponent's lethal answer") : "");
         }
         if (mulligan != null) {
             sb.append(" mulligan=lands ").append(mulligan.minLands).append('-').append(mulligan.maxLands).append(" max ").append(mulligan.maxMulligans);

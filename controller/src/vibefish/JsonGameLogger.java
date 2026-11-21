@@ -294,7 +294,8 @@ public final class JsonGameLogger {
             }
             List<Card> blockers = CombatMath.ableBlockers(d);
             defenders.add(obj("seat", seatByPlayerId.get(d.getView().getId()), "life", d.getLife(), "attackers", attackers.size(),
-                    "power", CombatMath.hits(attackers), "blockers", blockers.size(), "through", CombatMath.through(attackers, blockers)));
+                    "power", CombatMath.hits(attackers), "blockers", blockers.size(), "through", CombatMath.through(attackers, blockers),
+                    "permanents", CombatMath.nonlandPermanents(d)));     // 0.4.1: its nonland permanents, for how dangerous it looks
         }
         List<List<Object>> mine = new ArrayList<>();
         for (Card c : able.values()) {
@@ -310,8 +311,9 @@ public final class JsonGameLogger {
      * What a defender's declared blocks leave unblocked ({@code incoming}, against its {@code life}) and the least
      * its able blockers could have left ({@code best}): with {@code incoming >= life > best} it died with a block
      * it did not make. {@code best_untapped} is the same with its tapped creatures counted as able to block:
-     * {@code best >= life > best_untapped} is a death its own tapped creatures would have prevented. Trample is not
-     * counted on either side.
+     * {@code best >= life > best_untapped} is a death its own tapped creatures would have prevented. An attacker
+     * with trample counts as one no block stops (since 0.4.1; before that a block was credited in full), so
+     * {@code best} errs to the side of "no block would have saved it".
      */
     private void blockFacts(Map<String, Object> m, PlayerView defender, java.util.Set<Integer> blockedIds) {
         Combat combat = game.getCombat();

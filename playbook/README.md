@@ -86,7 +86,7 @@ Against no blockers it plays exactly as `go_wide` with `spread`. Counters: `atta
 `attack_lethal`, `attack_expected_losses`, `attack_forced`.
 
 `forge` (harness 0.4.0) is Forge's own attack, which is also what a playbook without an `attack` block gets; the
-block is then there to carry `finish`.
+block is then there to carry `finish` and `guard`.
 
 `"finish": true` (harness 0.4.0), on any policy, takes a kill no block prevents. After the policy has declared its
 attack, each opponent the seat is sure to kill gets enough attackers that the damage reaches its life whatever it
@@ -97,12 +97,48 @@ costs something is left out, so the count errs low. The opponent that looks most
 nonland permanents, the weights of `cast.danger`) is killed first, then any other the creatures still unassigned
 can kill the same way; the heaviest attackers go first and only as many as it takes. Creatures the policy had sent
 elsewhere are moved, everything else stays as the policy declared it, and if the changed attack is not a legal one
-the policy's own is put back. It was built from a count: at the owner's table a bot that could kill an opponent this
-way did not in three of ten such turns, and went on to lose most of those games (`runner/mistakes.py`, `DESIGN.md`
-§34). A fog, a flash blocker or a life gain can still undo it. Counters: `attack_kill_seen` (turns with such a kill),
-`attack_kill` (attackers were added or moved for it), `attack_kill_moved` (how many), `attack_kill_already` (the
-policy's own attack already had them there), `attack_kill_invalid`, `attack_kill_errors`.
-`{"attack": {"policy": "forge", "finish": true}}`.
+the policy's own is put back. A fog, a flash blocker or a life gain can still undo it (about one such kill in
+twenty-five does not come off). Counters: `attack_kill_seen` (turns with such a kill), `attack_kill` (attackers were
+added or moved for it), `attack_kill_moved` (how many), `attack_kill_already` (the policy's own attack already had
+them there), `attack_kill_invalid`, `attack_kill_errors`. `{"attack": {"policy": "forge", "finish": true}}`.
+
+What its exam showed (`ab-run` #45, `DESIGN.md` §34): with `finish` a seat passes up 4% of its sure kills where the
+shipped playbooks pass up 34%, and wins no more tables (505 against 512 of 2,000). The kill of the most dangerous
+opponent alive won tables; the kill of a less dangerous one while a more dangerous one lived lost them. Hence:
+
+`"finish": "leader"` (harness 0.4.1) takes a sure kill only from the most dangerous opponent down: the opponent that
+looks most dangerous is killed if the kill is sure, then the next one with the creatures that are left, and the
+walk stops at the first opponent that cannot be killed for sure, so a weaker opponent is never killed while a more
+dangerous one lives. The last opponent left is always the most dangerous one. Everything else is as for `true`
+(`"any"` is another spelling of `true`). One more counter: `attack_kill_left`, a turn on which a sure kill of a
+lesser opponent was there and was left alone.
+
+`"guard": true` (harness 0.4.1), on any policy and after `finish`, does not tap out into a lethal answer. For each
+opponent the attack as declared is not sure to kill, the seat asks whether that opponent, alone, with every creature
+that may attack on its next turn, is sure to get the seat's life in damage through the creatures that would be
+untapped at home (the same arithmetic as `finish`, from the other side: one blocker an attacker, nothing credited
+for trample or for an attacker that needs two blockers, so it errs to the side of not acting). If one is, and if
+keeping attackers home changes that, attackers are taken back one at a time, each time the one whose staying home
+lowers the threat most and among equals the one that deals least, until no single opponent is sure to kill the
+seat. The attackers of a kill the attack is sure of are never taken back; an attack that leaves the seat dead on
+board whatever stays home stands as declared (the race is all there is); and if what is left is not a legal attack
+the declaration is put back. It was built from a count: at the owner's table one death in six in combat comes with
+the seat's own tapped creatures able to have prevented it, and in 500 of those 686 deaths the seat had attacked on
+its own turn before (`runner/mistakes.py`, `DESIGN.md` §34).
+
+`"guard": "table"` asks the wider question first: are the opponents one after another sure to get the seat's life
+in damage through what stays home (what each is sure of against the same blockers, summed)? In 300 of those 500
+deaths the killer's creatures alone had the power for it when the seat declared its attack; in most of the others
+the seat's life had fallen before it blocked (another opponent's attack, a drain, a payment of its own), which one
+opponent's board does not show.
+When nothing kept home holds the whole table off, the one-opponent question is asked instead. (`"one"` is another
+spelling of `true`.)
+
+Counters: `attack_guard_seen` (the declared attack left the seat open by the question asked), `attack_guard`
+(attackers were taken back and it is not any more), `attack_guard_back` (how many), `attack_guard_single` (asked for
+the table, held off the worst single opponent), `attack_guard_all` (nothing attacked after all),
+`attack_guard_hopeless` (dead on board whatever stays home: the attack stood), `attack_guard_invalid`,
+`attack_guard_errors`. `{"attack": {"policy": "forge", "finish": "leader", "guard": true}}`.
 
 The `mulligan` rule keeps a hand whose land count is within the range and never mulligans past `max_mulligans`;
 without it Forge's own mulligan logic runs.

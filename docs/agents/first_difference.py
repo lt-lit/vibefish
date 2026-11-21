@@ -171,6 +171,10 @@ def main(argv):
         f = lambda side: (f"kill {sum(r[side]['kill'] for r in g):4}, out {sum(r[side]['dead'] for r in g):4}, open {sum(r[side]['exposed'] for r in g):4}, "
                           f"attackers {sum(r[side]['sent'] for r in g) / len(g):.1f}")
         print(f"  {k:16} {len(g):5} tables | {cn}: {f('cand')} | {bn}: {f('base')}")
+    if att:
+        f = lambda side: (f"kill {sum(r[side]['kill'] for r in att):4}, out {sum(r[side]['dead'] for r in att):4}, open {sum(r[side]['exposed'] for r in att):4}, "
+                          f"attackers {sum(r[side]['sent'] for r in att) / len(att):.1f}")
+        print(f"  {'attack, all':16} {len(att):5} tables | {cn}: {f('cand')} | {bn}: {f('base')}")
     if a.by_deck:
         print()
         for d in a.decks:
@@ -178,6 +182,11 @@ def main(argv):
     if a.json:
         with open(a.json, 'w', encoding='utf-8') as f:
             summary = {k: dict(collections.Counter(r['outcome'] for r in g if 'outcome' in r), tables=len(g)) for k, g in files.items()}
+            summary['attack, all'] = dict(collections.Counter(r['outcome'] for r in att), tables=len(att),
+                                          **{f'{side}_{k}': sum(r[side][k] for r in att) for side in ('base', 'cand') for k in ('kill', 'dead', 'exposed', 'sent')})
+            for k, g in files.items():
+                if k.startswith('attack: '):
+                    summary[k].update({f'{side}_{x}': sum(r[side][x] for r in g) for side in ('base', 'cand') for x in ('kill', 'dead', 'exposed', 'sent')})
             json.dump({'kind': 'first-difference', 'base': bn, 'candidate': cn, 'decks': a.decks, 'files': summary, 'tables': rows}, f, indent=0)
             f.write('\n')
     return 0

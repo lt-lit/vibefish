@@ -62,9 +62,11 @@ are that session's and have to be replaced by the new session's scratch director
   rule's wait moved from one group to the other. `leader.py DIR...`: which thing a table can see says who goes on to
   win (the seat with the most nonland permanents, the highest life, the most damage dealt, sums of them), turn by turn
   from the event logs; the default of an aim's judgement of danger comes from it (DESIGN §33).
-- `add_finish.py DECK [DECK ...] [--name finish]`: a candidate that is a deck's shipped playbook with `finish` on its
-  attack (`{"policy": "forge", "finish": true}` for a playbook that leaves the attack to Forge): the kill no block
-  prevents, harness 0.4.0. Nothing else is changed.
+- `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--name NAME]`: a candidate that is a
+  deck's shipped playbook with a hook on its attack (`{"policy": "forge", ...}` for a playbook that leaves the attack
+  to Forge): `finish` (the kill no block prevents, harness 0.4.0), `"finish": "leader"` (only from the most dangerous
+  opponent down, 0.4.1), `guard` (against dying tapped out to one opponent, or to the table, 0.4.1). Nothing else is
+  changed.
 - Reading an exam of a hook that changes one decision (DESIGN §34): `first_difference.py EXAM_RESULTS_DIR VARIANT DECK...`
   reads the two games of every table side by side to the first event that differs and files the table by it: the same
   game to the end, the seat's own attack declaration (the hook's doing; filed further by whether the seat was sure to
@@ -73,7 +75,12 @@ are that session's and have to be replaced by the new session's scratch director
   opposite effects. `kill_chances.py RUN_DIR...` counts a seat's sure kills once an opponent instead of once a turn and
   says what became of the opponents let live; `tapped_out.py RUN_DIR...` says what a seat did on its own turn before it
   died tapped out, and how often an attack leaves the attacker open to one opponent; `block_check.py CARDSFOLDER_ZIP
-  RUN_DIR...` checks the deaths by a block not made against trample.
+  RUN_DIR...` checks the deaths by a block not made against trample. `hook_exam.py EXAM_DIR ROLLUPS_DIR OUT_DIR --pair
+  BASE:CAND [--pair ...] DECK...` puts an exam of attack hooks together: for each pair of arms, deck by deck and over
+  all decks, the wins and discordant tables, the seat's mistakes in each arm, the hooks' own counters and the
+  first-difference tables. It prints what a rule needs and decides nothing. `other_turns.py RUN_DIR... [--arm ARM] [--focus]`: a seat's instants, other spells
+  and activated abilities by whether it was its own turn or another player's (the count behind "what the bots do on
+  other players' turns", DESIGN §34).
 - `add_forge_rule.py DECK [--base FILE] [--name NAME] [--after commander|top|N] [--wait]`: a variant of a playbook with a
   `forge` rule put in mechanically (after the commander's rule unless told otherwise; `--wait` gives the rule
   `"wait": "main2"`). `playbook_check.sh [RUNTIME_DIR] [FILE...]` parses every playbook file with the harness's own
