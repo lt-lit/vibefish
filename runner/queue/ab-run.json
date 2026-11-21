@@ -1,7 +1,7 @@
 {
-  "requested": "2026-11-21T08:08Z",
-  "note": "Two cards no pilot casts at the owner's table, each with a rule ability new in harness 0.4.6 (DESIGN §34): Blight Curse with Fire Covenant cast by a rule that divides its X (playbook/variants/blight-curse-covenant.json: up to three of the opponents' creatures worth four or more, each given the damage that destroys it, for at most twelve life) and Blood Rites with Pact of the Serpent aimed at the seat itself (playbook/variants/blood-rites-pact.json: with three Vampires or more and twenty life). Playbook arms only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. In the baseline Fire Covenant was drawn in 55 of 200 games and cast in none, Pact of the Serpent in 44 and none. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 400 games in 10 shard jobs.",
-  "decks": "blight-curse@covenant,blood-rites@pact",
+  "requested": "2026-11-21T08:40Z",
+  "note": "Rules in the seat's own combat (DESIGN §34, harness 0.4.7): Deadly Disguise under its shipped playbook with its commander's ability switched on (playbook/variants/deadly-disguise-kaust.json: on a turn Kaust, Eyes of the Glade could be tapped, a face-down creature attacks and Kaust stays home; after blocks a rule taps Kaust to turn a face-down attacker face up, an unblocked one first). Forge's AI used that ability 8 times in the baseline's 200 games; in replays of eight baseline tables the rule used it 15 times. Playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 200 games in 5 shard jobs.",
+  "decks": "deadly-disguise@kaust",
   "games": "200",
   "arms": "playbook",
   "seed": "20261390",
