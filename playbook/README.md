@@ -88,7 +88,46 @@ Against no blockers it plays exactly as `go_wide` with `spread`. Counters: `atta
 `attack_lethal`, `attack_expected_losses`, `attack_forced`.
 
 `forge` (harness 0.4.0) is Forge's own attack, which is also what a playbook without an `attack` block gets; the
-block is then there to carry `finish` and `guard`.
+block is then there to carry `aim`, `finish` and `guard`.
+
+`"aim": "danger"` (harness 0.4.5), on any policy and before `finish`, changes whom the attack goes at and nothing
+else. Forge's AI builds an attack against one opponent, and at a table of four it does not pick that opponent by who
+is winning: with three opponents alive 48% of a table's attackers go at the opponent that looks most dangerous (a
+third would by chance), and when none does, the one attacked has the lowest life at the table three times in four
+(`docs/agents/attack_danger.py` on 2,000 games at the owner's table, `DESIGN.md` §34). With the key, the attackers
+the policy sent at a player are sent at the opponent that looks most dangerous instead (life plus twice its nonland
+permanents, the weights of `cast.danger`) when all of this holds: that opponent is ahead of the one attacked by at
+least `aim_margin` (default 5: a close table is left to the policy); the declared attack is not sure to kill the one
+attacked (a kill stays where it is); every one of those attackers may attack the more dangerous opponent at no cost;
+the damage that is sure to get through there whatever is blocked is at least what was sure where they were sent;
+the more dangerous opponent has no more creatures that could block one of those attackers than the opponent they
+were sent at; and no attacker meets a creature there that can block and destroy it unless it met one where it was
+sent (Forge's own combat arithmetic on the battlefield as it stands). Which creatures attack is not changed, attackers of
+planeswalkers and battles stay, and a declaration Forge's rules refuse is put back. Counters: `attack_aim_seen` (a
+declaration with attackers at an opponent at least the margin behind the most dangerous one), `attack_aim` (they
+were sent at the most dangerous opponent instead), `attack_aim_moved` (how many attackers), `attack_aim_kill_kept`
+(the declared attack was sure to kill its target), `attack_aim_cannot` (an attacker may not attack there, or not for
+free), `attack_aim_less` (less was sure to get through there), `attack_aim_blockers` (more creatures there could block
+the attackers), `attack_aim_risk` (a blocker there would destroy an
+attacker that was safe where it was sent), `attack_aim_already` (the policy's own attack went at the most dangerous
+opponent), `attack_aim_invalid`, `attack_aim_errors`. `{"attack": {"policy": "forge", "aim": "danger"}}`.
+
+`"open": true` (harness 0.4.5), on any policy, after `aim` and before `finish`, takes free damage. Forge's AI weighs
+an attack against one opponent, and a creature it would not send into that opponent's blockers stays home even when
+another opponent cannot block at all: with three opponents alive a seat attacks an opponent who cannot block on 28%
+of the turns it could, attacks only an opponent with blockers on 38% and nobody on 34% (`DESIGN.md` §34). With the
+key, the seat's creatures that stayed home attack an opponent with no creature that can block, the most dangerous
+such opponent first, when all of this holds for a creature: it deals damage and may attack that opponent at no
+cost (and is not sacrificed for attacking, as a decayed creature is); it has no ability that taps it (a creature that taps for mana or for an effect has something else to do),
+unless it has vigilance; and Forge's own judgement of the seat's defence does not want it home
+(`AiAttackController.notNeededAsBlockers`, the same call Forge's attack makes: its prediction of each opponent's
+next attack against the blockers that would be left). An opponent that is not the most dangerous one alive is left
+alone when the damage added would be sure to kill it, the order of `"finish": "leader"`. A declaration Forge's rules
+refuse is put back. Counters: `attack_open_seen` (an opponent could not block and a creature that could attack it
+had stayed home), `attack_open` (creatures were added), `attack_open_added` (how many), `attack_open_alone` (the
+policy had declared no attack at all), `attack_open_home` (creatures Forge wanted home), `attack_open_utility`
+(creatures with an ability that taps them), `attack_open_kill_left`, `attack_open_invalid`, `attack_open_errors`.
+`{"attack": {"policy": "forge", "open": true}}`.
 
 `"finish": true` (harness 0.4.0), on any policy, takes a kill no block prevents. After the policy has declared its
 attack, each opponent the seat is sure to kill gets enough attackers that the damage reaches its life whatever it

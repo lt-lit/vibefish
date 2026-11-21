@@ -7,7 +7,11 @@ wrote (DECK-join.json with the arms `shipped` and each variant, DECK-VARIANT.jso
 
   wins          each arm's wins and the pair's discordant tables with the exact test (from the join)
   mistakes      the seat under test's counts in each arm (`runner/mistakes.py --deck`): sure kills missed by where the table stood,
-                deaths in combat, by a block not made, tapped out
+                deaths in combat, by a block not made, tapped out, by commander damage; the turns an opponent could not block and
+                what the seat did with them; the damage it sent of the damage it could have
+  the aim       whom the seat's attackers went at in each arm (`attack_danger.py --deck`): the share at the most dangerous
+                opponent, at the player who went on to win, and the declarations that passed the most dangerous opponent by
+                although it was ahead by five or more and at least as open
   the hook      its own counters for the seat (`playbook_focus` of the candidate's rollup)
   its tables    `first_difference.py` on the pair: the tables on which the seat's own attack declaration is the first thing that
                 differs, how those pairs ended, and from the same position how often the seat was out before its next turn
@@ -19,7 +23,9 @@ import argparse, collections, json, math, os, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MK = ('kill_turns', 'kill_missed', 'kill_last_turns', 'kill_last_missed', 'kill_top_turns', 'kill_top_missed', 'kill_lesser_turns', 'kill_lesser_missed',
-      'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'turns_able', 'turns_attacked')
+      'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths', 'turns_able', 'turns_attacked', 'power_able', 'power_sent',
+      'open_turns', 'open_attacked', 'open_elsewhere')
+HOOKS = ('attack_kill', 'attack_guard', 'attack_aim', 'attack_open', 'trigger_aim', 'block_')
 
 
 def exact(a, b):
@@ -44,6 +50,20 @@ def mistakes(exam, out, deck, arm):
     return j['groups'].get('bot') or {}
 
 
+def danger(exam, out, deck, arm):
+    p = os.path.join(out, f'{deck}-{arm}-attack-danger.json')
+    subprocess.run([sys.executable, '-I', os.path.join(ROOT, 'docs', 'agents', 'attack_danger.py'), os.path.join(exam, 'results', 'ab-' + entry(deck, arm)),
+                    '--deck', deck, '--json', p], capture_output=True, text=True, check=True)
+    return json.load(open(p))['counts']
+
+
+def aim_line(c):
+    decl = c.get('3 declarations', 0) + c.get('2 declarations', 0)
+    return (f"attackers at the most dangerous opponent {pct(c.get('3 at_top', 0), c.get('3 attackers', 0))} with three alive, "
+            f"{pct(c.get('2 at_top', 0), c.get('2 attackers', 0))} with two; at the eventual winner {pct(c.get('3 at_winner', 0) + c.get('2 at_winner', 0), c.get('3 attackers_seat_lost', 0) + c.get('2 attackers_seat_lost', 0))}; "
+            f"passed it by though ahead by five and as open {c.get('else sure_at_top_at_least gap5', 0)}/{decl} ({pct(c.get('else sure_at_top_at_least gap5', 0), decl)})")
+
+
 def pct(a, b):
     return f'{100 * a / b:.0f}%' if b else '-'
 
@@ -63,11 +83,12 @@ def main(argv):
         arms += [x for x in (b, c) if x not in arms]
     res = {'decks': {}, 'pairs': {}, 'arms': arms}
     M = {arm: collections.Counter() for arm in arms}
+    A = {arm: collections.Counter() for arm in arms}
     H = {arm: collections.Counter() for arm in arms}
     W = {arm: 0 for arm in arms}
     for d in a.decks:
         j = json.load(open(os.path.join(a.rollups, f'{d}-join.json')))
-        row = {'wins': {}, 'games': {}, 'mistakes': {}, 'hook': {}, 'pairs': {}}
+        row = {'wins': {}, 'games': {}, 'mistakes': {}, 'aim': {}, 'hook': {}, 'pairs': {}}
         for arm in arms:
             st = j['arm_stats'][arm]
             row['wins'][arm], row['games'][arm] = st['wins'], st['games']
@@ -75,9 +96,11 @@ def main(argv):
             m = mistakes(a.exam, a.out, d, arm)
             row['mistakes'][arm] = {k: m.get(k, 0) for k in MK}
             M[arm].update(row['mistakes'][arm])
+            row['aim'][arm] = danger(a.exam, a.out, d, arm)
+            A[arm].update(row['aim'][arm])
             if arm != 'shipped':
                 foc = json.load(open(os.path.join(a.rollups, f'{d}-{arm}.json')))['arm_stats']['playbook'].get('playbook_focus') or {}
-                row['hook'][arm] = {k: v for k, v in foc.items() if k.startswith(('attack_kill', 'attack_guard'))}
+                row['hook'][arm] = {k: v for k, v in foc.items() if k.startswith(HOOKS)}
                 H[arm].update(row['hook'][arm])
         for b, c in pairs:
             p = j['paired'][f'{c}_vs_{b}']
@@ -92,7 +115,8 @@ def main(argv):
         for arm in arms:
             m = row['mistakes'][arm]
             print(f"    {arm:11} sure kills missed: last {m['kill_last_missed']}/{m['kill_last_turns']}, most dangerous {m['kill_top_missed']}/{m['kill_top_turns']}, "
-                  f"lesser {m['kill_lesser_missed']}/{m['kill_lesser_turns']} | deaths in combat {m['combat_deaths']}, block not made {m['block_not_made']}, tapped out {m['died_tapped_out']}"
+                  f"lesser {m['kill_lesser_missed']}/{m['kill_lesser_turns']} | deaths in combat {m['combat_deaths']}, block not made {m['block_not_made']}, tapped out {m['died_tapped_out']}, "
+                  f"commander damage {m['commander_deaths']} | open board attacked {m['open_attacked']}/{m['open_turns']}"
                   + (f" | hook {row['hook'][arm]}" if arm != 'shipped' else ''))
     print()
     print(f"ALL {len(a.decks)} DECKS: wins " + ', '.join(f'{arm} {W[arm]}' for arm in arms) + f" of {200 * len(a.decks)}")
@@ -101,8 +125,11 @@ def main(argv):
         print(f"    {arm:11} sure kills missed: last {m['kill_last_missed']}/{m['kill_last_turns']} ({pct(m['kill_last_missed'], m['kill_last_turns'])}), "
               f"most dangerous {m['kill_top_missed']}/{m['kill_top_turns']} ({pct(m['kill_top_missed'], m['kill_top_turns'])}), "
               f"lesser {m['kill_lesser_missed']}/{m['kill_lesser_turns']} ({pct(m['kill_lesser_missed'], m['kill_lesser_turns'])}) | deaths in combat {m['combat_deaths']}, "
-              f"block not made {m['block_not_made']}, tapped out {m['died_tapped_out']} | attacked on {pct(m['turns_attacked'], m['turns_able'])} of its turns with an able attacker"
+              f"block not made {m['block_not_made']}, tapped out {m['died_tapped_out']}, commander damage {m['commander_deaths']} | attacked on {pct(m['turns_attacked'], m['turns_able'])} of its turns "
+              f"with an able attacker, sent {pct(m['power_sent'], m['power_able'])} of the damage it could | an opponent could not block on {m['open_turns']} turns: attacked it "
+              f"{pct(m['open_attacked'], m['open_turns'])}, only another {pct(m['open_elsewhere'], m['open_turns'])}, nobody {pct(m['open_turns'] - m['open_attacked'] - m['open_elsewhere'], m['open_turns'])}"
               + (f" | hook {dict(H[arm])}" if arm != 'shipped' else ''))
+        print(f"    {'':11} {aim_line(A[arm])}")
     for b, c in pairs:
         co = sum(res['decks'][d]['pairs'][f'{b}:{c}']['cand_only'] for d in a.decks)
         bo = sum(res['decks'][d]['pairs'][f'{b}:{c}']['base_only'] for d in a.decks)
@@ -117,6 +144,7 @@ def main(argv):
         print(f"{c} beside {b}, all decks: tables only {c} won {co}, only {b} won {bo}, exact test {exact(co, bo):.4f}")
         print(txt.rstrip())
     res['mistakes'] = {arm: dict(M[arm]) for arm in arms}
+    res['aim'] = {arm: dict(A[arm]) for arm in arms}
     res['hook'] = {arm: dict(H[arm]) for arm in arms}
     res['wins'] = W
     json.dump(res, open(os.path.join(a.out, 'hook-exam.json'), 'w'), indent=1)

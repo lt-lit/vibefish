@@ -28,6 +28,7 @@
    "kill_lesser_missed": 358,
    "open_turns": 2518,
    "open_attacked": 1036,
+   "open_elsewhere": 1035,
    "attacked_lethal": 443,
    "combat_deaths": 442,
    "block_not_made": 7,
@@ -56,6 +57,7 @@
    "kill_lesser_missed": 133,
    "open_turns": 1523,
    "open_attacked": 439,
+   "open_elsewhere": 547,
    "attacked_lethal": 414,
    "combat_deaths": 411,
    "block_not_made": 3,
@@ -84,6 +86,7 @@
    "kill_lesser_missed": 295,
    "open_turns": 2679,
    "open_attacked": 871,
+   "open_elsewhere": 758,
    "attacked_lethal": 428,
    "combat_deaths": 404,
    "block_not_made": 7,
@@ -112,6 +115,7 @@
    "kill_lesser_missed": 146,
    "open_turns": 2074,
    "open_attacked": 535,
+   "open_elsewhere": 462,
    "attacked_lethal": 527,
    "combat_deaths": 527,
    "block_not_made": 7,
@@ -140,6 +144,7 @@
    "kill_lesser_missed": 166,
    "open_turns": 1786,
    "open_attacked": 521,
+   "open_elsewhere": 748,
    "attacked_lethal": 405,
    "combat_deaths": 394,
    "block_not_made": 3,
@@ -168,6 +173,7 @@
    "kill_lesser_missed": 157,
    "open_turns": 1569,
    "open_attacked": 437,
+   "open_elsewhere": 380,
    "attacked_lethal": 485,
    "combat_deaths": 390,
    "block_not_made": 3,
@@ -196,6 +202,7 @@
    "kill_lesser_missed": 164,
    "open_turns": 1452,
    "open_attacked": 316,
+   "open_elsewhere": 751,
    "attacked_lethal": 458,
    "combat_deaths": 456,
    "block_not_made": 4,
@@ -224,6 +231,7 @@
    "kill_lesser_missed": 179,
    "open_turns": 1714,
    "open_attacked": 453,
+   "open_elsewhere": 897,
    "attacked_lethal": 383,
    "combat_deaths": 379,
    "block_not_made": 13,
@@ -252,6 +260,7 @@
    "kill_lesser_missed": 133,
    "open_turns": 2026,
    "open_attacked": 572,
+   "open_elsewhere": 485,
    "attacked_lethal": 490,
    "combat_deaths": 489,
    "block_not_made": 5,
@@ -280,6 +289,7 @@
    "kill_lesser_missed": 253,
    "open_turns": 2000,
    "open_attacked": 715,
+   "open_elsewhere": 680,
    "attacked_lethal": 390,
    "combat_deaths": 387,
    "block_not_made": 2,
@@ -289,7 +299,7 @@
  },
  "kills_not_taken": [
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
    "t": 29,
    "seat": 1,
    "deck": "miracle-worker",
@@ -306,7 +316,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
    "t": 31,
    "seat": 3,
    "deck": "blood-rites",
@@ -323,7 +333,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
    "t": 32,
    "seat": 0,
    "deck": "ahoy-mateys",
@@ -349,7 +359,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
    "t": 33,
    "seat": 1,
    "deck": "miracle-worker",
@@ -366,7 +376,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0001/games/game-001.events.jsonl",
    "t": 35,
    "seat": 3,
    "deck": "blood-rites",
@@ -383,7 +393,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0002/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0002/games/game-001.events.jsonl",
    "t": 46,
    "seat": 2,
    "deck": "miracle-worker",
@@ -402,7 +412,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0003/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0003/games/game-001.events.jsonl",
    "t": 47,
    "seat": 0,
    "deck": "revenant-recon",
@@ -421,7 +431,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
    "t": 36,
    "seat": 2,
    "deck": "mutant-menace",
@@ -440,7 +450,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
    "t": 37,
    "seat": 3,
    "deck": "ahoy-mateys",
@@ -459,7 +469,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
    "t": 38,
    "seat": 0,
    "deck": "blight-curse",
@@ -485,7 +495,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0004/games/game-001.events.jsonl",
    "t": 39,
    "seat": 1,
    "deck": "deadly-disguise",
@@ -502,7 +512,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
    "t": 21,
    "seat": 0,
    "deck": "ahoy-mateys",
@@ -521,7 +531,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
    "t": 25,
    "seat": 0,
    "deck": "ahoy-mateys",
@@ -540,7 +550,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
    "t": 29,
    "seat": 0,
    "deck": "ahoy-mateys",
@@ -559,7 +569,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
    "t": 31,
    "seat": 2,
    "deck": "blight-curse",
@@ -578,7 +588,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0005/games/game-001.events.jsonl",
    "t": 33,
    "seat": 0,
    "deck": "ahoy-mateys",
@@ -597,7 +607,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0006/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0006/games/game-001.events.jsonl",
    "t": 45,
    "seat": 1,
    "deck": "ahoy-mateys",
@@ -616,7 +626,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0007/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0007/games/game-001.events.jsonl",
    "t": 22,
    "seat": 2,
    "deck": "ahoy-mateys",
@@ -642,7 +652,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0012/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0012/games/game-001.events.jsonl",
    "t": 50,
    "seat": 2,
    "deck": "death-toll",
@@ -661,7 +671,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0013/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0013/games/game-001.events.jsonl",
    "t": 40,
    "seat": 1,
    "deck": "revenant-recon",
@@ -680,7 +690,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0013/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0013/games/game-001.events.jsonl",
    "t": 41,
    "seat": 2,
    "deck": "blood-rites",
@@ -697,7 +707,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0013/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0013/games/game-001.events.jsonl",
    "t": 42,
    "seat": 3,
    "deck": "deadly-disguise",
@@ -716,7 +726,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0014/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0014/games/game-001.events.jsonl",
    "t": 29,
    "seat": 0,
    "deck": "squirreled-away",
@@ -733,7 +743,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0016/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0016/games/game-001.events.jsonl",
    "t": 28,
    "seat": 0,
    "deck": "veloci-ramp-tor",
@@ -752,7 +762,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0017/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0017/games/game-001.events.jsonl",
    "t": 28,
    "seat": 0,
    "deck": "ahoy-mateys",
@@ -771,7 +781,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0017/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0017/games/game-001.events.jsonl",
    "t": 30,
    "seat": 2,
    "deck": "veloci-ramp-tor",
@@ -788,7 +798,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0017/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0017/games/game-001.events.jsonl",
    "t": 33,
    "seat": 2,
    "deck": "veloci-ramp-tor",
@@ -805,7 +815,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0019/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0019/games/game-001.events.jsonl",
    "t": 36,
    "seat": 0,
    "deck": "veloci-ramp-tor",
@@ -824,7 +834,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0020/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0020/games/game-001.events.jsonl",
    "t": 30,
    "seat": 0,
    "deck": "miracle-worker",
@@ -843,7 +853,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0023/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0023/games/game-001.events.jsonl",
    "t": 41,
    "seat": 2,
    "deck": "ahoy-mateys",
@@ -862,7 +872,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0023/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0023/games/game-001.events.jsonl",
    "t": 45,
    "seat": 2,
    "deck": "ahoy-mateys",
@@ -888,7 +898,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0026/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0026/games/game-001.events.jsonl",
    "t": 37,
    "seat": 1,
    "deck": "ahoy-mateys",
@@ -914,7 +924,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0027/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0027/games/game-001.events.jsonl",
    "t": 21,
    "seat": 1,
    "deck": "mutant-menace",
@@ -933,7 +943,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0028/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0028/games/game-001.events.jsonl",
    "t": 34,
    "seat": 0,
    "deck": "deadly-disguise",
@@ -950,7 +960,7 @@
    "attacked": {}
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0029/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0029/games/game-001.events.jsonl",
    "t": 35,
    "seat": 0,
    "deck": "ahoy-mateys",
@@ -976,7 +986,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0034/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0034/games/game-001.events.jsonl",
    "t": 26,
    "seat": 0,
    "deck": "mutant-menace",
@@ -995,7 +1005,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0037/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0037/games/game-001.events.jsonl",
    "t": 34,
    "seat": 1,
    "deck": "blight-curse",
@@ -1014,7 +1024,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0039/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0039/games/game-001.events.jsonl",
    "t": 40,
    "seat": 1,
    "deck": "blood-rites",
@@ -1033,7 +1043,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0040/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0040/games/game-001.events.jsonl",
    "t": 37,
    "seat": 2,
    "deck": "miracle-worker",
@@ -1052,7 +1062,7 @@
    }
   },
   {
-   "where": "/tmp/claude-0/-home-user/689e2db2-1b2b-5713-8d65-c6b69bb2badb/scratchpad/exam45/results/ab-ahoy-mateys/arm-playbook/g0041/games/game-001.events.jsonl",
+   "where": "ab-ahoy-mateys/arm-playbook/g0041/games/game-001.events.jsonl",
    "t": 33,
    "seat": 3,
    "deck": "miracle-worker",
@@ -1072,5 +1082,5 @@
   }
  ],
  "run": "ab-run #45 (run id 44801095534, commit 772c943, harness 0.4.0, seed 20261380): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook",
- "counted": "2026-11-21, with deaths by commander damage told apart (runner/mistakes.py as of harness 0.4.3)"
+ "counted": "2026-11-21, with deaths by commander damage told apart (runner/mistakes.py as of harness 0.4.3) and the turns with an open board split by what the seat did (open_elsewhere: it attacked, and only opponents that could block; harness 0.4.5)"
 }

@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 import forge.LobbyPlayer;
+import forge.ai.AiAttackController;
 import forge.ai.AiPlayDecision;
 import forge.ai.ComputerUtil;
 import forge.ai.ComputerUtilAbility;
@@ -36,6 +37,7 @@ import forge.game.player.Player;
 import forge.game.spellability.SpellAbility;
 import forge.game.trigger.WrappedAbility;
 import forge.game.zone.ZoneType;
+import forge.util.MyRandom;
 
 /**
  * Forge's AI controller with a deck's playbook on top (Phase 4). Only the decisions the playbook covers are taken
@@ -123,6 +125,20 @@ public class PlaybookController extends PlayerControllerAi {
                 super.declareAttackers(attacker, combat);
             }
         }
+        if (policy.aimDanger) {
+            try {
+                aimAttack(attacker, combat);
+            } catch (RuntimeException e) {
+                count("attack_aim_errors", 1);
+            }
+        }
+        if (policy.open) {
+            try {
+                openAttack(attacker, combat);
+            } catch (RuntimeException e) {
+                count("attack_open_errors", 1);
+            }
+        }
         if (policy.finish) {
             try {
                 finish(attacker, combat);
@@ -137,6 +153,323 @@ public class PlaybookController extends PlayerControllerAi {
                 count("attack_guard_errors", 1);
             }
         }
+    }
+
+    /**
+     * Whom to attack, by the judgement of danger. Forge's AI builds an attack against one opponent, and at a
+     * table of four that is the one with the lowest life three times in four when it is not the most dangerous
+     * (DESIGN section 34: with three opponents alive 48% of a table's attackers go at the opponent that looks
+     * most dangerous, and when none does that opponent is as open as the one attacked in seven declarations of
+     * ten). After the policy has declared, the attackers it sent at a player are sent at the most dangerous
+     * opponent instead when all of this holds: that opponent is ahead of the one attacked by at least
+     * {@code aim_margin}; the declared attack is not sure to kill the one attacked (a kill stays); every one
+     * of those attackers may attack the more dangerous opponent at no cost; the damage that is sure to get
+     * through there, whatever is blocked, is at least what was sure where they were sent; the more dangerous
+     * opponent has no more creatures that could block one of them than the opponent they were sent at (sure
+     * damage of nothing on both sides is not the same attack against one blocker and against two); and no
+     * attacker meets a creature there that can block and destroy it unless it met one where it was sent. Attackers of
+     * planeswalkers and battles stay. Which creatures attack is not changed, only whom. A declaration Forge's
+     * rules refuse is put back as the policy made it.
+     */
+    private void aimAttack(Player me, Combat combat) {
+        List<Player> opps = new ArrayList<>();
+        for (Player opp : me.getOpponents()) {
+            if (!opp.hasLost() && opp.getLife() > 0) {
+                opps.add(opp);
+            }
+        }
+        if (opps.size() < 2 || combat.getAttackers().isEmpty()) {
+            return;
+        }
+        opps.sort((a, b) -> Integer.compare(danger(b), danger(a)));
+        Player top = opps.get(0);
+        int margin = Math.max(1, playbook.attack.aimMargin);
+        List<Card> topBlockers = CombatMath.ableBlockers(top);
+        Map<Card, GameEntity> before = new LinkedHashMap<>();
+        for (Card c : combat.getAttackers()) {
+            before.put(c, combat.getDefenderByAttacker(c));
+        }
+        killMemo.clear();
+        List<Card> moving = new ArrayList<>();
+        StringBuilder what = new StringBuilder();
+        boolean seen = false;
+        for (Player x : opps.subList(1, opps.size())) {
+            List<Card> at = new ArrayList<>();
+            for (Map.Entry<Card, GameEntity> e : before.entrySet()) {
+                if (e.getValue() == x && e.getKey().getController() == me) {
+                    at.add(e.getKey());
+                }
+            }
+            if (at.isEmpty() || danger(top) < danger(x) + margin) {
+                continue;                               // nothing sent there, or a close table: left to the policy
+            }
+            if (!seen) {
+                count("attack_aim_seen", 1);
+                seen = true;
+            }
+            List<Card> xBlockers = CombatMath.ableBlockers(x);
+            int sureX = CombatMath.through(at, xBlockers);
+            if (sureX >= x.getLife()) {
+                count("attack_aim_kill_kept", 1);       // the declared attack is sure to kill it
+                continue;
+            }
+            boolean can = true;
+            for (Card a : at) {
+                can &= canSwingAt(a, top);
+            }
+            if (!can) {
+                count("attack_aim_cannot", 1);
+                continue;
+            }
+            List<Card> already = new ArrayList<>();     // what is at the most dangerous opponent before this group joins
+            for (Map.Entry<Card, GameEntity> e : before.entrySet()) {
+                if (e.getValue() == top) {
+                    already.add(e.getKey());
+                }
+            }
+            already.addAll(moving);
+            List<Card> joined = new ArrayList<>(already);
+            joined.addAll(at);
+            int sureTop = CombatMath.through(joined, topBlockers) - CombatMath.through(already, topBlockers);
+            if (sureTop < sureX) {
+                count("attack_aim_less", 1);            // less is sure to get through there
+                continue;
+            }
+            if (canBlockAny(at, topBlockers) > canBlockAny(at, xBlockers)) {
+                count("attack_aim_blockers", 1);        // more creatures there could block these attackers
+                continue;
+            }
+            boolean worse = false;
+            for (Card a : at) {
+                if (!safeFrom(me, a, topBlockers, combat) && safeFrom(me, a, xBlockers, combat)) {
+                    worse = true;                       // a blocker there would destroy it, none here would
+                    break;
+                }
+            }
+            if (worse) {
+                count("attack_aim_risk", 1);
+                continue;
+            }
+            moving.addAll(at);
+            what.append(what.length() == 0 ? "" : "; ").append(at.size()).append(" from ").append(x.getName()).append(" (life ").append(x.getLife())
+                .append(", danger ").append(danger(x)).append(", ").append(sureX).append(" sure through ").append(xBlockers.size()).append(" blockers)");
+        }
+        if (moving.isEmpty()) {
+            if (!seen) {
+                boolean atTop = false;
+                for (GameEntity d : before.values()) {
+                    atTop |= d == top;
+                }
+                if (atTop) {
+                    count("attack_aim_already", 1);     // the policy's own attack went at the most dangerous opponent
+                }
+            }
+            return;
+        }
+        for (Card c : moving) {
+            combat.removeFromCombat(c);
+            combat.addAttacker(c, top);
+        }
+        if (!CombatUtil.validateAttackers(combat)) {
+            for (Card c : new ArrayList<>(combat.getAttackers())) {
+                combat.removeFromCombat(c);
+            }
+            for (Map.Entry<Card, GameEntity> e : before.entrySet()) {
+                combat.addAttacker(e.getKey(), e.getValue());
+            }
+            count("attack_aim_invalid", 1);
+            return;
+        }
+        count("attack_aim", 1);
+        count("attack_aim_moved", moving.size());
+        trace("aims the attack at " + top.getName() + " (life " + top.getLife() + ", danger " + danger(top) + ", "
+                + CombatMath.through(new ArrayList<>(combat.getAttackersOf(top)), topBlockers) + " sure through " + topBlockers.size() + " blockers): " + what);
+    }
+
+    /** How many of these blockers may block at least one of these attackers (Forge's own rule for a pair). */
+    private static int canBlockAny(List<Card> attackers, List<Card> blockers) {
+        int n = 0;
+        for (Card b : blockers) {
+            for (Card a : attackers) {
+                if (CombatUtil.canBlock(a, b)) {
+                    n++;
+                    break;
+                }
+            }
+        }
+        return n;
+    }
+
+    /**
+     * Free damage. Forge's AI weighs an attack against one opponent, and creatures it would not send into that
+     * opponent's blockers stay home even when another opponent cannot block at all (DESIGN section 34: with
+     * three opponents alive a seat attacks an opponent who cannot block on 28% of the turns it could, attacks
+     * only an opponent with blockers on 38% and nobody on 34%). After the policy has declared, the seat's
+     * creatures that stayed home attack an opponent with no creature that can block, the most dangerous such
+     * opponent first, when all of this holds for a creature: it deals damage and may attack that opponent at no
+     * cost (and is not sacrificed for attacking: decayed); it has no ability that taps it (a creature that taps for mana or for an effect has something else to
+     * do), unless it has vigilance; and Forge's own judgement of the seat's defence does not want it home
+     * ({@code AiAttackController.notNeededAsBlockers}: its prediction of the opponents' next attacks against the
+     * blockers that are left, the one its own attack uses). An opponent that is not the most dangerous one alive
+     * is left alone when the damage added would be sure to kill it: a weaker opponent is not killed by this hook
+     * while a more dangerous one lives (the order of {@code "finish": "leader"}). A declaration Forge's rules
+     * refuse is put back as the policy made it.
+     */
+    private void openAttack(Player me, Combat combat) {
+        List<Player> opps = new ArrayList<>();
+        for (Player opp : me.getOpponents()) {
+            if (!opp.hasLost() && opp.getLife() > 0) {
+                opps.add(opp);
+            }
+        }
+        opps.sort((a, b) -> Integer.compare(danger(b), danger(a)));
+        List<Player> open = new ArrayList<>();
+        for (Player opp : opps) {
+            if (CombatMath.ableBlockers(opp).isEmpty()) {
+                open.add(opp);
+            }
+        }
+        if (open.isEmpty()) {
+            return;
+        }
+        Map<Card, GameEntity> before = new LinkedHashMap<>();
+        for (Card c : combat.getAttackers()) {
+            before.put(c, combat.getDefenderByAttacker(c));
+        }
+        List<Card> idle = new ArrayList<>();
+        int utility = 0;
+        for (Card c : me.getCreaturesInPlay()) {
+            if (before.containsKey(c) || CombatMath.hits(c) <= 0 || c.hasKeyword(Keyword.DECAYED)) {
+                continue;                               // attacking, harmless, or sacrificed for attacking: that damage is not free
+            }
+            boolean somewhere = false;
+            for (Player opp : open) {
+                somewhere |= canSwingAt(c, opp);
+            }
+            if (!somewhere) {
+                continue;
+            }
+            if (!c.hasKeyword(Keyword.VIGILANCE) && tapsForSomething(c)) {
+                utility++;                              // it taps for mana or an effect: not this hook's to spend
+                continue;
+            }
+            idle.add(c);
+        }
+        if (utility > 0) {
+            count("attack_open_utility", utility);
+        }
+        if (idle.isEmpty()) {
+            return;
+        }
+        count("attack_open_seen", 1);
+        // Forge's judgement is asked with the random source put back afterwards (its attack controller draws a
+        // defender at random when it is made): asking must not change the game, only an attack that is changed does
+        java.util.Random saved = copyRandom();
+        List<Card> free;
+        try {
+            free = new ArrayList<>(new AiAttackController(me).notNeededAsBlockers(new ArrayList<>(before.keySet()), new ArrayList<>(idle)));
+        } finally {
+            if (saved != null) {
+                MyRandom.setRandom(saved);
+            }
+        }
+        free.retainAll(idle);
+        if (free.size() < idle.size()) {
+            count("attack_open_home", idle.size() - free.size());   // Forge wants them home as blockers
+        }
+        if (free.isEmpty()) {
+            return;
+        }
+        free.sort((x, y) -> Integer.compare(CombatMath.strikes(y), CombatMath.strikes(x)));
+        Player top = opps.get(0);
+        Map<Card, Player> plan = new LinkedHashMap<>();
+        StringBuilder what = new StringBuilder();
+        for (Player opp : open) {
+            List<Card> can = new ArrayList<>();
+            int add = 0;
+            for (Card c : free) {
+                if (!plan.containsKey(c) && canSwingAt(c, opp)) {
+                    can.add(c);
+                    add += CombatMath.strikes(c);
+                }
+            }
+            if (can.isEmpty()) {
+                continue;
+            }
+            int declared = 0;
+            for (Card c : combat.getAttackersOf(opp)) {
+                declared += CombatMath.strikes(c);
+            }
+            if (opp != top && declared < opp.getLife() && declared + add >= opp.getLife()) {
+                count("attack_open_kill_left", 1);      // it would kill a weaker opponent while a more dangerous one lives
+                continue;
+            }
+            for (Card c : can) {
+                plan.put(c, opp);
+            }
+            what.append(what.length() == 0 ? "" : "; ").append(can.size()).append(" at ").append(opp.getName()).append(" (life ").append(opp.getLife())
+                .append(", danger ").append(danger(opp)).append(", ").append(add).append(" damage)");
+        }
+        if (plan.isEmpty()) {
+            return;
+        }
+        for (Map.Entry<Card, Player> e : plan.entrySet()) {
+            combat.addAttacker(e.getKey(), e.getValue());
+        }
+        if (!CombatUtil.validateAttackers(combat)) {
+            for (Card c : new ArrayList<>(combat.getAttackers())) {
+                combat.removeFromCombat(c);
+            }
+            for (Map.Entry<Card, GameEntity> e : before.entrySet()) {
+                combat.addAttacker(e.getKey(), e.getValue());
+            }
+            count("attack_open_invalid", 1);
+            return;
+        }
+        count("attack_open", 1);
+        count("attack_open_added", plan.size());
+        if (before.isEmpty()) {
+            count("attack_open_alone", 1);              // the policy had declared no attack at all
+        }
+        trace("free damage at an open board: " + what + " (" + before.size() + " attacker(s) declared before)");
+    }
+
+    /**
+     * A copy of the game's random source as it stands, to be put back with {@code MyRandom.setRandom} after a
+     * question to Forge's AI that draws from it; null when the source is not the plain seeded one a simulated
+     * game runs on (then nothing is put back).
+     */
+    private static java.util.Random copyRandom() {
+        java.util.Random now = MyRandom.getRandom();
+        if (now == null || now.getClass() != java.util.Random.class) {
+            return null;
+        }
+        try {
+            java.io.ByteArrayOutputStream bytes = new java.io.ByteArrayOutputStream();
+            try (java.io.ObjectOutputStream out = new java.io.ObjectOutputStream(bytes)) {
+                out.writeObject(now);
+            }
+            try (java.io.ObjectInputStream in = new java.io.ObjectInputStream(new java.io.ByteArrayInputStream(bytes.toByteArray()))) {
+                return (java.util.Random) in.readObject();
+            }
+        } catch (java.io.IOException | ClassNotFoundException | RuntimeException e) {
+            return null;
+        }
+    }
+
+    /** Whether the creature has an ability that taps it: mana, or an activated ability with the tap symbol in its cost. */
+    private static boolean tapsForSomething(Card c) {
+        for (SpellAbility sa : c.getManaAbilities()) {
+            if (sa.getPayCosts() != null && sa.getPayCosts().hasTapCost()) {
+                return true;
+            }
+        }
+        for (SpellAbility sa : c.getNonManaAbilities()) {
+            if (sa.isActivatedAbility() && sa.getPayCosts() != null && sa.getPayCosts().hasTapCost()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

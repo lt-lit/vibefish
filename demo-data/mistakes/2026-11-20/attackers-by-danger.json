@@ -1,0 +1,61 @@
+{
+ "kind": "attack-danger",
+ "games": 2000,
+ "arm": null,
+ "deck": null,
+ "counts": {
+  "3 declarations": 20381,
+  "3 attackers": 43245,
+  "3 at_top": 20668,
+  "3 all_at_top": 10511,
+  "3 none_at_top": 9722,
+  "3 attackers_seat_lost": 27211,
+  "3 at_winner": 6603,
+  "ties": 2618,
+  "else declarations": 12144,
+  "else attackers": 31326,
+  "else gap 1-4": 3978,
+  "else attacked_lower_life": 10669,
+  "else attacked_lowest_life": 8867,
+  "else top_no_blocker": 2365,
+  "else top_fewer_blockers": 5169,
+  "else top_as_many_blockers": 3147,
+  "else top_more_blockers": 3828,
+  "else sure_at_top_at_least": 8752,
+  "else sure_at_top_at_least gap5": 5786,
+  "else gap 5-9": 2731,
+  "else gap 10-19": 2920,
+  "2 declarations": 5501,
+  "2 attackers": 20376,
+  "2 at_top": 10877,
+  "2 all_at_top": 2952,
+  "2 none_at_top": 2422,
+  "else gap 20+": 2515,
+  "2 attackers_seat_lost": 7256,
+  "2 at_winner": 2374
+ },
+ "by_round": {
+  "1-4": {
+   "attackers": 3129,
+   "at_top": 2299,
+   "chance": 1043.000000000026
+  },
+  "5-8": {
+   "attackers": 29770,
+   "at_top": 15282,
+   "chance": 10503.666666666826
+  },
+  "9-12": {
+   "attackers": 24193,
+   "at_top": 10654,
+   "chance": 10050.333333333272
+  },
+  "13+": {
+   "attackers": 6529,
+   "at_top": 3310,
+   "chance": 3006.000000000001
+  }
+ },
+ "run": "ab-run #45 (run id 44801095534, commit 772c943, harness 0.4.0, seed 20261380): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook",
+ "counted": "2026-11-21 (docs/agents/attack_danger.py): every seat's attack declarations with two or three opponents alive; danger = life + 2 x nonland permanents at the start of the turn"
+}

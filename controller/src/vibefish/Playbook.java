@@ -32,7 +32,17 @@ public final class Playbook {
      *  next turn and keeping them home prevents that; a sure kill's attackers are never taken back, and an attack
      *  stands when nothing kept home would save the seat. {@code "guard": "table"} asks the same of the opponents
      *  one after another (what each is sure to get through, summed), and falls back to the one-opponent question
-     *  when nothing kept home answers that. */
+     *  when nothing kept home answers that. With {@code "aim": "danger"} (since 0.4.5), before any of that, the
+     *  attackers the policy sent at a player are sent at the opponent that looks most dangerous instead (life and
+     *  nonland permanents by the weights of {@code cast.danger}), when that opponent is ahead of the one attacked
+     *  by at least {@code aim_margin} and the attack is no worse there by what can be counted on the table: the
+     *  damage sure to get through whatever is blocked is at least what it was, no more creatures there could
+     *  block the attackers, and no attacker meets a blocker that would kill it unless it met one where it was
+     *  sent. An attack that is sure to kill its target stays.
+     *  With {@code "open": true} (since 0.4.5), after the aim, the creatures that stayed home attack an opponent
+     *  that has no creature that can block, the most dangerous such opponent first: those that deal damage, have
+     *  no ability that taps them (or have vigilance) and are not wanted home by Forge's own judgement of the
+     *  seat's defence; a weaker opponent is not killed this way while a more dangerous one lives. */
     public static final class Attack {
         public final String policy;        // go_wide | pressure | forge
         public final boolean finish;       // take a kill no block prevents
@@ -40,6 +50,9 @@ public final class Playbook {
         public final boolean guard;        // take attackers back when the attack leaves the seat dead on board to one opponent
         public final boolean guardTable;   // ... or to the opponents one after another
         public final int guardMargin;      // ... counting the seat as dead this much life early
+        public final boolean aimDanger;    // send the declared attack at the most dangerous opponent when it is no worse there
+        public final int aimMargin;        // ... and that opponent is ahead of the one attacked by at least this much
+        public final boolean open;         // creatures left home attack an opponent that cannot block, when not needed at home
         public final String target;        // lowest_life | weakest_board | highest_life | biggest_board
         public final int minAttackers;     // fewer than this: Forge decides
         public final int safetyMargin;     // life to keep above the strongest opponent's possible attack
@@ -71,6 +84,13 @@ public final class Playbook {
             guard = grd != null;
             guardTable = "table".equals(grd);
             guardMargin = num(o, "guard_margin", 0);
+            String aim = str(o, "aim", "");
+            if (!aim.isEmpty() && !"danger".equals(aim)) {
+                throw new IllegalArgumentException("playbook attack aim must be \"danger\"");
+            }
+            aimDanger = "danger".equals(aim);
+            aimMargin = num(o, "aim_margin", 5);
+            open = o.has("open") && o.get("open").isJsonPrimitive() && o.get("open").getAsBoolean();
             target = str(o, "target", "lowest_life");
             if (!List.of("lowest_life", "weakest_board", "highest_life", "biggest_board").contains(target)) {
                 throw new IllegalArgumentException("playbook attack target must be lowest_life, weakest_board, highest_life or biggest_board");
@@ -545,6 +565,8 @@ public final class Playbook {
                   .append(" min=").append(attack.minAttackers).append(" margin=").append(attack.safetyMargin).append(" reserve<=").append(attack.maxReserve)
                   .append(attack.spread ? " spread" : "").append("pressure".equals(attack.policy) ? " damage/loss>=" + attack.damagePerLoss : "");
             }
+            sb.append(attack.aimDanger ? ", aimed at the most dangerous opponent when no worse there (margin " + attack.aimMargin + ")" : "");
+            sb.append(attack.open ? ", idle creatures attack an open board" : "");
             sb.append(attack.finish ? (attack.finishLeader ? ", takes a sure kill of the most dangerous opponent" : ", takes a sure kill") : "");
             sb.append(attack.guard ? (attack.guardTable ? ", keeps attackers home against the table's lethal answer" : ", keeps attackers home against one opponent's lethal answer") : "");
         }

@@ -42,8 +42,11 @@ What is counted, per seat:
                      one flying commander).
   an open board not attacked
                      A turn on which some opponent had no creature that could block and the seat had a creature
-                     that could attack that opponent: did anything attack that opponent? Not a mistake by itself
-                     (the creature may be wanted at home); the share says how a table uses free damage.
+                     that could attack that opponent: did anything attack that opponent, did the seat attack only
+                     opponents that could block, or nobody? Not a mistake by itself (the creature may be wanted at
+                     home); the shares say how a table uses free damage. Forge's AI weighs an attack against one
+                     opponent, so a creature it will not send into that opponent's blockers stays home whoever
+                     else is open; a playbook's `"open": true` on its attack is the hook for it (harness 0.4.5).
   attacks            Of the turns on which the seat had a creature that could attack someone, the share on which it
                      attacked, and the share of the damage it could have sent that it did send.
 """
@@ -69,7 +72,7 @@ def run_files(roots, arm):
 KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent',
         'kill_turns', 'kill_taken', 'kill_other', 'kill_missed', 'kill_missed_no_attack', 'kill_missed_short', 'kill_missed_then_lost', 'kill_missed_then_won',
         'kill_last_turns', 'kill_last_missed', 'kill_top_turns', 'kill_top_missed', 'kill_lesser_turns', 'kill_lesser_missed',
-        'open_turns', 'open_attacked',
+        'open_turns', 'open_attacked', 'open_elsewhere',
         'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths')
 
 
@@ -137,6 +140,8 @@ def close_turn(G, label, turn, lost_at, examples, where):
             g['open_turns'] += 1
             if any(turn['attacks'].get(d['seat']) for d in open_def):
                 g['open_attacked'] += 1
+            elif any(turn['attacks'].values()):
+                g['open_elsewhere'] += 1                # it attacked, and only opponents that could block
     for b in turn['blocks']:
         d = b.get('seat')
         if d is None or 'incoming' not in b:
@@ -258,12 +263,14 @@ def render(G, games, old, examples, show):
     for n in names:
         g = G[n]
         out.append(f'  {n:{w}} {g["attacked_lethal"]:>15} {g["combat_deaths"]:>6} {g["block_not_made"]:>17} {g["died_tapped_out"]:>11} {g["commander_deaths"]:>17}')
-    out += ['', 'ATTACKS: turns with a creature that could attack; attacked; the damage sent of the damage that could be; turns with an opponent who could not block: attacked it',
-            f'  {"":{w}} {"turns":>7} {"attacked":>9} {"damage sent":>12} {"open board":>11} {"attacked it":>12}']
+    out += ['', 'ATTACKS: turns with a creature that could attack; attacked; the damage sent of the damage that could be; turns with an opponent who could not block: '
+            'attacked it, attacked only opponents that could block, attacked nobody',
+            f'  {"":{w}} {"turns":>7} {"attacked":>9} {"damage sent":>12} {"open board":>11} {"attacked it":>12} {"another":>8} {"nobody":>7}']
     for n in names:
         g = G[n]
         out.append(f'  {n:{w}} {g["turns_able"]:>7} {pct(g["turns_attacked"], g["turns_able"]):>9} {pct(g["power_sent"], g["power_able"]):>12} '
-                   f'{g["open_turns"]:>11} {pct(g["open_attacked"], g["open_turns"]):>12}')
+                   f'{g["open_turns"]:>11} {pct(g["open_attacked"], g["open_turns"]):>12} {pct(g["open_elsewhere"], g["open_turns"]):>8} '
+                   f'{pct(g["open_turns"] - g["open_attacked"] - g["open_elsewhere"], g["open_turns"]):>7}')
     if show and examples:
         out += ['', f'KILLS NOT TAKEN, the first {min(show, len(examples))} (game, turn, deck: the opponent it could have killed, what it sent where)']
         for ex in examples[:show]:

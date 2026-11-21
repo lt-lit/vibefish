@@ -62,12 +62,15 @@ are that session's and have to be replaced by the new session's scratch director
   rule's wait moved from one group to the other. `leader.py DIR...`: which thing a table can see says who goes on to
   win (the seat with the most nonland permanents, the highest life, the most damage dealt, sums of them), turn by turn
   from the event logs; the default of an aim's judgement of danger comes from it (DESIGN §33).
-- `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--targets danger] [--block survive]
-  [--name NAME]`: a candidate that is a deck's shipped playbook with a hook on its attack (`{"policy": "forge", ...}`
-  for a playbook that leaves the attack to Forge), on its triggers' targets or on its blocks: `finish` (the kill no
-  block prevents, harness 0.4.0), `"finish": "leader"` (only from the most dangerous opponent down, 0.4.1), `guard`
-  (against dying tapped out to one opponent, or to the table, 0.4.1), `targets` (removal triggers aimed by danger,
-  0.4.2), `block` (the blocks that keep the seat alive, 0.4.3). Nothing else is changed.
+- `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--swing danger] [--open]
+  [--targets danger] [--block survive] [--name NAME]`: a candidate that is a deck's shipped playbook with a hook on
+  its attack (`{"policy": "forge", ...}` for a playbook that leaves the attack to Forge), on its triggers' targets or
+  on its blocks: `finish` (the kill no block prevents, harness 0.4.0), `"finish": "leader"` (only from the most
+  dangerous opponent down, 0.4.1), `guard` (against dying tapped out to one opponent, or to the table, 0.4.1),
+  `targets` (removal triggers aimed by danger, 0.4.2), `block` (the blocks that keep the seat alive, 0.4.3),
+  `--swing danger` (`"aim": "danger"` on the attack: the declared attack goes at the most dangerous opponent when it
+  is no worse there, 0.4.5) and `--open` (`"open": true`: creatures left home attack an opponent that cannot block,
+  0.4.5). Nothing else is changed.
 - Reading an exam of a hook that changes one decision (DESIGN §34): `first_difference.py EXAM_RESULTS_DIR VARIANT DECK...`
   reads the two games of every table side by side to the first event that differs and files the table by it: the same
   game to the end, the seat's own attack declaration (the hook's doing; filed further by whether the seat was sure to
@@ -83,7 +86,12 @@ are that session's and have to be replaced by the new session's scratch director
   and activated abilities by whether it was its own turn or another player's (the count behind "what the bots do on
   other players' turns", DESIGN §34). `aimed_at.py RUN_DIR...`: whose permanents a seat's spells, triggers and abilities
   are aimed at (the most dangerous opponent, the widest board, the lowest life, the eventual winner, each beside
-  chance), from the `target_ctrl` of the cast lines.
+  chance), from the `target_ctrl` of the cast lines. `attack_danger.py RUN_DIR... [--arm ARM] [--deck ID]`: the same
+  question for attackers, from the `combat` and `attack` lines: the share that goes at the most dangerous opponent
+  and at the eventual winner, and for the declarations that sent nothing at the most dangerous opponent what stood
+  where (who had the lower life, who had more creatures that could block, where more damage was sure to get
+  through). It is the count behind `"aim": "danger"` on an attack and, with `--deck` on the two arms of an exam, the
+  measure of what that hook changed.
 - `add_forge_rule.py DECK [--base FILE] [--name NAME] [--after commander|top|N] [--wait]`: a variant of a playbook with a
   `forge` rule put in mechanically (after the commander's rule unless told otherwise; `--wait` gives the rule
   `"wait": "main2"`). `playbook_check.sh [RUNTIME_DIR] [FILE...]` parses every playbook file with the harness's own
