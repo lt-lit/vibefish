@@ -41,8 +41,9 @@ def arm_line(name, a):
 def pair_line(name, p):
     a, b = name.split("_vs_")
     lo, hi = p["difference_ci95"]
+    exact = f"exact test {p['exact_p']:.4f}" if p.get('exact_p') is not None else "no discordant table"
     return (f"    {a} on {b}: {p['difference'] * 100:+.1f} points ({lo * 100:+.0f} to {hi * 100:+.0f}), "
-            f"{p[a + '_only']} against {p[b + '_only']} of the discordant tables, exact test {p['exact_p']:.4f}"
+            f"{p[a + '_only']} against {p[b + '_only']} of the discordant tables, {exact}"
             f" ({p['pairs']} pairs, {p['identical_outcomes']} with the same outcome)")
 
 

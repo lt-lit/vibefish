@@ -86,7 +86,8 @@ def main(argv):
         print(f"{d}: wins " + ', '.join(f"{arm} {row['wins'][arm]} of {row['games'][arm]}" for arm in arms))
         for b, c in pairs:
             p = row['pairs'][f'{b}:{c}']
-            print(f"    {c} on {b}: {p['difference'] * 100:+.1f} ({p['ci95'][0] * 100:+.0f} to {p['ci95'][1] * 100:+.0f}), only {c} {p['cand_only']}, only {b} {p['base_only']}, exact {p['exact_p']:.2f}"
+            ex = f"exact {p['exact_p']:.2f}" if p['exact_p'] is not None else "no discordant table"
+            print(f"    {c} on {b}: {p['difference'] * 100:+.1f} ({p['ci95'][0] * 100:+.0f} to {p['ci95'][1] * 100:+.0f}), only {c} {p['cand_only']}, only {b} {p['base_only']}, {ex}"
                   f"   {'behind by more than two tables' if row['wins'][c] < row['wins'][b] - 2 else 'level or ahead (within two tables)'}")
         for arm in arms:
             m = row['mistakes'][arm]
