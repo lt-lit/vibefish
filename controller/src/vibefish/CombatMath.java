@@ -186,6 +186,133 @@ final class CombatMath {
         return pairs;
     }
 
+    /**
+     * What a defender is left to take from these attackers under a blocking plan it could carry out: not the
+     * least that is sure to be stopped ({@link #through}) and not the most ({@code mostStopped} with a defender),
+     * but a plan. An attacker one creature may stop is stopped whole by one blocker; one that needs two blockers
+     * by two; a trampler loses the toughness of each creature put in front of it (one damage a blocker if it has
+     * deathtouch). Blockers are handed out one at a time to wherever a blocker prevents most, a commander whose
+     * damage would be lethal by itself before anything else, and a blocker few attackers can be blocked by is
+     * kept for those. The plan need not be the best one, so the damage returned can be more than the defender
+     * would have to take, never less than a real set of blocks leaves. The second element is 1 when a commander
+     * is left dealing lethal commander damage under the plan.
+     */
+    static int[] plannedLeft(List<Card> attackers, List<Card> blockers, Player defender) {
+        int n = attackers.size();
+        int[] left = new int[n];
+        boolean[] single = new boolean[n];
+        boolean[] dbl = new boolean[n];
+        boolean[] trample = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            Card a = attackers.get(i);
+            left[i] = strikes(a);
+            trample[i] = a.hasKeyword(Keyword.TRAMPLE);
+            single[i] = CombatUtil.canAttackerBeBlockedWithAmount(a, 1, defender);
+            dbl[i] = !single[i] && CombatUtil.canAttackerBeBlockedWithAmount(a, 2, defender);
+        }
+        List<Card> spare = new ArrayList<>(blockers);
+        boolean[][] can = new boolean[n][blockers.size()];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < blockers.size(); j++) {
+                can[i][j] = CombatUtil.canBlock(attackers.get(i), blockers.get(j), false);
+            }
+        }
+        boolean[] used = new boolean[blockers.size()];
+        while (true) {
+            double bestRatio = 0;
+            int bestA = -1;
+            int b1 = -1;
+            int b2 = -1;
+            int bestGain = 0;
+            for (int i = 0; i < n; i++) {
+                if (left[i] <= 0) {
+                    continue;
+                }
+                Card a = attackers.get(i);
+                boolean lethalCmd = a.isCommander() && defender.getCommanderDamage(a) + left[i] >= 21;
+                // the free blockers that may block it, the one fewest other attackers need first
+                int first = -1;
+                int second = -1;
+                int firstUse = Integer.MAX_VALUE;
+                int secondUse = Integer.MAX_VALUE;
+                for (int j = 0; j < blockers.size(); j++) {
+                    if (used[j] || !can[i][j]) {
+                        continue;
+                    }
+                    int use = 0;
+                    for (int k = 0; k < n; k++) {
+                        use += k != i && left[k] > 0 && can[k][j] ? 1 : 0;
+                    }
+                    if (trample[i]) {                   // a trampler wants the toughest blocker, not the least needed
+                        use = -soak(a, blockers.get(j));
+                    }
+                    if (use < firstUse) {
+                        second = first;
+                        secondUse = firstUse;
+                        first = j;
+                        firstUse = use;
+                    } else if (use < secondUse) {
+                        second = j;
+                        secondUse = use;
+                    }
+                }
+                if (first < 0) {
+                    continue;
+                }
+                int gain;
+                int cost;
+                int two = -1;
+                if (trample[i]) {
+                    gain = Math.min(left[i], soak(a, blockers.get(first)));
+                    cost = 1;
+                } else if (single[i]) {
+                    gain = left[i];
+                    cost = 1;
+                } else if (dbl[i] && second >= 0) {
+                    gain = left[i];
+                    cost = 2;
+                    two = second;
+                } else {
+                    continue;
+                }
+                double ratio = (double) gain / cost + (lethalCmd ? 1e6 : 0);
+                if (gain > 0 && ratio > bestRatio) {
+                    bestRatio = ratio;
+                    bestA = i;
+                    b1 = first;
+                    b2 = two;
+                    bestGain = gain;
+                }
+            }
+            if (bestA < 0) {
+                break;
+            }
+            used[b1] = true;
+            if (b2 >= 0) {
+                used[b2] = true;
+            }
+            left[bestA] -= bestGain;
+        }
+        int total = 0;
+        int cmd = 0;
+        for (int i = 0; i < n; i++) {
+            total += left[i];
+            Card a = attackers.get(i);
+            if (left[i] > 0 && a.isCommander() && defender.getCommanderDamage(a) + left[i] >= 21) {
+                cmd = 1;
+            }
+        }
+        return new int[] {total, cmd};
+    }
+
+    /** The trample damage a blocker takes off an attacker: its toughness less the damage on it, one if the attacker has deathtouch. */
+    private static int soak(Card attacker, Card blocker) {
+        if (attacker.hasKeyword(Keyword.DEATHTOUCH)) {
+            return 1;
+        }
+        return Math.max(1, blocker.getNetToughness() - blocker.getDamage());
+    }
+
     /** The creatures of {@code o} that may attack {@code target} on {@code o}'s next turn (Forge's own rule for it). */
     static List<Card> nextTurnAttackers(Player o, Player target) {
         List<Card> l = new ArrayList<>();

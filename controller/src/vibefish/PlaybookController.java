@@ -433,7 +433,7 @@ public class PlaybookController extends PlayerControllerAi {
         for (Player opp : threats) {
             theirs.put(opp, CombatMath.nextTurnAttackers(opp, me));
         }
-        int life = me.getLife();
+        int life = me.getLife() - Math.max(0, playbook.attack.guardMargin);   // dead this much early: life falls between an attack and the answer
         boolean table = playbook.attack.guardTable;
         if (answer(theirs, home, table) < life) {
             return;                                     // nobody (or, for the table, not all of them together) is sure to kill the seat
@@ -504,24 +504,32 @@ public class PlaybookController extends PlayerControllerAi {
         if (combat.getAttackers().isEmpty()) {
             count("attack_guard_all", 1);               // nothing attacks after all
         }
-        trace("keeps " + back.size() + " of " + before.size() + " attacker(s) home: at " + life + " life, "
-                + (sum ? "the opponents in turn were" : "one opponent was") + " sure of " + was + " through what stayed home, now " + now);
+        trace("keeps " + back.size() + " of " + before.size() + " attacker(s) home: at " + me.getLife() + " life"
+                + (playbook.attack.guardMargin > 0 ? " (less a margin of " + playbook.attack.guardMargin + ")" : "") + ", "
+                + (sum ? "the opponents in turn" : "one opponent") + " would get " + (was >= LETHAL ? "a commander's lethal damage" : String.valueOf(was))
+                + " through what stayed home, now " + now);
     }
 
     /**
-     * What these opponents are sure to get through these blockers on their next turns: the most any one of them
-     * is, or with {@code sum} all of them one after another (each against the same blockers).
+     * What these opponents get through these blockers on their next turns under a blocking plan the seat could
+     * carry out ({@code CombatMath.plannedLeft}, since 0.4.4; before that what they were sure to get through
+     * whatever the seat blocked, which left trample, menace and commander damage out and saw one death in twelve
+     * coming): the most any one of them does, or with {@code sum} all of them one after another (each against
+     * the same blockers).
      */
-    private static int answer(Map<Player, List<Card>> theirs, List<Card> home, boolean sum) {
+    private int answer(Map<Player, List<Card>> theirs, List<Card> home, boolean sum) {
         int worst = 0;
         int total = 0;
         for (List<Card> at : theirs.values()) {
-            int t = CombatMath.through(at, home);
+            int[] plan = CombatMath.plannedLeft(at, home, player);
+            int t = plan[1] != 0 ? LETHAL : plan[0];    // a commander's lethal damage is lethal whatever the life
             worst = Math.max(worst, t);
-            total += t;
+            total = Math.min(LETHAL, total + t);
         }
         return sum ? total : worst;
     }
+
+    private static final int LETHAL = 1_000_000;
 
     /** Attack the chosen opponent with every creature the reserve does not need. True when the policy declared. */
     private boolean goWide(Player attacker, Combat combat, Playbook.Attack policy) {

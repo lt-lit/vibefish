@@ -115,26 +115,29 @@ dangerous one lives. The last opponent left is always the most dangerous one. Ev
 (`"any"` is another spelling of `true`). One more counter: `attack_kill_left`, a turn on which a sure kill of a
 lesser opponent was there and was left alone.
 
-`"guard": true` (harness 0.4.1), on any policy and after `finish`, does not tap out into a lethal answer. For each
-opponent the attack as declared is not sure to kill, the seat asks whether that opponent, alone, with every creature
-that may attack on its next turn, is sure to get the seat's life in damage through the creatures that would be
-untapped at home (the same arithmetic as `finish`, from the other side: one blocker an attacker, nothing credited
-for trample or for an attacker that needs two blockers, so it errs to the side of not acting). If one is, and if
-keeping attackers home changes that, attackers are taken back one at a time, each time the one whose staying home
-lowers the threat most and among equals the one that deals least, until no single opponent is sure to kill the
-seat. The attackers of a kill the attack is sure of are never taken back; an attack that leaves the seat dead on
-board whatever stays home stands as declared (the race is all there is); and if what is left is not a legal attack
-the declaration is put back. It was built from a count: at the owner's table one death in six in combat comes with
-the seat's own tapped creatures able to have prevented it, and in 500 of those 686 deaths the seat had attacked on
-its own turn before (`runner/mistakes.py`, `DESIGN.md` §34).
+`"guard": true`, on any policy and after `finish`, does not tap out into a lethal answer. For each opponent the
+attack as declared is not sure to kill, the seat asks what that opponent, alone, with every creature that may attack
+on its next turn, would get through the creatures that would be untapped at home, under a blocking plan the seat
+could carry out: an attacker one creature may stop is stopped whole by one blocker, one that needs two by two, a
+trampler loses the toughness of each creature put in front of it, and blockers go where each prevents most, a
+commander whose damage would be lethal by itself first (`CombatMath.plannedLeft`). If that is at least the seat's
+life, or a commander's lethal damage gets through, and keeping attackers home changes it, attackers are taken back
+one at a time, each time the one whose staying home lowers the threat most and among equals the one that deals
+least, until no single opponent kills the seat. The attackers of a kill the attack is sure of are never taken back;
+an attack that leaves the seat dead on board whatever stays home stands as declared (the race is all there is); and
+if what is left is not a legal attack the declaration is put back. `"guard_margin": N` counts the seat as dead N
+life early: between an attack and the answer a seat's life often falls and the opponent's board often grows. It was
+built from a count: at the owner's table one death in six in combat comes with the seat's own tapped creatures able
+to have prevented it, most of them after the seat's own attack (`runner/mistakes.py`, `DESIGN.md` §34).
 
-`"guard": "table"` asks the wider question first: are the opponents one after another sure to get the seat's life
-in damage through what stays home (what each is sure of against the same blockers, summed)? In 300 of those 500
-deaths the killer's creatures alone had the power for it when the seat declared its attack; in most of the others
-the seat's life had fallen before it blocked (another opponent's attack, a drain, a payment of its own), which one
-opponent's board does not show.
-When nothing kept home holds the whole table off, the one-opponent question is asked instead. (`"one"` is another
-spelling of `true`.)
+This is the guard's second arithmetic (harness 0.4.4). The first (0.4.1 to 0.4.3, the one `ab-run` #46 played)
+asked what the opponent was sure to get through whatever the seat blocked: a lower bound that counts a trampler or
+a creature with menace as stopped by one blocker and knows no commander damage. Replayed on 125 deaths it was built
+for, it changed the attack before the death on six.
+
+`"guard": "table"` asks the wider question first: do the opponents one after another get the seat's life in damage
+through what stays home (each against the same blockers, summed)? When nothing kept home holds the whole table off,
+the one-opponent question is asked instead. (`"one"` is another spelling of `true`.)
 
 Counters: `attack_guard_seen` (the declared attack left the seat open by the question asked), `attack_guard`
 (attackers were taken back and it is not any more), `attack_guard_back` (how many), `attack_guard_single` (asked for

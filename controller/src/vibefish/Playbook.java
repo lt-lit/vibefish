@@ -39,6 +39,7 @@ public final class Playbook {
         public final boolean finishLeader; // ... only from the most dangerous opponent down
         public final boolean guard;        // take attackers back when the attack leaves the seat dead on board to one opponent
         public final boolean guardTable;   // ... or to the opponents one after another
+        public final int guardMargin;      // ... counting the seat as dead this much life early
         public final String target;        // lowest_life | weakest_board | highest_life | biggest_board
         public final int minAttackers;     // fewer than this: Forge decides
         public final int safetyMargin;     // life to keep above the strongest opponent's possible attack
@@ -69,6 +70,7 @@ public final class Playbook {
             }
             guard = grd != null;
             guardTable = "table".equals(grd);
+            guardMargin = num(o, "guard_margin", 0);
             target = str(o, "target", "lowest_life");
             if (!List.of("lowest_life", "weakest_board", "highest_life", "biggest_board").contains(target)) {
                 throw new IllegalArgumentException("playbook attack target must be lowest_life, weakest_board, highest_life or biggest_board");
