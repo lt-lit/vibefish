@@ -1,7 +1,7 @@
 {
-  "requested": "2026-11-21T10:35Z",
-  "note": "Blight Curse's unused engine, corrected (DESIGN §34, harness 0.4.10): the shipped playbook with Devoted Druid's untap just below the commander and, after every other rule, Nesting Grounds moving a -1/-1 counter from a creature of ours onto an opponent's creature and Ifnir Deadlands (playbook/variants/blight-curse-engine.json). It replaces the candidate of ab-run #53 (blight-curse@counters), whose four rules sat above the commander by a slip and whose Nesting Grounds rule took counters off creatures the deck puts them on on purpose (Tree of Perdition before its exchange); this file leaves those creatures alone (own_except). Playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 200 games in 5 shard jobs.",
-  "decks": "blight-curse@engine",
+  "requested": "2026-11-21T10:42Z",
+  "note": "Biomass Mutation after blocks, with the mana kept only once the deck's own plays are made (DESIGN §34, harness 0.4.10): Mutant Menace's shipped playbook with a keep rule below its wipes, mana, commander and counter engines (card in hand, three creatures able to attack, seven mana, at least as much power as the strongest opposing board) and the card cast after blocks when two attackers or more are unblocked (playbook/variants/mutant-menace-finisher.json). It replaces the candidate mutant-menace@mutation of ab-run #52, whose keep rule sat above everything, so that on a turn it fired the deck cast neither its commander nor its wipes before combat. Playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 200 games in 5 shard jobs.",
+  "decks": "mutant-menace@finisher",
   "games": "200",
   "arms": "playbook",
   "seed": "20261390",

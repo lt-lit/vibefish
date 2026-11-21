@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""deck_exam.py BASE_RUN_DIR CAND_RUN_DIR --deck ID [--card NAME]... [--ability 'CARD|TEXT']... [--counters PREFIX,...]
-[--arm playbook] [--json OUT]: one deck's own candidate beside its shipped playbook on the same tables. A session helper.
+"""deck_exam.py BASE_RUN_DIR CAND_RUN_DIR --deck ID [--card NAME]... [--ready 'NAME|LANDS|CREATURES']...
+[--ability 'CARD|TEXT']... [--counters PREFIX,...] [--arm playbook] [--json OUT]: one deck's own candidate beside its
+shipped playbook on the same tables. A session helper.
 
 For the exam of a candidate that is one deck's rules (a card no pilot cast, an ability never used): the two run
 directories are the merged shards of the base arm and of the candidate (docs/agents/shards.sh), paired by table. It
 prints the wins of the seat under test on the tables both hold, the discordant tables with the exact (sign) test, the
 length of the games, and what the candidate was written for: for each --card the games it was in the seat's hand at the
-start of one of its turns and the games it was cast in, in each arm; for each --ability the times the seat used an
+start of one of its turns and the games it was cast in, in each arm; for each --ready the games in which the seat held
+NAME at the start of one of its turns with at least LANDS lands and CREATURES creatures, and how many of those it cast
+it in (a finisher is judged by the games that offered it); for each --ability the times the seat used an
 ability of CARD whose logged text contains TEXT; and with --counters the seat's playbook counters with those prefixes
 (games played on harness 0.4.0 or later carry them for each seat).
 """
@@ -46,7 +49,7 @@ def exact(a, b):
     return min(1.0, 2 * p)
 
 
-def arm_stats(gs, tables, cards, abilities, prefixes):
+def arm_stats(gs, tables, cards, abilities, prefixes, ready=()):
     C = collections.Counter()
     for t in tables:
         run, g, seat, evf = gs[t]
@@ -58,13 +61,18 @@ def arm_stats(gs, tables, cards, abilities, prefixes):
         for k, v in st.items():
             if any(k.startswith(p) for p in prefixes):
                 C['counter ' + k] += v
-        held = set(); cast = set()
+        held = set(); cast = set(); offered = set()
+        names = set(cards) | {r[0] for r in ready}
         for e in read(evf):
             if e['e'] == 'turn' and e['seat'] == seat:
-                hand = next(s for s in e['state'] if s['seat'] == seat)['hand']
+                me = next(s for s in e['state'] if s['seat'] == seat)
+                hand = me['hand']
                 held.update(c for c in cards if c in hand)
+                for name, lands, creatures in ready:
+                    if name in hand and me['lands'] >= lands and (me.get('creatures') or 0) >= creatures:
+                        offered.add(name)
             elif e['e'] == 'cast' and e.get('seat') == seat:
-                if e.get('spell') and e.get('card') in cards:
+                if e.get('spell') and e.get('card') in names:
                     cast.add(e['card'])
                 elif not e.get('spell'):
                     for card, text in abilities:
@@ -73,6 +81,9 @@ def arm_stats(gs, tables, cards, abilities, prefixes):
         for c in cards:
             C['held ' + c] += c in held or c in cast
             C['cast ' + c] += c in cast
+        for name, lands, creatures in ready:
+            C['offered ' + name] += name in offered
+            C['offered and cast ' + name] += name in offered and name in cast
     return C
 
 
@@ -81,6 +92,7 @@ def main(argv):
     ap.add_argument('base'); ap.add_argument('cand')
     ap.add_argument('--deck', required=True)
     ap.add_argument('--card', action='append', default=[])
+    ap.add_argument('--ready', action='append', default=[])
     ap.add_argument('--ability', action='append', default=[])
     ap.add_argument('--counters', default='')
     ap.add_argument('--arm', default='playbook')
@@ -88,6 +100,7 @@ def main(argv):
     a = ap.parse_args(argv)
     abilities = [tuple(x.split('|', 1)) for x in a.ability]
     prefixes = [p for p in a.counters.split(',') if p]
+    ready = [(n, int(l), int(c)) for n, l, c in (x.split('|') for x in a.ready)]
     b, c = games(a.base, a.deck, a.arm), games(a.cand, a.deck, a.arm)
     tables = sorted(set(b) & set(c))
     if not tables:
@@ -95,13 +108,15 @@ def main(argv):
     won = lambda gs, t: bool(next(p for p in gs[t][1]['players'] if p['seat'] == gs[t][2]).get('won'))
     only_c = sum(1 for t in tables if won(c, t) and not won(b, t)); only_b = sum(1 for t in tables if won(b, t) and not won(c, t))
     both = sum(1 for t in tables if won(b, t) and won(c, t))
-    B, K = arm_stats(b, tables, a.card, abilities, prefixes), arm_stats(c, tables, a.card, abilities, prefixes)
+    B, K = arm_stats(b, tables, a.card, abilities, prefixes, ready), arm_stats(c, tables, a.card, abilities, prefixes, ready)
     n = len(tables)
     print(f'{a.deck}: {n} tables in both ({len(b)} base, {len(c)} candidate)')
     print(f'  wins: shipped {B["wins"]}, candidate {K["wins"]} ({100 * (K["wins"] - B["wins"]) / n:+.1f} points); only the candidate {only_c}, only the shipped playbook {only_b}, both {both}; exact test {exact(only_c, only_b):.3f}')
     print(f'  game length: shipped {B["turns"] / n:.1f} turns, candidate {K["turns"] / n:.1f}')
     for card in a.card:
         print(f'  {card}: shipped cast in {B["cast " + card]} of {B["held " + card]} games it was held, candidate {K["cast " + card]} of {K["held " + card]}')
+    for name, lands, creatures in ready:
+        print(f'  {name}, held with {lands} lands and {creatures} creatures: shipped cast it in {B["offered and cast " + name]} of {B["offered " + name]} such games, candidate {K["offered and cast " + name]} of {K["offered " + name]}')
     for card, text in abilities:
         k = f'ability {card}|{text}'
         print(f'  {card} ("{text}"): used {B[k]} times under the shipped playbook, {K[k]} under the candidate')
