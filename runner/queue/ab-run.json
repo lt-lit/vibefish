@@ -1,7 +1,7 @@
 {
-  "requested": "2026-11-21T08:40Z",
-  "note": "Rules in the seat's own combat (DESIGN §34, harness 0.4.7): Deadly Disguise under its shipped playbook with its commander's ability switched on (playbook/variants/deadly-disguise-kaust.json: on a turn Kaust, Eyes of the Glade could be tapped, a face-down creature attacks and Kaust stays home; after blocks a rule taps Kaust to turn a face-down attacker face up, an unblocked one first). Forge's AI used that ability 8 times in the baseline's 200 games; in replays of eight baseline tables the rule used it 15 times. Playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 200 games in 5 shard jobs.",
-  "decks": "deadly-disguise@kaust",
+  "requested": "2026-11-21T09:26Z",
+  "note": "Plays after blocks (DESIGN §34, harness 0.4.8), each on one deck's shipped playbook: Veloci-Ramp-Tor with Kessig Wolf Run as a mana sink (playbook/variants/veloci-ramp-tor-run.json: after blocks, all the mana that is left into an attacker nobody blocked, three at least) and Mutant Menace with Biomass Mutation as a finisher (playbook/variants/mutant-menace-mutation.json: with the card in hand, three creatures able to attack and seven mana, the seat keeps its mana through its first main phase and casts it after blocks when two attackers or more are unblocked). In the baseline Kessig Wolf Run was used 18 times in 200 games and Biomass Mutation cast in 4 of the 59 games it was drawn. Playbook arms only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 400 games in 10 shard jobs.",
+  "decks": "veloci-ramp-tor@run,mutant-menace@mutation",
   "games": "200",
   "arms": "playbook",
   "seed": "20261390",
