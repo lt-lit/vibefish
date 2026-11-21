@@ -201,7 +201,9 @@ NAMED = re.compile(r'^.{1,80}? \(\d+\): ')     # Forge writes some triggers as "
 def is_activation(text):
     """True for the text of an activated ability as the logs carry it, false for a trigger's (either way Forge writes one)."""
     text = NAMED.sub('', text or '', count=1)
-    return bool(ACTIVATION.match(text)) and not re.match(r'^(When|Whenever|At) ', text)
+    if re.match(r'^(When|Whenever|At) ', text):
+        return False
+    return bool(ACTIVATION.match(text)) or text.startswith('Equip')     # "Equip {2} . This ability costs ..." has no colon before its first full stop
 
 
 def activated_abilities(card):
