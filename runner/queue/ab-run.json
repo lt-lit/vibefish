@@ -1,7 +1,7 @@
 {
-  "requested": "2026-11-21T10:42Z",
-  "note": "Biomass Mutation after blocks, with the mana kept only once the deck's own plays are made (DESIGN §34, harness 0.4.10): Mutant Menace's shipped playbook with a keep rule below its wipes, mana, commander and counter engines (card in hand, three creatures able to attack, seven mana, at least as much power as the strongest opposing board) and the card cast after blocks when two attackers or more are unblocked (playbook/variants/mutant-menace-finisher.json). It replaces the candidate mutant-menace@mutation of ab-run #52, whose keep rule sat above everything, so that on a turn it fired the deck cast neither its commander nor its wipes before combat. Playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 200 games in 5 shard jobs.",
-  "decks": "mutant-menace@finisher",
+  "requested": "2026-11-21T17:15Z",
+  "note": "Miracle Worker's endless copy chain, capped (DESIGN §34). Its shipped playbook says yes to Ondu Spiritdancer's optional copy every time; with Secret Arcade unlocked the Spiritdancer copies itself, the copy does the same, and the game ends on the clock or in a draw: 22 of the 25 games without a winner in the 2,000 games of ab-run #46's shipped arms, and a sixth of their play time. playbook/variants/miracle-worker-cap.json accepts the copy while the seat controls at most 20 Kor and declines it after. Playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks as they were for #46: this run is queued before anything ships from #46 to #55), whose shipped arm is the base. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 200 games in 5 shard jobs.",
+  "decks": "miracle-worker@cap",
   "games": "200",
   "arms": "playbook",
   "seed": "20261390",

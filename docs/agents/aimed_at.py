@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""aimed_at.py RUN_DIR... [--arm ARM] [--deck ID]: whose permanents a seat's spells and abilities are aimed at. A session helper.
+"""aimed_at.py RUN_DIR... [--arm ARM] [--deck ID | --focus] [--json OUT]: whose permanents a seat's spells and abilities are aimed at. A session helper.
 
 From the `cast` lines of harness 0.4.0 or later, which name the seat that controls each target (`target_ctrl`): every cast with a
 target an opponent controls, split into spells, triggered abilities and activated abilities, and for each the share that goes at
 the opponent that looks most dangerous at the start of that turn (life + 2 x nonland permanents, DESIGN.md §33), at the opponent
 with the most nonland permanents, at the one with the lowest life, and at the player who goes on to win, each beside what aiming
 at a random opponent alive would give. Casts with two or three opponents alive only (with one there is nothing to choose).
-A cast with targets of several opponents counts once for each of them.
+A cast with targets of several opponents counts once for each of them. --focus counts, in each run directory, only the seat
+under test of that run (the deck its ab.json names), so the arms of an exam of several decks can be read together.
 """
 import argparse, collections, glob, gzip, json, os, sys
 
@@ -16,10 +17,15 @@ def main(argv):
     ap.add_argument('run_dirs', nargs='+')
     ap.add_argument('--arm')
     ap.add_argument('--deck', help="count this deck's seats only")
+    ap.add_argument('--focus', action='store_true', help="in each run directory, count only the deck its ab.json names")
+    ap.add_argument('--json')
     a = ap.parse_args(argv)
     C = collections.defaultdict(collections.Counter)
     games = 0
     for root in a.run_dirs:
+        only = a.deck
+        if a.focus:
+            only = json.load(open(os.path.join(root, 'ab.json')))['deck']
         for rj in sorted(glob.glob(os.path.join(root, '**', 'run.json'), recursive=True)):
             if a.arm and f'{os.sep}arm-{a.arm}{os.sep}' not in rj:
                 continue
@@ -46,7 +52,7 @@ def main(argv):
                             state = {s['seat']: s for s in e.get('state') or []}
                         elif e['e'] == 'cast' and e.get('target_ctrl') and e.get('seat') is not None:
                             s = e['seat']
-                            if a.deck and ids.get(s) != a.deck:
+                            if only and ids.get(s) != only:
                                 continue
                             opps = [x for x in state.values() if x['seat'] != s and x.get('alive')]
                             if len(opps) < 2:
@@ -81,6 +87,8 @@ def main(argv):
             continue
         pc = lambda x, n: f"{100 * x / n:.0f}%" if n else '-'
         print(f"  {name:10} {k['n']:>7} {pc(k['danger'], k['n']):>15} {pc(k['widest'], k['n']):>13} {pc(k['lowest_life'], k['n']):>12} {pc(k['chance'], k['n']):>7}   {pc(k['winner'], k['n_lost']):>52} {pc(k['winner_chance'], k['n_lost']):>7}")
+    if a.json:
+        json.dump({'kind': 'aimed-at', 'games': games, 'counts': {k: dict(v) for k, v in C.items()}}, open(a.json, 'w'), indent=1)
     return 0
 
 
