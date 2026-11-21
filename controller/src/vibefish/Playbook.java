@@ -81,6 +81,22 @@ public final class Playbook {
         }
     }
 
+    /**
+     * Blocks. {@code "survive": true}: Forge's AI declares the seat's blocks; when they leave at least the seat's
+     * life in damage unblocked and blocks exist that would not (one blocker an attacker, by Forge's own rules
+     * for who may block whom; an attacker that tramples or needs two blockers is not counted as stopped), blocks
+     * are added, the least valuable free creatures in front of the heaviest unblocked attackers and only as many
+     * as it takes for the seat to live. When adding to Forge's blocks is not enough and a different set of blocks
+     * would be, the seat's blocks are declared anew that way. Everything else about blocking stays Forge's.
+     */
+    public static final class Block {
+        public final boolean survive;
+
+        Block(JsonObject o) {
+            survive = o.has("survive") && o.get("survive").isJsonPrimitive() && o.get("survive").getAsBoolean();
+        }
+    }
+
     /** Mulligan rule: keep a hand whose land count is within the range; never mulligan past {@code maxMulligans}. */
     public static final class Mulligan {
         public final int minLands;
@@ -459,6 +475,8 @@ public final class Playbook {
     public final Cast cast;
     public final Targets targets;               // null when the playbook has none
     public final JsonElement targetsSource;     // as written, recorded in run.json (null when none)
+    public final Block block;                   // null when the playbook has none
+    public final JsonElement blockSource;       // as written, recorded in run.json (null when none)
     public final List<TriggerRule> triggers;    // empty when the playbook has none
     public final JsonElement triggersSource;    // as written, recorded in run.json (null when none)
 
@@ -469,6 +487,8 @@ public final class Playbook {
         cast = o.has("cast") && o.get("cast").isJsonObject() ? new Cast(o.getAsJsonObject("cast")) : null;
         targets = o.has("targets") && o.get("targets").isJsonObject() ? new Targets(o.getAsJsonObject("targets")) : null;
         targetsSource = targets == null ? null : o.get("targets");
+        block = o.has("block") && o.get("block").isJsonObject() ? new Block(o.getAsJsonObject("block")) : null;
+        blockSource = block == null ? null : o.get("block");
         List<TriggerRule> list = new ArrayList<>();
         if (o.has("triggers") && o.get("triggers").isJsonArray()) {
             JsonArray arr = o.getAsJsonArray("triggers");
@@ -553,6 +573,9 @@ public final class Playbook {
         }
         if (!triggers.isEmpty()) {
             sb.append(" triggers=").append(triggers.size()).append(" rule(s)");
+        }
+        if (block != null && block.survive) {
+            sb.append(" block=adds the blocks that keep it alive");
         }
         if (targets != null && targets.triggersByDanger) {
             sb.append(" targets=removal triggers by danger (min ").append(targets.min).append(", margin ").append(targets.margin).append(")");

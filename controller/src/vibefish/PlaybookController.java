@@ -241,6 +241,148 @@ public class PlaybookController extends PlayerControllerAi {
         trace("takes the kill: " + what + " (" + moved + " attacker(s) added or moved)");
     }
 
+    // ------------------------------------------------------------------ blocks
+
+    /**
+     * Forge's AI blocks; with {@code block.survive} the seat does not die to an attack it could have blocked.
+     * When Forge's blocks leave at least the seat's life unblocked, blocks are added to them: the heaviest
+     * unblocked attackers that one creature may stop get the least valuable creatures that are not blocking yet,
+     * and only as many as it takes for the unblocked damage to fall under the seat's life. If adding is not
+     * enough but another set of blocks would be, the seat's blocks are declared anew that way. A set of blocks
+     * Forge's rules refuse is taken back and Forge's own stand.
+     */
+    @Override
+    public void declareBlockers(Player defender, Combat combat) {
+        super.declareBlockers(defender, combat);
+        if (playbook == null || playbook.block == null || !playbook.block.survive || defender != player) {
+            return;
+        }
+        try {
+            survive(combat);
+        } catch (RuntimeException e) {
+            count("block_survive_errors", 1);
+        }
+    }
+
+    private void survive(Combat combat) {
+        List<Card> attackers = new ArrayList<>(combat.getAttackersOf(player));
+        int life = player.getLife();
+        List<Card> open = new ArrayList<>();
+        int incoming = 0;
+        boolean cmd = false;                            // a commander's lethal damage is unblocked
+        Map<Card, List<Card>> before = new LinkedHashMap<>();
+        for (Card a : attackers) {
+            List<Card> bs = new ArrayList<>(combat.getBlockers(a));
+            before.put(a, bs);
+            if (bs.isEmpty()) {
+                open.add(a);
+                incoming += CombatMath.strikes(a);
+                cmd |= CombatMath.lethalCommander(a, player);
+            }
+        }
+        if (attackers.isEmpty() || life <= 0 || (incoming < life && !cmd)) {
+            return;
+        }
+        count("block_lethal_seen", 1);
+        List<Card> blocking = new ArrayList<>(combat.getAllBlockers());
+        List<Card> able = new ArrayList<>();
+        for (Card c : player.getCreaturesInPlay()) {
+            if (CombatUtil.canBlock(c, combat)) {
+                able.add(c);
+            }
+        }
+        able.sort((x, y) -> Integer.compare(ComputerUtilCard.evaluateCreature(x), ComputerUtilCard.evaluateCreature(y)));
+        List<Card> free = new ArrayList<>(able);
+        free.removeAll(blocking);
+        // add to Forge's blocks: a commander's lethal damage first, then the heaviest unblocked attackers, until the seat lives
+        List<Card[]> use = new ArrayList<>();
+        int left = chosen(CombatMath.blocks(open, free, player), incoming, life, use);
+        if (left < life && !commanderLeft(open, use)) {
+            for (Card[] pair : use) {
+                combat.addBlocker(pair[0], pair[1]);
+            }
+            if (CombatUtil.validateBlocks(combat, player) != null) {
+                for (Card[] pair : use) {
+                    combat.removeBlockAssignment(pair[0], pair[1]);
+                }
+                count("block_survive_invalid", 1);
+                return;
+            }
+            count("block_survive", 1);
+            count("block_survive_added", use.size());
+            trace("blocks to live: " + use.size() + " block(s) added, " + incoming + " unblocked at " + life + " life" + (cmd ? " and a commander's lethal damage" : "") + ", now " + left);
+            return;
+        }
+        // adding is not enough: would other blocks be?
+        int total = 0;
+        for (Card a : attackers) {
+            total += CombatMath.strikes(a);
+        }
+        List<Card[]> anew = new ArrayList<>();
+        left = chosen(CombatMath.blocks(attackers, able, player), total, life, anew);
+        if (left >= life || commanderLeft(attackers, anew)) {
+            count("block_lethal_hopeless", 1);          // no blocks of one creature an attacker keep the seat alive
+            return;
+        }
+        for (Card b : blocking) {
+            if (b.getController() == player) {
+                combat.undoBlockingAssignment(b);
+            }
+        }
+        for (Card[] pair : anew) {
+            combat.addBlocker(pair[0], pair[1]);
+        }
+        if (CombatUtil.validateBlocks(combat, player) != null) {
+            for (Card[] pair : anew) {
+                combat.removeBlockAssignment(pair[0], pair[1]);
+            }
+            for (Map.Entry<Card, List<Card>> e : before.entrySet()) {
+                for (Card b : e.getValue()) {
+                    combat.addBlocker(e.getKey(), b);
+                }
+            }
+            count("block_survive_invalid", 1);
+            return;
+        }
+        count("block_survive", 1);
+        count("block_survive_reblocked", 1);
+        trace("blocks to live: its blocks declared anew, " + anew.size() + " block(s), " + incoming + " unblocked at " + life + " life" + (cmd ? " and a commander's lethal damage" : "") + ", now " + left);
+    }
+
+    /**
+     * From the blocks that could be made (a commander's lethal damage first, then the heaviest attacker), take those
+     * the seat needs: every block of a lethal commander, and others only while the unblocked damage is still at
+     * least its life. Returns the unblocked damage left.
+     */
+    private int chosen(Map<Card, Card> pairs, int unblocked, int life, List<Card[]> use) {
+        int left = unblocked;
+        for (Map.Entry<Card, Card> e : pairs.entrySet()) {
+            if (left < life && !CombatMath.lethalCommander(e.getKey(), player)) {
+                continue;
+            }
+            use.add(new Card[] {e.getKey(), e.getValue()});
+            left -= CombatMath.strikes(e.getKey());
+        }
+        return left;
+    }
+
+    /** Whether one of these attackers is a commander with lethal damage that the chosen blocks do not stop. */
+    private boolean commanderLeft(List<Card> attackers, List<Card[]> use) {
+        for (Card a : attackers) {
+            if (!CombatMath.lethalCommander(a, player)) {
+                continue;
+            }
+            boolean stopped = false;
+            for (Card[] pair : use) {
+                stopped |= pair[0] == a;
+            }
+            if (!stopped) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
      * Do not tap out into a lethal answer. After the attack is declared (and after {@code finish}), look at each
      * opponent the attack is not sure to kill: with the creatures that would stay untapped at home, is the damage

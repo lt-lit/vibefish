@@ -62,7 +62,9 @@ final class CombatMath {
      * The most damage a defender can stop by putting one blocker in front of an attacker, each blocker used once:
      * the heaviest set of attackers that can all be blocked at the same time. Who may block whom is Forge's
      * {@code CombatUtil.canBlock(attacker, blocker)}. Attackers are taken from the heaviest down and each is
-     * given a blocker if the ones already placed can be moved to make room, which finds the heaviest set.
+     * given a blocker if the ones already placed can be moved to make room, which finds the heaviest set; with a
+     * defender given, an attacking commander whose damage would be lethal by itself is taken before the rest
+     * (since 0.4.3), so the set found stops every such attacker that can be stopped.
      * A block counts as stopping all of an attacker's damage (trample is not credited to the attacker).
      * With a {@code defender} given, an attacker that one creature alone may not block (menace) counts as one
      * that cannot be stopped, and so does an attacker with trample, whose damage a block does not stop whole
@@ -72,8 +74,59 @@ final class CombatMath {
      * as if every blocker were untapped (what the defender's creatures could have done had they stayed home).
      */
     static int mostStopped(List<Card> attackers, List<Card> blockers, Player defender, boolean untapped) {
+        List<Card> order = ordered(attackers, defender, false);
+        int[] heldBy = match(order, blockers, defender, untapped);
+        int stopped = 0;
+        for (int j = 0; j < heldBy.length; j++) {
+            if (heldBy[j] >= 0) {
+                stopped += hits(order.get(heldBy[j]));
+            }
+        }
+        return stopped;
+    }
+
+    /**
+     * A commander attacking this player whose damage would bring what it has dealt to the player to 21 or more:
+     * unblocked it ends the player's game whatever the player's life is.
+     */
+    static boolean lethalCommander(Card a, Player defender) {
+        return defender != null && a.isCommander() && defender.getCommanderDamage(a) + strikes(a) >= 21;
+    }
+
+    /**
+     * Whether the best blocks leave a {@link #lethalCommander} unblocked: the matching stops those attackers
+     * first, so this is true only when no set of blocks stops all of them.
+     */
+    static boolean commanderOpen(List<Card> attackers, List<Card> blockers, Player defender, boolean untapped) {
+        List<Card> order = ordered(attackers, defender, false);
+        int[] heldBy = match(order, blockers, defender, untapped);
+        for (int i = 0; i < order.size(); i++) {
+            if (!lethalCommander(order.get(i), defender)) {
+                continue;
+            }
+            boolean held = false;
+            for (int h : heldBy) {
+                held |= h == i;
+            }
+            if (!held) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** The attackers a commander's lethal damage first (with a defender given), then the heaviest first. */
+    private static List<Card> ordered(List<Card> attackers, Player defender, boolean twice) {
         List<Card> order = new ArrayList<>(attackers);
-        order.sort((x, y) -> Integer.compare(hits(y), hits(x)));
+        order.sort((x, y) -> {
+            int c = Boolean.compare(lethalCommander(y, defender), lethalCommander(x, defender));
+            return c != 0 ? c : Integer.compare(twice ? strikes(y) : hits(y), twice ? strikes(x) : hits(x));
+        });
+        return order;
+    }
+
+    /** Each blocker's attacker (an index into {@code order}, or -1): attackers are given a blocker in the order they come. */
+    private static int[] match(List<Card> order, List<Card> blockers, Player defender, boolean untapped) {
         int n = order.size();
         boolean[][] can = new boolean[n][blockers.size()];
         for (int i = 0; i < n; i++) {
@@ -85,13 +138,12 @@ final class CombatMath {
         }
         int[] heldBy = new int[blockers.size()];        // blocker -> the attacker it stands in front of
         Arrays.fill(heldBy, -1);
-        int stopped = 0;
         for (int i = 0; i < n; i++) {
-            if (hits(order.get(i)) > 0 && place(i, can, heldBy, new boolean[blockers.size()])) {
-                stopped += hits(order.get(i));
+            if (hits(order.get(i)) > 0) {
+                place(i, can, heldBy, new boolean[blockers.size()]);
             }
         }
-        return stopped;
+        return heldBy;
     }
 
     private static boolean place(int attacker, boolean[][] can, int[] heldBy, boolean[] seen) {
@@ -105,6 +157,33 @@ final class CombatMath {
             }
         }
         return false;
+    }
+
+    /** What an unblocked attacker deals to a player's life in one combat: {@link #hits(Card)}, twice with double strike. */
+    static int strikes(Card c) {
+        return hits(c) * (c.hasKeyword(Keyword.DOUBLE_STRIKE) ? 2 : 1);
+    }
+
+    /**
+     * Which blocker stops which attacker when as much damage as possible is to be stopped with one blocker an
+     * attacker: the pairs of the heaviest set of these attackers that these blockers can block at the same time
+     * (weights by {@link #strikes(Card)}), an attacking commander whose damage would be lethal by itself
+     * ({@link #lethalCommander}) before any other. Blockers earlier in the list are tried first, so a caller that
+     * lists its least valuable creatures first gets them used first. An attacker that one creature alone may
+     * not block, or that tramples, is given no blocker: a block there would not be sure to stop it.
+     */
+    static java.util.Map<Card, Card> blocks(List<Card> attackers, List<Card> blockers, Player defender) {
+        List<Card> order = ordered(attackers, defender, true);
+        int[] heldBy = match(order, blockers, defender, false);
+        java.util.Map<Card, Card> pairs = new java.util.LinkedHashMap<>();
+        for (int i = 0; i < order.size(); i++) {        // a commander's lethal damage first, then the heaviest attacker
+            for (int j = 0; j < heldBy.length; j++) {
+                if (heldBy[j] == i) {
+                    pairs.put(order.get(i), blockers.get(j));
+                }
+            }
+        }
+        return pairs;
     }
 
     /** The creatures of {@code o} that may attack {@code target} on {@code o}'s next turn (Forge's own rule for it). */

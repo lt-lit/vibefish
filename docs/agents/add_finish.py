@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""add_finish.py DECK [DECK ...] [--name NAME] [--finish true|leader|none] [--guard one|table] [--targets danger]: a candidate that is a
-deck's shipped playbook with a hook on its attack or on its triggers' targets. A session helper.
+"""add_finish.py DECK [DECK ...] [--name NAME] [--finish true|leader|none] [--guard one|table] [--targets danger] [--block survive]: a
+candidate that is a deck's shipped playbook with a hook on its attack, its triggers' targets or its blocks. A session helper.
 
 For each deck, playbook/variants/DECK-NAME.json: the shipped playbook of playbook/precons/DECK.json, its version plus one,
 with the hooks asked for on its attack block; a playbook that leaves the attack to Forge (no attack block) gets
@@ -10,7 +10,8 @@ down (0.4.1); `--finish none` leaves it out. `--guard one` adds the guard agains
 the same against the opponents one after another (0.4.1). NAME defaults to `finish`, `leader`, `guard`, `table`, `leaderguard` or
 `leadertable` by what is asked. `--targets danger` adds `"targets": {"triggers": "danger"}`: the seat's removal triggers are aimed
 at the opponent that looks most dangerous (0.4.2); with `--finish none` and no guard the attack is left as it is and NAME defaults
-to `aim`. Nothing else is changed, and the notes are the shipped notes with
+to `aim`. `--block survive` adds `"block": {"survive": true}`: blocks are added to Forge's own when those leave the seat dead
+and blocks exist that would not (0.4.3); alone its NAME defaults to `block`. Nothing else is changed, and the notes are the shipped notes with
 what the candidate is at the end.
 """
 import argparse, copy, json, os, sys
@@ -24,17 +25,18 @@ def main(argv):
     ap.add_argument("--finish", choices=["true", "leader", "none"], default="true")
     ap.add_argument("--guard", choices=["one", "table"])
     ap.add_argument("--targets", choices=["danger"])
+    ap.add_argument("--block", choices=["survive"])
     ap.add_argument("--on", default="")
     a = ap.parse_args(argv)
-    if a.finish == "none" and not a.guard and not a.targets:
-        ap.error("nothing to add: --finish none without --guard or --targets")
+    if a.finish == "none" and not a.guard and not a.targets and not a.block:
+        ap.error("nothing to add: --finish none without --guard, --targets or --block")
     if not a.name:
-        a.name = {"true": "finish", "leader": "leader", "none": ""}[a.finish] + {"one": "guard", "table": "table", None: ""}[a.guard] + ("aim" if a.targets else "")
+        a.name = {"true": "finish", "leader": "leader", "none": ""}[a.finish] + {"one": "guard", "table": "table", None: ""}[a.guard] + ("aim" if a.targets else "") + ("block" if a.block else "")
     for deck in a.decks:
         base = json.load(open(os.path.join(ROOT, "playbook", "precons", f"{deck}.json"), encoding="utf-8"))["playbook"]
         pb = copy.deepcopy(base)
         attack = dict(pb.get("attack") or {"policy": "forge"})
-        if (attack.get("finish") and a.finish != "none") or (attack.get("guard") and a.guard) or (pb.get("targets") and a.targets):
+        if (attack.get("finish") and a.finish != "none") or (attack.get("guard") and a.guard) or (pb.get("targets") and a.targets) or (pb.get("block") and a.block):
             print(f"{deck}: the shipped playbook already has that hook (attack {json.dumps(attack)}, targets {json.dumps(pb.get('targets'))}); nothing written")
             continue
         if a.finish != "none":
@@ -59,6 +61,9 @@ def main(argv):
             what.append("a triggered ability of the seat that removes one permanent of an opponent (destroys it, exiles it, returns it to hand or library) is aimed at the "
                         "opponent that looks most dangerous, when that opponent looks more dangerous than the one Forge aimed at by five or more and has a permanent of the "
                         "same kind worth at least as much as Forge's choice or at least 4 (`\"targets\": {\"triggers\": \"danger\"}`)")
+        if a.block:
+            what.append("when Forge's blocks leave at least the seat's life in damage unblocked and blocks exist that would not, blocks are added, the least valuable free "
+                        "creatures in front of the heaviest unblocked attackers and only as many as it takes for the seat to live (`\"block\": {\"survive\": true}`)")
         # the attack block goes where a reader looks for it: after the version
         touches_attack = a.finish != "none" or bool(a.guard)
         out_pb = {"version": base["version"] + 1}
@@ -66,10 +71,12 @@ def main(argv):
             out_pb["attack"] = attack if touches_attack else base["attack"]
         if a.targets:
             out_pb["targets"] = {"triggers": a.targets}
-        out_pb.update({k: v for k, v in pb.items() if k not in ("version", "attack", "targets", "on", "notes")})
+        if a.block:
+            out_pb["block"] = {"survive": True}
+        out_pb.update({k: v for k, v in pb.items() if k not in ("version", "attack", "targets", "block", "on", "notes")})
         was = "its own attack (" + base["attack"].get("policy", "go_wide") + ")" if base.get("attack") else "Forge's own attack"
         out_pb["notes"] = ((base.get("notes") or "") + f" VERSION {out_pb['version']} CANDIDATE `{a.name}`{' (' + a.on + ')' if a.on else ''}. Version {base['version']} with "
-                           f"{['', 'one change', 'two changes', 'three changes'][len(what)]}: " + (f"after {was} has been declared, " if touches_attack else "")
+                           f"{['', 'one change', 'two changes', 'three changes', 'four changes'][len(what)]}: " + (f"after {was} has been declared, " if touches_attack else "")
                            + f"{'; and then '.join(what)}. No cast or trigger rule is changed.")
         out = {"schema": 1, "deck": deck, "variant": a.name, "of": f"playbook/precons/{deck}.json (version {base['version']})",
                "about": "A candidate playbook for ab-run (deck@variant) and runner/ab.py --data: the shipped playbook with a hook on its attack (docs/agents/add_finish.py; DESIGN.md section 34). Only the playbook object is read.",
@@ -78,7 +85,7 @@ def main(argv):
         with open(p, "w", encoding="utf-8") as f:
             json.dump(out, f, indent=1, ensure_ascii=False)
             f.write("\n")
-        print(f"{p}: version {out_pb['version']}, attack {json.dumps(out_pb.get('attack'))}, targets {json.dumps(out_pb.get('targets'))}")
+        print(f"{p}: version {out_pb['version']}, attack {json.dumps(out_pb.get('attack'))}, targets {json.dumps(out_pb.get('targets'))}, block {json.dumps(out_pb.get('block'))}")
     return 0
 
 

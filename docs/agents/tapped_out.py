@@ -36,6 +36,13 @@ for root in sys.argv[1:]:
         for e in evs:
             if e['e'] == 'combat':
                 able[(e['seat'], e['t'])] = len(e.get('able') or [])
+        dealt = collections.Counter()                   # (seat, commander) -> combat damage it has dealt to that seat
+        cmd_turn = set()                                # (seat, t): a commander's damage on the seat reached 21 that turn
+        for e in evs:
+            if e['e'] == 'damage' and e.get('combat') and e.get('source_commander') and e.get('seat') is not None:
+                dealt[(e['seat'], e.get('source'))] += e.get('amount', 0)
+                if dealt[(e['seat'], e.get('source'))] >= 21:
+                    cmd_turn.add((e['seat'], e['t']))
         # deaths tapped out
         for e in evs:
             if e['e'] != 'block' or 'incoming' not in e:
@@ -48,6 +55,8 @@ for root in sys.argv[1:]:
                 continue
             if e.get('best_untapped', e['best']) >= e['life']:
                 continue
+            if e.get('cmd_best_untapped', (d, e['t']) in cmd_turn if 'cmd' not in e else False):
+                continue                                # a commander's lethal damage that untapped creatures would not have stopped (or, before 0.4.3, are not known to)
             C['tapped_out'] += 1
             prev = [t for t in own_turns[d] if t < e['t']]
             if not prev:

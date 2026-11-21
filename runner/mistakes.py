@@ -31,6 +31,15 @@ What is counted, per seat:
   a death tapped out No block could have saved it, but its own tapped creatures could have, had they been untapped:
                      it attacked (or tapped them for something else) and died to the answer. Not always a mistake
                      (a race can be right), so read it beside the other two.
+  a death by commander damage
+                     The seat lost on a turn on which an attacking commander's damage brought its total on the seat
+                     to 21. Since harness 0.4.3 the `block` line says so (`cmd`) and says whether any blocks could
+                     have stopped every such attacker (`cmd_best`, `cmd_best_untapped`), and a death is a block not
+                     made, or tapped out, only if the blocks that save the seat's life also stop that commander. In
+                     older logs it is read off the damage dealt, and whether the commander could have been blocked
+                     is not known: those deaths are counted here and in neither of the two above (at the owner's
+                     table 81 of 135 deaths first counted as a block not made were of this kind, most of them to
+                     one flying commander).
   an open board not attacked
                      A turn on which some opponent had no creature that could block and the seat had a creature
                      that could attack that opponent: did anything attack that opponent? Not a mistake by itself
@@ -61,7 +70,7 @@ KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent'
         'kill_turns', 'kill_taken', 'kill_other', 'kill_missed', 'kill_missed_no_attack', 'kill_missed_short', 'kill_missed_then_lost', 'kill_missed_then_won',
         'kill_last_turns', 'kill_last_missed', 'kill_top_turns', 'kill_top_missed', 'kill_lesser_turns', 'kill_lesser_missed',
         'open_turns', 'open_attacked',
-        'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out')
+        'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths')
 
 
 def danger(d, turn):
@@ -133,13 +142,18 @@ def close_turn(G, label, turn, lost_at, examples, where):
         if d is None or 'incoming' not in b:
             continue
         g = G[label(d)]
-        if b['incoming'] >= b['life'] > 0:
+        if 'cmd' in b:                                   # 0.4.3: the line says it
+            cmd, cmd_best, cmd_best_u = b['cmd'], b.get('cmd_best', False), b.get('cmd_best_untapped', b.get('cmd_best', False))
+        else:                                            # before: read off the damage dealt; whether a block could have stopped it is not known
+            cmd = cmd_best = cmd_best_u = d in turn.get('cmd_dealt', ())
+        if b['life'] > 0 and (b['incoming'] >= b['life'] or cmd):
             g['attacked_lethal'] += 1
             if lost_at.get(d) == turn['t']:
                 g['combat_deaths'] += 1
-                if b['best'] < b['life']:
+                g['commander_deaths'] += bool(cmd)
+                if b['best'] < b['life'] and not cmd_best:
                     g['block_not_made'] += 1
-                elif b.get('best_untapped', b['best']) < b['life']:
+                elif b.get('best_untapped', b['best']) < b['life'] and not cmd_best_u:
                     g['died_tapped_out'] += 1
 
 
@@ -171,6 +185,7 @@ def collect(roots, arm=None, by_deck=False, deck=None):
             local = collections.defaultdict(collections.Counter)
             turns = []
             cur = None
+            dealt = collections.Counter()               # (seat, commander) -> the combat damage it has dealt to that seat
             for e in evs:
                 k = e['e']
                 if k == 'turn':
@@ -187,6 +202,10 @@ def collect(roots, arm=None, by_deck=False, deck=None):
                             cur['attacks'][at['defender_seat']].append(at.get('attacker'))
                 elif k == 'block':
                     cur['blocks'].append(e)
+                elif k == 'damage' and e.get('combat') and e.get('source_commander') and e.get('seat') is not None:
+                    dealt[(e['seat'], e.get('source'))] += e.get('amount', 0)
+                    if dealt[(e['seat'], e.get('source'))] >= 21:
+                        cur.setdefault('cmd_dealt', set()).add(e['seat'])
             where = os.path.relpath(evf, roots[0]) if len(roots) == 1 else evf
             for t in turns:
                 close_turn(local, lambda s: s, t, lost_at, examples, where)
@@ -233,11 +252,12 @@ def render(G, games, old, examples, show):
                    f'{g["kill_lesser_turns"]:>13} {g["kill_lesser_missed"]:>7} {pct(g["kill_lesser_missed"], g["kill_lesser_turns"]):>6}   '
                    + (f'{(g["kill_last_missed"] + g["kill_top_missed"]) / g["seat_games"]:.3f}' if g['seat_games'] else ''))
     out += ['', 'BLOCKS: attacks that left at least the seat\'s life unblocked; the seat lost that turn; of those, its creatures could have blocked enough to live;',
-            '        and those no block could stop that its own tapped creatures would have, had they stayed home',
-            f'  {"":{w}} {"lethal attacks":>15} {"died":>6} {"a block not made":>17} {"tapped out":>11}']
+            '        and those no block could stop that its own tapped creatures would have, had they stayed home; deaths on a turn a commander\'s damage reached 21',
+            '        (in logs before harness 0.4.3 those are in neither of the two columns before: whether that commander could have been blocked is not known)',
+            f'  {"":{w}} {"lethal attacks":>15} {"died":>6} {"a block not made":>17} {"tapped out":>11} {"commander damage":>17}']
     for n in names:
         g = G[n]
-        out.append(f'  {n:{w}} {g["attacked_lethal"]:>15} {g["combat_deaths"]:>6} {g["block_not_made"]:>17} {g["died_tapped_out"]:>11}')
+        out.append(f'  {n:{w}} {g["attacked_lethal"]:>15} {g["combat_deaths"]:>6} {g["block_not_made"]:>17} {g["died_tapped_out"]:>11} {g["commander_deaths"]:>17}')
     out += ['', 'ATTACKS: turns with a creature that could attack; attacked; the damage sent of the damage that could be; turns with an opponent who could not block: attacked it',
             f'  {"":{w}} {"turns":>7} {"attacked":>9} {"damage sent":>12} {"open board":>11} {"attacked it":>12}']
     for n in names:

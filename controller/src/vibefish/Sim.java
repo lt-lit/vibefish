@@ -66,7 +66,7 @@ import forge.util.MyRandom;
  * Relative paths resolve against $VIBEFISH_CWD when set (the launcher cds into the Forge runtime).
  */
 public final class Sim {
-    public static final String VERSION = "0.4.2";
+    public static final String VERSION = "0.4.3";
     static final Gson GSON = new GsonBuilder().disableHtmlEscaping().serializeNulls().create();
     static final Gson GSON_PRETTY = new GsonBuilder().disableHtmlEscaping().serializeNulls().setPrettyPrinting().create();
 
@@ -307,7 +307,8 @@ public final class Sim {
                         : obj("min_lands", playbook.mulligan.minLands, "max_lands", playbook.mulligan.maxLands, "max_mulligans", playbook.mulligan.maxMulligans),
                         "cast", playbook.cast == null ? null : playbook.cast.source,
                         "triggers", playbook.triggersSource,
-                        "targets", playbook.targetsSource);
+                        "targets", playbook.targetsSource,
+                        "block", playbook.blockSource);
                 System.err.printf("[vibefish] playbook for %s: %s%n", id, playbook.describe());
             } else {
                 rp.setPlayer(GamePlayerUtil.createAiPlayer(id, i, profile));

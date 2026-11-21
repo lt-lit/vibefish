@@ -59,6 +59,7 @@ the harness is given `--playbook id=file`). Everything absent stays Forge's.
   "cast":     {"rules": [ ... ], "max_per_turn": 60},
   "triggers": [ ... ],
   "targets":  {"triggers": "danger", "min": 4, "margin": 5},
+  "block":    {"survive": true},
   "notes": "why"
 }
 ```
@@ -304,6 +305,29 @@ does, with the aim in between; charms, copies and triggers another player aims g
 Counters: `trigger_aim_seen` (a removal trigger aimed at an opponent's permanent), `trigger_aim_already` (at the most
 dangerous opponent already), `trigger_aim_moved`, `trigger_aim_kept` (nothing worth it on a more dangerous
 opponent's side), `trigger_aim_errors`; the block is recorded in `run.json` under `decks[].playbook.targets`.
+
+### `block`: not dying to an attack the seat could have blocked
+
+Blocks are Forge's AI's, and under a lethal attack they are nearly always sound: of 4,146 deaths in combat at the
+owner's table, at most 135 were to an attack the seat's own creatures could have blocked down to less than its life
+(`runner/mistakes.py`, `DESIGN.md` §34), most of them with no block made at all against one or two attackers.
+
+```
+"block": {"survive": true}
+```
+
+With `"survive": true` (harness 0.4.3) Forge's AI declares the seat's blocks first. When they leave at least the
+seat's life in damage unblocked (an unblocked attacker's damage, twice with double strike), the seat looks for blocks
+that would not: one blocker an attacker, by Forge's own `CombatUtil.canBlock(attacker, blocker)`; an attacker that
+tramples or that one creature alone may not block is not counted as stopped. Blocks are added to Forge's own, the
+least valuable creatures that are not blocking yet (`ComputerUtilCard.evaluateCreature`) in front of the heaviest
+unblocked attackers, and only as many as it takes for the unblocked damage to fall under the seat's life. If adding
+is not enough and another set of blocks would be, the seat's blocks are declared anew that way. Blocks Forge's rules
+refuse (`CombatUtil.validateBlocks`) are taken back and Forge's own stand. Nothing else about blocking changes: which
+attacker to kill, when to trade, when to take the damage are Forge's. Counters: `block_lethal_seen` (Forge's blocks
+left the seat dead), `block_survive` (blocks were added and it is not), `block_survive_added` (how many),
+`block_survive_reblocked` (declared anew), `block_lethal_hopeless` (no such blocks exist), `block_survive_invalid`,
+`block_survive_errors`; the block is recorded in `run.json` under `decks[].playbook.block`.
 
 ### Writing one
 

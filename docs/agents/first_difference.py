@@ -14,6 +14,8 @@ of a table are read side by side to the first event that differs, and the table 
                of several (life + 2 x nonland permanents), a less dangerous one, or nobody
   target       the first difference is a spell or ability of the seat's that both games put on the stack, aimed at something
                else: the doing of a hook on targets
+  block        the first difference is the seat's own block declaration: the doing of a hook on blocks. With it, from the same
+               position: whether the seat was out of the game that turn in each game
   other        anything else (the same position played differently by Forge)
 
 For each file: the tables, how the pair ended (both won, only the candidate, only the base, neither) with the exact test on the
@@ -24,6 +26,17 @@ sent. Read-only; a session helper.
 import argparse, collections, gzip, json, math, os, sys
 
 KINDS = {'turn', 'land', 'cast', 'resolve', 'combat', 'attack', 'block', 'damage', 'life', 'lost', 'mulligan', 'zone', 'ability', 'trigger'}
+
+
+def norm(e):
+    """An event as it is compared: without the fields later harness versions added to a line (the two arms of a pair may have been
+    played on different versions: a shipped arm of one run beside a candidate arm of a later one)."""
+    if e['e'] == 'block':
+        return {k: e.get(k) for k in ('e', 't', 'seat', 'blocks', 'life', 'incoming')}
+    if e['e'] == 'combat':
+        return {'e': 'combat', 't': e.get('t'), 'seat': e.get('seat'), 'able': e.get('able'),
+                'defenders': [{k: v for k, v in d.items() if k != 'permanents'} for d in e.get('defenders') or []]}
+    return e
 
 
 def load(root, entry, idx, arm):
@@ -41,7 +54,8 @@ def load(root, entry, idx, arm):
     op = gzip.open if evf.endswith('.gz') else open
     with op(evf, 'rt', encoding='utf-8') as f:
         evs = [json.loads(l) for l in f if l.strip()]
-    return {'evs': [e for e in evs if e['e'] in KINDS], 'ids': {x['seat']: x['id'] for x in run['decks']},
+    evs = [e for e in evs if e['e'] in KINDS]
+    return {'evs': evs, 'cmp': [norm(e) for e in evs], 'ids': {x['seat']: x['id'] for x in run['decks']},
             'winner': next((p['seat'] for p in g['players'] if p.get('won')), None)}
 
 
@@ -86,8 +100,9 @@ def read(root, base, cand, deck, tables, arm):
             continue
         focus = next(s for s, i in a['ids'].items() if i == deck)
         ea, eb = a['evs'], b['evs']
+        ca, cb = a['cmp'], b['cmp']
         i = 0
-        while i < min(len(ea), len(eb)) and ea[i] == eb[i]:
+        while i < min(len(ea), len(eb)) and ca[i] == cb[i]:
             i += 1
         wa, wb = a['winner'] == focus, b['winner'] == focus
         r = {'deck': deck, 'idx': idx, 'outcome': 'both' if wa and wb else 'cand_only' if wb else 'base_only' if wa else 'neither'}
@@ -112,6 +127,16 @@ def read(root, base, cand, deck, tables, arm):
                 tc = [c for c in x.get('target_ctrl') or [] if c is not None and c != focus]
                 return bool(tc) and top is not None and dg.get(tc[0]) == top
             r.update({'file': 'target', 't': xb.get('t'), 'card': xb.get('card'), 'base_at_top': at_top(xa), 'cand_at_top': at_top(xb), 'opponents': len(opps)})
+            rows.append(r)
+            continue
+        if (not own and xa is not None and xb is not None and xa['e'] == xb['e'] == 'block' and xa.get('seat') == xb.get('seat') == focus
+                and xa.get('t') == xb.get('t')):
+            t = xb['t']
+            la = {x['seat']: x['t'] for x in ea if x['e'] == 'lost'}
+            lb = {x['seat']: x['t'] for x in eb if x['e'] == 'lost'}
+            r.update({'file': 'block', 't': t, 'base_out': la.get(focus) == t, 'cand_out': lb.get(focus) == t,
+                      'base_blocks': sum(1 for b in xa.get('blocks') or [] if b.get('blockers')), 'cand_blocks': sum(1 for b in xb.get('blocks') or [] if b.get('blockers')),
+                      'life': xb.get('life'), 'base_incoming': xa.get('incoming'), 'cand_incoming': xb.get('incoming')})
             rows.append(r)
             continue
         if not own:
@@ -171,7 +196,7 @@ def main(argv):
     files = collections.defaultdict(list)
     for r in rows:
         files[r['file'] if r['file'] != 'attack' else 'attack: ' + r['stood']].append(r)
-    order = ['identical', 'other', 'target', 'attack: last', 'attack: top', 'attack: lesser', 'attack: nobody', 'missing']
+    order = ['identical', 'other', 'target', 'block', 'attack: last', 'attack: top', 'attack: lesser', 'attack: nobody', 'missing']
     print(f"{len(a.decks)} decks, {len(rows)} tables: {cn} beside {bn}; the two games of a table, filed by the first event that differs")
     for k in order:
         if files.get(k):
@@ -184,6 +209,9 @@ def main(argv):
         print(f"  on the {len(tg)} target tables the cast that differs was aimed at the opponent that looked most dangerous at the start of that turn: "
               f"{cn} {sum(r['cand_at_top'] for r in tg)}, {bn} {sum(r['base_at_top'] for r in tg)}")
     print(line('every table', [r for r in rows if 'outcome' in r], bn, cn))
+    bk = files.get('block') or []
+    if bk:
+        print(f"  on the {len(bk)} block tables the seat was out of the game that turn: {cn} {sum(r['cand_out'] for r in bk)}, {bn} {sum(r['base_out'] for r in bk)}")
     if att:
         print()
         print("From the same position (the turn of the first difference, the seat's own attack): in each game, tables on which an opponent it was sure to kill went out that turn;")
@@ -210,6 +238,8 @@ def main(argv):
                                           **{f'{side}_{k}': sum(r[side][k] for r in att) for side in ('base', 'cand') for k in ('kill', 'dead', 'exposed', 'sent')})
             if tg:
                 summary['target'].update(cand_at_top=sum(r['cand_at_top'] for r in tg), base_at_top=sum(r['base_at_top'] for r in tg))
+            if bk:
+                summary['block'].update(cand_out=sum(r['cand_out'] for r in bk), base_out=sum(r['base_out'] for r in bk))
             for k, g in files.items():
                 if k.startswith('attack: '):
                     summary[k].update({f'{side}_{x}': sum(r[side][x] for r in g) for side in ('base', 'cand') for x in ('kill', 'dead', 'exposed', 'sent')})

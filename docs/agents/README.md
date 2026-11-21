@@ -62,11 +62,12 @@ are that session's and have to be replaced by the new session's scratch director
   rule's wait moved from one group to the other. `leader.py DIR...`: which thing a table can see says who goes on to
   win (the seat with the most nonland permanents, the highest life, the most damage dealt, sums of them), turn by turn
   from the event logs; the default of an aim's judgement of danger comes from it (DESIGN §33).
-- `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--targets danger] [--name NAME]`: a
-  candidate that is a deck's shipped playbook with a hook on its attack (`{"policy": "forge", ...}` for a playbook
-  that leaves the attack to Forge) or on its triggers' targets: `finish` (the kill no block prevents, harness 0.4.0),
-  `"finish": "leader"` (only from the most dangerous opponent down, 0.4.1), `guard` (against dying tapped out to one
-  opponent, or to the table, 0.4.1), `targets` (removal triggers aimed by danger, 0.4.2). Nothing else is changed.
+- `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--targets danger] [--block survive]
+  [--name NAME]`: a candidate that is a deck's shipped playbook with a hook on its attack (`{"policy": "forge", ...}`
+  for a playbook that leaves the attack to Forge), on its triggers' targets or on its blocks: `finish` (the kill no
+  block prevents, harness 0.4.0), `"finish": "leader"` (only from the most dangerous opponent down, 0.4.1), `guard`
+  (against dying tapped out to one opponent, or to the table, 0.4.1), `targets` (removal triggers aimed by danger,
+  0.4.2), `block` (the blocks that keep the seat alive, 0.4.3). Nothing else is changed.
 - Reading an exam of a hook that changes one decision (DESIGN §34): `first_difference.py EXAM_RESULTS_DIR VARIANT DECK...`
   reads the two games of every table side by side to the first event that differs and files the table by it: the same
   game to the end, the seat's own attack declaration (the hook's doing; filed further by whether the seat was sure to

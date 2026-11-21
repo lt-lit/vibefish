@@ -313,7 +313,10 @@ public final class JsonGameLogger {
      * it did not make. {@code best_untapped} is the same with its tapped creatures counted as able to block:
      * {@code best >= life > best_untapped} is a death its own tapped creatures would have prevented. An attacker
      * with trample counts as one no block stops (since 0.4.1; before that a block was credited in full), so
-     * {@code best} errs to the side of "no block would have saved it".
+     * {@code best} errs to the side of "no block would have saved it". Commander damage is its own way to die:
+     * {@code cmd} says the declared blocks leave unblocked an attacking commander whose damage brings its total
+     * on this player to 21, {@code cmd_best} and {@code cmd_best_untapped} that no blocks could have stopped
+     * every such attacker (since 0.4.3; the best blocks stop those attackers before any other).
      */
     private void blockFacts(Map<String, Object> m, PlayerView defender, java.util.Set<Integer> blockedIds) {
         Combat combat = game.getCombat();
@@ -335,11 +338,21 @@ public final class JsonGameLogger {
                 incoming += CombatMath.hits(c);
             }
         }
+        boolean cmd = false;
+        for (Card c : attackers) {
+            cmd |= !blockedIds.contains(c.getId()) && CombatMath.lethalCommander(c, d);
+        }
+        List<Card> able = CombatMath.ableBlockers(d);
+        List<Card> all = new ArrayList<>(d.getCreaturesInPlay());
         m.put("life", d.getLife());
         m.put("incoming", incoming);
-        m.put("best", total - CombatMath.mostStopped(attackers, CombatMath.ableBlockers(d), d, false));
+        m.put("best", total - CombatMath.mostStopped(attackers, able, d, false));
         // had its tapped creatures been untapped too: what a seat that kept its attackers at home could have blocked
-        m.put("best_untapped", total - CombatMath.mostStopped(attackers, new ArrayList<>(d.getCreaturesInPlay()), d, true));
+        m.put("best_untapped", total - CombatMath.mostStopped(attackers, all, d, true));
+        // 0.4.3: an attacking commander whose damage is lethal by itself (21 in all) left unblocked, and whether any blocks could have stopped every such attacker
+        m.put("cmd", cmd);
+        m.put("cmd_best", CombatMath.commanderOpen(attackers, able, d, false));
+        m.put("cmd_best_untapped", CombatMath.commanderOpen(attackers, all, d, true));
     }
 
     private List<Map<String, Object>> snapshot() {

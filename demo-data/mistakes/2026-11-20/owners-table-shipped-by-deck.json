@@ -28,10 +28,11 @@
    "kill_lesser_missed": 358,
    "open_turns": 2518,
    "open_attacked": 1036,
-   "attacked_lethal": 431,
-   "combat_deaths": 430,
-   "block_not_made": 15,
-   "died_tapped_out": 114
+   "attacked_lethal": 443,
+   "combat_deaths": 442,
+   "block_not_made": 7,
+   "died_tapped_out": 109,
+   "commander_deaths": 54
   },
   "blight-curse": {
    "seat_games": 771,
@@ -55,10 +56,11 @@
    "kill_lesser_missed": 133,
    "open_turns": 1523,
    "open_attacked": 439,
-   "attacked_lethal": 400,
-   "combat_deaths": 397,
-   "block_not_made": 11,
-   "died_tapped_out": 49
+   "attacked_lethal": 414,
+   "combat_deaths": 411,
+   "block_not_made": 3,
+   "died_tapped_out": 47,
+   "commander_deaths": 58
   },
   "blood-rites": {
    "seat_games": 828,
@@ -82,10 +84,11 @@
    "kill_lesser_missed": 295,
    "open_turns": 2679,
    "open_attacked": 871,
-   "attacked_lethal": 403,
-   "combat_deaths": 379,
-   "block_not_made": 22,
-   "died_tapped_out": 72
+   "attacked_lethal": 428,
+   "combat_deaths": 404,
+   "block_not_made": 7,
+   "died_tapped_out": 70,
+   "commander_deaths": 64
   },
   "deadly-disguise": {
    "seat_games": 794,
@@ -109,10 +112,11 @@
    "kill_lesser_missed": 146,
    "open_turns": 2074,
    "open_attacked": 535,
-   "attacked_lethal": 506,
-   "combat_deaths": 506,
-   "block_not_made": 11,
-   "died_tapped_out": 58
+   "attacked_lethal": 527,
+   "combat_deaths": 527,
+   "block_not_made": 7,
+   "died_tapped_out": 57,
+   "commander_deaths": 60
   },
   "death-toll": {
    "seat_games": 782,
@@ -136,10 +140,11 @@
    "kill_lesser_missed": 166,
    "open_turns": 1786,
    "open_attacked": 521,
-   "attacked_lethal": 388,
-   "combat_deaths": 377,
-   "block_not_made": 9,
-   "died_tapped_out": 58
+   "attacked_lethal": 405,
+   "combat_deaths": 394,
+   "block_not_made": 3,
+   "died_tapped_out": 55,
+   "commander_deaths": 47
   },
   "miracle-worker": {
    "seat_games": 826,
@@ -163,10 +168,11 @@
    "kill_lesser_missed": 157,
    "open_turns": 1569,
    "open_attacked": 437,
-   "attacked_lethal": 481,
-   "combat_deaths": 386,
-   "block_not_made": 13,
-   "died_tapped_out": 65
+   "attacked_lethal": 485,
+   "combat_deaths": 390,
+   "block_not_made": 3,
+   "died_tapped_out": 62,
+   "commander_deaths": 32
   },
   "mutant-menace": {
    "seat_games": 830,
@@ -190,10 +196,11 @@
    "kill_lesser_missed": 164,
    "open_turns": 1452,
    "open_attacked": 316,
-   "attacked_lethal": 456,
-   "combat_deaths": 454,
-   "block_not_made": 7,
-   "died_tapped_out": 110
+   "attacked_lethal": 458,
+   "combat_deaths": 456,
+   "block_not_made": 4,
+   "died_tapped_out": 109,
+   "commander_deaths": 14
   },
   "revenant-recon": {
    "seat_games": 760,
@@ -217,10 +224,11 @@
    "kill_lesser_missed": 179,
    "open_turns": 1714,
    "open_attacked": 453,
-   "attacked_lethal": 373,
-   "combat_deaths": 369,
-   "block_not_made": 25,
-   "died_tapped_out": 59
+   "attacked_lethal": 383,
+   "combat_deaths": 379,
+   "block_not_made": 13,
+   "died_tapped_out": 59,
+   "commander_deaths": 35
   },
   "squirreled-away": {
    "seat_games": 767,
@@ -244,10 +252,11 @@
    "kill_lesser_missed": 133,
    "open_turns": 2026,
    "open_attacked": 572,
-   "attacked_lethal": 479,
-   "combat_deaths": 478,
-   "block_not_made": 8,
-   "died_tapped_out": 58
+   "attacked_lethal": 490,
+   "combat_deaths": 489,
+   "block_not_made": 5,
+   "died_tapped_out": 56,
+   "commander_deaths": 38
   },
   "veloci-ramp-tor": {
    "seat_games": 767,
@@ -271,10 +280,11 @@
    "kill_lesser_missed": 253,
    "open_turns": 2000,
    "open_attacked": 715,
-   "attacked_lethal": 373,
-   "combat_deaths": 370,
-   "block_not_made": 14,
-   "died_tapped_out": 43
+   "attacked_lethal": 390,
+   "combat_deaths": 387,
+   "block_not_made": 2,
+   "died_tapped_out": 42,
+   "commander_deaths": 55
   }
  },
  "kills_not_taken": [
@@ -1061,5 +1071,6 @@
    }
   }
  ],
- "run": "ab-run #45 (run id 44801095534, commit 772c943, harness 0.4.0, seed 20261380): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook"
+ "run": "ab-run #45 (run id 44801095534, commit 772c943, harness 0.4.0, seed 20261380): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook",
+ "counted": "2026-11-21, with deaths by commander damage told apart (runner/mistakes.py as of harness 0.4.3)"
 }

@@ -28,10 +28,11 @@
    "kill_lesser_missed": 1984,
    "open_turns": 19341,
    "open_attacked": 5895,
-   "attacked_lethal": 4290,
-   "combat_deaths": 4146,
-   "block_not_made": 135,
-   "died_tapped_out": 686
+   "attacked_lethal": 4423,
+   "combat_deaths": 4279,
+   "block_not_made": 54,
+   "died_tapped_out": 666,
+   "commander_deaths": 457
   }
  },
  "kills_not_taken": [
@@ -818,5 +819,6 @@
    }
   }
  ],
- "run": "ab-run #45 (run id 44801095534, commit 772c943, harness 0.4.0, seed 20261380): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook"
+ "run": "ab-run #45 (run id 44801095534, commit 772c943, harness 0.4.0, seed 20261380): the ten shipped arms, 200 tables a deck at the owner's table, every seat under its shipped playbook",
+ "counted": "2026-11-21, with deaths by commander damage told apart (runner/mistakes.py as of harness 0.4.3)"
 }

@@ -1,7 +1,7 @@
 {
-  "requested": "2026-11-21T01:05Z",
-  "note": "A hook on targets (DESIGN §34, harness 0.4.2): the owner's ten precons under their shipped playbooks with `\"targets\": {\"triggers\": \"danger\"}` (playbook/variants/<deck>-aim.json: a triggered ability of the seat that destroys, exiles or bounces one permanent of an opponent is aimed at the opponent that looks most dangerous), playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base: a shipped playbook plays the same game on harness 0.4.1 and 0.4.2. The rule the run is read by is in CLAUDE.md (In flight), fixed before it had a result. 2,000 games in 50 shard jobs.",
-  "decks": "blight-curse@aim,veloci-ramp-tor@aim,mutant-menace@aim,squirreled-away@aim,revenant-recon@aim,blood-rites@aim,death-toll@aim,miracle-worker@aim,ahoy-mateys@aim,deadly-disguise@aim",
+  "requested": "2026-11-21T01:50Z",
+  "note": "A hook on blocks (DESIGN §34, harness 0.4.3): the owner's ten precons under their shipped playbooks with `\"block\": {\"survive\": true}` (playbook/variants/<deck>-block.json: when Forge's blocks leave the seat dead and blocks exist that would not, the least valuable free creatures are put in front of the attackers that matter, a commander's lethal damage first), playbook arm only, on the 200 tables of ab-run #46 (seed 20261390, the owner's table, opponents under their shipped playbooks), whose shipped arm is the base. On 15 replayed tables of ab-run #45 where the seat died to a blockable attack, it lived through that turn on all 15 with the hook; this run is for what replays of picked tables cannot show. The rule it is read by is in CLAUDE.md (In flight), fixed before it had a result. 2,000 games in 50 shard jobs.",
+  "decks": "blight-curse@block,veloci-ramp-tor@block,mutant-menace@block,squirreled-away@block,revenant-recon@block,blood-rites@block,death-toll@block,miracle-worker@block,ahoy-mateys@block,deadly-disguise@block",
   "games": "200",
   "arms": "playbook",
   "seed": "20261390",
