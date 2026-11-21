@@ -149,7 +149,7 @@ public final class Playbook {
         /** Everything a comparison may be made on; anything else is a mistake in the file and stops the run. */
         public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
                 "storm", "drawn", "turn", "life", "mana", "opponents", "power", "opp_creatures", "opp_power", "opp_life",
-                "threat", "main", "opp_toughness");
+                "threat", "main", "opp_toughness", "attacking", "unblocked");
         private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
         private static final Pattern COMPARE = Pattern.compile(
                 "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");
@@ -238,7 +238,12 @@ public final class Playbook {
      * (Pact of the Serpent: the cards are the seat's to draw); anything else such a spell asks as it resolves is
      * Forge's to answer. With {@code "own": "face_down"} (since 0.4.7) the one target is a face-down creature of
      * the seat's own that the spell or ability can target: one that is a creature card face up, an unblocked
-     * attacker before a blocked one once blocks are declared, then the greater power face up. A rule's
+     * attacker before a blocked one once blocks are declared, then the greater power face up; with
+     * {@code "own": "attacker"} (0.4.8) it is an attacking creature of the seat's own, an unblocked one first, then
+     * the greater power, and the rule's {@code x} applies as it does with {@code target}. {@code keep} (0.4.8; its
+     * value is {@code "mana"}): in the seat's first main phase, while every {@code when} condition holds, the rules
+     * below are not read and the seat goes to combat with its mana, for a play written for its combat; they are
+     * read in the second main phase. A rule's
      * {@code phase} is {@code main} (either main phase, the default), {@code main1} or {@code main2}, or since
      * 0.4.7 a step of the seat's own combat with an empty stack: {@code attack}, after its attackers are declared,
      * or {@code blocks}, after the blocks. {@code hold}: Forge's
@@ -274,7 +279,7 @@ public final class Playbook {
         public final String aimAt;          // danger: of the opponent judged most dangerous first | any: the best on any opponent's side
         public final int aimMin;            // the least worth of a permanent the rule aims at (mana value; a creature's power if more)
         public final boolean targetSelf;    // play: the spell's one target is the seat itself ("target_player": "self")
-        public final String own;            // play, activate: the one target is a creature of ours of this kind (face_down), chosen by the harness
+        public final String own;            // play, activate: the one target is a creature of ours of this kind (face_down | attacker), chosen by the harness
         public final int divide;            // an aimed spell that divides its X: the most targets (0: not a dividing rule)
         public final int divideMin;         // ... and the fewest worth casting for (default 1)
         public final int index;             // 1-based position in the file, for the counters
@@ -285,21 +290,31 @@ public final class Playbook {
         CastRule(JsonObject o, int index) {
             this.index = index;
             String k = null;
-            for (String candidate : List.of("play", "activate", "hold", "forge")) {
+            for (String candidate : List.of("play", "activate", "hold", "forge", "keep")) {
                 if (o.has(candidate)) {
                     if (k != null) {
-                        throw new IllegalArgumentException("playbook cast rule " + index + " needs exactly one of \"play\", \"activate\", \"hold\" and \"forge\"");
+                        throw new IllegalArgumentException("playbook cast rule " + index + " needs exactly one of \"play\", \"activate\", \"hold\", \"forge\" and \"keep\"");
                     }
                     k = candidate;
                 }
             }
             if (k == null) {
-                throw new IllegalArgumentException("playbook cast rule " + index + " needs one of \"play\", \"activate\", \"hold\" and \"forge\"");
+                throw new IllegalArgumentException("playbook cast rule " + index + " needs one of \"play\", \"activate\", \"hold\", \"forge\" and \"keep\"");
             }
             kind = k;
             boolean hold = "hold".equals(kind);
-            boolean forge = "forge".equals(kind);
-            if (forge) {
+            boolean keep = "keep".equals(kind);
+            boolean forge = "forge".equals(kind) || keep;      // a keep rule is parsed like a forge rule: no cards, only conditions
+            if (keep) {
+                if (!o.get("keep").isJsonPrimitive() || !"mana".equals(o.get("keep").getAsString())) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": \"keep\" takes \"mana\" (the seat passes its first main phase with its mana)");
+                }
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "aim", "aim_at", "aim_min", "divide", "divide_min", "target_player", "own", "wait", "phase")) {
+                    if (o.has(key)) {
+                        throw new IllegalArgumentException("playbook cast rule " + index + ": a keep rule takes only \"when\"");
+                    }
+                }
+            } else if (forge) {
                 if (!o.get("forge").isJsonPrimitive() || !"unnamed".equals(o.get("forge").getAsString())) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": \"forge\" takes \"unnamed\" (Forge's choice among the plays no rule names)");
                 }
@@ -343,8 +358,8 @@ public final class Playbook {
             }
             targetSelf = tp != null;
             own = hold || forge ? null : str(o, "own", null);
-            if (o.has("own") && (own == null || !"face_down".equals(own) || target != null || aim != null || tp != null)) {
-                throw new IllegalArgumentException("playbook cast rule " + index + ": \"own\" takes \"face_down\", on a play or activate rule without \"target\", \"aim\" or \"target_player\"");
+            if (o.has("own") && (own == null || !List.of("face_down", "attacker").contains(own) || target != null || aim != null || tp != null)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"own\" takes \"face_down\" or \"attacker\", on a play or activate rule without \"target\", \"aim\" or \"target_player\"");
             }
             divide = num(o, "divide", 0);
             divideMin = num(o, "divide_min", 1);
@@ -353,7 +368,7 @@ public final class Playbook {
             }
             ability = "play".equals(kind) ? null : str(o, "ability", null);
             times = num(o, "times", 1);
-            phase = hold ? null : str(o, "phase", "main");
+            phase = hold ? null : keep ? "main1" : str(o, "phase", "main");
             beforeLand = !hold && o.has("before_land") && o.get("before_land").isJsonPrimitive() && o.get("before_land").getAsBoolean();
             if (!hold && o.has("x") && o.get("x").isJsonPrimitive()) {
                 String xs = o.get("x").getAsString().trim();
@@ -376,7 +391,7 @@ public final class Playbook {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1, main2, attack or blocks");
             }
             if (forge && isCombat()) {
-                throw new IllegalArgumentException("playbook cast rule " + index + ": a forge rule is for the main phases");
+                throw new IllegalArgumentException("playbook cast rule " + index + ": a forge or keep rule is for the main phases");
             }
             List<Cond> conds = new ArrayList<>();
             for (String c : strings(o.get(hold ? "until" : "when"))) {
@@ -405,6 +420,11 @@ public final class Playbook {
 
         public boolean isForge() {
             return "forge".equals(kind);
+        }
+
+        /** A rule that ends the seat's first main phase with its mana unspent while its conditions hold. */
+        public boolean isKeep() {
+            return "keep".equals(kind);
         }
 
         /** A rule for the seat's own combat: after its attackers are declared ({@code attack}) or after the blocks ({@code blocks}). */

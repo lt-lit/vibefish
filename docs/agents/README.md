@@ -65,10 +65,10 @@ are that session's and have to be replaced by the new session's scratch director
   (numpy): the same question on harness 0.4.0 logs with more counts (creatures, their power, lands, hand, damage
   dealt) and a model fitted on half the games and scored on the other half; nothing beat life + 2 x nonland
   permanents (DESIGN §34).
-- `add_rules.py DECK NAME --at N --rules JSON --note TEXT [--attack JSON] [--on DATE]`: a candidate that is a deck's
-  shipped playbook with cast rules put in before its rule N, keys set on its attack block with `--attack`, and the note
-  at the end of its notes (the Fire Covenant, Pact of the Serpent and Kaust candidates of 2026-11-21 were written with
-  it).
+- `add_rules.py DECK NAME --at N --rules JSON --note TEXT [--attack JSON] [--groups JSON] [--on DATE]`: a candidate
+  that is a deck's shipped playbook with cast rules put in before its rule N, keys set on its attack block with
+  `--attack`, named card lists added with `--groups`, and the note at the end of its notes (the five single-deck
+  candidates of 2026-11-21 were written with it).
 - `add_finish.py DECK [DECK ...] [--finish true|leader|none] [--guard one|table] [--swing danger] [--open]
   [--targets danger] [--block survive] [--name NAME]`: a candidate that is a deck's shipped playbook with a hook on
   its attack (`{"policy": "forge", ...}` for a playbook that leaves the attack to Forge), on its triggers' targets or

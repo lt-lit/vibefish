@@ -300,9 +300,23 @@ option nothing changes for a playbook that was measured without it.
 - `own` (play, activate; harness 0.4.7): `"own": "face_down"` makes the spell's or ability's one target a face-down
   creature of the seat's own, chosen by the harness among those it can legally target: one that is a creature card face
   up (a manifested land is not turned up in combat), an unblocked attacker before any other once blocks are declared (it
-  deals its damage to a player as what it really is), then the greater power face up. A rule takes `target`, `aim`,
-  `target_player` or `own`, one of them. Counters: `cast_own`, `cast_own_unblocked`, `cast_own_blocked`,
-  `cast_own_attacking` (before blocks), `cast_own_none` (no such creature: the rule did not fire).
+  deals its damage to a player as what it really is), then the greater power face up. `"own": "attacker"` (0.4.8)
+  makes it an attacking creature of the seat's own: an unblocked one first once blocks are declared, then the greater
+  power; the rule's `x` applies as it does with `target`, so a mana sink is written
+  `{"activate": ["Kessig Wolf Run"], "own": "attacker", "x": "max", "x_min": 3, "phase": "blocks",
+  "when": ["unblocked >= 1"]}`: after blocks, all the mana that is left into an attacker nobody blocked. Forge's
+  count of the mana left can run far ahead of what its payment then finds (two Regal Behemoths and the monarchy: a
+  count of 28 where the untapped lands paid for four), and a payment that fails loses the play; so for a rule with
+  `own`, when that count is more than three above one mana a source, X is what one mana a source pays for
+  (`cast_x_capped`). A rule takes
+  `target`, `aim`, `target_player` or `own`, one of them. Counters: `cast_own`, `cast_own_unblocked`,
+  `cast_own_blocked`, `cast_own_attacking` (before blocks), `cast_own_none` (no such creature: the rule did not fire).
+- `keep` (harness 0.4.8): `{"keep": "mana", "when": [...]}` is a rule of its own kind. In the seat's first main phase,
+  while every condition holds, the rules below it are not read and the seat goes to combat with its mana unspent; they
+  are read in the second main phase. It is how a playbook pays for a play it has written for its combat: the main-phase
+  rules otherwise spend the mana before the attack. `{"keep": "mana", "when": ["hand:mutation >= 1", "attackers >= 3",
+  "mana >= 7"]}` above `{"play": ["Biomass Mutation"], "x": "max", "x_min": 4, "phase": "blocks",
+  "when": ["unblocked >= 2"]}`. It takes only `when`. Counter: `cast_keep`.
 - `before_land` (play, activate): `true` tries the rule before the turn's land is played as well, while a land can still be played. The rules otherwise run after the land drop, since they all want the mana; a landfall deck wants its payoffs down first so the land triggers them (`{"play": ["Tatyova, Benthic Druid", "Scute Swarm"], "before_land": true}`). Counter: `cast_before_land`.
 - `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it. Since harness 0.3.4 `x` can also be a metric, and X is then that number: `"x": "opp_toughness"` sizes a wipe to the largest creature an opponent has. And an X that is paid in life (Toxic Deluge: "pay X life, all creatures get -X/-X") is the rule's to name the same way; the mana cap does not apply to it, `x_keep_life` (default 10) does: the rule never pays the seat below that much life. `{"play": ["Toxic Deluge"], "x": "opp_toughness", "x_min": 3, "x_keep_life": 12, "when": ["opp_creatures >= 6", "opp_power > power"]}`. A spell that divides its X among targets (Fire Covenant) takes `divide`, above.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:
@@ -324,6 +338,7 @@ option nothing changes for a playbook that was measured without it.
 | `opp_creatures`, `opp_power`, `opp_life` | the most creatures, the most total power, the highest life any one opponent has |
 | `threat` | the most damage one opponent could attack us with next turn |
 | `opp_toughness` | the largest toughness among the opponents' creatures (also as an `x`) |
+| `attacking`, `unblocked` | our creatures in the current combat; those nobody blocked, once blocks are declared (both 0 outside our combat; for rules with a combat `phase`, harness 0.4.8) |
 | `hand:<group>` | cards in hand from a named list: `"cast": {"groups": {"zada_spells": ["Expedite", ...]}, "rules": [...]}`, then `"hand:zada_spells >= 1"` |
 
 A rule that names a card that is not in the deck, an unknown metric or a malformed condition stops the harness before

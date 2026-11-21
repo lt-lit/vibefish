@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""add_rules.py DECK NAME --at N --rules JSON --note TEXT [--attack JSON] [--on DATE]: a candidate that is a deck's shipped
-playbook with cast rules added. A session helper.
+"""add_rules.py DECK NAME --at N --rules JSON --note TEXT [--attack JSON] [--groups JSON] [--on DATE]: a candidate that is
+a deck's shipped playbook with cast rules added. A session helper.
 
 playbook/variants/DECK-NAME.json: the shipped playbook of playbook/precons/DECK.json, its version plus one, with the rules of
 --rules (a JSON list of cast rules, playbook/README.md) put in before the shipped rule number N (1-based, as the rule trace
 and the counters number them; N one past the last rule appends). With --attack (a JSON object) those keys are set on the
 attack block as well; a playbook that leaves the attack to Forge gets `{"policy": "forge", ...}`, Forge's own attack followed
-by what the keys ask for. Nothing else is changed; the notes are the shipped notes with --note at the end, which should say
+by what the keys ask for. With --groups (a JSON object of named card lists) those are added to `cast.groups`, for a
+`hand:<group>` condition. Nothing else is changed; the notes are the shipped notes with --note at the end, which should say
 what the rules are for and what they were tried on.
 """
 import argparse, copy, json, os, sys
@@ -21,6 +22,7 @@ def main(argv):
     ap.add_argument("--rules", required=True)
     ap.add_argument("--note", required=True)
     ap.add_argument("--attack")
+    ap.add_argument("--groups")
     ap.add_argument("--on", default="")
     a = ap.parse_args(argv)
     base = json.load(open(os.path.join(ROOT, "playbook", "precons", f"{a.deck}.json"), encoding="utf-8"))["playbook"]
@@ -35,6 +37,11 @@ def main(argv):
     pb["cast"]["rules"] = rules[:a.at - 1] + new + rules[a.at - 1:]
     pb.pop("on", None)
     attack_note = ""
+    if a.groups:
+        groups = json.loads(a.groups)
+        if not isinstance(groups, dict) or not groups:
+            ap.error("--groups is a JSON object of named card lists")
+        pb["cast"] = {"groups": {**(base["cast"].get("groups") or {}), **groups}, **{k: v for k, v in pb["cast"].items() if k != "groups"}}
     if a.attack:
         extra = json.loads(a.attack)
         if not isinstance(extra, dict) or not extra:

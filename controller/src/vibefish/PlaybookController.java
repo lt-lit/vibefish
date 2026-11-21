@@ -1467,6 +1467,7 @@ public class PlaybookController extends PlayerControllerAi {
     private Card castAimed;                 // the opponent's permanent the last aimed rule chose (for the trace and the counters)
     private String castDivided;             // what the last dividing rule chose: X and each target's share (null: not a dividing cast)
     private Card castOwn;                   // the creature of ours the last "own" rule chose (for the trace)
+    private int xPaid = -1;                 // the X the last ready() set (-1: none), for the trace
     private int castDividedTargets;
     private int castDividedX;
     private boolean castWaiting;            // a forge rule with "wait" stopped the rules for this decision: the seat passes
@@ -1881,6 +1882,13 @@ public class PlaybookController extends PlayerControllerAi {
             if (rule.isHold() || (beforeLandOnly && !rule.beforeLand) || !phaseFits(rule, ph) || !allHold(rule.when)) {
                 continue;
             }
+            if (rule.isKeep()) {
+                // The playbook keeps its mana for its combat: nothing below this rule is read in the first main phase.
+                count("cast_keep", 1);
+                trace("rule " + rule.index + " keeps the mana for combat; the rules below wait for the second main phase");
+                castWaiting = true;
+                return null;
+            }
             if (rule.isForge()) {
                 // Forge's own pick among the plays no rule names, at this place in the order instead of after every rule.
                 SpellAbility sa = forgeUnnamed(cast);
@@ -1932,6 +1940,7 @@ public class PlaybookController extends PlayerControllerAi {
                         castAimed = null;
                         castDivided = null;
                         castOwn = null;
+                        xPaid = -1;
                         SpellAbility sa = activatable(c, rule.ability, target, rule);
                         if (sa != null) {
                             castActivations.merge(c.getId(), 1, Integer::sum);
@@ -1939,7 +1948,7 @@ public class PlaybookController extends PlayerControllerAi {
                             count("cast_rule_" + rule.index, 1);
                             countAim(rule);
                             countOwn();
-                            trace("rule " + rule.index + " activates " + name + ": " + sa + aimText() + ownText());
+                            trace("rule " + rule.index + " activates " + name + ": " + sa + aimText() + ownText() + (xPaid >= 0 ? ", X " + xPaid : ""));
                             return sa;
                         }
                     }
@@ -2011,7 +2020,9 @@ public class PlaybookController extends PlayerControllerAi {
         }
         Combat combat = getGame().getPhaseHandler().getCombat();
         String where = combat == null || !combat.isAttacking(castOwn) ? "" : combat.isUnblocked(castOwn) ? ", unblocked" : combat.isBlocked(castOwn) ? ", blocked" : ", attacking";
-        return " on our face-down " + castOwn.getState(forge.card.CardStateName.Original).getName() + " (power " + faceUpPower(castOwn) + " face up" + where + ")";
+        return castOwn.isFaceDown()
+                ? " on our face-down " + castOwn.getState(forge.card.CardStateName.Original).getName() + " (power " + faceUpPower(castOwn) + " face up" + where + ")"
+                : " on our " + castOwn.getName() + " (power " + castOwn.getNetPower() + where + ")";
     }
 
     private String aimText() {
@@ -2089,8 +2100,9 @@ public class PlaybookController extends PlayerControllerAi {
         if (target == null && rule.aim != null && rule.divide > 0) {
             return readyDivided(sa, rule);
         }
-        if (rule.own != null) {
-            // The rule aims at a creature of the seat's own, chosen here: the one part that takes a target says which are legal.
+        if (rule.own != null && target == null) {
+            // The rule aims at a creature of the seat's own, chosen here: the one part that takes a target says which
+            // are legal. From there on it is a rule with a target (its X, its cost).
             SpellAbility part = null;
             int parts = 0;
             for (SpellAbility p = sa; p != null; p = p.getSubAbility()) {
@@ -2103,20 +2115,12 @@ public class PlaybookController extends PlayerControllerAi {
                 return false;
             }
             part.setActivatingPlayer(player);
-            castRetargeted = true;
-            part.resetTargets();
-            Card mine = ownTarget(part, rule);
-            if (mine == null) {
+            target = ownTarget(part, rule);
+            if (target == null) {
                 count("cast_own_none", 1);
                 return false;
             }
-            part.getTargets().add(mine);
-            if (!part.isTargetNumberValid() || !ComputerUtilCost.canPayCost(sa, player, false)) {
-                part.resetTargets();
-                return false;
-            }
-            castOwn = mine;
-            return true;
+            castOwn = target;
         }
         if (rule.targetSelf) {
             // The rule aims the spell at the seat itself: the one part that takes a target must take a player.
@@ -2211,6 +2215,24 @@ public class PlaybookController extends PlayerControllerAi {
             SpellAbility root = sa.getRootAbility();
             int want = rule.xMetric == null ? rule.x : metric(rule.xMetric);
             int most = manaX ? ComputerUtilCost.setMaxXValue(sa, player, false) : player.getLife() - rule.xKeepLife;
+            if (manaX && rule.own != null) {
+                // Forge's count of the mana left can run far ahead of what its payment finds (two Regal Behemoths and the
+                // monarchy: 28 where thirteen lands paid for ten), and a payment that fails loses the play. When the count
+                // is well above one mana a source, X is what one mana a source pays for.
+                Card xHost = sa.getHostCard();
+                boolean tapsHost = sa.getPayCosts() != null && sa.getPayCosts().hasTapCost();
+                int sources = 0;
+                for (Card c : player.getCardsIn(ZoneType.Battlefield)) {
+                    if (c.isUntapped() && !c.getManaAbilities().isEmpty() && !(c.isCreature() && c.isSick()) && !(tapsHost && c == xHost)) {
+                        sources++;
+                    }
+                }
+                int plain = sources - (sa.getPayCosts() == null || sa.getPayCosts().getTotalMana() == null ? 0 : sa.getPayCosts().getTotalMana().getCMC());
+                if (most > plain + 3) {
+                    most = Math.max(0, plain);
+                    count("cast_x_capped", 1);
+                }
+            }
             int x = Math.min(most, want);
             if (x < Math.max(rule.xMin, 0)) {
                 root.setXManaCostPaid(null);
@@ -2221,6 +2243,7 @@ public class PlaybookController extends PlayerControllerAi {
             }
             root.setXManaCostPaid(x);
             paidX = root;
+            xPaid = x;
         } else if (target == null && (sa.usesTargeting() || subTargets(sa) || hasX)) {
             castRetargeted = true;                      // Forge's logic chooses the targets (and X) afresh
             if (getAi().canPlaySa(sa) != AiPlayDecision.WillPlay) {
@@ -2413,20 +2436,26 @@ public class PlaybookController extends PlayerControllerAi {
     }
 
     /**
-     * The face-down creature of the seat's own that a rule with {@code "own": "face_down"} turns face up: a legal
-     * target of the spell or ability that is a creature card face up; once blocks are declared an unblocked attacker
-     * before any other (it then deals its damage to a player as what it really is), then the greater power face up.
+     * The creature of the seat's own that a rule with {@code own} points at. {@code face_down}: a face-down creature
+     * that is a creature card face up; once blocks are declared an unblocked attacker before any other (it then
+     * deals its damage to a player as what it really is), then the greater power face up. {@code attacker}: an
+     * attacking creature, an unblocked one first, then the greater power. Always a legal target of the spell or
+     * ability.
      */
     private Card ownTarget(SpellAbility part, Playbook.CastRule rule) {
         Combat combat = getGame().getPhaseHandler().getCombat();
+        boolean attackers = "attacker".equals(rule.own);        // an attacking creature of ours; else a face-down one
         Card best = null;
         int bestScore = Integer.MIN_VALUE;
         for (Card c : player.getCardsIn(ZoneType.Battlefield)) {
-            if (!c.isFaceDown() || faceUpPower(c) < 0 || !part.canTarget(c)) {
+            if (attackers ? (combat == null || !c.isCreature() || !combat.isAttacking(c)) : (!c.isFaceDown() || faceUpPower(c) < 0)) {
+                continue;
+            }
+            if (!part.canTarget(c)) {
                 continue;
             }
             boolean unblocked = combat != null && combat.isAttacking(c) && combat.isUnblocked(c);
-            int score = (unblocked ? 1000 : 0) + faceUpPower(c);
+            int score = (unblocked ? 1000 : 0) + (attackers ? c.getNetPower() : faceUpPower(c));
             if (score > bestScore) {
                 best = c;
                 bestScore = score;
@@ -2584,6 +2613,19 @@ public class PlaybookController extends PlayerControllerAi {
                 int n = 0;
                 for (Card c : player.getCreaturesInPlay()) {
                     n += c.isUntapped() && !c.isSick() ? 1 : 0;
+                }
+                return n;
+            }
+            case "attacking":
+            case "unblocked": {                         // our creatures in the current combat; unblocked ones once blocks are declared
+                Combat combat = getGame().getPhaseHandler().getCombat();
+                int n = 0;
+                if (combat != null) {
+                    for (Card c : combat.getAttackers()) {
+                        if (c.getController() == player && ("attacking".equals(name) || combat.isUnblocked(c))) {
+                            n++;
+                        }
+                    }
                 }
                 return n;
             }
