@@ -9,7 +9,7 @@ This is the engine. Decks, playbooks and results for your own decks live in a se
 are passed in by path; `demo-data/` holds the public benchmark-pod results. Read [`DESIGN.md`](DESIGN.md)
 for the full picture.
 
-**Status (2026-11-20):** twenty-two precons have a per-deck bot: a playbook for one deck that says which card to cast
+**Status (2026-11-21):** twenty-two precons have a per-deck bot: a playbook for one deck that says which card to cast
 when and aimed at what, which of the deck's optional triggers to take, and when to use its board wipes and removal;
 three of them also choose their own attacks, and everything else stays Forge's. Each has been set against the same
 deck under Forge's stock AI at 200 four-player tables whose other three seats are bots too, on tables that chose
