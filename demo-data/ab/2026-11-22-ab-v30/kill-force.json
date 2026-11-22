@@ -1,0 +1,1604 @@
+{
+ "kind": "kill-force",
+ "run": "ab-run #62 (seed 20261450 on runner/leagues/bots-v2.json): the seat under test of the five pool decks that had no hook, under its shipped playbook, with the four hooks, and with free damage as well, 200 tables each",
+ "what": "The sure kills that the seat under test missed (runner/mistakes.py), by what the attack it declared was worth: not gone for (no attacker at an opponent it was sure to kill); declared attack not enough (the defender's block line has its best blocks leaving it alive: `best` under its life); lethal as declared, survived (`best` at or over its life, and the opponent did not lose that turn). `top` is the most dangerous of several opponents, `last` the last one, `lesser` a less dangerous one. The first two kinds for `top` are the seat's own shortfall of clause 1(c) of the run's rule (CLAUDE.md, In flight; DESIGN.md section 40); rows list the `top` and `last` turns.",
+ "arms": {
+  "shipped": {
+   "arm": "shipped",
+   "split": {
+    "top": {
+     "declared attack not enough": 8,
+     "not gone for": 14,
+     "lethal as declared, survived": 2
+    },
+    "last": {
+     "declared attack not enough": 4,
+     "lethal as declared, survived": 1,
+     "no block line": 1
+    },
+    "lesser": {
+     "not gone for": 305,
+     "declared attack not enough": 8,
+     "lethal as declared, survived": 1
+    }
+   },
+   "top_by_deck": {
+    "token-triumph": {
+     "declared attack not enough": 1,
+     "not gone for": 5
+    },
+    "tricky-terrain": {
+     "not gone for": 6,
+     "declared attack not enough": 7,
+     "lethal as declared, survived": 2
+    },
+    "planeswalker-party": {
+     "not gone for": 1
+    },
+    "elven-council": {
+     "not gone for": 2
+    }
+   },
+   "rows": [
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 10,
+     "t": 28,
+     "where": "arm-playbook/g0024/games/game-001.events.jsonl",
+     "sent": {
+      "1": 8
+     },
+     "need": [
+      [
+       1,
+       36,
+       41
+      ],
+      [
+       2,
+       38,
+       41
+      ]
+     ],
+     "block": {
+      "1": [
+       36,
+       30,
+       30
+      ]
+     },
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 6,
+     "t": 55,
+     "where": "arm-playbook/g0061/games/game-001.events.jsonl",
+     "sent": {
+      "2": 2
+     },
+     "need": [
+      [
+       1,
+       30,
+       31
+      ]
+     ],
+     "block": {},
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 9,
+     "t": 53,
+     "where": "arm-playbook/g0071/games/game-001.events.jsonl",
+     "sent": {
+      "1": 1
+     },
+     "need": [
+      [
+       3,
+       26,
+       28
+      ]
+     ],
+     "block": {},
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 10,
+     "t": 21,
+     "where": "arm-playbook/g0072/games/game-001.events.jsonl",
+     "sent": {
+      "1": 9
+     },
+     "need": [
+      [
+       0,
+       38,
+       38
+      ],
+      [
+       2,
+       38,
+       38
+      ]
+     ],
+     "block": {},
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 5,
+     "t": 67,
+     "where": "arm-playbook/g0162/games/game-001.events.jsonl",
+     "sent": {
+      "0": 5
+     },
+     "need": [
+      [
+       2,
+       22,
+       36
+      ]
+     ],
+     "block": {},
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 6,
+     "t": 31,
+     "where": "arm-playbook/g0164/games/game-001.events.jsonl",
+     "sent": {
+      "2": 6
+     },
+     "need": [
+      [
+       0,
+       33,
+       45
+      ],
+      [
+       1,
+       38,
+       45
+      ]
+     ],
+     "block": {},
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "last",
+     "kind": "declared attack not enough",
+     "able": 4,
+     "t": 53,
+     "where": "arm-playbook/g0178/games/game-001.events.jsonl",
+     "sent": {
+      "2": 4
+     },
+     "need": [
+      [
+       2,
+       14,
+       14
+      ]
+     ],
+     "block": {
+      "2": [
+       11,
+       9,
+       2
+      ]
+     },
+     "deck": "hail-caesar"
+    },
+    {
+     "stood": "last",
+     "kind": "lethal as declared, survived",
+     "able": 4,
+     "t": 55,
+     "where": "arm-playbook/g0178/games/game-001.events.jsonl",
+     "sent": {
+      "2": 3
+     },
+     "need": [
+      [
+       2,
+       6,
+       14
+      ]
+     ],
+     "block": {
+      "2": [
+       1,
+       1,
+       1
+      ]
+     },
+     "deck": "hail-caesar"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 9,
+     "t": 30,
+     "where": "arm-playbook/g0010/games/game-001.events.jsonl",
+     "sent": {
+      "3": 8
+     },
+     "need": [
+      [
+       2,
+       25,
+       31
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 3,
+     "t": 52,
+     "where": "arm-playbook/g0025/games/game-001.events.jsonl",
+     "sent": {
+      "2": 1
+     },
+     "need": [
+      [
+       1,
+       21,
+       29
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 14,
+     "t": 55,
+     "where": "arm-playbook/g0036/games/game-001.events.jsonl",
+     "sent": {
+      "1": 12
+     },
+     "need": [
+      [
+       1,
+       10,
+       11
+      ],
+      [
+       2,
+       7,
+       10
+      ]
+     ],
+     "block": {
+      "1": [
+       10,
+       9,
+       9
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 4,
+     "t": 42,
+     "where": "arm-playbook/g0050/games/game-001.events.jsonl",
+     "sent": {
+      "3": 3
+     },
+     "need": [
+      [
+       3,
+       19,
+       21
+      ],
+      [
+       0,
+       14,
+       20
+      ]
+     ],
+     "block": {
+      "3": [
+       19,
+       6,
+       6
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "lethal as declared, survived",
+     "able": 24,
+     "t": 59,
+     "where": "arm-playbook/g0079/games/game-001.events.jsonl",
+     "sent": {
+      "3": 20,
+      "1": 2
+     },
+     "need": [
+      [
+       3,
+       14,
+       17
+      ],
+      [
+       0,
+       3,
+       20
+      ],
+      [
+       1,
+       14,
+       16
+      ]
+     ],
+     "block": {
+      "3": [
+       14,
+       14,
+       14
+      ],
+      "1": [
+       14,
+       0,
+       0
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 5,
+     "t": 57,
+     "where": "arm-playbook/g0088/games/game-001.events.jsonl",
+     "sent": {
+      "1": 3
+     },
+     "need": [
+      [
+       0,
+       7,
+       21
+      ],
+      [
+       1,
+       10,
+       21
+      ]
+     ],
+     "block": {
+      "1": [
+       10,
+       1,
+       1
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 15,
+     "t": 41,
+     "where": "arm-playbook/g0089/games/game-001.events.jsonl",
+     "sent": {
+      "3": 13
+     },
+     "need": [
+      [
+       1,
+       10,
+       12
+      ],
+      [
+       2,
+       4,
+       26
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "last",
+     "kind": "declared attack not enough",
+     "able": 20,
+     "t": 45,
+     "where": "arm-playbook/g0089/games/game-001.events.jsonl",
+     "sent": {
+      "3": 18
+     },
+     "need": [
+      [
+       3,
+       22,
+       37
+      ]
+     ],
+     "block": {
+      "3": [
+       22,
+       18,
+       18
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 26,
+     "t": 33,
+     "where": "arm-playbook/g0103/games/game-001.events.jsonl",
+     "sent": {
+      "3": 24
+     },
+     "need": [
+      [
+       0,
+       29,
+       31
+      ],
+      [
+       1,
+       26,
+       29
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 7,
+     "t": 34,
+     "where": "arm-playbook/g0116/games/game-001.events.jsonl",
+     "sent": {
+      "1": 6
+     },
+     "need": [
+      [
+       0,
+       9,
+       14
+      ],
+      [
+       1,
+       13,
+       14
+      ]
+     ],
+     "block": {
+      "1": [
+       13,
+       5,
+       5
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "lethal as declared, survived",
+     "able": 8,
+     "t": 40,
+     "where": "arm-playbook/g0122/games/game-001.events.jsonl",
+     "sent": {
+      "0": 6
+     },
+     "need": [
+      [
+       3,
+       10,
+       10
+      ],
+      [
+       0,
+       11,
+       28
+      ]
+     ],
+     "block": {
+      "0": [
+       11,
+       11,
+       11
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 17,
+     "t": 83,
+     "where": "arm-playbook/g0123/games/game-001.events.jsonl",
+     "sent": {
+      "0": 16
+     },
+     "need": [
+      [
+       0,
+       12,
+       12
+      ],
+      [
+       1,
+       6,
+       12
+      ]
+     ],
+     "block": {
+      "0": [
+       12,
+       11,
+       11
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 16,
+     "t": 33,
+     "where": "arm-playbook/g0124/games/game-001.events.jsonl",
+     "sent": {
+      "2": 14
+     },
+     "need": [
+      [
+       0,
+       11,
+       24
+      ],
+      [
+       2,
+       22,
+       24
+      ]
+     ],
+     "block": {
+      "2": [
+       29,
+       24,
+       18
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "last",
+     "kind": "no block line",
+     "able": 26,
+     "t": 68,
+     "where": "arm-playbook/g0138/games/game-001.events.jsonl",
+     "sent": {
+      "0": 26
+     },
+     "need": [
+      [
+       0,
+       10,
+       38
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 27,
+     "t": 38,
+     "where": "arm-playbook/g0141/games/game-001.events.jsonl",
+     "sent": {
+      "2": 25
+     },
+     "need": [
+      [
+       1,
+       11,
+       52
+      ],
+      [
+       2,
+       30,
+       36
+      ],
+      [
+       3,
+       6,
+       60
+      ]
+     ],
+     "block": {
+      "2": [
+       30,
+       28,
+       28
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 8,
+     "t": 42,
+     "where": "arm-playbook/g0141/games/game-001.events.jsonl",
+     "sent": {
+      "1": 7
+     },
+     "need": [
+      [
+       3,
+       5,
+       6
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 8,
+     "t": 32,
+     "where": "arm-playbook/g0147/games/game-001.events.jsonl",
+     "sent": {
+      "3": 8
+     },
+     "need": [
+      [
+       0,
+       27,
+       29
+      ],
+      [
+       1,
+       26,
+       29
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "last",
+     "kind": "declared attack not enough",
+     "able": 18,
+     "t": 43,
+     "where": "arm-playbook/g0169/games/game-001.events.jsonl",
+     "sent": {
+      "2": 16
+     },
+     "need": [
+      [
+       2,
+       20,
+       21
+      ]
+     ],
+     "block": {
+      "2": [
+       20,
+       12,
+       8
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "last",
+     "kind": "declared attack not enough",
+     "able": 8,
+     "t": 54,
+     "where": "arm-playbook/g0185/games/game-001.events.jsonl",
+     "sent": {
+      "2": 6
+     },
+     "need": [
+      [
+       2,
+       9,
+       26
+      ]
+     ],
+     "block": {
+      "2": [
+       9,
+       2,
+       2
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 8,
+     "t": 47,
+     "where": "arm-playbook/g0177/games/game-001.events.jsonl",
+     "sent": {},
+     "need": [
+      [
+       2,
+       8,
+       8
+      ]
+     ],
+     "block": {},
+     "deck": "planeswalker-party"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 4,
+     "t": 32,
+     "where": "arm-playbook/g0099/games/game-001.events.jsonl",
+     "sent": {},
+     "need": [
+      [
+       0,
+       20,
+       27
+      ]
+     ],
+     "block": {},
+     "deck": "elven-council"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 8,
+     "t": 38,
+     "where": "arm-playbook/g0128/games/game-001.events.jsonl",
+     "sent": {
+      "0": 8
+     },
+     "need": [
+      [
+       2,
+       24,
+       332
+      ]
+     ],
+     "block": {},
+     "deck": "elven-council"
+    }
+   ]
+  },
+  "hooks": {
+   "arm": "hooks",
+   "split": {
+    "top": {
+     "declared attack not enough": 7,
+     "not gone for": 2,
+     "lethal as declared, survived": 1
+    },
+    "last": {
+     "lethal as declared, survived": 2,
+     "declared attack not enough": 2,
+     "no block line": 1
+    },
+    "lesser": {
+     "not gone for": 284,
+     "declared attack not enough": 10,
+     "lethal as declared, survived": 2
+    }
+   },
+   "top_by_deck": {
+    "token-triumph": {
+     "declared attack not enough": 4,
+     "not gone for": 1
+    },
+    "tricky-terrain": {
+     "declared attack not enough": 2,
+     "lethal as declared, survived": 1
+    },
+    "planeswalker-party": {
+     "declared attack not enough": 1
+    },
+    "elven-council": {
+     "not gone for": 1
+    }
+   },
+   "rows": [
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 10,
+     "t": 28,
+     "where": "arm-playbook/g0024/games/game-001.events.jsonl",
+     "sent": {
+      "1": 8
+     },
+     "need": [
+      [
+       1,
+       36,
+       41
+      ],
+      [
+       2,
+       38,
+       41
+      ]
+     ],
+     "block": {
+      "1": [
+       36,
+       30,
+       30
+      ]
+     },
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 8,
+     "t": 26,
+     "where": "arm-playbook/g0058/games/game-001.events.jsonl",
+     "sent": {
+      "3": 8
+     },
+     "need": [
+      [
+       3,
+       11,
+       11
+      ],
+      [
+       0,
+       7,
+       15
+      ]
+     ],
+     "block": {
+      "3": [
+       13,
+       11,
+       11
+      ]
+     },
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 10,
+     "t": 21,
+     "where": "arm-playbook/g0072/games/game-001.events.jsonl",
+     "sent": {
+      "1": 9
+     },
+     "need": [
+      [
+       0,
+       38,
+       38
+      ],
+      [
+       2,
+       38,
+       38
+      ]
+     ],
+     "block": {},
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 20,
+     "t": 71,
+     "where": "arm-playbook/g0143/games/game-001.events.jsonl",
+     "sent": {
+      "0": 20
+     },
+     "need": [
+      [
+       0,
+       7,
+       18
+      ]
+     ],
+     "block": {
+      "0": [
+       7,
+       3,
+       0
+      ]
+     },
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 58,
+     "t": 54,
+     "where": "arm-playbook/g0174/games/game-001.events.jsonl",
+     "sent": {
+      "2": 7
+     },
+     "need": [
+      [
+       2,
+       9,
+       536
+      ]
+     ],
+     "block": {
+      "2": [
+       9,
+       0,
+       0
+      ]
+     },
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "last",
+     "kind": "lethal as declared, survived",
+     "able": 19,
+     "t": 59,
+     "where": "arm-playbook/g0056/games/game-001.events.jsonl",
+     "sent": {
+      "1": 19
+     },
+     "need": [
+      [
+       1,
+       17,
+       23
+      ]
+     ],
+     "block": {
+      "1": [
+       1,
+       2,
+       6
+      ]
+     },
+     "deck": "hail-caesar"
+    },
+    {
+     "stood": "last",
+     "kind": "declared attack not enough",
+     "able": 37,
+     "t": 75,
+     "where": "arm-playbook/g0004/games/game-001.events.jsonl",
+     "sent": {
+      "2": 37
+     },
+     "need": [
+      [
+       2,
+       33,
+       34
+      ]
+     ],
+     "block": {
+      "2": [
+       33,
+       28,
+       4
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 14,
+     "t": 55,
+     "where": "arm-playbook/g0017/games/game-001.events.jsonl",
+     "sent": {
+      "2": 3,
+      "3": 11
+     },
+     "need": [
+      [
+       1,
+       7,
+       14
+      ],
+      [
+       2,
+       10,
+       50
+      ],
+      [
+       3,
+       18,
+       23
+      ]
+     ],
+     "block": {
+      "2": [
+       10,
+       1,
+       1
+      ],
+      "3": [
+       18,
+       13,
+       13
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 16,
+     "t": 33,
+     "where": "arm-playbook/g0124/games/game-001.events.jsonl",
+     "sent": {
+      "2": 16
+     },
+     "need": [
+      [
+       0,
+       19,
+       24
+      ],
+      [
+       2,
+       22,
+       24
+      ]
+     ],
+     "block": {
+      "2": [
+       33,
+       25,
+       24
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "last",
+     "kind": "no block line",
+     "able": 26,
+     "t": 68,
+     "where": "arm-playbook/g0138/games/game-001.events.jsonl",
+     "sent": {
+      "0": 26
+     },
+     "need": [
+      [
+       0,
+       10,
+       38
+      ]
+     ],
+     "block": {},
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "lethal as declared, survived",
+     "able": 10,
+     "t": 50,
+     "where": "arm-playbook/g0185/games/game-001.events.jsonl",
+     "sent": {
+      "2": 5,
+      "3": 5
+     },
+     "need": [
+      [
+       2,
+       8,
+       40
+      ],
+      [
+       3,
+       11,
+       30
+      ]
+     ],
+     "block": {
+      "2": [
+       8,
+       15,
+       15
+      ],
+      "3": [
+       11,
+       5,
+       5
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 10,
+     "t": 57,
+     "where": "arm-playbook/g0044/games/game-001.events.jsonl",
+     "sent": {
+      "0": 6,
+      "1": 4
+     },
+     "need": [
+      [
+       0,
+       15,
+       29
+      ],
+      [
+       1,
+       13,
+       33
+      ],
+      [
+       2,
+       21,
+       33
+      ]
+     ],
+     "block": {
+      "0": [
+       21,
+       17,
+       17
+      ],
+      "1": [
+       13,
+       12,
+       12
+      ]
+     },
+     "deck": "planeswalker-party"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 3,
+     "t": 68,
+     "where": "arm-playbook/g0092/games/game-001.events.jsonl",
+     "sent": {
+      "0": 3
+     },
+     "need": [
+      [
+       1,
+       14,
+       60
+      ]
+     ],
+     "block": {},
+     "deck": "elven-council"
+    },
+    {
+     "stood": "last",
+     "kind": "lethal as declared, survived",
+     "able": 14,
+     "t": 47,
+     "where": "arm-playbook/g0161/games/game-001.events.jsonl",
+     "sent": {
+      "3": 14
+     },
+     "need": [
+      [
+       3,
+       16,
+       16
+      ]
+     ],
+     "block": {
+      "3": [
+       16,
+       16,
+       16
+      ]
+     },
+     "deck": "elven-council"
+    },
+    {
+     "stood": "last",
+     "kind": "declared attack not enough",
+     "able": 8,
+     "t": 70,
+     "where": "arm-playbook/g0164/games/game-001.events.jsonl",
+     "sent": {
+      "2": 7
+     },
+     "need": [
+      [
+       2,
+       9,
+       10
+      ]
+     ],
+     "block": {
+      "2": [
+       15,
+       9,
+       9
+      ]
+     },
+     "deck": "elven-council"
+    }
+   ]
+  },
+  "hooksopen": {
+   "arm": "hooksopen",
+   "split": {
+    "top": {
+     "declared attack not enough": 5,
+     "lethal as declared, survived": 2,
+     "not gone for": 1
+    },
+    "last": {
+     "lethal as declared, survived": 2,
+     "declared attack not enough": 1
+    },
+    "lesser": {
+     "not gone for": 273,
+     "declared attack not enough": 26,
+     "lethal as declared, survived": 1
+    }
+   },
+   "top_by_deck": {
+    "token-triumph": {
+     "declared attack not enough": 1,
+     "lethal as declared, survived": 1
+    },
+    "tricky-terrain": {
+     "declared attack not enough": 1
+    },
+    "planeswalker-party": {
+     "declared attack not enough": 1
+    },
+    "elven-council": {
+     "declared attack not enough": 2,
+     "not gone for": 1,
+     "lethal as declared, survived": 1
+    }
+   },
+   "rows": [
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 8,
+     "t": 26,
+     "where": "arm-playbook/g0058/games/game-001.events.jsonl",
+     "sent": {
+      "3": 8
+     },
+     "need": [
+      [
+       3,
+       11,
+       11
+      ],
+      [
+       0,
+       7,
+       15
+      ]
+     ],
+     "block": {
+      "3": [
+       13,
+       11,
+       11
+      ]
+     },
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "top",
+     "kind": "lethal as declared, survived",
+     "able": 16,
+     "t": 61,
+     "where": "arm-playbook/g0185/games/game-001.events.jsonl",
+     "sent": {
+      "3": 16
+     },
+     "need": [
+      [
+       1,
+       31,
+       51
+      ],
+      [
+       2,
+       14,
+       56
+      ],
+      [
+       3,
+       30,
+       35
+      ]
+     ],
+     "block": {
+      "3": [
+       30,
+       35,
+       35
+      ]
+     },
+     "deck": "token-triumph"
+    },
+    {
+     "stood": "last",
+     "kind": "lethal as declared, survived",
+     "able": 5,
+     "t": 44,
+     "where": "arm-playbook/g0027/games/game-001.events.jsonl",
+     "sent": {
+      "3": 5
+     },
+     "need": [
+      [
+       3,
+       2,
+       4
+      ]
+     ],
+     "block": {
+      "3": [
+       2,
+       4,
+       4
+      ]
+     },
+     "deck": "hail-caesar"
+    },
+    {
+     "stood": "last",
+     "kind": "lethal as declared, survived",
+     "able": 19,
+     "t": 59,
+     "where": "arm-playbook/g0056/games/game-001.events.jsonl",
+     "sent": {
+      "1": 19
+     },
+     "need": [
+      [
+       1,
+       17,
+       23
+      ]
+     ],
+     "block": {
+      "1": [
+       1,
+       2,
+       6
+      ]
+     },
+     "deck": "hail-caesar"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 16,
+     "t": 33,
+     "where": "arm-playbook/g0124/games/game-001.events.jsonl",
+     "sent": {
+      "2": 16
+     },
+     "need": [
+      [
+       0,
+       19,
+       24
+      ],
+      [
+       2,
+       22,
+       24
+      ]
+     ],
+     "block": {
+      "2": [
+       33,
+       25,
+       24
+      ]
+     },
+     "deck": "tricky-terrain"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 10,
+     "t": 57,
+     "where": "arm-playbook/g0044/games/game-001.events.jsonl",
+     "sent": {
+      "0": 6,
+      "1": 4
+     },
+     "need": [
+      [
+       0,
+       15,
+       29
+      ],
+      [
+       1,
+       13,
+       33
+      ],
+      [
+       2,
+       21,
+       33
+      ]
+     ],
+     "block": {
+      "0": [
+       21,
+       17,
+       17
+      ],
+      "1": [
+       13,
+       12,
+       12
+      ]
+     },
+     "deck": "planeswalker-party"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 4,
+     "t": 55,
+     "where": "arm-playbook/g0004/games/game-001.events.jsonl",
+     "sent": {
+      "2": 4
+     },
+     "need": [
+      [
+       2,
+       5,
+       5
+      ]
+     ],
+     "block": {
+      "2": [
+       5,
+       0,
+       0
+      ]
+     },
+     "deck": "elven-council"
+    },
+    {
+     "stood": "top",
+     "kind": "not gone for",
+     "able": 3,
+     "t": 68,
+     "where": "arm-playbook/g0092/games/game-001.events.jsonl",
+     "sent": {
+      "0": 3
+     },
+     "need": [
+      [
+       1,
+       14,
+       60
+      ]
+     ],
+     "block": {},
+     "deck": "elven-council"
+    },
+    {
+     "stood": "last",
+     "kind": "declared attack not enough",
+     "able": 13,
+     "t": 41,
+     "where": "arm-playbook/g0159/games/game-001.events.jsonl",
+     "sent": {
+      "0": 13
+     },
+     "need": [
+      [
+       0,
+       34,
+       38
+      ]
+     ],
+     "block": {
+      "0": [
+       34,
+       29,
+       14
+      ]
+     },
+     "deck": "elven-council"
+    },
+    {
+     "stood": "top",
+     "kind": "declared attack not enough",
+     "able": 5,
+     "t": 46,
+     "where": "arm-playbook/g0184/games/game-001.events.jsonl",
+     "sent": {
+      "0": 5
+     },
+     "need": [
+      [
+       0,
+       41,
+       44
+      ],
+      [
+       1,
+       19,
+       44
+      ]
+     ],
+     "block": {
+      "0": [
+       41,
+       34,
+       34
+      ]
+     },
+     "deck": "elven-council"
+    },
+    {
+     "stood": "top",
+     "kind": "lethal as declared, survived",
+     "able": 5,
+     "t": 63,
+     "where": "arm-playbook/g0200/games/game-001.events.jsonl",
+     "sent": {
+      "0": 5
+     },
+     "need": [
+      [
+       0,
+       8,
+       8
+      ],
+      [
+       2,
+       8,
+       8
+      ]
+     ],
+     "block": {
+      "0": [
+       8,
+       8,
+       8
+      ]
+     },
+     "deck": "elven-council"
+    }
+   ]
+  }
+ }
+}
