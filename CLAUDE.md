@@ -447,8 +447,8 @@ Two Actions runs, queued together on 2026-11-22 at 23:33 UTC by one push to `tes
 
 | Run | Run id | Seed and table | What plays | What it decides |
 |---|---|---|---|---|
-| `league-run` #6 | the `league-run` started by the push of 2026-11-22 23:33 UTC (its id is in the next commit) | 20261440 on `runner/leagues/bots-v2.json`, 50 cycles: 600 games in 20 shards, 200 a deck | every seat a pool deck under the playbook shipped on 2026-11-22 evening (all six hooks in all twelve), harness 0.4.13 | nothing: the standings and the counts named below |
-| `ab-run` #66 | the `ab-run` started by the same push (its id is in the next commit) | 20261480; Limit Break at the pool's tables (`bots-v2`), Mutant Menace at the owner's table (`owners-table-v1`); opponents under their shipped playbooks | `limit-break`, `limit-break@cmdr`, `mutant-menace`, `mutant-menace@cmdr`; 800 games in 20 shard jobs, harness 0.4.13 | whether `"finish_commander": true` goes into the two decks |
+| `league-run` #6 | 45083908949 (commit c37c68a, queued 2026-11-22 23:33 UTC) | 20261440 on `runner/leagues/bots-v2.json`, 50 cycles: 600 games in 20 shards, 200 a deck | every seat a pool deck under the playbook shipped on 2026-11-22 evening (all six hooks in all twelve), harness 0.4.13 | nothing: the standings and the counts named below |
+| `ab-run` #66 | 45083908959 (commit c37c68a, queued 2026-11-22 23:33 UTC) | 20261480; Limit Break at the pool's tables (`bots-v2`), Mutant Menace at the owner's table (`owners-table-v1`); opponents under their shipped playbooks | `limit-break`, `limit-break@cmdr`, `mutant-menace`, `mutant-menace@cmdr`; 800 games in 20 shard jobs, harness 0.4.13 | whether `"finish_commander": true` goes into the two decks |
 
 Forty shard jobs at about 24 an hour: both should be done by about 01:45 UTC on 2026-11-23. A check-in of the session that queued them is scheduled for 01:50 UTC (it collects what is complete and schedules the next).
 
