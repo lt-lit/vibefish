@@ -1,0 +1,2743 @@
+{
+"kind": "first-difference",
+"base": "before",
+"candidate": "shipped",
+"decks": [
+"blight-curse"
+],
+"files": {
+"attack: nobody": {
+"neither": 56,
+"base_only": 13,
+"both": 10,
+"cand_only": 13,
+"tables": 92,
+"base_kill": 0,
+"base_dead": 1,
+"base_exposed": 5,
+"base_sent": 52,
+"cand_kill": 0,
+"cand_dead": 2,
+"cand_exposed": 6,
+"cand_sent": 134
+},
+"identical": {
+"neither": 30,
+"tables": 30
+},
+"other": {
+"cand_only": 15,
+"neither": 44,
+"base_only": 8,
+"both": 5,
+"tables": 72
+},
+"target": {
+"both": 2,
+"cand_only": 2,
+"neither": 2,
+"tables": 6,
+"cand_at_top": 5,
+"base_at_top": 0
+},
+"attack, all": {
+"neither": 56,
+"base_only": 13,
+"both": 10,
+"cand_only": 13,
+"tables": 92,
+"base_kill": 0,
+"base_dead": 1,
+"base_exposed": 5,
+"base_sent": 52,
+"cand_kill": 0,
+"cand_dead": 2,
+"cand_exposed": 6,
+"cand_sent": 134
+}
+},
+"tables": [
+{
+"deck": "blight-curse",
+"idx": 1,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 14,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 2,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 3,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 4,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 5,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 6,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 7,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blight-curse",
+"idx": 8,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 9,
+"outcome": "cand_only",
+"file": "other",
+"t": 24
+},
+{
+"deck": "blight-curse",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 12,
+"outcome": "both",
+"file": "target",
+"t": 37,
+"card": "Binding the Old Gods",
+"base_at_top": false,
+"cand_at_top": true,
+"opponents": 3
+},
+{
+"deck": "blight-curse",
+"idx": 13,
+"outcome": "cand_only",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blight-curse",
+"idx": 14,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 16,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 15,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 17,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 16,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 14,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 17,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "blight-curse",
+"idx": 18,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 13,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 19,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 20,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blight-curse",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 22,
+"outcome": "cand_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blight-curse",
+"idx": 23,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 24,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 25,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 20,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 26,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 19,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 27,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "blight-curse",
+"idx": 28,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 30,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 31,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 32,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 18,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 33,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 36,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "blight-curse",
+"idx": 34,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "blight-curse",
+"idx": 35,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blight-curse",
+"idx": 36,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "blight-curse",
+"idx": 37,
+"outcome": "cand_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blight-curse",
+"idx": 38,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 39,
+"outcome": "cand_only",
+"file": "target",
+"t": 19,
+"card": "Binding the Old Gods",
+"base_at_top": false,
+"cand_at_top": true,
+"opponents": 3
+},
+{
+"deck": "blight-curse",
+"idx": 40,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 36,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 41,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "blight-curse",
+"idx": 42,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 15,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 43,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 44,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 45,
+"outcome": "cand_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 46,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 47,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 48,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "blight-curse",
+"idx": 49,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 50,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "blight-curse",
+"idx": 51,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 14,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 52,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 53,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 54,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 10,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 55,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 56,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 36,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 57,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "blight-curse",
+"idx": 58,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 59,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 60,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 61,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "blight-curse",
+"idx": 62,
+"outcome": "base_only",
+"file": "other",
+"t": 28
+},
+{
+"deck": "blight-curse",
+"idx": 63,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 64,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 14,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 65,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 66,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 67,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 68,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 70,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "blight-curse",
+"idx": 71,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 15,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 72,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "blight-curse",
+"idx": 73,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 75,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 20,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 76,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "blight-curse",
+"idx": 77,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 17,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 79,
+"outcome": "cand_only",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blight-curse",
+"idx": 80,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blight-curse",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 82,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 83,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 84,
+"outcome": "cand_only",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 85,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 19,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 86,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 87,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 88,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 20,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 89,
+"outcome": "neither",
+"file": "target",
+"t": 40,
+"card": "Binding the Old Gods",
+"base_at_top": false,
+"cand_at_top": true,
+"opponents": 3
+},
+{
+"deck": "blight-curse",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 91,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 16,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 92,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "blight-curse",
+"idx": 93,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 17,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 94,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 95,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 13,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 96,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 97,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 14,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 98,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 18,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 99,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 100,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 101,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 23,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 103,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blight-curse",
+"idx": 104,
+"outcome": "cand_only",
+"file": "other",
+"t": 45
+},
+{
+"deck": "blight-curse",
+"idx": 105,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "blight-curse",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 107,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 108,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "blight-curse",
+"idx": 109,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 17,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 111,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 112,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 18,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 113,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 10,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 114,
+"outcome": "cand_only",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blight-curse",
+"idx": 115,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 18,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 116,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 117,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 118,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blight-curse",
+"idx": 119,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 19,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 120,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 122,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 123,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 124,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "blight-curse",
+"idx": 125,
+"outcome": "both",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 126,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 127,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 128,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 18,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 129,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "blight-curse",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blight-curse",
+"idx": 131,
+"outcome": "base_only",
+"file": "other",
+"t": 22
+},
+{
+"deck": "blight-curse",
+"idx": 132,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 19,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 133,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 134,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blight-curse",
+"idx": 135,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 136,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 137,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "blight-curse",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 140,
+"outcome": "base_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 141,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 142,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 144,
+"outcome": "cand_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "blight-curse",
+"idx": 145,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blight-curse",
+"idx": 146,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 148,
+"outcome": "base_only",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 149,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 150,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 18,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 152,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "blight-curse",
+"idx": 153,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 154,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blight-curse",
+"idx": 155,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 156,
+"outcome": "cand_only",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 159,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 9,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 161,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 18,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 162,
+"outcome": "both",
+"file": "other",
+"t": 37
+},
+{
+"deck": "blight-curse",
+"idx": 163,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 164,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 165,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 166,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 19,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 167,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 168,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 32,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 169,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 16,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 170,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "blight-curse",
+"idx": 171,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "blight-curse",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 173,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 13,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 174,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 17,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 175,
+"outcome": "both",
+"file": "target",
+"t": 37,
+"card": "Dream Eater",
+"base_at_top": false,
+"cand_at_top": true,
+"opponents": 3
+},
+{
+"deck": "blight-curse",
+"idx": 176,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 177,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "blight-curse",
+"idx": 178,
+"outcome": "cand_only",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blight-curse",
+"idx": 179,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 180,
+"outcome": "cand_only",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blight-curse",
+"idx": 181,
+"outcome": "base_only",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blight-curse",
+"idx": 182,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 183,
+"outcome": "neither",
+"file": "target",
+"t": 27,
+"card": "Binding the Old Gods",
+"base_at_top": false,
+"cand_at_top": true,
+"opponents": 3
+},
+{
+"deck": "blight-curse",
+"idx": 184,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 20,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 185,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 186,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 187,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 188,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 189,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blight-curse",
+"idx": 190,
+"outcome": "both",
+"file": "other",
+"t": 46
+},
+{
+"deck": "blight-curse",
+"idx": 191,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 192,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 193,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "blight-curse",
+"idx": 194,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "blight-curse",
+"idx": 195,
+"outcome": "both",
+"file": "other",
+"t": 30
+},
+{
+"deck": "blight-curse",
+"idx": 196,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 198,
+"outcome": "cand_only",
+"file": "target",
+"t": 34,
+"card": "Binding the Old Gods",
+"base_at_top": false,
+"cand_at_top": false,
+"opponents": 3
+},
+{
+"deck": "blight-curse",
+"idx": 199,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 23,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "blight-curse",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+}
+]
+}
