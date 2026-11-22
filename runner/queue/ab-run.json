@@ -1,9 +1,6 @@
 {
-  "requested": "2026-11-22T17:40Z",
-  "note": "ab-run #65: the guard for the five pool decks that shipped the hooks on ab-run #62 (DESIGN \u00a740): Token Triumph, Hail, Caesar, Tricky Terrain, Planeswalker Party and Elven Council, each under the version shipped on 2026-11-22 and under that version with the guard on its attack (playbook/variants/<deck>-guard.json: attackers are taken back when the attack would leave the seat where the opponents, one after another, are sure to kill it before its next turn and keeping them home prevents that), on the same 200 tables of their own (seed 20261470) of runner/leagues/bots-v2.json; opponents drawn from the other eleven under the playbooks shipped on 2026-11-22, all with the five hooks and none with the guard. Read by the rule in CLAUDE.md (In flight, How #65 is to be read), fixed before this was queued and before ab-run #63, which tries the same guard on the other seven pool decks, was looked at. Playbook arms only; 2,000 games in 50 shard jobs. The requests before this one: ab-run #63 (run id 45015581613) and #64 (run id 45025122223), still playing.",
-  "decks": "token-triumph,token-triumph@guard,hail-caesar,hail-caesar@guard,tricky-terrain,tricky-terrain@guard,planeswalker-party,planeswalker-party@guard,elven-council,elven-council@guard",
-  "seed": "20261470",
-  "pool": "runner/leagues/bots-v2.json",
+  "requested": "2026-11-22T23:33Z",
+  "note": "ab-run #66: a commander's damage as a sure kill (DESIGN §41, harness 0.4.13). Limit Break at the pool's tables (runner/leagues/bots-v2.json) and Mutant Menace at the owner's table (runner/leagues/owners-table-v1.json), each under its shipped playbook and under playbook/variants/<deck>-cmdr.json, which is the shipped playbook with \"finish_commander\": true on its attack: a commander of the seat whose combat damage on an opponent would reach 21 this turn, and which no creature of that opponent can block, is a kill the finish hook takes, in the same walk from the most dangerous opponent down. 200 tables a deck on seed 20261480, opponents under their shipped playbooks, both arms on harness 0.4.13 so the kills are counted in both. Read by the rule in CLAUDE.md (In flight, How #66 is to be read), fixed before this was queued. Playbook arms only; 800 games in 20 shard jobs.",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "5",
@@ -11,5 +8,10 @@
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
-  "opponent_playbooks": true
+  "opponent_playbooks": true,
+  "seed": "20261480",
+  "runs": [
+    {"decks": "limit-break,limit-break@cmdr", "pool": "runner/leagues/bots-v2.json", "seed": "20261480"},
+    {"decks": "mutant-menace,mutant-menace@cmdr", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261480"}
+  ]
 }

@@ -1,0 +1,9523 @@
+{
+"kind": "first-difference",
+"base": "shipped",
+"candidate": "guard",
+"decks": [
+"token-triumph",
+"hail-caesar",
+"tricky-terrain",
+"planeswalker-party",
+"elven-council"
+],
+"files": {
+"identical": {
+"neither": 460,
+"both": 150,
+"tables": 610
+},
+"attack: nobody": {
+"both": 29,
+"neither": 128,
+"cand_only": 16,
+"base_only": 17,
+"tables": 190,
+"base_kill": 0,
+"base_dead": 21,
+"base_exposed": 41,
+"base_sent": 672,
+"cand_kill": 0,
+"cand_dead": 12,
+"cand_exposed": 25,
+"cand_sent": 419
+},
+"other": {
+"cand_only": 14,
+"neither": 123,
+"base_only": 11,
+"both": 24,
+"tables": 172
+},
+"attack: top": {
+"both": 1,
+"neither": 2,
+"tables": 3,
+"base_kill": 2,
+"base_dead": 0,
+"base_exposed": 1,
+"base_sent": 35,
+"cand_kill": 2,
+"cand_dead": 0,
+"cand_exposed": 0,
+"cand_sent": 48
+},
+"attack: lesser": {
+"both": 2,
+"neither": 16,
+"cand_only": 4,
+"base_only": 1,
+"tables": 23,
+"base_kill": 3,
+"base_dead": 4,
+"base_exposed": 8,
+"base_sent": 134,
+"cand_kill": 1,
+"cand_dead": 1,
+"cand_exposed": 2,
+"cand_sent": 71
+},
+"block": {
+"both": 1,
+"tables": 1,
+"cand_out": 0,
+"base_out": 0
+},
+"target": {
+"neither": 1,
+"tables": 1,
+"cand_at_top": 0,
+"base_at_top": 0
+},
+"attack, all": {
+"both": 32,
+"neither": 146,
+"cand_only": 20,
+"base_only": 18,
+"tables": 216,
+"base_kill": 5,
+"base_dead": 25,
+"base_exposed": 50,
+"base_sent": 841,
+"cand_kill": 3,
+"cand_dead": 13,
+"cand_exposed": 27,
+"cand_sent": 538
+}
+},
+"tables": [
+{
+"deck": "token-triumph",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 2,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 3,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 4,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 6,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 58,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "token-triumph",
+"idx": 7,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 8,
+"outcome": "cand_only",
+"file": "other",
+"t": 49
+},
+{
+"deck": "token-triumph",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 10,
+"outcome": "neither",
+"file": "other",
+"t": 50
+},
+{
+"deck": "token-triumph",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 12,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 16,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 47,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "token-triumph",
+"idx": 17,
+"outcome": "neither",
+"file": "other",
+"t": 52
+},
+{
+"deck": "token-triumph",
+"idx": 18,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 53,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "token-triumph",
+"idx": 19,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "token-triumph",
+"idx": 20,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 23,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "token-triumph",
+"idx": 24,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 25,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "token-triumph",
+"idx": 26,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 27,
+"outcome": "neither",
+"file": "other",
+"t": 50
+},
+{
+"deck": "token-triumph",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 30,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 32,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 33,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 34,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "token-triumph",
+"idx": 35,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 36,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 37,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "token-triumph",
+"idx": 38,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "token-triumph",
+"idx": 39,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 41,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 43,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 44,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "token-triumph",
+"idx": 45,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "token-triumph",
+"idx": 46,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 0
+}
+},
+{
+"deck": "token-triumph",
+"idx": 47,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 49,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "token-triumph",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "token-triumph",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 52,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 53,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 55,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 56,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "token-triumph",
+"idx": 57,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 59,
+"outcome": "cand_only",
+"file": "other",
+"t": 59
+},
+{
+"deck": "token-triumph",
+"idx": 60,
+"outcome": "neither",
+"file": "other",
+"t": 55
+},
+{
+"deck": "token-triumph",
+"idx": 61,
+"outcome": "neither",
+"file": "other",
+"t": 59
+},
+{
+"deck": "token-triumph",
+"idx": 62,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 63,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 64,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 61
+},
+{
+"deck": "token-triumph",
+"idx": 66,
+"outcome": "base_only",
+"file": "other",
+"t": 46
+},
+{
+"deck": "token-triumph",
+"idx": 67,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 68,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 69,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 70,
+"outcome": "neither",
+"file": "other",
+"t": 51
+},
+{
+"deck": "token-triumph",
+"idx": 71,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 72,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 73,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 75,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 82,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 83,
+"outcome": "both",
+"file": "attack",
+"stood": "top",
+"t": 35,
+"opponents": 2,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 8
+},
+"cand": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 19
+}
+},
+{
+"deck": "token-triumph",
+"idx": 84,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 86,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 87,
+"outcome": "both",
+"file": "other",
+"t": 62
+},
+{
+"deck": "token-triumph",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "token-triumph",
+"idx": 89,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "token-triumph",
+"idx": 90,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "token-triumph",
+"idx": 91,
+"outcome": "both",
+"file": "other",
+"t": 51
+},
+{
+"deck": "token-triumph",
+"idx": 92,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 93,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 95,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 96,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 98,
+"outcome": "neither",
+"file": "attack",
+"stood": "top",
+"t": 52,
+"opponents": 2,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 8
+},
+"cand": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 11
+}
+},
+{
+"deck": "token-triumph",
+"idx": 99,
+"outcome": "cand_only",
+"file": "other",
+"t": 45
+},
+{
+"deck": "token-triumph",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 101,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "token-triumph",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "token-triumph",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 104,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 60,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "token-triumph",
+"idx": 105,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 109,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 110,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 114,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 115,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "token-triumph",
+"idx": 116,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 117,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 118,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "token-triumph",
+"idx": 119,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 120,
+"outcome": "neither",
+"file": "other",
+"t": 57
+},
+{
+"deck": "token-triumph",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 122,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 123,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 125,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "token-triumph",
+"idx": 126,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 127,
+"outcome": "neither",
+"file": "other",
+"t": 77
+},
+{
+"deck": "token-triumph",
+"idx": 128,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 129,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 130,
+"outcome": "both",
+"file": "other",
+"t": 54
+},
+{
+"deck": "token-triumph",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 132,
+"outcome": "neither",
+"file": "other",
+"t": 50
+},
+{
+"deck": "token-triumph",
+"idx": 133,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 134,
+"outcome": "cand_only",
+"file": "other",
+"t": 46
+},
+{
+"deck": "token-triumph",
+"idx": 135,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "token-triumph",
+"idx": 136,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "token-triumph",
+"idx": 137,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 138,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "token-triumph",
+"idx": 139,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "token-triumph",
+"idx": 140,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "token-triumph",
+"idx": 141,
+"outcome": "both",
+"file": "other",
+"t": 54
+},
+{
+"deck": "token-triumph",
+"idx": 142,
+"outcome": "both",
+"file": "attack",
+"stood": "lesser",
+"t": 44,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "token-triumph",
+"idx": 143,
+"outcome": "neither",
+"file": "other",
+"t": 63
+},
+{
+"deck": "token-triumph",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 146,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 147,
+"outcome": "both",
+"file": "other",
+"t": 39
+},
+{
+"deck": "token-triumph",
+"idx": 148,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 149,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "token-triumph",
+"idx": 150,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 152,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 54,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+}
+},
+{
+"deck": "token-triumph",
+"idx": 153,
+"outcome": "cand_only",
+"file": "other",
+"t": 37
+},
+{
+"deck": "token-triumph",
+"idx": 154,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 9
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "token-triumph",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 159,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 20,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "token-triumph",
+"idx": 160,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 46,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "token-triumph",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 163,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "token-triumph",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 165,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 167,
+"outcome": "both",
+"file": "other",
+"t": 41
+},
+{
+"deck": "token-triumph",
+"idx": 168,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "token-triumph",
+"idx": 169,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 170,
+"outcome": "base_only",
+"file": "other",
+"t": 50
+},
+{
+"deck": "token-triumph",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 172,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "token-triumph",
+"idx": 173,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 174,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 175,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 176,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 41,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "token-triumph",
+"idx": 177,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 178,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 179,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "token-triumph",
+"idx": 180,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 181,
+"outcome": "neither",
+"file": "other",
+"t": 54
+},
+{
+"deck": "token-triumph",
+"idx": 182,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 48,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "token-triumph",
+"idx": 183,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "token-triumph",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 188,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 23,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "token-triumph",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 190,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 191,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "token-triumph",
+"idx": 192,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 194,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 195,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 196,
+"outcome": "both",
+"file": "other",
+"t": 68
+},
+{
+"deck": "token-triumph",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 198,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 199,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "token-triumph",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 2,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 3,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 4,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 6,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 58,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 7,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "hail-caesar",
+"idx": 8,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "hail-caesar",
+"idx": 9,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "hail-caesar",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 12,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 13,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 14,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 17,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 18,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 19,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 20,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 36,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 21,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 22,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 23,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 24,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 26,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 28,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 29,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 30,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 32,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 33,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 34,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 35,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 36,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 49,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 37,
+"outcome": "both",
+"file": "other",
+"t": 28
+},
+{
+"deck": "hail-caesar",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 39,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 40,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 41,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 44,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 49,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 40,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 52,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 53,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 1,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 55,
+"outcome": "cand_only",
+"file": "other",
+"t": 45
+},
+{
+"deck": "hail-caesar",
+"idx": 56,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 57,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 38,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 58,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 59,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 23,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 60,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 61,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 62,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 48,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 64,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 53
+},
+{
+"deck": "hail-caesar",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 68,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 69,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 77,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 70,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "hail-caesar",
+"idx": 71,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 72,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 4
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 73,
+"outcome": "neither",
+"file": "other",
+"t": 53
+},
+{
+"deck": "hail-caesar",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 75,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 79,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "hail-caesar",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 82,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "hail-caesar",
+"idx": 83,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 85,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "hail-caesar",
+"idx": 86,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 87,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 38,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "hail-caesar",
+"idx": 89,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 90,
+"outcome": "both",
+"file": "other",
+"t": 63
+},
+{
+"deck": "hail-caesar",
+"idx": 91,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "hail-caesar",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 93,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 95,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 32,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 96,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 99,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "hail-caesar",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 101,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "hail-caesar",
+"idx": 103,
+"outcome": "neither",
+"file": "other",
+"t": 55
+},
+{
+"deck": "hail-caesar",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 105,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 108,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 109,
+"outcome": "neither",
+"file": "other",
+"t": 63
+},
+{
+"deck": "hail-caesar",
+"idx": 110,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 113,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "lesser",
+"t": 53,
+"opponents": 2,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": true,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 114,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 115,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 116,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 117,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 118,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 50,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 3
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 119,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 120,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 36,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 122,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 123,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 126,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 127,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 128,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 50,
+"opponents": 1,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 129,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 130,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 49,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 133,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 45,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 135,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 137,
+"outcome": "cand_only",
+"file": "other",
+"t": 37
+},
+{
+"deck": "hail-caesar",
+"idx": 138,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 144,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 145,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 46,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 146,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "hail-caesar",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 148,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 149,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 150,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 46,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 153,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 154,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 155,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 156,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 158,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 159,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 160,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 50,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 163,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 165,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 166,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 46,
+"opponents": 3,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 167,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 168,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 169,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 170,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 174,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 175,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 176,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "hail-caesar",
+"idx": 177,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 178,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 179,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 181,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 182,
+"outcome": "neither",
+"file": "other",
+"t": 62
+},
+{
+"deck": "hail-caesar",
+"idx": 183,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 46,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 185,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "hail-caesar",
+"idx": 186,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 190,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 36,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 192,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "hail-caesar",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 196,
+"outcome": "neither",
+"file": "other",
+"t": 58
+},
+{
+"deck": "hail-caesar",
+"idx": 197,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "hail-caesar",
+"idx": 198,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 199,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "hail-caesar",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 2,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 3,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 4,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 5,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 6,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 66,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 3
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 7,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 9
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 8,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 9,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "tricky-terrain",
+"idx": 10,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 12,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 38,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 14,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 17,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 18,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 49,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 19,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 20,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 21,
+"outcome": "neither",
+"file": "other",
+"t": 54
+},
+{
+"deck": "tricky-terrain",
+"idx": 22,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 24,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 9
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 8
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 25,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 28,
+"outcome": "cand_only",
+"file": "other",
+"t": 28
+},
+{
+"deck": "tricky-terrain",
+"idx": 29,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 30,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 31,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 32,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 32,
+"outcome": "base_only",
+"file": "other",
+"t": 51
+},
+{
+"deck": "tricky-terrain",
+"idx": 33,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 34,
+"outcome": "cand_only",
+"file": "other",
+"t": 45
+},
+{
+"deck": "tricky-terrain",
+"idx": 35,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 36,
+"outcome": "neither",
+"file": "attack",
+"stood": "top",
+"t": 53,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 19
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 18
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 37,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 38,
+"outcome": "base_only",
+"file": "attack",
+"stood": "lesser",
+"t": 38,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 39,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 40,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 41,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 11
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 9
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 42,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 48,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 43,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 44,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "tricky-terrain",
+"idx": 45,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 47,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 48,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 49,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 52,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 41,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 53,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 54,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 55,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 56,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 57,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 58,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 23,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 59,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 40,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 60,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 23,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 61,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 62,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 63,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 64,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 65,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 67,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 68,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 69,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 13
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 12
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 70,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "tricky-terrain",
+"idx": 71,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 72,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 58,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 73,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 74,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 43,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 75,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 77,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 81,
+"outcome": "base_only",
+"file": "other",
+"t": 40
+},
+{
+"deck": "tricky-terrain",
+"idx": 82,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 83,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "tricky-terrain",
+"idx": 84,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 54,
+"opponents": 1,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 86,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 50,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 9
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 8
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 87,
+"outcome": "neither",
+"file": "other",
+"t": 56
+},
+{
+"deck": "tricky-terrain",
+"idx": 88,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 89,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "tricky-terrain",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 91,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "tricky-terrain",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 93,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 95,
+"outcome": "both",
+"file": "other",
+"t": 49
+},
+{
+"deck": "tricky-terrain",
+"idx": 96,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 40,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 98,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 99,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 101,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "tricky-terrain",
+"idx": 103,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 58,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 104,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 45,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 105,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 107,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 109,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 111,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 112,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "tricky-terrain",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 114,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 49,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 115,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 116,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "tricky-terrain",
+"idx": 117,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 41,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 8
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 5
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 118,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 119,
+"outcome": "base_only",
+"file": "other",
+"t": 25
+},
+{
+"deck": "tricky-terrain",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 121,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 122,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 123,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 124,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 126,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "lesser",
+"t": 50,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 8
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 127,
+"outcome": "both",
+"file": "other",
+"t": 79
+},
+{
+"deck": "tricky-terrain",
+"idx": 128,
+"outcome": "both",
+"file": "other",
+"t": 63
+},
+{
+"deck": "tricky-terrain",
+"idx": 129,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "tricky-terrain",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "tricky-terrain",
+"idx": 131,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 41,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 133,
+"outcome": "cand_only",
+"file": "other",
+"t": 35
+},
+{
+"deck": "tricky-terrain",
+"idx": 134,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 38,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 135,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 136,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "lesser",
+"t": 41,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 14
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 9
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "tricky-terrain",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 140,
+"outcome": "both",
+"file": "other",
+"t": 42
+},
+{
+"deck": "tricky-terrain",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 142,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "tricky-terrain",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 146,
+"outcome": "cand_only",
+"file": "other",
+"t": 39
+},
+{
+"deck": "tricky-terrain",
+"idx": 147,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 148,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 48,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 10
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 8
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 149,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 53,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 150,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 153,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 40,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 154,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 157,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 39,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 159,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 160,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 161,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 162,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 163,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 5
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 165,
+"outcome": "base_only",
+"file": "other",
+"t": 39
+},
+{
+"deck": "tricky-terrain",
+"idx": 166,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 168,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 35,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 9
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 8
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 169,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 171,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 172,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 27,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 173,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 43,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 174,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 175,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 176,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "tricky-terrain",
+"idx": 177,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 40,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 178,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 179,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 181,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 182,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 22,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 184,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 185,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 14
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 186,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "tricky-terrain",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 188,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "tricky-terrain",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 190,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 6
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 191,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 8
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 192,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 194,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 43,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 196,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 197,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "tricky-terrain",
+"idx": 198,
+"outcome": "both",
+"file": "other",
+"t": 31
+},
+{
+"deck": "tricky-terrain",
+"idx": 199,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "tricky-terrain",
+"idx": 200,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 2,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 3,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 4,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 6,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 7,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 8,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 9,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 10,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 12,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 14,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 16,
+"outcome": "neither",
+"file": "other",
+"t": 50
+},
+{
+"deck": "planeswalker-party",
+"idx": 17,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 19,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 20,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 23,
+"outcome": "neither",
+"file": "other",
+"t": 60
+},
+{
+"deck": "planeswalker-party",
+"idx": 24,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 29,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "planeswalker-party",
+"idx": 30,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 32,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 33,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 28,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 34,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 36,
+"outcome": "neither",
+"file": "other",
+"t": 63
+},
+{
+"deck": "planeswalker-party",
+"idx": 37,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 39,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 41,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "planeswalker-party",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 44,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 46,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 47,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 57
+},
+{
+"deck": "planeswalker-party",
+"idx": 51,
+"outcome": "both",
+"file": "block",
+"t": 46,
+"base_out": false,
+"cand_out": false,
+"base_blocks": 4,
+"cand_blocks": 4,
+"life": 23,
+"base_incoming": 0,
+"cand_incoming": 0
+},
+{
+"deck": "planeswalker-party",
+"idx": 52,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "planeswalker-party",
+"idx": 53,
+"outcome": "both",
+"file": "other",
+"t": 61
+},
+{
+"deck": "planeswalker-party",
+"idx": 54,
+"outcome": "base_only",
+"file": "other",
+"t": 42
+},
+{
+"deck": "planeswalker-party",
+"idx": 55,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 56,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 57,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 59,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 60,
+"outcome": "cand_only",
+"file": "other",
+"t": 33
+},
+{
+"deck": "planeswalker-party",
+"idx": 61,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 62,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 63,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "planeswalker-party",
+"idx": 64,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 65,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 67,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 68,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "planeswalker-party",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 70,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 72,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 73,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 76,
+"outcome": "neither",
+"file": "other",
+"t": 65
+},
+{
+"deck": "planeswalker-party",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 78,
+"outcome": "base_only",
+"file": "other",
+"t": 60
+},
+{
+"deck": "planeswalker-party",
+"idx": 79,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "planeswalker-party",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 82,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 83,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 84,
+"outcome": "both",
+"file": "other",
+"t": 31
+},
+{
+"deck": "planeswalker-party",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 86,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 87,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 88,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 89,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "planeswalker-party",
+"idx": 90,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 91,
+"outcome": "both",
+"file": "other",
+"t": 37
+},
+{
+"deck": "planeswalker-party",
+"idx": 92,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 93,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 95,
+"outcome": "both",
+"file": "other",
+"t": 45
+},
+{
+"deck": "planeswalker-party",
+"idx": 96,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 97,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "planeswalker-party",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 99,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 101,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "planeswalker-party",
+"idx": 103,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 104,
+"outcome": "neither",
+"file": "other",
+"t": 49
+},
+{
+"deck": "planeswalker-party",
+"idx": 105,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 41,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 107,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 108,
+"outcome": "both",
+"file": "other",
+"t": 56
+},
+{
+"deck": "planeswalker-party",
+"idx": 109,
+"outcome": "neither",
+"file": "other",
+"t": 70
+},
+{
+"deck": "planeswalker-party",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 111,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 113,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 114,
+"outcome": "neither",
+"file": "other",
+"t": 87
+},
+{
+"deck": "planeswalker-party",
+"idx": 115,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 116,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 117,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 118,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "planeswalker-party",
+"idx": 119,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "planeswalker-party",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 122,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 123,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 126,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "planeswalker-party",
+"idx": 127,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 128,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 129,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 56
+},
+{
+"deck": "planeswalker-party",
+"idx": 131,
+"outcome": "neither",
+"file": "other",
+"t": 55
+},
+{
+"deck": "planeswalker-party",
+"idx": 132,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "planeswalker-party",
+"idx": 133,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 135,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 136,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 138,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 43,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 141,
+"outcome": "neither",
+"file": "other",
+"t": 80
+},
+{
+"deck": "planeswalker-party",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 146,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "planeswalker-party",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 148,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 149,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 150,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 151,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 152,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 154,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 155,
+"outcome": "neither",
+"file": "target",
+"t": 39,
+"card": "Commodore Guff",
+"base_at_top": false,
+"cand_at_top": false,
+"opponents": 3
+},
+{
+"deck": "planeswalker-party",
+"idx": 156,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 159,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 163,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 164,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 165,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 38,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 166,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 168,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "planeswalker-party",
+"idx": 169,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 171,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 173,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 59,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 174,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 175,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 176,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 177,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 179,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 181,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 183,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 43,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 185,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "planeswalker-party",
+"idx": 186,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 189,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 190,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 20,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "planeswalker-party",
+"idx": 191,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 192,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 193,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "planeswalker-party",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 196,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "planeswalker-party",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 198,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 199,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "planeswalker-party",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 2,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 72,
+"opponents": 2,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "elven-council",
+"idx": 3,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 4,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 6,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 7,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 8,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 12,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "elven-council",
+"idx": 13,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 16,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 44,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "elven-council",
+"idx": 17,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 43,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "elven-council",
+"idx": 18,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 21,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "elven-council",
+"idx": 19,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 4
+}
+},
+{
+"deck": "elven-council",
+"idx": 20,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 62,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 21,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "elven-council",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 23,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "elven-council",
+"idx": 24,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 51,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 25,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 38,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "elven-council",
+"idx": 26,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 28,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 30,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "elven-council",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 32,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 43,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 33,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 34,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "elven-council",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 36,
+"outcome": "base_only",
+"file": "other",
+"t": 51
+},
+{
+"deck": "elven-council",
+"idx": 37,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 39,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 41,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 38,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "elven-council",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 44,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 47,
+"outcome": "neither",
+"file": "other",
+"t": 52
+},
+{
+"deck": "elven-council",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 52,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 53,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 54,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "elven-council",
+"idx": 55,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 56,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 46,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "elven-council",
+"idx": 57,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "elven-council",
+"idx": 58,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 59,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 60,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 61,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "elven-council",
+"idx": 62,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 64,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "elven-council",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "elven-council",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 67,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 68,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 70,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "elven-council",
+"idx": 71,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 72,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 73,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "elven-council",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 75,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "elven-council",
+"idx": 76,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 59,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 77,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 47,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 78,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 79,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 8,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "elven-council",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 82,
+"outcome": "neither",
+"file": "other",
+"t": 76
+},
+{
+"deck": "elven-council",
+"idx": 83,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 86,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "elven-council",
+"idx": 87,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "elven-council",
+"idx": 88,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "elven-council",
+"idx": 89,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 8
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+}
+},
+{
+"deck": "elven-council",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 91,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "elven-council",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 93,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 95,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 36,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "elven-council",
+"idx": 96,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 52,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "elven-council",
+"idx": 97,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "elven-council",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 99,
+"outcome": "both",
+"file": "attack",
+"stood": "lesser",
+"t": 37,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "elven-council",
+"idx": 100,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 101,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "elven-council",
+"idx": 103,
+"outcome": "neither",
+"file": "other",
+"t": 59
+},
+{
+"deck": "elven-council",
+"idx": 104,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 105,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 108,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 112,
+"outcome": "neither",
+"file": "other",
+"t": 53
+},
+{
+"deck": "elven-council",
+"idx": 113,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 40,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "elven-council",
+"idx": 114,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 115,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 116,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 117,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 118,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 119,
+"outcome": "both",
+"file": "other",
+"t": 47
+},
+{
+"deck": "elven-council",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 121,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "elven-council",
+"idx": 122,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 123,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 125,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "lesser",
+"t": 43,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 10
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 9
+}
+},
+{
+"deck": "elven-council",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 127,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 44,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+}
+},
+{
+"deck": "elven-council",
+"idx": 128,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 35,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "elven-council",
+"idx": 129,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 130,
+"outcome": "base_only",
+"file": "other",
+"t": 41
+},
+{
+"deck": "elven-council",
+"idx": 131,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 132,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 133,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 134,
+"outcome": "neither",
+"file": "other",
+"t": 65
+},
+{
+"deck": "elven-council",
+"idx": 135,
+"outcome": "neither",
+"file": "other",
+"t": 71
+},
+{
+"deck": "elven-council",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "elven-council",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 143,
+"outcome": "base_only",
+"file": "other",
+"t": 17
+},
+{
+"deck": "elven-council",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 148,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 44,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "elven-council",
+"idx": 149,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 1,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+}
+},
+{
+"deck": "elven-council",
+"idx": 150,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 9
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "elven-council",
+"idx": 151,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "elven-council",
+"idx": 152,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 49,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 154,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 158,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 159,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 163,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 164,
+"outcome": "cand_only",
+"file": "other",
+"t": 32
+},
+{
+"deck": "elven-council",
+"idx": 165,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 166,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 42,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 168,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 169,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "elven-council",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 171,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 46,
+"opponents": 1,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 6
+}
+},
+{
+"deck": "elven-council",
+"idx": 172,
+"outcome": "both",
+"file": "other",
+"t": 27
+},
+{
+"deck": "elven-council",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 174,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 41,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 5
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "elven-council",
+"idx": 175,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 176,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 177,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "elven-council",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 179,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 180,
+"outcome": "neither",
+"file": "other",
+"t": 55
+},
+{
+"deck": "elven-council",
+"idx": 181,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 184,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 8
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 7
+}
+},
+{
+"deck": "elven-council",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 186,
+"outcome": "neither",
+"file": "other",
+"t": 50
+},
+{
+"deck": "elven-council",
+"idx": 187,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "elven-council",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 189,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "elven-council",
+"idx": 190,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 191,
+"outcome": "cand_only",
+"file": "other",
+"t": 32
+},
+{
+"deck": "elven-council",
+"idx": 192,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 196,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 198,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 199,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "elven-council",
+"idx": 200,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 32,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+}
+]
+}

@@ -1,0 +1,2231 @@
+{
+ "kind": "react-exam",
+ "variant": "react",
+ "base": "shipped",
+ "decks": {
+  "blight-curse": {
+   "cards": [
+    "Terminate",
+    "Infernal Grasp",
+    "Assassin's Trophy",
+    "Putrefy"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 44,
+    "combat_deaths": 108,
+    "combat_deaths_holding": 5,
+    "casts": {
+     "own turn": 231,
+     "another player's turn": 11
+    },
+    "cards": {
+     "Terminate": {
+      "own turn": 61,
+      "games_held": 66,
+      "games_cast": 63,
+      "another player's turn": 2
+     },
+     "Infernal Grasp": {
+      "own turn": 52,
+      "games_held": 63,
+      "games_cast": 60,
+      "another player's turn": 8
+     },
+     "Assassin's Trophy": {
+      "own turn": 63,
+      "games_held": 69,
+      "games_cast": 63
+     },
+     "Putrefy": {
+      "own turn": 55,
+      "games_held": 62,
+      "games_cast": 56,
+      "another player's turn": 1
+     }
+    },
+    "at_attacker": [],
+    "counters": {},
+    "hits": {
+     "own turn: at an opponent": 231,
+     "own turn: at a commander": 80,
+     "own turn: at the most dangerous opponent": 147,
+     "own turn: with two or three opponents alive": 212,
+     "own turn: at the most dangerous of two or three": 128,
+     "another player's turn: at an opponent": 11,
+     "another player's turn: at a commander": 4,
+     "another player's turn: at the most dangerous opponent": 3,
+     "another player's turn: with two or three opponents alive": 11,
+     "another player's turn: at the most dangerous of two or three": 3
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 42,
+    "combat_deaths": 110,
+    "combat_deaths_holding": 15,
+    "casts": {
+     "another player's turn": 200,
+     "at an attacker": 14,
+     "own turn": 1
+    },
+    "cards": {
+     "Terminate": {
+      "games_held": 70,
+      "another player's turn": 55,
+      "games_cast": 57,
+      "at an attacker": 2
+     },
+     "Infernal Grasp": {
+      "another player's turn": 57,
+      "games_held": 67,
+      "games_cast": 59,
+      "at an attacker": 2
+     },
+     "Assassin's Trophy": {
+      "another player's turn": 47,
+      "games_held": 69,
+      "games_cast": 53,
+      "at an attacker": 6
+     },
+     "Putrefy": {
+      "another player's turn": 41,
+      "games_held": 64,
+      "games_cast": 46,
+      "at an attacker": 4,
+      "own turn": 1
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0005/games/game-001.events.jsonl",
+      "t": 41,
+      "card": "Assassin's Trophy",
+      "attacker": "Vampire Demon Token",
+      "attackers": 3,
+      "life": 12,
+      "incoming": 6,
+      "best": 6,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0029/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Infernal Grasp",
+      "attacker": "Experiment Twelve",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0039/games/game-001.events.jsonl",
+      "t": 52,
+      "card": "Putrefy",
+      "attacker": "Krosan Colossus",
+      "attackers": 5,
+      "life": 10,
+      "incoming": 6,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0044/games/game-001.events.jsonl",
+      "t": 28,
+      "card": "Putrefy",
+      "attacker": "Moldgraf Monstrosity",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0062/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Assassin's Trophy",
+      "attacker": "Don Andres, the Renegade",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0091/games/game-001.events.jsonl",
+      "t": 32,
+      "card": "Putrefy",
+      "attacker": "Kari Zev, Skyship Raider",
+      "attackers": 5,
+      "life": 14,
+      "incoming": 15,
+      "best": 15,
+      "out": true
+     },
+     {
+      "where": "arm-playbook/g0116/games/game-001.events.jsonl",
+      "t": 23,
+      "card": "Terminate",
+      "attacker": "Doom Whisperer",
+      "attackers": 2,
+      "life": 36,
+      "incoming": 4,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0128/games/game-001.events.jsonl",
+      "t": 41,
+      "card": "Terminate",
+      "attacker": "Honored Dreyleader",
+      "attackers": 3,
+      "life": 8,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0145/games/game-001.events.jsonl",
+      "t": 26,
+      "card": "Assassin's Trophy",
+      "attacker": "Admiral Brass, Unsinkable",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0156/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Infernal Grasp",
+      "attacker": "The Indomitable",
+      "attackers": 3,
+      "life": 36,
+      "incoming": 8,
+      "best": 8,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0163/games/game-001.events.jsonl",
+      "t": 41,
+      "card": "Putrefy",
+      "attacker": "Imperial Hellkite",
+      "attackers": 2,
+      "life": 4,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0169/games/game-001.events.jsonl",
+      "t": 43,
+      "card": "Assassin's Trophy",
+      "attacker": "Vile Mutilator",
+      "attackers": 2,
+      "life": 6,
+      "incoming": 2,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0178/games/game-001.events.jsonl",
+      "t": 31,
+      "card": "Assassin's Trophy",
+      "attacker": "Vampire Token",
+      "attackers": 5,
+      "life": 24,
+      "incoming": 10,
+      "best": 10,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0179/games/game-001.events.jsonl",
+      "t": 36,
+      "card": "Assassin's Trophy",
+      "attacker": "Kinjalli's Sunwing",
+      "attackers": 2,
+      "life": 2,
+      "incoming": 1,
+      "best": 1,
+      "out": true
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2103,
+     "react_defend_seen": 874,
+     "reserve_kept": 244,
+     "cast_hold_vetoes": 2820,
+     "cast_react": 214,
+     "cast_react_end": 200,
+     "reserve_no_target": 41,
+     "reserve_short": 87,
+     "react_lethal_seen": 25,
+     "cast_aim_attacker": 14,
+     "react_lethal_answered": 7,
+     "react_damage_taken_away": 97,
+     "cast_react_defend": 14,
+     "react_lethal_hopeless": 11,
+     "react_damage_answered": 7
+    },
+    "hits": {
+     "another player's turn: at an opponent": 200,
+     "another player's turn: at a commander": 73,
+     "another player's turn: at the most dangerous opponent": 149,
+     "another player's turn: with two or three opponents alive": 191,
+     "another player's turn: at the most dangerous of two or three": 140,
+     "at an attacker: at an opponent": 14,
+     "at an attacker: at a commander": 1,
+     "at an attacker: at the most dangerous opponent": 7,
+     "at an attacker: with two or three opponents alive": 13,
+     "at an attacker: at the most dangerous of two or three": 6,
+     "own turn: at an opponent": 1,
+     "own turn: at a commander": 0,
+     "own turn: at the most dangerous opponent": 1,
+     "own turn: with two or three opponents alive": 1,
+     "own turn: at the most dangerous of two or three": 1
+    }
+   }
+  },
+  "veloci-ramp-tor": {
+   "cards": [
+    "Path to Exile",
+    "Generous Gift"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 65,
+    "combat_deaths": 109,
+    "combat_deaths_holding": 2,
+    "casts": {
+     "own turn": 124,
+     "another player's turn": 18,
+     "at an attacker": 1
+    },
+    "cards": {
+     "Path to Exile": {
+      "own turn": 68,
+      "games_held": 85,
+      "games_cast": 82,
+      "another player's turn": 13,
+      "at an attacker": 1
+     },
+     "Generous Gift": {
+      "own turn": 56,
+      "games_held": 65,
+      "games_cast": 61,
+      "another player's turn": 5
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0041/games/game-001.events.jsonl",
+      "t": 56,
+      "card": "Path to Exile",
+      "attacker": "Shark Token",
+      "attackers": 27,
+      "life": 8,
+      "incoming": 47,
+      "best": 47,
+      "out": true
+     }
+    ],
+    "counters": {
+     "cast_failed": 7,
+     "cast_hold_vetoes": 73
+    },
+    "hits": {
+     "own turn: at an opponent": 124,
+     "own turn: at a commander": 45,
+     "own turn: at the most dangerous opponent": 79,
+     "own turn: with two or three opponents alive": 115,
+     "own turn: at the most dangerous of two or three": 70,
+     "another player's turn: at an opponent": 18,
+     "another player's turn: at a commander": 9,
+     "another player's turn: at the most dangerous opponent": 11,
+     "another player's turn: with two or three opponents alive": 18,
+     "another player's turn: at the most dangerous of two or three": 11,
+     "at an attacker: at an opponent": 1,
+     "at an attacker: at a commander": 0,
+     "at an attacker: at the most dangerous opponent": 1,
+     "at an attacker: with two or three opponents alive": 0,
+     "at an attacker: at the most dangerous of two or three": 0
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 67,
+    "combat_deaths": 115,
+    "combat_deaths_holding": 4,
+    "casts": {
+     "own turn": 44,
+     "another player's turn": 83,
+     "at an attacker": 11
+    },
+    "cards": {
+     "Path to Exile": {
+      "another player's turn": 48,
+      "games_held": 84,
+      "games_cast": 77,
+      "own turn": 25,
+      "at an attacker": 4
+     },
+     "Generous Gift": {
+      "own turn": 19,
+      "games_held": 66,
+      "games_cast": 61,
+      "at an attacker": 7,
+      "another player's turn": 35
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0009/games/game-001.events.jsonl",
+      "t": 39,
+      "card": "Path to Exile",
+      "attacker": "Giant Adephage",
+      "attackers": 4,
+      "life": 13,
+      "incoming": 2,
+      "best": 5,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0009/games/game-001.events.jsonl",
+      "t": 39,
+      "card": "Generous Gift",
+      "attacker": "Giant Adephage",
+      "attackers": 4,
+      "life": 13,
+      "incoming": 2,
+      "best": 5,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0011/games/game-001.events.jsonl",
+      "t": 43,
+      "card": "Generous Gift",
+      "attacker": "Arvinox, the Mind Flail",
+      "attackers": 3,
+      "life": 34,
+      "incoming": 10,
+      "best": 10,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0027/games/game-001.events.jsonl",
+      "t": 27,
+      "card": "Generous Gift",
+      "attacker": "Mirko, Obsessive Theorist",
+      "attackers": 2,
+      "life": 44,
+      "incoming": 2,
+      "best": 2,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0030/games/game-001.events.jsonl",
+      "t": 33,
+      "card": "Generous Gift",
+      "attacker": "Demolisher Spawn",
+      "attackers": 5,
+      "life": 15,
+      "incoming": 6,
+      "best": 9,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0041/games/game-001.events.jsonl",
+      "t": 56,
+      "card": "Path to Exile",
+      "attacker": "Shark Token",
+      "attackers": 27,
+      "life": 8,
+      "incoming": 47,
+      "best": 47,
+      "out": true
+     },
+     {
+      "where": "arm-playbook/g0055/games/game-001.events.jsonl",
+      "t": 18,
+      "card": "Path to Exile",
+      "attacker": "The Indomitable",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0079/games/game-001.events.jsonl",
+      "t": 29,
+      "card": "Path to Exile",
+      "attacker": "Moldgraf Monstrosity",
+      "attackers": 5,
+      "life": 38,
+      "incoming": 28,
+      "best": 21,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0099/games/game-001.events.jsonl",
+      "t": 29,
+      "card": "Generous Gift",
+      "attacker": "The Wise Mothman",
+      "attackers": 2,
+      "life": 37,
+      "incoming": 12,
+      "best": 12,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0124/games/game-001.events.jsonl",
+      "t": 36,
+      "card": "Generous Gift",
+      "attacker": "Vile Mutilator",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0194/games/game-001.events.jsonl",
+      "t": 45,
+      "card": "Generous Gift",
+      "attacker": "Drana, Liberator of Malakir",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2154,
+     "react_defend_seen": 927,
+     "reserve_short": 22,
+     "reserve_kept": 91,
+     "cast_hold_vetoes": 960,
+     "cast_react": 91,
+     "cast_react_end": 80,
+     "react_lethal_seen": 8,
+     "cast_aim_attacker": 11,
+     "react_lethal_answered": 4,
+     "react_damage_taken_away": 109,
+     "cast_react_defend": 11,
+     "react_damage_answered": 7,
+     "cast_failed": 10,
+     "reserve_no_target": 25,
+     "react_lethal_hopeless": 3
+    },
+    "hits": {
+     "own turn: at an opponent": 44,
+     "own turn: at a commander": 14,
+     "own turn: at the most dangerous opponent": 29,
+     "own turn: with two or three opponents alive": 38,
+     "own turn: at the most dangerous of two or three": 23,
+     "another player's turn: at an opponent": 83,
+     "another player's turn: at a commander": 32,
+     "another player's turn: at the most dangerous opponent": 58,
+     "another player's turn: with two or three opponents alive": 80,
+     "another player's turn: at the most dangerous of two or three": 55,
+     "at an attacker: at an opponent": 11,
+     "at an attacker: at a commander": 2,
+     "at an attacker: at the most dangerous opponent": 8,
+     "at an attacker: with two or three opponents alive": 8,
+     "at an attacker: at the most dangerous of two or three": 5
+    }
+   }
+  },
+  "mutant-menace": {
+   "cards": [
+    "Putrefy",
+    "Atomize"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 48,
+    "combat_deaths": 113,
+    "combat_deaths_holding": 3,
+    "casts": {
+     "own turn": 87
+    },
+    "cards": {
+     "Putrefy": {
+      "own turn": 45,
+      "games_held": 49,
+      "games_cast": 45
+     },
+     "Atomize": {
+      "own turn": 42,
+      "games_held": 48,
+      "games_cast": 42
+     }
+    },
+    "at_attacker": [],
+    "counters": {
+     "cast_failed": 2
+    },
+    "hits": {
+     "own turn: at an opponent": 87,
+     "own turn: at a commander": 19,
+     "own turn: at the most dangerous opponent": 70,
+     "own turn: with two or three opponents alive": 84,
+     "own turn: at the most dangerous of two or three": 67
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 48,
+    "combat_deaths": 109,
+    "combat_deaths_holding": 4,
+    "casts": {
+     "another player's turn": 76,
+     "at an attacker": 8
+    },
+    "cards": {
+     "Putrefy": {
+      "another player's turn": 42,
+      "games_held": 47,
+      "games_cast": 44,
+      "at an attacker": 2
+     },
+     "Atomize": {
+      "another player's turn": 34,
+      "games_held": 46,
+      "games_cast": 40,
+      "at an attacker": 6
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0030/games/game-001.events.jsonl",
+      "t": 43,
+      "card": "Atomize",
+      "attacker": "Titania, Nature's Force",
+      "attackers": 4,
+      "life": 41,
+      "incoming": 8,
+      "best": 8,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0109/games/game-001.events.jsonl",
+      "t": 39,
+      "card": "Atomize",
+      "attacker": "Auntie Ool, Cursewretch",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": true
+     },
+     {
+      "where": "arm-playbook/g0110/games/game-001.events.jsonl",
+      "t": 17,
+      "card": "Putrefy",
+      "attacker": "Hazel of the Rootbloom",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0124/games/game-001.events.jsonl",
+      "t": 33,
+      "card": "Atomize",
+      "attacker": "Vile Mutilator",
+      "attackers": 5,
+      "life": 15,
+      "incoming": 10,
+      "best": 10,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0157/games/game-001.events.jsonl",
+      "t": 44,
+      "card": "Atomize",
+      "attacker": "Eye of Duskmantle",
+      "attackers": 6,
+      "life": 6,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0170/games/game-001.events.jsonl",
+      "t": 22,
+      "card": "Atomize",
+      "attacker": "Root Elemental",
+      "attackers": 3,
+      "life": 39,
+      "incoming": 4,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0179/games/game-001.events.jsonl",
+      "t": 39,
+      "card": "Putrefy",
+      "attacker": "Fear of Sleep Paralysis",
+      "attackers": 4,
+      "life": 15,
+      "incoming": 10,
+      "best": 10,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0190/games/game-001.events.jsonl",
+      "t": 30,
+      "card": "Atomize",
+      "attacker": "Arasta of the Endless Web",
+      "attackers": 2,
+      "life": 20,
+      "incoming": 1,
+      "best": 1,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 1953,
+     "react_defend_seen": 888,
+     "reserve_short": 51,
+     "reserve_kept": 111,
+     "cast_react": 84,
+     "cast_react_end": 76,
+     "reserve_no_target": 15,
+     "cast_hold_vetoes": 431,
+     "cast_aim_attacker": 8,
+     "react_damage_answered": 4,
+     "react_damage_taken_away": 58,
+     "cast_react_defend": 8,
+     "cast_failed": 2,
+     "react_lethal_seen": 8,
+     "react_lethal_hopeless": 2,
+     "react_lethal_answered": 4
+    },
+    "hits": {
+     "another player's turn: at an opponent": 76,
+     "another player's turn: at a commander": 27,
+     "another player's turn: at the most dangerous opponent": 58,
+     "another player's turn: with two or three opponents alive": 73,
+     "another player's turn: at the most dangerous of two or three": 55,
+     "at an attacker: at an opponent": 8,
+     "at an attacker: at a commander": 2,
+     "at an attacker: at the most dangerous opponent": 4,
+     "at an attacker: with two or three opponents alive": 7,
+     "at an attacker: at the most dangerous of two or three": 3
+    }
+   }
+  },
+  "squirreled-away": {
+   "cards": [
+    "Putrefy"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 37,
+    "combat_deaths": 125,
+    "combat_deaths_holding": 1,
+    "casts": {
+     "own turn": 38
+    },
+    "cards": {
+     "Putrefy": {
+      "own turn": 38,
+      "games_held": 42,
+      "games_cast": 38
+     }
+    },
+    "at_attacker": [],
+    "counters": {
+     "cast_hold_vetoes": 35
+    },
+    "hits": {
+     "own turn: at an opponent": 38,
+     "own turn: at a commander": 17,
+     "own turn: at the most dangerous opponent": 26,
+     "own turn: with two or three opponents alive": 37,
+     "own turn: at the most dangerous of two or three": 25
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 37,
+    "combat_deaths": 130,
+    "combat_deaths_holding": 3,
+    "casts": {
+     "at an attacker": 3,
+     "another player's turn": 32
+    },
+    "cards": {
+     "Putrefy": {
+      "at an attacker": 3,
+      "games_held": 41,
+      "games_cast": 35,
+      "another player's turn": 32
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0002/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Putrefy",
+      "attacker": "Massacre Wurm",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0114/games/game-001.events.jsonl",
+      "t": 26,
+      "card": "Putrefy",
+      "attacker": "Demolisher Spawn",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0194/games/game-001.events.jsonl",
+      "t": 17,
+      "card": "Putrefy",
+      "attacker": "The Wise Mothman",
+      "attackers": 2,
+      "life": 38,
+      "incoming": 3,
+      "best": 3,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2147,
+     "react_defend_seen": 1068,
+     "reserve_kept": 56,
+     "cast_hold_vetoes": 407,
+     "reserve_no_target": 11,
+     "cast_aim_attacker": 3,
+     "react_damage_answered": 3,
+     "react_damage_taken_away": 25,
+     "cast_react": 35,
+     "cast_react_defend": 3,
+     "reserve_short": 13,
+     "cast_react_end": 32,
+     "react_lethal_seen": 3,
+     "react_lethal_hopeless": 1
+    },
+    "hits": {
+     "at an attacker: at an opponent": 3,
+     "at an attacker: at a commander": 1,
+     "at an attacker: at the most dangerous opponent": 1,
+     "at an attacker: with two or three opponents alive": 3,
+     "at an attacker: at the most dangerous of two or three": 1,
+     "another player's turn: at an opponent": 32,
+     "another player's turn: at a commander": 15,
+     "another player's turn: at the most dangerous opponent": 25,
+     "another player's turn: with two or three opponents alive": 31,
+     "another player's turn: at the most dangerous of two or three": 24
+    }
+   }
+  },
+  "revenant-recon": {
+   "cards": [
+    "Price of Fame",
+    "Pile On",
+    "Ephara's Dispersal"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 48,
+    "combat_deaths": 97,
+    "combat_deaths_holding": 5,
+    "casts": {
+     "own turn": 126,
+     "another player's turn": 20,
+     "at an attacker": 2
+    },
+    "cards": {
+     "Price of Fame": {
+      "games_held": 55,
+      "own turn": 48,
+      "games_cast": 51,
+      "another player's turn": 7
+     },
+     "Pile On": {
+      "own turn": 41,
+      "games_held": 52,
+      "games_cast": 48,
+      "another player's turn": 9
+     },
+     "Ephara's Dispersal": {
+      "own turn": 37,
+      "games_held": 45,
+      "games_cast": 43,
+      "another player's turn": 4,
+      "at an attacker": 2
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0061/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Ephara's Dispersal",
+      "attacker": "Kari Zev, Skyship Raider",
+      "attackers": 4,
+      "life": 38,
+      "incoming": 17,
+      "best": 12,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0154/games/game-001.events.jsonl",
+      "t": 14,
+      "card": "Ephara's Dispersal",
+      "attacker": "Dire Fleet Daredevil",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {},
+    "hits": {
+     "own turn: at an opponent": 115,
+     "own turn: at a commander": 46,
+     "own turn: at the most dangerous opponent": 76,
+     "own turn: with two or three opponents alive": 108,
+     "own turn: at the most dangerous of two or three": 69,
+     "another player's turn: at an opponent": 20,
+     "another player's turn: at a commander": 9,
+     "another player's turn: at the most dangerous opponent": 10,
+     "another player's turn: with two or three opponents alive": 17,
+     "another player's turn: at the most dangerous of two or three": 7,
+     "at an attacker: at an opponent": 2,
+     "at an attacker: at a commander": 0,
+     "at an attacker: at the most dangerous opponent": 2,
+     "at an attacker: with two or three opponents alive": 2,
+     "at an attacker: at the most dangerous of two or three": 2
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 58,
+    "combat_deaths": 105,
+    "combat_deaths_holding": 2,
+    "casts": {
+     "another player's turn": 115,
+     "at an attacker": 11,
+     "own turn": 1
+    },
+    "cards": {
+     "Price of Fame": {
+      "another player's turn": 42,
+      "games_held": 52,
+      "games_cast": 45,
+      "at an attacker": 3
+     },
+     "Pile On": {
+      "another player's turn": 39,
+      "games_held": 51,
+      "games_cast": 43,
+      "at an attacker": 4,
+      "own turn": 1
+     },
+     "Ephara's Dispersal": {
+      "another player's turn": 34,
+      "games_held": 41,
+      "games_cast": 38,
+      "at an attacker": 4
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0008/games/game-001.events.jsonl",
+      "t": 28,
+      "card": "Price of Fame",
+      "attacker": "Giant Adephage",
+      "attackers": 7,
+      "life": 31,
+      "incoming": 8,
+      "best": 3,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0013/games/game-001.events.jsonl",
+      "t": 46,
+      "card": "Ephara's Dispersal",
+      "attacker": "Ursine Monstrosity",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0028/games/game-001.events.jsonl",
+      "t": 33,
+      "card": "Pile On",
+      "attacker": "Kari Zev, Skyship Raider",
+      "attackers": 5,
+      "life": 18,
+      "incoming": 15,
+      "best": 15,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0031/games/game-001.events.jsonl",
+      "t": 45,
+      "card": "Pile On",
+      "attacker": "Sunfrill Imitator",
+      "attackers": 7,
+      "life": 16,
+      "incoming": 11,
+      "best": 8,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0037/games/game-001.events.jsonl",
+      "t": 42,
+      "card": "Price of Fame",
+      "attacker": "Aminatou, Veil Piercer",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0045/games/game-001.events.jsonl",
+      "t": 33,
+      "card": "Pile On",
+      "attacker": "Giant Adephage",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0061/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Ephara's Dispersal",
+      "attacker": "Kari Zev, Skyship Raider",
+      "attackers": 4,
+      "life": 38,
+      "incoming": 20,
+      "best": 14,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0096/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Price of Fame",
+      "attacker": "Broadside Bombardiers",
+      "attackers": 3,
+      "life": 40,
+      "incoming": 4,
+      "best": 2,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0118/games/game-001.events.jsonl",
+      "t": 38,
+      "card": "Pile On",
+      "attacker": "Moldgraf Monstrosity",
+      "attackers": 3,
+      "life": 13,
+      "incoming": 7,
+      "best": 7,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0140/games/game-001.events.jsonl",
+      "t": 42,
+      "card": "Ephara's Dispersal",
+      "attacker": "Moonstone Eulogist",
+      "attackers": 5,
+      "life": 15,
+      "incoming": 8,
+      "best": 8,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0167/games/game-001.events.jsonl",
+      "t": 50,
+      "card": "Ephara's Dispersal",
+      "attacker": "Scion of Calamity",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2165,
+     "cast_hold_vetoes": 1438,
+     "reserve_kept": 156,
+     "cast_react": 125,
+     "cast_react_end": 114,
+     "react_defend_seen": 787,
+     "reserve_no_target": 39,
+     "reserve_short": 51,
+     "cast_aim_attacker": 11,
+     "react_damage_answered": 8,
+     "react_damage_taken_away": 75,
+     "cast_react_defend": 11,
+     "react_lethal_seen": 7,
+     "react_lethal_hopeless": 3,
+     "react_lethal_answered": 3
+    },
+    "hits": {
+     "another player's turn: at an opponent": 115,
+     "another player's turn: at a commander": 39,
+     "another player's turn: at the most dangerous opponent": 91,
+     "another player's turn: with two or three opponents alive": 105,
+     "another player's turn: at the most dangerous of two or three": 81,
+     "at an attacker: at an opponent": 11,
+     "at an attacker: at a commander": 1,
+     "at an attacker: at the most dangerous opponent": 8,
+     "at an attacker: with two or three opponents alive": 11,
+     "at an attacker: at the most dangerous of two or three": 8,
+     "own turn: at an opponent": 1,
+     "own turn: at a commander": 0,
+     "own turn: at the most dangerous opponent": 1,
+     "own turn: with two or three opponents alive": 1,
+     "own turn: at the most dangerous of two or three": 1
+    }
+   }
+  },
+  "blood-rites": {
+   "cards": [
+    "Swords to Plowshares",
+    "Utter End"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 68,
+    "combat_deaths": 100,
+    "combat_deaths_holding": 1,
+    "casts": {
+     "own turn": 90,
+     "another player's turn": 6
+    },
+    "cards": {
+     "Swords to Plowshares": {
+      "own turn": 47,
+      "games_held": 54,
+      "games_cast": 53,
+      "another player's turn": 6
+     },
+     "Utter End": {
+      "own turn": 43,
+      "games_held": 46,
+      "games_cast": 43
+     }
+    },
+    "at_attacker": [],
+    "counters": {
+     "cast_failed": 1
+    },
+    "hits": {
+     "own turn: at an opponent": 90,
+     "own turn: at a commander": 33,
+     "own turn: at the most dangerous opponent": 60,
+     "own turn: with two or three opponents alive": 83,
+     "own turn: at the most dangerous of two or three": 53,
+     "another player's turn: at an opponent": 6,
+     "another player's turn: at a commander": 3,
+     "another player's turn: at the most dangerous opponent": 2,
+     "another player's turn: with two or three opponents alive": 6,
+     "another player's turn: at the most dangerous of two or three": 2
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 60,
+    "combat_deaths": 101,
+    "combat_deaths_holding": 5,
+    "casts": {
+     "another player's turn": 70,
+     "at an attacker": 12
+    },
+    "cards": {
+     "Swords to Plowshares": {
+      "at an attacker": 8,
+      "games_held": 54,
+      "games_cast": 46,
+      "another player's turn": 38
+     },
+     "Utter End": {
+      "another player's turn": 32,
+      "games_held": 45,
+      "games_cast": 36,
+      "at an attacker": 4
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0003/games/game-001.events.jsonl",
+      "t": 51,
+      "card": "Swords to Plowshares",
+      "attacker": "Giant Adephage",
+      "attackers": 2,
+      "life": 28,
+      "incoming": 6,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0005/games/game-001.events.jsonl",
+      "t": 20,
+      "card": "Swords to Plowshares",
+      "attacker": "The Wise Mothman",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0008/games/game-001.events.jsonl",
+      "t": 52,
+      "card": "Swords to Plowshares",
+      "attacker": "Giant Adephage",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0062/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Utter End",
+      "attacker": "Kari Zev, Skyship Raider",
+      "attackers": 4,
+      "life": 34,
+      "incoming": 13,
+      "best": 13,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0068/games/game-001.events.jsonl",
+      "t": 52,
+      "card": "Swords to Plowshares",
+      "attacker": "Mirko, Obsessive Theorist",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0081/games/game-001.events.jsonl",
+      "t": 31,
+      "card": "Utter End",
+      "attacker": "Moldgraf Monstrosity",
+      "attackers": 2,
+      "life": 22,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0084/games/game-001.events.jsonl",
+      "t": 31,
+      "card": "Swords to Plowshares",
+      "attacker": "The Master of Keys",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0087/games/game-001.events.jsonl",
+      "t": 49,
+      "card": "Utter End",
+      "attacker": "Giant Adephage",
+      "attackers": 11,
+      "life": 51,
+      "incoming": 15,
+      "best": 15,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0117/games/game-001.events.jsonl",
+      "t": 28,
+      "card": "Utter End",
+      "attacker": "Ursine Monstrosity",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0144/games/game-001.events.jsonl",
+      "t": 29,
+      "card": "Swords to Plowshares",
+      "attacker": "Wickerbough Elder",
+      "attackers": 7,
+      "life": 22,
+      "incoming": 14,
+      "best": 11,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0160/games/game-001.events.jsonl",
+      "t": 39,
+      "card": "Swords to Plowshares",
+      "attacker": "Hazel of the Rootbloom",
+      "attackers": 11,
+      "life": 23,
+      "incoming": 20,
+      "best": 20,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0183/games/game-001.events.jsonl",
+      "t": 45,
+      "card": "Swords to Plowshares",
+      "attacker": "Quartzwood Crasher",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2185,
+     "react_defend_seen": 1167,
+     "reserve_kept": 106,
+     "cast_hold_vetoes": 826,
+     "cast_react": 82,
+     "cast_react_end": 70,
+     "cast_aim_attacker": 12,
+     "react_damage_answered": 9,
+     "react_damage_taken_away": 78,
+     "cast_react_defend": 12,
+     "reserve_short": 35,
+     "reserve_no_target": 30,
+     "react_lethal_seen": 10,
+     "react_lethal_hopeless": 4,
+     "react_lethal_answered": 3,
+     "cast_failed": 1
+    },
+    "hits": {
+     "another player's turn: at an opponent": 70,
+     "another player's turn: at a commander": 20,
+     "another player's turn: at the most dangerous opponent": 56,
+     "another player's turn: with two or three opponents alive": 65,
+     "another player's turn: at the most dangerous of two or three": 51,
+     "at an attacker: at an opponent": 12,
+     "at an attacker: at a commander": 3,
+     "at an attacker: at the most dangerous opponent": 8,
+     "at an attacker: with two or three opponents alive": 10,
+     "at an attacker: at the most dangerous of two or three": 6
+    }
+   }
+  },
+  "death-toll": {
+   "cards": [
+    "Putrefy"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 57,
+    "combat_deaths": 99,
+    "combat_deaths_holding": 0,
+    "casts": {
+     "own turn": 47,
+     "another player's turn": 1
+    },
+    "cards": {
+     "Putrefy": {
+      "own turn": 47,
+      "games_held": 47,
+      "games_cast": 46,
+      "another player's turn": 1
+     }
+    },
+    "at_attacker": [],
+    "counters": {
+     "cast_hold_vetoes": 32
+    },
+    "hits": {
+     "own turn: at an opponent": 47,
+     "own turn: at a commander": 18,
+     "own turn: at the most dangerous opponent": 30,
+     "own turn: with two or three opponents alive": 42,
+     "own turn: at the most dangerous of two or three": 25,
+     "another player's turn: at an opponent": 1,
+     "another player's turn: at a commander": 0,
+     "another player's turn: at the most dangerous opponent": 1,
+     "another player's turn: with two or three opponents alive": 1,
+     "another player's turn: at the most dangerous of two or three": 1
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 60,
+    "combat_deaths": 103,
+    "combat_deaths_holding": 2,
+    "casts": {
+     "another player's turn": 40,
+     "at an attacker": 6
+    },
+    "cards": {
+     "Putrefy": {
+      "another player's turn": 40,
+      "games_held": 48,
+      "games_cast": 45,
+      "at an attacker": 6
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0088/games/game-001.events.jsonl",
+      "t": 27,
+      "card": "Putrefy",
+      "attacker": "Rampaging Brontodon",
+      "attackers": 2,
+      "life": 30,
+      "incoming": 5,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0118/games/game-001.events.jsonl",
+      "t": 35,
+      "card": "Putrefy",
+      "attacker": "Admiral Brass, Unsinkable",
+      "attackers": 2,
+      "life": 40,
+      "incoming": 5,
+      "best": 5,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0132/games/game-001.events.jsonl",
+      "t": 38,
+      "card": "Putrefy",
+      "attacker": "Breeches, Brazen Plunderer",
+      "attackers": 4,
+      "life": 28,
+      "incoming": 10,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0132/games/game-001.events.jsonl",
+      "t": 42,
+      "card": "Putrefy",
+      "attacker": "Corsair Captain",
+      "attackers": 5,
+      "life": 19,
+      "incoming": 12,
+      "best": 11,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0144/games/game-001.events.jsonl",
+      "t": 25,
+      "card": "Putrefy",
+      "attacker": "Breeches, Brazen Plunderer",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0165/games/game-001.events.jsonl",
+      "t": 52,
+      "card": "Putrefy",
+      "attacker": "The Master of Keys",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2216,
+     "react_defend_seen": 934,
+     "reserve_kept": 55,
+     "cast_hold_vetoes": 411,
+     "cast_react": 46,
+     "cast_react_end": 40,
+     "reserve_no_target": 20,
+     "reserve_short": 12,
+     "cast_aim_attacker": 6,
+     "react_damage_answered": 4,
+     "react_damage_taken_away": 59,
+     "cast_react_defend": 6,
+     "react_lethal_seen": 5,
+     "react_lethal_answered": 2,
+     "react_lethal_hopeless": 1
+    },
+    "hits": {
+     "another player's turn: at an opponent": 40,
+     "another player's turn: at a commander": 14,
+     "another player's turn: at the most dangerous opponent": 35,
+     "another player's turn: with two or three opponents alive": 38,
+     "another player's turn: at the most dangerous of two or three": 33,
+     "at an attacker: at an opponent": 6,
+     "at an attacker: at a commander": 1,
+     "at an attacker: at the most dangerous opponent": 3,
+     "at an attacker: with two or three opponents alive": 6,
+     "at an attacker: at the most dangerous of two or three": 3
+    }
+   }
+  },
+  "miracle-worker": {
+   "cards": [
+    "Swords to Plowshares",
+    "Utter End"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 36,
+    "combat_deaths": 114,
+    "combat_deaths_holding": 1,
+    "casts": {
+     "another player's turn": 15,
+     "at an attacker": 1,
+     "own turn": 87
+    },
+    "cards": {
+     "Swords to Plowshares": {
+      "another player's turn": 13,
+      "games_held": 53,
+      "games_cast": 52,
+      "at an attacker": 1,
+      "own turn": 38
+     },
+     "Utter End": {
+      "own turn": 49,
+      "games_held": 53,
+      "games_cast": 51,
+      "another player's turn": 2
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0008/games/game-001.events.jsonl",
+      "t": 7,
+      "card": "Swords to Plowshares",
+      "attacker": "Ravenous Squirrel",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {},
+    "hits": {
+     "another player's turn: at an opponent": 15,
+     "another player's turn: at a commander": 3,
+     "another player's turn: at the most dangerous opponent": 9,
+     "another player's turn: with two or three opponents alive": 15,
+     "another player's turn: at the most dangerous of two or three": 9,
+     "at an attacker: at an opponent": 1,
+     "at an attacker: at a commander": 0,
+     "at an attacker: at the most dangerous opponent": 1,
+     "at an attacker: with two or three opponents alive": 1,
+     "at an attacker: at the most dangerous of two or three": 1,
+     "own turn: at an opponent": 87,
+     "own turn: at a commander": 32,
+     "own turn: at the most dangerous opponent": 58,
+     "own turn: with two or three opponents alive": 79,
+     "own turn: at the most dangerous of two or three": 50
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 48,
+    "combat_deaths": 100,
+    "combat_deaths_holding": 5,
+    "casts": {
+     "at an attacker": 11,
+     "another player's turn": 75
+    },
+    "cards": {
+     "Swords to Plowshares": {
+      "at an attacker": 3,
+      "games_held": 48,
+      "games_cast": 43,
+      "another player's turn": 40
+     },
+     "Utter End": {
+      "at an attacker": 8,
+      "games_held": 50,
+      "games_cast": 43,
+      "another player's turn": 35
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0004/games/game-001.events.jsonl",
+      "t": 35,
+      "card": "Swords to Plowshares",
+      "attacker": "Sidar Kondo of Jamuraa",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0011/games/game-001.events.jsonl",
+      "t": 23,
+      "card": "Utter End",
+      "attacker": "Patron of the Vein",
+      "attackers": 2,
+      "life": 19,
+      "incoming": 4,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0015/games/game-001.events.jsonl",
+      "t": 29,
+      "card": "Utter End",
+      "attacker": "Rampaging Brontodon",
+      "attackers": 4,
+      "life": 26,
+      "incoming": 14,
+      "best": 14,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0052/games/game-001.events.jsonl",
+      "t": 40,
+      "card": "Utter End",
+      "attacker": "The Wise Mothman",
+      "attackers": 3,
+      "life": 8,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0067/games/game-001.events.jsonl",
+      "t": 49,
+      "card": "Utter End",
+      "attacker": "Dimir Spybug",
+      "attackers": 4,
+      "life": 7,
+      "incoming": 5,
+      "best": 3,
+      "out": true
+     },
+     {
+      "where": "arm-playbook/g0116/games/game-001.events.jsonl",
+      "t": 27,
+      "card": "Utter End",
+      "attacker": "Order of Sacred Dusk",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0126/games/game-001.events.jsonl",
+      "t": 28,
+      "card": "Swords to Plowshares",
+      "attacker": "Zara, Renegade Recruiter",
+      "attackers": 4,
+      "life": 33,
+      "incoming": 14,
+      "best": 14,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0143/games/game-001.events.jsonl",
+      "t": 41,
+      "card": "Utter End",
+      "attacker": "Raging Swordtooth",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0147/games/game-001.events.jsonl",
+      "t": 40,
+      "card": "Utter End",
+      "attacker": "Wrathful Raptors",
+      "attackers": 2,
+      "life": 19,
+      "incoming": 5,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0164/games/game-001.events.jsonl",
+      "t": 42,
+      "card": "Swords to Plowshares",
+      "attacker": "Vile Mutilator",
+      "attackers": 2,
+      "life": 6,
+      "incoming": 2,
+      "best": 2,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0168/games/game-001.events.jsonl",
+      "t": 25,
+      "card": "Utter End",
+      "attacker": "The Wise Mothman",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2238,
+     "react_defend_seen": 902,
+     "cast_hold_vetoes": 810,
+     "cast_aim_attacker": 11,
+     "react_damage_answered": 7,
+     "react_damage_taken_away": 87,
+     "cast_react": 86,
+     "cast_react_defend": 11,
+     "reserve_no_target": 20,
+     "reserve_kept": 106,
+     "cast_react_end": 75,
+     "reserve_short": 55,
+     "react_lethal_seen": 11,
+     "react_lethal_answered": 4,
+     "react_lethal_hopeless": 6
+    },
+    "hits": {
+     "at an attacker: at an opponent": 11,
+     "at an attacker: at a commander": 2,
+     "at an attacker: at the most dangerous opponent": 6,
+     "at an attacker: with two or three opponents alive": 9,
+     "at an attacker: at the most dangerous of two or three": 4,
+     "another player's turn: at an opponent": 75,
+     "another player's turn: at a commander": 32,
+     "another player's turn: at the most dangerous opponent": 55,
+     "another player's turn: with two or three opponents alive": 71,
+     "another player's turn: at the most dangerous of two or three": 51
+    }
+   }
+  },
+  "ahoy-mateys": {
+   "cards": [
+    "Chaos Warp",
+    "Lethal Scheme"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 68,
+    "combat_deaths": 92,
+    "combat_deaths_holding": 4,
+    "casts": {
+     "own turn": 90,
+     "another player's turn": 5
+    },
+    "cards": {
+     "Chaos Warp": {
+      "own turn": 45,
+      "games_held": 46,
+      "games_cast": 45
+     },
+     "Lethal Scheme": {
+      "games_held": 56,
+      "own turn": 45,
+      "games_cast": 50,
+      "another player's turn": 5
+     }
+    },
+    "at_attacker": [],
+    "counters": {
+     "cast_hold_vetoes": 73,
+     "cast_failed": 3
+    },
+    "hits": {
+     "own turn: at an opponent": 90,
+     "own turn: at a commander": 27,
+     "own turn: at the most dangerous opponent": 48,
+     "own turn: with two or three opponents alive": 85,
+     "own turn: at the most dangerous of two or three": 43,
+     "another player's turn: at an opponent": 5,
+     "another player's turn: at a commander": 1,
+     "another player's turn: at the most dangerous opponent": 2,
+     "another player's turn: with two or three opponents alive": 5,
+     "another player's turn: at the most dangerous of two or three": 2
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 59,
+    "combat_deaths": 94,
+    "combat_deaths_holding": 9,
+    "casts": {
+     "another player's turn": 71,
+     "at an attacker": 7
+    },
+    "cards": {
+     "Chaos Warp": {
+      "another player's turn": 37,
+      "games_held": 50,
+      "games_cast": 43,
+      "at an attacker": 6
+     },
+     "Lethal Scheme": {
+      "games_held": 58,
+      "another player's turn": 34,
+      "games_cast": 35,
+      "at an attacker": 1
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0003/games/game-001.events.jsonl",
+      "t": 45,
+      "card": "Chaos Warp",
+      "attacker": "Imperial Hellkite",
+      "attackers": 3,
+      "life": 16,
+      "incoming": 9,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0009/games/game-001.events.jsonl",
+      "t": 27,
+      "card": "Chaos Warp",
+      "attacker": "Regal Behemoth",
+      "attackers": 2,
+      "life": 20,
+      "incoming": 2,
+      "best": 2,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0062/games/game-001.events.jsonl",
+      "t": 28,
+      "card": "Chaos Warp",
+      "attacker": "Giant Adephage",
+      "attackers": 3,
+      "life": 21,
+      "incoming": 2,
+      "best": 2,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0134/games/game-001.events.jsonl",
+      "t": 18,
+      "card": "Lethal Scheme",
+      "attacker": "Krosan Cloudscraper",
+      "attackers": 2,
+      "life": 38,
+      "incoming": 2,
+      "best": 2,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0183/games/game-001.events.jsonl",
+      "t": 31,
+      "card": "Chaos Warp",
+      "attacker": "Pantlaza, Sun-Favored",
+      "attackers": 3,
+      "life": 7,
+      "incoming": 3,
+      "best": 3,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0186/games/game-001.events.jsonl",
+      "t": 58,
+      "card": "Chaos Warp",
+      "attacker": "Fear of Sleep Paralysis",
+      "attackers": 2,
+      "life": 11,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0198/games/game-001.events.jsonl",
+      "t": 31,
+      "card": "Chaos Warp",
+      "attacker": "Carmen, Cruel Skymarcher",
+      "attackers": 2,
+      "life": 11,
+      "incoming": 6,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 1943,
+     "react_defend_seen": 981,
+     "reserve_short": 73,
+     "reserve_kept": 147,
+     "cast_hold_vetoes": 678,
+     "cast_react": 78,
+     "cast_react_end": 71,
+     "react_lethal_seen": 12,
+     "cast_aim_attacker": 7,
+     "react_lethal_answered": 2,
+     "react_damage_taken_away": 55,
+     "cast_react_defend": 7,
+     "reserve_no_target": 27,
+     "react_lethal_hopeless": 6,
+     "react_damage_answered": 5,
+     "cast_failed": 1
+    },
+    "hits": {
+     "another player's turn: at an opponent": 71,
+     "another player's turn: at a commander": 29,
+     "another player's turn: at the most dangerous opponent": 53,
+     "another player's turn: with two or three opponents alive": 70,
+     "another player's turn: at the most dangerous of two or three": 52,
+     "at an attacker: at an opponent": 7,
+     "at an attacker: at a commander": 1,
+     "at an attacker: at the most dangerous opponent": 4,
+     "at an attacker: with two or three opponents alive": 6,
+     "at an attacker: at the most dangerous of two or three": 3
+    }
+   }
+  },
+  "deadly-disguise": {
+   "cards": [
+    "Path to Exile",
+    "Chaos Warp",
+    "Unexplained Absence"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 20,
+    "combat_deaths": 130,
+    "combat_deaths_holding": 9,
+    "casts": {
+     "own turn": 99,
+     "another player's turn": 13,
+     "at an attacker": 2
+    },
+    "cards": {
+     "Path to Exile": {
+      "own turn": 34,
+      "games_held": 45,
+      "games_cast": 42,
+      "another player's turn": 9
+     },
+     "Chaos Warp": {
+      "own turn": 42,
+      "games_held": 45,
+      "games_cast": 43,
+      "another player's turn": 2
+     },
+     "Unexplained Absence": {
+      "own turn": 23,
+      "games_held": 38,
+      "games_cast": 27,
+      "at an attacker": 2,
+      "another player's turn": 2
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0040/games/game-001.events.jsonl",
+      "t": 35,
+      "card": "Unexplained Absence",
+      "attacker": "Nightkin Ambusher",
+      "attackers": 3,
+      "life": 17,
+      "incoming": 6,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0057/games/game-001.events.jsonl",
+      "t": 37,
+      "card": "Unexplained Absence",
+      "attacker": "Rat Token",
+      "attackers": 8,
+      "life": 20,
+      "incoming": 7,
+      "best": 7,
+      "out": false
+     }
+    ],
+    "counters": {
+     "cast_hold_vetoes": 66
+    },
+    "hits": {
+     "own turn: at an opponent": 99,
+     "own turn: at a commander": 30,
+     "own turn: at the most dangerous opponent": 68,
+     "own turn: with two or three opponents alive": 92,
+     "own turn: at the most dangerous of two or three": 61,
+     "another player's turn: at an opponent": 13,
+     "another player's turn: at a commander": 5,
+     "another player's turn: at the most dangerous opponent": 6,
+     "another player's turn: with two or three opponents alive": 13,
+     "another player's turn: at the most dangerous of two or three": 6,
+     "at an attacker: at an opponent": 2,
+     "at an attacker: at a commander": 0,
+     "at an attacker: at the most dangerous opponent": 2,
+     "at an attacker: with two or three opponents alive": 1,
+     "at an attacker: at the most dangerous of two or three": 1
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 18,
+    "combat_deaths": 126,
+    "combat_deaths_holding": 15,
+    "casts": {
+     "another player's turn": 97,
+     "at an attacker": 9
+    },
+    "cards": {
+     "Path to Exile": {
+      "another player's turn": 31,
+      "games_held": 41,
+      "games_cast": 35,
+      "at an attacker": 4
+     },
+     "Chaos Warp": {
+      "games_held": 46,
+      "another player's turn": 39,
+      "games_cast": 42,
+      "at an attacker": 4
+     },
+     "Unexplained Absence": {
+      "another player's turn": 27,
+      "games_held": 44,
+      "games_cast": 28,
+      "at an attacker": 1
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0052/games/game-001.events.jsonl",
+      "t": 43,
+      "card": "Unexplained Absence",
+      "attacker": "Moldgraf Monstrosity",
+      "attackers": 4,
+      "life": 58,
+      "incoming": 15,
+      "best": 15,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0053/games/game-001.events.jsonl",
+      "t": 30,
+      "card": "Chaos Warp",
+      "attacker": "Prognostic Sphinx",
+      "attackers": 4,
+      "life": 5,
+      "incoming": 4,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0055/games/game-001.events.jsonl",
+      "t": 42,
+      "card": "Chaos Warp",
+      "attacker": "Noxious Gearhulk",
+      "attackers": 8,
+      "life": 16,
+      "incoming": 15,
+      "best": 13,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0057/games/game-001.events.jsonl",
+      "t": 67,
+      "card": "Chaos Warp",
+      "attacker": "Elenda, the Dusk Rose",
+      "attackers": 4,
+      "life": 19,
+      "incoming": 12,
+      "best": 4,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0077/games/game-001.events.jsonl",
+      "t": 30,
+      "card": "Chaos Warp",
+      "attacker": "End-Raze Forerunners",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0135/games/game-001.events.jsonl",
+      "t": 49,
+      "card": "Path to Exile",
+      "attacker": "Root Elemental",
+      "attackers": 7,
+      "life": 19,
+      "incoming": 18,
+      "best": 18,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0159/games/game-001.events.jsonl",
+      "t": 21,
+      "card": "Path to Exile",
+      "attacker": "The Wise Mothman",
+      "attackers": 2,
+      "life": 33,
+      "incoming": 1,
+      "best": 1,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0170/games/game-001.events.jsonl",
+      "t": 45,
+      "card": "Path to Exile",
+      "attacker": "Demolisher Spawn",
+      "attackers": 7,
+      "life": 19,
+      "incoming": 6,
+      "best": 8,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0185/games/game-001.events.jsonl",
+      "t": 30,
+      "card": "Path to Exile",
+      "attacker": "Watchful Radstag",
+      "attackers": 3,
+      "life": 33,
+      "incoming": 6,
+      "best": 6,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2111,
+     "cast_hold_vetoes": 1082,
+     "react_defend_seen": 974,
+     "reserve_kept": 145,
+     "react_lethal_seen": 19,
+     "react_lethal_hopeless": 8,
+     "reserve_short": 99,
+     "cast_react": 106,
+     "cast_react_end": 97,
+     "reserve_no_target": 37,
+     "cast_failed": 1,
+     "cast_aim_attacker": 9,
+     "react_damage_answered": 5,
+     "react_damage_taken_away": 88,
+     "cast_react_defend": 9,
+     "react_lethal_answered": 4
+    },
+    "hits": {
+     "another player's turn: at an opponent": 97,
+     "another player's turn: at a commander": 41,
+     "another player's turn: at the most dangerous opponent": 68,
+     "another player's turn: with two or three opponents alive": 96,
+     "another player's turn: at the most dangerous of two or three": 67,
+     "at an attacker: at an opponent": 9,
+     "at an attacker: at a commander": 1,
+     "at an attacker: at the most dangerous opponent": 7,
+     "at an attacker: with two or three opponents alive": 6,
+     "at an attacker: at the most dangerous of two or three": 4
+    }
+   }
+  }
+ },
+ "all": {
+  "base": {
+   "games": 2000,
+   "wins": 491,
+   "combat_deaths": 1087,
+   "combat_deaths_holding": 31,
+   "held": 1184,
+   "cast": 1104,
+   "casts": 1114,
+   "other": 95,
+   "at_attacker": 6,
+   "out_after_answer": 1,
+   "h:own turn: at an opponent": 1008,
+   "h:own turn: at a commander": 347,
+   "h:own turn: at the most dangerous opponent": 662,
+   "h:own turn: with two or three opponents alive": 937,
+   "h:own turn: at the most dangerous of two or three": 591,
+   "h:another player's turn: at an opponent": 89,
+   "h:another player's turn: at a commander": 34,
+   "h:another player's turn: at the most dangerous opponent": 44,
+   "h:another player's turn: with two or three opponents alive": 86,
+   "h:another player's turn: at the most dangerous of two or three": 41,
+   "c:cast_failed": 13,
+   "c:cast_hold_vetoes": 279,
+   "h:at an attacker: at an opponent": 6,
+   "h:at an attacker: at a commander": 0,
+   "h:at an attacker: at the most dangerous opponent": 6,
+   "h:at an attacker: with two or three opponents alive": 4,
+   "h:at an attacker: at the most dangerous of two or three": 4
+  },
+  "cand": {
+   "games": 2000,
+   "wins": 497,
+   "combat_deaths": 1093,
+   "combat_deaths_holding": 64,
+   "held": 1182,
+   "cast": 994,
+   "casts": 997,
+   "other": 951,
+   "at_attacker": 92,
+   "out_after_answer": 5,
+   "c:react_end_seen": 21215,
+   "c:react_defend_seen": 9502,
+   "c:reserve_kept": 1217,
+   "c:cast_hold_vetoes": 9863,
+   "c:cast_react": 947,
+   "c:cast_react_end": 855,
+   "c:reserve_no_target": 265,
+   "c:reserve_short": 498,
+   "c:react_lethal_seen": 108,
+   "c:cast_aim_attacker": 92,
+   "c:react_lethal_answered": 33,
+   "c:react_damage_taken_away": 731,
+   "c:cast_react_defend": 92,
+   "c:react_lethal_hopeless": 45,
+   "c:react_damage_answered": 59,
+   "h:another player's turn: at an opponent": 859,
+   "h:another player's turn: at a commander": 322,
+   "h:another player's turn: at the most dangerous opponent": 648,
+   "h:another player's turn: with two or three opponents alive": 820,
+   "h:another player's turn: at the most dangerous of two or three": 609,
+   "h:at an attacker: at an opponent": 92,
+   "h:at an attacker: at a commander": 15,
+   "h:at an attacker: at the most dangerous opponent": 56,
+   "h:at an attacker: with two or three opponents alive": 79,
+   "h:at an attacker: at the most dangerous of two or three": 43,
+   "h:own turn: at an opponent": 46,
+   "h:own turn: at a commander": 14,
+   "h:own turn: at the most dangerous opponent": 31,
+   "h:own turn: with two or three opponents alive": 40,
+   "h:own turn: at the most dangerous of two or three": 25,
+   "c:cast_failed": 15
+  }
+ }
+}

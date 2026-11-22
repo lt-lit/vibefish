@@ -1,0 +1,13212 @@
+{
+"kind": "first-difference",
+"base": "shipped",
+"candidate": "react",
+"decks": [
+"blight-curse",
+"veloci-ramp-tor",
+"mutant-menace",
+"squirreled-away",
+"revenant-recon",
+"blood-rites",
+"death-toll",
+"miracle-worker",
+"ahoy-mateys",
+"deadly-disguise"
+],
+"files": {
+"other": {
+"both": 127,
+"neither": 571,
+"base_only": 116,
+"cand_only": 119,
+"tables": 933
+},
+"identical": {
+"neither": 807,
+"both": 246,
+"tables": 1053
+},
+"target": {
+"both": 1,
+"tables": 1,
+"cand_at_top": 0,
+"base_at_top": 0
+},
+"attack: nobody": {
+"neither": 7,
+"cand_only": 4,
+"base_only": 1,
+"tables": 12,
+"base_kill": 0,
+"base_dead": 0,
+"base_exposed": 0,
+"base_sent": 15,
+"cand_kill": 0,
+"cand_dead": 0,
+"cand_exposed": 0,
+"cand_sent": 15
+},
+"attack: lesser": {
+"neither": 1,
+"tables": 1,
+"base_kill": 0,
+"base_dead": 0,
+"base_exposed": 0,
+"base_sent": 1,
+"cand_kill": 0,
+"cand_dead": 1,
+"cand_exposed": 0,
+"cand_sent": 7
+},
+"attack, all": {
+"neither": 8,
+"cand_only": 4,
+"base_only": 1,
+"tables": 13,
+"base_kill": 0,
+"base_dead": 0,
+"base_exposed": 0,
+"base_sent": 16,
+"cand_kill": 0,
+"cand_dead": 1,
+"cand_exposed": 0,
+"cand_sent": 22
+}
+},
+"tables": [
+{
+"deck": "blight-curse",
+"idx": 1,
+"outcome": "both",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 2,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 3,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 4,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 5,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blight-curse",
+"idx": 6,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "blight-curse",
+"idx": 7,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 8,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 9,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blight-curse",
+"idx": 10,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 11,
+"outcome": "both",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 12,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "blight-curse",
+"idx": 13,
+"outcome": "both",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blight-curse",
+"idx": 14,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 15,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "blight-curse",
+"idx": 16,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 18,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 19,
+"outcome": "base_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 20,
+"outcome": "both",
+"file": "other",
+"t": 5
+},
+{
+"deck": "blight-curse",
+"idx": 21,
+"outcome": "both",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blight-curse",
+"idx": 22,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 23,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "blight-curse",
+"idx": 24,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 25,
+"outcome": "neither",
+"file": "other",
+"t": 7
+},
+{
+"deck": "blight-curse",
+"idx": 26,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 27,
+"outcome": "both",
+"file": "other",
+"t": 39
+},
+{
+"deck": "blight-curse",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 29,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 30,
+"outcome": "cand_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "blight-curse",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 32,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blight-curse",
+"idx": 33,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "blight-curse",
+"idx": 34,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 35,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 36,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "blight-curse",
+"idx": 37,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 39,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "blight-curse",
+"idx": 40,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blight-curse",
+"idx": 41,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 42,
+"outcome": "cand_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "blight-curse",
+"idx": 43,
+"outcome": "both",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 44,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 45,
+"outcome": "base_only",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 46,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 49,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blight-curse",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "blight-curse",
+"idx": 51,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "blight-curse",
+"idx": 52,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 53,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 54,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 55,
+"outcome": "both",
+"file": "other",
+"t": 40
+},
+{
+"deck": "blight-curse",
+"idx": 56,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 57,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 58,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 59,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 60,
+"outcome": "cand_only",
+"file": "other",
+"t": 39
+},
+{
+"deck": "blight-curse",
+"idx": 61,
+"outcome": "neither",
+"file": "other",
+"t": 7
+},
+{
+"deck": "blight-curse",
+"idx": 62,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 63,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 64,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "blight-curse",
+"idx": 66,
+"outcome": "cand_only",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 68,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 69,
+"outcome": "both",
+"file": "other",
+"t": 29
+},
+{
+"deck": "blight-curse",
+"idx": 70,
+"outcome": "both",
+"file": "other",
+"t": 50
+},
+{
+"deck": "blight-curse",
+"idx": 71,
+"outcome": "base_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 72,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 73,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 75,
+"outcome": "cand_only",
+"file": "other",
+"t": 54
+},
+{
+"deck": "blight-curse",
+"idx": 76,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 78,
+"outcome": "cand_only",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 79,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "blight-curse",
+"idx": 80,
+"outcome": "neither",
+"file": "other",
+"t": 3
+},
+{
+"deck": "blight-curse",
+"idx": 81,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blight-curse",
+"idx": 82,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 83,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 84,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 85,
+"outcome": "base_only",
+"file": "other",
+"t": 29
+},
+{
+"deck": "blight-curse",
+"idx": 86,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 87,
+"outcome": "both",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blight-curse",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 89,
+"outcome": "both",
+"file": "other",
+"t": 26
+},
+{
+"deck": "blight-curse",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 91,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 93,
+"outcome": "base_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 94,
+"outcome": "both",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 95,
+"outcome": "base_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 96,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 98,
+"outcome": "cand_only",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 99,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "blight-curse",
+"idx": 100,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 101,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "blight-curse",
+"idx": 102,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 103,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 105,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 106,
+"outcome": "both",
+"file": "other",
+"t": 38
+},
+{
+"deck": "blight-curse",
+"idx": 107,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blight-curse",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 110,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "blight-curse",
+"idx": 111,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "blight-curse",
+"idx": 112,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "blight-curse",
+"idx": 113,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 114,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 115,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 116,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blight-curse",
+"idx": 117,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 118,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 119,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 120,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blight-curse",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 122,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 123,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 125,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "blight-curse",
+"idx": 126,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 127,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 128,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "blight-curse",
+"idx": 129,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "blight-curse",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 132,
+"outcome": "neither",
+"file": "other",
+"t": 3
+},
+{
+"deck": "blight-curse",
+"idx": 133,
+"outcome": "both",
+"file": "other",
+"t": 29
+},
+{
+"deck": "blight-curse",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 135,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 136,
+"outcome": "base_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blight-curse",
+"idx": 137,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blight-curse",
+"idx": 139,
+"outcome": "base_only",
+"file": "other",
+"t": 34
+},
+{
+"deck": "blight-curse",
+"idx": 140,
+"outcome": "both",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blight-curse",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 143,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blight-curse",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 145,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 146,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 148,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blight-curse",
+"idx": 149,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 150,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 151,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 153,
+"outcome": "cand_only",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blight-curse",
+"idx": 154,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 155,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blight-curse",
+"idx": 156,
+"outcome": "cand_only",
+"file": "other",
+"t": 19
+},
+{
+"deck": "blight-curse",
+"idx": 157,
+"outcome": "base_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 158,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "blight-curse",
+"idx": 159,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "blight-curse",
+"idx": 160,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "blight-curse",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 162,
+"outcome": "base_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "blight-curse",
+"idx": 163,
+"outcome": "base_only",
+"file": "other",
+"t": 34
+},
+{
+"deck": "blight-curse",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 165,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blight-curse",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 167,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 168,
+"outcome": "base_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 169,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "blight-curse",
+"idx": 170,
+"outcome": "cand_only",
+"file": "other",
+"t": 25
+},
+{
+"deck": "blight-curse",
+"idx": 171,
+"outcome": "base_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "blight-curse",
+"idx": 172,
+"outcome": "cand_only",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 173,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "blight-curse",
+"idx": 174,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 175,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blight-curse",
+"idx": 176,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 177,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 178,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "blight-curse",
+"idx": 179,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blight-curse",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 181,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 183,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blight-curse",
+"idx": 184,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "blight-curse",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 187,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blight-curse",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 189,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "blight-curse",
+"idx": 190,
+"outcome": "cand_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blight-curse",
+"idx": 191,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blight-curse",
+"idx": 192,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blight-curse",
+"idx": 193,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "blight-curse",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 196,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blight-curse",
+"idx": 197,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "blight-curse",
+"idx": 198,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blight-curse",
+"idx": 199,
+"outcome": "both",
+"file": "other",
+"t": 41
+},
+{
+"deck": "blight-curse",
+"idx": 200,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 2,
+"outcome": "both",
+"file": "other",
+"t": 19
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 3,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 4,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 5,
+"outcome": "cand_only",
+"file": "other",
+"t": 40
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 6,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 7,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 8,
+"outcome": "both",
+"file": "other",
+"t": 48
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 9,
+"outcome": "base_only",
+"file": "other",
+"t": 33
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 11,
+"outcome": "both",
+"file": "other",
+"t": 41
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 12,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 19,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 20,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 24,
+"outcome": "cand_only",
+"file": "other",
+"t": 34
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 25,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 27,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 29,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 30,
+"outcome": "cand_only",
+"file": "other",
+"t": 29
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 31,
+"outcome": "both",
+"file": "other",
+"t": 23
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 32,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 33,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 34,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 36,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 37,
+"outcome": "base_only",
+"file": "other",
+"t": 37
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 38,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 39,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 41,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 42,
+"outcome": "both",
+"file": "other",
+"t": 10
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 44,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 46,
+"outcome": "cand_only",
+"file": "other",
+"t": 35
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 50,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 52,
+"outcome": "cand_only",
+"file": "other",
+"t": 48
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 53,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 54,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 55,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 56,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 57,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 59,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 60,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 61,
+"outcome": "both",
+"file": "other",
+"t": 39
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 62,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 63,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 64,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 66,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 68,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 69,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 70,
+"outcome": "both",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 72,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 73,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 74,
+"outcome": "cand_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 75,
+"outcome": "both",
+"file": "other",
+"t": 14
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 78,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 79,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 81,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 82,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 83,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 85,
+"outcome": "both",
+"file": "other",
+"t": 8
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 86,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 87,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 89,
+"outcome": "neither",
+"file": "other",
+"t": 49
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 91,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 92,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 93,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 94,
+"outcome": "base_only",
+"file": "other",
+"t": 35
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 95,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 96,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 98,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 99,
+"outcome": "base_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 101,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 102,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 103,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 105,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 107,
+"outcome": "base_only",
+"file": "other",
+"t": 30
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 108,
+"outcome": "cand_only",
+"file": "other",
+"t": 23
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 110,
+"outcome": "both",
+"file": "other",
+"t": 26
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 112,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 113,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 114,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 115,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 116,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 117,
+"outcome": "base_only",
+"file": "other",
+"t": 37
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 118,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 119,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 120,
+"outcome": "base_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 122,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 123,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 124,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 127,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 128,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 129,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 130,
+"outcome": "both",
+"file": "other",
+"t": 32
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 131,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 133,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 134,
+"outcome": "cand_only",
+"file": "other",
+"t": 35
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 135,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 136,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 138,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 139,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 140,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 141,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 142,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 143,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 145,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 147,
+"outcome": "both",
+"file": "target",
+"t": 39,
+"card": "Wrathful Raptors",
+"base_at_top": false,
+"cand_at_top": false,
+"opponents": 2
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 148,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 149,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 150,
+"outcome": "base_only",
+"file": "other",
+"t": 32
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 151,
+"outcome": "both",
+"file": "other",
+"t": 4
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 153,
+"outcome": "both",
+"file": "other",
+"t": 41
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 154,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 156,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 157,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 158,
+"outcome": "base_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 159,
+"outcome": "both",
+"file": "other",
+"t": 51
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 163,
+"outcome": "base_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 165,
+"outcome": "base_only",
+"file": "other",
+"t": 6
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 167,
+"outcome": "cand_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 168,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 169,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 170,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 172,
+"outcome": "cand_only",
+"file": "other",
+"t": 32
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 173,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 174,
+"outcome": "cand_only",
+"file": "other",
+"t": 27
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 175,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 176,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 177,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 178,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 179,
+"outcome": "both",
+"file": "other",
+"t": 49
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 181,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 182,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 187,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 188,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 190,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 191,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 192,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 194,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 196,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 197,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 198,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 199,
+"outcome": "base_only",
+"file": "other",
+"t": 37
+},
+{
+"deck": "veloci-ramp-tor",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 2,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "mutant-menace",
+"idx": 3,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 4,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "mutant-menace",
+"idx": 5,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 6,
+"outcome": "base_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "mutant-menace",
+"idx": 7,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 8,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "mutant-menace",
+"idx": 9,
+"outcome": "base_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "mutant-menace",
+"idx": 10,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 11,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 12,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 13,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "mutant-menace",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 17,
+"outcome": "cand_only",
+"file": "other",
+"t": 20
+},
+{
+"deck": "mutant-menace",
+"idx": 18,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 19,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 20,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "mutant-menace",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 22,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "mutant-menace",
+"idx": 23,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "mutant-menace",
+"idx": 24,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 25,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 28,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "mutant-menace",
+"idx": 29,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "mutant-menace",
+"idx": 30,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "mutant-menace",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 32,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 33,
+"outcome": "cand_only",
+"file": "other",
+"t": 16
+},
+{
+"deck": "mutant-menace",
+"idx": 34,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 35,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 36,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 37,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 39,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 40,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 41,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "mutant-menace",
+"idx": 42,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "mutant-menace",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 44,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "mutant-menace",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 52,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "mutant-menace",
+"idx": 53,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 55,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "mutant-menace",
+"idx": 56,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "mutant-menace",
+"idx": 57,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 58,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 59,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "mutant-menace",
+"idx": 60,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 61,
+"outcome": "cand_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "mutant-menace",
+"idx": 62,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "mutant-menace",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 64,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "mutant-menace",
+"idx": 65,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 67,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "mutant-menace",
+"idx": 68,
+"outcome": "both",
+"file": "other",
+"t": 34
+},
+{
+"deck": "mutant-menace",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 70,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 71,
+"outcome": "both",
+"file": "other",
+"t": 28
+},
+{
+"deck": "mutant-menace",
+"idx": 72,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 73,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "mutant-menace",
+"idx": 74,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "mutant-menace",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 79,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "mutant-menace",
+"idx": 80,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 82,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 83,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "mutant-menace",
+"idx": 84,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 86,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 87,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "mutant-menace",
+"idx": 89,
+"outcome": "neither",
+"file": "other",
+"t": 54
+},
+{
+"deck": "mutant-menace",
+"idx": 90,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "mutant-menace",
+"idx": 91,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "mutant-menace",
+"idx": 92,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 93,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 94,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "mutant-menace",
+"idx": 95,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 96,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 97,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "mutant-menace",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 99,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 100,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 101,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 102,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 103,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 105,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "mutant-menace",
+"idx": 106,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "mutant-menace",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 108,
+"outcome": "both",
+"file": "other",
+"t": 15
+},
+{
+"deck": "mutant-menace",
+"idx": 109,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "mutant-menace",
+"idx": 110,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "mutant-menace",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 114,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "mutant-menace",
+"idx": 115,
+"outcome": "cand_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "mutant-menace",
+"idx": 116,
+"outcome": "both",
+"file": "other",
+"t": 37
+},
+{
+"deck": "mutant-menace",
+"idx": 117,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 118,
+"outcome": "cand_only",
+"file": "other",
+"t": 16
+},
+{
+"deck": "mutant-menace",
+"idx": 119,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 122,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 123,
+"outcome": "both",
+"file": "other",
+"t": 62
+},
+{
+"deck": "mutant-menace",
+"idx": 124,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "mutant-menace",
+"idx": 125,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 126,
+"outcome": "cand_only",
+"file": "other",
+"t": 39
+},
+{
+"deck": "mutant-menace",
+"idx": 127,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 128,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 129,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 130,
+"outcome": "cand_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "mutant-menace",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 132,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 133,
+"outcome": "base_only",
+"file": "other",
+"t": 22
+},
+{
+"deck": "mutant-menace",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 135,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 137,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "mutant-menace",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "mutant-menace",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 143,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 144,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 145,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 12,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 146,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "mutant-menace",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 148,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 149,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "mutant-menace",
+"idx": 150,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 151,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 152,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 154,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 156,
+"outcome": "both",
+"file": "other",
+"t": 27
+},
+{
+"deck": "mutant-menace",
+"idx": 157,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "mutant-menace",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 159,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "mutant-menace",
+"idx": 160,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "mutant-menace",
+"idx": 161,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "mutant-menace",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 163,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 165,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 167,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 168,
+"outcome": "base_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "mutant-menace",
+"idx": 169,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 170,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "mutant-menace",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 173,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "mutant-menace",
+"idx": 174,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "mutant-menace",
+"idx": 175,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 176,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 177,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 179,
+"outcome": "cand_only",
+"file": "other",
+"t": 38
+},
+{
+"deck": "mutant-menace",
+"idx": 180,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 181,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 183,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "mutant-menace",
+"idx": 184,
+"outcome": "both",
+"file": "other",
+"t": 30
+},
+{
+"deck": "mutant-menace",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 187,
+"outcome": "base_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "mutant-menace",
+"idx": 188,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "mutant-menace",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 190,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "mutant-menace",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 192,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "mutant-menace",
+"idx": 193,
+"outcome": "neither",
+"file": "other",
+"t": 53
+},
+{
+"deck": "mutant-menace",
+"idx": 194,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "mutant-menace",
+"idx": 195,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "mutant-menace",
+"idx": 196,
+"outcome": "both",
+"file": "other",
+"t": 9
+},
+{
+"deck": "mutant-menace",
+"idx": 197,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 198,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "mutant-menace",
+"idx": 199,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 1,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 2,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "squirreled-away",
+"idx": 3,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 4,
+"outcome": "both",
+"file": "other",
+"t": 40
+},
+{
+"deck": "squirreled-away",
+"idx": 5,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 6,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 7,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 8,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 11,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 12,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 19,
+"outcome": "neither",
+"file": "other",
+"t": 54
+},
+{
+"deck": "squirreled-away",
+"idx": 20,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 21,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 24,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "squirreled-away",
+"idx": 25,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "squirreled-away",
+"idx": 26,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 30,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 31,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 32,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "squirreled-away",
+"idx": 33,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "squirreled-away",
+"idx": 34,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "squirreled-away",
+"idx": 35,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 36,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "squirreled-away",
+"idx": 37,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "squirreled-away",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 39,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 41,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 42,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 44,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 46,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 49,
+"outcome": "base_only",
+"file": "other",
+"t": 36
+},
+{
+"deck": "squirreled-away",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 51,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "squirreled-away",
+"idx": 52,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 53,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 55,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 56,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 57,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 59,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 60,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 61,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 62,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 64,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 8,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "squirreled-away",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "squirreled-away",
+"idx": 66,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "squirreled-away",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 68,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 33,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "squirreled-away",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 70,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "squirreled-away",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 72,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 73,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 74,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 75,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "squirreled-away",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 79,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "squirreled-away",
+"idx": 80,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "squirreled-away",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 82,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 83,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 85,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "squirreled-away",
+"idx": 86,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 87,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "squirreled-away",
+"idx": 89,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 91,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 93,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 95,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 96,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 99,
+"outcome": "neither",
+"file": "other",
+"t": 51
+},
+{
+"deck": "squirreled-away",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 101,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 102,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 105,
+"outcome": "neither",
+"file": "other",
+"t": 7
+},
+{
+"deck": "squirreled-away",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 111,
+"outcome": "base_only",
+"file": "other",
+"t": 23
+},
+{
+"deck": "squirreled-away",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 113,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "squirreled-away",
+"idx": 114,
+"outcome": "cand_only",
+"file": "other",
+"t": 23
+},
+{
+"deck": "squirreled-away",
+"idx": 115,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 116,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "squirreled-away",
+"idx": 117,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 118,
+"outcome": "cand_only",
+"file": "other",
+"t": 5
+},
+{
+"deck": "squirreled-away",
+"idx": 119,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 122,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 123,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 127,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 128,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 129,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "squirreled-away",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "squirreled-away",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 133,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 135,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 138,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 141,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "squirreled-away",
+"idx": 142,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "squirreled-away",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 144,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "squirreled-away",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 148,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 149,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 150,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 151,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "squirreled-away",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 153,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 154,
+"outcome": "base_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "squirreled-away",
+"idx": 155,
+"outcome": "cand_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "squirreled-away",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 157,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "squirreled-away",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 159,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 163,
+"outcome": "neither",
+"file": "other",
+"t": 3
+},
+{
+"deck": "squirreled-away",
+"idx": 164,
+"outcome": "both",
+"file": "other",
+"t": 39
+},
+{
+"deck": "squirreled-away",
+"idx": 165,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "squirreled-away",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 168,
+"outcome": "both",
+"file": "other",
+"t": 40
+},
+{
+"deck": "squirreled-away",
+"idx": 169,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 174,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "squirreled-away",
+"idx": 175,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 176,
+"outcome": "base_only",
+"file": "other",
+"t": 16
+},
+{
+"deck": "squirreled-away",
+"idx": 177,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 179,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 181,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 182,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "squirreled-away",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 187,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "squirreled-away",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 190,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 191,
+"outcome": "base_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "squirreled-away",
+"idx": 192,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 194,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "squirreled-away",
+"idx": 195,
+"outcome": "base_only",
+"file": "other",
+"t": 44
+},
+{
+"deck": "squirreled-away",
+"idx": 196,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 197,
+"outcome": "cand_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "squirreled-away",
+"idx": 198,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "squirreled-away",
+"idx": 199,
+"outcome": "cand_only",
+"file": "other",
+"t": 36
+},
+{
+"deck": "squirreled-away",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 1,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "revenant-recon",
+"idx": 2,
+"outcome": "cand_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "revenant-recon",
+"idx": 3,
+"outcome": "base_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "revenant-recon",
+"idx": 4,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "revenant-recon",
+"idx": 5,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "revenant-recon",
+"idx": 6,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "revenant-recon",
+"idx": 7,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 8,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "revenant-recon",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 12,
+"outcome": "cand_only",
+"file": "other",
+"t": 29
+},
+{
+"deck": "revenant-recon",
+"idx": 13,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "revenant-recon",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 16,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 18,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "revenant-recon",
+"idx": 19,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "revenant-recon",
+"idx": 20,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "revenant-recon",
+"idx": 21,
+"outcome": "cand_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "revenant-recon",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 24,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 25,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 26,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "revenant-recon",
+"idx": 27,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 28,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "revenant-recon",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 30,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "revenant-recon",
+"idx": 31,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "revenant-recon",
+"idx": 32,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 33,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 34,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 36,
+"outcome": "neither",
+"file": "other",
+"t": 73
+},
+{
+"deck": "revenant-recon",
+"idx": 37,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "revenant-recon",
+"idx": 38,
+"outcome": "base_only",
+"file": "other",
+"t": 28
+},
+{
+"deck": "revenant-recon",
+"idx": 39,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 40,
+"outcome": "cand_only",
+"file": "other",
+"t": 5
+},
+{
+"deck": "revenant-recon",
+"idx": 41,
+"outcome": "cand_only",
+"file": "other",
+"t": 53
+},
+{
+"deck": "revenant-recon",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 43,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 44,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "revenant-recon",
+"idx": 45,
+"outcome": "base_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "revenant-recon",
+"idx": 46,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "revenant-recon",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 49,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "revenant-recon",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "revenant-recon",
+"idx": 51,
+"outcome": "cand_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "revenant-recon",
+"idx": 52,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "revenant-recon",
+"idx": 53,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 54,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 55,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 56,
+"outcome": "cand_only",
+"file": "other",
+"t": 22
+},
+{
+"deck": "revenant-recon",
+"idx": 57,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 59,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 60,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 61,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "revenant-recon",
+"idx": 62,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "revenant-recon",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 64,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "revenant-recon",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "revenant-recon",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 68,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "revenant-recon",
+"idx": 69,
+"outcome": "both",
+"file": "other",
+"t": 25
+},
+{
+"deck": "revenant-recon",
+"idx": 70,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "revenant-recon",
+"idx": 71,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 72,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "revenant-recon",
+"idx": 73,
+"outcome": "cand_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "revenant-recon",
+"idx": 74,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 75,
+"outcome": "neither",
+"file": "other",
+"t": 45
+},
+{
+"deck": "revenant-recon",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 77,
+"outcome": "base_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "revenant-recon",
+"idx": 78,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "revenant-recon",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 80,
+"outcome": "base_only",
+"file": "other",
+"t": 28
+},
+{
+"deck": "revenant-recon",
+"idx": 81,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "revenant-recon",
+"idx": 82,
+"outcome": "both",
+"file": "other",
+"t": 41
+},
+{
+"deck": "revenant-recon",
+"idx": 83,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 24,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "revenant-recon",
+"idx": 84,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "revenant-recon",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 86,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "revenant-recon",
+"idx": 87,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "revenant-recon",
+"idx": 88,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 10,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "revenant-recon",
+"idx": 89,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "revenant-recon",
+"idx": 90,
+"outcome": "both",
+"file": "other",
+"t": 9
+},
+{
+"deck": "revenant-recon",
+"idx": 91,
+"outcome": "both",
+"file": "other",
+"t": 31
+},
+{
+"deck": "revenant-recon",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 93,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "revenant-recon",
+"idx": 94,
+"outcome": "both",
+"file": "other",
+"t": 31
+},
+{
+"deck": "revenant-recon",
+"idx": 95,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 96,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "revenant-recon",
+"idx": 97,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 98,
+"outcome": "cand_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "revenant-recon",
+"idx": 99,
+"outcome": "base_only",
+"file": "other",
+"t": 27
+},
+{
+"deck": "revenant-recon",
+"idx": 100,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 101,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "revenant-recon",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 104,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 105,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 106,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "revenant-recon",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 112,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "revenant-recon",
+"idx": 113,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "revenant-recon",
+"idx": 114,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 115,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 116,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 117,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "revenant-recon",
+"idx": 118,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "revenant-recon",
+"idx": 119,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 122,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "revenant-recon",
+"idx": 123,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 124,
+"outcome": "cand_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "revenant-recon",
+"idx": 125,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "revenant-recon",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 127,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "revenant-recon",
+"idx": 128,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 129,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "revenant-recon",
+"idx": 130,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "revenant-recon",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 133,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 135,
+"outcome": "base_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "revenant-recon",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 137,
+"outcome": "both",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 138,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 139,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 140,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "revenant-recon",
+"idx": 141,
+"outcome": "cand_only",
+"file": "other",
+"t": 45
+},
+{
+"deck": "revenant-recon",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 144,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "revenant-recon",
+"idx": 145,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "revenant-recon",
+"idx": 146,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "revenant-recon",
+"idx": 147,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "revenant-recon",
+"idx": 148,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 149,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 150,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "revenant-recon",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 152,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 153,
+"outcome": "base_only",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 154,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 155,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "revenant-recon",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 157,
+"outcome": "base_only",
+"file": "other",
+"t": 48
+},
+{
+"deck": "revenant-recon",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 159,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 160,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "revenant-recon",
+"idx": 161,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "revenant-recon",
+"idx": 162,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "revenant-recon",
+"idx": 163,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 164,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "revenant-recon",
+"idx": 165,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 167,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "revenant-recon",
+"idx": 168,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "revenant-recon",
+"idx": 169,
+"outcome": "both",
+"file": "other",
+"t": 31
+},
+{
+"deck": "revenant-recon",
+"idx": 170,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "revenant-recon",
+"idx": 171,
+"outcome": "base_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "revenant-recon",
+"idx": 172,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "revenant-recon",
+"idx": 173,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "revenant-recon",
+"idx": 174,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "revenant-recon",
+"idx": 175,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "revenant-recon",
+"idx": 176,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 177,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 179,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "revenant-recon",
+"idx": 180,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "revenant-recon",
+"idx": 181,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "revenant-recon",
+"idx": 182,
+"outcome": "both",
+"file": "other",
+"t": 29
+},
+{
+"deck": "revenant-recon",
+"idx": 183,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "revenant-recon",
+"idx": 184,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 186,
+"outcome": "cand_only",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 188,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "revenant-recon",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 190,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "revenant-recon",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 192,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 194,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "revenant-recon",
+"idx": 195,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "revenant-recon",
+"idx": 196,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "revenant-recon",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 198,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 199,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "revenant-recon",
+"idx": 200,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blood-rites",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 2,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 3,
+"outcome": "both",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blood-rites",
+"idx": 4,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 5,
+"outcome": "both",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blood-rites",
+"idx": 6,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 7,
+"outcome": "cand_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "blood-rites",
+"idx": 8,
+"outcome": "both",
+"file": "other",
+"t": 51
+},
+{
+"deck": "blood-rites",
+"idx": 9,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blood-rites",
+"idx": 10,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 12,
+"outcome": "base_only",
+"file": "other",
+"t": 25
+},
+{
+"deck": "blood-rites",
+"idx": 13,
+"outcome": "base_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blood-rites",
+"idx": 14,
+"outcome": "base_only",
+"file": "other",
+"t": 22
+},
+{
+"deck": "blood-rites",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 16,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "blood-rites",
+"idx": 17,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "blood-rites",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 19,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 20,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 23,
+"outcome": "base_only",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blood-rites",
+"idx": 24,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 27,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 28,
+"outcome": "base_only",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blood-rites",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 30,
+"outcome": "cand_only",
+"file": "other",
+"t": 30
+},
+{
+"deck": "blood-rites",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 32,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blood-rites",
+"idx": 33,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blood-rites",
+"idx": 34,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 35,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blood-rites",
+"idx": 36,
+"outcome": "both",
+"file": "other",
+"t": 30
+},
+{
+"deck": "blood-rites",
+"idx": 37,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "blood-rites",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 39,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "blood-rites",
+"idx": 40,
+"outcome": "both",
+"file": "other",
+"t": 40
+},
+{
+"deck": "blood-rites",
+"idx": 41,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blood-rites",
+"idx": 42,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 44,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blood-rites",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 52,
+"outcome": "both",
+"file": "other",
+"t": 49
+},
+{
+"deck": "blood-rites",
+"idx": 53,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 55,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 56,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "blood-rites",
+"idx": 57,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 58,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blood-rites",
+"idx": 59,
+"outcome": "both",
+"file": "other",
+"t": 44
+},
+{
+"deck": "blood-rites",
+"idx": 60,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "blood-rites",
+"idx": 61,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 62,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blood-rites",
+"idx": 63,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blood-rites",
+"idx": 64,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "blood-rites",
+"idx": 65,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 66,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blood-rites",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 68,
+"outcome": "base_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "blood-rites",
+"idx": 69,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "blood-rites",
+"idx": 70,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 72,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 73,
+"outcome": "both",
+"file": "other",
+"t": 22
+},
+{
+"deck": "blood-rites",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 75,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "blood-rites",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 78,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "blood-rites",
+"idx": 79,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 81,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blood-rites",
+"idx": 82,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 83,
+"outcome": "both",
+"file": "other",
+"t": 46
+},
+{
+"deck": "blood-rites",
+"idx": 84,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 86,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blood-rites",
+"idx": 87,
+"outcome": "base_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "blood-rites",
+"idx": 88,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 89,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 90,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blood-rites",
+"idx": 91,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 92,
+"outcome": "cand_only",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blood-rites",
+"idx": 93,
+"outcome": "both",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blood-rites",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 95,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 96,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blood-rites",
+"idx": 97,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blood-rites",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 99,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 101,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 102,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 103,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 104,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 105,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blood-rites",
+"idx": 106,
+"outcome": "base_only",
+"file": "other",
+"t": 23
+},
+{
+"deck": "blood-rites",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 109,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "blood-rites",
+"idx": 110,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 114,
+"outcome": "base_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blood-rites",
+"idx": 115,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 116,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "blood-rites",
+"idx": 117,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 118,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 119,
+"outcome": "both",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blood-rites",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 122,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "blood-rites",
+"idx": 123,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 124,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "blood-rites",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 127,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 128,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "blood-rites",
+"idx": 129,
+"outcome": "both",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blood-rites",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "blood-rites",
+"idx": 131,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 132,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 133,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 135,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 136,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 138,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 140,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "blood-rites",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 142,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 143,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blood-rites",
+"idx": 144,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blood-rites",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 146,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "blood-rites",
+"idx": 147,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blood-rites",
+"idx": 148,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 149,
+"outcome": "both",
+"file": "other",
+"t": 34
+},
+{
+"deck": "blood-rites",
+"idx": 150,
+"outcome": "base_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "blood-rites",
+"idx": 151,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 154,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "blood-rites",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 156,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 158,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blood-rites",
+"idx": 159,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 160,
+"outcome": "base_only",
+"file": "other",
+"t": 5
+},
+{
+"deck": "blood-rites",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 162,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "blood-rites",
+"idx": 163,
+"outcome": "neither",
+"file": "other",
+"t": 45
+},
+{
+"deck": "blood-rites",
+"idx": 164,
+"outcome": "base_only",
+"file": "other",
+"t": 6
+},
+{
+"deck": "blood-rites",
+"idx": 165,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "blood-rites",
+"idx": 166,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "blood-rites",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 168,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 169,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 172,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "blood-rites",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 174,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 175,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 176,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 177,
+"outcome": "both",
+"file": "other",
+"t": 42
+},
+{
+"deck": "blood-rites",
+"idx": 178,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "blood-rites",
+"idx": 179,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 181,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "blood-rites",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 183,
+"outcome": "cand_only",
+"file": "other",
+"t": 35
+},
+{
+"deck": "blood-rites",
+"idx": 184,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 186,
+"outcome": "base_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "blood-rites",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 190,
+"outcome": "both",
+"file": "other",
+"t": 51
+},
+{
+"deck": "blood-rites",
+"idx": 191,
+"outcome": "both",
+"file": "other",
+"t": 46
+},
+{
+"deck": "blood-rites",
+"idx": 192,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 193,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 194,
+"outcome": "both",
+"file": "other",
+"t": 32
+},
+{
+"deck": "blood-rites",
+"idx": 195,
+"outcome": "base_only",
+"file": "other",
+"t": 6
+},
+{
+"deck": "blood-rites",
+"idx": 196,
+"outcome": "both",
+"file": "other",
+"t": 47
+},
+{
+"deck": "blood-rites",
+"idx": 197,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "blood-rites",
+"idx": 198,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "blood-rites",
+"idx": 199,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "blood-rites",
+"idx": 200,
+"outcome": "cand_only",
+"file": "other",
+"t": 30
+},
+{
+"deck": "death-toll",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 2,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 3,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 48,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 4
+}
+},
+{
+"deck": "death-toll",
+"idx": 4,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 5,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 6,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 7,
+"outcome": "base_only",
+"file": "other",
+"t": 14
+},
+{
+"deck": "death-toll",
+"idx": 8,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 11,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 12,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "death-toll",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 18,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "death-toll",
+"idx": 19,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "death-toll",
+"idx": 20,
+"outcome": "neither",
+"file": "other",
+"t": 52
+},
+{
+"deck": "death-toll",
+"idx": 21,
+"outcome": "both",
+"file": "other",
+"t": 53
+},
+{
+"deck": "death-toll",
+"idx": 22,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "death-toll",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 24,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "death-toll",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 30,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 31,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 32,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 52,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "death-toll",
+"idx": 33,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 34,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 36,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 37,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 39,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "death-toll",
+"idx": 40,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "death-toll",
+"idx": 41,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 44,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 48,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "death-toll",
+"idx": 49,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "death-toll",
+"idx": 50,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 51,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "death-toll",
+"idx": 52,
+"outcome": "base_only",
+"file": "other",
+"t": 25
+},
+{
+"deck": "death-toll",
+"idx": 53,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 48,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": false,
+"sent": 7
+}
+},
+{
+"deck": "death-toll",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 55,
+"outcome": "neither",
+"file": "other",
+"t": 3
+},
+{
+"deck": "death-toll",
+"idx": 56,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 57,
+"outcome": "cand_only",
+"file": "other",
+"t": 14
+},
+{
+"deck": "death-toll",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 59,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 60,
+"outcome": "neither",
+"file": "other",
+"t": 49
+},
+{
+"deck": "death-toll",
+"idx": 61,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 62,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 64,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "death-toll",
+"idx": 65,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 67,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 68,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "death-toll",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 70,
+"outcome": "cand_only",
+"file": "other",
+"t": 37
+},
+{
+"deck": "death-toll",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 72,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 73,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 77,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "death-toll",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 80,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 81,
+"outcome": "base_only",
+"file": "other",
+"t": 48
+},
+{
+"deck": "death-toll",
+"idx": 82,
+"outcome": "cand_only",
+"file": "other",
+"t": 27
+},
+{
+"deck": "death-toll",
+"idx": 83,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 86,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 87,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 9,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "death-toll",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "death-toll",
+"idx": 89,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 91,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 92,
+"outcome": "neither",
+"file": "other",
+"t": 68
+},
+{
+"deck": "death-toll",
+"idx": 93,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 94,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 95,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "death-toll",
+"idx": 96,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 98,
+"outcome": "base_only",
+"file": "other",
+"t": 16
+},
+{
+"deck": "death-toll",
+"idx": 99,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 101,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "death-toll",
+"idx": 102,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 105,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 106,
+"outcome": "both",
+"file": "other",
+"t": 40
+},
+{
+"deck": "death-toll",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 108,
+"outcome": "both",
+"file": "other",
+"t": 43
+},
+{
+"deck": "death-toll",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 111,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "death-toll",
+"idx": 112,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "death-toll",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 114,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 115,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 116,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 117,
+"outcome": "cand_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "death-toll",
+"idx": 118,
+"outcome": "both",
+"file": "other",
+"t": 26
+},
+{
+"deck": "death-toll",
+"idx": 119,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "death-toll",
+"idx": 120,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 122,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 123,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 125,
+"outcome": "neither",
+"file": "other",
+"t": 62
+},
+{
+"deck": "death-toll",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 127,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 128,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 129,
+"outcome": "both",
+"file": "other",
+"t": 46
+},
+{
+"deck": "death-toll",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "death-toll",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 132,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "death-toll",
+"idx": 133,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 134,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 135,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 138,
+"outcome": "both",
+"file": "other",
+"t": 9
+},
+{
+"deck": "death-toll",
+"idx": 139,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "death-toll",
+"idx": 140,
+"outcome": "cand_only",
+"file": "other",
+"t": 42
+},
+{
+"deck": "death-toll",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 142,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 144,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "death-toll",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 148,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 149,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 150,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 151,
+"outcome": "both",
+"file": "other",
+"t": 50
+},
+{
+"deck": "death-toll",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 153,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 154,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 159,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "death-toll",
+"idx": 160,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 161,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "death-toll",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 163,
+"outcome": "cand_only",
+"file": "other",
+"t": 3
+},
+{
+"deck": "death-toll",
+"idx": 164,
+"outcome": "cand_only",
+"file": "other",
+"t": 17
+},
+{
+"deck": "death-toll",
+"idx": 165,
+"outcome": "neither",
+"file": "other",
+"t": 49
+},
+{
+"deck": "death-toll",
+"idx": 166,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 167,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 168,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 169,
+"outcome": "base_only",
+"file": "other",
+"t": 12
+},
+{
+"deck": "death-toll",
+"idx": 170,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 171,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 174,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 175,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 176,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 177,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 178,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 179,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "death-toll",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 181,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 182,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "death-toll",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 184,
+"outcome": "both",
+"file": "other",
+"t": 40
+},
+{
+"deck": "death-toll",
+"idx": 185,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "death-toll",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 188,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 189,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "death-toll",
+"idx": 190,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 192,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 193,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 194,
+"outcome": "both",
+"file": "other",
+"t": 45
+},
+{
+"deck": "death-toll",
+"idx": 195,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 196,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "death-toll",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 198,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "death-toll",
+"idx": 199,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "death-toll",
+"idx": 200,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "miracle-worker",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 2,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 3,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 4,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "miracle-worker",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 6,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 7,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 8,
+"outcome": "cand_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "miracle-worker",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 10,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 11,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "miracle-worker",
+"idx": 12,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "miracle-worker",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 15,
+"outcome": "cand_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "miracle-worker",
+"idx": 16,
+"outcome": "both",
+"file": "other",
+"t": 42
+},
+{
+"deck": "miracle-worker",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 18,
+"outcome": "cand_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "miracle-worker",
+"idx": 19,
+"outcome": "cand_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "miracle-worker",
+"idx": 20,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 21,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "miracle-worker",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 23,
+"outcome": "base_only",
+"file": "other",
+"t": 20
+},
+{
+"deck": "miracle-worker",
+"idx": 24,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "miracle-worker",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 27,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 28,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "miracle-worker",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 30,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 32,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 33,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 34,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 36,
+"outcome": "cand_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "miracle-worker",
+"idx": 37,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 38,
+"outcome": "cand_only",
+"file": "other",
+"t": 37
+},
+{
+"deck": "miracle-worker",
+"idx": 39,
+"outcome": "base_only",
+"file": "other",
+"t": 28
+},
+{
+"deck": "miracle-worker",
+"idx": 40,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 41,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 42,
+"outcome": "neither",
+"file": "other",
+"t": 57
+},
+{
+"deck": "miracle-worker",
+"idx": 43,
+"outcome": "neither",
+"file": "other",
+"t": 63
+},
+{
+"deck": "miracle-worker",
+"idx": 44,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 46,
+"outcome": "both",
+"file": "other",
+"t": 43
+},
+{
+"deck": "miracle-worker",
+"idx": 47,
+"outcome": "both",
+"file": "other",
+"t": 27
+},
+{
+"deck": "miracle-worker",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 49,
+"outcome": "base_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "miracle-worker",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "miracle-worker",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 52,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "miracle-worker",
+"idx": 53,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 55,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 56,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "miracle-worker",
+"idx": 57,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "miracle-worker",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 59,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 60,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 61,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 62,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "miracle-worker",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 64,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 65,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "miracle-worker",
+"idx": 66,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "miracle-worker",
+"idx": 67,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "miracle-worker",
+"idx": 68,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "miracle-worker",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 70,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 71,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "miracle-worker",
+"idx": 72,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 73,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 77,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "miracle-worker",
+"idx": 78,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "miracle-worker",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 80,
+"outcome": "cand_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "miracle-worker",
+"idx": 81,
+"outcome": "base_only",
+"file": "other",
+"t": 38
+},
+{
+"deck": "miracle-worker",
+"idx": 82,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "miracle-worker",
+"idx": 83,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "miracle-worker",
+"idx": 84,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 85,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 86,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "miracle-worker",
+"idx": 87,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 88,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 89,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 90,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 91,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "miracle-worker",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 93,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "miracle-worker",
+"idx": 94,
+"outcome": "cand_only",
+"file": "other",
+"t": 6
+},
+{
+"deck": "miracle-worker",
+"idx": 95,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 96,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "miracle-worker",
+"idx": 97,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "miracle-worker",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 99,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 101,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "miracle-worker",
+"idx": 102,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "miracle-worker",
+"idx": 103,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 105,
+"outcome": "cand_only",
+"file": "other",
+"t": 36
+},
+{
+"deck": "miracle-worker",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 107,
+"outcome": "base_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 108,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "miracle-worker",
+"idx": 109,
+"outcome": "cand_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "miracle-worker",
+"idx": 110,
+"outcome": "neither",
+"file": "other",
+"t": 7
+},
+{
+"deck": "miracle-worker",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 114,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 115,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 116,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "miracle-worker",
+"idx": 117,
+"outcome": "both",
+"file": "other",
+"t": 25
+},
+{
+"deck": "miracle-worker",
+"idx": 118,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 119,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "miracle-worker",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 122,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "miracle-worker",
+"idx": 123,
+"outcome": "base_only",
+"file": "other",
+"t": 18
+},
+{
+"deck": "miracle-worker",
+"idx": 124,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "miracle-worker",
+"idx": 125,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "miracle-worker",
+"idx": 126,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "miracle-worker",
+"idx": 127,
+"outcome": "both",
+"file": "other",
+"t": 57
+},
+{
+"deck": "miracle-worker",
+"idx": 128,
+"outcome": "cand_only",
+"file": "other",
+"t": 16
+},
+{
+"deck": "miracle-worker",
+"idx": 129,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "miracle-worker",
+"idx": 130,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 131,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 132,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 133,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 134,
+"outcome": "cand_only",
+"file": "other",
+"t": 22
+},
+{
+"deck": "miracle-worker",
+"idx": 135,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 137,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "miracle-worker",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "miracle-worker",
+"idx": 139,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "miracle-worker",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 142,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "miracle-worker",
+"idx": 143,
+"outcome": "base_only",
+"file": "other",
+"t": 40
+},
+{
+"deck": "miracle-worker",
+"idx": 144,
+"outcome": "cand_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "miracle-worker",
+"idx": 145,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "miracle-worker",
+"idx": 146,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 147,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "miracle-worker",
+"idx": 148,
+"outcome": "cand_only",
+"file": "other",
+"t": 25
+},
+{
+"deck": "miracle-worker",
+"idx": 149,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 150,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 151,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 154,
+"outcome": "cand_only",
+"file": "other",
+"t": 16
+},
+{
+"deck": "miracle-worker",
+"idx": 155,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "miracle-worker",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 157,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "miracle-worker",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 159,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 160,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 161,
+"outcome": "base_only",
+"file": "other",
+"t": 20
+},
+{
+"deck": "miracle-worker",
+"idx": 162,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "miracle-worker",
+"idx": 163,
+"outcome": "both",
+"file": "other",
+"t": 38
+},
+{
+"deck": "miracle-worker",
+"idx": 164,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "miracle-worker",
+"idx": 165,
+"outcome": "neither",
+"file": "other",
+"t": 4
+},
+{
+"deck": "miracle-worker",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 167,
+"outcome": "both",
+"file": "other",
+"t": 48
+},
+{
+"deck": "miracle-worker",
+"idx": 168,
+"outcome": "both",
+"file": "other",
+"t": 14
+},
+{
+"deck": "miracle-worker",
+"idx": 169,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "miracle-worker",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 171,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "miracle-worker",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 173,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "miracle-worker",
+"idx": 174,
+"outcome": "cand_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "miracle-worker",
+"idx": 175,
+"outcome": "cand_only",
+"file": "other",
+"t": 19
+},
+{
+"deck": "miracle-worker",
+"idx": 176,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 177,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "miracle-worker",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 179,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 180,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 181,
+"outcome": "cand_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "miracle-worker",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 187,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "miracle-worker",
+"idx": 188,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "miracle-worker",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 190,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "miracle-worker",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 192,
+"outcome": "cand_only",
+"file": "other",
+"t": 24
+},
+{
+"deck": "miracle-worker",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 196,
+"outcome": "both",
+"file": "other",
+"t": 25
+},
+{
+"deck": "miracle-worker",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 198,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 199,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "miracle-worker",
+"idx": 200,
+"outcome": "base_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "ahoy-mateys",
+"idx": 1,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "ahoy-mateys",
+"idx": 2,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 3,
+"outcome": "both",
+"file": "other",
+"t": 37
+},
+{
+"deck": "ahoy-mateys",
+"idx": 4,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 6,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "ahoy-mateys",
+"idx": 7,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 8,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 9,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "ahoy-mateys",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 12,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 15,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "ahoy-mateys",
+"idx": 16,
+"outcome": "both",
+"file": "other",
+"t": 48
+},
+{
+"deck": "ahoy-mateys",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 19,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "ahoy-mateys",
+"idx": 20,
+"outcome": "both",
+"file": "other",
+"t": 17
+},
+{
+"deck": "ahoy-mateys",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 22,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "ahoy-mateys",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 24,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "ahoy-mateys",
+"idx": 25,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 27,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "ahoy-mateys",
+"idx": 28,
+"outcome": "both",
+"file": "other",
+"t": 31
+},
+{
+"deck": "ahoy-mateys",
+"idx": 29,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "ahoy-mateys",
+"idx": 30,
+"outcome": "neither",
+"file": "other",
+"t": 7
+},
+{
+"deck": "ahoy-mateys",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 32,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 33,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 34,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 36,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 37,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 39,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "ahoy-mateys",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 41,
+"outcome": "base_only",
+"file": "other",
+"t": 8
+},
+{
+"deck": "ahoy-mateys",
+"idx": 42,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 44,
+"outcome": "base_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "ahoy-mateys",
+"idx": 45,
+"outcome": "both",
+"file": "other",
+"t": 37
+},
+{
+"deck": "ahoy-mateys",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 47,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 48,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "ahoy-mateys",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "ahoy-mateys",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 52,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 53,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "ahoy-mateys",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 55,
+"outcome": "both",
+"file": "other",
+"t": 25
+},
+{
+"deck": "ahoy-mateys",
+"idx": 56,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "ahoy-mateys",
+"idx": 57,
+"outcome": "base_only",
+"file": "other",
+"t": 14
+},
+{
+"deck": "ahoy-mateys",
+"idx": 58,
+"outcome": "base_only",
+"file": "other",
+"t": 30
+},
+{
+"deck": "ahoy-mateys",
+"idx": 59,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "ahoy-mateys",
+"idx": 60,
+"outcome": "base_only",
+"file": "other",
+"t": 24
+},
+{
+"deck": "ahoy-mateys",
+"idx": 61,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 62,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "ahoy-mateys",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 64,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 65,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 66,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "ahoy-mateys",
+"idx": 67,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "ahoy-mateys",
+"idx": 68,
+"outcome": "both",
+"file": "other",
+"t": 25
+},
+{
+"deck": "ahoy-mateys",
+"idx": 69,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 70,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 72,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "ahoy-mateys",
+"idx": 73,
+"outcome": "base_only",
+"file": "other",
+"t": 22
+},
+{
+"deck": "ahoy-mateys",
+"idx": 74,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 76,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "ahoy-mateys",
+"idx": 77,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "ahoy-mateys",
+"idx": 78,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "ahoy-mateys",
+"idx": 79,
+"outcome": "both",
+"file": "other",
+"t": 5
+},
+{
+"deck": "ahoy-mateys",
+"idx": 80,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "ahoy-mateys",
+"idx": 81,
+"outcome": "base_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "ahoy-mateys",
+"idx": 82,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "ahoy-mateys",
+"idx": 83,
+"outcome": "both",
+"file": "other",
+"t": 21
+},
+{
+"deck": "ahoy-mateys",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 85,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "ahoy-mateys",
+"idx": 86,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 87,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "ahoy-mateys",
+"idx": 88,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 89,
+"outcome": "both",
+"file": "other",
+"t": 27
+},
+{
+"deck": "ahoy-mateys",
+"idx": 90,
+"outcome": "base_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "ahoy-mateys",
+"idx": 91,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 92,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "ahoy-mateys",
+"idx": 93,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 11,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "ahoy-mateys",
+"idx": 94,
+"outcome": "both",
+"file": "other",
+"t": 12
+},
+{
+"deck": "ahoy-mateys",
+"idx": 95,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "ahoy-mateys",
+"idx": 96,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "ahoy-mateys",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 99,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "ahoy-mateys",
+"idx": 100,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "ahoy-mateys",
+"idx": 101,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 102,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 103,
+"outcome": "both",
+"file": "other",
+"t": 34
+},
+{
+"deck": "ahoy-mateys",
+"idx": 104,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "ahoy-mateys",
+"idx": 105,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "ahoy-mateys",
+"idx": 106,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 107,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 108,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 110,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "ahoy-mateys",
+"idx": 111,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "ahoy-mateys",
+"idx": 112,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "ahoy-mateys",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 114,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 115,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "ahoy-mateys",
+"idx": 116,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 117,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 118,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 119,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "ahoy-mateys",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 122,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 9,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "ahoy-mateys",
+"idx": 123,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 124,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 127,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 128,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "ahoy-mateys",
+"idx": 129,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 130,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 131,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "ahoy-mateys",
+"idx": 132,
+"outcome": "base_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "ahoy-mateys",
+"idx": 133,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 134,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "ahoy-mateys",
+"idx": 135,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 136,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 138,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "ahoy-mateys",
+"idx": 139,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "ahoy-mateys",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 143,
+"outcome": "cand_only",
+"file": "other",
+"t": 11
+},
+{
+"deck": "ahoy-mateys",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 145,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "ahoy-mateys",
+"idx": 146,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "ahoy-mateys",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 148,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 149,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "ahoy-mateys",
+"idx": 150,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 151,
+"outcome": "both",
+"file": "other",
+"t": 17
+},
+{
+"deck": "ahoy-mateys",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 153,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "ahoy-mateys",
+"idx": 154,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 155,
+"outcome": "both",
+"file": "other",
+"t": 13
+},
+{
+"deck": "ahoy-mateys",
+"idx": 156,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 157,
+"outcome": "base_only",
+"file": "other",
+"t": 20
+},
+{
+"deck": "ahoy-mateys",
+"idx": 158,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "ahoy-mateys",
+"idx": 159,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "ahoy-mateys",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 161,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 163,
+"outcome": "base_only",
+"file": "other",
+"t": 16
+},
+{
+"deck": "ahoy-mateys",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 165,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 167,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "ahoy-mateys",
+"idx": 168,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 169,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "ahoy-mateys",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 172,
+"outcome": "neither",
+"file": "other",
+"t": 30
+},
+{
+"deck": "ahoy-mateys",
+"idx": 173,
+"outcome": "cand_only",
+"file": "other",
+"t": 38
+},
+{
+"deck": "ahoy-mateys",
+"idx": 174,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "ahoy-mateys",
+"idx": 175,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 176,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "ahoy-mateys",
+"idx": 177,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 179,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 181,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 182,
+"outcome": "cand_only",
+"file": "other",
+"t": 13
+},
+{
+"deck": "ahoy-mateys",
+"idx": 183,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "ahoy-mateys",
+"idx": 184,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "ahoy-mateys",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 186,
+"outcome": "neither",
+"file": "other",
+"t": 42
+},
+{
+"deck": "ahoy-mateys",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 188,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "ahoy-mateys",
+"idx": 189,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 190,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "ahoy-mateys",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 192,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 194,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 195,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 196,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "ahoy-mateys",
+"idx": 197,
+"outcome": "base_only",
+"file": "other",
+"t": 10
+},
+{
+"deck": "ahoy-mateys",
+"idx": 198,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "ahoy-mateys",
+"idx": 199,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "ahoy-mateys",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 1,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "deadly-disguise",
+"idx": 2,
+"outcome": "cand_only",
+"file": "other",
+"t": 24
+},
+{
+"deck": "deadly-disguise",
+"idx": 3,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "deadly-disguise",
+"idx": 4,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 5,
+"outcome": "neither",
+"file": "other",
+"t": 52
+},
+{
+"deck": "deadly-disguise",
+"idx": 6,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 7,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "deadly-disguise",
+"idx": 8,
+"outcome": "base_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "deadly-disguise",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 10,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 12,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 13,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "deadly-disguise",
+"idx": 14,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "deadly-disguise",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 16,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "deadly-disguise",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 18,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 19,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 20,
+"outcome": "neither",
+"file": "other",
+"t": 50
+},
+{
+"deck": "deadly-disguise",
+"idx": 21,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "deadly-disguise",
+"idx": 22,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "deadly-disguise",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 24,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 26,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "deadly-disguise",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 30,
+"outcome": "base_only",
+"file": "other",
+"t": 42
+},
+{
+"deck": "deadly-disguise",
+"idx": 31,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 32,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "deadly-disguise",
+"idx": 33,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "deadly-disguise",
+"idx": 34,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 35,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "deadly-disguise",
+"idx": 36,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "deadly-disguise",
+"idx": 37,
+"outcome": "neither",
+"file": "other",
+"t": 18
+},
+{
+"deck": "deadly-disguise",
+"idx": 38,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "deadly-disguise",
+"idx": 39,
+"outcome": "both",
+"file": "other",
+"t": 64
+},
+{
+"deck": "deadly-disguise",
+"idx": 40,
+"outcome": "base_only",
+"file": "other",
+"t": 14
+},
+{
+"deck": "deadly-disguise",
+"idx": 41,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "deadly-disguise",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 44,
+"outcome": "cand_only",
+"file": "other",
+"t": 15
+},
+{
+"deck": "deadly-disguise",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 46,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "deadly-disguise",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 48,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "deadly-disguise",
+"idx": 49,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "deadly-disguise",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 52,
+"outcome": "neither",
+"file": "other",
+"t": 7
+},
+{
+"deck": "deadly-disguise",
+"idx": 53,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "deadly-disguise",
+"idx": 54,
+"outcome": "neither",
+"file": "other",
+"t": 16
+},
+{
+"deck": "deadly-disguise",
+"idx": 55,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "deadly-disguise",
+"idx": 56,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 57,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "deadly-disguise",
+"idx": 58,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "deadly-disguise",
+"idx": 59,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 60,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 11,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "deadly-disguise",
+"idx": 61,
+"outcome": "base_only",
+"file": "other",
+"t": 41
+},
+{
+"deck": "deadly-disguise",
+"idx": 62,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 63,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "deadly-disguise",
+"idx": 64,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 65,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 68,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "deadly-disguise",
+"idx": 69,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 70,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "deadly-disguise",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 72,
+"outcome": "neither",
+"file": "other",
+"t": 5
+},
+{
+"deck": "deadly-disguise",
+"idx": 73,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 76,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 77,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "deadly-disguise",
+"idx": 78,
+"outcome": "cand_only",
+"file": "other",
+"t": 24
+},
+{
+"deck": "deadly-disguise",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 81,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 82,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 83,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "deadly-disguise",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 86,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "deadly-disguise",
+"idx": 87,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "deadly-disguise",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 22
+},
+{
+"deck": "deadly-disguise",
+"idx": 89,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 90,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "deadly-disguise",
+"idx": 91,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 92,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 93,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "deadly-disguise",
+"idx": 94,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 95,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "deadly-disguise",
+"idx": 96,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 97,
+"outcome": "cand_only",
+"file": "other",
+"t": 36
+},
+{
+"deck": "deadly-disguise",
+"idx": 98,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 99,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "deadly-disguise",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 101,
+"outcome": "both",
+"file": "other",
+"t": 61
+},
+{
+"deck": "deadly-disguise",
+"idx": 102,
+"outcome": "base_only",
+"file": "other",
+"t": 21
+},
+{
+"deck": "deadly-disguise",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 104,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 105,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 108,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 109,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 114,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 115,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 116,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 117,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 118,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 119,
+"outcome": "cand_only",
+"file": "other",
+"t": 25
+},
+{
+"deck": "deadly-disguise",
+"idx": 120,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 121,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "deadly-disguise",
+"idx": 122,
+"outcome": "neither",
+"file": "other",
+"t": 19
+},
+{
+"deck": "deadly-disguise",
+"idx": 123,
+"outcome": "cand_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "deadly-disguise",
+"idx": 124,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "deadly-disguise",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 127,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 128,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "deadly-disguise",
+"idx": 129,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 130,
+"outcome": "neither",
+"file": "other",
+"t": 4
+},
+{
+"deck": "deadly-disguise",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 133,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "deadly-disguise",
+"idx": 134,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "deadly-disguise",
+"idx": 135,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "deadly-disguise",
+"idx": 136,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "deadly-disguise",
+"idx": 137,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "deadly-disguise",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "deadly-disguise",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 140,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "deadly-disguise",
+"idx": 141,
+"outcome": "neither",
+"file": "other",
+"t": 23
+},
+{
+"deck": "deadly-disguise",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 144,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 145,
+"outcome": "neither",
+"file": "other",
+"t": 11
+},
+{
+"deck": "deadly-disguise",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 147,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "deadly-disguise",
+"idx": 148,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "deadly-disguise",
+"idx": 149,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "deadly-disguise",
+"idx": 150,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "deadly-disguise",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 152,
+"outcome": "neither",
+"file": "other",
+"t": 10
+},
+{
+"deck": "deadly-disguise",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 154,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 156,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "deadly-disguise",
+"idx": 157,
+"outcome": "base_only",
+"file": "other",
+"t": 7
+},
+{
+"deck": "deadly-disguise",
+"idx": 158,
+"outcome": "neither",
+"file": "other",
+"t": 7
+},
+{
+"deck": "deadly-disguise",
+"idx": 159,
+"outcome": "base_only",
+"file": "attack",
+"stood": "nobody",
+"t": 15,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "deadly-disguise",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 161,
+"outcome": "cand_only",
+"file": "other",
+"t": 32
+},
+{
+"deck": "deadly-disguise",
+"idx": 162,
+"outcome": "base_only",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 163,
+"outcome": "neither",
+"file": "other",
+"t": 8
+},
+{
+"deck": "deadly-disguise",
+"idx": 164,
+"outcome": "neither",
+"file": "other",
+"t": 17
+},
+{
+"deck": "deadly-disguise",
+"idx": 165,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 168,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "deadly-disguise",
+"idx": 169,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "deadly-disguise",
+"idx": 170,
+"outcome": "neither",
+"file": "other",
+"t": 12
+},
+{
+"deck": "deadly-disguise",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 172,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "deadly-disguise",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 174,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 175,
+"outcome": "neither",
+"file": "other",
+"t": 45
+},
+{
+"deck": "deadly-disguise",
+"idx": 176,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "deadly-disguise",
+"idx": 177,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "deadly-disguise",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 179,
+"outcome": "neither",
+"file": "other",
+"t": 20
+},
+{
+"deck": "deadly-disguise",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 181,
+"outcome": "neither",
+"file": "other",
+"t": 9
+},
+{
+"deck": "deadly-disguise",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 183,
+"outcome": "base_only",
+"file": "other",
+"t": 48
+},
+{
+"deck": "deadly-disguise",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 185,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "deadly-disguise",
+"idx": 186,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 188,
+"outcome": "neither",
+"file": "other",
+"t": 14
+},
+{
+"deck": "deadly-disguise",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 190,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 192,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "deadly-disguise",
+"idx": 193,
+"outcome": "neither",
+"file": "other",
+"t": 15
+},
+{
+"deck": "deadly-disguise",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 195,
+"outcome": "neither",
+"file": "other",
+"t": 25
+},
+{
+"deck": "deadly-disguise",
+"idx": 196,
+"outcome": "neither",
+"file": "other",
+"t": 6
+},
+{
+"deck": "deadly-disguise",
+"idx": 197,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "deadly-disguise",
+"idx": 198,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "deadly-disguise",
+"idx": 199,
+"outcome": "neither",
+"file": "other",
+"t": 13
+},
+{
+"deck": "deadly-disguise",
+"idx": 200,
+"outcome": "neither",
+"file": "identical"
+}
+]
+}
