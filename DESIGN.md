@@ -1965,7 +1965,7 @@ The guard at the pool. It saw 352 attacks that left the seat dead before its nex
 
 Games without a winner: 15, 8 and 11 of 1,400. Tricky Terrain's Scute Swarm, which no trigger rule reaches because the trigger is not optional, has 6, 4 and 8 of them and is now the largest single cause at the pool. Eldrazi Incursion's own arms are the check of its limit in the combination: under version 2 four of its 200 games had no winner, one of them a draw at the end of a chain of its own (180 lines of one Eldrazi in the last turn, the mark of its commander's copies in §38; the other three are a Scute Swarm, a Hail, Caesar turn and a turn of its own on the clock); under version 3 and under version 4, none.
 
-The run's own rollup artifact had not been published when this was read; the rollups in the record are made from the verified shards by the same code, as #62's were (and #62's turned out the same as the run's own).
+The run's own rollup artifact had not been published when this was read; the rollups in the record are made from the verified shards by the same code, as #62's were (and #62's turned out the same as the run's own). (So did these: published at 21:56 UTC, compared at 22:12, the same twenty-one rollups.)
 
 ## 41. A commander's damage as a kill (2026-11-22)
 
