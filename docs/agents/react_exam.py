@@ -12,7 +12,10 @@ candidate; --base NAME reads ab-DECK@NAME as the base). The cards are read from 
     coming through the blocks made, the least its best blocks could have let through) and whether the seat was out of the game
     that turn;
   - the seat's deaths in combat, how many of them came with one of the cards in its hand at the start of that turn (a card
-    it held and did not, or could not, use), and the candidate's own counters (react_*, reserve_*, cast_react*).
+    it held and did not, or could not, use), and the candidate's own counters (react_*, reserve_*, cast_react*);
+  - what the casts hit, by when (`hits`): how many were aimed at an opponent's permanent, how many of those at that opponent's
+    commander, and how many at the opponent that looked most dangerous at the start of that turn (life + 2 x nonland permanents
+    among the opponents alive, the hooks' judgement).
 Read-only.
 """
 import argparse, collections, glob, gzip, json, os, sys
@@ -31,7 +34,7 @@ def events(path):
 
 def read_arm(run_dir, deck, cards):
     out = {'games': 0, 'wins': 0, 'cards': {c: collections.Counter() for c in cards}, 'at_attacker': [], 'combat_deaths': 0,
-           'combat_deaths_holding': 0, 'counters': collections.Counter(), 'casts': collections.Counter()}
+           'combat_deaths_holding': 0, 'counters': collections.Counter(), 'casts': collections.Counter(), 'hits': collections.Counter()}
     for rj in sorted(glob.glob(os.path.join(run_dir, 'arm-*', '*', 'run.json'))):
         run = json.load(open(rj))
         seat = next((d['seat'] for d in run['decks'] if d['id'] == deck), None)
@@ -48,10 +51,13 @@ def read_arm(run_dir, deck, cards):
         lost_at = {e['seat']: e['t'] for e in evs if e['e'] == 'lost'}
         held, cast_in = set(), set()
         cur = None; attackers_at_me = []; blocked = False; pending = []; in_hand = set()
+        cmdr = collections.defaultdict(set)              # seat -> its commanders' names (each is in the command zone on the first turn)
         for e in evs:
             k = e['e']
             if k == 'turn':
                 cur = e; attackers_at_me = []; blocked = False
+                for s in e.get('state') or []:
+                    cmdr[s['seat']].update(s.get('cmd') or [])
                 me = next((s for s in e.get('state') or [] if s['seat'] == seat), None)
                 in_hand = set(me.get('hand') or []) & set(cards) if me else set()
                 if me:
@@ -86,6 +92,17 @@ def read_arm(run_dir, deck, cards):
                     when = "another player's turn"
                 out['cards'][c][when] += 1
                 out['casts'][when] += 1
+                tc = (e.get('target_ctrl') or [None])[0]
+                if tg is not None and tc is not None and tc != seat:
+                    out['hits'][when + ': at an opponent'] += 1
+                    out['hits'][when + ': at a commander'] += tg in cmdr.get(tc, ())
+                    st = {s['seat']: s for s in cur.get('state') or []}
+                    alive = [s for s in st.values() if s['seat'] != seat and s.get('alive')]
+                    dg = (lambda s: s.get('life', 0) + 2 * max(0, s.get('bf', 0) - s.get('lands', 0)))
+                    if alive and tc in st:
+                        out['hits'][when + ': at the most dangerous opponent'] += dg(st[tc]) == max(dg(s) for s in alive)
+                        out['hits'][when + ': with two or three opponents alive'] += len(alive) > 1
+                        out['hits'][when + ': at the most dangerous of two or three'] += len(alive) > 1 and dg(st[tc]) == max(dg(s) for s in alive)
         for c in held:
             out['cards'][c]['games_held'] += 1
         for c in cast_in:
@@ -113,7 +130,7 @@ def main(argv):
                 'cand': read_arm(os.path.join(a.results, f'ab-{deck}@{a.variant}'), deck, cards)}
         doc['decks'][deck] = {'cards': cards, **{arm: {'games': x['games'], 'wins': x['wins'], 'combat_deaths': x['combat_deaths'], 'combat_deaths_holding': x['combat_deaths_holding'], 'casts': dict(x['casts']),
                                                        'cards': {c: dict(v) for c, v in x['cards'].items()}, 'at_attacker': x['at_attacker'],
-                                                       'counters': dict(x['counters'])} for arm, x in arms.items()}}
+                                                       'counters': dict(x['counters']), 'hits': dict(x['hits'])} for arm, x in arms.items()}}
         print(f"{deck}: {', '.join(cards)}")
         for arm, x in arms.items():
             held = sum(v['games_held'] for v in x['cards'].values()); cast = sum(v['games_cast'] for v in x['cards'].values())
@@ -127,6 +144,8 @@ def main(argv):
             tot[arm]['out_after_answer'] += sum(1 for r in x['at_attacker'] if r.get('out'))
             for k, v in x['counters'].items():
                 tot[arm]['c:' + k] += v
+            for k, v in x['hits'].items():
+                tot[arm]['h:' + k] += v
         for r in arms['cand']['at_attacker']:
             print(f"      t{r['t']} {r['card']} at the attacking {r['attacker']} ({r['attackers']} attackers): life {r.get('life')}, through the blocks made {r.get('incoming')}, "
                   f"through the best blocks {r.get('best')}{'; OUT that turn' if r.get('out') else ''}  [{r['where']}]")
@@ -137,6 +156,13 @@ def main(argv):
               f"another player's turn {t['other']} ({100 * t['other'] / max(1, t['casts']):.1f}%), at an attacker {t['at_attacker']} (the seat out that turn after {t['out_after_answer']}) | "
               f"deaths in combat {t['combat_deaths']}, {t['combat_deaths_holding']} with one of the cards in hand")
         print('         counters', {k[2:]: v for k, v in sorted(t.items()) if k.startswith('c:')})
+        for when in ('own turn', "another player's turn", 'at an attacker'):
+            n = t['h:' + when + ': at an opponent']
+            if n:
+                m = t['h:' + when + ': with two or three opponents alive']
+                print(f"         what the casts hit, {when}: {n} at an opponent's permanent, {t['h:' + when + ': at a commander']} of them a commander "
+                      f"({100 * t['h:' + when + ': at a commander'] / n:.0f}%); with two or three opponents alive {m}, "
+                      f"{t['h:' + when + ': at the most dangerous of two or three']} of them at the one that looked most dangerous ({100 * t['h:' + when + ': at the most dangerous of two or three'] / max(1, m):.0f}%)")
     doc['all'] = {arm: dict(t) for arm, t in tot.items()}
     if a.json:
         json.dump(doc, open(a.json, 'w', encoding='utf-8'), indent=1)
