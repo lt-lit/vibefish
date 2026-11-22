@@ -11,7 +11,8 @@ candidate; --base NAME reads ab-DECK@NAME as the base). The cards are read from 
   - the casts at an attacker, one by one: the turn, the card, the attacker, the seat's block line that turn (its life, the damage
     coming through the blocks made, the least its best blocks could have let through) and whether the seat was out of the game
     that turn;
-  - the seat's deaths in combat, and the candidate's own counters (react_*, reserve_*, cast_react*).
+  - the seat's deaths in combat, how many of them came with one of the cards in its hand at the start of that turn (a card
+    it held and did not, or could not, use), and the candidate's own counters (react_*, reserve_*, cast_react*).
 Read-only.
 """
 import argparse, collections, glob, gzip, json, os, sys
@@ -30,7 +31,7 @@ def events(path):
 
 def read_arm(run_dir, deck, cards):
     out = {'games': 0, 'wins': 0, 'cards': {c: collections.Counter() for c in cards}, 'at_attacker': [], 'combat_deaths': 0,
-           'counters': collections.Counter(), 'casts': collections.Counter()}
+           'combat_deaths_holding': 0, 'counters': collections.Counter(), 'casts': collections.Counter()}
     for rj in sorted(glob.glob(os.path.join(run_dir, 'arm-*', '*', 'run.json'))):
         run = json.load(open(rj))
         seat = next((d['seat'] for d in run['decks'] if d['id'] == deck), None)
@@ -46,14 +47,15 @@ def read_arm(run_dir, deck, cards):
         evs = list(events(evf[0]))
         lost_at = {e['seat']: e['t'] for e in evs if e['e'] == 'lost'}
         held, cast_in = set(), set()
-        cur = None; attackers_at_me = []; blocked = False; pending = []
+        cur = None; attackers_at_me = []; blocked = False; pending = []; in_hand = set()
         for e in evs:
             k = e['e']
             if k == 'turn':
                 cur = e; attackers_at_me = []; blocked = False
                 me = next((s for s in e.get('state') or [] if s['seat'] == seat), None)
+                in_hand = set(me.get('hand') or []) & set(cards) if me else set()
                 if me:
-                    held |= set(me.get('hand') or []) & set(cards)
+                    held |= in_hand
             elif cur is None:
                 continue
             elif k == 'zone' and e.get('seat') == seat and e.get('card') in cards and e.get('to') == 'Hand':
@@ -70,6 +72,7 @@ def read_arm(run_dir, deck, cards):
                 pending = []
                 if e.get('life', 0) > 0 and (e.get('incoming', 0) >= e.get('life', 0) or e.get('cmd')) and lost_at.get(seat) == e['t']:
                     out['combat_deaths'] += 1
+                    out['combat_deaths_holding'] += bool(in_hand)
             elif k == 'cast' and e.get('seat') == seat and e.get('spell') and e.get('card') in cards:
                 c = e['card']; cast_in.add(c); held.add(c)
                 tg = (e.get('targets') or [None])[0]
@@ -108,7 +111,7 @@ def main(argv):
                     cards.append(c)
         arms = {'base': read_arm(os.path.join(a.results, f'ab-{deck}' + (f'@{a.base}' if a.base else '')), deck, cards),
                 'cand': read_arm(os.path.join(a.results, f'ab-{deck}@{a.variant}'), deck, cards)}
-        doc['decks'][deck] = {'cards': cards, **{arm: {'games': x['games'], 'wins': x['wins'], 'combat_deaths': x['combat_deaths'], 'casts': dict(x['casts']),
+        doc['decks'][deck] = {'cards': cards, **{arm: {'games': x['games'], 'wins': x['wins'], 'combat_deaths': x['combat_deaths'], 'combat_deaths_holding': x['combat_deaths_holding'], 'casts': dict(x['casts']),
                                                        'cards': {c: dict(v) for c, v in x['cards'].items()}, 'at_attacker': x['at_attacker'],
                                                        'counters': dict(x['counters'])} for arm, x in arms.items()}}
         print(f"{deck}: {', '.join(cards)}")
@@ -116,8 +119,9 @@ def main(argv):
             held = sum(v['games_held'] for v in x['cards'].values()); cast = sum(v['games_cast'] for v in x['cards'].values())
             n = sum(x['casts'].values()); other = n - x['casts']['own turn']
             print(f"   {arm:5} {x['games']} games, {x['wins']} wins | card-games held {held}, cast {cast} ({100 * cast / max(1, held):.0f}%) | casts {n}: own turn {x['casts']['own turn']}, "
-                  f"another player's turn {other} ({100 * other / max(1, n):.0f}%), of them at an attacker {x['casts']['at an attacker']} | deaths in combat {x['combat_deaths']}")
-            for key in ('games', 'wins', 'combat_deaths'):
+                  f"another player's turn {other} ({100 * other / max(1, n):.0f}%), of them at an attacker {x['casts']['at an attacker']} | deaths in combat {x['combat_deaths']}, "
+                  f"{x['combat_deaths_holding']} with one of the cards in hand")
+            for key in ('games', 'wins', 'combat_deaths', 'combat_deaths_holding'):
                 tot[arm][key] += x[key]
             tot[arm]['held'] += held; tot[arm]['cast'] += cast; tot[arm]['casts'] += n; tot[arm]['other'] += other; tot[arm]['at_attacker'] += x['casts']['at an attacker']
             tot[arm]['out_after_answer'] += sum(1 for r in x['at_attacker'] if r.get('out'))
@@ -131,7 +135,7 @@ def main(argv):
         t = tot[arm]
         print(f"   {arm:5} {t['games']} games, {t['wins']} wins | card-games held {t['held']}, cast {t['cast']} ({100 * t['cast'] / max(1, t['held']):.1f}%) | casts {t['casts']}: "
               f"another player's turn {t['other']} ({100 * t['other'] / max(1, t['casts']):.1f}%), at an attacker {t['at_attacker']} (the seat out that turn after {t['out_after_answer']}) | "
-              f"deaths in combat {t['combat_deaths']}")
+              f"deaths in combat {t['combat_deaths']}, {t['combat_deaths_holding']} with one of the cards in hand")
         print('         counters', {k[2:]: v for k, v in sorted(t.items()) if k.startswith('c:')})
     doc['all'] = {arm: dict(t) for arm, t in tot.items()}
     if a.json:
