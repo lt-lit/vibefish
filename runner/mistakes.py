@@ -25,9 +25,18 @@ What is counted, per seat:
                      nonland permanents among the opponents alive), or a less dangerous one while a more dangerous
                      one lived. A miss of the first two is a mistake. The third is not: at 2,000 tables a seat that
                      took every such kill lost more games than the same seat leaving the weaker opponent alive.
+                     Set aside, and in none of these counts: a turn on which a permanent limits how many creatures
+                     may attack (Silent Arbiter and the like, ATTACK_LIMITS below). The `combat` line's `through`
+                     does not know the limit, so its sure kill is not one; such turns are counted as
+                     `kill_limited_turns`. (Found on the pool of twelve, 2026-11-22: one deck there plays Silent
+                     Arbiter, and a seat with eighty power that sends one creature at the last opponent is doing
+                     all the card allows.)
   a death by a block not made
                      The seat was attacked, what its blocks left unblocked was at least its life, it lost that turn,
                      and the best blocks its creatures could have made would have left less than its life.
+                     A death on a turn a permanent limited the number of blockers (the same cards) is in neither
+                     this count nor the next: what the best blocks could have done is not known from the line
+                     (`deaths_block_limited`).
   a death tapped out No block could have saved it, but its own tapped creatures could have, had they been untapped:
                      it attacked (or tapped them for something else) and died to the answer. Not always a mistake
                      (a race can be right), so read it beside the other two.
@@ -73,7 +82,15 @@ KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent'
         'kill_turns', 'kill_taken', 'kill_other', 'kill_missed', 'kill_missed_no_attack', 'kill_missed_short', 'kill_missed_then_lost', 'kill_missed_then_won',
         'kill_last_turns', 'kill_last_missed', 'kill_top_turns', 'kill_top_missed', 'kill_lesser_turns', 'kill_lesser_missed',
         'open_turns', 'open_attacked', 'open_elsewhere',
-        'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths')
+        'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths',
+        'kill_limited_turns', 'deaths_block_limited')
+
+# Permanents whose static ability limits how many creatures may attack (Forge scripts with `Mode$ AttackRestrict |
+# MaxAttackers$ N`, snapshot 2026-11-10): 'all' limits every combat, 'you' attacks on its controller. The harness's
+# `through` and `best` do not know them (they are not an attack cost and not a rule about one creature), so a turn
+# under one is set aside. Tracked by name through the zone lines; a copy under another name is not seen.
+ATTACK_LIMITS = {'Silent Arbiter': 'all', 'Dueling Grounds': 'all', 'Caverns of Despair': 'all', 'Crawlspace': 'you', 'Judoon Enforcers': 'you'}
+BLOCK_LIMITS = ('Silent Arbiter', 'Dueling Grounds', 'Caverns of Despair')
 
 
 def danger(d, turn):
@@ -115,6 +132,11 @@ def close_turn(G, label, turn, lost_at, examples, where):
                 g['turns_attacked'] += 1
             g['power_sent'] += min(sent, best_power) if best_power else 0
         killable = [d for d in defenders if d['life'] > 0 and d['through'] >= d['life']]
+        if killable and (turn.get('limit_all') or turn.get('limit_you')):
+            free = [d for d in killable if not turn.get('limit_all') and d['seat'] not in turn['limit_you']]
+            if len(free) < len(killable):
+                g['kill_limited_turns'] += 1
+            killable = free
         if killable:
             g['kill_turns'] += 1
             live = [d for d in defenders if d['life'] > 0]
@@ -156,7 +178,9 @@ def close_turn(G, label, turn, lost_at, examples, where):
             if lost_at.get(d) == turn['t']:
                 g['combat_deaths'] += 1
                 g['commander_deaths'] += bool(cmd)
-                if b['best'] < b['life'] and not cmd_best:
+                if b.get('block_limited'):
+                    g['deaths_block_limited'] += 1
+                elif b['best'] < b['life'] and not cmd_best:
                     g['block_not_made'] += 1
                 elif b.get('best_untapped', b['best']) < b['life'] and not cmd_best_u:
                     g['died_tapped_out'] += 1
@@ -191,8 +215,16 @@ def collect(roots, arm=None, by_deck=False, deck=None):
             turns = []
             cur = None
             dealt = collections.Counter()               # (seat, commander) -> the combat damage it has dealt to that seat
+            limits = {}                                 # id -> (name, its controller's seat) of the limiting permanents on the battlefield
             for e in evs:
                 k = e['e']
+                if k == 'zone':
+                    if e.get('card') in ATTACK_LIMITS:
+                        if e.get('to') == 'Battlefield':
+                            limits[e.get('id')] = (e['card'], e.get('seat'))
+                        elif e.get('from') == 'Battlefield':
+                            limits.pop(e.get('id'), None)
+                    continue
                 if k == 'turn':
                     cur = {'seat': e.get('seat'), 't': e['t'], 'combat': None, 'attacks': collections.defaultdict(list), 'blocks': [],
                            'state': {x['seat']: x for x in e.get('state') or []}}
@@ -201,11 +233,15 @@ def collect(roots, arm=None, by_deck=False, deck=None):
                     continue
                 elif k == 'combat':
                     cur['combat'] = e
+                    cur['limit_all'] = any(ATTACK_LIMITS[n] == 'all' for n, _ in limits.values())
+                    cur['limit_you'] = {s for n, s in limits.values() if ATTACK_LIMITS[n] == 'you'}
                 elif k == 'attack' and e.get('seat') == cur['seat']:
                     for at in e.get('attacks') or []:
                         if not at.get('planeswalker') and at.get('defender_seat') is not None:
                             cur['attacks'][at['defender_seat']].append(at.get('attacker'))
                 elif k == 'block':
+                    if any(n in BLOCK_LIMITS for n, _ in limits.values()):
+                        e = dict(e, block_limited=True)
                     cur['blocks'].append(e)
                 elif k == 'damage' and e.get('combat') and e.get('source_commander') and e.get('seat') is not None:
                     dealt[(e['seat'], e.get('source'))] += e.get('amount', 0)
@@ -247,6 +283,9 @@ def render(G, games, old, examples, show):
         out.append(f'  {n:{w}} {g["kill_turns"]:>6} {g["kill_taken"]:>6} {g["kill_other"]:>8} {g["kill_missed"]:>7} {pct(g["kill_missed"], g["kill_turns"]):>6} '
                    f'{g["kill_missed_no_attack"]:>10} {g["kill_missed_short"]:>11} {g["kill_missed_then_lost"]:>13}   '
                    f'{g["kill_missed"] / g["seat_games"]:.2f} missed' if g['seat_games'] else '')
+    if any(G[n]['kill_limited_turns'] or G[n]['deaths_block_limited'] for n in names):
+        out += ['  set aside (a permanent limited the number of attackers or blockers, which the lines do not know): '
+                + '; '.join(f'{n} {G[n]["kill_limited_turns"]} turns with a kill by the count, {G[n]["deaths_block_limited"]} deaths in combat' for n in names)]
     out += ['', 'KILLS BY WHERE THE TABLE STOOD: the opponent that could be killed was the last one (the kill wins the game); the most dangerous of several',
             '       (life + 2 x nonland permanents); a less dangerous one while a more dangerous one lived. A miss of the first two is a mistake; the third is not (DESIGN §34)',
             f'  {"":{w}} {"last":>6} {"missed":>7} {"share":>6}   {"most dangerous":>15} {"missed":>7} {"share":>6}   {"a lesser one":>13} {"missed":>7} {"share":>6}   mistakes a seat-game']
