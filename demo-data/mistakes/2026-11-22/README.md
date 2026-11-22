@@ -1,4 +1,6 @@
-# Mistakes counted on the pool of twelve, 2026-11-22: the pool's first baseline
+# Mistakes counted on 2026-11-22: the pool's first baseline, and the owner's table with the hooks in every seat
+
+## The pool of twelve
 
 The count of `../2026-11-20/` and `../2026-11-21/` (DESIGN.md §34, §35) on the pool's decks: the twelve shipped arms of
 `ab-run` #58 (run id 44934264368, commit 50fb281, harness 0.4.10, seed 20261400), 200 tables a deck on
@@ -88,3 +90,37 @@ table, because seven of these end within six minutes in a draw Forge declares (t
 each). Its fix is a limit a turn on the trigger rule (`playbook/variants/eldrazi-incursion-limit.json`, harness 0.4.11),
 which finished all four of the deck's own broken tables in replays; it plays beside the shipped arm on these tables with
 `ab-run` #59.
+
+## The owner's table with the hooks in every seat
+
+The same count on the ten next-version arms of `ab-run` #57 (run id 44934245433, commit 473a1b1, harness 0.4.10, seed
+20261410): 2,000 games at the owner's table in which every seat plays its version of 2026-11-21, with the hooks and
+without the guard (DESIGN.md §36). The second baseline at this table, the same decks before the hooks
+(`../2026-11-21/`), is in brackets; these are other tables.
+
+- `owners-table-next.json`, `owners-table-next-by-deck.json`, `owners-table-next-attackers-by-danger.json`: as above.
+
+| | |
+|---|---|
+| turns on which a seat was sure to kill an opponent | 6,279 (6,192) |
+| missed | 2,291, 36% (36%) |
+| ... the opponent was the last one | 1,277 turns, 51 missed, 4% (5%) |
+| ... the most dangerous of several | 1,298 turns, 57 missed, 4% (16%) |
+| ... a less dangerous one while a more dangerous one lived | 3,704 turns, 2,183 missed, 59% (54%) |
+| attacks that left at least a seat's life unblocked, or a commander's lethal damage | 4,505; the seat died that turn in 4,370 (4,366; 4,226) |
+| deaths by a block not made | 19: Blood Rites 12, Miracle Worker 6, Mutant Menace 1. The first two are the decks without the block hook; the eight with it have one such death in 6,504 seat-games. (The 6 of the second baseline are not comparable: its logs did not carry a commander's damage in the block count) |
+| deaths tapped out | 745, 17.0% of the deaths in combat (574, 13.6%) |
+| deaths on a turn a commander's damage on the seat reached 21 | 273, 6.2% (473, 11.2%) |
+| turns with an able attacker on which the seat attacked | 64% (57%); 45 to 84% by deck |
+| turns with an opponent who could not block: attacked it | 53% of 20,577 (31%); attacked only opponents that could block 27% (34%); attacked nobody 20% (35%). By deck 31 to 77%: the four without that hook 31 to 42%, the six with it 55 to 77% |
+| attackers at the opponent that looks most dangerous | with three opponents alive 58.4% of 49,085 (48.8%), with two 65.3% of 16,584 (51.5%); at the player who went on to win 28.5% and 36.2% of the attackers of seats that did not (24.5%, 29.8%) |
+| declarations that sent nothing at the most dangerous opponent | 10,033 of 27,918 (11,971 of 25,647), 2,851 more with a tie left out |
+| games without a winner | 6 of 2,000, 0.6 of 51.0 hours of play (25, 11.1 of 66.3 hours) |
+
+What the hooks were written for has moved, at a table where everyone has them: the kill of the most dangerous opponent is
+missed a quarter as often, six attackers in ten go at that opponent where five did, free damage is taken on half of the
+turns it is there. Two things moved that no hook was written for. Deaths tapped out are up by 30%: the price of attacking
+more, and what the guard is for (it is in none of these games; in the guard arms of the same run the seat under test dies
+that way 169 times where it does 193 times without it). And a commander's damage kills four times in ten less often,
+before any block is added: the likely cause is that an attack which follows the most dangerous opponent spreads a
+commander's damage over the table, where Forge's own keeps going at the same weak player. That is a guess from the counts.
