@@ -192,7 +192,8 @@ def main(argv):
     bn, cn = (a.base or 'shipped'), a.variant
     rows = []
     for d in a.decks:
-        rows += read(a.root, d + ('@' + a.base if a.base else ''), d + '@' + a.variant, d, a.tables, a.arm)
+        # VARIANT `shipped` is the plain entry (ab-DECK): a confirming run has the shipped playbook as its candidate and DECK@before as its base
+        rows += read(a.root, d + ('@' + a.base if a.base else ''), d if a.variant == 'shipped' else d + '@' + a.variant, d, a.tables, a.arm)
     files = collections.defaultdict(list)
     for r in rows:
         files[r['file'] if r['file'] != 'attack' else 'attack: ' + r['stood']].append(r)

@@ -1,0 +1,60 @@
+{
+ "kind": "attack-danger",
+ "games": 2400,
+ "arm": null,
+ "deck": null,
+ "counts": {
+  "ties": 3332,
+  "3 declarations": 28899,
+  "3 attackers": 71644,
+  "3 at_top": 36412,
+  "3 all_at_top": 15649,
+  "3 none_at_top": 13105,
+  "3 attackers_seat_lost": 44787,
+  "3 at_winner": 12012,
+  "2 declarations": 7095,
+  "2 attackers": 35025,
+  "2 at_top": 20341,
+  "2 all_at_top": 4049,
+  "2 none_at_top": 2875,
+  "else declarations": 15980,
+  "else attackers": 47848,
+  "else gap 1-4": 5221,
+  "else attacked_lower_life": 13121,
+  "else attacked_lowest_life": 10944,
+  "else top_no_blocker": 3464,
+  "else top_fewer_blockers": 5747,
+  "else top_as_many_blockers": 4203,
+  "else top_more_blockers": 6030,
+  "else sure_at_top_at_least": 11049,
+  "else sure_at_top_at_least gap5": 7310,
+  "else gap 20+": 3196,
+  "else gap 5-9": 3753,
+  "else gap 10-19": 3810,
+  "2 attackers_seat_lost": 10823,
+  "2 at_winner": 3993
+ },
+ "by_round": {
+  "5-8": {
+   "attackers": 39203,
+   "at_top": 20253,
+   "chance": 13803.333333334209
+  },
+  "9-12": {
+   "attackers": 42344,
+   "at_top": 21589,
+   "chance": 17154.333333333714
+  },
+  "1-4": {
+   "attackers": 5135,
+   "at_top": 3817,
+   "chance": 1711.8333333332716
+  },
+  "13+": {
+   "attackers": 19987,
+   "at_top": 11094,
+   "chance": 8724.333333333294
+  }
+ },
+ "run": "ab-run #58 (run id 44934264368, commit 50fb281, harness 0.4.10, seed 20261400): the twelve shipped arms, 200 tables a deck on runner/leagues/bots-v2.json, every seat under its shipped playbook (the versions of 2026-11-13 and 2026-11-14, none with a hook)"
+}

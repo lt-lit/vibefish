@@ -108,10 +108,10 @@ def main(argv):
             M[arm].update(row['mistakes'][arm])
             row['aim'][arm] = danger(a.exam, a.out, d, arm)
             A[arm].update(row['aim'][arm])
-            if arm != 'shipped':
-                foc = json.load(open(os.path.join(a.rollups, f'{d}-{arm}.json')))['arm_stats']['playbook'].get('playbook_focus') or {}
-                row['hook'][arm] = {k: v for k, v in foc.items() if k.startswith(HOOKS)}
-                H[arm].update(row['hook'][arm])
+            # the hooks' counters of the seat under test; the shipped arm has them too once shipped playbooks carry hooks
+            foc = json.load(open(os.path.join(a.rollups, f'{d}.json' if arm == 'shipped' else f'{d}-{arm}.json')))['arm_stats']['playbook'].get('playbook_focus') or {}
+            row['hook'][arm] = {k: v for k, v in foc.items() if k.startswith(HOOKS)}
+            H[arm].update(row['hook'][arm])
         for b, c in pairs:
             row['pairs'][f'{b}:{c}'] = paired(j, b, c)
         res['decks'][d] = row
@@ -126,7 +126,7 @@ def main(argv):
             print(f"    {arm:11} sure kills missed: last {m['kill_last_missed']}/{m['kill_last_turns']}, most dangerous {m['kill_top_missed']}/{m['kill_top_turns']}, "
                   f"lesser {m['kill_lesser_missed']}/{m['kill_lesser_turns']} | deaths in combat {m['combat_deaths']}, block not made {m['block_not_made']}, tapped out {m['died_tapped_out']}, "
                   f"commander damage {m['commander_deaths']} | open board attacked {m['open_attacked']}/{m['open_turns']}"
-                  + (f" | hook {row['hook'][arm]}" if arm != 'shipped' else ''))
+                  + (f" | hook {row['hook'][arm]}" if row['hook'][arm] else ''))
     print()
     print(f"ALL {len(a.decks)} DECKS: wins " + ', '.join(f'{arm} {W[arm]}' for arm in arms) + f" of {200 * len(a.decks)}")
     for arm in arms:
@@ -137,7 +137,7 @@ def main(argv):
               f"block not made {m['block_not_made']}, tapped out {m['died_tapped_out']}, commander damage {m['commander_deaths']} | attacked on {pct(m['turns_attacked'], m['turns_able'])} of its turns "
               f"with an able attacker, sent {pct(m['power_sent'], m['power_able'])} of the damage it could | an opponent could not block on {m['open_turns']} turns: attacked it "
               f"{pct(m['open_attacked'], m['open_turns'])}, only another {pct(m['open_elsewhere'], m['open_turns'])}, nobody {pct(m['open_turns'] - m['open_attacked'] - m['open_elsewhere'], m['open_turns'])}"
-              + (f" | hook {dict(H[arm])}" if arm != 'shipped' else ''))
+              + (f" | hook {dict(H[arm])}" if H[arm] else ''))
         print(f"    {'':11} {aim_line(A[arm])}")
     for b, c in pairs:
         co = sum(res['decks'][d]['pairs'][f'{b}:{c}']['cand_only'] for d in a.decks)

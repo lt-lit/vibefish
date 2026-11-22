@@ -5,7 +5,8 @@ How each ended (Forge's clock, a draw Forge declared, an exception), how long th
 what the last turn was made of: the card with the most cast and zone lines in it and whose it was. A chain of forty lines
 or more of one card is named as the loop it almost always is. On 2026-11-21 this showed that 22 of the 25 games without a
 winner in 2,000 (and a sixth of the play time) were one deck's trigger rule saying yes to a copy that copies itself
-(Miracle Worker's Ondu Spiritdancer with Secret Arcade; DESIGN.md section 34). -v lists the games.
+(Miracle Worker's Ondu Spiritdancer with Secret Arcade; DESIGN.md section 35). On 2026-11-21 it found the pool's (Eldrazi Incursion's
+Ulalek trigger, 14 of 31 in 2,400 games; demo-data/mistakes/2026-11-22/). -v lists the games.
 """
 import collections, glob, gzip, json, os, sys
 

@@ -1,0 +1,804 @@
+{
+ "kind": "mistakes",
+ "games": 2400,
+ "games_without_combat_lines": 0,
+ "arm": null,
+ "by_deck": false,
+ "deck": null,
+ "groups": {
+  "bot": {
+   "seat_games": 9600,
+   "turns_able": 71818,
+   "turns_attacked": 37636,
+   "power_able": 939127,
+   "power_sent": 581566,
+   "kill_turns": 7773,
+   "kill_taken": 4665,
+   "kill_other": 236,
+   "kill_missed": 2872,
+   "kill_missed_no_attack": 2488,
+   "kill_missed_short": 384,
+   "kill_missed_then_lost": 1757,
+   "kill_missed_then_won": 1115,
+   "kill_last_turns": 1698,
+   "kill_last_missed": 103,
+   "kill_top_turns": 1705,
+   "kill_top_missed": 251,
+   "kill_lesser_turns": 4370,
+   "kill_lesser_missed": 2518,
+   "open_turns": 28625,
+   "open_attacked": 8395,
+   "open_elsewhere": 8662,
+   "attacked_lethal": 5400,
+   "combat_deaths": 5299,
+   "block_not_made": 153,
+   "died_tapped_out": 510,
+   "commander_deaths": 665
+  }
+ },
+ "kills_not_taken": [
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0001/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 3,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 11,
+     "blockers": 3,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0003/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 21,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "2": 5
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0010/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 21,
+     "power": 29,
+     "blockers": 0,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "1": 8
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 16,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "1": 4
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 14,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 30,
+     "blockers": 0,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 12,
+     "blockers": 0,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 34,
+     "blockers": 1,
+     "through": 18
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0019/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 11,
+     "blockers": 2,
+     "through": 7
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0020/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 25,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0020/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 25,
+     "power": 35,
+     "blockers": 0,
+     "through": 35
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0020/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 23,
+     "power": 44,
+     "blockers": 2,
+     "through": 34
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0022/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 19,
+     "power": 21,
+     "blockers": 0,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0025/games/game-001.events.jsonl",
+   "t": 58,
+   "seat": 2,
+   "deck": "planeswalker-party",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 34,
+     "power": 88,
+     "blockers": 3,
+     "through": 88
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0025/games/game-001.events.jsonl",
+   "t": 60,
+   "seat": 2,
+   "deck": "planeswalker-party",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 28,
+     "power": 107,
+     "blockers": 4,
+     "through": 98
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0025/games/game-001.events.jsonl",
+   "t": 62,
+   "seat": 2,
+   "deck": "planeswalker-party",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 24,
+     "power": 119,
+     "blockers": 3,
+     "through": 119
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0025/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 2,
+   "deck": "planeswalker-party",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 19,
+     "power": 257,
+     "blockers": 7,
+     "through": 246
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0026/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0028/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 34,
+     "power": 38,
+     "blockers": 0,
+     "through": 38
+    }
+   ],
+   "attacked": {
+    "0": 7
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0028/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 25,
+     "blockers": 1,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0030/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 24,
+     "blockers": 3,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0031/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 7,
+     "blockers": 0,
+     "through": 7
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0032/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 13,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0032/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "top",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 31,
+     "blockers": 2,
+     "through": 27
+    },
+    {
+     "seat": 2,
+     "life": 17,
+     "power": 31,
+     "blockers": 4,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0034/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 20,
+     "blockers": 1,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0035/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 39,
+     "power": 42,
+     "blockers": 0,
+     "through": 42
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0035/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 3,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 5,
+     "power": 7,
+     "blockers": 1,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0036/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 23,
+     "power": 108,
+     "blockers": 5,
+     "through": 39
+    },
+    {
+     "seat": 2,
+     "life": 29,
+     "power": 108,
+     "blockers": 3,
+     "through": 65
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0036/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 23,
+     "power": 53,
+     "blockers": 5,
+     "through": 24
+    },
+    {
+     "seat": 2,
+     "life": 29,
+     "power": 53,
+     "blockers": 3,
+     "through": 34
+    }
+   ],
+   "attacked": {
+    "3": 10
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0036/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 18,
+     "blockers": 2,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0037/games/game-001.events.jsonl",
+   "t": 75,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 1092,
+     "blockers": 8,
+     "through": 396
+    },
+    {
+     "seat": 0,
+     "life": 20,
+     "power": 1092,
+     "blockers": 1,
+     "through": 445
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0037/games/game-001.events.jsonl",
+   "t": 80,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 19,
+     "power": 31,
+     "blockers": 1,
+     "through": 23
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0037/games/game-001.events.jsonl",
+   "t": 84,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 18,
+     "power": 1665,
+     "blockers": 1,
+     "through": 1665
+    }
+   ],
+   "attacked": {
+    "0": 192
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0038/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 0,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 39,
+     "power": 50,
+     "blockers": 2,
+     "through": 41
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 38,
+     "power": 46,
+     "blockers": 0,
+     "through": 46
+    }
+   ],
+   "attacked": {
+    "0": 7
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 52,
+     "blockers": 2,
+     "through": 44
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 94,
+     "blockers": 2,
+     "through": 66
+    },
+    {
+     "seat": 1,
+     "life": 37,
+     "power": 94,
+     "blockers": 4,
+     "through": 46
+    }
+   ],
+   "attacked": {
+    "2": 11
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 12,
+     "blockers": 2,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "3": 2
+   }
+  },
+  {
+   "where": "ab-goblin-storm/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 17,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  }
+ ],
+ "run": "ab-run #58 (run id 44934264368, commit 50fb281, harness 0.4.10, seed 20261400): the twelve shipped arms, 200 tables a deck on runner/leagues/bots-v2.json, every seat under its shipped playbook (the versions of 2026-11-13 and 2026-11-14, none with a hook)",
+ "counted": "2026-11-21 23:51 UTC, runner/mistakes.py as of harness 0.4.11 on logs of harness 0.4.10: the block and tapped-out counts know trample and a commander's damage (cmd, cmd_best in the combat lines since 0.4.3), which the logs of the two baselines at the owner's table (0.4.0, 0.4.1) did not carry or carried in part"
+}
