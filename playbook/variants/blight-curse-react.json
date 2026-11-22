@@ -1,0 +1,467 @@
+{
+ "schema": 1,
+ "deck": "blight-curse",
+ "variant": "react",
+ "of": "playbook/precons/blight-curse.json (version 6)",
+ "about": "A candidate with rules for other players' turns (docs/agents/add_react.py). Only the playbook object is read.",
+ "playbook": {
+  "version": 7,
+  "attack": {
+   "policy": "forge",
+   "aim": "danger",
+   "open": true,
+   "finish": "leader",
+   "guard": "table"
+  },
+  "targets": {
+   "triggers": "danger"
+  },
+  "block": {
+   "survive": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "hold": [
+      "Blowfly Infestation"
+     ],
+     "until": [
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "hold": [
+      "Eventide's Shadow"
+     ],
+     "until": [
+      "library >= 40"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Ignoble Hierarch",
+      "Commander's Sphere",
+      "Wickersmith's Tools",
+      "Devoted Druid"
+     ]
+    },
+    {
+     "play": [
+      "Chain Reaction",
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_power > power",
+      "creatures <= 3"
+     ]
+    },
+    {
+     "play": [
+      "Chain Reaction",
+      "Black Sun's Zenith"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "when": [
+      "opp_creatures >= 6",
+      "opp_power > power",
+      "opp_creatures > creatures",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Channeler Initiate"
+     ],
+     "when": [
+      "creatures == 0"
+     ]
+    },
+    {
+     "play": [
+      "Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "Devoted Druid"
+     ],
+     "ability": "Untap",
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "play": [
+      "Village Pillagers",
+      "Soul Snuffers",
+      "Midnight Banshee"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
+    },
+    {
+     "activate": [
+      "Carnifex Demon"
+     ],
+     "when": [
+      "controls Auntie Ool, Cursewretch",
+      "opp_creatures >= 4",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "activate": [
+      "Liliana, Death Wielder"
+     ],
+     "ability": "Destroy target creature"
+    },
+    {
+     "activate": [
+      "Liliana, Death Wielder"
+     ],
+     "ability": "up to one target creature"
+    },
+    {
+     "play": [
+      "Fire Covenant"
+     ],
+     "aim": "creature",
+     "aim_min": 4,
+     "divide": 3,
+     "divide_min": 2,
+     "x": 12,
+     "x_keep_life": 18
+    },
+    {
+     "play": [
+      "Fire Covenant"
+     ],
+     "aim": "creature",
+     "aim_min": 5,
+     "divide": 1,
+     "x": 6,
+     "x_keep_life": 15
+    },
+    {
+     "play": [
+      "Binding the Old Gods",
+      "Incremental Blight"
+     ]
+    },
+    {
+     "play": [
+      "Skinrender"
+     ],
+     "when": [
+      "opp_creatures >= 1"
+     ]
+    },
+    {
+     "play": [
+      "Grave Titan",
+      "Liliana, Death Wielder",
+      "Ferrafor, Young Yew",
+      "Grim Poppet",
+      "Aberrant Return",
+      "Midnight Banshee",
+      "Carnifex Demon",
+      "Archfiend of Ifnir",
+      "Puppeteer Clique",
+      "Kulrath Knight",
+      "The Scorpion God",
+      "Village Pillagers",
+      "Massacre Girl, Known Killer",
+      "Tree of Perdition",
+      "Wickerbough Elder",
+      "The Reaper, King No More",
+      "Glissa Sunslayer",
+      "Dusk Urchins",
+      "Necroskitter",
+      "Dread Tiller"
+     ]
+    },
+    {
+     "play": [
+      "Hapatra, Vizier of Poisons",
+      "Lasting Tarfire",
+      "Sinister Gnarlbark",
+      "Grave Venerations",
+      "Chimil, the Inner Sun",
+      "Vraska, Betrayal's Sting",
+      "Evolution Sage",
+      "Oft-Nabbed Goat",
+      "Puca's Covenant"
+     ]
+    },
+    {
+     "play": [
+      "Blowfly Infestation"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Flourishing Defenses"
+     ],
+     "when": [
+      "library >= 40",
+      "not controls Midnight Banshee"
+     ]
+    },
+    {
+     "activate": [
+      "Vraska, Betrayal's Sting"
+     ],
+     "ability": "You draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "activate": [
+      "Grim Poppet"
+     ],
+     "target": "Oft-Nabbed Goat",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Grim Poppet"
+     ],
+     "target": "Tree of Perdition",
+     "times": 3
+    },
+    {
+     "activate": [
+      "Grim Poppet"
+     ],
+     "target": "Sinister Gnarlbark",
+     "times": 1,
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "Ferrafor, Young Yew"
+     ],
+     "target": "Oft-Nabbed Goat"
+    },
+    {
+     "play": [
+      "Painful Truths",
+      "Harmonize",
+      "Night's Whisper",
+      "Hoarder's Greed",
+      "Burning Curiosity"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Eventide's Shadow"
+     ],
+     "when": [
+      "library >= 40",
+      "life >= 25",
+      "hand <= 3"
+     ]
+    },
+    {
+     "play": [
+      "Cathartic Reunion"
+     ],
+     "when": [
+      "library >= 30",
+      "hand >= 4"
+     ]
+    },
+    {
+     "activate": [
+      "The Scorpion God"
+     ],
+     "target": "Oft-Nabbed Goat",
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "The Scorpion God"
+     ],
+     "target": "Tree of Perdition",
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "The Scorpion God"
+     ],
+     "target": "Sinister Gnarlbark",
+     "when": [
+      "controls Auntie Ool, Cursewretch"
+     ]
+    },
+    {
+     "activate": [
+      "Wickersmith's Tools"
+     ],
+     "ability": "Create X",
+     "phase": "main2",
+     "when": [
+      "turn >= 10",
+      "lands >= 7"
+     ]
+    },
+    {
+     "activate": [
+      "Nesting Grounds"
+     ],
+     "ability": "Move a counter",
+     "own": "minus_counter",
+     "own_except": [
+      "Tree of Perdition",
+      "Oft-Nabbed Goat",
+      "Grim Poppet",
+      "Carnifex Demon",
+      "Channeler Initiate",
+      "Wickerbough Elder",
+      "Dusk Urchins"
+     ],
+     "aim": "creature",
+     "aim_toughness": 1,
+     "aim_min": 2
+    },
+    {
+     "activate": [
+      "Nesting Grounds"
+     ],
+     "ability": "Move a counter",
+     "own": "minus_counter",
+     "own_except": [
+      "Tree of Perdition",
+      "Oft-Nabbed Goat",
+      "Grim Poppet",
+      "Carnifex Demon",
+      "Channeler Initiate",
+      "Wickerbough Elder",
+      "Dusk Urchins"
+     ],
+     "aim": "creature",
+     "aim_min": 3
+    },
+    {
+     "activate": [
+      "Ifnir Deadlands"
+     ],
+     "ability": "Put two -1/-1",
+     "aim": "creature",
+     "aim_toughness": 2,
+     "aim_min": 3,
+     "when": [
+      "lands >= 9"
+     ]
+    },
+    {
+     "hold": [
+      "Terminate",
+      "Infernal Grasp",
+      "Assassin's Trophy",
+      "Putrefy"
+     ]
+    },
+    {
+     "reserve": [
+      "Terminate",
+      "Infernal Grasp",
+      "Assassin's Trophy",
+      "Putrefy"
+     ],
+     "aim": "permanent",
+     "aim_min": 3,
+     "when": [
+      "lands >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Terminate",
+      "Infernal Grasp",
+      "Assassin's Trophy",
+      "Putrefy"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "when": [
+      "lethal == 1"
+     ]
+    },
+    {
+     "play": [
+      "Terminate",
+      "Infernal Grasp",
+      "Assassin's Trophy",
+      "Putrefy"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "aim_min": 6
+    },
+    {
+     "play": [
+      "Terminate",
+      "Infernal Grasp",
+      "Assassin's Trophy",
+      "Putrefy"
+     ],
+     "phase": "end",
+     "aim": "permanent",
+     "aim_min": 3
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Flourishing Defenses"
+    ],
+    "when": [
+     "library <= 29"
+    ]
+   },
+   {
+    "accept": [
+     "Flourishing Defenses"
+    ],
+    "per_turn": 30
+   },
+   {
+    "decline": [
+     "Flourishing Defenses"
+    ]
+   },
+   {
+    "accept": [
+     "Dread Tiller",
+     "Puca's Covenant",
+     "The Reaper, King No More",
+     "Necroskitter"
+    ]
+   }
+  ],
+  "notes": "Version 2 = the wretch candidate (version 1: its attack and both trigger rules unchanged) with eleven rules added and the base's nineteen cast rules kept in their relative order (base rules 1-5 are rules 1-3, 6, 7; base 6 is 12; base 7-12 are 16-21; base 13 is 23; base 14 is 25; base 15 is 26 with five cards added; base 16-19 are 27-30). Written from the 200 tables of ab-run #27 (seed 20261260, pool bots-v2 under their playbooks), where the candidate won 41 and the stock pilot of the same deck 46. WHAT WAS WRONG. A play or activate rule with something to do always goes before a card no rule names, so under version 1 the cards it did not name were starved: Incremental Blight cast in 10 of 54 games drawn (stock 49 of 56), Aberrant Return 16/62 (51/66), Liliana 8/56 (34/53), Binding the Old Gods 8/42 (30/44), Puppeteer Clique 24/60 (46/52), Chain Reaction 14/59 (41/67), Midnight Banshee 18/61 (36/54); the seat lost holding 4.9 nonland cards. Black Sun's Zenith and Fire Covenant (AI:RemoveDeck:All) were never cast by either pilot and were in hand at 38 and 42 of the candidate's losses, Soul Snuffers (cast 2 of 64) at 37. On the seat's last own turn of a loss the median board was 2-3 creatures of ours against 10-11 for the widest opponent, at 10-15 life. THE CONDITION FOR A WIPE THAT HITS US TOO: the widest opponent has six or more creatures and more power than we have, and we have three creatures or fewer: by the logs' creature counts it held on one of the last three own turns in 113 of 159 losses and 10 of 41 wins (first true on own turn 7, median); or that opponent has more creatures than we have and could kill us next turn. RULES 4-5, Chain Reaction (X = every creature on the battlefield, so at six or more opposing creatures it kills nearly all of them) and else Black Sun's Zenith for all the mana (x max, at least 3), on those conditions, above the commander: Auntie would die to them, so she is cast after. RULE 8, the wipes that spare most of our side, once an opponent has four creatures: Village Pillagers (1 wither damage to each opposing creature: with Auntie each is also a life lost), Soul Snuffers (a counter on every creature: our side draws a card each through Auntie, the other side's x/1s die and each opposing creature costs its controller a life), Midnight Banshee (a counter on each nonblack creature every upkeep; Auntie is black). Below the commander so turn 4 stays Auntie's. RULE 9, Carnifex Demon's {B} ability (a counter on every other creature), never used by either pilot, with Auntie out and an opponent wider than us with four or more. RULES 10-11, Liliana's -3 (destroy a creature with a -1/-1 counter: Forge picks it) and else her +2, since an unnamed planeswalker ability is also starved. RULE 13, Binding the Old Gods (chapter I destroys an opponent's nonland permanent) and Incremental Blight: Forge's own logic aims the Blight, so the rule casts them when Forge agrees; after the engines (rule 12). RULE 14, Skinrender while an opponent has a creature. RULE 15, Blowfly Infestation once an opponent has three creatures (the base's hold, released at two, stays). RULE 22, the threats before the draw spells while an opponent has more power than we have: the base drew while being attacked to death (hand of six on turn 8). RULE 24, Eventide's Shadow as a draw spell only with 40 cards left, 25 life and three cards or fewer in hand (it costs a life a counter; the base's hold stays). RULE 26, the base's threats with Liliana, Ferrafor, Aberrant Return, Midnight Banshee and Puppeteer Clique added: none of them was named by a rule. Not written: Fire Covenant (its X is paid in life, which a rule cannot set, and Forge's logic declined it every time it was offered in the local tables: 0 casts in 4 games drawn, so it was taken out of rule 13);  Vraska's -2 (Forge's targets; the base's +0 rule still takes her every turn), the instants (Infernal Grasp, Putrefy, Terminate, Assassin's Trophy, Cathartic Pyre are cast by Forge on other players' turns in 92-98% of games already). LOCAL CHECK (16 tables of bots, seeds 20263110 and 20263111, 8 each; the second on this file exactly, the first with Fire Covenant still in rule 13 and Carnifex's rule narrowed by an ability text): drawn/cast Black Sun's Zenith 5/5, Soul Snuffers 8/8, Midnight Banshee 8/6, Skinrender 9/8, Incremental Blight 8/6 (Forge aimed all three counters at opposing creatures each time), Village Pillagers 5/4, Chain Reaction 3/1, Binding the Old Gods 4/2, Aberrant Return 4/2, Carnifex Demon 8/4 (its ability fired twice, by rule 9, in the second run), Liliana 4/0 (seven mana, never affordable with her in hand), Eventide's Shadow 6/0, Fire Covenant 6/0. Chain Reaction killed 17 creatures in its one cast; Black Sun's Zenith 15 in one of a game the seat won. The seat won 6 of 16: too few games to mean anything. Shipped as version 2 on 2026-11-14 from ab-run #36: at 200 tables of bots (seed 20261310, opponents drawn from bots-v2 under their playbooks of 2026-11-13) 69 wins against its stock pilot's 45 (+12.0 points, 95% +4 to +20, exact test 0.0088) with the attack left to Forge, the better of the two attacks on these tables (the same rules won 66 with the go-wide attack). What it casts in a share of games 15 points or more below its stock pilot on the same tables, 16 cards: Eventide's Shadow (11 of 68 games drawn against 42 of 60), The Scorpion God (33 of 68 games drawn against 52 of 56), Carnifex Demon (29 of 64 games drawn against 41 of 50), Burning Curiosity (42 of 64 games drawn against 46 of 47), Hoarder's Greed (40 of 63 games drawn against 53 of 56), Wickerbough Elder (28 of 57 games drawn against 39 of 51), Archfiend of Ifnir (36 of 68 games drawn against 49 of 63), Dread Tiller (33 of 54 games drawn against 53 of 62) and 8 more. It casts 20 cards that much more often (demo-data/playtest/2026-11-14/second-pass/blight-curse-forgeattack-card-diff.txt). VERSION 3 CANDIDATE `threats` (2026-11-15). Version 2 with three rules moved above the rule for the engine pieces (Hapatra, Lasting Tarfire, Sinister Gnarlbark, Grave Venerations, Chimil, Vraska, Evolution Sage, Oft-Nabbed Goat, Puca's Covenant): the removal (Binding the Old Gods and Incremental Blight; Skinrender), then the rule for the twenty large creatures and permanents (Grave Titan to Dread Tiller). The same twenty cards' second rule, which held only while an opponent's board was stronger, is taken out: with the unconditional rule above it it could never be the first to fire. So the order is: mana, the wipes, the commander, the answers, the top of the curve, then the engine and the card draw with what mana is left. Why: version 2 casts nineteen cards fifteen points less often than its stock pilot at the owner's table, nearly all of them in that rule (50% of the games drawn against the stock pilot's 80% in ab-run #42), and loses holding 4.5 nonland cards; the `curve` candidate moved the rule above the draw spells only and changed next to nothing (51.9% against 48.6% on the same tables of ab-run #43, 35 wins each), which says the engine rules above it are what keeps those cards in hand. Whether casting them first wins more than the engine does is what this file is for: the `forge` rule's wait made the same kind of trade for the cards no rule names and won nothing by it (ab-run #41). Shipped as version 3 on 2026-11-15 from ab-run #44 (seed 20261370, the owner's table, opponents under their shipped playbooks of 2026-11-15): 39 wins of 200 against version 2's 37 on the same tables (+1.0 points, 95% -5 to +7, exact test 0.87): level. The nineteen cards version 2 cast less than its stock pilot are cast in 60.6% of the games they are drawn (633 of 1,045) against 50.4% (525 of 1,041), the stock pilot's 80%: Tree of Perdition 48 of 67 games against 30 of 62, Massacre Girl 40 of 57 against 26 of 52, The Scorpion God 35 of 60 against 21 of 54, Aberrant Return 42 of 65 against 27 of 60, Puppeteer Clique 40 of 64 against 27 of 63. What pays for it is the engine (Flourishing Defenses 11 of 48 against 30 of 45, Puca's Covenant 25 of 50 against 46 of 52, Chimil 14 of 46 against 30 of 45, Vraska 16 of 50 against 33 of 50, Grave Venerations 30 of 56 against 53 of 61, Evolution Sage 36 of 52 against 54 of 58, Sinister Gnarlbark 30 of 44 against 41 of 47) and Painful Truths (34 of 55 against 46 of 61). The removal is cast as before (Binding the Old Gods 49 of 60, Incremental Blight 45 of 59, Skinrender 53 of 62). The seat deals 18.4 damage a game against 16.4 and holds 4.3 nonland cards at a loss against 4.4. Fire Covenant is still never cast (0 of 51, in hand at 32 losses): its X is divided among targets, which a rule cannot do yet. The rule it was read by was fixed before the run: level with or ahead of the shipped arm, and those nineteen cards cast ten points more often. VERSION 4 (2026-11-21), the candidate `v4`: version 3 with what passed its exam, part by part. RULES: the cast rules of the candidate `engine` (rule 8 and rules 33 to 35 of this file); the cast rules of the candidate `covenant` (rules 13 to 14 of this file). HOOKS: after Forge's own attack has been declared, the attackers sent at a player are sent at the opponent that looks most dangerous instead, when that opponent is ahead of the one attacked by five or more and the attack is no worse there: the damage sure to get through whatever is blocked is at least what it was, no more creatures there could block the attackers, and no attacker meets a blocker that would destroy it unless it met one where it was sent (`\"aim\": \"danger\"`; an attack that is sure to kill its target stays, and which creatures attack is not changed); and then the creatures that stayed home attack an opponent that has no creature that can block, the most dangerous such opponent first: those that deal damage, have no ability that taps them (or have vigilance) and are not wanted home by Forge's own judgement of the seat's defence (`\"open\": true`; a weaker opponent is not killed this way while a more dangerous one lives); and then a sure kill is taken from the most dangerous opponent down (`\"finish\": \"leader\"`: enough attackers are put on the opponent that looks most dangerous that the damage reaches its life whatever it blocks, then on the next one, and no weaker opponent is killed while a more dangerous one lives); a triggered ability of the seat that removes one permanent of an opponent (destroys it, exiles it, returns it to hand or library) is aimed at the opponent that looks most dangerous, when that opponent looks more dangerous than the one Forge aimed at by five or more and has a permanent of the same kind worth at least as much as Forge's choice or at least 4 (`\"targets\": {\"triggers\": \"danger\"}`); when Forge's blocks leave at least the seat's life in damage unblocked and blocks exist that would not, blocks are added, the least valuable free creatures in front of the heaviest unblocked attackers and only as many as it takes for the seat to live (`\"block\": {\"survive\": true}`). FROM THE CANDIDATE `engine` (its rule numbers are those of its own file, playbook/variants/blight-curse-engine.json): WHY: three of the deck's permanents have an ability its pilot did not use once in the 200 games of ab-run #45's shipped arm (runner/hands.py abilities): Devoted Druid (put a -1/-1 counter on it: untap it; on the battlefield for 144 own turns), Nesting Grounds ({1}, tap: move a counter from target permanent you control onto another target permanent; 310 own turns) and Ifnir Deadlands ({2}{B}{B}, tap, sacrifice a Desert: two -1/-1 counters on target creature an opponent controls; 301 own turns). With Auntie Ool out a -1/-1 counter put on a creature of ours is a card and one put on an opponent's creature is a life. Forge's AI is told never to play the first two, and Nesting Grounds has two targets, which a rule could not name before harness 0.4.9. RULE 8, just below the commander: Devoted Druid's untap once a turn while Auntie Ool is on the battlefield (a card each time; the second counter kills the Druid unless it has been moved off). RULES 31 TO 33, after every other rule, so that they take only the mana that is left: Nesting Grounds moves a -1/-1 counter from a creature of ours onto a creature of the opponent that looks most dangerous which has one toughness left and is worth two or more (a kill), else onto that opponent's best creature worth three or more; and Ifnir Deadlands, with nine lands, at a creature of two toughness or less worth three or more. THE CREATURES WHOSE COUNTERS STAY (`own_except`, harness 0.4.10): the deck puts -1/-1 counters on some of its own creatures on purpose, and the rule leaves those alone: Tree of Perdition (an opponent's life is exchanged with its toughness), Oft-Nabbed Goat and Dusk Urchins (they pay out by the counter when they die), Grim Poppet, Carnifex Demon, Channeler Initiate and Wickerbough Elder (their counters are what their abilities spend). HOW THAT WAS LEARNT: a first candidate (`counters`, ab-run #53) had the four rules above the commander by a slip of the insertion point and no such list; on the three replayed tables where Nesting Grounds was the first thing to change the game, three games the shipped pilot had won were lost, one of them by taking the counters off Tree of Perdition before its exchange. LOCAL CHECK of this file: the twelve tables of ab-run #45 on which the three permanents were on the battlefield longest, replayed from their seed: Nesting Grounds used 9 times (from Auntie Ool four times, Ferrafor twice, The Reaper, Dread Tiller and a stolen Brontodon; onto commanders and the like), the Druid 11 times, Ifnir Deadlands never; Tree of Perdition's exchange and Carnifex Demon's ability as often as under the shipped playbook; nothing invalid. Six of the twelve won where the shipped pilot won eight (on the nine tables the seat's own change came first: five won by both, two lost by both, two won only by the shipped pilot): tables picked for long games, no measure of wins. FROM THE CANDIDATE `covenant` (its rule numbers are those of its own file, playbook/variants/blight-curse-covenant.json): WHY: Fire Covenant (pay X life, X damage divided as you choose among any number of target creatures; Forge's AI is told never to play it) was drawn in 55 of the 200 games of ab-run #45's shipped arm and cast in none, in hand at 36 losses: a dead card in a quarter of the deck's games. Its X is divided among targets, which a rule could not do before harness 0.4.6 (`divide`, playbook/README.md). RULE 12: up to three of the opponents' creatures worth four or more (mana value, or power when that is more), each given the damage that destroys it by Forge's own arithmetic, the set with the highest total rating that twelve life pays for, from the side of the opponent that looks most dangerous first and from the next one's with what is left; not for fewer than two, and never paid below eighteen life. RULE 13: else one creature worth five or more for at most six life, never below fifteen. Both sit above the other answers (Binding the Old Gods, Incremental Blight, Skinrender) and below the commander. LOCAL CHECK: the eight tables of ab-run #45 on which the seat held the card for the most own turns (9 to 17), replayed from their seed with this file: cast in seven, on the seat's own turn 5 to 7 (it had sat in hand to the end before), 58 life for 16 creatures (two targets five times, three twice; 4 to 12 life a cast), every one of which left the battlefield, five of them commanders; never cast on the eighth, where the opponents had no creature worth four while the seat's life was high and the seat was under the rules' life floors from its eighth turn on (14 life and less). One of the eight replayed again on the final build was the same game. Whether paying that life wins games is what the tables are for. SHIPPED 2026-11-21 as version 4. Every part passed its own exam beside version 3 on the same 200 tables at the owner's table (ab-run #46 to #55, seed 20261390; demo-data/ab/2026-11-21-ab-v25/, DESIGN.md section 35): wins of 200 where version 3 won 41: leader 40, aim 39, block 41, swing 44, open 44, covenant 42, engine 43. No two parts were played together; the version is at the tables beside version 3 in ab-run #57 (seed 20261410). VERSION 5 CANDIDATE `guard` (2026-11-21). Version 4 with one change: after Forge's own attack has been declared and the hooks the version already has have acted, attackers are taken back when the attack leaves the seat where the opponents one after another are sure to kill it before its next turn and keeping them home prevents that, or, when nothing kept home does, where one opponent alone is (`\"guard\": \"table\"`; a sure kill's attackers stay, and an attack stands when nothing kept home would save the seat). No cast or trigger rule is changed. VERSION 6 CANDIDATE `limit` (written 2026-11-21 on version 4, rebuilt 2026-11-22 on version 5). Version 5 (the guard arm of ab-run #57, which held by its rule and ships as version 5) with its trigger rule for Flourishing Defenses split in three; no cast rule and no hook is changed. WHY: versions 4 and 5 say yes to Flourishing Defenses' token every time (whenever a -1/-1 counter is put on a creature, you may create a 1/1 Elf Warrior) unless the library is nearly gone. With Blowfly Infestation out (whenever a creature dies with a -1/-1 counter on it, put a -1/-1 counter on target creature) and nothing else to aim at, the counter goes on a 1/1 token of ours, the token dies, the counter moves on and makes the next token, without end: one game of the 200 of ab-run #46's shipped arm went round 3,663 times and ended in a Forge exception. The tokens die as they are made, so no count of permanents stops it. THE RULES (harness 0.4.11, `per_turn`): yes at most 30 times in one turn, anybody's, then no until the next turn; thirty is more than any board the deck puts counters on at once. TRIED: that table of ab-run #46 replayed three times from the commit it was played from, under version 3 with these rules: two replays reached the chain (one of them the same game as the original up to that turn), said yes 30 times and no 26 and 40 times in that turn, and played on to a normal end ten turns later; the third parted from the original four turns earlier for no reason of the rule's and never met the chain. REBUILT ON VERSION 5 (2026-11-22): the candidate first stood on version 4 and was to be read beside ab-run #57's `blight-curse` arm; #57 let the guard stand, so the limit is tried on the version that ships, beside #57's `blight-curse@guard` arm on the same tables (seed 20261410, the opponents the next versions of 2026-11-21). The trigger rules are the ones replayed above. SHIPPED 2026-11-22 as version 6: the `limit` arm of ab-run #59 (seed 20261410, the tables of ab-run #57; demo-data/ab/2026-11-22-ab-v28/, DESIGN.md section 38). Beside version 5 (#57's guard arm) on the same 200 tables: 40 wins against 40, no discordant table, 191 games the same to the last event; the limit was reached on none of the 200 tables and no game of either arm ended without a winner. CANDIDATE react (harness 0.4.12, docs/agents/add_react.py): version 6 with Terminate, Infernal Grasp, Assassin's Trophy, Putrefy kept from Forge's AI and played by rules on other players' turns: at a creature attacking the seat when the attack ends its game through its best blocks and one removal changes that, or when one removal takes 6 damage or more away; otherwise in the end step before the seat's own turn at the most dangerous opponent's best permanent worth 3 or more that the spell can hit. From 3 lands the mana for one of them is kept through the seat's own turn while it has such a target.",
+  "on": "2026-11-22"
+ }
+}

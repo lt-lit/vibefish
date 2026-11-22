@@ -11,6 +11,7 @@ import java.util.Set;
 
 import forge.LobbyPlayer;
 import forge.ai.AiAttackController;
+import forge.ai.AiCardMemory;
 import forge.ai.AiPlayDecision;
 import forge.ai.ComputerUtil;
 import forge.ai.ComputerUtilAbility;
@@ -1508,7 +1509,33 @@ public class PlaybookController extends PlayerControllerAi {
                     return one;
                 }
             }
+            if (cast.hasReact && !ph.isPlayerTurn(player) && game.getStack().isEmpty()) {
+                // Another player's turn: the rules written for it (phase defend or end) go before Forge's choice.
+                String window = reactWindow(ph);
+                if (window != null) {
+                    releaseReserve();                   // the mana kept for this moment pays now
+                    countOnce("react_" + window + "_seen");
+                    SpellAbility pick = null;
+                    castRetargeted = false;
+                    try {
+                        pick = castByRule(cast, ph, false);
+                    } catch (RuntimeException e) {
+                        count("cast_errors", 1);
+                    }
+                    if (pick != null) {
+                        count("cast_policy", 1);
+                        count("cast_react", 1);
+                        count("cast_react_" + window, 1);
+                        List<SpellAbility> one = new ArrayList<>();
+                        one.add(pick);
+                        return one;
+                    }
+                }
+            }
             return forgeChoice(cast);
+        }
+        if (cast.hasReserve) {
+            applyReserve(cast, ph);                     // before anything is paid for this turn
         }
         List<SpellAbility> forge = null;
         boolean asked = false;
@@ -1879,7 +1906,7 @@ public class PlaybookController extends PlayerControllerAi {
         }
         List<Card> cards = castable();
         for (Playbook.CastRule rule : cast.rules) {
-            if (rule.isHold() || (beforeLandOnly && !rule.beforeLand) || !phaseFits(rule, ph) || !allHold(rule.when)) {
+            if (rule.isHold() || rule.isReserve() || (beforeLandOnly && !rule.beforeLand) || !phaseFits(rule, ph) || !allHold(rule.when)) {
                 continue;
             }
             if (rule.isKeep()) {
@@ -1965,7 +1992,14 @@ public class PlaybookController extends PlayerControllerAi {
                     castAimed = null;
                     castDivided = null;
                     castOwn = null;
+                    boolean wasReserved = c.getId() == reservedCard;
+                    if (wasReserved) {
+                        releaseReserve();               // a rule of the seat's own turn casts the card its mana was kept for
+                    }
                     SpellAbility sa = playable(c, target, rule);
+                    if (sa == null && wasReserved) {
+                        applyReserve(cast, ph);         // it did not: the mana is kept again
+                    }
                     if (sa != null) {
                         castPendingId = c.getId();
                         castPendingSpells = spells;
@@ -1986,6 +2020,13 @@ public class PlaybookController extends PlayerControllerAi {
     /** An aimed rule fired: counted, and whether the permanent it chose belongs to the opponent that looks most dangerous. */
     private void countAim(Playbook.CastRule rule) {
         if (rule.aim == null || castAimed == null) {
+            return;
+        }
+        if ("attacker".equals(rule.aim)) {
+            // A defend rule fired: whether the attack would have ended the seat's game, and the damage taken away.
+            count("cast_aim_attacker", 1);
+            count(reactLethal ? "react_lethal_answered" : "react_damage_answered", 1);
+            count("react_damage_taken_away", reactNow - reactLeft);
             return;
         }
         count("cast_aim", 1);
@@ -2026,6 +2067,11 @@ public class PlaybookController extends PlayerControllerAi {
     }
 
     private String aimText() {
+        if (castAimed != null && getGame().getPhaseHandler().getCombat() != null && !getGame().getPhaseHandler().isPlayerTurn(player)
+                && getGame().getPhaseHandler().getCombat().isAttacking(castAimed)) {
+            return " aimed at the attacking " + castAimed.getName() + " of " + castAimed.getController().getName() + " (" + reactNow
+                    + " damage through our best blocks, " + reactLeft + " once it is gone" + (reactLethal ? "; the attack was lethal" : "") + ")";
+        }
         return castAimed == null ? "" : " aimed at " + castAimed.getName() + " of " + castAimed.getController().getName()
                 + " (danger " + danger(castAimed.getController()) + ")" + (castDivided == null ? "" : ", " + castDivided);
     }
@@ -2039,16 +2085,204 @@ public class PlaybookController extends PlayerControllerAi {
         return false;
     }
 
-    private static boolean phaseFits(Playbook.CastRule rule, PhaseHandler ph) {
+    private boolean phaseFits(Playbook.CastRule rule, PhaseHandler ph) {
+        boolean own = ph.isPlayerTurn(player);
         switch (rule.phase) {
-            case "main": return ph.is(PhaseType.MAIN1) || ph.is(PhaseType.MAIN2);
-            case "main1": return ph.is(PhaseType.MAIN1);
-            case "main2": return ph.is(PhaseType.MAIN2);
-            case "attack": return ph.is(PhaseType.COMBAT_DECLARE_ATTACKERS);
-            case "blocks": return ph.is(PhaseType.COMBAT_DECLARE_BLOCKERS);
+            case "main": return own && (ph.is(PhaseType.MAIN1) || ph.is(PhaseType.MAIN2));
+            case "main1": return own && ph.is(PhaseType.MAIN1);
+            case "main2": return own && ph.is(PhaseType.MAIN2);
+            case "attack": return own && ph.is(PhaseType.COMBAT_DECLARE_ATTACKERS);
+            case "blocks": return own && ph.is(PhaseType.COMBAT_DECLARE_BLOCKERS);
+            case "defend": return "defend".equals(reactWindow(ph));
+            case "end": return "end".equals(reactWindow(ph));
             default: return false;
         }
     }
+
+    /**
+     * The moment of another player's turn a rule may act in, or null. {@code defend}: that player's attackers are
+     * declared and at least one creature attacks the seat itself. {@code end}: the end step of the turn after which
+     * the seat's own turn comes, the last moment a card kept through the table's turns can be used before the seat
+     * untaps. Both with the seat holding priority; the caller asks for an empty stack.
+     */
+    private String reactWindow(PhaseHandler ph) {
+        if (ph.isPlayerTurn(player)) {
+            return null;
+        }
+        if (ph.is(PhaseType.COMBAT_DECLARE_ATTACKERS)) {
+            Combat combat = ph.getCombat();
+            return combat != null && !combat.getAttackersOf(player).isEmpty() ? "defend" : null;
+        }
+        if (ph.is(PhaseType.END_OF_TURN)) {
+            return getGame().getNextPlayerAfter(ph.getPlayerTurn()) == player ? "end" : null;
+        }
+        return null;
+    }
+
+    private int reservedCard = -1;          // the card in hand whose mana a reserve rule keeps (-1: none)
+    private int reserveTurn = -1;           // the turn that reservation was made in
+    private int onceTurn = -1;
+    private final Set<String> onceKeys = new HashSet<>();
+
+    /** A counter that counts a thing once a game turn however often the seat is asked in it. */
+    private void countOnce(String key) {
+        int turn = getGame().getPhaseHandler().getTurn();
+        if (turn != onceTurn) {
+            onceTurn = turn;
+            onceKeys.clear();
+        }
+        if (onceKeys.add(key)) {
+            count(key, 1);
+        }
+    }
+
+    /**
+     * A reserve rule: while its conditions hold and one of its cards is in hand, the mana that card costs stays
+     * untapped through the seat's own turn, so that a rule for another player's turn can cast it. The bookkeeping is
+     * Forge's own ({@code AiController.reserveManaSources}: the mana sources it would pay with are remembered as held
+     * for an opponent's combat, and neither a rule's cast nor Forge's own choice pays with a held source), made once
+     * a turn at the seat's first decision in a main phase and again if it could not be made then. With an {@code aim}
+     * on the rule the mana is kept only while the card has a target of that aim on the table now.
+     */
+    private void applyReserve(Playbook.Cast cast, PhaseHandler ph) {
+        int turn = ph.getTurn();
+        if (reservedCard >= 0) {
+            boolean inHand = false;
+            for (Card c : player.getCardsIn(ZoneType.Hand)) {
+                inHand |= c.getId() == reservedCard;
+            }
+            if (inHand && reserveTurn == turn) {
+                return;                                 // kept already this turn
+            }
+            releaseReserve();                           // an earlier turn's, or the card has left the hand
+        }
+        for (Playbook.CastRule rule : cast.rules) {
+            if (!rule.isReserve() || !allHold(rule.when)) {
+                continue;
+            }
+            for (String name : rule.cards) {
+                for (Card c : player.getCardsIn(ZoneType.Hand)) {
+                    if (!c.getName().equals(name)) {
+                        continue;
+                    }
+                    SpellAbility sa = null;
+                    for (SpellAbility a : c.getAllPossibleAbilities(player, true)) {
+                        if (a.isSpell() && a.getAlternativeCost() == null) {
+                            sa = a;
+                            break;
+                        }
+                    }
+                    if (sa == null) {
+                        continue;
+                    }
+                    sa.setActivatingPlayer(player);
+                    if (rule.aim != null) {
+                        // The mana is kept only while the card has something to hit: the one part that takes a target says what is legal.
+                        SpellAbility part = null;
+                        int parts = 0;
+                        for (SpellAbility q = sa; q != null; q = q.getSubAbility()) {
+                            if (q.usesTargeting()) {
+                                part = q;
+                                parts++;
+                            }
+                        }
+                        if (parts != 1) {
+                            continue;
+                        }
+                        part.setActivatingPlayer(player);
+                        if (aimTarget(part, rule) == null) {
+                            countOnce("reserve_no_target");
+                            continue;
+                        }
+                    }
+                    if (getAi().reserveManaSources(sa, PhaseType.COMBAT_DECLARE_BLOCKERS, true)) {
+                        reservedCard = c.getId();
+                        reserveTurn = turn;
+                        countOnce("reserve_kept");
+                        trace("rule " + rule.index + " keeps the mana for " + name + " through this turn");
+                        return;
+                    }
+                    countOnce("reserve_short");         // not the mana for it (yet: the land drop may still come)
+                }
+            }
+        }
+    }
+
+    /** Gives the kept mana back: for the card itself to be paid for, or because it is no longer in hand. */
+    private void releaseReserve() {
+        if (reservedCard >= 0) {
+            AiCardMemory.clearMemorySet(player, AiCardMemory.MemorySet.HELD_MANA_SOURCES_FOR_ENEMY_DECLBLK);
+            reservedCard = -1;
+        }
+    }
+
+    /** The damage the creatures attacking the seat deal to it if it blocks as well as it can. */
+    private int damageThrough(List<Card> attackers, List<Card> blockers) {
+        return CombatMath.hits(attackers) - CombatMath.mostStopped(attackers, blockers, player, false);
+    }
+
+    /** Whether that attack ends the seat's game through its best blocks: its life, or a commander's twenty-first damage. */
+    private boolean lethalThrough(List<Card> attackers, List<Card> blockers, int through) {
+        return through >= player.getLife() || CombatMath.commanderOpen(attackers, blockers, player, false);
+    }
+
+    /**
+     * The creature attacking the seat that a defend rule removes: a legal target of the spell, and the one that
+     * leaves the least damage once it is gone and the seat blocks as well as it can. When the attack as it stands
+     * ends the seat's game, only an attacker whose removal changes that is taken: if none does, the spell is not
+     * spent on a game that is lost. When it does not, the attacker has to take at least {@code aim_min} damage with
+     * it (at least 1). Null when there is none.
+     */
+    private Card attackerTarget(SpellAbility part, Playbook.CastRule rule) {
+        Combat combat = getGame().getPhaseHandler().getCombat();
+        if (combat == null) {
+            return null;
+        }
+        List<Card> attackers = new ArrayList<>(combat.getAttackersOf(player));
+        if (attackers.isEmpty()) {
+            return null;
+        }
+        List<Card> blockers = CombatMath.ableBlockers(player);
+        int now = damageThrough(attackers, blockers);
+        boolean lethalNow = lethalThrough(attackers, blockers, now);
+        if (lethalNow) {
+            countOnce("react_lethal_seen");
+        }
+        boolean destroys = part.getApi() == ApiType.Destroy;
+        Card best = null;
+        int bestLeft = Integer.MAX_VALUE;
+        for (Card c : attackers) {
+            if ((destroys && c.hasKeyword(Keyword.INDESTRUCTIBLE)) || !part.canTarget(c)) {
+                continue;
+            }
+            if (rule.aimToughness > 0 && c.getNetToughness() > rule.aimToughness) {
+                continue;                               // the effect kills by a fixed amount: this one would live
+            }
+            List<Card> rest = new ArrayList<>(attackers);
+            rest.remove(c);
+            int left = damageThrough(rest, blockers);
+            if (lethalNow ? lethalThrough(rest, blockers, left) : now - left < Math.max(1, rule.aimMin)) {
+                continue;
+            }
+            if (best == null || left < bestLeft
+                    || (left == bestLeft && ComputerUtilCard.evaluateCreature(c) > ComputerUtilCard.evaluateCreature(best))) {
+                best = c;
+                bestLeft = left;
+            }
+        }
+        if (best != null) {
+            reactLethal = lethalNow;
+            reactLeft = bestLeft;
+            reactNow = now;
+        } else if (lethalNow) {
+            countOnce("react_lethal_hopeless");         // no one attacker's removal keeps the seat alive (or none is a legal target)
+        }
+        return best;
+    }
+
+    private boolean reactLethal;            // the last attacker a defend rule chose: the attack was lethal as it stood,
+    private int reactNow;                   // ... the damage through the seat's best blocks before
+    private int reactLeft;                  // ... and after it is gone
 
     /**
      * A way to cast the card now, or null: legal, affordable and aimed. With a target the spell is pointed at it and
@@ -2170,9 +2404,12 @@ public class PlaybookController extends PlayerControllerAi {
             part.setActivatingPlayer(player);
             castRetargeted = true;
             part.resetTargets();
-            target = aimTarget(part, rule);
+            boolean atAttacker = "attacker".equals(rule.aim);
+            target = atAttacker ? attackerTarget(part, rule) : aimTarget(part, rule);
             if (target == null) {
-                count("cast_aim_none", 1);
+                if (!atAttacker) {
+                    count("cast_aim_none", 1);
+                }
                 return false;
             }
             castAimed = target;
@@ -2566,6 +2803,7 @@ public class PlaybookController extends PlayerControllerAi {
             case "artifact": return c.isArtifact();
             case "enchantment": return c.isEnchantment();
             case "planeswalker": return c.isPlaneswalker();
+            case "attacker": return c.isCreature();
             default: return true;
         }
     }
@@ -2690,6 +2928,22 @@ public class PlaybookController extends PlayerControllerAi {
                     }
                 }
                 return n;
+            }
+            case "attacked":
+            case "incoming":
+            case "lethal": {                            // another player's attack on us: its creatures, its damage through our best blocks, whether that ends our game
+                PhaseHandler ph = getGame().getPhaseHandler();
+                Combat combat = ph.getCombat();
+                if (combat == null || ph.isPlayerTurn(player)) {
+                    return 0;
+                }
+                List<Card> attackers = new ArrayList<>(combat.getAttackersOf(player));
+                if ("attacked".equals(name) || attackers.isEmpty()) {
+                    return attackers.size();
+                }
+                List<Card> blockers = CombatMath.ableBlockers(player);
+                int through = damageThrough(attackers, blockers);
+                return "incoming".equals(name) ? through : lethalThrough(attackers, blockers, through) ? 1 : 0;
             }
             case "lands":
                 return player.getLandsInPlay().size();

@@ -208,7 +208,9 @@ without it Forge's own mulligan logic runs.
 The rules are read top to bottom every time the seat has priority in one of its own main phases with nothing on the
 stack, after Forge has made the turn's land drop. The first `play` or `activate` rule that has something to do does
 it, one spell or ability at a time; when none has, the choice is Forge's, minus whatever a `hold` rule keeps back.
-Outside the seat's own main phases only the holds apply.
+Outside the seat's own main phases only the holds apply, and the rules written for another moment: the seat's own
+combat (`"phase": "attack"` or `"blocks"`, harness 0.4.7) and two moments of another player's turn (`"phase":
+"defend"` or `"end"`, harness 0.4.12; below).
 
 **What the rules do not name comes last, unless a `forge` rule says where it comes.** A rule that has something to do
 always goes before Forge's own choice, and Forge's own choice is the only way a card no rule names is cast. A set of
@@ -328,6 +330,44 @@ option nothing changes for a playbook that was measured without it.
   rules otherwise spend the mana before the attack. `{"keep": "mana", "when": ["hand:mutation >= 1", "attackers >= 3",
   "mana >= 7"]}` above `{"play": ["Biomass Mutation"], "x": "max", "x_min": 4, "phase": "blocks",
   "when": ["unblocked >= 2"]}`. It takes only `when`. Counter: `cast_keep`.
+- Other players' turns (harness 0.4.12): `"phase": "defend"` and `"phase": "end"` on a `play` or `activate` rule, the
+  aim `"attacker"`, and the rule kind `reserve`. They are how a seat keeps an instant for the moment it is worth most
+  instead of casting it in its own main phase, which is where every other rule acts.
+  `"phase": "defend"`: the rule is read when another player has declared attackers, at least one creature attacks the
+  seat itself (not a planeswalker of its), the stack is empty and the seat has priority, so before blocks.
+  `"phase": "end"`: the rule is read in the end step of the turn after which the seat's own turn comes, with an empty
+  stack: the last moment a card kept through the table's turns can be used before the seat untaps.
+  `"aim": "attacker"` (on a `defend` rule): the spell's one target is a creature attacking the seat, chosen by the
+  harness: a legal target (not an indestructible one for a spell that destroys; `aim_toughness` as for any aim), and
+  the one that leaves the least damage once it is gone and the seat blocks as well as it can (the arithmetic of
+  `block.survive`: a trampler or a creature one blocker may not block counts as unstoppable, a commander's
+  twenty-first damage counts as the end). When the attack as it stands ends the seat's game, only an attacker whose
+  removal changes that is taken; when none does the rule does not fire, and the card is not spent on a lost game.
+  When the attack does not end its game, the attacker has to take at least `aim_min` damage away with it (at least
+  1). The conditions `attacked` (creatures attacking the seat), `incoming` (their damage through its best blocks) and
+  `lethal` (1 when that ends its game) are for these rules; all three are 0 outside another player's combat.
+  `{"reserve": [cards], "when": [...]}` is a rule of its own kind: on the seat's own turn, while every condition
+  holds and one of the cards is in hand, the mana that card costs is kept untapped through the turn (Forge's own
+  bookkeeping of held mana sources, `AiController.reserveManaSources`: neither a rule's cast nor Forge's own choice
+  pays with a held source), and given back when the seat reaches one of the two moments above, when a rule of its own
+  turn casts the card after all, or when the card leaves the hand. Without it a `defend` or `end` rule casts only with
+  what the seat's own turn happened to leave untapped. A reserve rule may carry an `aim` (with `aim_at`, `aim_min`,
+  `aim_toughness`, as on a play rule): the mana is then kept only while the card has a target of that aim on the table
+  now, so that nothing is kept for a card with nothing to hit.
+  A card named by a `defend` or `end` play rule, or by a `reserve` rule, has to be named by a `hold` rule as well
+  (checked when the file is read): Forge's AI casts an instant on the seat's own turn if it may, and the card would
+  be gone. A `play` rule for the main phase may still name it, for the target that cannot wait.
+  `{"hold": ["Terminate"]}`, `{"reserve": ["Terminate"], "aim": "permanent", "aim_min": 3, "when": ["lands >= 3"]}`,
+  `{"play": ["Terminate"], "phase": "defend", "aim": "attacker", "when": ["lethal == 1"]}`,
+  `{"play": ["Terminate"], "phase": "defend", "aim": "attacker", "aim_min": 6}`,
+  `{"play": ["Terminate"], "phase": "end", "aim": "permanent", "aim_min": 3}`.
+  Counters: `react_defend_seen`, `react_end_seen` (turns on which the seat reached the moment), `cast_react`,
+  `cast_react_defend`, `cast_react_end` (plays a rule made there), `cast_aim_attacker`, `react_lethal_answered` and
+  `react_damage_answered` (a defend rule fired at an attack that would, or would not, have ended the seat's game),
+  `react_damage_taken_away` (the damage those casts took away), `react_lethal_seen` and `react_lethal_hopeless`
+  (turns on which a defend rule with a card to cast met a lethal attack; those on which no one removal changed it),
+  `reserve_kept`, `reserve_short` and `reserve_no_target` (turns on which the mana was kept; on which it was not there
+  to keep; on which the card had nothing to hit).
 - `before_land` (play, activate): `true` tries the rule before the turn's land is played as well, while a land can still be played. The rules otherwise run after the land drop, since they all want the mana; a landfall deck wants its payoffs down first so the land triggers them (`{"play": ["Tatyova, Benthic Druid", "Scute Swarm"], "before_land": true}`). Counter: `cast_before_land`.
 - `x`, `x_min` (play, activate): for a spell with X in its cost that is not aimed by Forge (no targets, or the rule's own `target`). `"x": "max"` pays all the mana the rest of the cost leaves, `"x": 6` at most six, and the rule does not cast below `x_min` (default 1): `{"play": ["Hydroid Krasis"], "x": "max", "x_min": 4}`. Without `x` an X spell is cast only when Forge's own logic would cast it, with the X Forge picks; a rule that aims an X spell with `target` and names no `x` does not cast it. Since harness 0.3.4 `x` can also be a metric, and X is then that number: `"x": "opp_toughness"` sizes a wipe to the largest creature an opponent has. And an X that is paid in life (Toxic Deluge: "pay X life, all creatures get -X/-X") is the rule's to name the same way; the mana cap does not apply to it, `x_keep_life` (default 10) does: the rule never pays the seat below that much life. `{"play": ["Toxic Deluge"], "x": "opp_toughness", "x_min": 3, "x_keep_life": 12, "when": ["opp_creatures >= 6", "opp_power > power"]}`. A spell that divides its X among targets (Fire Covenant) takes `divide`, above.
 - `when` / `until`: a list of conditions, all of which must hold. A condition is text:
@@ -350,6 +390,7 @@ option nothing changes for a playbook that was measured without it.
 | `threat` | the most damage one opponent could attack us with next turn |
 | `opp_toughness` | the largest toughness among the opponents' creatures (also as an `x`) |
 | `attacking`, `unblocked` | our creatures in the current combat; those nobody blocked, once blocks are declared (both 0 outside our combat; for rules with a combat `phase`, harness 0.4.8) |
+| `attacked`, `incoming`, `lethal` | another player's attack on us: the creatures attacking us, their damage through our best blocks, and 1 when that ends our game (all 0 outside another player's combat; for rules with `"phase": "defend"`, harness 0.4.12) |
 | `hand:<group>` | cards in hand from a named list: `"cast": {"groups": {"zada_spells": ["Expedite", ...]}, "rules": [...]}`, then `"hand:zada_spells >= 1"` |
 
 A rule that names a card that is not in the deck, an unknown metric or a malformed condition stops the harness before

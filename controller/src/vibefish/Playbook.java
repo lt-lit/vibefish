@@ -149,7 +149,7 @@ public final class Playbook {
         /** Everything a comparison may be made on; anything else is a mistake in the file and stops the run. */
         public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
                 "storm", "drawn", "turn", "life", "mana", "opponents", "power", "opp_creatures", "opp_power", "opp_life",
-                "threat", "main", "opp_toughness", "attacking", "unblocked");
+                "threat", "main", "opp_toughness", "attacking", "unblocked", "attacked", "incoming", "lethal");
         private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
         private static final Pattern COMPARE = Pattern.compile(
                 "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");
@@ -270,13 +270,13 @@ public final class Playbook {
      * Without it the rules below spend in the first main phase the mana Forge would have used in the second.
      */
     public static final class CastRule {
-        public final String kind;           // play | activate | hold | forge
+        public final String kind;           // play | activate | hold | forge | keep | reserve
         public final List<String> cards;
         public final String target;         // play, activate
         public final String ability;        // activate, hold: text the ability's description contains (null: any of them)
         public final int times;             // play: casts of one card name a turn; activate: per permanent a turn (default 1)
         public final List<Cond> when;       // play, activate: when; hold: until
-        public final String phase;          // play, activate: main (either main phase) | main1 | main2
+        public final String phase;          // play, activate: main (either main phase) | main1 | main2 | attack | blocks (our own combat) | defend | end (another player's turn)
         public final boolean beforeLand;    // play, activate: tried before the turn's land is played (landfall first)
         public final int x;                 // play, activate: the most X the rule pays (-1: X is Forge's; "max": all the mana left)
         public final int xMin;              // ... and the least X worth casting for (default 1)
@@ -295,24 +295,32 @@ public final class Playbook {
         public final int index;             // 1-based position in the file, for the counters
 
         /** The kinds of permanent an aim can ask for. */
-        public static final List<String> AIM_KINDS = List.of("creature", "permanent", "noncreature", "artifact", "enchantment", "planeswalker");
+        public static final List<String> AIM_KINDS = List.of("creature", "permanent", "noncreature", "artifact", "enchantment", "planeswalker", "attacker");
 
         CastRule(JsonObject o, int index) {
             this.index = index;
             String k = null;
-            for (String candidate : List.of("play", "activate", "hold", "forge", "keep")) {
+            for (String candidate : List.of("play", "activate", "hold", "forge", "keep", "reserve")) {
                 if (o.has(candidate)) {
                     if (k != null) {
-                        throw new IllegalArgumentException("playbook cast rule " + index + " needs exactly one of \"play\", \"activate\", \"hold\", \"forge\" and \"keep\"");
+                        throw new IllegalArgumentException("playbook cast rule " + index + " needs exactly one of \"play\", \"activate\", \"hold\", \"forge\", \"keep\" and \"reserve\"");
                     }
                     k = candidate;
                 }
             }
             if (k == null) {
-                throw new IllegalArgumentException("playbook cast rule " + index + " needs one of \"play\", \"activate\", \"hold\", \"forge\" and \"keep\"");
+                throw new IllegalArgumentException("playbook cast rule " + index + " needs one of \"play\", \"activate\", \"hold\", \"forge\", \"keep\" and \"reserve\"");
             }
             kind = k;
-            boolean hold = "hold".equals(kind);
+            boolean reserve = "reserve".equals(kind);
+            if (reserve) {
+                for (String key : List.of("target", "ability", "times", "x", "x_min", "before_land", "until", "divide", "divide_min", "target_player", "own", "wait", "phase", "own_except")) {
+                    if (o.has(key)) {
+                        throw new IllegalArgumentException("playbook cast rule " + index + ": a reserve rule takes only its cards, \"when\", and an \"aim\" (with \"aim_at\", \"aim_min\", \"aim_toughness\") that has to have a target for the mana to be kept");
+                    }
+                }
+            }
+            boolean hold = "hold".equals(kind) || reserve;         // a reserve rule is parsed like a hold rule: cards, and conditions of its own
             boolean keep = "keep".equals(kind);
             boolean forge = "forge".equals(kind) || keep;      // a keep rule is parsed like a forge rule: no cards, only conditions
             if (keep) {
@@ -345,7 +353,7 @@ public final class Playbook {
                 throw new IllegalArgumentException("playbook cast rule " + index + " names no cards");
             }
             target = hold ? null : str(o, "target", null);
-            aim = hold || forge ? null : str(o, "aim", null);
+            aim = (hold && !reserve) || forge ? null : str(o, "aim", null);
             aimAt = str(o, "aim_at", "danger");
             aimMin = num(o, "aim_min", 0);
             aimToughness = num(o, "aim_toughness", 0);
@@ -353,6 +361,9 @@ public final class Playbook {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": only a play or activate rule takes \"aim\", and \"aim_at\", \"aim_min\" and \"aim_toughness\" need it");
             }
             if (aim != null) {
+                if ("attacker".equals(aim) && (reserve || !"defend".equals(str(o, "phase", "main")) || o.has("divide") || o.has("aim_at"))) {
+                    throw new IllegalArgumentException("playbook cast rule " + index + ": aim \"attacker\" (a creature attacking the seat) needs \"phase\": \"defend\" and takes no \"divide\" or \"aim_at\"");
+                }
                 if (!AIM_KINDS.contains(aim)) {
                     throw new IllegalArgumentException("playbook cast rule " + index + ": aim must be one of " + AIM_KINDS + " (an opponent's permanent of that kind)");
                 }
@@ -405,18 +416,21 @@ public final class Playbook {
             if (hold && (o.has("x") || o.has("x_min") || o.has("before_land"))) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": a hold rule takes no \"x\", \"x_min\" or \"before_land\"");
             }
-            if (!hold && !List.of("main", "main1", "main2", "attack", "blocks").contains(phase)) {
-                throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1, main2, attack or blocks");
+            if (!hold && !List.of("main", "main1", "main2", "attack", "blocks", "defend", "end").contains(phase)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": phase must be main, main1, main2, attack, blocks, defend or end");
             }
-            if (forge && isCombat()) {
+            if (forge && (isCombat() || isReact())) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": a forge or keep rule is for the main phases");
             }
+            if (isReact() && (beforeLand || own != null)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": a rule for another player's turn takes no \"before_land\" or \"own\"");
+            }
             List<Cond> conds = new ArrayList<>();
-            for (String c : strings(o.get(hold ? "until" : "when"))) {
+            for (String c : strings(o.get(hold && !reserve ? "until" : "when"))) {
                 conds.add(new Cond(c));
             }
             when = Collections.unmodifiableList(conds);
-            if (hold && (o.has("when") || o.has("target"))) {
+            if (hold && !reserve && (o.has("when") || o.has("target"))) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": a hold rule takes \"until\", not \"when\" or \"target\"");
             }
             if (!hold && o.has("until")) {
@@ -434,6 +448,16 @@ public final class Playbook {
 
         public boolean isHold() {
             return "hold".equals(kind);
+        }
+
+        /** A rule that keeps the mana for one of its cards untapped through the seat's own turn while its conditions hold and the card is in hand. */
+        public boolean isReserve() {
+            return "reserve".equals(kind);
+        }
+
+        /** A rule for another player's turn: when the seat is attacked ({@code defend}), or in the end step before its own turn ({@code end}). */
+        public boolean isReact() {
+            return "defend".equals(phase) || "end".equals(phase);
         }
 
         public boolean isForge() {
@@ -459,6 +483,8 @@ public final class Playbook {
         public final JsonObject source;     // as written, recorded in run.json
         public final boolean hasBeforeLand; // some rule is tried before the land drop
         public final boolean hasCombat;     // some rule acts in the seat's own combat (phase attack or blocks)
+        public final boolean hasReact;      // some rule acts on another player's turn (phase defend or end)
+        public final boolean hasReserve;    // some rule keeps mana for a card through the seat's own turn
         public final int dangerLife;        // how dangerous an opponent looks: this times its life ...
         public final int dangerPermanents;  // ... plus this times its nonland permanents (an aim reads it; DESIGN.md section 33)
 
@@ -494,6 +520,28 @@ public final class Playbook {
                 fight |= !rule.isHold() && rule.isCombat();
             }
             hasCombat = fight;
+            boolean react = false, keeps = false;
+            java.util.Set<String> held = new java.util.HashSet<>();
+            for (CastRule rule : rules) {
+                react |= !rule.isHold() && !rule.isReserve() && rule.isReact();
+                keeps |= rule.isReserve();
+                if (rule.isHold() && rule.ability == null) {
+                    held.addAll(rule.cards);
+                }
+            }
+            hasReact = react;
+            hasReserve = keeps;
+            for (CastRule rule : rules) {
+                // Forge's AI casts an instant in the seat's own turn if it may: a card kept for another player's turn has to
+                // be kept from Forge too, or the rule that waits for it finds the hand empty. A typo must not undo that quietly.
+                if ((rule.isPlay() && rule.isReact()) || rule.isReserve()) {
+                    for (String name : rule.cards) {
+                        if (!held.contains(name)) {
+                            throw new IllegalArgumentException("playbook cast rule " + rule.index + ": " + name + " is kept for another player's turn and needs a hold rule (\"hold\": [\"" + name + "\"]), or Forge's AI casts it first");
+                        }
+                    }
+                }
+            }
             for (CastRule rule : rules) {
                 for (Cond c : rule.when) {
                     if (c.group() != null && !groups.containsKey(c.group())) {
@@ -679,6 +727,13 @@ public final class Playbook {
                 holds += r.isHold() ? 1 : 0;
             }
             sb.append(" cast=").append(plays).append(" play, ").append(activations).append(" activate, ").append(holds).append(" hold rule(s)");
+            if (cast.hasReact) {
+                int reacts = 0;
+                for (CastRule r : cast.rules) {
+                    reacts += !r.isHold() && !r.isReserve() && r.isReact() ? 1 : 0;
+                }
+                sb.append(", ").append(reacts).append(" for another player's turn").append(cast.hasReserve ? " (mana kept for them)" : "");
+            }
             int aims = 0;
             for (CastRule r : cast.rules) {
                 aims += r.aim != null ? 1 : 0;
