@@ -1,0 +1,834 @@
+{
+ "kind": "mistakes",
+ "games": 2000,
+ "games_without_combat_lines": 0,
+ "arm": null,
+ "by_deck": false,
+ "deck": null,
+ "groups": {
+  "bot": {
+   "seat_games": 8000,
+   "turns_able": 50266,
+   "turns_attacked": 32311,
+   "power_able": 512765,
+   "power_sent": 318141,
+   "kill_turns": 6279,
+   "kill_taken": 3817,
+   "kill_other": 171,
+   "kill_missed": 2291,
+   "kill_missed_no_attack": 1964,
+   "kill_missed_short": 327,
+   "kill_missed_then_lost": 1456,
+   "kill_missed_then_won": 835,
+   "kill_last_turns": 1277,
+   "kill_last_missed": 51,
+   "kill_top_turns": 1298,
+   "kill_top_missed": 57,
+   "kill_lesser_turns": 3704,
+   "kill_lesser_missed": 2183,
+   "open_turns": 20577,
+   "open_attacked": 10891,
+   "open_elsewhere": 5620,
+   "attacked_lethal": 4505,
+   "combat_deaths": 4370,
+   "block_not_made": 19,
+   "died_tapped_out": 745,
+   "commander_deaths": 273,
+   "kill_limited_turns": 0,
+   "deaths_block_limited": 0
+  }
+ },
+ "kills_not_taken": [
+  {
+   "where": "ab-blight-curse/arm-playbook/g0001/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 2,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 11,
+     "blockers": 5,
+     "through": 11
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0002/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 13,
+     "power": 30,
+     "blockers": 2,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0004/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 2,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 29,
+     "power": 34,
+     "blockers": 0,
+     "through": 34
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0004/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 3,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 2,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0005/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 1,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 15,
+     "power": 22,
+     "blockers": 3,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0005/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 3,
+   "deck": "deadly-disguise",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 4,
+     "power": 11,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0009/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 3,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 4,
+     "power": 11,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0009/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 3,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 6,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0011/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 1,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 10,
+     "power": 18,
+     "blockers": 8,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0012/games/game-001.events.jsonl",
+   "t": 21,
+   "seat": 1,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 22,
+     "power": 22,
+     "blockers": 0,
+     "through": 22
+    },
+    {
+     "seat": 3,
+     "life": 15,
+     "power": 22,
+     "blockers": 0,
+     "through": 22
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0013/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 0,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 3,
+     "power": 11,
+     "blockers": 1,
+     "through": 7
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0014/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 2,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "3": 1,
+    "1": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0015/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 1,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 12,
+     "blockers": 2,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "3": 7
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0015/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 3,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 23,
+     "blockers": 3,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0015/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 10,
+     "blockers": 3,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "3": 2
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0016/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 3,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0017/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "deadly-disguise",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 4,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0017/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 3,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 17,
+     "power": 23,
+     "blockers": 0,
+     "through": 23
+    },
+    {
+     "seat": 1,
+     "life": 4,
+     "power": 23,
+     "blockers": 0,
+     "through": 23
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 3,
+   "deck": "blood-rites",
+   "stood": "top",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 34,
+     "power": 65,
+     "blockers": 3,
+     "through": 42
+    },
+    {
+     "seat": 1,
+     "life": 17,
+     "power": 67,
+     "blockers": 2,
+     "through": 52
+    }
+   ],
+   "attacked": {
+    "0": 9,
+    "1": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0018/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 0,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 17,
+     "blockers": 2,
+     "through": 14
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0020/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 2,
+   "deck": "deadly-disguise",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0021/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 3,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 24,
+     "blockers": 2,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0023/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 2,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    },
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0026/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 2,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 13,
+     "blockers": 1,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "1": 6
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0026/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 2,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 5,
+     "power": 16,
+     "blockers": 3,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "3": 1,
+    "0": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0026/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 0,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 3,
+     "power": 8,
+     "blockers": 3,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0029/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 0,
+   "deck": "blight-curse",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 3,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0030/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 0,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 2,
+     "power": 7,
+     "blockers": 1,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0030/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 5,
+     "power": 9,
+     "blockers": 1,
+     "through": 5
+    }
+   ],
+   "attacked": {
+    "3": 1,
+    "0": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0031/games/game-001.events.jsonl",
+   "t": 54,
+   "seat": 3,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 16,
+     "power": 16,
+     "blockers": 0,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "1": 2,
+    "2": 1
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0034/games/game-001.events.jsonl",
+   "t": 61,
+   "seat": 0,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 26,
+     "blockers": 2,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0037/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 3,
+   "deck": "squirreled-away",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 16,
+     "power": 28,
+     "blockers": 2,
+     "through": 22
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0039/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 3,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 10,
+     "power": 26,
+     "blockers": 2,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 12,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 6,
+     "power": 13,
+     "blockers": 1,
+     "through": 8
+    },
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 13,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0041/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 2,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 17,
+     "blockers": 2,
+     "through": 7
+    },
+    {
+     "seat": 1,
+     "life": 4,
+     "power": 17,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0043/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 3,
+   "deck": "deadly-disguise",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 20,
+     "power": 20,
+     "blockers": 2,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0043/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 0,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 20,
+     "power": 34,
+     "blockers": 2,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0044/games/game-001.events.jsonl",
+   "t": 17,
+   "seat": 1,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 14,
+     "power": 21,
+     "blockers": 0,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "ab-blight-curse/arm-playbook/g0047/games/game-001.events.jsonl",
+   "t": 57,
+   "seat": 1,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 14,
+     "power": 29,
+     "blockers": 1,
+     "through": 22
+    }
+   ],
+   "attacked": {}
+  }
+ ],
+ "run": "ab-run #57 (run id 44934245433, commit 473a1b1, harness 0.4.10, seed 20261410): the ten next-version arms, 200 tables a deck at the owner's table, every seat under its next version of 2026-11-21 (the hooks on what was Forge's; no guard)",
+ "counted": "2026-11-22, runner/mistakes.py as of that day on logs of harness 0.4.10 (trample and a commander's damage in the block count)"
+}

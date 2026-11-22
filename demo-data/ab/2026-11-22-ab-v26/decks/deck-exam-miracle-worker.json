@@ -1,0 +1,34 @@
+{
+ "kind": "deck-exam",
+ "deck": "miracle-worker",
+ "tables": 200,
+ "only_candidate": 26,
+ "only_shipped": 21,
+ "both": 20,
+ "exact_p": 0.5601,
+ "shipped": {
+  "games": 200,
+  "wins": 41,
+  "turns": 8926,
+  "counter trigger_decisions": 9216,
+  "counter trigger_accepted": 9216,
+  "counter trigger_rule_2": 9083,
+  "counter trigger_rule_1": 133
+ },
+ "candidate": {
+  "games": 200,
+  "wins": 46,
+  "turns": 8834,
+  "counter trigger_decisions": 1163,
+  "counter trigger_accepted": 670,
+  "counter trigger_rule_4": 118,
+  "counter trigger_rule_2": 425,
+  "counter trigger_declined": 493,
+  "counter trigger_rule_3": 493,
+  "counter trigger_aim_seen": 143,
+  "counter trigger_aim_already": 107,
+  "counter trigger_aim_kept": 7,
+  "counter trigger_aim_moved": 29,
+  "counter trigger_rule_1": 127
+ }
+}

@@ -1,6 +1,9 @@
 {
-  "requested": "2026-11-22T02:31Z",
-  "note": "ab-run #59, two requests. (1) The hooks on the pool's twelve (DESIGN \u00a735, \u00a736): each deck of runner/leagues/bots-v2.json with the four hooks that held at the owner's table (playbook/variants/<deck>-hooks.json: the leader's kill, the attack aimed, the removal triggers aimed, the blocks that keep the seat alive) and with free damage as well (<deck>-hooksopen.json), on the tables of ab-run #58 (seed 20261400), whose arms are the same decks under their shipped playbooks; opponents drawn from the other eleven under their shipped playbooks, which have not changed since #58. With them eldrazi-incursion@limit: the shipped playbook with its commander's copy trigger paid for at most three times a turn, for the endless chain that left 14 of #58's 2,400 games without a winner. (2) blight-curse@limit on the tables of ab-run #57 (seed 20261410, the owner's table, opponents the next versions of 2026-11-21): version 5 (#57's guard arm) with Flourishing Defenses' token accepted at most thirty times a turn, beside that guard arm. The rules all of it is read by are in CLAUDE.md (In flight), fixed before this was queued. Playbook arms only; 5,200 games in 130 shard jobs.",
+  "requested": "2026-11-22T02:44Z",
+  "note": "ab-run #60: the six decks of the owner's table that lack a hook, each under its guard arm of ab-run #57 plus what it was left without on 2026-11-21 (playbook/variants/<deck>-full.json): Blood Rites and Miracle Worker with the blocks that keep the seat alive; Deadly Disguise, Squirreled Away and Veloci-Ramp-Tor with free damage; Revenant Recon with free damage and its removal triggers aimed. The hooks were left out by \"behind by more than two tables of 200\", which DESIGN \u00a735 found close to a coin for a part worth nothing; none of the seven exclusions is behind beyond noise by itself, and #57 has shown the hooks acting together and the guard holding. On #57's tables (seed 20261410), opponents drawn from the other nine of runner/leagues/owners-table-v1.json under the next versions #57 played against (this commit still has them; the guard versions ship in the commit after), so each arm pairs with #57's guard arm. The rule it is read by is in CLAUDE.md (In flight), fixed before this was queued. Playbook arms only; 1,200 games in 30 shard jobs. The request before this one, ab-run #59 (run id 44976505627, commit b12112e), is the hooks on the pool's twelve and the two limits on endless chains.",
+  "decks": "blood-rites@full,miracle-worker@full,deadly-disguise@full,squirreled-away@full,veloci-ramp-tor@full,revenant-recon@full",
+  "seed": "20261410",
+  "pool": "runner/leagues/owners-table-v1.json",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "5",
@@ -8,17 +11,5 @@
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
-  "opponent_playbooks": true,
-  "runs": [
-    {
-      "decks": "goblin-storm@hooks,goblin-storm@hooksopen,token-triumph@hooks,token-triumph@hooksopen,hail-caesar@hooks,hail-caesar@hooksopen,tricky-terrain@hooks,tricky-terrain@hooksopen,deep-clue-sea@hooks,deep-clue-sea@hooksopen,planeswalker-party@hooks,planeswalker-party@hooksopen,limit-break@hooks,limit-break@hooksopen,elven-council@hooks,elven-council@hooksopen,quick-draw@hooks,quick-draw@hooksopen,wretched-ranks@hooks,wretched-ranks@hooksopen,eldrazi-incursion@hooks,eldrazi-incursion@hooksopen,enduring-enchantments@hooks,enduring-enchantments@hooksopen,eldrazi-incursion@limit",
-      "seed": "20261400",
-      "pool": "runner/leagues/bots-v2.json"
-    },
-    {
-      "decks": "blight-curse@limit",
-      "seed": "20261410",
-      "pool": "runner/leagues/owners-table-v1.json"
-    }
-  ]
+  "opponent_playbooks": true
 }

@@ -1,0 +1,60 @@
+{
+ "kind": "attack-danger",
+ "games": 2000,
+ "arm": null,
+ "deck": null,
+ "counts": {
+  "3 declarations": 23443,
+  "3 attackers": 49085,
+  "3 at_top": 28669,
+  "3 all_at_top": 13654,
+  "3 none_at_top": 8763,
+  "3 attackers_seat_lost": 30498,
+  "3 at_winner": 8697,
+  "else declarations": 10033,
+  "else attackers": 22459,
+  "else gap 5-9": 2051,
+  "else attacked_lower_life": 7867,
+  "else attacked_lowest_life": 6124,
+  "else top_no_blocker": 1249,
+  "else top_fewer_blockers": 2390,
+  "else top_as_many_blockers": 2001,
+  "else top_more_blockers": 5642,
+  "else sure_at_top_at_least": 4431,
+  "else sure_at_top_at_least gap5": 1541,
+  "else gap 10-19": 1964,
+  "2 declarations": 4475,
+  "2 attackers": 16584,
+  "2 at_top": 10832,
+  "2 all_at_top": 2730,
+  "2 none_at_top": 1270,
+  "2 attackers_seat_lost": 5442,
+  "2 at_winner": 1971,
+  "else gap 1-4": 4786,
+  "ties": 2851,
+  "else gap 20+": 1232
+ },
+ "by_round": {
+  "1-4": {
+   "attackers": 3961,
+   "at_top": 2562,
+   "chance": 1320.333333333322
+  },
+  "5-8": {
+   "attackers": 33691,
+   "at_top": 20529,
+   "chance": 11744.666666667054
+  },
+  "9-12": {
+   "attackers": 23619,
+   "at_top": 13657,
+   "chance": 9608.333333333327
+  },
+  "13+": {
+   "attackers": 4398,
+   "at_top": 2753,
+   "chance": 1980.3333333333271
+  }
+ },
+ "run": "ab-run #57 (run id 44934245433, commit 473a1b1, harness 0.4.10, seed 20261410): the ten next-version arms, 200 tables a deck at the owner's table, every seat under its next version of 2026-11-21 (the hooks on what was Forge's; no guard)"
+}
