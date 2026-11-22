@@ -375,8 +375,8 @@ Two Actions runs, both at the pool's tables. Each rule below was fixed before it
 
 | Run | Run id | Seed and table | What plays | What it decides |
 |---|---|---|---|---|
-| `ab-run` #62 | RUNID62 | 20261450 on `bots-v2`; opponents the pool as shipped on 2026-11-22 (seven decks with the hooks and free damage, five without a hook) | the five pool decks without a hook (Token Triumph, Hail, Caesar, Tricky Terrain, Planeswalker Party, Elven Council): `deck`, `deck@hooks`, `deck@hooksopen`; 3,000 games in 75 shard jobs | whether the five get the four hooks, and free damage |
-| `ab-run` #63 | RUNID63 | the same seed and pool | the seven pool decks that shipped on 2026-11-22 (Goblin Storm, Deep Clue Sea, Limit Break, Quick Draw, Wretched Ranks, Eldrazi Incursion, Enduring Enchantments): `deck@before`, `deck`, `deck@guard`; 4,200 games in 105 shard jobs | whether their versions stand on tables that chose nothing; the guard at the pool |
+| `ab-run` #62 | 45015552254 (commit 71b465c, queued 2026-11-22 11:05 UTC) | 20261450 on `bots-v2`; opponents the pool as shipped on 2026-11-22 (seven decks with the hooks and free damage, five without a hook) | the five pool decks without a hook (Token Triumph, Hail, Caesar, Tricky Terrain, Planeswalker Party, Elven Council): `deck`, `deck@hooks`, `deck@hooksopen`; 3,000 games in 75 shard jobs | whether the five get the four hooks, and free damage |
+| `ab-run` #63 | 45015581613 (commit 985e544, queued 2026-11-22 11:05 UTC) | the same seed and pool | the seven pool decks that shipped on 2026-11-22 (Goblin Storm, Deep Clue Sea, Limit Break, Quick Draw, Wretched Ranks, Eldrazi Incursion, Enduring Enchantments): `deck@before`, `deck`, `deck@guard`; 4,200 games in 105 shard jobs | whether their versions stand on tables that chose nothing; the guard at the pool |
 
 Together 180 shard jobs: about eight hours at the pace of 2026-11-22. A check-in of the session that queued them is scheduled (it collects what is complete and schedules the next).
 
