@@ -23,6 +23,7 @@ import argparse, collections, json, math, os, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MK = ('kill_turns', 'kill_missed', 'kill_last_turns', 'kill_last_missed', 'kill_top_turns', 'kill_top_missed', 'kill_lesser_turns', 'kill_lesser_missed',
+      'kill_last_no_attack', 'kill_top_no_attack', 'kill_lesser_no_attack', 'kill_limited_turns', 'deaths_block_limited',
       'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths', 'turns_able', 'turns_attacked', 'power_able', 'power_sent',
       'open_turns', 'open_attacked', 'open_elsewhere')
 HOOKS = ('attack_kill', 'attack_guard', 'attack_aim', 'attack_open', 'trigger_aim', 'block_')

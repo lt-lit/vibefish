@@ -1,0 +1,60 @@
+{
+ "kind": "attack-danger",
+ "games": 504,
+ "arm": null,
+ "deck": null,
+ "counts": {
+  "3 declarations": 6213,
+  "3 attackers": 12923,
+  "3 at_top": 7198,
+  "3 all_at_top": 3405,
+  "3 none_at_top": 2453,
+  "3 attackers_seat_lost": 7985,
+  "3 at_winner": 2241,
+  "else declarations": 2766,
+  "else attackers": 6130,
+  "else gap 1-4": 1268,
+  "else attacked_lower_life": 2101,
+  "else attacked_lowest_life": 1622,
+  "else top_no_blocker": 282,
+  "else top_fewer_blockers": 582,
+  "else top_as_many_blockers": 498,
+  "else top_more_blockers": 1686,
+  "else sure_at_top_at_least": 1108,
+  "else sure_at_top_at_least gap5": 419,
+  "else gap 5-9": 559,
+  "else gap 20+": 396,
+  "2 declarations": 1189,
+  "2 attackers": 4768,
+  "2 at_top": 3029,
+  "2 all_at_top": 733,
+  "2 none_at_top": 313,
+  "2 attackers_seat_lost": 1665,
+  "2 at_winner": 657,
+  "ties": 737,
+  "else gap 10-19": 543
+ },
+ "by_round": {
+  "1-4": {
+   "attackers": 1225,
+   "at_top": 721,
+   "chance": 409.49999999999665
+  },
+  "5-8": {
+   "attackers": 8615,
+   "at_top": 5035,
+   "chance": 3001.3333333333703
+  },
+  "9-12": {
+   "attackers": 6481,
+   "at_top": 3636,
+   "chance": 2659.6666666666715
+  },
+  "13+": {
+   "attackers": 1370,
+   "at_top": 835,
+   "chance": 621.1666666666666
+  }
+ },
+ "run": "league-run #5 (run id 45003916677, commit fd0401e, harness 0.4.11, seed 20261430): the league of the owner's table, 63 cycles, 504 games, every seat under its version shipped on 2026-11-22 (all six hooks in every seat: the leader's kill, the aim, free damage, the guard, the removal triggers aimed, the blocks)"
+}

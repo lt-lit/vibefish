@@ -25,6 +25,11 @@ What is counted, per seat:
                      nonland permanents among the opponents alive), or a less dangerous one while a more dangerous
                      one lived. A miss of the first two is a mistake. The third is not: at 2,000 tables a seat that
                      took every such kill lost more games than the same seat leaving the weaker opponent alive.
+                     A miss has two parts, and `kill_<where>_no_attack` counts the first: the seat sent nothing at
+                     that opponent, or it went for the kill and the opponent was not out at the end of the turn
+                     (too little sent, or the kill stopped by a trick, a fog, life gained, a blocker made in
+                     response). The second part is a floor no attack hook moves: on the pool of twelve it was 27
+                     to 29 turns in every arm, with the hooks and without (DESIGN.md §38).
                      Set aside, and in none of these counts: a turn on which a permanent limits how many creatures
                      may attack (Silent Arbiter and the like, ATTACK_LIMITS below). The `combat` line's `through`
                      does not know the limit, so its sure kill is not one; such turns are counted as
@@ -81,6 +86,7 @@ def run_files(roots, arm):
 KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent',
         'kill_turns', 'kill_taken', 'kill_other', 'kill_missed', 'kill_missed_no_attack', 'kill_missed_short', 'kill_missed_then_lost', 'kill_missed_then_won',
         'kill_last_turns', 'kill_last_missed', 'kill_top_turns', 'kill_top_missed', 'kill_lesser_turns', 'kill_lesser_missed',
+        'kill_last_no_attack', 'kill_top_no_attack', 'kill_lesser_no_attack',
         'open_turns', 'open_attacked', 'open_elsewhere',
         'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths',
         'kill_limited_turns', 'deaths_block_limited')
@@ -152,6 +158,8 @@ def close_turn(G, label, turn, lost_at, examples, where):
                 g[f'kill_{stood}_missed'] += 1
                 attacked = any(turn['attacks'].get(d['seat']) for d in killable)
                 g['kill_missed_short' if attacked else 'kill_missed_no_attack'] += 1
+                if not attacked:
+                    g[f'kill_{stood}_no_attack'] += 1    # not gone for at all: the part of a miss that is the seat's choice
                 turn['missed'] = True
                 if len(examples) < 400:
                     examples.append({'where': where, 't': turn['t'], 'seat': a, 'deck': label(a), 'stood': stood,
@@ -295,6 +303,8 @@ def render(G, games, old, examples, show):
                    f'{g["kill_top_turns"]:>15} {g["kill_top_missed"]:>7} {pct(g["kill_top_missed"], g["kill_top_turns"]):>6}   '
                    f'{g["kill_lesser_turns"]:>13} {g["kill_lesser_missed"]:>7} {pct(g["kill_lesser_missed"], g["kill_lesser_turns"]):>6}   '
                    + (f'{(g["kill_last_missed"] + g["kill_top_missed"]) / g["seat_games"]:.3f}' if g['seat_games'] else ''))
+    out += ['  of the misses, not gone for at all (nothing sent at that opponent): '
+            + '; '.join(f'{n} last {G[n]["kill_last_no_attack"]}, most dangerous {G[n]["kill_top_no_attack"]}, lesser {G[n]["kill_lesser_no_attack"]}' for n in names)]
     out += ['', 'BLOCKS: attacks that left at least the seat\'s life unblocked; the seat lost that turn; of those, its creatures could have blocked enough to live;',
             '        and those no block could stop that its own tapped creatures would have, had they stayed home; deaths on a turn a commander\'s damage reached 21',
             '        (in logs before harness 0.4.3 those are in neither of the two columns before: whether that commander could have been blocked is not known)',

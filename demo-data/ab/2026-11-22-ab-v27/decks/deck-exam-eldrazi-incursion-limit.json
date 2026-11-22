@@ -1,0 +1,30 @@
+{
+ "kind": "deck-exam",
+ "deck": "eldrazi-incursion",
+ "tables": 200,
+ "only_candidate": 9,
+ "only_shipped": 10,
+ "both": 67,
+ "exact_p": 1.0,
+ "shipped": {
+  "games": 200,
+  "wins": 77,
+  "turns": 9951,
+  "counter trigger_decisions": 2043,
+  "counter trigger_accepted": 1987,
+  "counter trigger_rule_1": 1987,
+  "counter trigger_declined": 56,
+  "counter trigger_rule_2": 56
+ },
+ "candidate": {
+  "games": 200,
+  "wins": 76,
+  "turns": 10022,
+  "counter trigger_decisions": 1974,
+  "counter trigger_accepted": 1659,
+  "counter trigger_rule_1": 1659,
+  "counter trigger_limit": 241,
+  "counter trigger_declined": 315,
+  "counter trigger_rule_2": 315
+ }
+}

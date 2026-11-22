@@ -1802,3 +1802,87 @@ By the rule: over the six decks the new arms won 69 tables the guard arms lost a
 Two things worth keeping. Deadly Disguise had been 20 wins against 28 with free damage alone (§35), the widest of the gaps that kept the hook out; with it and the guard it is 32 against 25. A rule that decides deck by deck on a few tables of 200 reads noise, and here it had read it seven times. And the two decks without the block hook were where the table's deaths by a block not made had been (18 of 19, §36): the count pointed at the gap before the run was queued.
 
 **Blight Curse's second sample** (`ab-run` #61, run id 44977958676, commit f615b1f; seed 20261420, tables of its own, opponents the versions shipped in the night, with the guard; `demo-data/ab/2026-11-22-ab-v29/`). On #57's tables the owner's deck was the one deck more than a few tables behind its version before the hooks (48, 42 and 40 wins for versions 3, 4 and 5). On the new tables the three versions won 38, 45 and 47: version 5 beside version 3 is 30 tables against 21 (exact test 0.26), where it had been 18 against 26. Together, over 400 tables: 48 tables only version 5 won against 47 only version 3 won. Level, so version 5 stays by the rule, which was on the two samples together because a deck picked for being behind looks better the second time whatever the truth. That is what happened, and neither sample alone says anything. What does repeat across both samples is the play: Fire Covenant cast in 42 of the 58 games it was held (none of 52 under version 3), the three abilities used 117 times (never), the leader's kill not missed once in 14 turns, an open board attacked on 64% of the turns from 33%, and the seat dead with its own creatures tapped 7 times under version 5, 10 under version 4 and 12 under version 3. The one game without a winner is version 3's own: the Flourishing Defenses chain, which it also accepts every time.
+
+## 38. The hooks at the pool's tables, two limits on endless chains, and the owner's table with every hook in every seat (2026-11-22)
+
+Three things were read on 2026-11-22 from 10:15 UTC, each by a rule written before its run was queued (§36, its last paragraphs; CLAUDE.md, In flight): the pool's twelve with the hooks, the two limits a turn on a trigger that feeds itself, and a league of the owner's table under the versions shipped that morning.
+
+**The pool's exam** (`ab-run` #59, run id 44976505627, commit b12112e, harness 0.4.11; seed 20261400 on `bots-v2`, the tables of #58; opponents the playbooks #58 played against, none with a hook; `demo-data/ab/2026-11-22-ab-v27/`). Each of the twelve decks three times on the same 200 tables: under its shipped playbook (#58's arm), with the four hooks that are not a matter of the deck (`deck@hooks`: the leader's kill, the attack aimed at the most dangerous opponent, the removal triggers aimed, the blocks that keep the seat alive) and with free damage as well (`deck@hooksopen`). The hooks were written and measured at the owner's table; here they met decks they were not written on, and were played together from the first game. All 37 entries' shards were checked against seed, date and pool, and the rollups made from them are the official ones.
+
+| Deck | Wins of 200: shipped | with the hooks | with free damage too | Tables only the hooks won against only shipped, exact test | The same for free damage too | By the rule |
+|---|---|---|---|---|---|---|
+| Goblin Storm | 36 | 41 | 45 | 11 against 6, 0.33 | 24 against 15, 0.20 | free damage too: version 6 |
+| Deep Clue Sea | 54 | 64 | 65 | 19 against 9, 0.09 | 27 against 16, 0.13 | free damage too: version 3 |
+| Limit Break | 37 | 46 | 50 | 16 against 7, 0.09 | 22 against 9, 0.03 | free damage too: version 3 |
+| Quick Draw | 39 | 49 | 64 | 20 against 10, 0.10 | 40 against 15, 0.001 | free damage too: version 3 |
+| Wretched Ranks | 32 | 36 | 38 | 9 against 5, 0.42 | 16 against 10, 0.33 | free damage too: version 3 |
+| Eldrazi Incursion | 77 | 78 | 89 | 16 against 15, 1.00 | 32 against 20, 0.13 | free damage too, and the limit below: version 3 |
+| Enduring Enchantments | 69 | 69 | 75 | 13 against 13, 1.00 | 24 against 18, 0.44 | free damage too: version 3 |
+| Token Triumph | 41 | 49 | 46 | 15 against 7, 0.13 | 25 against 20, 0.55 | nothing: stays version 5 |
+| Hail, Caesar | 69 | 70 | 63 | 6 against 5, 1.00 | 20 against 26, 0.46 | nothing: stays version 6 |
+| Tricky Terrain | 49 | 55 | 46 | 13 against 7, 0.26 | 16 against 19, 0.74 | nothing: stays version 8 |
+| Planeswalker Party | 58 | 55 | 51 | 6 against 9, 0.61 | 7 against 14, 0.19 | nothing: stays version 2 |
+| Elven Council | 36 | 33 | 33 | 14 against 17, 0.72 | 16 against 19, 0.74 | nothing: stays version 2 |
+| all twelve | 597 | 645 | 665 | 158 against 110, 0.0040 | 269 against 201, 0.0020 | |
+
+The rules, read as written. Rule 1, the four hooks: the wins hold (158 tables against 110); with three opponents alive 63.5% of the seat's attackers go at the most dangerous one where 51.4% did, 12.1 points where five were asked; and the sure kill of the most dangerous of several opponents is missed on 29 of the 460 turns it is there (6.3%) where the shipped playbooks missed it on 50 of 433 (11.5%). The rule asked for at most half as often, which is 5.75%. Three turns too many: **by the letter the four hooks do not hold for the pool.** Rule 2, free damage as well: the wins hold (269 against 201) and an opponent who cannot block is attacked on 61.0% of the turns it could be where it was on 29.8%, 31.1 points where ten were asked: it holds. Rule 3, deck by deck: free damage as well for the seven decks whose arm with it won more tables than their arm without (none of the seven is behind its shipped arm; each is ahead), and for the other five "otherwise the four hooks if that holds; nothing if neither does": nothing. The seven shipped on 2026-11-22, each file checked to be the arm that was played; the five keep the playbooks they had.
+
+**What the letter did.** The outcome is lopsided in a way the rules were not written to produce. The same kill hook, missing the kill as often in both arms (6.3% and 6.5% of the turns), went into seven decks through the arm with free damage, whose rule does not ask about the kill, and stayed out of five through the arm without, whose rule does. Nothing on the five decks' own tables speaks against the hooks (262 wins of 1,000 against 253; 54 tables against 45, exact test 0.42). That is a flaw in how the two rules were written side by side, not a finding about five decks. The rules are read as written all the same, since a rule bent after the result is no rule; the five decks get an exam of their own on new tables, by a rule written before it is queued (below).
+
+A second thing the table says: over the twelve decks free damage on top of the hooks is level in wins (205 tables only the arm with it won against 185, exact test 0.34), as it was when it was measured alone at the owner's table (§35). Rule 3 then picked, deck by deck, the seven decks whose arm with it had come out ahead, and those seven are ahead of their arm without it by 136 tables against 93. That figure is the better of two on the tables that measured it, and the other five decks are behind by 69 against 92 for the same reason turned round. A paired run of the seven versions on tables that chose nothing is owed, as the owner's ten had (§36).
+
+**The kill clause, looked at after the result** (a reading made after the rule had been applied, so it decides nothing; `kill-force.json` in the exam's directory, `docs/agents/kill_force.py`). The count calls a sure kill missed when the opponent is alive at the end of the turn. Split by what the seat's declared attack was worth, from the defender's `block` line, for the seat under test:
+
+| Arm | Turns the kill of the most dangerous opponent was there | Not gone for | An attack declared that the defender's best blocks stop | Lethal as declared, and the opponent survived | Missed in all |
+|---|---|---|---|---|---|
+| shipped | 433 | 21 | 27 | 2 | 50 |
+| with the hooks | 460 | 2 | 13 | 14 | 29 |
+| with free damage too | 459 | 3 | 12 | 13 (and 2 without a block line) | 30 |
+
+The first two columns are the seat's own shortfall, and the hook takes 70% of it away: 48 turns of 433 (11.1%), then 15 of 460 and 15 of 459 (3.3%). The third column is what no attack rule removes and what a kill hook brings to light: an attack that is lethal through the best blocks the defender has, which the defender survives because life is gained or damage prevented during combat (Goblin Storm sent five attackers for exactly 53 at a player on 53 life who gained three life during the combat). Under the shipped playbooks those turns were mostly attacks that fell short anyway. The threshold of "at most half" was taken from the owner's table, where the hook had brought the miss from 14.9% to 3.5% (§36); at the pool about half of what is left is this third kind, and the threshold left no room for it. `runner/mistakes.py` now counts the misses the seat did not go for at all by themselves (`kill_top_no_attack`).
+
+One more number that looked like a defect and is not one: Forge's validation refused the kill hook's attack 26 times in the arm with the hooks, against once in 2,000 games at the owner's table. All 26 are in games in which Silent Arbiter came onto the battlefield (one attacker a combat; the one card in the pool's decks that limits the number of attackers, `docs/agents/attack_limit_cards.py`), whose turns the count sets aside (§36); a refused attack is put back as Forge had it.
+
+**What else moved** (the seat under test, 2,400 games an arm: shipped, with the hooks, with free damage too). Deaths by a block not made 31, 2 and 1 (the block hook added blocks on 35 of the 913 attacks it saw as lethal); deaths on a turn a commander's damage reached 21: 167, 128 and 126; deaths with the seat's own creatures tapped 140, 134 and 125; deaths in combat 1,317, 1,283 and 1,285. The seats attack on 53.6%, 53.3% and 62.6% of their turns. With free damage the share of attackers at the most dangerous opponent is 56.2%, not 63.5%: the creatures it adds go at whoever cannot block. The removal triggers were re-aimed 76 times of the 692 seen. By first difference (`docs/agents/first_difference.py`, shipped beside the hooks): 1,079 of the 2,400 pairs are the same to the last event; where the kill of the most dangerous opponent is the first thing that differs, 102 tables, 10 only the hooks won against 5 (that opponent went out that turn on 99 of them against 87); where a block is, 27 tables, 8 against none, the seat out of the game that turn on 3 where it was on 24; where a trigger's target is, 47 tables, 7 against 4. The pool's twelve make the mistakes the owner's ten made and the hooks move them the same way.
+
+Games without a winner: 31, 28 and 26 of 2,400 in the three arms. Eldrazi Incursion's chain is in every arm, as foreseen when the exam was built (eleven games in each by the helper's count of a long chain in the last turn); Tricky Terrain's Scute Swarm 5, 4 and 6; a Forge exception outside any chain 3, 5 and none, every one in a game with Quick Draw at the table (not the hooks': two of the five are the tables it happened on in the shipped arm; `docs/upstream.md`).
+
+**Eldrazi Incursion's limit** (`eldrazi-incursion@limit` in #59: version 2 with Ulalek's trigger paid for at most three times in one turn; §36 has the chain and the rule). 76 wins of 200 against the shipped arm's 77 (9 tables only the limit won against 10, exact test 1.0). One game without a winner where the shipped arm left four, and that one is a Scute Swarm game on the clock; the four tables the chain had broken all finished, three of them won. The limit was reached 241 times on 94 of the 200 tables; the trigger was paid for 1,659 times where the shipped arm paid 1,987 times; 6.1 hours of play against 6.4. Both halves of its rule are met. The deck's next version is, by rule 3, the arm with free damage, so version 3 is two parts that were never played together: that arm's playbook with the limit's two trigger rules (`playbook/variants/eldrazi-incursion-v3.json`; one table played as a load check, the limit and free damage both acting in it). Its row says so.
+
+**Blight Curse's limit** (`blight-curse@limit` in #59, on #57's tables beside #57's guard arm: version 5 with Flourishing Defenses' token accepted at most thirty times in one turn). 40 wins each, no table decided differently, 191 of the 200 pairs the same to the last event, the limit not reached once, no game without a winner in either arm. It passes its rule and shipped as version 6. What these tables say is only that the limit does no harm where the chain does not come up; that it ends the chain is known from the one table where the chain had happened, replayed (§36). The deck's other chain, Hapatra's Snake with Blowfly Infestation, is not optional and is still open.
+
+**The owner's table with every hook in every seat** (`league-run` #5, run id 45003916677, commit fd0401e, harness 0.4.11; seed 20261430, `owners-table-v1`, 63 cycles, 504 games, every seat under its version shipped on 2026-11-22; on the dashboard, `demo-data/runs/2026-11-22-owners-table-v1-snapshot-2026-11-10-s20261430-bots/`). It decides nothing. Each deck's share of its about 200 games, with its share in `league-run` #4 (2026-11-15: other tables and the versions of that day, so a reading across runs):
+
+| Deck | Share now | Share in `league-run` #4 |
+|---|---|---|
+| Blood Rites | 33.5% | 37.0% |
+| Ahoy Mateys | 33.0% | 25.5% |
+| Veloci-Ramp-Tor | 31.4% | 33.8% |
+| Death Toll | 26.5% | 28.5% |
+| Revenant Recon | 23.5% | 26.0% |
+| Miracle Worker | 22.0% | 21.0% |
+| Squirreled Away | 21.6% | 24.5% |
+| Mutant Menace | 21.1% | 24.0% |
+| Blight Curse | 21.0% | 18.0% |
+| Deadly Disguise | 16.5% | 7.5% |
+
+Every one of the 504 games has a winner (`league-run` #4 left eight without; Miracle Worker's chain has been capped since). A game takes 43.5 turns and 90 seconds where it took 45.0 and 114; the league 12.6 hours of play where it took 16.0. The table is closer than it was: the weakest deck wins one game in six where it won one in thirteen, and the strongest one in three.
+
+The count of mistakes over every seat, as the table's fourth baseline (`demo-data/mistakes/2026-11-22/`), beside the second (no hook anywhere, §35) and the third (the hooks without the guard, four decks without free damage, two without the blocks, §36); each column is another set of tables:
+
+| | No hook (2,000 games) | The hooks (2,000 games) | Every hook and the guard (504 games) |
+|---|---|---|---|
+| The sure kill of the most dangerous of several opponents missed | 172 of 1,093 turns, 15.7% | 57 of 1,298, 4.4% | 20 of 363, 5.5% |
+| The kill that wins the game missed | 78 of 1,436, 5.4% | 51 of 1,277, 4.0% | 6 of 314, 1.9% |
+| A lesser opponent's kill passed up | 54% | 59% | 63% |
+| Attackers at the most dangerous opponent, three alive | 48.8% | 58.4% | 55.7% |
+| An opponent who cannot block attacked, of the turns it could be | 30.8% | 52.9% | 64.4% |
+| Turns with an attack, of the turns with a creature able to | 57.4% | 64.3% | 66.2% |
+| Deaths in combat, a hundred seat-games | 52.8 | 54.6 | 54.3 |
+| of them with the seat's own creatures tapped | 7.2 | 9.3 | 8.4 |
+| of them on a turn a commander's damage reached 21 | 5.9 | 3.4 | 4.2 |
+| of them by a block not made | 0.07 | 0.24 | none |
+
+Read across runs, with that caution: the kills and the aim stay where the hooks had put them; free damage is taken on two turns in three now that all ten decks have it; no seat died to an attack its blocks could have stopped; and deaths with the seat's own creatures tapped are 8.4 a hundred seat-games, between the 7.2 of a table without any hook and the 9.3 of the hooks without the guard, with more free damage at the table than either had. What is left of that, and the deaths to a commander's damage, are the next things the count points at.
+
+**Next, with its rule** (written into CLAUDE.md, In flight, before the queue file was pushed). `ab-run` #62: the five pool decks that got nothing, each under its shipped playbook, with the four hooks and with free damage as well, on 200 new tables (seed 20261450) whose opponents are the pool as it stands now, seven of twelve with the hooks. The kill clause is put on the seat's own shortfall (not gone for, or an attack declared that the best blocks stop), which is what the hook is for, and free damage is read over the two samples of the five decks together, because the five are the decks the first sample picked for being behind with it.

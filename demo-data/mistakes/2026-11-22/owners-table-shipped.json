@@ -1,0 +1,841 @@
+{
+ "kind": "mistakes",
+ "games": 504,
+ "games_without_combat_lines": 0,
+ "arm": null,
+ "by_deck": false,
+ "deck": null,
+ "groups": {
+  "bot": {
+   "seat_games": 2016,
+   "turns_able": 12887,
+   "turns_attacked": 8535,
+   "power_able": 136784,
+   "power_sent": 85735,
+   "kill_turns": 1631,
+   "kill_taken": 958,
+   "kill_other": 44,
+   "kill_missed": 629,
+   "kill_missed_no_attack": 516,
+   "kill_missed_short": 113,
+   "kill_missed_then_lost": 406,
+   "kill_missed_then_won": 223,
+   "kill_last_turns": 314,
+   "kill_last_missed": 6,
+   "kill_top_turns": 363,
+   "kill_top_missed": 20,
+   "kill_lesser_turns": 954,
+   "kill_lesser_missed": 603,
+   "open_turns": 5162,
+   "open_attacked": 3322,
+   "open_elsewhere": 1214,
+   "attacked_lethal": 1135,
+   "combat_deaths": 1095,
+   "block_not_made": 0,
+   "died_tapped_out": 170,
+   "commander_deaths": 85,
+   "kill_limited_turns": 0,
+   "deaths_block_limited": 0
+  }
+ },
+ "kills_not_taken": [
+  {
+   "where": "shard-1/g00001/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 2,
+   "deck": "squirreled-away",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 21,
+     "blockers": 1,
+     "through": 15
+    },
+    {
+     "seat": 0,
+     "life": 12,
+     "power": 21,
+     "blockers": 1,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-1/g00021/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 0,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 16,
+     "blockers": 1,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "2": 7
+   }
+  },
+  {
+   "where": "shard-1/g00021/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 0,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 17,
+     "blockers": 2,
+     "through": 8
+    },
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 17,
+     "blockers": 1,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "1": 4
+   }
+  },
+  {
+   "where": "shard-1/g00081/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 3,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 9,
+     "power": 18,
+     "blockers": 14,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-1/g00121/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 21,
+     "blockers": 6,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "1": 4
+   }
+  },
+  {
+   "where": "shard-1/g00121/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 3,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 5,
+     "blockers": 1,
+     "through": 2
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00141/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 1,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 19,
+     "blockers": 2,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "shard-1/g00161/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 2,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 5,
+     "power": 5,
+     "blockers": 0,
+     "through": 5
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-1/g00181/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 0,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 17,
+     "power": 28,
+     "blockers": 0,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-1/g00181/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 1,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 17,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    },
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "2": 2,
+    "0": 3
+   }
+  },
+  {
+   "where": "shard-1/g00181/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 0,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 13,
+     "power": 32,
+     "blockers": 0,
+     "through": 32
+    },
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 32,
+     "blockers": 0,
+     "through": 32
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 2,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 14,
+     "power": 27,
+     "blockers": 3,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 2,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 14,
+     "blockers": 4,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 3,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 36,
+     "blockers": 4,
+     "through": 16
+    },
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 36,
+     "blockers": 3,
+     "through": 16
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 2,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 1,
+     "power": 21,
+     "blockers": 4,
+     "through": 12
+    },
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 21,
+     "blockers": 2,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 51,
+   "seat": 3,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 1,
+     "power": 41,
+     "blockers": 4,
+     "through": 5
+    },
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 41,
+     "blockers": 2,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 54,
+   "seat": 2,
+   "deck": "miracle-worker",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 33,
+     "blockers": 3,
+     "through": 14
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-1/g00221/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 3,
+   "deck": "deadly-disguise",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 15,
+     "power": 19,
+     "blockers": 5,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-1/g00241/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 1,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 11,
+     "power": 31,
+     "blockers": 2,
+     "through": 27
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-1/g00241/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 2,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 11,
+     "power": 26,
+     "blockers": 2,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-1/g00241/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 1,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 9,
+     "power": 34,
+     "blockers": 3,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-1/g00241/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 2,
+   "deck": "death-toll",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 21,
+     "blockers": 3,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-1/g00241/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 1,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 28,
+     "blockers": 3,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00281/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 0,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 22,
+     "power": 34,
+     "blockers": 1,
+     "through": 26
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-1/g00341/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 0,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "1": 7,
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-1/g00361/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 1,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 10,
+     "blockers": 1,
+     "through": 7
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00401/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 3,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-1/g00401/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 39,
+     "blockers": 1,
+     "through": 33
+    }
+   ],
+   "attacked": {
+    "3": 10
+   }
+  },
+  {
+   "where": "shard-1/g00421/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 1,
+   "deck": "blood-rites",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 16,
+     "power": 20,
+     "blockers": 13,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-1/g00421/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 3,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 30,
+     "power": 55,
+     "blockers": 3,
+     "through": 31
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00421/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 3,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 23,
+     "power": 71,
+     "blockers": 2,
+     "through": 54
+    }
+   ],
+   "attacked": {
+    "1": 10
+   }
+  },
+  {
+   "where": "shard-1/g00421/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 3,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 22,
+     "power": 83,
+     "blockers": 1,
+     "through": 70
+    }
+   ],
+   "attacked": {
+    "1": 12
+   }
+  },
+  {
+   "where": "shard-1/g00441/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 1,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 33,
+     "blockers": 2,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-1/g00481/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 22,
+     "power": 82,
+     "blockers": 2,
+     "through": 42
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00481/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 2,
+   "deck": "mutant-menace",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 11,
+     "power": 111,
+     "blockers": 5,
+     "through": 23
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-1/g00501/games/game-001.events.jsonl",
+   "t": 21,
+   "seat": 3,
+   "deck": "revenant-recon",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 20,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "2": 8
+   }
+  },
+  {
+   "where": "shard-10/g00010/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 1,
+   "deck": "squirreled-away",
+   "stood": "top",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 38,
+     "power": 101,
+     "blockers": 1,
+     "through": 91
+    },
+    {
+     "seat": 3,
+     "life": 32,
+     "power": 101,
+     "blockers": 3,
+     "through": 75
+    }
+   ],
+   "attacked": {
+    "3": 15
+   }
+  },
+  {
+   "where": "shard-10/g00070/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 3,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 4,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-10/g00070/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 1,
+   "deck": "veloci-ramp-tor",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 4,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00070/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 3,
+   "deck": "ahoy-mateys",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 4,
+     "power": 14,
+     "blockers": 1,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  }
+ ],
+ "run": "league-run #5 (run id 45003916677, commit fd0401e, harness 0.4.11, seed 20261430): the league of the owner's table, 63 cycles, 504 games, every seat under its version shipped on 2026-11-22 (all six hooks in every seat: the leader's kill, the aim, free damage, the guard, the removal triggers aimed, the blocks)",
+ "counted": "2026-11-22, runner/mistakes.py as of that day on logs of harness 0.4.11 (trample and a commander's damage in the block count; no deck at this table limits the number of attackers)"
+}

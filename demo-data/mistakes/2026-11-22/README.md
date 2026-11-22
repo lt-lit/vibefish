@@ -1,4 +1,4 @@
-# Mistakes counted on 2026-11-22: the pool's first baseline, and the owner's table with the hooks in every seat
+# Mistakes counted on 2026-11-22: the pool's first baseline, and the owner's table with the hooks in every seat, then with the guard too
 
 ## The pool of twelve
 
@@ -124,3 +124,39 @@ more, and what the guard is for (it is in none of these games; in the guard arms
 that way 169 times where it does 193 times without it). And a commander's damage kills four times in ten less often,
 before any block is added: the likely cause is that an attack which follows the most dangerous opponent spreads a
 commander's damage over the table, where Forge's own keeps going at the same weak player. That is a guess from the counts.
+
+## The owner's table with every hook and the guard in every seat
+
+`league-run` #5 (run id 45003916677, commit fd0401e, harness 0.4.11; seed 20261430): the league of the owner's table, 504
+games, every seat under its version shipped on 2026-11-22, so every seat has the leader's kill, the aim, free damage, the
+guard, the removal triggers aimed and the blocks. It is the table's fourth baseline and the first with the guard. In
+brackets the third (above: 2,000 games, the hooks without the guard, four decks without free damage, two without the
+blocks). Other tables and a quarter of the games, so a reading across runs.
+
+- `owners-table-shipped.json`, `owners-table-shipped-by-deck.json`, `owners-table-shipped-attackers-by-danger.json`: as above.
+
+| | |
+|---|---|
+| turns on which a seat was sure to kill an opponent | 1,631 |
+| missed | 629, 39% (36%) |
+| ... the opponent was the last one | 314 turns, 6 missed, 2% (4%) |
+| ... the most dangerous of several | 363 turns, 20 missed, 5.5% (4.4%) |
+| ... a less dangerous one while a more dangerous one lived | 954 turns, 603 missed, 63% (59%) |
+| attacks that left at least a seat's life unblocked, or a commander's lethal damage | 1,135; the seat died that turn in 1,095: 54.3 a hundred seat-games (54.6) |
+| deaths by a block not made | none (19, of them 18 in the two decks that did not have the block hook then) |
+| deaths tapped out | 170, 15.5% of the deaths in combat, 8.4 a hundred seat-games (745, 17.0%, 9.3) |
+| deaths on a turn a commander's damage on the seat reached 21 | 85, 7.8%, 4.2 a hundred seat-games (273, 6.2%, 3.4) |
+| turns with an able attacker on which the seat attacked | 66% (64%); 49 to 82% by deck |
+| turns with an opponent who could not block: attacked it | 64% of 5,162 (53%); attacked only opponents that could block 24% (27%); attacked nobody 12% (20%). By deck 51 to 77% |
+| attackers at the opponent that looks most dangerous | with three opponents alive 55.7% of 12,923 (58.4%), with two 63.5% of 4,768 (65.3%); at the player who went on to win 28.1% and 39.5% of the attackers of seats that did not (28.5%, 36.2%) |
+| declarations that sent nothing at the most dangerous opponent | 2,766 of 7,402, 737 more with a tie left out |
+| games without a winner | none of 504 (6 of 2,000) |
+
+The kills and the aim are where the hooks had put them. Free damage is taken on two turns in three now that all ten
+decks have it, and the share of attackers at the most dangerous opponent is a little lower for it, as it was at the
+pool (the creatures it adds go at whoever cannot block). No seat died to an attack its blocks could have stopped.
+Deaths with the seat's own creatures tapped are 8.4 a hundred seat-games: between the second baseline's 7.2, with no
+hook at the table, and the third's 9.3, with more attacking here than in either. By deck 11 to 25 of about 200 games;
+Mutant Menace, Ahoy Mateys and Blood Rites most. Deaths on a turn a commander's damage reached 21 are 4.2 a hundred
+seat-games (5.9 with no hook, 3.4 in the third baseline); Blight Curse and Squirreled Away die that way most (14 each).
+These two are what the count points at next: neither the kill hook nor the guard knows a commander's damage.

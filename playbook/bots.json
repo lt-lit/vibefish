@@ -4,9 +4,9 @@
  "bots": [
   {
    "deck": "goblin-storm",
-   "status": "shipped (v5: answer rules, the attack left to Forge); on the pool of 2026-11-14 +7.5 points on its stock pilot (34 tables against 19, 95% +1 to +14, exact test 0.032), clear of noise",
+   "status": "shipped (v6, 2026-11-22: version 5 with five hooks on what was Forge's: the sure kill of the most dangerous opponent, the attack and the removal triggers aimed at that opponent, free damage at an opponent who cannot block, and the blocks that keep it alive when Forge's own leave it dead). Played beside version 5 on the same 200 tables of the pool of twelve (ab-run #58 and #59, the opponents under their playbooks of 2026-11-14, none with a hook): 45 wins against 36 (24 tables against 15, exact test 0.20); with the hooks but without free damage 41. An opponent who cannot block is attacked on 80% of the turns it could be, from 30%. Over the twelve decks the arm with free damage holds by the rule fixed before the run (269 tables against 201, exact test 0.0020; an open board attacked on 61% of the turns from 30%); this deck has it because that arm won more of these tables than the arm without it, so it is the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (the league of twelve and a paired run beside the version before, once the five pool decks that got no hook have had their own exam, ab-run #62). The comparison with the stock pilot is version 5's: on the pool of 2026-11-14 +7.5 points on its stock pilot (34 tables against 19, 95% +1 to +14, exact test 0.032), clear of noise",
    "playbook": "playbook/precons/goblin-storm.json",
-   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment; version 5 leaves the attack to Forge.",
+   "summary": "Aims its single-target spells at Zada and keeps her back until she can be aimed at, runs Krenko, keeps rituals and Empty the Warrens for the turn they pay, attacks the highest life; version 4 also casts Blasphemous Act when it faces lethal against a wider board and finishes with Grapeshot and Goblin Bombardment; version 5 leaves the attack to Forge. Version 6 also plays the table: it takes the sure kill of the most dangerous opponent, aims its attack and its removal triggers at that opponent, attacks an opponent who cannot block with creatures that would have stayed home, and adds the blocks that keep it alive when Forge's own leave it dead.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v19/goblin-storm.json",
     "stock": "stock",
@@ -31,6 +31,12 @@
     "stock": "stock",
     "bot": "playbook",
     "run": "ab-run #26, the first round on the pool of twelve: 200 tables whose three opponents are drawn from the other eleven bots, each under its shipped playbook (version 4, the same rules with the go-wide attack, won 56 of the same tables)"
+   },
+   "version_tables": {
+    "file": "demo-data/ab/2026-11-22-ab-v27/goblin-storm-join.json",
+    "stock": "shipped",
+    "run": "ab-run #58 and #59 (seed 20261400): 200 tables whose three opponents are drawn from the other eleven bots of the pool under their playbooks of 2026-11-14 (no hooks); the deck under version 5 (shipped, played in #58) and under the candidates of #59 on the same tables",
+    "bot": "hooksopen"
    }
   },
   {
@@ -146,9 +152,9 @@
   },
   {
    "deck": "deep-clue-sea",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +7.5 points on its stock pilot (57 tables against 42, 95% -0 to +15, exact test 0.077), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 71 against version 1's 67 (+2.0 points, exact test 0.57) and cast the cards its new rules name in 97 of the 161 games it drew them, version 1 in 4 of 157",
+   "status": "shipped (v3, 2026-11-22: version 2 with five hooks on what was Forge's: the sure kill of the most dangerous opponent, the attack and the removal triggers aimed at that opponent, free damage at an opponent who cannot block, and the blocks that keep it alive when Forge's own leave it dead). Played beside version 2 on the same 200 tables of the pool of twelve (ab-run #58 and #59, the opponents under their playbooks of 2026-11-14, none with a hook): 65 wins against 54 (27 tables against 16, exact test 0.13); with the hooks but without free damage 64. An opponent who cannot block is attacked on 53% of the turns it could be, from 22%. Over the twelve decks the arm with free damage holds by the rule fixed before the run (269 tables against 201, exact test 0.0020; an open board attacked on 61% of the turns from 30%); this deck has it because that arm won more of these tables than the arm without it, so it is the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (the league of twelve and a paired run beside the version before, once the five pool decks that got no hook have had their own exam, ab-run #62). The comparison with the stock pilot is version 2's: on the pool of 2026-11-14 +7.5 points on its stock pilot (57 tables against 42, 95% -0 to +15, exact test 0.077), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 71 against version 1's 67 (+2.0 points, exact test 0.57) and cast the cards its new rules name in 97 of the 161 games it drew them, version 1 in 4 of 157",
    "playbook": "playbook/precons/deep-clue-sea.json",
-   "summary": "Morska out on turn 4, one Clue cracked a turn for her second-card trigger, Selvala and Idol of Oblivion tapped, Mechanized Production on a Clue, Farewell held unless behind; the attack is Forge's. Version 2 also casts its three wipes (Organic Extinction, Fumigate, Farewell) when the opposing board is wide or the seat is about to die, and Aerial Extortionist ahead of a recast of Morska.",
+   "summary": "Morska out on turn 4, one Clue cracked a turn for her second-card trigger, Selvala and Idol of Oblivion tapped, Mechanized Production on a Clue, Farewell held unless behind; the attack is Forge's. Version 2 also casts its three wipes (Organic Extinction, Fumigate, Farewell) when the opposing board is wide or the seat is about to die, and Aerial Extortionist ahead of a recast of Morska. Version 3 also plays the table: it takes the sure kill of the most dangerous opponent, aims its attack and its removal triggers at that opponent, attacks an opponent who cannot block with creatures that would have stayed home, and adds the blocks that keep it alive when Forge's own leave it dead.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v19/deep-clue-sea.json",
     "stock": "stock",
@@ -163,10 +169,10 @@
     "run": "ab-run #19 and #23: 200 tables of bots (61 wins with the go-wide attack the rules were written with)"
    },
    "version_tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/deep-clue-sea-join.json",
+    "file": "demo-data/ab/2026-11-22-ab-v27/deep-clue-sea-join.json",
     "stock": "shipped",
-    "bot": "answers",
-    "run": "ab-run #33 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #58 and #59 (seed 20261400): 200 tables whose three opponents are drawn from the other eleven bots of the pool under their playbooks of 2026-11-14 (no hooks); the deck under version 2 (shipped, played in #58) and under the candidates of #59 on the same tables",
+    "bot": "hooksopen"
    },
    "previous_version_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v16/deep-clue-sea.json",
@@ -208,9 +214,9 @@
   },
   {
    "deck": "limit-break",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +4.0 points on its stock pilot (37 tables against 29, 95% -3 to +11, exact test 0.31), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 51 against version 1's 44 (+3.5 points, exact test 0.30) and cast the cards its new rules name in 185 of the 284 games it drew them, version 1 in 72 of 275",
+   "status": "shipped (v3, 2026-11-22: version 2 with five hooks on what was Forge's: the sure kill of the most dangerous opponent, the attack and the removal triggers aimed at that opponent, free damage at an opponent who cannot block, and the blocks that keep it alive when Forge's own leave it dead). Played beside version 2 on the same 200 tables of the pool of twelve (ab-run #58 and #59, the opponents under their playbooks of 2026-11-14, none with a hook): 50 wins against 37 (22 tables against 9, exact test 0.03); with the hooks but without free damage 46. An opponent who cannot block is attacked on 55% of the turns it could be, from 27%. Over the twelve decks the arm with free damage holds by the rule fixed before the run (269 tables against 201, exact test 0.0020; an open board attacked on 61% of the turns from 30%); this deck has it because that arm won more of these tables than the arm without it, so it is the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (the league of twelve and a paired run beside the version before, once the five pool decks that got no hook have had their own exam, ab-run #62). The comparison with the stock pilot is version 2's: on the pool of 2026-11-14 +4.0 points on its stock pilot (37 tables against 29, 95% -3 to +11, exact test 0.31), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 51 against version 1's 44 (+3.5 points, exact test 0.30) and cast the cards its new rules name in 185 of the 284 games it drew them, version 1 in 72 of 275",
    "playbook": "playbook/precons/limit-break.json",
-   "summary": "Cloud at once, the big equipment before him so his trigger has something to attach, every equip aimed at Cloud and never paid twice; the attack is Forge's. Version 2 also casts its wipes when it is behind on the board (Vanquish the Horde, Ultimate Magic: Meteor and Holy), Decimate, Summon: Kujata and Yuffie; Meteor and Yuffie are cards Forge's AI never casts.",
+   "summary": "Cloud at once, the big equipment before him so his trigger has something to attach, every equip aimed at Cloud and never paid twice; the attack is Forge's. Version 2 also casts its wipes when it is behind on the board (Vanquish the Horde, Ultimate Magic: Meteor and Holy), Decimate, Summon: Kujata and Yuffie; Meteor and Yuffie are cards Forge's AI never casts. Version 3 also plays the table: it takes the sure kill of the most dangerous opponent, aims its attack and its removal triggers at that opponent, attacks an opponent who cannot block with creatures that would have stayed home, and adds the blocks that keep it alive when Forge's own leave it dead.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v19/limit-break.json",
     "stock": "stock",
@@ -225,10 +231,10 @@
     "run": "ab-run #25: 200 tables of bots (28 wins with the go-wide attack)"
    },
    "version_tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/limit-break-join.json",
+    "file": "demo-data/ab/2026-11-22-ab-v27/limit-break-join.json",
     "stock": "shipped",
-    "bot": "answers",
-    "run": "ab-run #33 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #58 and #59 (seed 20261400): 200 tables whose three opponents are drawn from the other eleven bots of the pool under their playbooks of 2026-11-14 (no hooks); the deck under version 2 (shipped, played in #58) and under the candidates of #59 on the same tables",
+    "bot": "hooksopen"
    },
    "previous_version_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v16/limit-break.json",
@@ -270,9 +276,9 @@
   },
   {
    "deck": "quick-draw",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +3.5 points on its stock pilot (42 tables against 35, 95% -4 to +11, exact test 0.43), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 58 against version 1's 59 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 155 of the 211 games it drew them, version 1 in 69 of 209",
+   "status": "shipped (v3, 2026-11-22: version 2 with five hooks on what was Forge's: the sure kill of the most dangerous opponent, the attack and the removal triggers aimed at that opponent, free damage at an opponent who cannot block, and the blocks that keep it alive when Forge's own leave it dead). Played beside version 2 on the same 200 tables of the pool of twelve (ab-run #58 and #59, the opponents under their playbooks of 2026-11-14, none with a hook): 64 wins against 39 (40 tables against 15, exact test 0.0010); with the hooks but without free damage 49. An opponent who cannot block is attacked on 56% of the turns it could be, from 29%. Over the twelve decks the arm with free damage holds by the rule fixed before the run (269 tables against 201, exact test 0.0020; an open board attacked on 61% of the turns from 30%); this deck has it because that arm won more of these tables than the arm without it, so it is the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (the league of twelve and a paired run beside the version before, once the five pool decks that got no hook have had their own exam, ab-run #62). The comparison with the stock pilot is version 2's: on the pool of 2026-11-14 +3.5 points on its stock pilot (42 tables against 35, 95% -4 to +11, exact test 0.43), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 58 against version 1's 59 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 155 of the 211 games it drew them, version 1 in 69 of 209",
    "playbook": "playbook/precons/quick-draw.json",
-   "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts. Version 2 also casts Volcanic Torrent against a board, Baral's Expertise when it is about to die, Propaganda, and Curse of the Swine, which Forge's AI never casts.",
+   "summary": "The spell payoffs first, then every cheap spell the mana allows; Windfall and Epic Experiment, which Forge's AI never casts. Version 2 also casts Volcanic Torrent against a board, Baral's Expertise when it is about to die, Propaganda, and Curse of the Swine, which Forge's AI never casts. Version 3 also plays the table: it takes the sure kill of the most dangerous opponent, aims its attack and its removal triggers at that opponent, attacks an opponent who cannot block with creatures that would have stayed home, and adds the blocks that keep it alive when Forge's own leave it dead.",
    "goldfish": "demo-data/goldfish/2026-11-11/quick-draw-seeds-1001-1040.json",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v19/quick-draw.json",
@@ -287,10 +293,10 @@
     "run": "ab-run #22: 200 tables whose three opponents are drawn from the four bot decks under their playbooks"
    },
    "version_tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/quick-draw-join.json",
+    "file": "demo-data/ab/2026-11-22-ab-v27/quick-draw-join.json",
     "stock": "shipped",
-    "bot": "answers",
-    "run": "ab-run #31 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #58 and #59 (seed 20261400): 200 tables whose three opponents are drawn from the other eleven bots of the pool under their playbooks of 2026-11-14 (no hooks); the deck under version 2 (shipped, played in #58) and under the candidates of #59 on the same tables",
+    "bot": "hooksopen"
    },
    "previous_version_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v16/quick-draw.json",
@@ -301,9 +307,9 @@
   },
   {
    "deck": "wretched-ranks",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 -0.5 points on its stock pilot (29 tables against 30, 95% -7 to +6, exact test 1.0), level. Beside the version before it on the same tables of the earlier pool, version 2 won 38 against version 1's 27 (+5.5 points, exact test 0.061) and cast the cards its new rules name in 190 of the 247 games it drew them, version 1 in 61 of 248",
+   "status": "shipped (v3, 2026-11-22: version 2 with five hooks on what was Forge's: the sure kill of the most dangerous opponent, the attack and the removal triggers aimed at that opponent, free damage at an opponent who cannot block, and the blocks that keep it alive when Forge's own leave it dead). Played beside version 2 on the same 200 tables of the pool of twelve (ab-run #58 and #59, the opponents under their playbooks of 2026-11-14, none with a hook): 38 wins against 32 (16 tables against 10, exact test 0.33); with the hooks but without free damage 36. An opponent who cannot block is attacked on 60% of the turns it could be, from 28%. Over the twelve decks the arm with free damage holds by the rule fixed before the run (269 tables against 201, exact test 0.0020; an open board attacked on 61% of the turns from 30%); this deck has it because that arm won more of these tables than the arm without it, so it is the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (the league of twelve and a paired run beside the version before, once the five pool decks that got no hook have had their own exam, ab-run #62). The comparison with the stock pilot is version 2's: on the pool of 2026-11-14 -0.5 points on its stock pilot (29 tables against 30, 95% -7 to +6, exact test 1.0), level. Beside the version before it on the same tables of the earlier pool, version 2 won 38 against version 1's 27 (+5.5 points, exact test 0.061) and cast the cards its new rules name in 190 of the 247 games it drew them, version 1 in 61 of 248",
    "playbook": "playbook/precons/wretched-ranks.json",
-   "summary": "Casts the commander Forge never casts, Ghoulcaller Gisa, and uses her every turn ahead of the lords; the lords' abilities, Cryptbreaker, the draw spells with a library guard; God-Eternal Bontu held; the attack is Forge's. Version 2 also casts Noxious Ghoul, Necrotic Hex, Mutilate, Syphon Flesh and Fleshbag Marauder once there are creatures to answer.",
+   "summary": "Casts the commander Forge never casts, Ghoulcaller Gisa, and uses her every turn ahead of the lords; the lords' abilities, Cryptbreaker, the draw spells with a library guard; God-Eternal Bontu held; the attack is Forge's. Version 2 also casts Noxious Ghoul, Necrotic Hex, Mutilate, Syphon Flesh and Fleshbag Marauder once there are creatures to answer. Version 3 also plays the table: it takes the sure kill of the most dangerous opponent, aims its attack and its removal triggers at that opponent, attacks an opponent who cannot block with creatures that would have stayed home, and adds the blocks that keep it alive when Forge's own leave it dead.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v19/wretched-ranks.json",
     "stock": "stock",
@@ -318,10 +324,10 @@
     "run": "ab-run #23: 200 tables of bots (31 wins with the go-wide attack)"
    },
    "version_tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/wretched-ranks-join.json",
+    "file": "demo-data/ab/2026-11-22-ab-v27/wretched-ranks-join.json",
     "stock": "shipped",
-    "bot": "answers",
-    "run": "ab-run #32 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #58 and #59 (seed 20261400): 200 tables whose three opponents are drawn from the other eleven bots of the pool under their playbooks of 2026-11-14 (no hooks); the deck under version 2 (shipped, played in #58) and under the candidates of #59 on the same tables",
+    "bot": "hooksopen"
    },
    "previous_version_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v16/wretched-ranks.json",
@@ -332,9 +338,9 @@
   },
   {
    "deck": "eldrazi-incursion",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +12.5 points on its stock pilot (59 tables against 34, 95% +5 to +20, exact test 0.0026), clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 63 against version 1's 64 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 116 of the 138 games it drew them, version 1 in 43 of 133",
+   "status": "shipped (v3, 2026-11-22: version 2 with five hooks on what was Forge's: the sure kill of the most dangerous opponent, the attack and the removal triggers aimed at that opponent, free damage at an opponent who cannot block, and the blocks that keep it alive when Forge's own leave it dead; and its commander's copy trigger paid for at most three times a turn, where version 2 paid without a limit and 14 of 2,400 games at this table ended in that chain without a winner). Played beside version 2 on the same 200 tables of the pool of twelve (ab-run #58 and #59, the opponents under their playbooks of 2026-11-14, none with a hook): 89 wins against 77 (32 tables against 20, exact test 0.13); with the hooks but without free damage 78. An opponent who cannot block is attacked on 60% of the turns it could be, from 31%. Over the twelve decks the arm with free damage holds by the rule fixed before the run (269 tables against 201, exact test 0.0020; an open board attacked on 61% of the turns from 30%); this deck has it because that arm won more of these tables than the arm without it, so it is the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (the league of twelve and a paired run beside the version before, once the five pool decks that got no hook have had their own exam, ab-run #62). The limit by itself (version 2 with it) won 76 of the same tables and left one game without a winner where version 2 left four; it and the hooks were not played together. The comparison with the stock pilot is version 2's: on the pool of 2026-11-14 +12.5 points on its stock pilot (59 tables against 34, 95% +5 to +20, exact test 0.0026), clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 63 against version 1's 64 (-0.5 points, exact test 1.0) and cast the cards its new rules name in 116 of the 138 games it drew them, version 1 in 43 of 133",
    "playbook": "playbook/precons/eldrazi-incursion.json",
-   "summary": "Pays for Ulalek's copy trigger, which Forge never does, while ten mana or less is available; Ulalek ahead of the rocks; Eldrazi Monument held for a board of tokens; the attack is Forge's. Open defect: a chain of copies can deck the seat. Version 2 also casts All Is Dust, Kozilek's Return and Selective Obliteration (which Forge's AI never casts) against a board of creatures.",
+   "summary": "Pays for Ulalek's copy trigger, which Forge never does, while ten mana or less is available; Ulalek ahead of the rocks; Eldrazi Monument held for a board of tokens; the attack is Forge's. Open defect: a chain of copies can deck the seat. Version 2 also casts All Is Dust, Kozilek's Return and Selective Obliteration (which Forge's AI never casts) against a board of creatures. Version 3 also plays the table: it takes the sure kill of the most dangerous opponent, aims its attack and its removal triggers at that opponent, attacks an opponent who cannot block with creatures that would have stayed home, and adds the blocks that keep it alive when Forge's own leave it dead; and it pays for its commander's copy trigger at most three times a turn.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v19/eldrazi-incursion.json",
     "stock": "stock",
@@ -349,10 +355,13 @@
     "run": "ab-run #24: 200 tables of bots (52 wins with the go-wide attack)"
    },
    "version_tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/eldrazi-incursion-join.json",
+    "file": "demo-data/ab/2026-11-22-ab-v27/eldrazi-incursion-join.json",
     "stock": "shipped",
-    "bot": "answers",
-    "run": "ab-run #31 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #58 and #59 (seed 20261400): 200 tables whose three opponents are drawn from the other eleven bots of the pool under their playbooks of 2026-11-14 (no hooks); the deck under version 2 (shipped, played in #58) and under the candidates of #59 on the same tables",
+    "parts": [
+     "hooksopen",
+     "limit"
+    ]
    },
    "previous_version_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v16/eldrazi-incursion.json",
@@ -363,9 +372,9 @@
   },
   {
    "deck": "enduring-enchantments",
-   "status": "shipped (v2, 2026-11-14: version 1 with rules for its answers); on the pool of 2026-11-14 +6.5 points on its stock pilot (58 tables against 45, 95% -2 to +15, exact test 0.17), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 63 against version 1's 52 (+5.5 points, exact test 0.16) and cast the cards its new rules name in 415 of the 535 games it drew them, version 1 in 164 of 498",
+   "status": "shipped (v3, 2026-11-22: version 2 with five hooks on what was Forge's: the sure kill of the most dangerous opponent, the attack and the removal triggers aimed at that opponent, free damage at an opponent who cannot block, and the blocks that keep it alive when Forge's own leave it dead). Played beside version 2 on the same 200 tables of the pool of twelve (ab-run #58 and #59, the opponents under their playbooks of 2026-11-14, none with a hook): 75 wins against 69 (24 tables against 18, exact test 0.44); with the hooks but without free damage 69. An opponent who cannot block is attacked on 68% of the turns it could be, from 36%. Over the twelve decks the arm with free damage holds by the rule fixed before the run (269 tables against 201, exact test 0.0020; an open board attacked on 61% of the turns from 30%); this deck has it because that arm won more of these tables than the arm without it, so it is the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (the league of twelve and a paired run beside the version before, once the five pool decks that got no hook have had their own exam, ab-run #62). The comparison with the stock pilot is version 2's: on the pool of 2026-11-14 +6.5 points on its stock pilot (58 tables against 45, 95% -2 to +15, exact test 0.17), ahead, not clear of noise. Beside the version before it on the same tables of the earlier pool, version 2 won 63 against version 1's 52 (+5.5 points, exact test 0.16) and cast the cards its new rules name in 415 of the 535 games it drew them, version 1 in 164 of 498",
    "playbook": "playbook/precons/enduring-enchantments.json",
-   "summary": "Casts the commander Forge never casts, Anikthea, lays the enchantress engine in order, uses the land searches and holds every enchantment once the library is under 25 cards; the attack is Forge's. Version 2 also casts its wipes when it is outnumbered (Extinguish All Hope, Cacophony Unleashed, Culling Ritual) and its removal and Calix once there is something to aim at.",
+   "summary": "Casts the commander Forge never casts, Anikthea, lays the enchantress engine in order, uses the land searches and holds every enchantment once the library is under 25 cards; the attack is Forge's. Version 2 also casts its wipes when it is outnumbered (Extinguish All Hope, Cacophony Unleashed, Culling Ritual) and its removal and Calix once there is something to aim at. Version 3 also plays the table: it takes the sure kill of the most dangerous opponent, aims its attack and its removal triggers at that opponent, attacks an opponent who cannot block with creatures that would have stayed home, and adds the blocks that keep it alive when Forge's own leave it dead.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v19/enduring-enchantments.json",
     "stock": "stock",
@@ -380,10 +389,10 @@
     "run": "ab-run #23: 200 tables of bots (61 wins with the go-wide attack)"
    },
    "version_tables": {
-    "file": "demo-data/ab/2026-11-14-ab-v17/enduring-enchantments-join.json",
+    "file": "demo-data/ab/2026-11-22-ab-v27/enduring-enchantments-join.json",
     "stock": "shipped",
-    "bot": "answers",
-    "run": "ab-run #31 (seed 20261300): the shipped version 1 and this version, playbook arms only, on the same 200 tables whose three opponents are drawn from the other eleven bots under their playbooks of 2026-11-13"
+    "run": "ab-run #58 and #59 (seed 20261400): 200 tables whose three opponents are drawn from the other eleven bots of the pool under their playbooks of 2026-11-14 (no hooks); the deck under version 2 (shipped, played in #58) and under the candidates of #59 on the same tables",
+    "bot": "hooksopen"
    },
    "previous_version_tables": {
     "file": "demo-data/ab/2026-11-12-ab-v16/enduring-enchantments.json",
@@ -494,9 +503,9 @@
   },
   {
    "deck": "blight-curse",
-   "status": "shipped (v5, 2026-11-22: version 4 with a guard on its attack: attackers are taken back when the attack would leave the seat where the opponents, one after another, are sure to kill it before its next turn and keeping them home prevents that). Versions 3, 4 and 5 were played on the same 200 tables at the owner's table, every other seat a version of 2026-11-21 with its hooks (ab-run #57, tables that chose nothing): wins 48, 42 and 40. Version 4 beside version 3: 19 tables against 25, exact test 0.45; version 5 beside version 4: 4 against 6, exact test 0.75, the seat dead with its own creatures tapped 17 times where it was 21. Both stand by rules fixed before the run and read over the ten decks together (the hooks: 186 tables against 155; the guard: 38 against 41, with 169 such deaths against 193). Because this was the one deck more than a few tables behind its version before the hooks there (40 wins against 48; 18 tables against 26, exact test 0.29), the three versions got a second sample on tables of their own (ab-run #61, seed 20261420, every other seat a shipped version with the guard): 38, 45 and 47 wins, version 5 beside version 3 30 tables against 21 (exact test 0.26). Over the two samples together, 400 tables: 48 tables only version 5 won against 47 only version 3 won. Level, so version 5 stays by the rule fixed before the second sample was queued. The comparison with the stock pilot is version 2's: at the owner's table, on tables that chose nothing, +6.0 points on its stock pilot (53 tables against 41, 95% -2 to +14, exact test 0.19), ahead, not clear of noise. The exam version 2 shipped on, at tables of the pool of twelve: +12.0 points on its stock pilot (69 tables against 45, 95% +4 to +20, exact test 0.0088), clear of noise. The attack is the better of two on these tables: the same rules won 66 with the go-wide attack",
+   "status": "shipped (v6, 2026-11-22: version 5 with a limit a turn on its Flourishing Defenses trigger: the Elf Warrior token is accepted at most thirty times in one turn and declined after, for the chain with Blowfly Infestation that kills the tokens as they are made and has no end). Played beside version 5 on the same 200 tables at the owner's table (ab-run #59 beside ab-run #57's guard arm): 40 wins each, no table decided differently, 191 of the 200 games the same to the last event. The limit was not reached once, so these tables say only that it does no harm where the chain does not come up; on the table where the chain had happened, replayed, it said no after thirty tokens and the game played on to a normal end. Version 5 was version 4 with a guard on its attack (attackers are taken back when the attack would leave the seat where the opponents, one after another, are sure to kill it before its next turn and keeping them home prevents that). Versions 3, 4 and 5 were played on the same 200 tables at the owner's table, every other seat a version of 2026-11-21 with its hooks (ab-run #57, tables that chose nothing): wins 48, 42 and 40. Version 4 beside version 3: 19 tables against 25, exact test 0.45; version 5 beside version 4: 4 against 6, exact test 0.75, the seat dead with its own creatures tapped 17 times where it was 21. Both stand by rules fixed before the run and read over the ten decks together (the hooks: 186 tables against 155; the guard: 38 against 41, with 169 such deaths against 193). Because this was the one deck more than a few tables behind its version before the hooks there (40 wins against 48; 18 tables against 26, exact test 0.29), the three versions got a second sample on tables of their own (ab-run #61, seed 20261420, every other seat a shipped version with the guard): 38, 45 and 47 wins, version 5 beside version 3 30 tables against 21 (exact test 0.26). Over the two samples together, 400 tables: 48 tables only version 5 won against 47 only version 3 won. Level, so version 5 stays by the rule fixed before the second sample was queued. The comparison with the stock pilot is version 2's: at the owner's table, on tables that chose nothing, +6.0 points on its stock pilot (53 tables against 41, 95% -2 to +14, exact test 0.19), ahead, not clear of noise. The exam version 2 shipped on, at tables of the pool of twelve: +12.0 points on its stock pilot (69 tables against 45, 95% +4 to +20, exact test 0.0088), clear of noise. The attack is the better of two on these tables: the same rules won 66 with the go-wide attack",
    "playbook": "playbook/precons/blight-curse.json",
-   "summary": "Auntie Ool on turn 4 and her engines in order, counters put on its own throwaway creatures for cards, holds on two cards that hurt it; Chain Reaction or Black Sun's Zenith (which Forge's AI never casts) when it is behind a wide board, its removal creatures once there is something to answer, and rules for the removal and the threats its first rules crowded out. Version 3 puts the removal and the large creatures above the engine pieces: the top of the curve first, the engine and the card draw with the mana that is left. Version 4 casts Fire Covenant, which no pilot ever cast (up to three creatures for at most twelve life), untaps Devoted Druid for cards while Auntie Ool is out and moves -1/-1 counters onto opposing creatures with Nesting Grounds; and it no longer leaves everything about the other players to Forge: it takes the sure kill of the most dangerous opponent, aims its attack at that opponent when the attack is no worse there, attacks an opponent who cannot block with creatures that would have stayed home, aims its removal triggers at the most dangerous opponent and adds the blocks that keep it alive when Forge's leave it dead. Version 5 also keeps attackers home when the attack would leave it dead before its next turn.",
+   "summary": "Auntie Ool on turn 4 and her engines in order, counters put on its own throwaway creatures for cards, holds on two cards that hurt it; Chain Reaction or Black Sun's Zenith (which Forge's AI never casts) when it is behind a wide board, its removal creatures once there is something to answer, and rules for the removal and the threats its first rules crowded out. Version 3 puts the removal and the large creatures above the engine pieces: the top of the curve first, the engine and the card draw with the mana that is left. Version 4 casts Fire Covenant, which no pilot ever cast (up to three creatures for at most twelve life), untaps Devoted Druid for cards while Auntie Ool is out and moves -1/-1 counters onto opposing creatures with Nesting Grounds; and it no longer leaves everything about the other players to Forge: it takes the sure kill of the most dangerous opponent, aims its attack at that opponent when the attack is no worse there, attacks an opponent who cannot block with creatures that would have stayed home, aims its removal triggers at the most dangerous opponent and adds the blocks that keep it alive when Forge's leave it dead. Version 5 also keeps attackers home when the attack would leave it dead before its next turn. Version 6 also stops making Flourishing Defenses' tokens after thirty in one turn.",
    "tables": {
     "file": "demo-data/ab/2026-11-15-ab-v20/blight-curse.json",
     "stock": "stock",
@@ -511,10 +520,10 @@
     "run": "ab-run #36 (seed 20261310), the exam of the deck's second pass: 200 tables whose three opponents are drawn from the twelve bots of bots-v2 under their playbooks of 2026-11-13; the arm with the attack left to Forge, chosen on these tables over the same rules with the go-wide attack (66 wins)"
    },
    "version_tables": {
-    "file": "demo-data/ab/2026-11-22-ab-v26/blight-curse-join.json",
-    "stock": "shipped",
-    "run": "ab-run #57 (seed 20261410), the confirming run at the owner's table: 200 tables whose three opponents are drawn from the other nine precons of the owner's table under their versions of 2026-11-21 (the hooks, no guard); the deck under version 3 (before), version 4 (shipped) and version 5 (guard) on the same tables, which chose nothing",
-    "bot": "guard"
+    "file": "demo-data/ab/2026-11-22-ab-v28/blight-curse-join.json",
+    "stock": "guard",
+    "run": "ab-run #59 beside ab-run #57 (seed 20261410): 200 tables at the owner's table whose three opponents are drawn from the other nine precons under their versions of 2026-11-21; the deck under version 5 (guard, played in #57) and version 6 (limit, played in #59) on the same tables",
+    "bot": "limit"
    },
    "second_sample": {
     "file": "demo-data/ab/2026-11-22-ab-v29/blight-curse-join.json",

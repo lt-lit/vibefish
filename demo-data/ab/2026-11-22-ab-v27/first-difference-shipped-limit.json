@@ -1,0 +1,1384 @@
+{
+"kind": "first-difference",
+"base": "shipped",
+"candidate": "limit",
+"decks": [
+"eldrazi-incursion"
+],
+"files": {
+"other": {
+"neither": 32,
+"both": 30,
+"cand_only": 8,
+"base_only": 10,
+"tables": 80
+},
+"identical": {
+"neither": 82,
+"both": 35,
+"tables": 117
+},
+"attack: nobody": {
+"both": 1,
+"tables": 1,
+"base_kill": 0,
+"base_dead": 0,
+"base_exposed": 0,
+"base_sent": 0,
+"cand_kill": 0,
+"cand_dead": 0,
+"cand_exposed": 0,
+"cand_sent": 2
+},
+"attack: top": {
+"both": 1,
+"tables": 1,
+"base_kill": 1,
+"base_dead": 0,
+"base_exposed": 0,
+"base_sent": 29,
+"cand_kill": 1,
+"cand_dead": 0,
+"cand_exposed": 0,
+"cand_sent": 29
+},
+"block": {
+"cand_only": 1,
+"tables": 1,
+"cand_out": 0,
+"base_out": 0
+},
+"attack, all": {
+"both": 2,
+"tables": 2,
+"base_kill": 1,
+"base_dead": 0,
+"base_exposed": 0,
+"base_sent": 29,
+"cand_kill": 1,
+"cand_dead": 0,
+"cand_exposed": 0,
+"cand_sent": 31
+}
+},
+"tables": [
+{
+"deck": "eldrazi-incursion",
+"idx": 1,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 2,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 3,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 4,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 6,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 7,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 8,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 10,
+"outcome": "both",
+"file": "other",
+"t": 53
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 12,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 13,
+"outcome": "both",
+"file": "other",
+"t": 39
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 14,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 15,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 52,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 19,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 20,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 22,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 23,
+"outcome": "both",
+"file": "other",
+"t": 57
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 24,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 25,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 26,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 27,
+"outcome": "cand_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 29,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 30,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 31,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 32,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 33,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 34,
+"outcome": "base_only",
+"file": "other",
+"t": 62
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 36,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 37,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 39,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 41,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 43,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 44,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 47,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 48,
+"outcome": "neither",
+"file": "other",
+"t": 60
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 50,
+"outcome": "neither",
+"file": "other",
+"t": 49
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 51,
+"outcome": "neither",
+"file": "other",
+"t": 50
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 52,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 53,
+"outcome": "cand_only",
+"file": "other",
+"t": 46
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 54,
+"outcome": "both",
+"file": "other",
+"t": 48
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 55,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 56,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 57,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 58,
+"outcome": "base_only",
+"file": "other",
+"t": 54
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 59,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 60,
+"outcome": "neither",
+"file": "other",
+"t": 72
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 61,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 62,
+"outcome": "both",
+"file": "other",
+"t": 48
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 63,
+"outcome": "both",
+"file": "other",
+"t": 60
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 64,
+"outcome": "both",
+"file": "other",
+"t": 29
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 65,
+"outcome": "base_only",
+"file": "other",
+"t": 45
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 67,
+"outcome": "both",
+"file": "other",
+"t": 29
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 68,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 69,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 70,
+"outcome": "base_only",
+"file": "other",
+"t": 33
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 71,
+"outcome": "neither",
+"file": "other",
+"t": 46
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 72,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 73,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 74,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 75,
+"outcome": "both",
+"file": "other",
+"t": 42
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 76,
+"outcome": "neither",
+"file": "other",
+"t": 33
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 77,
+"outcome": "neither",
+"file": "other",
+"t": 52
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 82,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 83,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 84,
+"outcome": "both",
+"file": "other",
+"t": 27
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 86,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 87,
+"outcome": "base_only",
+"file": "other",
+"t": 39
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 88,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 89,
+"outcome": "base_only",
+"file": "other",
+"t": 56
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 91,
+"outcome": "cand_only",
+"file": "other",
+"t": 59
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 92,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 93,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 94,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 95,
+"outcome": "base_only",
+"file": "other",
+"t": 60
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 96,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 97,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 99,
+"outcome": "base_only",
+"file": "other",
+"t": 46
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 101,
+"outcome": "cand_only",
+"file": "other",
+"t": 26
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 102,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 104,
+"outcome": "neither",
+"file": "other",
+"t": 53
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 105,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 106,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 109,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 110,
+"outcome": "neither",
+"file": "other",
+"t": 56
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 111,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 112,
+"outcome": "both",
+"file": "other",
+"t": 29
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 113,
+"outcome": "both",
+"file": "other",
+"t": 25
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 114,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 115,
+"outcome": "both",
+"file": "other",
+"t": 49
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 116,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 117,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 118,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 119,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 121,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 122,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 123,
+"outcome": "both",
+"file": "other",
+"t": 47
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 125,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 126,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 127,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 128,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 129,
+"outcome": "both",
+"file": "other",
+"t": 37
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 130,
+"outcome": "both",
+"file": "attack",
+"stood": "top",
+"t": 47,
+"opponents": 2,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 29
+},
+"cand": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 29
+}
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 131,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 133,
+"outcome": "cand_only",
+"file": "other",
+"t": 43
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 134,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 135,
+"outcome": "both",
+"file": "other",
+"t": 34
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 136,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 138,
+"outcome": "cand_only",
+"file": "other",
+"t": 59
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 139,
+"outcome": "neither",
+"file": "other",
+"t": 62
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 142,
+"outcome": "both",
+"file": "other",
+"t": 41
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 145,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 147,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 148,
+"outcome": "both",
+"file": "other",
+"t": 35
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 149,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 150,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 151,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 153,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 154,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 155,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 157,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 158,
+"outcome": "neither",
+"file": "other",
+"t": 28
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 159,
+"outcome": "base_only",
+"file": "other",
+"t": 24
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 160,
+"outcome": "both",
+"file": "other",
+"t": 37
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 161,
+"outcome": "both",
+"file": "other",
+"t": 36
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 162,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 163,
+"outcome": "both",
+"file": "other",
+"t": 41
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 164,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 165,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 166,
+"outcome": "both",
+"file": "other",
+"t": 42
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 167,
+"outcome": "neither",
+"file": "other",
+"t": 51
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 168,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 169,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 170,
+"outcome": "both",
+"file": "other",
+"t": 38
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 171,
+"outcome": "both",
+"file": "other",
+"t": 40
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 172,
+"outcome": "both",
+"file": "other",
+"t": 33
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 173,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 174,
+"outcome": "cand_only",
+"file": "other",
+"t": 50
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 175,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 176,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 177,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 178,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 179,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 180,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 181,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 182,
+"outcome": "cand_only",
+"file": "block",
+"t": 35,
+"base_out": false,
+"cand_out": false,
+"base_blocks": 11,
+"cand_blocks": 12,
+"life": 32,
+"base_incoming": 8,
+"cand_incoming": 4
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 187,
+"outcome": "both",
+"file": "other",
+"t": 31
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 190,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 191,
+"outcome": "neither",
+"file": "other",
+"t": 45
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 192,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 193,
+"outcome": "cand_only",
+"file": "other",
+"t": 38
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 195,
+"outcome": "both",
+"file": "other",
+"t": 21
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 196,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 197,
+"outcome": "base_only",
+"file": "other",
+"t": 46
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 198,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 199,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "eldrazi-incursion",
+"idx": 200,
+"outcome": "both",
+"file": "identical"
+}
+]
+}
