@@ -119,6 +119,12 @@ are that session's and have to be replaced by the new session's scratch director
 - `unfinished.py RUN_DIR... [-v]`: the games without a winner, by how they ended and by the card the last turn was made
   of. It found the endless chain in Miracle Worker's trigger rule (22 of 25 such games in 2,000, a sixth of the play
   time). On the base arm of every exam.
+- `attack_limit_cards.py --runtime forge/runtime-snapshot LEAGUE.json...`: the cards of a table's decks that limit or tax
+  attacks and blocks, from Forge's scripts. Read it before `runner/mistakes.py` is used at a table it has not counted: on
+  2026-11-22 a third of the pool's "winning kills not taken" were turns under Planeswalker Party's Silent Arbiter, which the
+  count now sets aside (`ATTACK_LIMITS` in mistakes.py; a new card found here goes there).
+- `read_confirming.py HOOK_EXAM_JSON [JOIN_DIR]`: `ab-run` #57 read by its rule (CLAUDE.md, In flight): the next versions
+  together, each deck, the mistakes beside what each part did by itself, the guard. For that one run.
 - `next_version.py DECK --name vN [--rules VARIANT]... [--finish leader] [--swing] [--open] [--targets] [--block]
   [--add-when 'CARD=CONDITION']`: a deck's next version put together from the candidates that passed: their cast rules
   go in where they stood, the hooks as `add_finish.py` writes them; it prints the rule list around every insertion and
