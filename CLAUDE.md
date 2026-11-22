@@ -350,7 +350,7 @@ Two Actions runs. Each rule below was fixed before its run was queued.
 | Run | Run id | Seed and table | What plays | What it decides |
 |---|---|---|---|---|
 | `ab-run` #59 | 44976505627 (commit b12112e, queued 2026-11-22 02:31 UTC) | 20261400 on `bots-v2` (#58's tables); one entry on 20261410 at the owner's table (#57's tables) | `deck@hooks` and `deck@hooksopen` for each of the pool's twelve and `eldrazi-incursion@limit` (25 entries); `blight-curse@limit`: 5,200 games in 130 shard jobs | with #58's base arms: whether the hooks hold on the pool and each pool deck's next version; the two limits on endless chains |
-| `league-run` #5 | @@LEAGUE5@@ | 20261430, the owner's table (`owners-table-v1`) | the ten decks under the versions shipped on 2026-11-22 (all six hooks in every seat): 63 cycles, 504 games in 20 shard jobs | nothing: the standings among the shipped versions, and the count of mistakes at a table where every seat has every hook and the guard |
+| `league-run` #5 | 45003916677 (commit fd0401e, queued 2026-11-22 08:40 UTC) | 20261430, the owner's table (`owners-table-v1`) | the ten decks under the versions shipped on 2026-11-22 (all six hooks in every seat): 63 cycles, 504 games in 20 shard jobs | nothing: the standings among the shipped versions, and the count of mistakes at a table where every seat has every hook and the guard |
 
 #59 had 214 of its 261 artifacts at 08:30 UTC on 2026-11-22 and should be done by about 10:00 UTC; the league's 20 jobs follow. A check-in of the session that queued them is scheduled (it collects what is complete and schedules the next).
 
