@@ -12,8 +12,9 @@ rows = []
 def wrapped(G, label, turn, lost_at, examples, where):
     before = len(examples)
     orig(G, label, turn, lost_at, examples, where)
-    if turn.get('missed') and len(examples) > before:
-        ex = examples[-1]
+    new = [x for x in examples[before:] if not x.get('commander')]      # a kill by commander damage (0.4.13) is another count
+    if turn.get('missed') and new:
+        ex = new[-1]
         c = turn['combat']
         live = [d for d in c['defenders'] if d['life'] > 0]
         kill = [d for d in live if d['through'] >= d['life']]

@@ -36,6 +36,15 @@ What is counted, per seat:
                      `kill_limited_turns`. (Found on the pool of twelve, 2026-11-22: one deck there plays Silent
                      Arbiter, and a seat with eighty power that sends one creature at the last opponent is doing
                      all the card allows.)
+  a kill by commander damage not taken
+                     Since harness 0.4.13 the `combat` line says, for each opponent, how much commander damage a
+                     commander of the seat is sure to have dealt it after this combat (`cmd`: what it has dealt
+                     so far plus what it deals now, for a commander none of that opponent's creatures may block).
+                     21 or more is a kill no block prevents, like damage that reaches the life total. Counted
+                     here, by where the table stood as above, are the turns on which only a commander gave the
+                     kill (`cmd` >= 21 with `through` under the opponent's life), so the counts above do not
+                     move with it. `cmd_blockable_turns` are the turns a commander would have reached 21 had it
+                     connected but something could block it: not a sure kill, and not a mistake to pass up.
   a death by a block not made
                      The seat was attacked, what its blocks left unblocked was at least its life, it lost that turn,
                      and the best blocks its creatures could have made would have left less than its life.
@@ -89,7 +98,9 @@ KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent'
         'kill_last_no_attack', 'kill_top_no_attack', 'kill_lesser_no_attack',
         'open_turns', 'open_attacked', 'open_elsewhere',
         'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths',
-        'kill_limited_turns', 'deaths_block_limited')
+        'kill_limited_turns', 'deaths_block_limited',
+        'cmdkill_turns', 'cmdkill_taken', 'cmdkill_other', 'cmdkill_last_turns', 'cmdkill_last_missed', 'cmdkill_top_turns', 'cmdkill_top_missed',
+        'cmdkill_lesser_turns', 'cmdkill_lesser_missed', 'cmdkill_last_no_attack', 'cmdkill_top_no_attack', 'cmdkill_lesser_no_attack', 'cmd_blockable_turns')
 
 # Permanents whose static ability limits how many creatures may attack (Forge scripts with `Mode$ AttackRestrict |
 # MaxAttackers$ N`, snapshot 2026-11-10): 'all' limits every combat, 'you' attacks on its controller. The harness's
@@ -164,6 +175,28 @@ def close_turn(G, label, turn, lost_at, examples, where):
                 if len(examples) < 400:
                     examples.append({'where': where, 't': turn['t'], 'seat': a, 'deck': label(a), 'stood': stood,
                                      'killable': [{k: d[k] for k in ('seat', 'life', 'power', 'blockers', 'through')} for d in killable],
+                                     'attacked': {str(k): len(v) for k, v in turn['attacks'].items()}})
+        # 0.4.13: a kill only a commander's damage gives (its damage on the opponent is sure to reach 21; the damage sure to get through is under its life)
+        cmd_kill = [d for d in defenders if d['life'] > 0 and d.get('cmd', 0) >= 21 and d['through'] < d['life']]
+        if any(d['life'] > 0 and d.get('cmd_any', 0) >= 21 and d.get('cmd', 0) < 21 and d['through'] < d['life'] for d in defenders):
+            g['cmd_blockable_turns'] += 1
+        if cmd_kill:
+            g['cmdkill_turns'] += 1
+            live = [d for d in defenders if d['life'] > 0]
+            top = max(danger(d, turn) for d in live)
+            stood = 'last' if len(live) == 1 else ('top' if any(danger(d, turn) == top for d in cmd_kill) else 'lesser')
+            g[f'cmdkill_{stood}_turns'] += 1
+            if any(lost_at.get(d['seat']) == turn['t'] for d in cmd_kill):
+                g['cmdkill_taken'] += 1
+            elif any(lost_at.get(d['seat']) == turn['t'] for d in defenders):
+                g['cmdkill_other'] += 1                  # another opponent went out that turn instead: not counted as missed
+            else:
+                g[f'cmdkill_{stood}_missed'] += 1
+                if not any(turn['attacks'].get(d['seat']) for d in cmd_kill):
+                    g[f'cmdkill_{stood}_no_attack'] += 1
+                if len(examples) < 400:
+                    examples.append({'where': where, 't': turn['t'], 'seat': a, 'deck': label(a), 'stood': stood, 'commander': True,
+                                     'killable': [{k: d.get(k) for k in ('seat', 'life', 'power', 'blockers', 'through', 'cmd')} for d in cmd_kill],
                                      'attacked': {str(k): len(v) for k, v in turn['attacks'].items()}})
         open_def = [d for d in defenders if d['blockers'] == 0 and d['attackers'] > 0 and d['power'] > 0]
         if open_def:
@@ -305,6 +338,14 @@ def render(G, games, old, examples, show):
                    + (f'{(g["kill_last_missed"] + g["kill_top_missed"]) / g["seat_games"]:.3f}' if g['seat_games'] else ''))
     out += ['  of the misses, not gone for at all (nothing sent at that opponent): '
             + '; '.join(f'{n} last {G[n]["kill_last_no_attack"]}, most dangerous {G[n]["kill_top_no_attack"]}, lesser {G[n]["kill_lesser_no_attack"]}' for n in names)]
+    if any(G[n]['cmdkill_turns'] or G[n]['cmd_blockable_turns'] for n in names):
+        out += ['', 'KILLS BY COMMANDER DAMAGE (logs of harness 0.4.13 and later): turns on which only a commander gave a sure kill (its damage on the opponent sure to reach 21,',
+                '       the damage sure to get through under that opponent\'s life), by where the table stood; and turns a commander would have reached 21 had nothing blocked it',
+                f'  {"":{w}} {"last":>6} {"missed":>7}   {"most dangerous":>15} {"missed":>7}   {"a lesser one":>13} {"missed":>7}   {"not gone for (last, most dangerous)":>36}   {"blockable":>10}']
+        for n in names:
+            g = G[n]
+            out.append(f'  {n:{w}} {g["cmdkill_last_turns"]:>6} {g["cmdkill_last_missed"]:>7}   {g["cmdkill_top_turns"]:>15} {g["cmdkill_top_missed"]:>7}   '
+                       f'{g["cmdkill_lesser_turns"]:>13} {g["cmdkill_lesser_missed"]:>7}   {str(g["cmdkill_last_no_attack"]) + ", " + str(g["cmdkill_top_no_attack"]):>36}   {g["cmd_blockable_turns"]:>10}')
     out += ['', 'BLOCKS: attacks that left at least the seat\'s life unblocked; the seat lost that turn; of those, its creatures could have blocked enough to live;',
             '        and those no block could stop that its own tapped creatures would have, had they stayed home; deaths on a turn a commander\'s damage reached 21',
             '        (in logs before harness 0.4.3 those are in neither of the two columns before: whether that commander could have been blocked is not known)',
@@ -323,7 +364,8 @@ def render(G, games, old, examples, show):
     if show and examples:
         out += ['', f'KILLS NOT TAKEN, the first {min(show, len(examples))} (game, turn, deck: the opponent it could have killed, what it sent where)']
         for ex in examples[:show]:
-            k = '; '.join(f'seat {d["seat"]} at {d["life"]} life, {d["through"]} sure of {d["power"]} against {d["blockers"]} blockers' for d in ex['killable'])
+            k = '; '.join(f'seat {d["seat"]} at {d["life"]} life, {d["through"]} sure of {d["power"]} against {d["blockers"]} blockers'
+                          + (f', commander damage sure to reach {d["cmd"]}' if ex.get('commander') else '') for d in ex['killable'])
             out.append(f'  {ex["where"]} turn {ex["t"]} {ex["deck"]}: {k}; attackers sent {ex["attacked"] or "nowhere"}')
     return '\n'.join(out)
 

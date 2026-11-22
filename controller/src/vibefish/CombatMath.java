@@ -94,6 +94,61 @@ final class CombatMath {
     }
 
     /**
+     * The commander among these attackers whose damage is sure to bring what it has dealt to this defender to 21
+     * or more: a {@link #lethalCommander} that none of these blockers may block (Forge's
+     * {@code CombatUtil.canBlock(attacker, blocker)}, so flying, shadow, protection and "can't be blocked" are in
+     * it; a commander one creature alone may not block counts as blockable, the careful reading). The one that
+     * deals most when there are several, null when there is none. Since 0.4.13.
+     */
+    static Card sureCommander(List<Card> attackers, List<Card> blockers, Player defender) {
+        Card best = null;
+        for (Card a : attackers) {
+            if (!lethalCommander(a, defender)) {
+                continue;
+            }
+            boolean blockable = false;
+            for (Card b : blockers) {
+                if (CombatUtil.canBlock(a, b, false)) {
+                    blockable = true;
+                    break;
+                }
+            }
+            if (!blockable && (best == null || strikes(a) > strikes(best))) {
+                best = a;
+            }
+        }
+        return best;
+    }
+
+    /**
+     * The most commander damage one commander among these attackers would have dealt to this defender after this
+     * combat if it connects (what it has dealt so far plus {@link #strikes}); with {@code sure}, only commanders
+     * none of these blockers may block. 0 when no commander is among them. Since 0.4.13, for the {@code combat} line.
+     */
+    static int commanderTotal(List<Card> attackers, List<Card> blockers, Player defender, boolean sure) {
+        int most = 0;
+        for (Card a : attackers) {
+            if (!a.isCommander() || strikes(a) <= 0) {
+                continue;
+            }
+            if (sure) {
+                boolean blockable = false;
+                for (Card b : blockers) {
+                    if (CombatUtil.canBlock(a, b, false)) {
+                        blockable = true;
+                        break;
+                    }
+                }
+                if (blockable) {
+                    continue;
+                }
+            }
+            most = Math.max(most, defender.getCommanderDamage(a) + strikes(a));
+        }
+        return most;
+    }
+
+    /**
      * Whether the best blocks leave a {@link #lethalCommander} unblocked: the matching stops those attackers
      * first, so this is true only when no set of blocks stops all of them.
      */

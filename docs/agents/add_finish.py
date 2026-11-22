@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """add_finish.py DECK [DECK ...] [--name NAME] [--finish true|leader|none] [--guard one|table] [--swing danger] [--open]
-[--targets danger] [--block survive]: a candidate that is a deck's shipped playbook with a hook on its attack, its triggers'
+[--targets danger] [--block survive] [--commander]: a candidate that is a deck's shipped playbook with a hook on its attack, its triggers'
 targets or its blocks. A session helper.
 
 For each deck, playbook/variants/DECK-NAME.json: the shipped playbook of playbook/precons/DECK.json, its version plus one,
@@ -16,13 +16,16 @@ and blocks exist that would not (0.4.3); alone its NAME defaults to `block`. `--
 block: the attackers the policy sent at a player go at the opponent that looks most dangerous instead when the attack is no worse
 there (0.4.5); alone its NAME defaults to `swing`. `--open` adds `"open": true` to the attack block: creatures that stayed home
 attack an opponent that cannot block, when Forge's own judgement does not want them home (0.4.5); alone its NAME defaults to
-`open`. Nothing else is changed, and the notes are the shipped notes with what the candidate is at the end.
+`open`. `--commander` (with `--finish none` on a playbook that has `finish` already) adds `"finish_commander": true` to the attack
+block: a commander of the seat whose damage on an opponent is sure to reach 21 (nothing of that opponent's can block it) is a sure
+kill like any other (0.4.13); alone its NAME defaults to `cmdr`. Nothing else is changed, and the notes are the shipped notes with
+what the candidate is at the end.
 """
 import argparse, copy, json, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-def hook_texts(swing=None, open_=False, finish="none", guard=None, targets=None, block=None):
+def hook_texts(swing=None, open_=False, finish="none", guard=None, targets=None, block=None, commander=False):
     """What each hook asked for does, in the words a playbook's notes use (next_version.py uses them too)."""
     what = []
     if swing:
@@ -40,6 +43,10 @@ def hook_texts(swing=None, open_=False, finish="none", guard=None, targets=None,
     elif finish == "leader":
         what.append("a sure kill is taken from the most dangerous opponent down (`\"finish\": \"leader\"`: enough attackers are put on the opponent that looks most dangerous "
                     "that the damage reaches its life whatever it blocks, then on the next one, and no weaker opponent is killed while a more dangerous one lives)")
+    if commander:
+        what.append("a commander of the seat whose combat damage on an opponent would reach 21 this turn, and which no creature of that opponent can block, is a sure kill "
+                    "of that opponent like damage that reaches its life: the commander attacks it, in the same order from the most dangerous opponent down "
+                    "(`\"finish_commander\": true`; the guard does not take such an attacker back)")
     if guard == "one":
         what.append("attackers are taken back when the attack leaves the seat where one opponent alone is sure to kill it before its next turn and keeping them home "
                     "prevents that (`guard`; a sure kill's attackers stay, and an attack stands when nothing kept home would save the seat)")
@@ -67,19 +74,23 @@ def main(argv):
     ap.add_argument("--open", action="store_true")
     ap.add_argument("--targets", choices=["danger"])
     ap.add_argument("--block", choices=["survive"])
+    ap.add_argument("--commander", action="store_true")
     ap.add_argument("--on", default="")
     a = ap.parse_args(argv)
-    if a.finish == "none" and not a.guard and not a.targets and not a.block and not a.swing and not a.open:
-        ap.error("nothing to add: --finish none without --guard, --swing, --open, --targets or --block")
+    if a.finish == "none" and not a.guard and not a.targets and not a.block and not a.swing and not a.open and not a.commander:
+        ap.error("nothing to add: --finish none without --guard, --swing, --open, --targets, --block or --commander")
     if not a.name:
         a.name = (("swing" if a.swing else "") + ("open" if a.open else "") + {"true": "finish", "leader": "leader", "none": ""}[a.finish] + {"one": "guard", "table": "table", None: ""}[a.guard]
-                  + ("aim" if a.targets else "") + ("block" if a.block else ""))
+                  + ("aim" if a.targets else "") + ("block" if a.block else "") + ("cmdr" if a.commander else ""))
     for deck in a.decks:
         base = json.load(open(os.path.join(ROOT, "playbook", "precons", f"{deck}.json"), encoding="utf-8"))["playbook"]
         pb = copy.deepcopy(base)
         attack = dict(pb.get("attack") or {"policy": "forge"})
+        if a.commander and not (attack.get("finish") or a.finish != "none"):
+            print(f"{deck}: --commander needs a playbook with finish on its attack (attack {json.dumps(attack)}); nothing written")
+            continue
         if ((attack.get("finish") and a.finish != "none") or (attack.get("guard") and a.guard) or (attack.get("aim") and a.swing) or (attack.get("open") and a.open)
-                or (pb.get("targets") and a.targets) or (pb.get("block") and a.block)):
+                or (pb.get("targets") and a.targets) or (pb.get("block") and a.block) or (attack.get("finish_commander") and a.commander)):
             print(f"{deck}: the shipped playbook already has that hook (attack {json.dumps(attack)}, targets {json.dumps(pb.get('targets'))}); nothing written")
             continue
         if a.swing:
@@ -90,9 +101,11 @@ def main(argv):
             attack["finish"] = True if a.finish == "true" else "leader"
         if a.guard:
             attack["guard"] = True if a.guard == "one" else "table"
-        what = hook_texts(a.swing, a.open, a.finish, a.guard, a.targets, a.block)
+        if a.commander:                                 # beside finish, where a reader looks for it
+            attack = {k2: v2 for k, v in attack.items() for k2, v2 in ([(k, v), ("finish_commander", True)] if k == "finish" else [(k, v)])}
+        what = hook_texts(a.swing, a.open, a.finish, a.guard, a.targets, a.block, a.commander)
         # the attack block goes where a reader looks for it: after the version
-        touches_attack = a.finish != "none" or bool(a.guard) or bool(a.swing) or a.open
+        touches_attack = a.finish != "none" or bool(a.guard) or bool(a.swing) or a.open or a.commander
         out_pb = {"version": base["version"] + 1}
         if touches_attack or base.get("attack"):
             out_pb["attack"] = attack if touches_attack else base["attack"]
@@ -107,7 +120,9 @@ def main(argv):
         out_pb.update({k: v for k, v in pb.items() if k not in ("version", "attack", "targets", "block", "on", "notes")})
         ba = base.get("attack") or {}
         was = "its own attack (" + ba.get("policy", "go_wide") + ")" if ba and ba.get("policy", "go_wide") != "forge" else "Forge's own attack"
-        declared = f"after {was} has been declared" + (" and the hooks the version already has have acted" if any(k in ba for k in ("aim", "open", "finish", "enable")) else "") + ", "
+        declared = f"after {was} has been declared" + (" and the hooks the version already has have acted" if any(k in ba for k in ("aim", "open", "finish", "enable")) and not a.commander else "") + ", "
+        if a.commander and a.finish == "none" and not (a.guard or a.swing or a.open):
+            declared = "when the kill hook looks for a sure kill, "
         out_pb["notes"] = ((base.get("notes") or "") + f" VERSION {out_pb['version']} CANDIDATE `{a.name}`{' (' + a.on + ')' if a.on else ''}. Version {base['version']} with "
                            f"{['', 'one change', 'two changes', 'three changes', 'four changes', 'five changes', 'six changes'][len(what)]}: " + (declared if touches_attack else "")
                            + f"{'; and then '.join(what)}. No cast or trigger rule is changed.")

@@ -47,6 +47,7 @@ public final class Playbook {
         public final String policy;        // go_wide | pressure | forge
         public final boolean finish;       // take a kill no block prevents
         public final boolean finishLeader; // ... only from the most dangerous opponent down
+        public final boolean finishCommander;  // ... and a kill by a commander's damage that no blocker can stop (0.4.13)
         public final boolean guard;        // take attackers back when the attack leaves the seat dead on board to one opponent
         public final boolean guardTable;   // ... or to the opponents one after another
         public final int guardMargin;      // ... counting the seat as dead this much life early
@@ -76,6 +77,10 @@ public final class Playbook {
             }
             finish = fin != null;
             finishLeader = "leader".equals(fin);
+            finishCommander = o.has("finish_commander") && o.get("finish_commander").isJsonPrimitive() && o.get("finish_commander").getAsBoolean();
+            if (finishCommander && !finish) {
+                throw new IllegalArgumentException("playbook attack finish_commander needs finish (it is a kind of kill the finish hook takes)");
+            }
             String grd = null;
             if (o.has("guard") && o.get("guard").isJsonPrimitive()) {
                 grd = o.getAsJsonPrimitive("guard").isBoolean() ? (o.get("guard").getAsBoolean() ? "one" : null) : o.get("guard").getAsString();
@@ -714,6 +719,7 @@ public final class Playbook {
             sb.append(attack.aimDanger ? ", aimed at the most dangerous opponent when no worse there (margin " + attack.aimMargin + ")" : "");
             sb.append(attack.open ? ", idle creatures attack an open board" : "");
             sb.append(attack.finish ? (attack.finishLeader ? ", takes a sure kill of the most dangerous opponent" : ", takes a sure kill") : "");
+            sb.append(attack.finishCommander ? " (a commander's 21 damage that no blocker can stop counts as one)" : "");
             sb.append(attack.guard ? (attack.guardTable ? ", keeps attackers home against the table's lethal answer" : ", keeps attackers home against one opponent's lethal answer") : "");
         }
         if (mulligan != null) {

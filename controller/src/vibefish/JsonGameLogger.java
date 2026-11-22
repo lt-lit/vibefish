@@ -295,7 +295,9 @@ public final class JsonGameLogger {
             List<Card> blockers = CombatMath.ableBlockers(d);
             defenders.add(obj("seat", seatByPlayerId.get(d.getView().getId()), "life", d.getLife(), "attackers", attackers.size(),
                     "power", CombatMath.hits(attackers), "blockers", blockers.size(), "through", CombatMath.through(attackers, blockers),
-                    "permanents", CombatMath.nonlandPermanents(d)));     // 0.4.1: its nonland permanents, for how dangerous it looks
+                    "permanents", CombatMath.nonlandPermanents(d),       // 0.4.1: its nonland permanents, for how dangerous it looks
+                    "cmd", CombatMath.commanderTotal(attackers, blockers, d, true),      // 0.4.13: commander damage a commander is sure to reach on it
+                    "cmd_any", CombatMath.commanderTotal(attackers, blockers, d, false)));   // ... and would reach if it connects
         }
         List<List<Object>> mine = new ArrayList<>();
         for (Card c : able.values()) {

@@ -601,6 +601,7 @@ public class PlaybookController extends PlayerControllerAi {
         opps.sort((a, b) -> Integer.compare(danger(b), danger(a)));
         Map<Card, Player> plan = new LinkedHashMap<>();
         StringBuilder what = new StringBuilder();
+        int commanderKills = 0;
         for (Player d : opps) {
             List<Card> can = new ArrayList<>();
             for (Card c : CombatMath.freeAttackers(getGame(), attacker, d)) {
@@ -610,7 +611,9 @@ public class PlaybookController extends PlayerControllerAi {
             }
             can.sort((x, y) -> Integer.compare(CombatMath.hits(y), CombatMath.hits(x)));
             List<Card> blockers = CombatMath.ableBlockers(d);
-            if (CombatMath.through(can, blockers) < d.getLife()) {
+            boolean byLife = CombatMath.through(can, blockers) >= d.getLife();
+            Card byCommander = !byLife && playbook.attack.finishCommander ? CombatMath.sureCommander(can, blockers, d) : null;
+            if (!byLife && byCommander == null) {
                 if (playbook.attack.finishLeader) {
                     for (Player lesser : opps.subList(opps.indexOf(d) + 1, opps.size())) {     // for the count and the trace only
                         List<Card> left = new ArrayList<>();
@@ -631,6 +634,15 @@ public class PlaybookController extends PlayerControllerAi {
                 continue;
             }
             List<Card> chosen = new ArrayList<>();
+            if (byCommander != null) {                  // 0.4.13: the commander alone, its damage on this opponent reaches 21 and nothing can block it
+                chosen.add(byCommander);
+                plan.put(byCommander, d);
+                commanderKills++;
+                what.append(what.length() == 0 ? "" : "; ").append(byCommander.getName()).append(" at ").append(d.getName())
+                    .append(" (commander damage ").append(d.getCommanderDamage(byCommander)).append(" + ").append(CombatMath.strikes(byCommander))
+                    .append(", none of its ").append(blockers.size()).append(" blockers can block it; life ").append(d.getLife()).append(")");
+                continue;
+            }
             for (Card c : can) {                        // the heaviest first, until what is sure to get through is enough
                 chosen.add(c);
                 if (CombatMath.through(chosen, blockers) >= d.getLife()) {
@@ -648,6 +660,9 @@ public class PlaybookController extends PlayerControllerAi {
             return;
         }
         count("attack_kill_seen", 1);
+        if (commanderKills > 0) {
+            count("attack_kill_commander_seen", 1);
+        }
         Map<Card, GameEntity> before = new LinkedHashMap<>();
         for (Card c : combat.getAttackers()) {
             before.put(c, combat.getDefenderByAttacker(c));
@@ -680,6 +695,9 @@ public class PlaybookController extends PlayerControllerAi {
         }
         count("attack_kill", 1);
         count("attack_kill_moved", moved);
+        if (commanderKills > 0) {
+            count("attack_kill_commander", 1);          // a declaration changed on a turn a commander's kill was in the plan
+        }
         trace("takes the kill: " + what + " (" + moved + " attacker(s) added or moved)");
     }
 
@@ -856,7 +874,9 @@ public class PlaybookController extends PlayerControllerAi {
                 continue;
             }
             List<Card> at = new ArrayList<>(combat.getAttackersOf(opp));
-            if (!at.isEmpty() && CombatMath.through(at, CombatMath.ableBlockers(opp)) >= opp.getLife()) {
+            List<Card> theirBlockers = CombatMath.ableBlockers(opp);
+            if (!at.isEmpty() && (CombatMath.through(at, theirBlockers) >= opp.getLife()
+                    || (playbook.attack.finishCommander && CombatMath.sureCommander(at, theirBlockers, opp) != null))) {
                 locked.addAll(at);                      // it will not be there to answer
             } else {
                 threats.add(opp);

@@ -170,6 +170,19 @@ dangerous one lives. The last opponent left is always the most dangerous one. Ev
 (`"any"` is another spelling of `true`). One more counter: `attack_kill_left`, a turn on which a sure kill of a
 lesser opponent was there and was left alone.
 
+`"finish_commander": true` (harness 0.4.13, beside `finish`) makes a commander's damage a kill of the same kind. An
+opponent the creatures cannot kill through its life is still killed for sure when a commander of the seat that may
+attack it would bring the combat damage it has dealt that opponent to 21 (twice its damage with double strike) and
+none of that opponent's creatures that may block can block it (Forge's `CombatUtil.canBlock(attacker, blocker)`:
+flying, protection, "can't be blocked"; a commander that only two creatures together may block counts as blockable).
+The commander alone is sent at that opponent, in the same walk from the most dangerous opponent down, and the other
+creatures stay free for the next opponent; where the damage reaches the life total anyway nothing changes. The guard
+does not take such an attacker back and does not count that opponent's answer. Counters: `attack_kill_commander_seen`
+(turns with such a kill in the plan), `attack_kill_commander` (the declaration was changed on such a turn). It comes
+from a count (`runner/mistakes.py`, the kills by commander damage): a flying commander with twenty power sent at the
+weakest player while the strongest sat at 33 life with nothing that could block it.
+`{"attack": {"policy": "forge", "finish": "leader", "finish_commander": true}}`.
+
 `"guard": true`, on any policy and after `finish`, does not tap out into a lethal answer. For each opponent the
 attack as declared is not sure to kill, the seat asks what that opponent, alone, with every creature that may attack
 on its next turn, would get through the creatures that would be untapped at home, under a blocking plan the seat
