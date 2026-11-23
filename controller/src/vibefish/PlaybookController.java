@@ -23,6 +23,7 @@ import forge.ai.PlayerControllerAi;
 import forge.ai.SpellApiToAi;
 import forge.game.Game;
 import forge.game.GameEntity;
+import forge.game.ability.AbilityUtils;
 import forge.game.ability.ApiType;
 import forge.game.card.Card;
 import forge.game.card.CardCollection;
@@ -38,6 +39,7 @@ import forge.game.keyword.Keyword;
 import forge.game.phase.PhaseHandler;
 import forge.game.phase.PhaseType;
 import forge.game.player.Player;
+import forge.game.player.PlayerActionConfirmMode;
 import forge.game.spellability.SpellAbility;
 import forge.game.trigger.WrappedAbility;
 import forge.game.zone.ZoneType;
@@ -1611,6 +1613,115 @@ public class PlaybookController extends PlayerControllerAi {
     }
 
     /**
+     * Forge's own choice, the held plays left out, and since 0.4.15, for a playbook whose {@code cast} block has
+     * {@code keep_life}, without a spell whose own script would take the seat below that much life
+     * ({@link #lifePrice}). Forge's AI casts Reanimate for a creature that costs more life than the seat has, and pays
+     * its last life for an alternative cost: at the owner's table a seat ended its own game that way in one game of
+     * sixty (DESIGN.md section 45). Such a choice is flagged the way a held play is and Forge is asked again; a
+     * playbook that does not ask is read exactly as before.
+     */
+    private List<SpellAbility> forgeChoice(Playbook.Cast cast) {
+        if (cast.keepLife <= 0) {
+            return forgeChoiceHeld(cast);
+        }
+        List<SpellAbility> dear = new ArrayList<>();
+        try {
+            for (int tries = 0; tries < 5; tries++) {
+                List<SpellAbility> choice = forgeChoiceHeld(cast);
+                if (choice == null || choice.isEmpty() || !tooDear(choice.get(0), cast)) {
+                    return choice;
+                }
+                SpellAbility sa = choice.get(0);
+                count("cast_life_vetoes", 1);
+                trace("kept " + sa.getHostCard().getName() + " back from Forge: it would cost " + lifePrice(sa) + " life at " + player.getLife()
+                        + " (keeps " + cast.keepLife + ")");
+                dear.add(sa);
+                for (SpellAbility d : dear) {
+                    d.setSkip(false);
+                }
+                super.chooseSpellAbilityToPlay();       // result unused: this call only resets Forge's skip memory
+                for (SpellAbility d : dear) {
+                    d.setSkip(true);
+                }
+            }
+            count("cast_life_stuck", 1);
+            return null;                                // pass rather than let it go
+        } finally {
+            for (SpellAbility d : dear) {
+                d.setSkip(false);
+            }
+        }
+    }
+
+    private boolean tooDear(SpellAbility sa, Playbook.Cast cast) {
+        if (cast.keepLife <= 0 || sa == null || sa.getHostCard() == null) {
+            return false;
+        }
+        int price = lifePrice(sa);
+        return price > 0 && player.getLife() - price < cast.keepLife;
+    }
+
+    /**
+     * The life a spell or ability takes from the seat that plays it, as far as its script says so now: life paid as
+     * a cost (a fixed amount, or the mana value an alternative cost charges), and the parts of its effect that make
+     * "you" lose life or deal damage to "you" by an amount that can be calculated before it resolves. Where the
+     * amount is the mana value of what the spell is aimed at (Reanimate: "you lose life equal to its mana value"),
+     * it is read off the target as it is set. What is decided as the spell resolves is not seen (a mode, a number
+     * of counters, the colours of mana spent), and neither is a part that is aimed at a player: 0 for those.
+     */
+    private int lifePrice(SpellAbility sa) {
+        int n = 0;
+        try {
+            Cost cost = sa.getPayCosts();
+            CostPayLife pay = cost == null ? null : cost.getCostPartByType(CostPayLife.class);
+            if (pay != null && !"X".equals(pay.getAmount())) {
+                Integer fixed = pay.convertAmount();
+                n += Math.max(0, fixed != null ? fixed : pay.getAbilityAmount(sa));
+            }
+        } catch (RuntimeException e) {
+            // a cost that cannot be told now is not counted
+        }
+        for (SpellAbility p = sa; p != null; p = p.getSubAbility()) {
+            n += partPrice(sa, p);
+        }
+        if (sa.getApi() == ApiType.Repeat) {            // "you lose 2 life and draw two cards ... repeat this process": one round of it
+            for (SpellAbility p = sa.getAdditionalAbility("RepeatSubAbility"); p != null; p = p.getSubAbility()) {
+                n += partPrice(sa, p);
+            }
+        }
+        return n;
+    }
+
+    private int partPrice(SpellAbility root, SpellAbility p) {
+        try {
+            if (p.usesTargeting()) {
+                return 0;
+            }
+            ApiType api = p.getApi();
+            String who = p.getParam("Defined");
+            if (api == ApiType.LoseLife && (who == null || "You".equals(who))) {
+                String amount = p.getParamOrDefault("LifeAmount", "1");
+                String svar = p.getSVar(amount);
+                if (svar != null && svar.contains("CardManaCost")) {
+                    for (SpellAbility q = root; q != null; q = q.getSubAbility()) {
+                        if (q.usesTargeting() && q.getTargets() != null && q.getTargets().getFirstTargetedCard() != null) {
+                            return Math.max(0, q.getTargets().getFirstTargetedCard().getCMC());
+                        }
+                    }
+                    return 0;
+                }
+                return Math.max(0, AbilityUtils.calculateAmount(p.getHostCard(), amount, p));
+            }
+            if (api == ApiType.DealDamage && "You".equals(who)) {
+                return Math.max(0, AbilityUtils.calculateAmount(p.getHostCard(), p.getParamOrDefault("NumDmg", "0"), p));
+            }
+        } catch (RuntimeException e) {
+            // an amount that cannot be told now is not counted
+        }
+        return 0;
+    }
+
+    /**
      * Forge's own choice with the held plays left out. Forge drops abilities flagged {@code skip} from its candidates
      * for one decision, remembers which ones it dropped and clears their flags at the start of its next decision, so
      * a flag set here is sometimes cleared before it is read. When that lets a held play through, one unflagged call
@@ -1618,7 +1729,7 @@ public class PlaybookController extends PlayerControllerAi {
      * held is the same choice Forge would have made with the held plays removed (it takes the first acceptable
      * candidate in its own order), so the extra calls are only spent when a hold actually bites.
      */
-    private List<SpellAbility> forgeChoice(Playbook.Cast cast) {
+    private List<SpellAbility> forgeChoiceHeld(Playbook.Cast cast) {
         List<Playbook.CastRule> holds = holdsInForce(cast);
         if (holds.isEmpty()) {
             return super.chooseSpellAbilityToPlay();
@@ -1815,7 +1926,25 @@ public class PlaybookController extends PlayerControllerAi {
                     return null;
                 }
             }
-            return choice == null || choice.isEmpty() ? null : choice.get(0);
+            SpellAbility pick = choice == null || choice.isEmpty() ? null : choice.get(0);
+            if (pick != null && tooDear(pick, cast)) {
+                // 0.4.15: Forge's choice would take the seat under the playbook's keep_life; it is asked once more without it
+                count("cast_life_vetoes", 1);
+                trace("kept " + pick.getHostCard().getName() + " back from Forge: it would cost " + lifePrice(pick) + " life at " + player.getLife()
+                        + " (keeps " + cast.keepLife + ")");
+                unflag(flagged);
+                super.chooseSpellAbilityToPlay();       // result unused: this call only resets Forge's skip memory
+                flagNamed(cast, holds, flagged);
+                pick.setSkip(true);
+                flagged.add(pick);
+                choice = super.chooseSpellAbilityToPlay();
+                pick = choice == null || choice.isEmpty() ? null : choice.get(0);
+                if (pick != null && (isNamed(pick, cast) || isHeld(pick, holds) || tooDear(pick, cast))) {
+                    count("cast_life_stuck", 1);
+                    return null;
+                }
+            }
+            return pick;
         } finally {
             unflag(flagged);
         }
@@ -2522,6 +2651,19 @@ public class PlaybookController extends PlayerControllerAi {
             return false;
         }
         if (!ComputerUtilCost.canPayCost(sa, player, false)) {
+            if (aimed != null) {
+                aimed.resetTargets();
+            }
+            if (paidX != null) {
+                paidX.setXManaCostPaid(null);
+            }
+            return false;
+        }
+        if (playbook.cast != null && tooDear(sa, playbook.cast)) {
+            // 0.4.15: what the spell's own script takes from the seat would leave it under the playbook's keep_life
+            count("cast_life_kept", 1);
+            trace("rule " + rule.index + " does not play " + sa.getHostCard().getName() + ": it would cost " + lifePrice(sa) + " life at " + player.getLife()
+                    + " (keeps " + playbook.cast.keepLife + ")");
             if (aimed != null) {
                 aimed.resetTargets();
             }
@@ -3444,7 +3586,7 @@ public class PlaybookController extends PlayerControllerAi {
         String name = wrapper.getHostCard().getName();
         String text = null;
         for (Playbook.TriggerRule rule : playbook.triggers) {
-            if (!rule.cards.contains(name)) {
+            if (rule.effect || !rule.cards.contains(name)) {
                 continue;
             }
             if (rule.ability != null) {
@@ -3470,6 +3612,56 @@ public class PlaybookController extends PlayerControllerAi {
                         continue;
                     }
                 }
+                return rule;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * A "you may" that an effect of one of the seat's own cards asks as it resolves (0.4.15). Cemetery Tampering's
+     * "you may mill three cards" is written into the effect and not into the trigger, so Forge asks it here and
+     * not in {@link #confirmTrigger}, and its AI says yes with three cards left in the library. A trigger rule with
+     * {@code "effect": true} that names the card and whose conditions hold answers; with none, Forge's AI does.
+     */
+    @Override
+    public boolean confirmAction(SpellAbility sa, PlayerActionConfirmMode mode, String message, List<String> options, Card cardToShow,
+            Map<String, Object> params) {
+        Playbook.TriggerRule rule = null;
+        try {
+            rule = effectRule(sa);
+        } catch (RuntimeException e) {
+            count("trigger_errors", 1);
+            System.err.println("[vibefish] playbook effect rule failed, Forge answers: " + e);
+        }
+        if (rule == null) {
+            return super.confirmAction(sa, mode, message, options, cardToShow, params);
+        }
+        count(rule.accept ? "trigger_effect_accepted" : "trigger_effect_declined", 1);
+        count("trigger_rule_" + rule.index, 1);
+        trace("trigger rule " + rule.index + (rule.accept ? " accepts" : " declines") + " what " + sa.getHostCard().getName() + " offers as it resolves");
+        return rule.accept;
+    }
+
+    private Playbook.TriggerRule effectRule(SpellAbility sa) {
+        if (playbook == null || playbook.triggers.isEmpty() || sa == null || sa.getHostCard() == null || sa.getActivatingPlayer() != player) {
+            return null;
+        }
+        String name = sa.getHostCard().getName();
+        String text = null;
+        for (Playbook.TriggerRule rule : playbook.triggers) {
+            if (!rule.effect || !rule.cards.contains(name)) {
+                continue;
+            }
+            if (rule.ability != null) {
+                if (text == null) {
+                    text = (String.valueOf(sa.getStackDescription()) + " " + String.valueOf(sa.getDescription())).toLowerCase(java.util.Locale.ROOT);
+                }
+                if (!text.contains(rule.ability.toLowerCase(java.util.Locale.ROOT))) {
+                    continue;
+                }
+            }
+            if (allHold(rule.when)) {
                 return rule;
             }
         }

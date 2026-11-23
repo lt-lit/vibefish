@@ -429,6 +429,21 @@ the first game (exit 2), so a typo cannot switch a rule off quietly. `max_per_tu
 one turn (default 60) as a guard against a free loop. A cast that does not go through (Forge could not pay for it after
 all) is not tried again that turn.
 
+`"keep_life": 4` on the `cast` block (harness 0.4.15; `"cast": {"keep_life": 4, "rules": [...]}`): the seat casts no
+spell, and uses no ability, whose own script would take it under that much life. Forge's AI casts Reanimate ("you
+lose life equal to its mana value") for a creature that costs more life than the seat has, pays the seat's last life
+for an alternative cost, and a `play` rule with nothing to aim does not ask Forge's opinion at all: at the owner's
+table a seat was out of the game by the price of its own spell in one game of thirty (DESIGN §45; `runner/mistakes.py`
+counts it). What the guard reads is what the script says when the spell is cast: life paid as a cost (not an X, which
+`x_keep_life` is for), and the parts of the effect that make "you" lose life or deal damage to "you" by an amount
+that can be calculated then; where that amount is the mana value of the card the spell is aimed at, it is read off
+the target as Forge has set it. A rule's play that costs too much is not made (`cast_life_kept`), and Forge's own
+choice that costs too much is taken out of its candidates the way a held play is and Forge is asked again
+(`cast_life_vetoes`; `cast_life_stuck` when Forge would have nothing else and the seat passes). What is decided as
+the spell resolves is not seen: a charm's mode, the number of counters Eventide's Shadow removes (`take`), the
+colours of mana spent on a converge spell, a "target player" that turns out to be the caster. Those want a rule of
+their own with a condition on `life`. Without the key nothing changes.
+
 The harness records the playbook per seat in `run.json` (`decks[].playbook`, the `cast` object as written) and the
 policy's counters per game (`games[].playbook_stats`): `attack_decisions`, `attack_policy`, `attack_fallback`,
 `attack_spread`, `attackers_declared`, `attackers_reserved`, `mulligan_decisions`, `mulligans_taken`, and for the
@@ -464,6 +479,15 @@ sacrifices its lowest-rated creature and picks the modes and targets, so the con
 price is right (`tokens >= 1`: there is a token to give up). Mandatory triggers are never asked about. Counters:
 `trigger_decisions`, `trigger_accepted`, `trigger_declined`, `trigger_rule_<n>`, `trigger_errors`; the rules are
 recorded in `run.json` under `decks[].playbook.triggers`.
+
+`"effect": true` on a trigger rule (harness 0.4.15) is for a "you may" that Forge asks while an effect of the card
+resolves, and not as an optional trigger. Cemetery Tampering and Crawling Sensation ("at the beginning of your upkeep,
+you may mill three cards") are scripted that way (`Optional$ True` on the effect), so an ordinary trigger rule never
+sees the question, and Forge's AI says yes with three cards left in the library: Death Toll was out of cards on its
+own turn in 12 of 400 league games (DESIGN §45). `{"decline": ["Crawling Sensation", "Cemetery Tampering"],
+"effect": true, "when": ["library <= 15"]}` answers it. A rule with `effect` answers nothing else, and a rule without
+it never answers an effect's question, so every rule written before 0.4.15 is read as before; `per_turn` is not for
+these rules. Counters: `trigger_effect_accepted`, `trigger_effect_declined`, and the rule's `trigger_rule_<n>`.
 
 An `accept` without a condition says yes every time, and a trigger that feeds itself then has no end. Miracle Worker's
 version 3 accepted Ondu Spiritdancer's copy that way; with Secret Arcade unlocked a Spiritdancer that enters copies

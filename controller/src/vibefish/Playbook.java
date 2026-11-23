@@ -510,10 +510,12 @@ public final class Playbook {
         public final boolean hasReserve;    // some rule keeps mana for a card through the seat's own turn
         public final int dangerLife;        // how dangerous an opponent looks: this times its life ...
         public final int dangerPermanents;  // ... plus this times its nonland permanents (an aim reads it; DESIGN.md section 33)
+        public final int keepLife;          // 0.4.15: no spell is cast whose own script takes the seat below this much life (0: not asked)
 
         Cast(JsonObject o) {
             source = o;
             maxPerTurn = num(o, "max_per_turn", 60);
+            keepLife = Math.max(0, num(o, "keep_life", 0));
             JsonObject danger = o.has("danger") && o.get("danger").isJsonObject() ? o.getAsJsonObject("danger") : new JsonObject();
             dangerLife = num(danger, "life", 1);
             dangerPermanents = num(danger, "permanents", 2);
@@ -609,6 +611,7 @@ public final class Playbook {
         public final String ability;        // text the trigger's description contains (null: any trigger of the card)
         public final List<Cond> when;
         public final int perTurn;           // an accept rule says yes at most this often in one turn (0: no limit)
+        public final boolean effect;        // 0.4.15: answers the "you may" an effect of the card asks as it resolves, not its optional trigger
         public final int index;             // 1-based position in the file, for the counters
 
         TriggerRule(JsonObject o, int index) {
@@ -630,6 +633,10 @@ public final class Playbook {
             perTurn = num(o, "per_turn", 0);
             if (perTurn < 0 || (perTurn > 0 && !accept)) {
                 throw new IllegalArgumentException("playbook trigger rule " + index + ": \"per_turn\" is a positive number on an accept rule");
+            }
+            effect = o.has("effect") && o.get("effect").isJsonPrimitive() && o.get("effect").getAsBoolean();
+            if (effect && perTurn > 0) {
+                throw new IllegalArgumentException("playbook trigger rule " + index + ": \"per_turn\" is not for a rule with \"effect\"");
             }
         }
     }

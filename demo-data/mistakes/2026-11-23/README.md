@@ -207,3 +207,23 @@ Revenant Recon has 5, Miracle Worker and Veloci-Ramp-Tor one each, all taken. Th
 looked equally dangerous, the walk of `"finish": "leader"` stopped at the first, which had no sure kill, and the second,
 which the Mothman was sure to kill, was not looked at (game g00299, turn 21). The count files a tie under the most
 dangerous; the walk should too.
+
+## Seats out of the game on their own turn (`own-turn-deaths.json`)
+
+`runner/mistakes.py` counts them since 2026-11-23 (ITS OWN TURN; DESIGN.md §45): a seat out of the game on its own
+turn, and of those the ones where the `life` line that took it to zero lies between the `cast` line of a spell of its
+own and that spell's `resolve` line: it paid for its own spell with its game. The file holds, for `league-run` #5, #6
+and #7, each deck's counts and every such death with the game, the turn, the kind and the card.
+
+| | Games | Out on their own turn | By the price of their own spell | After their own spell had resolved | By an ability or trigger they controlled |
+|---|---|---|---|---|---|
+| `league-run` #5 (the owner's table, the versions of 2026-11-22) | 504 | 113 | 17 | 1 | 48 |
+| `league-run` #7 (the same tables, the versions of 2026-11-23) | 504 | 105 | 16 | 1 | 49 |
+| `league-run` #6 (the pool) | 600 | 30 | none | none | 20 |
+
+The 33 at the owner's table: Reanimate 18 (Revenant Recon 15, Death Toll 3), Eventide's Shadow 5 (Blight Curse; three
+more of its casts emptied the library and are filed as not by life), Rakdos Charm 4 (Ahoy Mateys), Notion Rain 2
+(Revenant Recon), Hoarder's Greed 2 and Painful Truths 1 (Blight Curse), Pact of the Serpent 1 (Veloci-Ramp-Tor,
+cast through Etali). The column of abilities and triggers is mostly another deck's doing (Radiation, from Mutant
+Menace's rad counters: 31 and 38; the emblem of Chandra, Awakened Inferno at the pool: 13) and is not judged. Not by
+life: Death Toll had no card left to draw on its own turn in 7 and 5 of its 200 games.

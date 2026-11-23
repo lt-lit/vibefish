@@ -1,0 +1,2731 @@
+{
+ "kind": "own-turn-deaths",
+ "made_with": "runner/mistakes.py RUN_DIR --by-deck --json (the own_* keys of each group and the own_turn_deaths list)",
+ "runs": {
+  "league-run-5": {
+   "games": 504,
+   "groups": {
+    "ahoy-mateys": {
+     "seat_games": 200,
+     "own_turn_deaths": 15,
+     "own_spell_deaths": 2,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 7
+    },
+    "blight-curse": {
+     "seat_games": 200,
+     "own_turn_deaths": 15,
+     "own_spell_deaths": 4,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 3
+    },
+    "blood-rites": {
+     "seat_games": 200,
+     "own_turn_deaths": 6,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 4
+    },
+    "deadly-disguise": {
+     "seat_games": 200,
+     "own_turn_deaths": 5,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 4
+    },
+    "death-toll": {
+     "seat_games": 200,
+     "own_turn_deaths": 12,
+     "own_spell_deaths": 1,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 0
+    },
+    "miracle-worker": {
+     "seat_games": 200,
+     "own_turn_deaths": 15,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 1,
+     "own_ability_deaths": 8
+    },
+    "mutant-menace": {
+     "seat_games": 204,
+     "own_turn_deaths": 13,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 12
+    },
+    "revenant-recon": {
+     "seat_games": 204,
+     "own_turn_deaths": 24,
+     "own_spell_deaths": 10,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 8
+    },
+    "squirreled-away": {
+     "seat_games": 204,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 0
+    },
+    "veloci-ramp-tor": {
+     "seat_games": 204,
+     "own_turn_deaths": 6,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 2
+    }
+   },
+   "own_turn_deaths": [
+    {
+     "where": "shard-1/g00041/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 5,
+     "life_after": -1
+    },
+    {
+     "where": "shard-1/g00201/games/game-001.events.jsonl",
+     "t": 55,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -2
+    },
+    {
+     "where": "shard-1/g00221/games/game-001.events.jsonl",
+     "t": 38,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00261/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -2
+    },
+    {
+     "where": "shard-1/g00341/games/game-001.events.jsonl",
+     "t": 28,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -2
+    },
+    {
+     "where": "shard-1/g00421/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-10/g00350/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Black Market Connections",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-10/g00370/games/game-001.events.jsonl",
+     "t": 33,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -3
+    },
+    {
+     "where": "shard-10/g00490/games/game-001.events.jsonl",
+     "t": 26,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Eventide's Shadow",
+     "life_before": 29,
+     "life_after": -26
+    },
+    {
+     "where": "shard-11/g00011/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "The Grim Captain's Locker",
+     "life_before": 12,
+     "life_after": 0
+    },
+    {
+     "where": "shard-11/g00071/games/game-001.events.jsonl",
+     "t": 60,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-11/g00091/games/game-001.events.jsonl",
+     "t": 32,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 5,
+     "life_after": -3
+    },
+    {
+     "where": "shard-11/g00151/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Ramirez DePietro, Pillager",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-11/g00171/games/game-001.events.jsonl",
+     "t": 35,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 4,
+     "life_after": -3
+    },
+    {
+     "where": "shard-11/g00171/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Wrathful Raptors",
+     "life_before": 4,
+     "life_after": -7
+    },
+    {
+     "where": "shard-11/g00291/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-11/g00451/games/game-001.events.jsonl",
+     "t": 38,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00012/games/game-001.events.jsonl",
+     "t": 33,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -1
+    },
+    {
+     "where": "shard-12/g00052/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00412/games/game-001.events.jsonl",
+     "t": 36,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Dogged Detective",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00452/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 4,
+     "life_after": -1
+    },
+    {
+     "where": "shard-13/g00013/games/game-001.events.jsonl",
+     "t": 27,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 5,
+     "life_after": -3
+    },
+    {
+     "where": "shard-13/g00093/games/game-001.events.jsonl",
+     "t": 52,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Zulaport Cutthroat",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-13/g00373/games/game-001.events.jsonl",
+     "t": 30,
+     "deck": "squirreled-away",
+     "group": "squirreled-away",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-13/g00373/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Vault 12: The Necropolis",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-13/g00413/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Life Insurance",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-13/g00493/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "other",
+     "card": "Poison-Tip Archer",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-14/g00074/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-14/g00114/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 6,
+     "life_after": 0
+    },
+    {
+     "where": "shard-14/g00154/games/game-001.events.jsonl",
+     "t": 49,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "ability",
+     "card": "Champion of Dusk",
+     "life_before": 11,
+     "life_after": -5
+    },
+    {
+     "where": "shard-15/g00035/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "other",
+     "card": "Cruel Celebrant",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00055/games/game-001.events.jsonl",
+     "t": 38,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00235/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Metamorphosis Fanatic",
+     "life_before": 7,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00295/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "ability",
+     "card": "Wickerbough Elder",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00335/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -2
+    },
+    {
+     "where": "shard-15/g00335/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 4,
+     "life_after": -4
+    },
+    {
+     "where": "shard-15/g00355/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-16/g00116/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Hancock, Ghoulish Mayor",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-16/g00236/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Village Pillagers",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-16/g00376/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-16/g00436/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00077/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Dream Eater",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00117/games/game-001.events.jsonl",
+     "t": 50,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-17/g00157/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00257/games/game-001.events.jsonl",
+     "t": 16,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00257/games/game-001.events.jsonl",
+     "t": 19,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00277/games/game-001.events.jsonl",
+     "t": 55,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "other",
+     "card": "Massacre Girl, Known Killer",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00317/games/game-001.events.jsonl",
+     "t": 69,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 1,
+     "life_after": -5
+    },
+    {
+     "where": "shard-17/g00357/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Falkenrath Noble",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00437/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -1
+    },
+    {
+     "where": "shard-17/g00457/games/game-001.events.jsonl",
+     "t": 64,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Hoarder's Greed",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-17/g00477/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Grave Venerations",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00038/games/game-001.events.jsonl",
+     "t": 29,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 10,
+     "life_after": -2
+    },
+    {
+     "where": "shard-18/g00058/games/game-001.events.jsonl",
+     "t": 33,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00158/games/game-001.events.jsonl",
+     "t": 35,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00158/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00178/games/game-001.events.jsonl",
+     "t": 30,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "other",
+     "card": "Cruel Celebrant",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00198/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00218/games/game-001.events.jsonl",
+     "t": 34,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Poison-Tip Archer",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00238/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 3,
+     "life_after": -3
+    },
+    {
+     "where": "shard-18/g00238/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Hoarder's Greed",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00318/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -1
+    },
+    {
+     "where": "shard-18/g00378/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00438/games/game-001.events.jsonl",
+     "t": 49,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Blood Artist",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00119/games/game-001.events.jsonl",
+     "t": 36,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00139/games/game-001.events.jsonl",
+     "t": 28,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00199/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Sigil of the Empty Throne",
+     "life_before": 7,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00199/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00279/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Skeleton Crew",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00399/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-19/g00479/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 2,
+     "life_after": -3
+    },
+    {
+     "where": "shard-19/g00499/games/game-001.events.jsonl",
+     "t": 35,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -1
+    },
+    {
+     "where": "shard-20/g00140/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Pitiless Plunderer",
+     "life_before": 4,
+     "life_after": -23
+    },
+    {
+     "where": "shard-20/g00180/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Bastion of Remembrance",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-20/g00440/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Exquisite Blood",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-20/g00480/games/game-001.events.jsonl",
+     "t": 27,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 3,
+     "life_after": 0
+    },
+    {
+     "where": "shard-3/g00063/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "spell",
+     "card": "Rakdos Charm",
+     "life_before": 2,
+     "life_after": -8
+    },
+    {
+     "where": "shard-3/g00103/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Printlifter Ooze",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-3/g00283/games/game-001.events.jsonl",
+     "t": 30,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-3/g00363/games/game-001.events.jsonl",
+     "t": 55,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-3/g00403/games/game-001.events.jsonl",
+     "t": 62,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-4/g00024/games/game-001.events.jsonl",
+     "t": 23,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 6,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00104/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Eventide's Shadow",
+     "life_before": 3,
+     "life_after": -35
+    },
+    {
+     "where": "shard-4/g00124/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Polluted Cistern // Dim Oubliette",
+     "life_before": 2,
+     "life_after": -1
+    },
+    {
+     "where": "shard-4/g00124/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-4/g00144/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Bastion of Remembrance",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00244/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Tato Farmer",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00284/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "other",
+     "card": "Bastion of Remembrance",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00284/games/game-001.events.jsonl",
+     "t": 61,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Ondu Spiritdancer",
+     "life_before": 6,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00304/games/game-001.events.jsonl",
+     "t": 58,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Zulaport Cutthroat",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00344/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Dogged Detective",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00404/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -3
+    },
+    {
+     "where": "shard-4/g00484/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-5/g00085/games/game-001.events.jsonl",
+     "t": 61,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-5/g00205/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Notion Rain",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-5/g00285/games/game-001.events.jsonl",
+     "t": 32,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "after",
+     "card": "Demon of Fate's Design",
+     "life_before": 8,
+     "life_after": 0
+    },
+    {
+     "where": "shard-5/g00365/games/game-001.events.jsonl",
+     "t": 33,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Unshakable Tail",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00106/games/game-001.events.jsonl",
+     "t": 25,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Nadier's Nightblade",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00126/games/game-001.events.jsonl",
+     "t": 29,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 4,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00146/games/game-001.events.jsonl",
+     "t": 50,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "spell",
+     "card": "Rakdos Charm",
+     "life_before": 1,
+     "life_after": -3
+    },
+    {
+     "where": "shard-6/g00326/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "other",
+     "card": "Zulaport Cutthroat",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00346/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Ashcloud Phoenix",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-7/g00047/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 3,
+     "life_after": -1
+    },
+    {
+     "where": "shard-7/g00047/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -1
+    },
+    {
+     "where": "shard-7/g00087/games/game-001.events.jsonl",
+     "t": 36,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -4
+    },
+    {
+     "where": "shard-7/g00327/games/game-001.events.jsonl",
+     "t": 48,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -2
+    },
+    {
+     "where": "shard-8/g00088/games/game-001.events.jsonl",
+     "t": 55,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Aminatou, Veil Piercer",
+     "life_before": 5,
+     "life_after": 0
+    },
+    {
+     "where": "shard-9/g00009/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -2
+    },
+    {
+     "where": "shard-9/g00049/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-9/g00069/games/game-001.events.jsonl",
+     "t": 63,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-9/g00109/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "squirreled-away",
+     "group": "squirreled-away",
+     "kind": "other",
+     "card": "Bellowing Aegisaur",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-9/g00149/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Dire Fleet Ravager",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-9/g00429/games/game-001.events.jsonl",
+     "t": 73,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Life Insurance",
+     "life_before": 1,
+     "life_after": 0
+    }
+   ]
+  },
+  "league-run-6": {
+   "games": 600,
+   "groups": {
+    "deep-clue-sea": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 2
+    },
+    "eldrazi-incursion": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 2
+    },
+    "elven-council": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 1
+    },
+    "enduring-enchantments": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 1
+    },
+    "goblin-storm": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 2
+    },
+    "hail-caesar": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 1
+    },
+    "limit-break": {
+     "seat_games": 200,
+     "own_turn_deaths": 1,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 0
+    },
+    "planeswalker-party": {
+     "seat_games": 200,
+     "own_turn_deaths": 1,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 0
+    },
+    "quick-draw": {
+     "seat_games": 200,
+     "own_turn_deaths": 3,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 1
+    },
+    "token-triumph": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 2
+    },
+    "tricky-terrain": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 1
+    },
+    "wretched-ranks": {
+     "seat_games": 200,
+     "own_turn_deaths": 9,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 7
+    }
+   },
+   "own_turn_deaths": [
+    {
+     "where": "shard-1/g00201/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "ability",
+     "card": "Undead Augur",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-10/g00130/games/game-001.events.jsonl",
+     "t": 35,
+     "deck": "limit-break",
+     "group": "limit-break",
+     "kind": "other",
+     "card": "Wicked",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-10/g00310/games/game-001.events.jsonl",
+     "t": 73,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "other",
+     "card": "Mangara, the Diplomat",
+     "life_before": 2,
+     "life_after": -1
+    },
+    {
+     "where": "shard-10/g00510/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "elven-council",
+     "group": "elven-council",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-10/g00510/games/game-001.events.jsonl",
+     "t": 59,
+     "deck": "deep-clue-sea",
+     "group": "deep-clue-sea",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-11/g00291/games/game-001.events.jsonl",
+     "t": 60,
+     "deck": "hail-caesar",
+     "group": "hail-caesar",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-11/g00391/games/game-001.events.jsonl",
+     "t": 59,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "ability",
+     "card": "Endless Ranks of the Dead",
+     "life_before": 12,
+     "life_after": -34
+    },
+    {
+     "where": "shard-13/g00073/games/game-001.events.jsonl",
+     "t": 60,
+     "deck": "quick-draw",
+     "group": "quick-draw",
+     "kind": "other",
+     "card": "Avalanche of Sector 7",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00315/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "quick-draw",
+     "group": "quick-draw",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00495/games/game-001.events.jsonl",
+     "t": 64,
+     "deck": "eldrazi-incursion",
+     "group": "eldrazi-incursion",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-16/g00116/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "quick-draw",
+     "group": "quick-draw",
+     "kind": "other",
+     "card": "Junk Winder",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-16/g00416/games/game-001.events.jsonl",
+     "t": 52,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "ability",
+     "card": "Phyrexian Arena",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00277/games/game-001.events.jsonl",
+     "t": 57,
+     "deck": "enduring-enchantments",
+     "group": "enduring-enchantments",
+     "kind": "other",
+     "card": "Wicked",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00418/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "tricky-terrain",
+     "group": "tricky-terrain",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00099/games/game-001.events.jsonl",
+     "t": 65,
+     "deck": "token-triumph",
+     "group": "token-triumph",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00219/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "elven-council",
+     "group": "elven-council",
+     "kind": "other",
+     "card": "Rundvelt Hordemaster",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00479/games/game-001.events.jsonl",
+     "t": 64,
+     "deck": "token-triumph",
+     "group": "token-triumph",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-2/g00242/games/game-001.events.jsonl",
+     "t": 68,
+     "deck": "hail-caesar",
+     "group": "hail-caesar",
+     "kind": "other",
+     "card": "Endbringer",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-2/g00302/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "goblin-storm",
+     "group": "goblin-storm",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-2/g00402/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "goblin-storm",
+     "group": "goblin-storm",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-20/g00100/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "ability",
+     "card": "Endless Ranks of the Dead",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-20/g00440/games/game-001.events.jsonl",
+     "t": 35,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "other",
+     "card": "Boggart Shenanigans",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-20/g00460/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "ability",
+     "card": "Noxious Ghoul",
+     "life_before": 6,
+     "life_after": -13
+    },
+    {
+     "where": "shard-3/g00063/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "enduring-enchantments",
+     "group": "enduring-enchantments",
+     "kind": "ability",
+     "card": "Boon of the Spirit Realm",
+     "life_before": 6,
+     "life_after": 0
+    },
+    {
+     "where": "shard-3/g00143/games/game-001.events.jsonl",
+     "t": 73,
+     "deck": "tricky-terrain",
+     "group": "tricky-terrain",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-4/g00004/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-7/g00427/games/game-001.events.jsonl",
+     "t": 38,
+     "deck": "deep-clue-sea",
+     "group": "deep-clue-sea",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-7/g00427/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "eldrazi-incursion",
+     "group": "eldrazi-incursion",
+     "kind": "ability",
+     "card": "Emblem \u2014 Chandra, Awakened Inferno",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-8/g00288/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "planeswalker-party",
+     "group": "planeswalker-party",
+     "kind": "other",
+     "card": "Pashalik Mons",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-8/g00288/games/game-001.events.jsonl",
+     "t": 67,
+     "deck": "wretched-ranks",
+     "group": "wretched-ranks",
+     "kind": "ability",
+     "card": "Graveborn Muse",
+     "life_before": 4,
+     "life_after": 0
+    }
+   ]
+  },
+  "league-run-7": {
+   "games": 504,
+   "groups": {
+    "ahoy-mateys": {
+     "seat_games": 200,
+     "own_turn_deaths": 16,
+     "own_spell_deaths": 2,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 8
+    },
+    "blight-curse": {
+     "seat_games": 200,
+     "own_turn_deaths": 14,
+     "own_spell_deaths": 4,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 4
+    },
+    "blood-rites": {
+     "seat_games": 200,
+     "own_turn_deaths": 2,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 1
+    },
+    "deadly-disguise": {
+     "seat_games": 200,
+     "own_turn_deaths": 10,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 8
+    },
+    "death-toll": {
+     "seat_games": 200,
+     "own_turn_deaths": 9,
+     "own_spell_deaths": 2,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 0
+    },
+    "miracle-worker": {
+     "seat_games": 200,
+     "own_turn_deaths": 13,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 1,
+     "own_ability_deaths": 7
+    },
+    "mutant-menace": {
+     "seat_games": 204,
+     "own_turn_deaths": 13,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 12
+    },
+    "revenant-recon": {
+     "seat_games": 204,
+     "own_turn_deaths": 17,
+     "own_spell_deaths": 7,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 6
+    },
+    "squirreled-away": {
+     "seat_games": 204,
+     "own_turn_deaths": 5,
+     "own_spell_deaths": 0,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 2
+    },
+    "veloci-ramp-tor": {
+     "seat_games": 204,
+     "own_turn_deaths": 6,
+     "own_spell_deaths": 1,
+     "own_after_deaths": 0,
+     "own_ability_deaths": 1
+    }
+   },
+   "own_turn_deaths": [
+    {
+     "where": "shard-1/g00021/games/game-001.events.jsonl",
+     "t": 35,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 5,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00081/games/game-001.events.jsonl",
+     "t": 30,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 3,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00161/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Poison-Tip Archer",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00161/games/game-001.events.jsonl",
+     "t": 48,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "other",
+     "card": "Poison-Tip Archer",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00221/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 7,
+     "life_after": -2
+    },
+    {
+     "where": "shard-1/g00241/games/game-001.events.jsonl",
+     "t": 52,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 7,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00401/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 6,
+     "life_after": -1
+    },
+    {
+     "where": "shard-1/g00421/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00481/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-1/g00501/games/game-001.events.jsonl",
+     "t": 24,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -3
+    },
+    {
+     "where": "shard-10/g00130/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-10/g00130/games/game-001.events.jsonl",
+     "t": 52,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Vault 87: Forced Evolution",
+     "life_before": 3,
+     "life_after": 0
+    },
+    {
+     "where": "shard-10/g00370/games/game-001.events.jsonl",
+     "t": 33,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -3
+    },
+    {
+     "where": "shard-10/g00390/games/game-001.events.jsonl",
+     "t": 56,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "other",
+     "card": "Polluted Cistern // Dim Oubliette",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-10/g00490/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Village Pillagers",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-11/g00011/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "The Grim Captain's Locker",
+     "life_before": 12,
+     "life_after": -1
+    },
+    {
+     "where": "shard-11/g00251/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 3,
+     "life_after": -1
+    },
+    {
+     "where": "shard-12/g00012/games/game-001.events.jsonl",
+     "t": 30,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 4,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00052/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00092/games/game-001.events.jsonl",
+     "t": 29,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00112/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "other",
+     "card": "Flourishing Defenses",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00292/games/game-001.events.jsonl",
+     "t": 48,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Bastion of Remembrance",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-12/g00312/games/game-001.events.jsonl",
+     "t": 69,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-12/g00452/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 4,
+     "life_after": -1
+    },
+    {
+     "where": "shard-13/g00013/games/game-001.events.jsonl",
+     "t": 27,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 5,
+     "life_after": -3
+    },
+    {
+     "where": "shard-13/g00033/games/game-001.events.jsonl",
+     "t": 29,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 5,
+     "life_after": -1
+    },
+    {
+     "where": "shard-13/g00053/games/game-001.events.jsonl",
+     "t": 52,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-13/g00373/games/game-001.events.jsonl",
+     "t": 30,
+     "deck": "squirreled-away",
+     "group": "squirreled-away",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-13/g00373/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Vault 12: The Necropolis",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-13/g00473/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-13/g00493/games/game-001.events.jsonl",
+     "t": 28,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Icon of Ancestry",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-14/g00034/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "other",
+     "card": "Crossway Troublemakers",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-14/g00034/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Captain Lannery Storm",
+     "life_before": 2,
+     "life_after": -4
+    },
+    {
+     "where": "shard-14/g00154/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 3,
+     "life_after": -5
+    },
+    {
+     "where": "shard-14/g00274/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Gemcutter Buccaneer",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00175/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Eventide's Shadow",
+     "life_before": 14,
+     "life_after": -2
+    },
+    {
+     "where": "shard-15/g00415/games/game-001.events.jsonl",
+     "t": 40,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-15/g00435/games/game-001.events.jsonl",
+     "t": 36,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-15/g00435/games/game-001.events.jsonl",
+     "t": 48,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Exquisite Blood",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-16/g00116/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Hancock, Ghoulish Mayor",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-16/g00296/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-16/g00416/games/game-001.events.jsonl",
+     "t": 48,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-16/g00476/games/game-001.events.jsonl",
+     "t": 44,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00157/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "other",
+     "card": "Cruel Celebrant",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00257/games/game-001.events.jsonl",
+     "t": 16,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00257/games/game-001.events.jsonl",
+     "t": 19,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00277/games/game-001.events.jsonl",
+     "t": 50,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-17/g00417/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Dusk Urchins",
+     "life_before": 16,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00437/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00437/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-17/g00437/games/game-001.events.jsonl",
+     "t": 49,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 4,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00038/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00198/games/game-001.events.jsonl",
+     "t": 51,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-18/g00398/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 3,
+     "life_after": -2
+    },
+    {
+     "where": "shard-19/g00079/games/game-001.events.jsonl",
+     "t": 64,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-19/g00119/games/game-001.events.jsonl",
+     "t": 41,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Eventide's Shadow",
+     "life_before": 3,
+     "life_after": -23
+    },
+    {
+     "where": "shard-19/g00119/games/game-001.events.jsonl",
+     "t": 43,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00159/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 8,
+     "life_after": -2
+    },
+    {
+     "where": "shard-19/g00159/games/game-001.events.jsonl",
+     "t": 38,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00199/games/game-001.events.jsonl",
+     "t": 50,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00259/games/game-001.events.jsonl",
+     "t": 21,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00399/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Black Market Connections",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00399/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Auntie Ool, Cursewretch",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00479/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "other",
+     "card": "Oft-Nabbed Goat",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-19/g00499/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-2/g00002/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "other",
+     "card": "Syr Konrad, the Grim",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-20/g00180/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Ashcloud Phoenix",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-20/g00220/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "other",
+     "card": "Massacre Wurm",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-3/g00043/games/game-001.events.jsonl",
+     "t": 33,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "other",
+     "card": "The Wise Mothman",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-3/g00043/games/game-001.events.jsonl",
+     "t": 34,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 6,
+     "life_after": -2
+    },
+    {
+     "where": "shard-3/g00063/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "spell",
+     "card": "Rakdos Charm",
+     "life_before": 2,
+     "life_after": -8
+    },
+    {
+     "where": "shard-3/g00143/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "other",
+     "card": "Cruel Celebrant",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-3/g00183/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-3/g00303/games/game-001.events.jsonl",
+     "t": 55,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "spell",
+     "card": "Notion Rain",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00024/games/game-001.events.jsonl",
+     "t": 23,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 6,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00064/games/game-001.events.jsonl",
+     "t": 49,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Overseer of the Damned",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00104/games/game-001.events.jsonl",
+     "t": 45,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Eventide's Shadow",
+     "life_before": 3,
+     "life_after": -35
+    },
+    {
+     "where": "shard-4/g00204/games/game-001.events.jsonl",
+     "t": 33,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 5,
+     "life_after": -1
+    },
+    {
+     "where": "shard-4/g00304/games/game-001.events.jsonl",
+     "t": 50,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-4/g00404/games/game-001.events.jsonl",
+     "t": 32,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 6,
+     "life_after": -1
+    },
+    {
+     "where": "shard-5/g00065/games/game-001.events.jsonl",
+     "t": 34,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Dinosaur Egg",
+     "life_before": 7,
+     "life_after": -8
+    },
+    {
+     "where": "shard-5/g00085/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "squirreled-away",
+     "group": "squirreled-away",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-5/g00145/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "squirreled-away",
+     "group": "squirreled-away",
+     "kind": "other",
+     "card": "Cruel Celebrant",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-5/g00265/games/game-001.events.jsonl",
+     "t": 28,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "other",
+     "card": "Exquisite Blood",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-5/g00285/games/game-001.events.jsonl",
+     "t": 32,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "after",
+     "card": "Demon of Fate's Design",
+     "life_before": 8,
+     "life_after": 0
+    },
+    {
+     "where": "shard-5/g00305/games/game-001.events.jsonl",
+     "t": 34,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "not_life",
+     "card": "Milled",
+     "life_before": null,
+     "life_after": null
+    },
+    {
+     "where": "shard-5/g00445/games/game-001.events.jsonl",
+     "t": 28,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "other",
+     "card": "Nadier's Nightblade",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00046/games/game-001.events.jsonl",
+     "t": 55,
+     "deck": "squirreled-away",
+     "group": "squirreled-away",
+     "kind": "other",
+     "card": "Solemn Simulacrum",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00126/games/game-001.events.jsonl",
+     "t": 29,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 4,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00146/games/game-001.events.jsonl",
+     "t": 50,
+     "deck": "ahoy-mateys",
+     "group": "ahoy-mateys",
+     "kind": "spell",
+     "card": "Rakdos Charm",
+     "life_before": 1,
+     "life_after": -3
+    },
+    {
+     "where": "shard-6/g00346/games/game-001.events.jsonl",
+     "t": 36,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Ashcloud Phoenix",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00446/games/game-001.events.jsonl",
+     "t": 54,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Life Insurance",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-6/g00466/games/game-001.events.jsonl",
+     "t": 38,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Life Insurance",
+     "life_before": 5,
+     "life_after": 0
+    },
+    {
+     "where": "shard-7/g00087/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "squirreled-away",
+     "group": "squirreled-away",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -2
+    },
+    {
+     "where": "shard-7/g00087/games/game-001.events.jsonl",
+     "t": 36,
+     "deck": "blood-rites",
+     "group": "blood-rites",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": -4
+    },
+    {
+     "where": "shard-7/g00127/games/game-001.events.jsonl",
+     "t": 29,
+     "deck": "revenant-recon",
+     "group": "revenant-recon",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-7/g00147/games/game-001.events.jsonl",
+     "t": 42,
+     "deck": "veloci-ramp-tor",
+     "group": "veloci-ramp-tor",
+     "kind": "spell",
+     "card": "Pact of the Serpent",
+     "life_before": 8,
+     "life_after": -2
+    },
+    {
+     "where": "shard-7/g00187/games/game-001.events.jsonl",
+     "t": 39,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Doomwake Giant",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-7/g00247/games/game-001.events.jsonl",
+     "t": 58,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 1,
+     "life_after": -1
+    },
+    {
+     "where": "shard-8/g00108/games/game-001.events.jsonl",
+     "t": 46,
+     "deck": "death-toll",
+     "group": "death-toll",
+     "kind": "spell",
+     "card": "Reanimate",
+     "life_before": 4,
+     "life_after": -3
+    },
+    {
+     "where": "shard-8/g00188/games/game-001.events.jsonl",
+     "t": 35,
+     "deck": "deadly-disguise",
+     "group": "deadly-disguise",
+     "kind": "ability",
+     "card": "Ashcloud Phoenix",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-8/g00428/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "other",
+     "card": "Moonstone Eulogist",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-9/g00009/games/game-001.events.jsonl",
+     "t": 37,
+     "deck": "mutant-menace",
+     "group": "mutant-menace",
+     "kind": "ability",
+     "card": "Radiation",
+     "life_before": 2,
+     "life_after": 0
+    },
+    {
+     "where": "shard-9/g00129/games/game-001.events.jsonl",
+     "t": 47,
+     "deck": "miracle-worker",
+     "group": "miracle-worker",
+     "kind": "ability",
+     "card": "Life Insurance",
+     "life_before": 1,
+     "life_after": 0
+    },
+    {
+     "where": "shard-9/g00189/games/game-001.events.jsonl",
+     "t": 31,
+     "deck": "blight-curse",
+     "group": "blight-curse",
+     "kind": "spell",
+     "card": "Painful Truths",
+     "life_before": 1,
+     "life_after": -1
+    }
+   ]
+  }
+ }
+}

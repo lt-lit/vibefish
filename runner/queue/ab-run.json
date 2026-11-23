@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-23T05:12Z",
-  "note": "ab-run #69: two requests at the owner's table (runner/leagues/owners-table-v1.json), harness 0.4.14, read apart by the rules in CLAUDE.md (In flight, How #69 is to be read), fixed before this was queued. (1) Blight Curse, seed 20261510: the shipped playbook (version 7) and three candidates on the same 200 tables, each version 7 with one change (DESIGN §44): playbook/variants/blight-curse-chain.json (targets.counters: Blowfly Infestation's counter on the seat's own dying creatures five times a turn, then on an opponent's creature, which ends the chain with Hapatra), blight-curse-shadow.json (Eventide's Shadow held from Forge's AI and cast by a rule with a take block: three to eight counters, never under 15 life) and blight-curse-wipes.json (two more rules for Chain Reaction and Black Sun's Zenith that count the opponents' creatures and power together). (2) Deadly Disguise, seed 20261520: its version before the rules for other players' turns (deadly-disguise-noreact.json, version 5), the shipped version 6, and deadly-disguise-react5.json (version 6 with the mana for its removal kept from five lands on): the second sample at the table as it is since 2026-11-23, read together with ab-run #67's. Opponents drawn from the other nine decks under their shipped playbooks. Playbook arms only; 1,400 games in 35 shard jobs. The request before this one: ab-run #68 (seed 20261490, the rules for other players' turns for the pool's twelve).",
+  "requested": "2026-11-23T05:55Z",
+  "note": "ab-run #70: a seat that ends its own game (DESIGN §45, harness 0.4.15), read by the rule in CLAUDE.md (In flight, How #70 is to be read), fixed before this was queued. At the owner's table (runner/leagues/owners-table-v1.json), opponents drawn from the other nine decks under their shipped playbooks. (1) Seed 20261530: Revenant Recon, Death Toll, Ahoy Mateys and Miracle Worker, each under its shipped playbook and under playbook/variants/<deck>-safe.json, which is the shipped playbook with \"keep_life\": 4 on its cast block (no spell is cast, by a rule or by Forge's own choice, whose script would take the seat under four life; Ahoy Mateys' also casts Rakdos Charm only with at least four life more than creatures); and death-toll-mills.json, the shipped playbook with a trigger rule (\"effect\": true) that turns down the optional upkeep mills of Crawling Sensation and Cemetery Tampering with fifteen cards or fewer in the library. (2) Seed 20261510: blight-curse-safe.json alone (keep_life, and Painful Truths only at seven life or more), on the tables of ab-run #69, to be read beside that run's blight-curse arm. Playbook arms only; 2,000 games in 50 shard jobs. The request before this one: ab-run #69 (Blight Curse's chain, shadow and wipes candidates; Deadly Disguise's second sample).",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "5",
@@ -10,9 +10,9 @@
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
   "opponent_playbooks": true,
   "pool": "runner/leagues/owners-table-v1.json",
-  "seed": "20261510",
+  "seed": "20261530",
   "runs": [
-    {"decks": "blight-curse,blight-curse@chain,blight-curse@shadow,blight-curse@wipes", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261510"},
-    {"decks": "deadly-disguise@noreact,deadly-disguise,deadly-disguise@react5", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261520"}
+    {"decks": "revenant-recon,revenant-recon@safe,death-toll,death-toll@safe,death-toll@mills,ahoy-mateys,ahoy-mateys@safe,miracle-worker,miracle-worker@safe", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261530"},
+    {"decks": "blight-curse@safe", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261510"}
   ]
 }

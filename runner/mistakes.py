@@ -72,6 +72,17 @@ What is counted, per seat:
                      else is open; a playbook's `"open": true` on its attack is the hook for it (harness 0.4.5).
   attacks            Of the turns on which the seat had a creature that could attack someone, the share on which it
                      attacked, and the share of the damage it could have sent that it did send.
+  out of the game by its own spell
+                     The seat was out of the game on its own turn (`own_turn_deaths`), and what took its life to
+                     zero was the price of a spell it cast itself: the `life` line that did it lies between that
+                     spell's `cast` line and its `resolve` line (`own_spell_deaths`). Reanimate for a creature that
+                     costs more than the life the seat has, a spell that charges a life a counter or a card, a
+                     charm whose mode hurts its caster most. No table makes that right, so every one is a mistake,
+                     and the cards are listed (DESIGN.md §44). The other deaths on a seat's own turn are listed by
+                     what came last before the fatal `life` line and are not judged: something that followed its
+                     own spell (`own_after_deaths`: its wipe with a permanent of its own that charges it for each
+                     creature that dies), an ability or trigger the seat controlled (`own_ability_deaths`: its
+                     own, or one an opponent gave it, like Radiation), another player's card, combat.
 """
 import argparse, collections, glob, gzip, json, os, sys
 
@@ -100,7 +111,8 @@ KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent'
         'attacked_lethal', 'combat_deaths', 'block_not_made', 'died_tapped_out', 'commander_deaths',
         'kill_limited_turns', 'deaths_block_limited',
         'cmdkill_turns', 'cmdkill_taken', 'cmdkill_other', 'cmdkill_last_turns', 'cmdkill_last_missed', 'cmdkill_top_turns', 'cmdkill_top_missed',
-        'cmdkill_lesser_turns', 'cmdkill_lesser_missed', 'cmdkill_last_no_attack', 'cmdkill_top_no_attack', 'cmdkill_lesser_no_attack', 'cmd_blockable_turns')
+        'cmdkill_lesser_turns', 'cmdkill_lesser_missed', 'cmdkill_last_no_attack', 'cmdkill_top_no_attack', 'cmdkill_lesser_no_attack', 'cmd_blockable_turns',
+        'own_turn_deaths', 'own_spell_deaths', 'own_after_deaths', 'own_ability_deaths')
 
 # Permanents whose static ability limits how many creatures may attack (Forge scripts with `Mode$ AttackRestrict |
 # MaxAttackers$ N`, snapshot 2026-11-10): 'all' limits every combat, 'you' attacks on its controller. The harness's
@@ -118,6 +130,47 @@ def danger(d, turn):
         st = (turn.get('state') or {}).get(d['seat']) or {}
         n = st.get('bf', 0) - st.get('lands', 0)
     return d['life'] + 2 * n
+
+
+def own_turn_deaths(evs):
+    """Seats out of the game on their own turn, by what came last before the `life` line that took them to zero.
+    Yields (seat, turn, kind, card, life before that line, life after): kind is `spell` (the price of the seat's own
+    spell, paid before its `resolve` line), `after` (after its own spell had resolved, nothing else cast in between),
+    `ability` (an ability or trigger the seat controlled), `other` (another player's card), `combat`, `none` (nothing
+    cast that turn before it), or `not_life` (decked, or lost to an effect; card holds the reason)."""
+    active, start = None, 0
+    for i, e in enumerate(evs):
+        k = e['e']
+        if k == 'turn':
+            active, start = e.get('seat'), i
+        elif k == 'lost' and e.get('seat') == active:
+            s = e['seat']
+            if e.get('reason') != 'LifeReachedZero':
+                yield s, e['t'], 'not_life', e.get('reason'), None, None
+                continue
+            fatal = next((j for j in range(i - 1, start, -1) if evs[j]['e'] == 'life' and evs[j].get('seat') == s
+                          and (evs[j].get('to') or 0) <= 0 < (evs[j].get('from') or 0)), None)
+            if fatal is None:
+                yield s, e['t'], 'none', None, None, None
+                continue
+            before, after = evs[fatal].get('from'), evs[fatal].get('to')
+            kind, card = 'none', None
+            for j in range(fatal - 1, start, -1):
+                x = evs[j]
+                if x['e'] in ('attack', 'block') or (x['e'] == 'damage' and x.get('combat')):
+                    kind = 'combat'
+                    break
+                if x['e'] == 'cast':
+                    card = x.get('card')
+                    if x.get('seat') != s:
+                        kind = 'other'
+                    elif not x.get('spell'):
+                        kind = 'ability'
+                    else:
+                        resolved = any(y['e'] == 'resolve' and y.get('id') == x.get('id') for y in evs[j + 1:fatal])
+                        kind = 'after' if resolved else 'spell'
+                    break
+            yield s, e['t'], kind, card, before, after
 
 
 def close_turn(G, label, turn, lost_at, examples, where):
@@ -230,6 +283,7 @@ def close_turn(G, label, turn, lost_at, examples, where):
 def collect(roots, arm=None, by_deck=False, deck=None):
     G = collections.defaultdict(collections.Counter)
     examples = []
+    own = []                                            # deaths on the seat's own turn, one by one
     games = old = 0
     for rj in run_files(roots, arm):
         run = json.load(open(rj))
@@ -297,20 +351,26 @@ def collect(roots, arm=None, by_deck=False, deck=None):
             for ex in examples:
                 if isinstance(ex.get('deck'), int) and ex['where'] == where:
                     ex['deck'] = ids.get(ex['deck'], ex['deck'])
+            for s, t, kind, card, before, after in own_turn_deaths(evs):
+                local[s]['own_turn_deaths'] += 1
+                if kind in ('spell', 'after', 'ability'):
+                    local[s][f'own_{kind}_deaths'] += 1
+                if keep(s):
+                    own.append({'where': where, 't': t, 'deck': ids.get(s, s), 'group': label(s), 'kind': kind, 'card': card, 'life_before': before, 'life_after': after})
             for s in ids:
                 if not keep(s):
                     continue
                 grp = G[label(s)]
                 grp['seat_games'] += 1
                 grp.update(local.get(s, {}))
-    return G, games, old, examples
+    return G, games, old, examples, own
 
 
 def pct(a, b):
     return f'{100 * a / b:.0f}%' if b else '-'
 
 
-def render(G, games, old, examples, show):
+def render(G, games, old, examples, show, own=()):
     out = [f'{games} games' + (f' ({old} games without combat lines were left out: played before harness 0.4.0)' if old else '')]
     if not games:
         return '\n'.join(out)
@@ -361,6 +421,19 @@ def render(G, games, old, examples, show):
         out.append(f'  {n:{w}} {g["turns_able"]:>7} {pct(g["turns_attacked"], g["turns_able"]):>9} {pct(g["power_sent"], g["power_able"]):>12} '
                    f'{g["open_turns"]:>11} {pct(g["open_attacked"], g["open_turns"]):>12} {pct(g["open_elsewhere"], g["open_turns"]):>8} '
                    f'{pct(g["open_turns"] - g["open_attacked"] - g["open_elsewhere"], g["open_turns"]):>7}')
+    if any(G[n]['own_turn_deaths'] for n in names):
+        out += ['', 'ITS OWN TURN: seats out of the game on their own turn; by the price of a spell they cast themselves (the life line that did it lies before the spell\'s',
+                '        resolve line: a mistake at any table); after their own spell had resolved; by an ability or trigger they controlled (their own, or one an opponent gave them)',
+                f'  {"":{w}} {"own turn":>9} {"own spell":>10} {"after it":>9} {"ability":>8}   a hundred seat-games: by its own spell']
+        for n in names:
+            g = G[n]
+            out.append(f'  {n:{w}} {g["own_turn_deaths"]:>9} {g["own_spell_deaths"]:>10} {g["own_after_deaths"]:>9} {g["own_ability_deaths"]:>8}   '
+                       + (f'{100 * g["own_spell_deaths"] / g["seat_games"]:.2f}' if g['seat_games'] else ''))
+        for kind, title in (('spell', 'by the price of its own spell'), ('after', 'after its own spell had resolved'), ('ability', 'by an ability or trigger it controlled'),
+                            ('other', 'after another player\'s card'), ('not_life', 'not by life (the reason)')):
+            c = collections.Counter((x['deck'], x['card']) for x in own if x['kind'] == kind)
+            if c:
+                out.append(f'  {title}: ' + ', '.join(f'{d} {card} {n}' for (d, card), n in c.most_common(16)) + (' ...' if len(c) > 16 else ''))
     if show and examples:
         out += ['', f'KILLS NOT TAKEN, the first {min(show, len(examples))} (game, turn, deck: the opponent it could have killed, what it sent where)']
         for ex in examples[:show]:
@@ -379,12 +452,13 @@ def main(argv):
     ap.add_argument('--json')
     ap.add_argument('--show', type=int, default=0, help='list this many kills not taken')
     a = ap.parse_args(argv)
-    G, games, old, examples = collect(a.run_dirs, a.arm, a.by_deck, a.deck)
-    print(render(G, games, old, examples, a.show))
+    G, games, old, examples, own = collect(a.run_dirs, a.arm, a.by_deck, a.deck)
+    print(render(G, games, old, examples, a.show, own))
     if a.json:
         with open(a.json, 'w', encoding='utf-8') as f:
             json.dump({'kind': 'mistakes', 'games': games, 'games_without_combat_lines': old, 'arm': a.arm, 'by_deck': a.by_deck, 'deck': a.deck,
-                       'groups': {n: {k: G[n].get(k, 0) for k in KEYS} for n in sorted(G)}, 'kills_not_taken': examples}, f, indent=1)
+                       'groups': {n: {k: G[n].get(k, 0) for k in KEYS} for n in sorted(G)}, 'kills_not_taken': examples,
+                       'own_turn_deaths': own}, f, indent=1)
             f.write('\n')
     return 0
 
