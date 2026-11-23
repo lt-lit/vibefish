@@ -1,0 +1,295 @@
+{
+ "schema": 1,
+ "deck": "limit-break",
+ "variant": "react",
+ "of": "playbook/precons/limit-break.json (version 5)",
+ "about": "A candidate with rules for other players' turns (docs/agents/add_react.py). Only the playbook object is read.",
+ "playbook": {
+  "version": 6,
+  "attack": {
+   "policy": "forge",
+   "aim": "danger",
+   "open": true,
+   "finish": "leader",
+   "finish_commander": true,
+   "guard": "table"
+  },
+  "targets": {
+   "triggers": "danger"
+  },
+  "block": {
+   "survive": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Sol Ring"
+     ]
+    },
+    {
+     "play": [
+      "Ultimate Magic: Holy"
+     ],
+     "when": [
+      "hand:wipes >= 1",
+      "creatures >= 2",
+      "mana >= 9",
+      "opp_creatures >= 5",
+      "opp_power > power",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Vanquish the Horde",
+      "Ultimate Magic: Meteor"
+     ],
+     "when": [
+      "opp_creatures >= 5",
+      "opp_power > power",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Vanquish the Horde",
+      "Ultimate Magic: Meteor"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_power > power"
+     ]
+    },
+    {
+     "hold": [
+      "Vanquish the Horde",
+      "Ultimate Magic: Meteor"
+     ]
+    },
+    {
+     "play": [
+      "Cloud, Ex-SOLDIER"
+     ]
+    },
+    {
+     "play": [
+      "Arcane Signet",
+      "Bugenhagen, Wise Elder",
+      "Rampant Growth",
+      "Nature's Lore",
+      "Cultivate"
+     ]
+    },
+    {
+     "play": [
+      "Wrecking Ball Arm",
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Hero's Blade",
+      "Champion's Helm"
+     ]
+    },
+    {
+     "play": [
+      "Puresteel Paladin",
+      "Cid, Freeflier Pilot",
+      "Bastion Protector",
+      "Tifa, Martial Artist",
+      "Inspiring Statuary",
+      "SOLDIER Military Program",
+      "Furious Rise"
+     ]
+    },
+    {
+     "play": [
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist",
+      "Skullclamp",
+      "Conformer Shuriken",
+      "Summoning Materia"
+     ]
+    },
+    {
+     "play": [
+      "Decimate"
+     ]
+    },
+    {
+     "play": [
+      "Summon: Kujata"
+     ],
+     "when": [
+      "opp_creatures >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Yuffie, Materia Hunter"
+     ]
+    },
+    {
+     "play": [
+      "Barret Wallace",
+      "Barret, Avalanche Leader",
+      "Heidegger, Shinra Executive",
+      "Sephiroth, Fallen Hero",
+      "Bronze Guardian",
+      "Cait Sith, Fortune Teller",
+      "Vincent, Vengeful Atoner",
+      "Professional Face-Breaker",
+      "Aerith, Last Ancient",
+      "Hellkite Tyrant",
+      "Helitrooper",
+      "Zack Fair",
+      "Professor Hojo",
+      "Armory Automaton",
+      "Red XIII, Proud Warrior",
+      "Elena, Turk Recruit"
+     ]
+    },
+    {
+     "activate": [
+      "Wrecking Ball Arm"
+     ],
+     "ability": "legendary",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Colossus Hammer",
+      "Behemoth Sledge",
+      "Hero's Heirloom",
+      "Champion's Helm",
+      "Hero's Blade",
+      "Conqueror's Flail",
+      "Mask of Memory",
+      "Trailblazer's Boots",
+      "Darksteel Plate",
+      "Explorer's Scope",
+      "Sword of the Animist"
+     ],
+     "ability": "Equip",
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Harmonize"
+     ],
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "activate": [
+      "Slayers' Stronghold"
+     ],
+     "target": "Cloud, Ex-SOLDIER",
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Bonders' Enclave"
+     ],
+     "phase": "main2",
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "hold": [
+      "Lightning Greaves"
+     ],
+     "ability": "Equip"
+    },
+    {
+     "hold": [
+      "Chaos Warp"
+     ]
+    },
+    {
+     "reserve": [
+      "Chaos Warp"
+     ],
+     "aim": "permanent",
+     "aim_min": 3,
+     "when": [
+      "lands >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Chaos Warp"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "when": [
+      "lethal == 1"
+     ]
+    },
+    {
+     "play": [
+      "Chaos Warp"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "aim_min": 6
+    },
+    {
+     "play": [
+      "Chaos Warp"
+     ],
+     "phase": "end",
+     "aim": "permanent",
+     "aim_min": 3
+    }
+   ],
+   "groups": {
+    "wipes": [
+     "Vanquish the Horde",
+     "Ultimate Magic: Meteor"
+    ]
+   }
+  },
+  "triggers": [
+   {
+    "decline": [
+     "Armory Automaton"
+    ],
+    "when": [
+     "controls Cloud, Ex-SOLDIER"
+    ]
+   },
+   {
+    "accept": [
+     "Puresteel Paladin",
+     "Mask of Memory"
+    ],
+    "when": [
+     "library >= 30"
+    ]
+   },
+   {
+    "accept": [
+     "Hero's Blade",
+     "SOLDIER Military Program",
+     "Furious Rise",
+     "Sword of the Animist",
+     "Explorer's Scope",
+     "Professional Face-Breaker",
+     "Cait Sith, Fortune Teller",
+     "Sephiroth, Fallen Hero"
+    ]
+   }
+  ],
+  "notes": "Version 2 candidate = the shipped version 1 (its three trigger rules and its thirteen cast rules unchanged and in their order; no attack block, so Forge attacks, as shipped) plus seven cast rules for the deck's answers: rules 2 to 5 at the top (after Sol Ring, before Cloud) and rules 11 to 13 before the shipped creature rule. Written from the 200 games of the league of twelve (league-run #3, seed 20261250), where the seat won 35 and lost 165. On its last own turn of a loss the seat had 3 creatures (median) against 11 for the widest opponent; an opponent had 5 or more creatures and more than the seat in 144 of the 165 losses and 7 of the 35 wins (7 or more: 124 and 6). Drawn / cast / in hand on the last own turn of a loss: Vanquish the Horde 55/29/18, Austere Command 45/14/22, Ultimate Magic: Meteor 42/0/5 (Forge foretells it, 49 times hand to exile, and never casts it from exile), Decimate 55/21/26, Summon: Kujata 50/22/22, Yuffie, Materia Hunter 32/0/21, Dispatch 50/0/32, Clever Concealment 43/0/30; Chaos Warp 51/47, Cloud's Limit Break 50/50, Vandalblast 55/44 and Ultimate Magic: Holy 43/25 are cast by Forge already and are left to it. RULE 3, the wipe: Vanquish the Horde, else Meteor (hard cast from hand), when an opponent has 5 or more creatures, more power than we have and more creatures than we have. Both kill our creatures too; the equipment, which is this deck, stays, and Cloud comes back from the command zone (rule 6 sits below, so he is recast after the wipe). 5 rather than 7: on the losses' last turns 5 adds 20 losses and 1 win to the 7 condition. RULE 4, the emergency: the same two when an opponent could kill us next turn with more power than ours, whatever the count. RULE 5 holds the two from Forge: of Forge's 43 league casts of Vanquish and Austere, 8 were outside the rule-3 board (6 losses, 2 wins). RULE 2: Ultimate Magic: Holy first (our permanents indestructible until end of turn) when a wipe of rule 3 is in hand, rule 3's board holds, we have 2 creatures or more and 9 mana; the wipe then follows. Never seen to fire locally: Forge foretells Holy within a turn or two of drawing it, and a foretold card cannot be cast by a rule. RULE 11, Decimate moved ahead of the creatures (Forge picks the four targets; the rule only asks earlier). RULE 12, Summon: Kujata when an opponent has 2 creatures (chapter I: 3 damage to up to two creatures, aimed by Forge). RULE 13, Yuffie, Materia Hunter (gain control of an opponent's noncreature artifact; stock Forge never cast her in 32 draws). Tried and dropped: Austere Command in rules 3 to 5. Cast by a play rule it resolves with no mode chosen and destroys nothing (a local game, turn 24: 13 opposing creatures, nothing left the battlefield); Forge's own casts choose modes and destroyed 5 to 35 opposing permanents in the league. It stays Forge's. Dispatch with a play rule (opp_power >= 4): Forge's logic for it (AI:RemoveDeck:All) never agreed in 8 games with it in hand on many turns; dropped. Local tables (24 at seed 20263020 to 20263022, bots-v2, opponents under their playbooks; 3 wins, too few to mean anything): Vanquish cast once (7 opposing creatures against 1), held once correctly when the seat had the widest board and went on to win; Meteor hard-cast twice (7 opposing creatures for 2 of ours plus a Treasure; 13 opposing permanents for Cloud); Kujata 4 casts, 2 creatures each; Yuffie 11 casts (Arcane Signet, Mind Stone, Talisman, Nevinyrral's Disk); Decimate 4 casts. Shipped as version 2 on 2026-11-14 from ab-run #33: on the same 200 tables of bots (seed 20261300, opponents drawn from the other eleven bots under their playbooks of 2026-11-13) it won 51 against version 1's 44 (+3.5 points, 95% -2 to +9, exact test 0.30); the cards the new rules name were cast in 185 of the 284 games they were drawn, under version 1 in 72 of 275. It has not been set against its stock pilot. What it still casts in a share of games 15 points or more below stock AI's (the stock arm of ab-run #26, other tables of the same pool), 3 cards: Austere Command, Avalanche of Sector 7, Ultimate Magic: Holy (demo-data/playtest/2026-11-14/pool-answers/limit-break-check.txt). VERSION 3 CANDIDATE `hooksopen` (2026-11-21). Version 2 with five changes: after Forge's own attack has been declared, the attackers sent at a player are sent at the opponent that looks most dangerous instead, when that opponent is ahead of the one attacked by five or more and the attack is no worse there: the damage sure to get through whatever is blocked is at least what it was, no more creatures there could block the attackers, and no attacker meets a blocker that would destroy it unless it met one where it was sent (`\"aim\": \"danger\"`; an attack that is sure to kill its target stays, and which creatures attack is not changed); and then the creatures that stayed home attack an opponent that has no creature that can block, the most dangerous such opponent first: those that deal damage, have no ability that taps them (or have vigilance) and are not wanted home by Forge's own judgement of the seat's defence (`\"open\": true`; a weaker opponent is not killed this way while a more dangerous one lives); and then a sure kill is taken from the most dangerous opponent down (`\"finish\": \"leader\"`: enough attackers are put on the opponent that looks most dangerous that the damage reaches its life whatever it blocks, then on the next one, and no weaker opponent is killed while a more dangerous one lives); and then a triggered ability of the seat that removes one permanent of an opponent (destroys it, exiles it, returns it to hand or library) is aimed at the opponent that looks most dangerous, when that opponent looks more dangerous than the one Forge aimed at by five or more and has a permanent of the same kind worth at least as much as Forge's choice or at least 4 (`\"targets\": {\"triggers\": \"danger\"}`); and then when Forge's blocks leave at least the seat's life in damage unblocked and blocks exist that would not, blocks are added, the least valuable free creatures in front of the heaviest unblocked attackers and only as many as it takes for the seat to live (`\"block\": {\"survive\": true}`). No cast or trigger rule is changed. SHIPPED 2026-11-22 as version 3: the `hooksopen` arm of ab-run #59 (seed 20261400, the tables of ab-run #58; demo-data/ab/2026-11-22-ab-v27/, DESIGN.md section 38). Beside version 2 on the same 200 tables of the pool: 50 wins against 37 (22 tables against 9, exact test 0.03); the `hooks` arm 46. Free damage is in because the arm with it won more of these tables than the arm without: the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (after ab-run #62, the exam of the five pool decks that got no hook). VERSION 4 CANDIDATE `guard`. Version 3 with one change: after Forge's own attack has been declared and the hooks the version already has have acted, attackers are taken back when the attack leaves the seat where the opponents one after another are sure to kill it before its next turn and keeping them home prevents that, or, when nothing kept home does, where one opponent alone is (`\"guard\": \"table\"`; a sure kill's attackers stay, and an attack stands when nothing kept home would save the seat). No cast or trigger rule is changed. SHIPPED 2026-11-22 as version 4: the `guard` arm of ab-run #63 (seed 20261450, tables that chose nothing; demo-data/ab/2026-11-22-ab-v31/, DESIGN.md section 40). On the same 200 tables of the pool: versions 2, 3 and 4 won 34, 30 and 26; version 3 beside 2 16 tables against 20 (exact test 0.62), version 4 beside 3 4 against 8 (exact test 0.39); dead with its own creatures tapped 17, 22 and 16 times. Read over the seven decks together by the rules fixed before the run: the versions with the hooks stand (139 tables against 142) and the guard holds (27 against 29; out before its next turn on 18 of the 175 tables its attack changed first, from 31). VERSION 5 CANDIDATE `cmdr` (2026-11-22). Version 4 with one change: when the kill hook looks for a sure kill, a commander of the seat whose combat damage on an opponent would reach 21 this turn, and which no creature of that opponent can block, is a sure kill of that opponent like damage that reaches its life: the commander attacks it, in the same order from the most dangerous opponent down (`\"finish_commander\": true`; the guard does not take such an attacker back). No cast or trigger rule is changed. SHIPPED 2026-11-23 as version 5: the `cmdr` arm of ab-run #66 (seed 20261480, tables that chose nothing; demo-data/ab/2026-11-23-ab-v34/, DESIGN.md section 41). Version 4 plus `\"finish_commander\": true` on the attack (harness 0.4.13): a commander whose combat damage on an opponent would reach 21 and which none of that opponent's creatures can block is a sure kill, taken in the walk from the most dangerous opponent down, and the guard leaves that attacker where it is. Beside version 4 on the same 200 tables of the pool of twelve: 47 wins against 46 (3 tables against 2, exact test 1.00); a commander's sure kill of the most dangerous or the last opponent left with nobody out on 0 of 15 turns (version 4: 6 of 17); the declaration changed on 6 turns. Read over the two decks together by the rule fixed before the run: 6 tables against 2, and that kill missed on 1 of 32 turns against 11 of 34. CANDIDATE react (harness 0.4.12, docs/agents/add_react.py): version 5 with Chaos Warp kept from Forge's AI and played by rules on other players' turns: at a creature attacking the seat when the attack ends its game through its best blocks and one removal changes that, or when one removal takes 6 damage or more away; otherwise in the end step before the seat's own turn at the most dangerous opponent's best permanent worth 3 or more that the spell can hit. From 3 lands the mana for one of them is kept through the seat's own turn while it has such a target.",
+  "on": "2026-11-23"
+ }
+}

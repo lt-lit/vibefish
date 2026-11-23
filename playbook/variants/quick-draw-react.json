@@ -1,0 +1,218 @@
+{
+ "schema": 1,
+ "deck": "quick-draw",
+ "variant": "react",
+ "of": "playbook/precons/quick-draw.json (version 4)",
+ "about": "A candidate with rules for other players' turns (docs/agents/add_react.py). Only the playbook object is read.",
+ "playbook": {
+  "version": 5,
+  "attack": {
+   "policy": "forge",
+   "aim": "danger",
+   "open": true,
+   "finish": "leader",
+   "guard": "table"
+  },
+  "targets": {
+   "triggers": "danger"
+  },
+  "block": {
+   "survive": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 4",
+      "storm >= 2"
+     ]
+    },
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 8"
+     ]
+    },
+    {
+     "play": [
+      "Curse of the Swine"
+     ],
+     "when": [
+      "threat >= 12",
+      "opp_creatures <= 6"
+     ]
+    },
+    {
+     "play": [
+      "Baral's Expertise"
+     ],
+     "when": [
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Propaganda"
+     ],
+     "when": [
+      "opp_creatures >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Izzet Signet",
+      "Cursed Mirror",
+      "Midnight Clock",
+      "Forger's Foundry"
+     ]
+    },
+    {
+     "play": [
+      "Stella Lee, Wild Card"
+     ]
+    },
+    {
+     "play": [
+      "Young Pyromancer",
+      "Third Path Iconoclast",
+      "Electrostatic Field",
+      "Goblin Electromancer",
+      "Guttersnipe",
+      "Kaza, Roil Chaser",
+      "Thunderclap Drake",
+      "Murmuring Mystic",
+      "Talrand, Sky Summoner",
+      "Storm-Kiln Artist",
+      "Veyran, Voice of Duality",
+      "Archmage Emeritus",
+      "Haughty Djinn",
+      "Arcane Bombardment",
+      "Shark Typhoon",
+      "Niv-Mizzet, Parun",
+      "Eris, Roar of the Storm",
+      "Octavia, Living Thesis",
+      "Crackling Spellslinger",
+      "Bloodthirsty Adversary",
+      "Pteramander",
+      "Smoldering Stagecoach",
+      "Leyline Dowser",
+      "Propaganda"
+     ]
+    },
+    {
+     "play": [
+      "Opt",
+      "Ponder",
+      "Preordain",
+      "Serum Visions",
+      "Faithless Looting",
+      "Think Twice",
+      "Radical Idea",
+      "Expressive Iteration",
+      "Big Score",
+      "Lock and Load",
+      "Tezzeret's Gambit",
+      "Treasure Cruise",
+      "Dig Through Time"
+     ],
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Windfall"
+     ],
+     "when": [
+      "hand <= 2",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Epic Experiment"
+     ],
+     "x": "max",
+     "x_min": 4,
+     "when": [
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Finale of Revelation"
+     ],
+     "x": 9,
+     "x_min": 4,
+     "when": [
+      "hand <= 3",
+      "library >= 30"
+     ]
+    },
+    {
+     "play": [
+      "Volcanic Torrent"
+     ],
+     "when": [
+      "opp_creatures >= 4"
+     ]
+    },
+    {
+     "hold": [
+      "Chaos Warp",
+      "Pongify"
+     ]
+    },
+    {
+     "reserve": [
+      "Chaos Warp",
+      "Pongify"
+     ],
+     "aim": "permanent",
+     "aim_min": 3,
+     "when": [
+      "lands >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Chaos Warp",
+      "Pongify"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "when": [
+      "lethal == 1"
+     ]
+    },
+    {
+     "play": [
+      "Chaos Warp",
+      "Pongify"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "aim_min": 6
+    },
+    {
+     "play": [
+      "Chaos Warp",
+      "Pongify"
+     ],
+     "phase": "end",
+     "aim": "permanent",
+     "aim_min": 3
+    }
+   ]
+  },
+  "notes": "Version 2 = the shipped version 1 (its seven cast rules unchanged and in their order, now rules 6 to 12; no triggers, no attack block, so Forge attacks, as shipped) with six rules for the deck's answers: rules 1 to 5 in front, rule 13 at the end. Written from the seat's 200 games of the league of twelve (league-run #3, seed 20261250), where it won 57. Seen / cast in / in hand at the last own turn of a loss: Volcanic Torrent 80 / 37 / 25, Curse of the Swine 82 / 0 / 36 (AI:RemoveDeck:All, Forge never casts it), Baral's Expertise 85 / 59 / 16, Propaganda 88 / 77 / 1 (in hand a median of two own turns first), Pongify 89 / 82 / 5, Chaos Warp 83 / 77 / 5, Vandalblast 80 / 73 / 10, Arcane Denial 74 / 46 / 11. Forge already plays the instants (Pongify, Chaos Warp) and Vandalblast; the losses were held with the sorcery wipes. Rule 1: Volcanic Torrent (one-sided: X damage to each creature and planeswalker the opponents control, X = spells we cast this turn, cascade adds one) once two spells have gone this turn and an opponent has four creatures, so X is at least four. Rule 2: Torrent at once against an opponent with eight creatures, where even X of two clears a token board (the pool is token decks: Goblin, Soldier, Elf, Zombie, Drake tokens). Rule 13: Torrent with whatever mana the engine rules leave, against four creatures. Local casts (16 tables of bots, seeds 20263050-51): five from hand, killing 10 tokens; a planeswalker and three Boars; 12 creatures (storm 16); Cid and eight Soldiers. Rule 3: Curse of the Swine when an opponent could hit for 12 and no opponent has more than six creatures: X and the targets are Forge's (its ChangeZone logic agrees once the flag is bypassed), and against a wide board it spread X over 1/1 tokens (which become 2/2 Boars) and a ward creature whose ward countered the whole spell (first local batch, under 'threat >= 12' alone); the cap of six keeps it for boards of few large creatures, which is where trading a creature for a 2/2 helps. Cast twice locally; one resolved, three creatures exiled. Rule 4: Baral's Expertise when an opponent could kill us next turn (bounce three, targets Forge's). Rule 5: Propaganda as soon as an opponent has three creatures, ahead of the engine (it was the last card of the shipped payoff list). Not expressible: Arcane Denial (a counterspell needs a spell on the stack, other players' turns), Pongify and Chaos Warp at instant speed or aimed at a chosen permanent of an opponent (left to Forge, which casts them in nine games of ten), Vandalblast's overload (an alternative cost, which play rules do not use), the targets and X of Curse of the Swine. Shipped as version 2 on 2026-11-14 from ab-run #31: on the same 200 tables of bots (seed 20261300, opponents drawn from the other eleven bots under their playbooks of 2026-11-13) it won 58 against version 1's 59 (-0.5 points, 95% -6 to +5, exact test 1.0); the cards the new rules name were cast in 155 of the 211 games they were drawn, under version 1 in 69 of 209. It has not been set against its stock pilot. What it still casts in a share of games 15 points or more below stock AI's (the stock arm of ab-run #26, other tables of the same pool), 9 cards: Elemental Eruption, Rousing Refrain, Galvanic Iteration, Pyretic Charge, Deep Analysis, Arcane Denial and 3 more (demo-data/playtest/2026-11-14/pool-answers/quick-draw-check.txt). VERSION 3 CANDIDATE `hooksopen` (2026-11-21). Version 2 with five changes: after Forge's own attack has been declared, the attackers sent at a player are sent at the opponent that looks most dangerous instead, when that opponent is ahead of the one attacked by five or more and the attack is no worse there: the damage sure to get through whatever is blocked is at least what it was, no more creatures there could block the attackers, and no attacker meets a blocker that would destroy it unless it met one where it was sent (`\"aim\": \"danger\"`; an attack that is sure to kill its target stays, and which creatures attack is not changed); and then the creatures that stayed home attack an opponent that has no creature that can block, the most dangerous such opponent first: those that deal damage, have no ability that taps them (or have vigilance) and are not wanted home by Forge's own judgement of the seat's defence (`\"open\": true`; a weaker opponent is not killed this way while a more dangerous one lives); and then a sure kill is taken from the most dangerous opponent down (`\"finish\": \"leader\"`: enough attackers are put on the opponent that looks most dangerous that the damage reaches its life whatever it blocks, then on the next one, and no weaker opponent is killed while a more dangerous one lives); and then a triggered ability of the seat that removes one permanent of an opponent (destroys it, exiles it, returns it to hand or library) is aimed at the opponent that looks most dangerous, when that opponent looks more dangerous than the one Forge aimed at by five or more and has a permanent of the same kind worth at least as much as Forge's choice or at least 4 (`\"targets\": {\"triggers\": \"danger\"}`); and then when Forge's blocks leave at least the seat's life in damage unblocked and blocks exist that would not, blocks are added, the least valuable free creatures in front of the heaviest unblocked attackers and only as many as it takes for the seat to live (`\"block\": {\"survive\": true}`). No cast or trigger rule is changed. SHIPPED 2026-11-22 as version 3: the `hooksopen` arm of ab-run #59 (seed 20261400, the tables of ab-run #58; demo-data/ab/2026-11-22-ab-v27/, DESIGN.md section 38). Beside version 2 on the same 200 tables of the pool: 64 wins against 39 (40 tables against 15, exact test 0.0010); the `hooks` arm 49. Free damage is in because the arm with it won more of these tables than the arm without: the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (after ab-run #62, the exam of the five pool decks that got no hook). VERSION 4 CANDIDATE `guard`. Version 3 with one change: after Forge's own attack has been declared and the hooks the version already has have acted, attackers are taken back when the attack leaves the seat where the opponents one after another are sure to kill it before its next turn and keeping them home prevents that, or, when nothing kept home does, where one opponent alone is (`\"guard\": \"table\"`; a sure kill's attackers stay, and an attack stands when nothing kept home would save the seat). No cast or trigger rule is changed. SHIPPED 2026-11-22 as version 4: the `guard` arm of ab-run #63 (seed 20261450, tables that chose nothing; demo-data/ab/2026-11-22-ab-v31/, DESIGN.md section 40). On the same 200 tables of the pool: versions 2, 3 and 4 won 53, 46 and 49; version 3 beside 2 13 tables against 20 (exact test 0.30), version 4 beside 3 6 against 3 (exact test 0.51); dead with its own creatures tapped 16, 15 and 13 times. Read over the seven decks together by the rules fixed before the run: the versions with the hooks stand (139 tables against 142) and the guard holds (27 against 29; out before its next turn on 18 of the 175 tables its attack changed first, from 31). CANDIDATE react (harness 0.4.12, docs/agents/add_react.py): version 4 with Chaos Warp, Pongify kept from Forge's AI and played by rules on other players' turns: at a creature attacking the seat when the attack ends its game through its best blocks and one removal changes that, or when one removal takes 6 damage or more away; otherwise in the end step before the seat's own turn at the most dangerous opponent's best permanent worth 3 or more that the spell can hit. From 3 lands the mana for one of them is kept through the seat's own turn while it has such a target.",
+  "on": "2026-11-22"
+ }
+}

@@ -1,0 +1,387 @@
+{
+ "schema": 1,
+ "deck": "goblin-storm",
+ "variant": "react",
+ "of": "playbook/precons/goblin-storm.json (version 7)",
+ "about": "A candidate with rules for other players' turns (docs/agents/add_react.py). Only the playbook object is read.",
+ "playbook": {
+  "version": 8,
+  "attack": {
+   "policy": "forge",
+   "aim": "danger",
+   "open": true,
+   "finish": "leader",
+   "guard": "table"
+  },
+  "targets": {
+   "triggers": "danger"
+  },
+  "block": {
+   "survive": true
+  },
+  "cast": {
+   "rules": [
+    {
+     "activate": [
+      "Goblin Bombardment"
+     ],
+     "when": [
+      "opponents == 1",
+      "opp_life <= 5",
+      "creatures >= opp_life"
+     ],
+     "times": 60
+    },
+    {
+     "play": [
+      "Goblin Bombardment"
+     ],
+     "when": [
+      "opponents == 1",
+      "opp_life <= 5",
+      "creatures >= opp_life"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Ruby Medallion"
+     ]
+    },
+    {
+     "activate": [
+      "Krenko, Mob Boss"
+     ],
+     "phase": "main1"
+    },
+    {
+     "activate": [
+      "Idol of Oblivion"
+     ],
+     "ability": "Draw a card",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "play": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3",
+      "creatures <= 12",
+      "library >= 40"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "threat >= life",
+      "opp_creatures > creatures"
+     ]
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "creatures <= 3",
+      "opp_creatures >= 9"
+     ]
+    },
+    {
+     "play": [
+      "Blasphemous Act"
+     ],
+     "when": [
+      "creatures <= 6",
+      "opp_creatures >= 12"
+     ]
+    },
+    {
+     "play": [
+      "Fists of Flame",
+      "Witch's Mark"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3",
+      "creatures <= 12",
+      "library >= 40"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Wild Ride"
+     ],
+     "target": "Zada, Hedron Grinder",
+     "when": [
+      "controls Zada, Hedron Grinder",
+      "creatures >= 3"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid",
+      "Fists of Flame",
+      "Witch's Mark",
+      "Wild Ride"
+     ],
+     "until": [
+      "turn >= 12",
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Expedite",
+      "Crimson Wisps",
+      "Renegade Tactics",
+      "Ancestors' Aid",
+      "Fists of Flame",
+      "Witch's Mark",
+      "Wild Ride"
+     ],
+     "until": [
+      "life <= 15",
+      "library >= 40"
+     ]
+    },
+    {
+     "hold": [
+      "Fountainport"
+     ],
+     "ability": "Sacrifice a token"
+    },
+    {
+     "play": [
+      "Battle Hymn"
+     ],
+     "when": [
+      "creatures >= 4",
+      "hand >= 3",
+      "mana <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "play": [
+      "Brightstone Ritual"
+     ],
+     "when": [
+      "type:Goblin >= 4",
+      "hand >= 3",
+      "mana <= 2"
+     ],
+     "phase": "main1"
+    },
+    {
+     "hold": [
+      "Battle Hymn",
+      "Brightstone Ritual"
+     ]
+    },
+    {
+     "play": [
+      "Grapeshot"
+     ],
+     "when": [
+      "opp_life <= storm"
+     ]
+    },
+    {
+     "play": [
+      "Haze of Rage"
+     ],
+     "when": [
+      "attackers >= 5"
+     ],
+     "phase": "main1",
+     "times": 6
+    },
+    {
+     "hold": [
+      "Haze of Rage"
+     ]
+    },
+    {
+     "play": [
+      "Empty the Warrens"
+     ],
+     "when": [
+      "storm >= 3"
+     ]
+    },
+    {
+     "hold": [
+      "Empty the Warrens"
+     ],
+     "until": [
+      "storm >= 2"
+     ]
+    },
+    {
+     "hold": [
+      "Grapeshot"
+     ],
+     "until": [
+      "storm >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Zada, Hedron Grinder"
+     ],
+     "when": [
+      "creatures >= 2",
+      "hand:zada_spells >= 1",
+      "mana >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Zada, Hedron Grinder"
+     ],
+     "when": [
+      "creatures >= 4"
+     ]
+    },
+    {
+     "hold": [
+      "Zada, Hedron Grinder"
+     ],
+     "until": [
+      "turn >= 8"
+     ]
+    },
+    {
+     "hold": [
+      "Zada, Hedron Grinder"
+     ],
+     "until": [
+      "creatures >= 4"
+     ]
+    },
+    {
+     "play": [
+      "Krenko, Mob Boss",
+      "Siege-Gang Commander",
+      "Goblin Warchief",
+      "Goblin Chieftain",
+      "Storm-Kiln Artist",
+      "Impact Tremors",
+      "Mogg War Marshal",
+      "Dragon Fodder",
+      "Krenko's Command",
+      "Howlsquad Heavy",
+      "General Kreat, the Boltbringer",
+      "Siege-Gang Lieutenant",
+      "Idol of Oblivion",
+      "Rundvelt Hordemaster",
+      "Goblin Trashmaster",
+      "Searslicer Goblin",
+      "Redcap Gutter-Dweller",
+      "Goblin Lackey",
+      "Skirk Prospector",
+      "Conspicuous Snoop",
+      "Goblin Matron",
+      "Goblin Dark-Dwellers",
+      "Pashalik Mons",
+      "Grenzo, Havoc Raiser",
+      "Frontline Heroism",
+      "Quest for the Goblin Lord",
+      "Faithless Looting"
+     ]
+    },
+    {
+     "play": [
+      "Goblin Bombardment"
+     ]
+    },
+    {
+     "activate": [
+      "Skullclamp"
+     ],
+     "ability": "Equip",
+     "target": "Goblin Token",
+     "when": [
+      "not controls Goblin Chieftain",
+      "not controls Rundvelt Hordemaster",
+      "not controls Goblin Trashmaster",
+      "library >= 20"
+     ],
+     "phase": "main2",
+     "times": 2
+    },
+    {
+     "hold": [
+      "Chaos Warp"
+     ]
+    },
+    {
+     "reserve": [
+      "Chaos Warp"
+     ],
+     "aim": "permanent",
+     "aim_min": 3,
+     "when": [
+      "lands >= 3"
+     ]
+    },
+    {
+     "play": [
+      "Chaos Warp"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "when": [
+      "lethal == 1"
+     ]
+    },
+    {
+     "play": [
+      "Chaos Warp"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "aim_min": 6
+    },
+    {
+     "play": [
+      "Chaos Warp"
+     ],
+     "phase": "end",
+     "aim": "permanent",
+     "aim_min": 3
+    }
+   ],
+   "groups": {
+    "zada_spells": [
+     "Expedite",
+     "Crimson Wisps",
+     "Renegade Tactics",
+     "Ancestors' Aid",
+     "Fists of Flame",
+     "Witch's Mark",
+     "Wild Ride"
+    ]
+   }
+  },
+  "notes": "Version 4 (2026-11-11), the candidate `answers`: version 3 as shipped, every rule and its order kept, plus seven rules for three of the deck's answer cards (the version 3 notes are in playbook/precons/goblin-storm.json). Written from the 200 games of the bot league (league-run #2, every seat under its playbook; DESIGN.md §24), where this seat won 32, was the first player out in 68 and took its last blow from Token Triumph in 82 of 168 losses. What those games say first: the seat's removal is not what it sits on. Forge casts Chaos Warp in 40 of the 47 games it is drawn, Vandalblast in 34 of 45 (ten of its 40 casts overloaded), Goblin Negotiation in 27 of 50, Spreading Insurrection in 26 of 51 and Blasphemous Act in 16 of 30, all aimed by Forge, and those stay Forge's. At the start of its last own turn of a loss the seat holds its storm half (Grapeshot in 36 losses, Haze of Rage 27, Battle Hymn 27, Empty the Warrens 25) and Goblin Bombardment (32), which Forge's AI never casts (0 of 51 games drawn; AI:RemoveDeck:All). In 67 of the 168 losses it never had a turn with two or more copies of a spell aimed at Zada. It takes a hit of ten or more in 181 games; the first comes in the round after its own turns 5 to 8 in 152 of them and from Token Triumph in 114, when the seat has a median of four creatures and blocks under one of the six or seven attackers. Blasphemous Act: three play rules, after the one-mana draw spells at Zada (cashed in first) and before anything that puts a body on the table or could discard the card (Witch's Mark, Faithless Looting). Forge's own test for the card (DamageAllAi.evaluateDamageAll) weighs our creatures against those of the one opponent with the lowest life and asks for 200 points of difference, whatever the other boards hold; the widest board at this table is usually Token Triumph's, which is seldom the lowest life. Rule one, `threat >= life` and `opp_creatures > creatures`: one opponent's board can attack for all our life and it outnumbers ours. Counted from the league logs with printed power (a floor), that state came up on 283 own turns of 121 games; the seat was dead before its next turn 39% of the time (4% when none of the three rules applies) and won 9 of the 121. In the same danger with the wider board (34 games) it won 15, so the rule asks to be outnumbered. Rules two and three, three creatures or fewer against nine or more and six or fewer against twelve or more: a lead of six bodies is where deaths within the round jump (10% at a lead of four or five, 27% at six to eight, 30% above). Forge's own casts are left alone (no hold). The 16 casts Forge made in the league bought the seat 5.8 more own turns against 3.2 in matched states without a cast, and one win: the wipe buys time, not games. Grapeshot: one play rule above Haze of Rage, `opp_life <= storm`: every opponent left has no more life than the spells cast this turn, so the copies alone finish one of them. The shipped hold (until storm five) stays as it is. Goblin Bombardment: a play rule after the permanents (spare mana only) and, at the top of the list, the kill: with one opponent left at five life or less and a creature for each point of it, cast Bombardment if it is still in hand and sacrifice until that opponent is dead (`times` 60). Forge's burn logic aims a one-damage ability at the face of the lowest-life opponent once that opponent is at five or less and chooses the creature to sacrifice itself (tokens, in what was seen); the conditions keep the rule to the case where that wins the game. In the league the seat lost two games with the last opponent at 2 and at 4 life, six and eleven creatures of its own and Bombardment in hand. Tried and dropped. Grapeshot whenever the storm count reaches five (the seat reached that with the card in hand on 20 own turns of 17 league games and cast it on two): its one cast at the local tables put the original on a 1/4 and five copies in the face of a player at 40 life, a second, free cast eight more, and nothing left the table; the aim is Forge's. An `activate` for Bombardment without conditions: Forge agrees to it, pays with a token and pings a creature that one damage kills, a planeswalker, or a player at five or less (six activations in two table games with a scratch deck: Fish and Rat tokens for a Reclamation Sage, a Satyr Wayfinder, an Insect, two Forest Dryads and a point of Ajani's loyalty; ten in six goldfish games, all at players at five or less, who died of them). Forge's test for the player is that the ping leaves it under five life (DamageAiBase.shouldTgtP), not that the creatures are there to finish, and nothing in such a rule says when a trade of tokens is wanted. Local tables of bots, seed 20269040, to see the rules fire and not to measure anything: 20 different tables finished (13 under a first version without the Bombardment rules and with the storm-five Grapeshot rule, six with both, one under the rules as they stand) and four of those tables again under the rules as they stand, which came out the same; two games stopped by hand when a Tricky Terrain board of 54 and of 156 permanents brought them to a standstill. Blasphemous Act was drawn in four games and cast in all four, three times by rule one at 13, 6 and 23 life: 20, 27 and 12 opposing creatures died for 4, 5 and 2 of ours, the seat lived 2, 5 and 7 more own turns and won none of the three; in the first, Hail, Caesar's Bastion of Remembrance turned its nine dead creatures into nine life lost for us. Rules two and three did not fire at those tables; with a scratch deck holding six copies rule two fired three times in four games (2 creatures against 14, none against 9, 3 against 9), and rule three has not fired anywhere. The Grapeshot kill and the Bombardment kill never came up at a table; the Bombardment kill was seen once in twelve goldfish games with a scratch deck of twelve copies (the last opponent at 1 life, one Goblin token sacrificed). Bombardment itself was cast in three of the three games it was drawn once it had its play rule. What the format cannot say for these cards: a condition on the lowest opponent life (`opp_life` is the highest), which a Bombardment or Grapeshot kill on one of several opponents needs (in 22 of the 43 league games with Bombardment in hand at the start of a turn the seat had as many creatures as the life of an opponent at five or less); the aim of anything pointed at an opponent (Grapeshot's copies, Bombardment, the X of Goblin Negotiation); Vandalblast's overload (a play rule casts only a card's plain spell; Forge overloads it by itself); Gempalm Incinerator's cycling, an ability of a card in hand, never used in the 200 games; what the opponents have on the table (Hornet Nest and Bastion of Remembrance turn the wipe against us); which card is discarded (Blasphemous Act went to Witch's Mark, Faithless Looting or the hand limit in 12 league games); anything on another player's turn. Shipped on 2026-11-12 as version 4: at 200 tables of bots (ab-run #21 joined with #20, seed 20261200) 38 wins against version 3's 30 on the same tables (+4.0 points, 95% +1 to +7, 10 discordant pairs against 2, exact test 0.039, one of four comparisons made that day) and the stock pilot's 11. Version 5 (2026-11-12): the attack is left to Forge. Measured on version 3's rules (ab-run #23 joined with #20, seed 20261200): 42 wins with Forge's own attack against 30 with the go-wide attack (+6.0 points, 95% -0 to +12, exact test 0.08) and the stock pilot's 11. Version 4's answer rules and Forge's attack have not been played together yet: that is the next round. VERSION 6 CANDIDATE `hooksopen` (2026-11-21). Version 5 with five changes: after Forge's own attack has been declared, the attackers sent at a player are sent at the opponent that looks most dangerous instead, when that opponent is ahead of the one attacked by five or more and the attack is no worse there: the damage sure to get through whatever is blocked is at least what it was, no more creatures there could block the attackers, and no attacker meets a blocker that would destroy it unless it met one where it was sent (`\"aim\": \"danger\"`; an attack that is sure to kill its target stays, and which creatures attack is not changed); and then the creatures that stayed home attack an opponent that has no creature that can block, the most dangerous such opponent first: those that deal damage, have no ability that taps them (or have vigilance) and are not wanted home by Forge's own judgement of the seat's defence (`\"open\": true`; a weaker opponent is not killed this way while a more dangerous one lives); and then a sure kill is taken from the most dangerous opponent down (`\"finish\": \"leader\"`: enough attackers are put on the opponent that looks most dangerous that the damage reaches its life whatever it blocks, then on the next one, and no weaker opponent is killed while a more dangerous one lives); and then a triggered ability of the seat that removes one permanent of an opponent (destroys it, exiles it, returns it to hand or library) is aimed at the opponent that looks most dangerous, when that opponent looks more dangerous than the one Forge aimed at by five or more and has a permanent of the same kind worth at least as much as Forge's choice or at least 4 (`\"targets\": {\"triggers\": \"danger\"}`); and then when Forge's blocks leave at least the seat's life in damage unblocked and blocks exist that would not, blocks are added, the least valuable free creatures in front of the heaviest unblocked attackers and only as many as it takes for the seat to live (`\"block\": {\"survive\": true}`). No cast or trigger rule is changed. SHIPPED 2026-11-22 as version 6: the `hooksopen` arm of ab-run #59 (seed 20261400, the tables of ab-run #58; demo-data/ab/2026-11-22-ab-v27/, DESIGN.md section 38). Beside version 5 on the same 200 tables of the pool: 45 wins against 36 (24 tables against 15, exact test 0.20); the `hooks` arm 41. Free damage is in because the arm with it won more of these tables than the arm without: the better of two on the tables that measured it; its confirming run on tables that chose nothing is still to be played (after ab-run #62, the exam of the five pool decks that got no hook). VERSION 7 CANDIDATE `guard`. Version 6 with one change: after Forge's own attack has been declared and the hooks the version already has have acted, attackers are taken back when the attack leaves the seat where the opponents one after another are sure to kill it before its next turn and keeping them home prevents that, or, when nothing kept home does, where one opponent alone is (`\"guard\": \"table\"`; a sure kill's attackers stay, and an attack stands when nothing kept home would save the seat). No cast or trigger rule is changed. SHIPPED 2026-11-22 as version 7: the `guard` arm of ab-run #63 (seed 20261450, tables that chose nothing; demo-data/ab/2026-11-22-ab-v31/, DESIGN.md section 40). On the same 200 tables of the pool: versions 5, 6 and 7 won 32, 38 and 40; version 6 beside 5 20 tables against 14 (exact test 0.39), version 7 beside 6 2 against 0 (exact test 0.50); dead with its own creatures tapped 11, 14 and 15 times. Read over the seven decks together by the rules fixed before the run: the versions with the hooks stand (139 tables against 142) and the guard holds (27 against 29; out before its next turn on 18 of the 175 tables its attack changed first, from 31). CANDIDATE react (harness 0.4.12, docs/agents/add_react.py): version 7 with Chaos Warp kept from Forge's AI and played by rules on other players' turns: at a creature attacking the seat when the attack ends its game through its best blocks and one removal changes that, or when one removal takes 6 damage or more away; otherwise in the end step before the seat's own turn at the most dangerous opponent's best permanent worth 3 or more that the spell can hit. From 3 lands the mana for one of them is kept through the seat's own turn while it has such a target.",
+  "on": "2026-11-22"
+ }
+}
