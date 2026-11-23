@@ -577,6 +577,20 @@ dying creature of the seat's own), `trigger_counter_own` (allowed), `trigger_cou
 creature instead), `trigger_counter_ended` (put on a creature of its own that survives), `trigger_counter_stuck`
 (nothing else to put it on).
 
+`"types": {"cards": ["Winter, Cynical Opportunist"], "leave": ["Deadbridge Chant"]}` (harness 0.4.17; with or without
+the other keys) is for a named permanent of the seat whose trigger exiles "any number of cards from your graveyard
+with four or more card types among them" and puts a permanent card from among them onto the battlefield. Forge asks
+for the cards one at a time and its AI hands over the whole graveyard: 550 of the 558 uses of Winter's trigger in
+200 league games took every card or all but one, which ends delirium and empties what the rest of Death Toll counts
+and brings back (DESIGN §47). The rule answers instead. It picks the permanent to bring back (the creature Forge's
+own rating puts highest, or another permanent by its mana value; never a land, and never a card `leave` names, which
+is for a permanent whose arrival the deck cannot afford, like a ten-card mill); then the fewest other cards that make
+the number of types with it, the ones the graveyard misses least: spent instants and sorceries and lands before
+permanents, and a type the graveyard holds twice before one it holds once. Nothing is exiled when no permanent in the
+graveyard is worth it. Every other choice of a card to move stays Forge's. Counters: `trigger_types_seen` (times the
+question was asked), `trigger_types_exiled` (cards handed over), `trigger_types_back` (permanents brought back by the
+rule's choice), `trigger_types_declined` (nothing worth bringing back).
+
 ### `block`: not dying to an attack the seat could have blocked
 
 Blocks are Forge's AI's, and under a lethal attack they are nearly always sound: of 4,146 deaths in combat at the

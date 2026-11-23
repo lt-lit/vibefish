@@ -667,6 +667,8 @@ public final class Playbook {
         public final int margin;
         public final List<String> counterCards;
         public final int counterOwnPerTurn;
+        public final List<String> typeCards;    // 0.4.17: permanents whose trigger exiles "any number of cards with N card types among them"
+        public final List<String> typeLeave;    // ... cards that trigger never brings back
 
         Targets(JsonObject o) {
             String t = str(o, "triggers", "");
@@ -681,6 +683,12 @@ public final class Playbook {
             counterOwnPerTurn = c == null ? 0 : Math.max(0, num(c, "own_per_turn", 0));
             if (c != null && counterCards.isEmpty()) {
                 throw new IllegalArgumentException("playbook targets.counters needs \"cards\"");
+            }
+            JsonObject ty = o.has("types") && o.get("types").isJsonObject() ? o.getAsJsonObject("types") : null;
+            typeCards = ty == null || !ty.has("cards") ? Collections.emptyList() : strings(ty.get("cards"));
+            typeLeave = ty == null || !ty.has("leave") ? Collections.emptyList() : strings(ty.get("leave"));
+            if (ty != null && typeCards.isEmpty()) {
+                throw new IllegalArgumentException("playbook targets.types needs \"cards\"");
             }
         }
     }

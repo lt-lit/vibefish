@@ -1631,6 +1631,124 @@ public class PlaybookController extends PlayerControllerAi {
         return last;
     }
 
+    // ------------------------------------------------------------------ a trigger that exiles cards with so many card types among them (0.4.17)
+
+    private SpellAbility typesFor;                      // the exile part whose cards are being handed over
+    private int typesTurn = -1;
+    private final List<Card> typesPlan = new ArrayList<>();
+    private Card typesBack;                             // the permanent the second part of the ability puts onto the battlefield
+
+    /** A trigger of a permanent the playbook names under {@code targets.types}, controlled by this seat. */
+    private boolean typesRule(SpellAbility sa) {
+        return playbook != null && playbook.targets != null && !playbook.targets.typeCards.isEmpty() && sa != null && sa.getHostCard() != null
+                && sa.getActivatingPlayer() == player && playbook.targets.typeCards.contains(sa.getHostCard().getName());
+    }
+
+    /**
+     * Winter, Cynical Opportunist: "you may exile any number of cards from your graveyard with four or more card
+     * types among them. If you do, put a permanent card from among them onto the battlefield." Forge asks for the
+     * cards one at a time and its AI hands over the whole graveyard (550 of 558 uses in 200 league games), which
+     * ends delirium and empties what the deck's other cards count and bring back. The rule hands over the permanent
+     * worth bringing back and then the fewest cards that make the number of types with it, the ones the graveyard
+     * misses least: lands and spent spells before permanents, and a type the graveyard holds twice before one it
+     * holds once. Nothing is handed over when no permanent is worth it.
+     */
+    private Card typesNext(SpellAbility sa, CardCollection fetchList) {
+        int turn = getGame().getPhaseHandler().getTurn();
+        if (sa != typesFor || turn != typesTurn) {
+            typesFor = sa;
+            typesTurn = turn;
+            typesPlan.clear();
+            typesBack = null;
+            int need = Math.max(1, AbilityUtils.calculateAmount(sa.getHostCard(), sa.getParam("WithTotalCardTypes"), sa));
+            Card back = null;
+            int backScore = 120;                        // a land, or an artifact that costs nothing, is not worth the graveyard
+            for (Card c : fetchList) {
+                int score = backScore(c);
+                if (score > backScore) {
+                    back = c;
+                    backScore = score;
+                }
+            }
+            count("trigger_types_seen", 1);
+            if (back == null) {
+                count("trigger_types_declined", 1);
+                trace("exiles nothing for " + sa.getHostCard().getName() + ": no permanent in the graveyard worth bringing back");
+            } else {
+                List<Card> plan = new ArrayList<>();
+                plan.add(back);
+                Set<Object> have = new HashSet<>(back.getType().getCoreTypes());
+                while (have.size() < need) {
+                    Card pick = null;
+                    int pickScore = Integer.MAX_VALUE;
+                    for (Card c : fetchList) {
+                        if (plan.contains(c) || have.containsAll(c.getType().getCoreTypes())) {
+                            continue;
+                        }
+                        int twice = 0;                  // a type the graveyard keeps a card of when this one goes
+                        for (Object t : c.getType().getCoreTypes()) {
+                            if (have.contains(t)) {
+                                continue;
+                            }
+                            for (Card o : fetchList) {
+                                if (o != c && !plan.contains(o) && o.getType().getCoreTypes().contains(t)) {
+                                    twice = 1;
+                                    break;
+                                }
+                            }
+                        }
+                        int score = keepScore(c) - 15 * twice;
+                        if (score < pickScore) {
+                            pick = c;
+                            pickScore = score;
+                        }
+                    }
+                    if (pick == null) {
+                        break;                          // the graveyard does not hold that many types: Forge's own count decides
+                    }
+                    plan.add(pick);
+                    have.addAll(pick.getType().getCoreTypes());
+                }
+                typesPlan.addAll(plan);
+                typesBack = back;
+                count("trigger_types_exiled", plan.size());
+                trace("exiles " + plan.size() + " of " + fetchList.size() + " card(s) for " + sa.getHostCard().getName() + " and brings back " + back.getName() + ": " + plan);
+            }
+        }
+        while (!typesPlan.isEmpty()) {
+            Card c = typesPlan.remove(0);
+            if (fetchList.contains(c)) {
+                return c;
+            }
+        }
+        return null;                                    // enough: confirmAction says so when Forge asks whether to stop
+    }
+
+    /** How much a permanent card in the graveyard is worth on the battlefield; below zero for what the playbook leaves there. */
+    private int backScore(Card c) {
+        if (!c.isPermanent() || playbook.targets.typeLeave.contains(c.getName())) {
+            return -1;
+        }
+        if (c.isLand()) {
+            return 1;
+        }
+        if (c.isCreature()) {
+            return ComputerUtilCard.evaluateCreature(c);
+        }
+        return 110 + 40 * c.getCMC();
+    }
+
+    /** How much the graveyard misses a card: what could come back later is kept, lands and spent spells go first. */
+    private int keepScore(Card c) {
+        if (c.isLand()) {
+            return 20;
+        }
+        if (!c.isPermanent()) {
+            return 10;
+        }
+        return Math.max(60, backScore(c));
+    }
+
     // ------------------------------------------------------------------ lands that return a land (0.4.16)
 
     private int bounceLandTurn = -1;                    // the turn in which the seat last played such a land by this hook
@@ -1693,6 +1811,22 @@ public class PlaybookController extends PlayerControllerAi {
     @Override
     public Card chooseSingleCardForZoneChange(ZoneType destination, List<ZoneType> origin, SpellAbility sa, CardCollection fetchList,
             DelayedReveal delayedReveal, String selectPrompt, boolean isOptional, Player decider) {
+        try {
+            if (typesRule(sa) && fetchList != null) {
+                if (destination == ZoneType.Exile && sa.hasParam("WithTotalCardTypes")) {
+                    return typesNext(sa, fetchList);
+                }
+                if (destination == ZoneType.Battlefield && typesBack != null && fetchList.contains(typesBack)) {
+                    Card back = typesBack;
+                    typesBack = null;
+                    count("trigger_types_back", 1);
+                    return back;
+                }
+            }
+        } catch (RuntimeException e) {
+            count("trigger_errors", 1);
+            System.err.println("[vibefish] playbook targets.types failed, Forge chooses: " + e);
+        }
         try {
             if (playbook != null && playbook.cast != null && playbook.cast.bounceLands && sa != null && destination == ZoneType.Hand
                     && sa.getActivatingPlayer() == player && returnsALand(sa.getHostCard()) && fetchList != null && !fetchList.isEmpty()) {
@@ -3737,6 +3871,9 @@ public class PlaybookController extends PlayerControllerAi {
     @Override
     public boolean confirmAction(SpellAbility sa, PlayerActionConfirmMode mode, String message, List<String> options, Card cardToShow,
             Map<String, Object> params) {
+        if (sa != null && sa == typesFor && mode == PlayerActionConfirmMode.ChangeZoneGeneral) {
+            return true;                                // 0.4.17: the cards the rule chose are handed over; no more
+        }
         Playbook.TriggerRule rule = null;
         try {
             rule = effectRule(sa);

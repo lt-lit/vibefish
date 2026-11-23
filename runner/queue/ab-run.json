@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-23T06:27Z",
-  "note": "ab-run #71: a land in hand and no land played (DESIGN §46, harness 0.4.16), read by the rule in CLAUDE.md (In flight, How #71 is to be read), fixed before this was queued. Five candidates, each the shipped playbook with \"bounce_lands\": true on its cast block (playbook/variants/<deck>-lands.json): a land that returns a land as it enters (Gruul Turf and its kind) is played after the turn's mana is spent, and at the end of the second main phase when Forge's AI would hold it for want of a basic land, and it returns a tapped land. Each candidate plays alone, on the seed and table of an earlier run whose shipped arm of the same deck it is read beside: deep-clue-sea@lands on seed 20261490 at the pool (ab-run #68), blight-curse@lands on 20261510 and deadly-disguise@lands on 20261520 at the owner's table (ab-run #69), revenant-recon@lands and miracle-worker@lands on 20261530 at the owner's table (ab-run #70). The shipped playbooks are the same files in all four commits. Playbook arms only; 1,000 games in 25 shard jobs. The request before this one: ab-run #70 (the life guard).",
+  "requested": "2026-11-23T06:59Z",
+  "note": "ab-run #72: Death Toll's commander (DESIGN §47, harness 0.4.17), read by the rule in CLAUDE.md (In flight, How #72 is to be read), fixed before this was queued. playbook/variants/death-toll-graveyard.json is the shipped playbook with \"types\" in its targets for Winter, Cynical Opportunist: the end-step trigger that exiles \"any number of cards from your graveyard with four or more card types among them\" and brings a permanent back is answered by the rule (the permanent worth bringing back and the fewest other cards that make four types), where Forge's AI exiles the whole graveyard (550 of 558 uses in 200 league games). The candidate plays alone on seed 20261530 at the owner's table, the tables of ab-run #70, whose death-toll arm it is read beside. Playbook arm only; 200 games in 5 shard jobs. The request before this one: ab-run #71 (the land hook).",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "5",
@@ -11,10 +11,5 @@
   "opponent_playbooks": true,
   "pool": "runner/leagues/owners-table-v1.json",
   "seed": "20261530",
-  "runs": [
-    {"decks": "deep-clue-sea@lands", "pool": "runner/leagues/bots-v2.json", "seed": "20261490"},
-    {"decks": "blight-curse@lands", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261510"},
-    {"decks": "deadly-disguise@lands", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261520"},
-    {"decks": "revenant-recon@lands,miracle-worker@lands", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261530"}
-  ]
+  "decks": "death-toll@graveyard"
 }
