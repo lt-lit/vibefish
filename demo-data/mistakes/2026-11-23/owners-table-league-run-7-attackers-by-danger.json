@@ -1,0 +1,59 @@
+{
+ "kind": "attack-danger",
+ "games": 504,
+ "arm": null,
+ "deck": null,
+ "counts": {
+  "3 declarations": 6379,
+  "3 attackers": 13276,
+  "3 at_top": 7502,
+  "3 all_at_top": 3507,
+  "3 none_at_top": 2431,
+  "3 attackers_seat_lost": 8177,
+  "3 at_winner": 2388,
+  "else declarations": 2773,
+  "else attackers": 6065,
+  "else gap 1-4": 1261,
+  "else attacked_lower_life": 2107,
+  "else attacked_lowest_life": 1651,
+  "else top_no_blocker": 293,
+  "else top_fewer_blockers": 562,
+  "else top_as_many_blockers": 503,
+  "else top_more_blockers": 1708,
+  "else sure_at_top_at_least": 1100,
+  "else sure_at_top_at_least gap5": 423,
+  "else gap 5-9": 584,
+  "2 declarations": 1184,
+  "2 attackers": 4588,
+  "2 at_top": 2965,
+  "2 all_at_top": 694,
+  "2 none_at_top": 342,
+  "else gap 10-19": 577,
+  "ties": 727,
+  "else gap 20+": 351,
+  "2 attackers_seat_lost": 1471,
+  "2 at_winner": 571
+ },
+ "by_round": {
+  "1-4": {
+   "attackers": 1286,
+   "at_top": 728,
+   "chance": 429.8333333333292
+  },
+  "5-8": {
+   "attackers": 8660,
+   "at_top": 5045,
+   "chance": 3001.666666666692
+  },
+  "9-12": {
+   "attackers": 6613,
+   "at_top": 3869,
+   "chance": 2706.8333333333385
+  },
+  "13+": {
+   "attackers": 1305,
+   "at_top": 825,
+   "chance": 581.0
+  }
+ }
+}

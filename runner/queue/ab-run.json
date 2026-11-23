@@ -1,6 +1,9 @@
 {
-  "requested": "2026-11-22T23:33Z",
-  "note": "ab-run #66: a commander's damage as a sure kill (DESIGN §41, harness 0.4.13). Limit Break at the pool's tables (runner/leagues/bots-v2.json) and Mutant Menace at the owner's table (runner/leagues/owners-table-v1.json), each under its shipped playbook and under playbook/variants/<deck>-cmdr.json, which is the shipped playbook with \"finish_commander\": true on its attack: a commander of the seat whose combat damage on an opponent would reach 21 this turn, and which no creature of that opponent can block, is a kill the finish hook takes, in the same walk from the most dangerous opponent down. 200 tables a deck on seed 20261480, opponents under their shipped playbooks, both arms on harness 0.4.13 so the kills are counted in both. Read by the rule in CLAUDE.md (In flight, How #66 is to be read), fixed before this was queued. Playbook arms only; 800 games in 20 shard jobs.",
+  "requested": "2026-11-23T03:05Z",
+  "note": "ab-run #67: Squirreled Away and Deadly Disguise at the owner's table as it is since 2026-11-23 (DESIGN §43). Each deck under playbook/variants/<deck>-noreact.json (its version before the rules for other players' turns: 7 and 5) and under its shipped playbook (8 and 6) on the same 200 tables (seed 20261500); opponents drawn from the other nine of runner/leagues/owners-table-v1.json under their shipped playbooks, so with those rules in eight of the nine. The two decks lost a third and more of their league wins between league-run #5 and #7, where every seat changed at once; this measures their own rules at that table. Read by the rule in CLAUDE.md (In flight, How #67 is to be read), fixed before this was queued. Playbook arms only; 800 games in 20 shard jobs.",
+  "decks": "squirreled-away@noreact,squirreled-away,deadly-disguise@noreact,deadly-disguise",
+  "seed": "20261500",
+  "pool": "runner/leagues/owners-table-v1.json",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "5",
@@ -8,10 +11,5 @@
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
-  "opponent_playbooks": true,
-  "seed": "20261480",
-  "runs": [
-    {"decks": "limit-break,limit-break@cmdr", "pool": "runner/leagues/bots-v2.json", "seed": "20261480"},
-    {"decks": "mutant-menace,mutant-menace@cmdr", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261480"}
-  ]
+  "opponent_playbooks": true
 }

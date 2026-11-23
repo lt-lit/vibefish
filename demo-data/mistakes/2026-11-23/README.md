@@ -98,3 +98,112 @@ seat-game (112 and 118 times a hundred seat-games; in 67% and 64% of the seat-ga
 a spell that names it, and 98% and 97% of those answers come on the remover's own turn. The cards that do it are the decks' wipes and
 their removal (`by_card` in the two files). Planeswalker Party's commander is a planeswalker: it leaves in combat, attacked,
 and is seldom answered by a spell.
+
+## The owner's table again: `league-run` #7 on the tables of `league-run` #5
+
+`league-run` #7 (run id 45096445356, commit d8dc8ff, harness 0.4.13; seed 20261430 on `runner/leagues/owners-table-v1.json`,
+63 cycles: 504 games) plays the seed and cycles of `league-run` #5 again, so the same 504 tables, seat for seat and shuffle
+for shuffle (checked: every table has #5's seating and seed), under the versions shipped on 2026-11-23. What differs from
+#5: the rules for other players' turns in nine decks (all but Ahoy Mateys), Mutant Menace's commander's kill, Blight Curse's
+limit a turn on one trigger, and the harness (0.4.13 where #5 was on 0.4.11). The 20 shard artifacts and the run's own
+rollup were fetched; the rollup made from the shards is the run's own. On the dashboard
+(`../../runs/2026-11-23-owners-table-v1-snapshot-2026-11-10-s20261430-bots/`). `league-run` #5's figures are in brackets
+(`../2026-11-22/owners-table-shipped*.json`).
+
+- `owners-table-league-run-7.json`, `owners-table-league-run-7-by-deck.json`, `owners-table-league-run-7-attackers-by-danger.json`: the count, as above.
+- `received-league-run-7.json`: the receiving seat (`received-league-run-5.json` is the side before).
+- `league-pair-5-7.json`: the two leagues table by table (`docs/agents/league_pair.py`).
+
+### Table by table
+
+248 of the 504 tables have the same winner in both leagues (49.2%), and 61 are the same game to the last cast, attack and
+loss. The first line that differs comes at turn 14 at the median (a quarter of the tables by turn 11, three quarters by
+turn 23). A game takes 43.9 turns (43.5) and 94 seconds (90); one game has no winner (a draw Forge declared
+at turn 43), none had in #5. Every seat changed at once, so a deck's line is its own rules and its opponents' together:
+a description of the table before and after, not a measurement of the deck's change (`ab-run` #64 is that, one seat at
+a time: 123 tables against 117 over the ten decks).
+
+| Deck | Versions | Tables | Wins in #5 | Wins in #7 | Won in both | Only in #5 | Only in #7 | Exact test on the two |
+|---|---|---|---|---|---|---|---|---|
+| Veloci-Ramp-Tor | 6 to 7 | 204 | 64 | 81 | 42 | 22 | 39 | 0.04 |
+| Blood Rites | 6 to 7 | 200 | 67 | 72 | 39 | 28 | 33 | 0.61 |
+| Death Toll | 5 to 6 | 200 | 53 | 61 | 29 | 24 | 32 | 0.35 |
+| Revenant Recon | 7 to 8 | 204 | 48 | 58 | 29 | 19 | 29 | 0.19 |
+| Ahoy Mateys | 4 to 4 | 200 | 66 | 55 | 32 | 34 | 23 | 0.18 |
+| Blight Curse | 5 to 7 | 200 | 42 | 52 | 19 | 23 | 33 | 0.23 |
+| Mutant Menace | 5 to 7 | 204 | 43 | 40 | 18 | 25 | 22 | 0.77 |
+| Miracle Worker | 6 to 7 | 200 | 44 | 39 | 16 | 28 | 23 | 0.58 |
+| Squirreled Away | 7 to 8 | 204 | 44 | 25 | 13 | 31 | 12 | 0.01 |
+| Deadly Disguise | 5 to 6 | 200 | 33 | 20 | 11 | 22 | 9 | 0.03 |
+
+Three of the ten lines are beyond what the exact test allows one deck at 0.05: Veloci-Ramp-Tor up (22 tables against
+39), Squirreled Away down (31 against 12) and Deadly Disguise down (22 against 9). Among ten decks one such line is to be
+expected about four times in ten when nothing changed, three are not; the lines are not independent (a table one deck
+gains another loses). Squirreled Away's and Deadly Disguise's own rules were level when only they had them (`ab-run` #64:
+7 tables against 7, and 7 against 9), so what moved is the table around them or chance, and one pair of leagues cannot
+say which. Their own rules at the table as it is now are the thing that can be measured (the two decks' second sample,
+CLAUDE.md, In flight).
+
+### The receiving seat, before and after
+
+| | `league-run` #5 | `league-run` #7 |
+|---|---|---|
+| commander casts a seat-game | 2.23 | 2.23 |
+| a commander taken off the battlefield by another player's spell or ability, a hundred seat-games | 111.7 (984 named, 1268 swept) | 109.5 (964 named, 1244 swept) |
+| seat-games in which that happened at least once | 66.5% | 66.8% |
+| of those answers: on the remover's own turn | 98.1% | 85.5% |
+| ... on the seat's own turn | 1.3% | 7.0% |
+| ... on a third player's turn | 0.6% | 7.5% |
+| other nonland permanents answered a seat-game (named, swept) | 3.57 (1.33, 2.24) | 3.71 (1.39, 2.32) |
+| of those: on the remover's own turn | 97.6% | 91.3% |
+| other nonland permanents lost in combat a seat-game | 1.12 | 1.12 |
+| commanders lost in combat | 484 | 548 |
+| other players' spells and abilities aimed at its permanents a seat-game, share at its commander | 3.54, 22.9% | 3.51, 22.1% |
+
+A seat receives as much removal as before: its commander is answered once a seat-game and a little more, 3.6 to 3.7 of
+its other permanents a game. What changed is when. One answer to a commander in seven now comes on a turn that is not
+the remover's own, where it was one in fifty; for the other permanents one in eleven, from one in forty. The rules hold
+a deck's single-target instants only, and most of what answers a commander is a wipe or a creature's or a sorcery's
+doing (`by_card`), which is why it is one in seven and not more.
+
+| Deck | Its commander answered, a hundred seat-games: #5, #7 | Named by a spell or ability: #5, #7 | Of the answers not on the remover's own turn: #5, #7 | Other permanents answered a seat-game: #5, #7 |
+|---|---|---|---|---|
+| Veloci-Ramp-Tor | 109, 105 | 94, 94 | 2.7%, 14.0% | 4.39, 4.72 |
+| Blood Rites | 114, 128 | 59, 78 | 2.2%, 12.1% | 4.17, 4.31 |
+| Death Toll | 104, 108 | 99, 95 | 2.9%, 15.8% | 4.01, 4.38 |
+| Revenant Recon | 120, 123 | 129, 131 | 2.9%, 21.5% | 3.42, 3.93 |
+| Ahoy Mateys | 64, 70 | 31, 43 | 0.8%, 15.0% | 4.37, 4.47 |
+| Blight Curse | 94, 76 | 47, 31 | 1.6%, 9.9% | 3.34, 2.96 |
+| Mutant Menace | 147, 119 | 210, 168 | 1.7%, 18.9% | 2.45, 2.12 |
+| Miracle Worker | 89, 88 | 62, 78 | 0.0%, 16.5% | 2.76, 3.06 |
+| Squirreled Away | 134, 150 | 168, 188 | 1.8%, 19.7% | 2.66, 2.71 |
+| Deadly Disguise | 141, 128 | 85, 58 | 1.8%, 0.4% | 4.16, 4.47 |
+
+The Wise Mothman is named by a removal spell 168 times where it was 210. A likely reason, not a measured one: removal kept for the end
+step goes at the best permanent of the opponent that looks most dangerous, where Forge's AI on its own turn takes the best
+target anywhere, and the Mothman is that target more often than its deck is that opponent.
+
+### The counted mistakes, every seat
+
+| | |
+|---|---|
+| turns on which a seat was sure to kill an opponent | 1,735 (1,631) |
+| ... the opponent was the last one | 329 turns, 9 missed, 2.7% (314, 6, 1.9%) |
+| ... the most dangerous of several | 357 turns, 24 missed, 6.7% (363, 20, 5.5%); nothing sent at that opponent on 2 |
+| ... a less dangerous one while a more dangerous one lived (not a mistake) | 1,049 turns, 690 left alone, 65.8% (954, 603, 63.2%) |
+| turns on which only a commander gave a sure kill (harness 0.4.13; #5's logs do not have it) | of the last opponent 2 (0 with nobody out), of the most dangerous 25 (1 with nobody out), of a lesser one 36 (27 left alone); a commander would have reached 21 but could be blocked on 128 more |
+| attacks that left at least a seat's life unblocked, or a commander's lethal damage | 1,123; the seat died that turn in 1,097, 54.4 a hundred seat-games (1,135; 1,095, 54.3) |
+| deaths by a block not made | 0 (0) |
+| deaths with the seat's own creatures tapped | 152, 7.5 a hundred seat-games (170, 8.4) |
+| deaths on a turn a commander's damage on the seat reached 21 | 90, 4.5 a hundred seat-games (85, 4.2) |
+| turns with an able attacker on which the seat attacked | 66.4% (66.2%) |
+| turns with an opponent who could not block: attacked it | 65.1% of 5,369 (64.4% of 5,162); attacked nobody 11.9% (12.1%) |
+| attackers at the opponent that looks most dangerous | with three opponents alive 56.5% of 13,276 (55.7% of 12,923), with two 64.6% of 4,588 (63.5% of 4,768); at the player who went on to win 29.2% and 38.8% of the attackers of seats that did not (28.1%, 39.5%) |
+
+The attack and the blocks are where they were, as they should be: nothing in the rules for other players' turns touches
+them. The commander's kill is counted at this table for the first time. Mutant Menace, with the option, has 20 of the 27 turns
+on which only a commander gave a sure kill of the most dangerous or the last opponent and left one with nobody out;
+Revenant Recon has 5, Miracle Worker and Veloci-Ramp-Tor one each, all taken. The one left is a tie: two opponents
+looked equally dangerous, the walk of `"finish": "leader"` stopped at the first, which had no sure kill, and the second,
+which the Mothman was sure to kill, was not looked at (game g00299, turn 21). The count files a tie under the most
+dangerous; the walk should too.

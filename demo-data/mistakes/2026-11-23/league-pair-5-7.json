@@ -1,0 +1,141 @@
+{
+ "kind": "league-pair",
+ "tables": {
+  "tables": 504,
+  "turns_before": 21932,
+  "turns_after": 22147,
+  "secs_before": 45371.34499999998,
+  "secs_after": 47455.86499999996,
+  "no_winner_before": 0,
+  "no_winner_after": 1,
+  "same_winner": 248,
+  "same_game": 61
+ },
+ "first_difference": {
+  "cast": 176,
+  "land": 190,
+  "attack": 77
+ },
+ "decks": {
+  "veloci-ramp-tor": {
+   "tables": 204,
+   "before": 64,
+   "after": 81,
+   "neither": 101,
+   "only_before": 22,
+   "both": 42,
+   "only_after": 39,
+   "exact_p": 0.0396,
+   "version_before": 6,
+   "version_after": 7
+  },
+  "blood-rites": {
+   "tables": 200,
+   "before": 67,
+   "after": 72,
+   "only_after": 33,
+   "neither": 100,
+   "both": 39,
+   "only_before": 28,
+   "exact_p": 0.6089,
+   "version_before": 6,
+   "version_after": 7
+  },
+  "death-toll": {
+   "tables": 200,
+   "before": 53,
+   "after": 61,
+   "only_after": 32,
+   "only_before": 24,
+   "neither": 115,
+   "both": 29,
+   "exact_p": 0.3497,
+   "version_before": 5,
+   "version_after": 6
+  },
+  "revenant-recon": {
+   "tables": 204,
+   "before": 48,
+   "after": 58,
+   "only_before": 19,
+   "only_after": 29,
+   "both": 29,
+   "neither": 127,
+   "exact_p": 0.1934,
+   "version_before": 7,
+   "version_after": 8
+  },
+  "ahoy-mateys": {
+   "tables": 200,
+   "before": 66,
+   "after": 55,
+   "only_after": 23,
+   "neither": 111,
+   "both": 32,
+   "only_before": 34,
+   "exact_p": 0.1849,
+   "version_before": 4,
+   "version_after": 4
+  },
+  "blight-curse": {
+   "tables": 200,
+   "before": 42,
+   "after": 52,
+   "neither": 125,
+   "only_before": 23,
+   "only_after": 33,
+   "both": 19,
+   "exact_p": 0.2288,
+   "version_before": 5,
+   "version_after": 7
+  },
+  "mutant-menace": {
+   "tables": 204,
+   "before": 43,
+   "after": 40,
+   "neither": 139,
+   "only_after": 22,
+   "only_before": 25,
+   "both": 18,
+   "exact_p": 0.7709,
+   "version_before": 5,
+   "version_after": 7
+  },
+  "miracle-worker": {
+   "tables": 200,
+   "before": 44,
+   "after": 39,
+   "neither": 133,
+   "only_before": 28,
+   "both": 16,
+   "only_after": 23,
+   "exact_p": 0.5758,
+   "version_before": 6,
+   "version_after": 7
+  },
+  "squirreled-away": {
+   "tables": 204,
+   "before": 44,
+   "after": 25,
+   "only_before": 31,
+   "neither": 148,
+   "only_after": 12,
+   "both": 13,
+   "exact_p": 0.0054,
+   "version_before": 7,
+   "version_after": 8
+  },
+  "deadly-disguise": {
+   "tables": 200,
+   "before": 33,
+   "after": 20,
+   "neither": 158,
+   "only_before": 22,
+   "both": 11,
+   "only_after": 9,
+   "exact_p": 0.0294,
+   "version_before": 5,
+   "version_after": 6
+  }
+ }
+}
