@@ -83,6 +83,17 @@ What is counted, per seat:
                      own spell (`own_after_deaths`: its wipe with a permanent of its own that charges it for each
                      creature that dies), an ability or trigger the seat controlled (`own_ability_deaths`: its
                      own, or one an opponent gave it, like Radiation), another player's card, combat.
+  a land not played  The seat began its own turn with a land card in hand, played no land that turn and was not out
+                     of the game in it (`land_not_played` of `land_turns`). With many lands on the battlefield that
+                     can be a choice (a cycling land kept to cycle, a land kept to discard), so the count that is a
+                     mistake is the one at four lands or fewer (`land_not_played_early`). At two tables every such
+                     turn was a seat holding nothing but lands that return a land to hand as they enter (Gruul Turf
+                     and its kind, BOUNCE_LANDS below; `land_held_bounce`, `land_held_bounce_early`): Forge's
+                     script lets its AI play one only while it controls a basic land, so a seat whose lands are
+                     all nonbasic keeps it in hand for the rest of the game (DESIGN.md §46). A playbook's
+                     `"bounce_lands": true` on its cast block is the hook (harness 0.4.16). A seat with no land on
+                     the battlefield and only such lands in hand has nothing it could do (`land_held_bounce_none`:
+                     a hand that should not have been kept).
 """
 import argparse, collections, glob, gzip, json, os, sys
 
@@ -112,7 +123,8 @@ KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent'
         'kill_limited_turns', 'deaths_block_limited',
         'cmdkill_turns', 'cmdkill_taken', 'cmdkill_other', 'cmdkill_last_turns', 'cmdkill_last_missed', 'cmdkill_top_turns', 'cmdkill_top_missed',
         'cmdkill_lesser_turns', 'cmdkill_lesser_missed', 'cmdkill_last_no_attack', 'cmdkill_top_no_attack', 'cmdkill_lesser_no_attack', 'cmd_blockable_turns',
-        'own_turn_deaths', 'own_spell_deaths', 'own_after_deaths', 'own_ability_deaths')
+        'own_turn_deaths', 'own_spell_deaths', 'own_after_deaths', 'own_ability_deaths',
+        'land_turns', 'land_not_played', 'land_not_played_early', 'land_held_bounce', 'land_held_bounce_early', 'land_held_bounce_none')
 
 # Permanents whose static ability limits how many creatures may attack (Forge scripts with `Mode$ AttackRestrict |
 # MaxAttackers$ N`, snapshot 2026-11-10): 'all' limits every combat, 'you' attacks on its controller. The harness's
@@ -120,6 +132,11 @@ KEYS = ('seat_games', 'turns_able', 'turns_attacked', 'power_able', 'power_sent'
 # under one is set aside. Tracked by name through the zone lines; a copy under another name is not seen.
 ATTACK_LIMITS = {'Silent Arbiter': 'all', 'Dueling Grounds': 'all', 'Caverns of Despair': 'all', 'Crawlspace': 'you', 'Judoon Enforcers': 'you'}
 BLOCK_LIMITS = ('Silent Arbiter', 'Dueling Grounds', 'Caverns of Despair')
+# Lands that return a land their controller controls to hand as they enter. Forge's scripts give them
+# `NeedsToPlay:Land.Basic+YouCtrl`: its AI does not play one unless it controls a basic land. By name; another such
+# land under another name is not seen.
+BOUNCE_LANDS = {'Azorius Chancery', 'Boros Garrison', 'Dimir Aqueduct', 'Golgari Rot Farm', 'Gruul Turf', 'Izzet Boilerworks',
+                'Orzhov Basilica', 'Rakdos Carnarium', 'Selesnya Sanctuary', 'Simic Growth Chamber', 'Guildless Commons'}
 
 
 def danger(d, turn):
@@ -171,6 +188,28 @@ def own_turn_deaths(evs):
                         kind = 'after' if resolved else 'spell'
                     break
             yield s, e['t'], kind, card, before, after
+
+
+def land_drops(evs, lands):
+    """Own turns that began with a land card in hand. Yields (seat, turn, the land cards held, lands on the
+    battlefield, whether a land was played, whether the seat was out of the game that turn). lands: seat -> the names
+    of the land cards of its deck (run.json)."""
+    cur = None
+    for e in evs:
+        k = e['e']
+        if k == 'turn':
+            if cur is not None:
+                yield cur
+            st = next((p for p in e.get('state') or [] if p.get('seat') == e.get('seat')), None)
+            held = [c for c in (st or {}).get('hand') or [] if c in lands.get(e.get('seat'), ())]
+            cur = (e.get('seat'), e.get('t'), held, (st or {}).get('lands') or 0, False, False) if held else None
+        elif cur is not None and e.get('seat') == cur[0]:
+            if k == 'land':
+                cur = cur[:4] + (True, cur[5])
+            elif k == 'lost':
+                cur = cur[:5] + (True,)
+    if cur is not None:
+        yield cur
 
 
 def close_turn(G, label, turn, lost_at, examples, where):
@@ -351,6 +390,18 @@ def collect(roots, arm=None, by_deck=False, deck=None):
             for ex in examples:
                 if isinstance(ex.get('deck'), int) and ex['where'] == where:
                     ex['deck'] = ids.get(ex['deck'], ex['deck'])
+            deck_lands = {d['seat']: {c['name'] for c in d.get('cards') or [] if c.get('land')} for d in run['decks']}
+            for s, t, held, on_bf, played, lost in land_drops(evs, deck_lands):
+                local[s]['land_turns'] += 1
+                if played or lost:
+                    continue
+                local[s]['land_not_played'] += 1
+                early = on_bf <= 4
+                local[s]['land_not_played_early'] += early
+                if all(c in BOUNCE_LANDS for c in held):
+                    local[s]['land_held_bounce'] += 1
+                    local[s]['land_held_bounce_early'] += early
+                    local[s]['land_held_bounce_none'] += on_bf == 0
             for s, t, kind, card, before, after in own_turn_deaths(evs):
                 local[s]['own_turn_deaths'] += 1
                 if kind in ('spell', 'after', 'ability'):
@@ -434,6 +485,16 @@ def render(G, games, old, examples, show, own=()):
             c = collections.Counter((x['deck'], x['card']) for x in own if x['kind'] == kind)
             if c:
                 out.append(f'  {title}: ' + ', '.join(f'{d} {card} {n}' for (d, card), n in c.most_common(16)) + (' ...' if len(c) > 16 else ''))
+    if any(G[n]['land_turns'] for n in names):
+        out += ['', 'LAND DROPS: own turns begun with a land card in hand; no land played that turn; of those with four lands or fewer on the battlefield (a mistake);',
+                '        turns on which every land held was one that returns a land as it enters (Forge\'s AI plays one only while it controls a basic land), all and with four',
+                '        lands or fewer; and those of them with no land on the battlefield at all (nothing the seat could do: the hand should not have been kept)',
+                f'  {"":{w}} {"turns":>7} {"no land":>8} {"share":>6} {"at 4 or fewer":>14}   {"only such lands":>16} {"at 4 or fewer":>14} {"no land at all":>15}   a hundred seat-games: at 4 or fewer']
+        for n in names:
+            g = G[n]
+            out.append(f'  {n:{w}} {g["land_turns"]:>7} {g["land_not_played"]:>8} {pct(g["land_not_played"], g["land_turns"]):>6} {g["land_not_played_early"]:>14}   '
+                       f'{g["land_held_bounce"]:>16} {g["land_held_bounce_early"]:>14} {g["land_held_bounce_none"]:>15}   '
+                       + (f'{100 * g["land_not_played_early"] / g["seat_games"]:.1f}' if g['seat_games'] else ''))
     if show and examples:
         out += ['', f'KILLS NOT TAKEN, the first {min(show, len(examples))} (game, turn, deck: the opponent it could have killed, what it sent where)']
         for ex in examples[:show]:

@@ -511,11 +511,13 @@ public final class Playbook {
         public final int dangerLife;        // how dangerous an opponent looks: this times its life ...
         public final int dangerPermanents;  // ... plus this times its nonland permanents (an aim reads it; DESIGN.md section 33)
         public final int keepLife;          // 0.4.15: no spell is cast whose own script takes the seat below this much life (0: not asked)
+        public final boolean bounceLands;   // 0.4.16: a land that returns a land is played late in the turn, and when Forge's AI would not play it at all
 
         Cast(JsonObject o) {
             source = o;
             maxPerTurn = num(o, "max_per_turn", 60);
             keepLife = Math.max(0, num(o, "keep_life", 0));
+            bounceLands = o.has("bounce_lands") && o.get("bounce_lands").isJsonPrimitive() && o.get("bounce_lands").getAsBoolean();
             JsonObject danger = o.has("danger") && o.get("danger").isJsonObject() ? o.getAsJsonObject("danger") : new JsonObject();
             dangerLife = num(danger, "life", 1);
             dangerPermanents = num(danger, "permanents", 2);

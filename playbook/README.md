@@ -444,6 +444,23 @@ the spell resolves is not seen: a charm's mode, the number of counters Eventide'
 colours of mana spent on a converge spell, a "target player" that turns out to be the caster. Those want a rule of
 their own with a condition on `life`. Without the key nothing changes.
 
+`"bounce_lands": true` on the `cast` block (harness 0.4.16): for a deck that holds lands which return a land to hand
+as they enter (Gruul Turf, Selesnya Sanctuary and the rest of that cycle, Guildless Commons). Forge's scripts tell its
+AI to play such a land only while it controls a basic land, so a seat whose lands are all nonbasic keeps it in hand
+turn after turn: at two tables every turn at four lands or fewer on which a seat held a land and played none was
+that, and Deadly Disguise sat on three lands with three such lands in hand for a whole game (DESIGN §46;
+`runner/mistakes.py` counts it under LAND DROPS). And when the AI does play one, it plays it first thing in its turn
+and returns an untapped land, which costs the turn that land's mana. With the key three things change, and nothing
+else about the seat's lands: such a land is not played before the rules have spent the turn's mana (Forge's choice of
+it as the land drop is taken after the rules have nothing left to do, not before); at the end of the second main
+phase, when the seat may still play a land, holds one of these and Forge's AI is about to pass, the land is played
+(it needs one other land on the battlefield to return); and the land it returns is the rule's choice: a tapped one
+before an untapped one, a basic before a nonbasic, another land of this kind last, never the one that has just
+entered while there is another. Counters: `cast_bounce_land` (plays Forge's AI would not have made),
+`cast_bounce_land_later` (turns on which Forge's own play of such a land was put behind the rules),
+`cast_bounce_land_returned`, `cast_bounce_land_returned_tapped`, `cast_bounce_land_returned_untapped`. A seat with no
+land on the battlefield and only such lands in hand is not helped: that hand should not have been kept.
+
 The harness records the playbook per seat in `run.json` (`decks[].playbook`, the `cast` object as written) and the
 policy's counters per game (`games[].playbook_stats`): `attack_decisions`, `attack_policy`, `attack_fallback`,
 `attack_spread`, `attackers_declared`, `attackers_reserved`, `mulligan_decisions`, `mulligans_taken`, and for the

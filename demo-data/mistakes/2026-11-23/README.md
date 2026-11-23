@@ -227,3 +227,19 @@ more of its casts emptied the library and are filed as not by life), Rakdos Char
 cast through Etali). The column of abilities and triggers is mostly another deck's doing (Radiation, from Mutant
 Menace's rad counters: 31 and 38; the emblem of Chandra, Awakened Inferno at the pool: 13) and is not judged. Not by
 life: Death Toll had no card left to draw on its own turn in 7 and 5 of its 200 games.
+
+## A land in hand and no land played (`land-drops.json`)
+
+`runner/mistakes.py` counts it since 2026-11-23 (LAND DROPS; DESIGN.md §46): a seat's own turns that began with a
+land card in hand, those on which it played none (and was not out of the game), those of them with four lands or
+fewer on the battlefield, and the turns on which every land it held was one that returns a land as it enters.
+
+| | Own turns begun with a land in hand | No land played | With four lands or fewer | Of those, only such lands held |
+|---|---|---|---|---|
+| `league-run` #5 | 12,920 | 353 | 59 | 59 |
+| `league-run` #7 | 13,101 | 366 | 64 | 64 |
+| `league-run` #6 | 16,851 | 536 | 67 | 64 |
+
+At four lands or fewer by deck, `league-run` #7: Deadly Disguise 24, Miracle Worker 13, Revenant Recon 13, Death Toll
+6, Blight Curse 4, Squirreled Away 3, Blood Rites 1. `league-run` #6: Deep Clue Sea 43, Enduring Enchantments 10,
+Tricky Terrain 10, Quick Draw 3, Goblin Storm 1. Forge's AI plays such a land only while it controls a basic land.

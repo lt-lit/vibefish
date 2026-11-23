@@ -39,8 +39,11 @@ import forge.game.keyword.Keyword;
 import forge.game.phase.PhaseHandler;
 import forge.game.phase.PhaseType;
 import forge.game.player.Player;
+import forge.game.player.DelayedReveal;
 import forge.game.player.PlayerActionConfirmMode;
 import forge.game.spellability.SpellAbility;
+import forge.game.trigger.Trigger;
+import forge.game.trigger.TriggerType;
 import forge.game.trigger.WrappedAbility;
 import forge.game.zone.ZoneType;
 import forge.util.MyRandom;
@@ -1587,7 +1590,11 @@ public class PlaybookController extends PlayerControllerAi {
             forge = forgeChoice(cast);                  // the land drop first: every rule below wants the mana
             asked = true;
             if (forge != null && !forge.isEmpty() && forge.get(0).isLandAbility()) {
-                return forge;
+                if (!cast.bounceLands || !returnsALand(forge.get(0).getHostCard())) {
+                    return forge;
+                }
+                // 0.4.16: a land that returns a land goes down after the turn's mana is spent, not before
+                countOnce("cast_bounce_land_later");
             }
         }
         count("cast_decisions", 1);
@@ -1609,7 +1616,110 @@ public class PlaybookController extends PlayerControllerAi {
             return null;                                // pass: the mana is kept for what Forge casts after combat
         }
         // Forge's earlier answer stands unless a rule tried a spell and changed its targets on the way to giving up.
-        return asked && !castRetargeted ? forge : forgeChoice(cast);
+        List<SpellAbility> last = asked && !castRetargeted ? forge : forgeChoice(cast);
+        if (cast.bounceLands && (last == null || last.isEmpty()) && ph.is(PhaseType.MAIN2) && ph.getTurn() != bounceLandTurn) {
+            SpellAbility land = heldBounceLand(game);
+            if (land != null) {
+                bounceLandTurn = ph.getTurn();          // once a turn: a play Forge's rules refuse must not be offered again and again
+                count("cast_bounce_land", 1);
+                trace("plays " + land.getHostCard().getName() + ", which Forge's AI was holding, with " + player.getLandsInPlay().size() + " land(s) on the battlefield");
+                List<SpellAbility> one = new ArrayList<>();
+                one.add(land);
+                return one;
+            }
+        }
+        return last;
+    }
+
+    // ------------------------------------------------------------------ lands that return a land (0.4.16)
+
+    private int bounceLandTurn = -1;                    // the turn in which the seat last played such a land by this hook
+
+    /**
+     * A land whose enters trigger returns a land its controller controls to hand (Gruul Turf and its kind). Forge's
+     * script lets its AI play one only while it controls a basic land ({@code NeedsToPlay}), so a seat whose lands are
+     * all nonbasic holds it for the rest of the game, and when the AI does play one it plays it first thing in its
+     * turn and returns an untapped land.
+     */
+    private boolean returnsALand(Card c) {
+        if (c == null || !c.isLand()) {
+            return false;
+        }
+        try {
+            for (Trigger t : c.getTriggers()) {
+                if (t.getMode() != TriggerType.ChangesZone || !"Battlefield".equals(t.getParam("Destination")) || !"Card.Self".equals(t.getParam("ValidCard"))) {
+                    continue;
+                }
+                SpellAbility sa = t.ensureAbility();
+                if (sa != null && sa.getApi() == ApiType.ChangeZone && "Battlefield".equals(sa.getParam("Origin")) && "Hand".equals(sa.getParam("Destination"))
+                        && String.valueOf(sa.getParam("ChangeType")).startsWith("Land.YouCtrl")) {
+                    return true;
+                }
+            }
+        } catch (RuntimeException e) {
+            // a script that cannot be read is not such a land
+        }
+        return false;
+    }
+
+    /** The play of such a land from hand, when the seat may still play a land this turn and has a land to return. */
+    private SpellAbility heldBounceLand(Game game) {
+        CardCollection lands = ComputerUtilAbility.getAvailableLandsToPlay(game, player);
+        if (lands == null || lands.isEmpty() || player.getLandsInPlay().isEmpty()) {
+            return null;
+        }
+        for (Card c : lands) {
+            if (!returnsALand(c)) {
+                continue;
+            }
+            for (SpellAbility sa : c.getAllPossibleAbilities(player, true)) {
+                if (sa.isLandAbility()) {
+                    sa.setActivatingPlayer(player);
+                    if (sa.canPlay()) {
+                        return sa;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Which land such a land returns: a tapped one before an untapped one (its mana is spent, and it comes back next
+     * turn), a basic before a nonbasic, never the land that has just entered while there is another, and never
+     * another land of its own kind while there is a plain one. Only for a playbook with {@code bounce_lands}; every
+     * other choice of a card to move is Forge's.
+     */
+    @Override
+    public Card chooseSingleCardForZoneChange(ZoneType destination, List<ZoneType> origin, SpellAbility sa, CardCollection fetchList,
+            DelayedReveal delayedReveal, String selectPrompt, boolean isOptional, Player decider) {
+        try {
+            if (playbook != null && playbook.cast != null && playbook.cast.bounceLands && sa != null && destination == ZoneType.Hand
+                    && sa.getActivatingPlayer() == player && returnsALand(sa.getHostCard()) && fetchList != null && !fetchList.isEmpty()) {
+                Card best = null;
+                int bestScore = Integer.MIN_VALUE;
+                for (Card c : fetchList) {
+                    if (!c.isLand() || c.getController() != player) {
+                        continue;
+                    }
+                    int score = (c == sa.getHostCard() ? -100 : 0) + (returnsALand(c) ? -20 : 0) + (c.isTapped() ? 10 : 0) + (c.isBasicLand() ? 5 : 0)
+                            - c.getEnchantedBy().size() * 30;
+                    if (score > bestScore) {
+                        best = c;
+                        bestScore = score;
+                    }
+                }
+                if (best != null) {
+                    count("cast_bounce_land_returned", 1);
+                    count(best.isTapped() ? "cast_bounce_land_returned_tapped" : "cast_bounce_land_returned_untapped", 1);
+                    trace("returns " + best.getName() + (best.isTapped() ? " (tapped)" : " (untapped)") + " for " + sa.getHostCard().getName());
+                    return best;
+                }
+            }
+        } catch (RuntimeException e) {
+            count("cast_errors", 1);
+        }
+        return super.chooseSingleCardForZoneChange(destination, origin, sa, fetchList, delayedReveal, selectPrompt, isOptional, decider);
     }
 
     /**
