@@ -463,8 +463,8 @@ Two Actions runs, queued on 2026-11-23 at 03:05 UTC by two pushes to `testing`, 
 
 | Run | Run id | Seed and table | What plays | What it decides |
 |---|---|---|---|---|
-| `ab-run` #67 | to be filled in | 20261500 at the owner's table (`owners-table-v1`); opponents under their shipped playbooks of 2026-11-23, so with the rules for other players' turns in eight of the other nine | `squirreled-away@noreact`, `squirreled-away`, `deadly-disguise@noreact`, `deadly-disguise`: 800 games in 20 shard jobs, harness 0.4.13 | whether the two decks keep the rules for other players' turns |
-| `ab-run` #68 | to be filled in | 20261490 at the pool (`bots-v2`); opponents under their shipped playbooks (all six hooks, none with the rules for other players' turns) | each of the twelve under its shipped playbook and under `deck@react`: 4,800 games in 120 shard jobs, harness 0.4.13 | whether those rules go into the pool's twelve |
+| `ab-run` #67 | 45103929228 (commit f3cb795, queued 2026-11-23 03:05 UTC) | 20261500 at the owner's table (`owners-table-v1`); opponents under their shipped playbooks of 2026-11-23, so with the rules for other players' turns in eight of the other nine | `squirreled-away@noreact`, `squirreled-away`, `deadly-disguise@noreact`, `deadly-disguise`: 800 games in 20 shard jobs, harness 0.4.13 | whether the two decks keep the rules for other players' turns |
+| `ab-run` #68 | 45103957331 (commit ee6564b, queued 2026-11-23 03:06 UTC) | 20261490 at the pool (`bots-v2`); opponents under their shipped playbooks (all six hooks, none with the rules for other players' turns) | each of the twelve under its shipped playbook and under `deck@react`: 4,800 games in 120 shard jobs, harness 0.4.13 | whether those rules go into the pool's twelve |
 
 #67's twenty shard jobs were queued first and take about an hour; #68's 120 take five to six hours at about 24 an hour. Check-ins of the session that queued them are scheduled.
 
