@@ -26,6 +26,9 @@ import forge.game.GameEntity;
 import forge.game.ability.ApiType;
 import forge.game.card.Card;
 import forge.game.card.CardCollection;
+import forge.game.card.CardCollectionView;
+import forge.game.card.CounterEnumType;
+import forge.game.card.CounterType;
 import forge.game.combat.Combat;
 import forge.game.combat.CombatUtil;
 import forge.game.cost.Cost;
@@ -2351,6 +2354,10 @@ public class PlaybookController extends PlayerControllerAi {
         if (!sa.canPlay()) {
             return false;
         }
+        if (rule.take && takeTotal(takePlan(rule)) < rule.takeMin) {
+            count("cast_take_short", 1);                // fewer counters worth taking than the rule casts for
+            return false;
+        }
         if (target == null && rule.aim != null && rule.own != null) {
             return readyTwo(sa, rule);
         }
@@ -3006,6 +3013,20 @@ public class PlaybookController extends PlayerControllerAi {
                 }
                 return n;
             }
+            case "table_creatures": {                   // 0.4.14: the creatures all the opponents control together
+                int n = 0;
+                for (Player opp : player.getOpponents()) {
+                    n += opp.getCreaturesInPlay().size();
+                }
+                return n;
+            }
+            case "table_power": {                       // 0.4.14: the power all the opponents have on the battlefield together
+                int n = 0;
+                for (Player opp : player.getOpponents()) {
+                    n += boardPower(opp);
+                }
+                return n;
+            }
             case "opp_life": {                          // the highest life total among the opponents
                 int n = 0;
                 for (Player opp : player.getOpponents()) {
@@ -3045,7 +3066,8 @@ public class PlaybookController extends PlayerControllerAi {
      */
     @Override
     public void orderAndPlaySimultaneousSa(List<SpellAbility> activePlayerSAs) {
-        if (playbook == null || playbook.targets == null || !playbook.targets.triggersByDanger) {
+        if (playbook == null || playbook.targets == null
+                || (!playbook.targets.triggersByDanger && playbook.targets.counterCards.isEmpty())) {
             super.orderAndPlaySimultaneousSa(activePlayerSAs);
             return;
         }
@@ -3058,7 +3080,12 @@ public class PlaybookController extends PlayerControllerAi {
             }
             if (getAi().doTrigger(sa, true)) {
                 try {
-                    aimTrigger(sa);
+                    if (playbook.targets.triggersByDanger) {
+                        aimTrigger(sa);
+                    }
+                    if (!playbook.targets.counterCards.isEmpty()) {
+                        aimCounter(sa);
+                    }
                 } catch (RuntimeException e) {
                     count("trigger_aim_errors", 1);
                 }
@@ -3123,6 +3150,241 @@ public class PlaybookController extends PlayerControllerAi {
             count("trigger_aim_moved", 1);
             trace("aims the trigger of " + sa.getHostCard().getName() + " at " + best.getName() + " of " + best.getController().getName()
                     + " (danger " + danger(best.getController()) + ") instead of " + now.getName() + " of " + owner.getName() + " (" + danger(owner) + ")");
+        }
+    }
+
+    // ------------------------------------------------------------------ counters a spell removes (0.4.14)
+
+    /** One stack of counters a {@code take} rule removes: so many of one kind from one permanent. */
+    private static final class Take {
+        final Card card;
+        final CounterType type;
+        final int n;
+        final boolean theirs;
+
+        Take(Card card, CounterType type, int n, boolean theirs) {
+            this.card = card;
+            this.type = type;
+            this.n = n;
+            this.theirs = theirs;
+        }
+    }
+
+    private SpellAbility takingFor;                     // the spell whose counters are being chosen now
+    private final Map<Card, Take> taking = new LinkedHashMap<>();   // ... and what the rule takes from each permanent
+
+    private static int takeTotal(List<Take> plan) {
+        int n = 0;
+        for (Take t : plan) {
+            n += t.n;
+        }
+        return n;
+    }
+
+    /** The first play rule with {@code take} that names this card, or null. */
+    private Playbook.CastRule takeRule(SpellAbility sa) {
+        if (playbook == null || playbook.cast == null || sa == null || sa.getHostCard() == null) {
+            return null;
+        }
+        for (Playbook.CastRule r : playbook.cast.rules) {
+            if (r.take && r.cards.contains(sa.getHostCard().getName())) {
+                return r;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * What a {@code take} rule removes with a spell that removes any number of counters from among permanents and
+     * charges the seat for each (Eventide's Shadow: draw that many cards, lose that much life). Forge's AI takes
+     * every counter it would like gone (what is not harmful on the opponents' permanents, what is on its own),
+     * however many, and the seat's life total with them. The rule
+     * takes only counters whose going helps the seat: +1/+1 counters from creatures and loyalty from planeswalkers
+     * an opponent controls, the largest stacks first, then -1/-1 counters from creatures of its own (not from the
+     * permanents {@code own_except} names, which the deck wants as they are), the most shrunken first. It stops at
+     * {@code max} counters and at the life the seat has above {@code keep_life}.
+     */
+    private List<Take> takePlan(Playbook.CastRule rule) {
+        List<Take> out = new ArrayList<>();
+        int budget = Math.min(rule.takeMax, player.getLife() - rule.takeKeepLife);
+        if (budget <= 0) {
+            return out;
+        }
+        List<Take> all = new ArrayList<>();
+        for (Card c : getGame().getCardsIn(ZoneType.Battlefield)) {
+            if (c.getController() == player) {
+                int n = c.getCounters(CounterEnumType.M1M1);
+                if (n > 0 && c.isCreature() && !rule.takeExcept.contains(c.getName()) && c.canRemoveCounters(CounterEnumType.M1M1)) {
+                    all.add(new Take(c, CounterEnumType.M1M1, n, false));
+                }
+            } else if (player.isOpponentOf(c.getController())) {
+                int p = c.getCounters(CounterEnumType.P1P1);
+                if (p > 0 && c.isCreature() && c.canRemoveCounters(CounterEnumType.P1P1)) {
+                    all.add(new Take(c, CounterEnumType.P1P1, p, true));
+                }
+                int l = c.getCounters(CounterEnumType.LOYALTY);
+                if (l > 0 && c.isPlaneswalker() && c.canRemoveCounters(CounterEnumType.LOYALTY)) {
+                    all.add(new Take(c, CounterEnumType.LOYALTY, l, true));
+                }
+            }
+        }
+        all.sort((x, y) -> x.theirs != y.theirs ? (x.theirs ? -1 : 1) : Integer.compare(y.n, x.n));
+        for (Take t : all) {
+            if (budget <= 0) {
+                break;
+            }
+            if (taken(out, t.card)) {
+                continue;                               // one kind of counter a permanent: Forge asks for a kind and a number, once each
+            }
+            int n = Math.min(t.n, budget);
+            out.add(new Take(t.card, t.type, n, t.theirs));
+            budget -= n;
+        }
+        return out;
+    }
+
+    private static boolean taken(List<Take> plan, Card c) {
+        for (Take t : plan) {
+            if (t.card == c) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** The permanents a counter-removing spell takes counters from: the rule's plan when a {@code take} rule names the spell. */
+    @Override
+    public CardCollectionView chooseCardsForEffect(CardCollectionView sourceList, SpellAbility sa, String title, int min, int max,
+            boolean isOptional, Map<String, Object> params) {
+        Playbook.CastRule rule = sa != null && sa.getApi() == ApiType.RemoveCounter && sa.getActivatingPlayer() == player ? takeRule(sa) : null;
+        if (rule == null) {
+            return super.chooseCardsForEffect(sourceList, sa, title, min, max, isOptional, params);
+        }
+        taking.clear();
+        takingFor = sa;
+        CardCollection chosen = new CardCollection();
+        int total = 0;
+        for (Take t : takePlan(rule)) {
+            if (sourceList.contains(t.card) && chosen.size() < max) {
+                taking.put(t.card, t);
+                chosen.add(t.card);
+                total += t.n;
+            }
+        }
+        if (chosen.size() < min) {                      // the spell insists on more than the rule takes: Forge's own choice
+            taking.clear();
+            takingFor = null;
+            return super.chooseCardsForEffect(sourceList, sa, title, min, max, isOptional, params);
+        }
+        count("cast_take", 1);
+        count("cast_take_counters", total);
+        trace("takes " + total + " counter(s) with " + sa.getHostCard().getName() + " from " + chosen.size() + " permanent(s) at " + player.getLife()
+                + " life (keeps " + rule.takeKeepLife + ", at most " + rule.takeMax + ")");
+        return chosen;
+    }
+
+    @Override
+    public CounterType chooseCounterType(List<CounterType> options, SpellAbility sa, String prompt, Map<String, Object> params) {
+        if (sa != null && sa == takingFor && params != null && params.get("Target") instanceof Card) {
+            Take t = taking.get((Card) params.get("Target"));
+            if (t != null && options.contains(t.type)) {
+                return t.type;
+            }
+            return options.get(0);                      // not a kind the rule takes: chooseNumber answers 0 for it
+        }
+        return super.chooseCounterType(options, sa, prompt, params);
+    }
+
+    @Override
+    public int chooseNumber(SpellAbility sa, String title, int min, int max, Map<String, Object> params) {
+        if (sa != null && sa == takingFor && params != null && params.get("Target") instanceof Card) {
+            Take t = taking.get((Card) params.get("Target"));
+            Object type = params.get("CounterType");
+            if (t != null && t.type.equals(type)) {
+                taking.remove(t.card);                  // once a permanent
+                return Math.max(min, Math.min(max, t.n));
+            }
+            return min;                                 // 0 when the spell says "any number"
+        }
+        return super.chooseNumber(sa, title, min, max, params);
+    }
+
+    private int counterTurn = -1;                       // the turn counterOwn counts for
+    private int counterOwn;                             // counters a named trigger has put on a dying creature of the seat's own this turn
+
+    /**
+     * A named permanent's trigger that puts a -1/-1 counter on one target creature (0.4.14,
+     * {@code targets.counters}). Forge's AI may aim it at a creature of the seat's own that the counter kills,
+     * and where each such death triggers the permanent again the chain has no end (Blowfly Infestation with
+     * Hapatra: every counter makes the next Snake). That is allowed {@code own_per_turn} times a turn. After
+     * that the counter goes on a creature an opponent controls: the most dangerous opponent that has one the
+     * trigger can target, and there the creature with the lowest toughness (the largest among equals). When no
+     * opponent's creature can be targeted it goes on a creature of the seat's own that survives it, the one
+     * with the highest toughness, which ends the chain as well. A target Forge chose that is not a dying
+     * creature of the seat's own is left alone.
+     */
+    private void aimCounter(SpellAbility sa) {
+        if (sa.getHostCard() == null || !playbook.targets.counterCards.contains(sa.getHostCard().getName())) {
+            return;
+        }
+        for (SpellAbility part = sa; part != null; part = part.getSubAbility()) {
+            if (!part.usesTargeting() || part.getTargets().size() != 1 || part.getApi() != ApiType.PutCounter
+                    || !"M1M1".equals(part.getParam("CounterType"))) {
+                continue;
+            }
+            Card now = part.getTargets().getFirstTargetedCard();
+            if (now == null || !now.isInPlay() || now.getController() != player || now.getNetToughness() > 1) {
+                continue;
+            }
+            int turn = getGame().getPhaseHandler().getTurn();
+            if (turn != counterTurn) {
+                counterTurn = turn;
+                counterOwn = 0;
+            }
+            count("trigger_counter_own_seen", 1);
+            if (counterOwn < playbook.targets.counterOwnPerTurn) {
+                counterOwn++;
+                count("trigger_counter_own", 1);
+                continue;
+            }
+            List<Player> opps = new ArrayList<>();
+            for (Player opp : player.getOpponents()) {
+                if (!opp.hasLost()) {
+                    opps.add(opp);
+                }
+            }
+            opps.sort((x, y) -> Integer.compare(danger(y), danger(x)));
+            Card best = null;
+            for (Player opp : opps) {
+                for (Card c : opp.getCreaturesInPlay()) {
+                    if (!part.canTarget(c)) {
+                        continue;
+                    }
+                    if (best == null || c.getNetToughness() < best.getNetToughness()
+                            || (c.getNetToughness() == best.getNetToughness() && worth(c) > worth(best))) {
+                        best = c;
+                    }
+                }
+                if (best != null) {
+                    break;
+                }
+            }
+            if (best == null) {
+                for (Card c : player.getCreaturesInPlay()) {
+                    if (c.getNetToughness() > 1 && part.canTarget(c) && (best == null || c.getNetToughness() > best.getNetToughness())) {
+                        best = c;
+                    }
+                }
+            }
+            if (best == null) {
+                count("trigger_counter_stuck", 1);      // nothing but its own dying creatures to put it on
+                continue;
+            }
+            part.resetTargets();
+            part.getTargets().add(best);
+            count(best.getController() == player ? "trigger_counter_ended" : "trigger_counter_moved", 1);
+            trace("puts the counter of " + sa.getHostCard().getName() + " on " + best.getName() + " of " + best.getController().getName()
+                    + " instead of its own " + now.getName() + " (" + counterOwn + " this turn already)");
         }
     }
 

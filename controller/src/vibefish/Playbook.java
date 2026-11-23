@@ -154,7 +154,8 @@ public final class Playbook {
         /** Everything a comparison may be made on; anything else is a mistake in the file and stops the run. */
         public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
                 "storm", "drawn", "turn", "life", "mana", "opponents", "power", "opp_creatures", "opp_power", "opp_life",
-                "threat", "main", "opp_toughness", "attacking", "unblocked", "attacked", "incoming", "lethal");
+                "threat", "main", "opp_toughness", "attacking", "unblocked", "attacked", "incoming", "lethal",
+                "table_creatures", "table_power");
         private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
         private static final Pattern COMPARE = Pattern.compile(
                 "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");
@@ -297,6 +298,11 @@ public final class Playbook {
         public final List<String> ownExcept; // permanents of ours an "own" selector never takes (the deck wants them as they are)
         public final int divide;            // an aimed spell that divides its X: the most targets (0: not a dividing rule)
         public final int divideMin;         // ... and the fewest worth casting for (default 1)
+        public final boolean take;          // play (0.4.14): which counters a "remove any number of counters" spell takes, and how many
+        public final int takeKeepLife;      // ... the life the seat keeps once it has paid a life a counter
+        public final int takeMax;           // ... the most counters in one cast
+        public final int takeMin;           // ... the fewest worth casting for
+        public final List<String> takeExcept; // ... permanents of the seat's own whose counters stay where they are
         public final int index;             // 1-based position in the file, for the counters
 
         /** The kinds of permanent an aim can ask for. */
@@ -399,6 +405,18 @@ public final class Playbook {
             divideMin = num(o, "divide_min", 1);
             if ((o.has("divide") || o.has("divide_min")) && (aim == null || divide < 1 || divideMin < 1 || divideMin > divide)) {
                 throw new IllegalArgumentException("playbook cast rule " + index + ": \"divide\" (the most targets, at least 1) needs \"aim\", and \"divide_min\" is between 1 and it");
+            }
+            JsonObject tk = o.has("take") && o.get("take").isJsonObject() ? o.getAsJsonObject("take") : null;
+            if (o.has("take") && (tk == null || !"play".equals(kind))) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"take\" is an object on a play rule ({\"keep_life\": 15, \"max\": 8, \"min\": 3, \"own_except\": [...]})");
+            }
+            take = tk != null;
+            takeKeepLife = tk == null ? 0 : num(tk, "keep_life", 15);
+            takeMax = tk == null ? 0 : num(tk, "max", 8);
+            takeMin = tk == null ? 0 : num(tk, "min", 3);
+            takeExcept = tk == null ? Collections.emptyList() : Collections.unmodifiableList(strings(tk.get("own_except")));
+            if (take && (takeKeepLife < 1 || takeMax < 1 || takeMin < 1 || takeMin > takeMax)) {
+                throw new IllegalArgumentException("playbook cast rule " + index + ": \"take\" needs keep_life of at least 1 and min between 1 and max");
             }
             ability = "play".equals(kind) ? null : str(o, "ability", null);
             times = num(o, "times", 1);
@@ -625,11 +643,21 @@ public final class Playbook {
      * more dangerous one controls a permanent of the same kind (creature or not) that the ability can target
      * and that is worth at least as much as Forge's choice or at least {@code min} (mana value, or power if
      * higher), the best such permanent is targeted instead. Everything else about the trigger stays Forge's.
+     *
+     * <p>{@code "counters": {"cards": ["Blowfly Infestation"], "own_per_turn": 5}} (0.4.14) is for a named
+     * permanent of the seat whose trigger puts a -1/-1 counter on one target creature. When Forge aims such a
+     * trigger at a creature of the seat's own that the counter kills, that is allowed {@code own_per_turn} times
+     * a turn (a deck that draws or makes a token for each such counter wants some of them); after that the
+     * counter goes on a creature an opponent controls, the most dangerous opponent first and there the creature
+     * with the lowest toughness, or, when no opponent's creature can be targeted, on a creature of the seat's
+     * own that survives it. It ends a chain in which each death puts the next counter on the next creature.
      */
     public static final class Targets {
         public final boolean triggersByDanger;
         public final int min;
         public final int margin;
+        public final List<String> counterCards;
+        public final int counterOwnPerTurn;
 
         Targets(JsonObject o) {
             String t = str(o, "triggers", "");
@@ -639,6 +667,12 @@ public final class Playbook {
             triggersByDanger = "danger".equals(t);
             min = num(o, "min", 4);
             margin = num(o, "margin", 5);
+            JsonObject c = o.has("counters") && o.get("counters").isJsonObject() ? o.getAsJsonObject("counters") : null;
+            counterCards = c == null || !c.has("cards") ? Collections.emptyList() : strings(c.get("cards"));
+            counterOwnPerTurn = c == null ? 0 : Math.max(0, num(c, "own_per_turn", 0));
+            if (c != null && counterCards.isEmpty()) {
+                throw new IllegalArgumentException("playbook targets.counters needs \"cards\"");
+            }
         }
     }
 
@@ -762,6 +796,9 @@ public final class Playbook {
         }
         if (targets != null && targets.triggersByDanger) {
             sb.append(" targets=removal triggers by danger (min ").append(targets.min).append(", margin ").append(targets.margin).append(")");
+        }
+        if (targets != null && !targets.counterCards.isEmpty()) {
+            sb.append(" counters=").append(targets.counterCards).append(" on its own dying creature at most ").append(targets.counterOwnPerTurn).append(" time(s) a turn");
         }
         return sb.toString();
     }

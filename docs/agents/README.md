@@ -105,6 +105,9 @@ are that session's and have to be replaced by the new session's scratch director
   player's spell or ability that named it, a wipe, combat, the seat's own doing) and by whose turn it was, with the
   commander apart; a league directory or an ab.py run. `two_kills.py RUN_DIR...` counts the turns on which a seat was sure to kill two
   or more opponents, which it took, and whether it was out before its own next turn and by whom (DESIGN §43).
+  `life_spell.py RUN_DIR... --card NAME [--deck ID] [--arm ARM] [--show]` reads every cast of one card (DESIGN §44, written
+  for Eventide's Shadow): the caster's life before, the life lost and the cards drawn until the spell's `resolve` line,
+  whether the caster was out of the game that turn; and the games the card was held in and cast in, which serves any card.
   `league_pair.py BEFORE_DIR AFTER_DIR` reads two league runs
   on the same seed and cycles table by table (the same tables under two sets of playbooks): the same winner, the
   first line that differs, each deck's tables won in both, only before, only after. `other_turns.py RUN_DIR... [--arm ARM] [--focus]`: a seat's instants, other spells

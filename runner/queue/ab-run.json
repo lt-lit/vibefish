@@ -1,9 +1,6 @@
 {
-  "requested": "2026-11-23T03:06Z",
-  "note": "ab-run #68: the rules for other players' turns at the pool (DESIGN §39, §40, §43; harness 0.4.13). Each of the twelve decks of runner/leagues/bots-v2.json under its shipped playbook and under playbook/variants/<deck>-react.json on the same 200 tables (seed 20261490); opponents drawn from the other eleven under their shipped playbooks (all six hooks, none with these rules). The candidate is the shipped playbook with the deck's own single-target instant removal held from Forge's AI and played by rules on other players' turns, as nine of the owner's ten have it since 2026-11-22: at a creature attacking the seat when the attack ends its game through its best blocks and one removal changes that, or when one removal takes six damage or more away; otherwise in the end step before the seat's own turn at the most dangerous opponent's best permanent worth three or more that the spell can hit; from three lands the mana for one of the cards is kept through the seat's own turn while it has such a target. The cards are listed in playbook/variants/README.md. Read by the rule in CLAUDE.md (In flight, How #68 is to be read), fixed before this was queued. Playbook arms only; 4,800 games in 120 shard jobs. The request before this one: ab-run #67 (seed 20261500, Squirreled Away and Deadly Disguise at the owner's table).",
-  "decks": "goblin-storm,goblin-storm@react,token-triumph,token-triumph@react,hail-caesar,hail-caesar@react,tricky-terrain,tricky-terrain@react,deep-clue-sea,deep-clue-sea@react,planeswalker-party,planeswalker-party@react,limit-break,limit-break@react,elven-council,elven-council@react,quick-draw,quick-draw@react,wretched-ranks,wretched-ranks@react,eldrazi-incursion,eldrazi-incursion@react,enduring-enchantments,enduring-enchantments@react",
-  "seed": "20261490",
-  "pool": "runner/leagues/bots-v2.json",
+  "requested": "2026-11-23T05:12Z",
+  "note": "ab-run #69: two requests at the owner's table (runner/leagues/owners-table-v1.json), harness 0.4.14, read apart by the rules in CLAUDE.md (In flight, How #69 is to be read), fixed before this was queued. (1) Blight Curse, seed 20261510: the shipped playbook (version 7) and three candidates on the same 200 tables, each version 7 with one change (DESIGN §44): playbook/variants/blight-curse-chain.json (targets.counters: Blowfly Infestation's counter on the seat's own dying creatures five times a turn, then on an opponent's creature, which ends the chain with Hapatra), blight-curse-shadow.json (Eventide's Shadow held from Forge's AI and cast by a rule with a take block: three to eight counters, never under 15 life) and blight-curse-wipes.json (two more rules for Chain Reaction and Black Sun's Zenith that count the opponents' creatures and power together). (2) Deadly Disguise, seed 20261520: its version before the rules for other players' turns (deadly-disguise-noreact.json, version 5), the shipped version 6, and deadly-disguise-react5.json (version 6 with the mana for its removal kept from five lands on): the second sample at the table as it is since 2026-11-23, read together with ab-run #67's. Opponents drawn from the other nine decks under their shipped playbooks. Playbook arms only; 1,400 games in 35 shard jobs. The request before this one: ab-run #68 (seed 20261490, the rules for other players' turns for the pool's twelve).",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "5",
@@ -11,5 +8,11 @@
   "opponents": "3",
   "forge_channel": "snapshot",
   "forge_snapshot_build": "2.0.16-SNAPSHOT-11.10",
-  "opponent_playbooks": true
+  "opponent_playbooks": true,
+  "pool": "runner/leagues/owners-table-v1.json",
+  "seed": "20261510",
+  "runs": [
+    {"decks": "blight-curse,blight-curse@chain,blight-curse@shadow,blight-curse@wipes", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261510"},
+    {"decks": "deadly-disguise@noreact,deadly-disguise,deadly-disguise@react5", "pool": "runner/leagues/owners-table-v1.json", "seed": "20261520"}
+  ]
 }

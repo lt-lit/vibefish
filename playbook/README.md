@@ -308,6 +308,23 @@ option nothing changes for a playbook that was measured without it.
   resolves is Forge's to answer (it names the creature type the seat's deck holds most of). A rule takes `target`,
   `aim` or `target_player`, one of them. `{"play": ["Pact of the Serpent"], "target_player": "self",
   "when": ["type:Vampire >= 3", "life >= 20"]}`. Counter: `cast_self`.
+- `take` (play; harness 0.4.14): for a spell that removes any number of counters from among the permanents on the
+  battlefield and charges its caster for each (Eventide's Shadow: "You draw that many cards and lose that much life").
+  Which counters go is asked as the spell resolves, and Forge's AI answers with every counter it would like gone,
+  however many that is: all the counters it does not count as harmful on the opponents' permanents and all the -1/-1
+  counters on the seat's own, 84 and 85 of them in two games, and the seat pays a life for each. In two leagues of
+  the owner's table that answer left Blight Curse out of the game that same turn on 8 of the 21 casts (DESIGN §44). With `"take": {"keep_life": 15, "max": 8, "min": 3, "own_except": ["Tree of Perdition"]}`
+  the rule answers instead, with the counters whose going helps the seat and no others: first +1/+1 counters from
+  creatures and loyalty from planeswalkers an opponent controls, the largest stacks first; then -1/-1 counters from
+  creatures of its own, the most shrunken first, never from a permanent `own_except` names (the deck wants those as
+  they are). One kind of counter a permanent; at most `max` counters in all (default 8) and never more than the life
+  the seat has above `keep_life` (default 15), so a cast cannot bring it under that. The rule does not cast while
+  fewer than `min` counters (default 3) can be taken that way. Every other counter stays where it is: -1/-1 on an
+  opponent's creature, +1/+1 on the seat's own, and the kinds the rule does not know. Only a play rule takes `take`, and the
+  spell has to be one Forge resolves with its `RemoveCounter` effect; on any other card the block does nothing but
+  hold the cast back until `min` is met. Counters: `cast_take`, `cast_take_counters` (the spell's resolutions the rule
+  answered and the counters it took over them), `cast_take_short` (times the rule was read with fewer than `min` to
+  take).
 - `phase`: `main` (either main phase, the default), `main1` or `main2`; or, since harness 0.4.7, a step of the seat's
   own combat, with an empty stack: `attack`, after its attackers are declared, or `blocks`, after the blocks are
   declared. A play or activate rule with a combat phase is read only there and goes before Forge's own choice at that
@@ -400,6 +417,7 @@ option nothing changes for a playbook that was measured without it.
 | `opponents` | opponents still in the game |
 | `power` | total power of our creatures |
 | `opp_creatures`, `opp_power`, `opp_life` | the most creatures, the most total power, the highest life any one opponent has |
+| `table_creatures`, `table_power` | the creatures and the total power all the opponents have together (harness 0.4.14): two opponents with five creatures each are ten to a wipe, where `opp_creatures` says five |
 | `threat` | the most damage one opponent could attack us with next turn |
 | `opp_toughness` | the largest toughness among the opponents' creatures (also as an `x`) |
 | `attacking`, `unblocked` | our creatures in the current combat; those nobody blocked, once blocks are declared (both 0 outside our combat; for rules with a combat `phase`, harness 0.4.8) |
@@ -501,6 +519,22 @@ does, with the aim in between; charms, copies and triggers another player aims g
 Counters: `trigger_aim_seen` (a removal trigger aimed at an opponent's permanent), `trigger_aim_already` (at the most
 dangerous opponent already), `trigger_aim_moved`, `trigger_aim_kept` (nothing worth it on a more dangerous
 opponent's side), `trigger_aim_errors`; the block is recorded in `run.json` under `decks[].playbook.targets`.
+
+`"counters": {"cards": ["Blowfly Infestation"], "own_per_turn": 5}` (harness 0.4.14; with or without `triggers`) is
+for a named permanent of the seat whose trigger puts a -1/-1 counter on one target creature. Forge's AI may aim such
+a trigger at a creature of the seat's own that the counter kills, and where that death triggers the permanent again
+the chain has no end: Blowfly Infestation ("Whenever a creature dies, if it had a -1/-1 counter on it, put a -1/-1
+counter on target creature") with Hapatra, whose Snake for every counter is the next creature to die. Forge then
+closes the game as a draw. The rule lets the counter go on a dying creature of the seat's own `own_per_turn` times a
+turn (default 0; a deck that draws a card for each such counter wants a few) and after that puts it on a creature an
+opponent controls: the most dangerous opponent that has one the trigger can target, and there the creature with the
+lowest toughness, the largest among equals. When no opponent's creature can be targeted it goes on a creature of the
+seat's own that survives it, the one with the highest toughness, which ends the chain as well. A target Forge chose
+that is an opponent's creature, or a creature of the seat's own that survives the counter, is left alone, and so is
+every trigger of a card the list does not name. Counters: `trigger_counter_own_seen` (Forge aimed the counter at a
+dying creature of the seat's own), `trigger_counter_own` (allowed), `trigger_counter_moved` (put on an opponent's
+creature instead), `trigger_counter_ended` (put on a creature of its own that survives), `trigger_counter_stuck`
+(nothing else to put it on).
 
 ### `block`: not dying to an attack the seat could have blocked
 

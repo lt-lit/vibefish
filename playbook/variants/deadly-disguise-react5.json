@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "deck": "deadly-disguise",
+ "variant": "react5",
+ "of": "playbook/precons/deadly-disguise.json (version 6)",
+ "about": "The shipped playbook (version 6) with the reserve for its instant removal from five lands on, not three. The form to try for a deck that is behind with the rules for other players' turns (CLAUDE.md, What the measurements settled; DESIGN.md section 43).",
+ "playbook": {
+  "version": 7,
+  "attack": {
+   "policy": "forge",
+   "enable": {
+    "with": "Kaust, Eyes of the Glade",
+    "send": "face_down"
+   },
+   "aim": "danger",
+   "open": true,
+   "finish": "leader",
+   "guard": "table"
+  },
+  "targets": {
+   "triggers": "danger"
+  },
+  "block": {
+   "survive": true
+  },
+  "cast": {
+   "groups": {
+    "facedown": [
+     "Ainok Survivalist",
+     "Broodhatch Nantuko",
+     "Den Protector",
+     "Hidden Dragonslayer",
+     "Master of Pearls",
+     "Nervous Gardener",
+     "Printlifter Ooze",
+     "Deathmist Raptor",
+     "Boltbender",
+     "Experiment Twelve",
+     "Nantuko Vigilante",
+     "Salt Road Ambushers",
+     "Thelonite Hermit",
+     "Exalted Angel",
+     "Root Elemental",
+     "Imperial Hellkite",
+     "Akroma, Angel of Fury",
+     "Krosan Colossus",
+     "Krosan Cloudscraper",
+     "Hooded Hydra",
+     "Ashcloud Phoenix",
+     "True Identity"
+    ]
+   },
+   "rules": [
+    {
+     "hold": [
+      "Kaust, Eyes of the Glade"
+     ],
+     "ability": "Turn target face-down"
+    },
+    {
+     "activate": [
+      "Kaust, Eyes of the Glade"
+     ],
+     "own": "face_down",
+     "phase": "blocks"
+    },
+    {
+     "play": [
+      "Austere Command"
+     ],
+     "when": [
+      "opp_creatures >= 7",
+      "opp_power > power",
+      "creatures <= 4"
+     ]
+    },
+    {
+     "play": [
+      "Austere Command"
+     ],
+     "when": [
+      "opp_power > power",
+      "threat >= life"
+     ]
+    },
+    {
+     "play": [
+      "Dusk // Dawn"
+     ],
+     "when": [
+      "opp_power > power",
+      "threat >= life",
+      "opp_creatures <= 6"
+     ]
+    },
+    {
+     "play": [
+      "Sol Ring",
+      "Arcane Signet",
+      "Three Visits",
+      "Nature's Lore",
+      "Wild Growth",
+      "Sakura-Tribe Elder"
+     ]
+    },
+    {
+     "play": [
+      "Kaust, Eyes of the Glade"
+     ]
+    },
+    {
+     "play": [
+      "Obscuring Aether",
+      "Panoptic Projektor",
+      "Trail of Mystery",
+      "Ugin's Mastery",
+      "Veiled Ascension",
+      "Lifecrafter's Bestiary",
+      "Scroll of Fate",
+      "Mastery of the Unseen",
+      "Ransom Note"
+     ]
+    },
+    {
+     "activate": [
+      "Panoptic Projektor"
+     ],
+     "when": [
+      "hand:facedown >= 1"
+     ]
+    },
+    {
+     "forge": "unnamed"
+    },
+    {
+     "play": [
+      "Duskana, the Rage Mother",
+      "Beast Whisperer",
+      "Seedborn Muse",
+      "Ohran Frostfang",
+      "Whisperwood Elemental",
+      "Temur War Shaman",
+      "Toski, Bearer of Secrets",
+      "Mirror Entity",
+      "Welcoming Vampire",
+      "Tesak, Judith's Hellhound",
+      "Saryth, the Viper's Fang",
+      "Sidar Kondo of Jamuraa",
+      "Yedora, Grave Gardener",
+      "Scourge of the Throne"
+     ]
+    },
+    {
+     "play": [
+      "Boltbender"
+     ],
+     "when": [
+      "mana <= 3"
+     ]
+    },
+    {
+     "activate": [
+      "Scroll of Fate"
+     ]
+    },
+    {
+     "activate": [
+      "Krosan Verge"
+     ]
+    },
+    {
+     "activate": [
+      "Mirror Entity"
+     ],
+     "x": "max",
+     "x_min": 3,
+     "phase": "main1",
+     "when": [
+      "attackers >= 3"
+     ]
+    },
+    {
+     "activate": [
+      "Mastery of the Unseen"
+     ],
+     "times": 4,
+     "phase": "main2",
+     "when": [
+      "library >= 20"
+     ]
+    },
+    {
+     "hold": [
+      "Path to Exile",
+      "Chaos Warp",
+      "Unexplained Absence"
+     ]
+    },
+    {
+     "reserve": [
+      "Path to Exile",
+      "Chaos Warp",
+      "Unexplained Absence"
+     ],
+     "aim": "permanent",
+     "aim_min": 3,
+     "when": [
+      "lands >= 5"
+     ]
+    },
+    {
+     "play": [
+      "Path to Exile",
+      "Chaos Warp",
+      "Unexplained Absence"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "when": [
+      "lethal == 1"
+     ]
+    },
+    {
+     "play": [
+      "Path to Exile",
+      "Chaos Warp",
+      "Unexplained Absence"
+     ],
+     "phase": "defend",
+     "aim": "attacker",
+     "aim_min": 6
+    },
+    {
+     "play": [
+      "Path to Exile",
+      "Chaos Warp",
+      "Unexplained Absence"
+     ],
+     "phase": "end",
+     "aim": "permanent",
+     "aim_min": 3
+    }
+   ]
+  },
+  "triggers": [
+   {
+    "accept": [
+     "Trail of Mystery"
+    ],
+    "when": [
+     "library >= 20"
+    ]
+   },
+   {
+    "accept": [
+     "Lifecrafter's Bestiary"
+    ],
+    "when": [
+     "library >= 30"
+    ]
+   },
+   {
+    "accept": [
+     "Ugin's Mastery",
+     "Imperial Hellkite",
+     "Deathmist Raptor",
+     "Veiled Ascension",
+     "Yedora, Grave Gardener",
+     "Broodhatch Nantuko",
+     "Temur War Shaman",
+     "Root Elemental"
+    ]
+   }
+  ],
+  "notes": "Version 2, the answers candidate, of veil (version 1). Written from the 200 tables of ab-run #28 (seed 20261280, bots-v2 opponents under their playbooks), where veil won 20 and the stock pilot of the same deck 27 (18 against 25 discordant tables, exact test 0.36). WHAT VEIL COST. Its rule 6 (play every morph and disguise card) cast the face-up spell whenever it was affordable: face-down casts fell from 4.0 a game under stock to 1.8, and Den Protector, Hidden Dragonslayer, Ainok Survivalist, Printlifter Ooze, Nervous Gardener, Master of Pearls, Broodhatch Nantuko and Deathmist Raptor went down face up 27 to 39 times each where stock put them down face down 30 to 47 times (their turned-face-up triggers, Hidden Dragonslayer's and Ainok Survivalist's removal among them, lost). Stock's 27 wins averaged 5.6 face-down casts, its losses 3.8. And because a rule that has something to do always goes before Forge's own choice, the engine, payoff and morph rules starved every card no rule named: Fell the Mighty cast in 9 of 50 games drawn (stock 38 of 46), Decimate 11 of 55 (37 of 58), Jeska's Will 20 of 52 (37 of 46), Neheb 21 of 52 (41 of 47), Return of the Wildspeaker 22 of 55 (29 of 43), Dusk 5 of 42 (19 of 37), Austere Command 5 of 48 (18 of 45), Showstopping Surprise 8 of 49 (15 of 48); held at a loss 21 to 31 times each. WHAT CHANGED. (a) Veil's rule 6 is removed: every morph and disguise card is left to Forge, which chooses face down or face up itself (the rule format cannot cast face down). (b) A forge rule (rule 8) after the ramp, Kaust, the engines and the Projektor tap, and before the payoffs, Boltbender and the mana sinks: Forge's own choice among the unnamed plays (the removal, Jeska's Will, Return of the Wildspeaker, Neheb, Showstopping Surprise, Fell the Mighty, Decimate, Hooded Hydra, the morphs with their face-down casts) comes before every rule that fires again and again; Forge's own logic for each removal spell (FellTheMighty, Destroy, PowerDmg, the charms) picks the moment and the targets, as it did for stock. The engines (each cast once) stay ahead of it: in a first local run with the forge rule above them Forge spent the mana on face-down creatures and Panoptic Projektor, Ugin's Mastery, Veiled Ascension and Bestiary waited in hand (Projektor four turns in one game). The payoffs stay after it (Duskana wants the face-down creatures down first). (c) Panoptic Projektor's tap (veil rule 4, now 7) stays right after the engines and before the forge rule, so the reduction is there when Forge casts a face-down creature. (d) Neheb, the Eternal is taken out of the payoff rule (left to Forge, which cast it in 41 of 47 games). Everything else of veil is unchanged and in its order (ramp rule 4, Kaust 5, engines 6, payoffs 9, then 11 to 14): ramp, Kaust, engines, payoffs, Scroll of Fate, Krosan Verge, Mirror Entity, Mastery of the Unseen, the triggers and the go-wide attack. NEW RULES. Rules 1-2, Austere Command (Forge cast it in 18 of 45 games under stock and lost 18 holding it): when an opponent has seven creatures or more, more power than ours and we have four creatures or fewer, or when an opponent could kill us next turn with more power than ours (its mana value 4-or-more mode also answers the large creatures of Eldrazi Incursion and Limit Break). Forge's AI picks the two modes as it resolves (mandatory choice), so face-down creatures (mana value 0) can die to the 3-or-less mode with the opposing tokens. Rule 3, Dusk only as the emergency against a few large creatures: an opponent could kill us next turn with six creatures or fewer and more power than ours (Dusk spares the 2/2 face-down creatures and the opposing 1/1 tokens alike). Thresholds: being behind on board is this deck's normal state at this table (on its last three own turns an opponent had six creatures or more against four or fewer of ours in 128 of 173 stock losses and in 18 of 27 stock wins), so the wipe conditions are the emergencies, not a board count. Rule 10, Boltbender (flagged never-cast; veil cast it face up 16 times): played only when the mana left is three or less, when the face-up spell (four) is unaffordable and the rule casts the face-down one; its turn-up is Forge's.  LOCAL TABLES (16, seeds 20263170 and 20263171, bots-v2 under their playbooks; too few to say anything about wins: 0 of 16). First run (forge rule above the engines): 5.9 face-down casts a game (exam: stock 4.0, veil 1.8); Austere Command cast twice by rule 1, once countered by Swan Song, once with an opponent at seven or more creatures: its modes were artifacts and mana value 4 or more, which destroyed eleven opposing permanents (Hornet Queen, Galadriel, two hydras, Rampaging Baloths, Oblivion Stone, four equipment) and nothing of ours; Boltbender went down face down twice by rule 10. Second run (this order): 3.5 face-down casts a game; the engines were cast in every game they were drawn; Dusk drawn in four losses and never cast (rule 3 never held: in one loss the seat died at 2 life with Dusk and Fell the Mighty in hand against seven creatures, where rule 3's cap of six creatures failed and Forge's own logic declined Fell the Mighty). The rule-3 cap is the first thing to drop if Dusk stays in hand at the 200 tables. Shipped as version 2 on 2026-11-14 from ab-run #37: at 200 tables of bots (seed 20261310, opponents drawn from bots-v2 under their playbooks of 2026-11-13) 29 wins against its stock pilot's 20 (+4.5 points, 95% -2 to +11, exact test 0.21) with the attack left to Forge, the better of the two attacks on these tables (the same rules won 22 with the go-wide attack). What it casts in a share of games 15 points or more below its stock pilot on the same tables, 13 cards: Sidar Kondo of Jamuraa (23 of 43 games drawn against 40 of 41), Dusk // Dawn (7 of 39 games drawn against 26 of 43), Scourge of the Throne (11 of 60 games drawn against 34 of 66), Ohran Frostfang (20 of 42 games drawn against 35 of 46), Welcoming Vampire (19 of 41 games drawn against 30 of 41), Yedora, Grave Gardener (15 of 51 games drawn against 30 of 57), Printlifter Ooze (9 of 27 games drawn against 15 of 27), Temur War Shaman (13 of 48 games drawn against 23 of 47) and 5 more. It casts 14 cards that much more often (demo-data/playtest/2026-11-14/second-pass/deadly-disguise-forgeattack-card-diff.txt). VERSION 3 (2026-11-21), the candidate `v3`: version 2 with what passed its exam, part by part. RULES: the cast rules of the candidate `kaust` (rules 1 to 2 of this file). HOOKS: after Forge's own attack has been declared, the attackers sent at a player are sent at the opponent that looks most dangerous instead, when that opponent is ahead of the one attacked by five or more and the attack is no worse there: the damage sure to get through whatever is blocked is at least what it was, no more creatures there could block the attackers, and no attacker meets a blocker that would destroy it unless it met one where it was sent (`\"aim\": \"danger\"`; an attack that is sure to kill its target stays, and which creatures attack is not changed); and then a sure kill is taken from the most dangerous opponent down (`\"finish\": \"leader\"`: enough attackers are put on the opponent that looks most dangerous that the damage reaches its life whatever it blocks, then on the next one, and no weaker opponent is killed while a more dangerous one lives); a triggered ability of the seat that removes one permanent of an opponent (destroys it, exiles it, returns it to hand or library) is aimed at the opponent that looks most dangerous, when that opponent looks more dangerous than the one Forge aimed at by five or more and has a permanent of the same kind worth at least as much as Forge's choice or at least 4 (`\"targets\": {\"triggers\": \"danger\"}`); when Forge's blocks leave at least the seat's life in damage unblocked and blocks exist that would not, blocks are added, the least valuable free creatures in front of the heaviest unblocked attackers and only as many as it takes for the seat to live (`\"block\": {\"survive\": true}`). FROM THE CANDIDATE `kaust` (its rule numbers are those of its own file, playbook/variants/deadly-disguise-kaust.json): WHY: the commander is the deck. Kaust, Eyes of the Glade taps to turn a face-down attacking creature of ours face up, for nothing, and draws a card when a creature turned face up that turn deals combat damage to a player; the deck casts its creatures face down for three mana and Kaust makes one of them what it is each turn. Forge's AI used that ability 8 times in the 200 games of ab-run #45's shipped arm, with Kaust on the battlefield for 1,075 of the seat's own turns; on the 365 turns Kaust could be tapped and a face-down creature could attack, a face-down creature attacked on 106 and Kaust itself on 84. A rule could not help before harness 0.4.7: rules acted in the main phases only. THE ATTACK (`enable`): on a turn Kaust could be tapped (untapped, not summoning-sick) and no face-down creature of ours that is a creature card face up is attacking, the one with the greatest power face up joins Forge's attack, at the opponent with the fewest creatures that could block it; and Kaust is taken out of the attack if Forge sent it. RULE 1 holds Kaust's ability from Forge's AI, so that it is used at one moment only. RULE 2, in the seat's own declare-blockers step: tap Kaust to turn a face-down attacker face up, an unblocked one before a blocked one (it deals its damage as what it is and Kaust draws), then the greater power face up. LOCAL CHECK: the eight tables of ab-run #45 on which Kaust and a face-down creature were both ready on the most own turns (5 to 9), replayed from their seed with this file: the ability used 15 times (nine on an unblocked attacker, six on a blocked one; Krosan Cloudscraper four times), Kaust's draw 13 times against 8 in the baseline's games of those tables; the attack option changed 13 attacks (a face-down creature sent seven times, Kaust kept home six) and found no face-down creature able to attack on 23 turns; nothing invalid. The seat won two of the eight and five in the baseline, on tables picked for the commander's long life: no measure of wins. One of the eight replayed again on the final build was the same game. SHIPPED 2026-11-21 as version 3. Every part passed its own exam beside version 2 on the same 200 tables at the owner's table (ab-run #46 to #55, seed 20261390; demo-data/ab/2026-11-21-ab-v25/, DESIGN.md section 35): wins of 200 where version 2 won 28: leader 30, aim 27, block 28, swing 30, kaust 29. No two parts were played together; the version is at the tables beside version 2 in ab-run #57 (seed 20261410). VERSION 4 CANDIDATE `guard` (2026-11-21). Version 3 with one change: after Forge's own attack has been declared and the hooks the version already has have acted, attackers are taken back when the attack leaves the seat where the opponents one after another are sure to kill it before its next turn and keeping them home prevents that, or, when nothing kept home does, where one opponent alone is (`\"guard\": \"table\"`; a sure kill's attackers stay, and an attack stands when nothing kept home would save the seat). No cast or trigger rule is changed. VERSION 5 CANDIDATE `full` (2026-11-22). Version 4 (the guard arm of ab-run #57, which held by its rule and ships as version 4) with what this deck was left without on 2026-11-21: free damage: creatures Forge kept home attack an opponent who cannot block (`\"open\": true` on the attack). WHY: it was left out by a rule (\"behind by more than two tables of 200\") that DESIGN.md section 35 found to be close to a coin for a part worth nothing: `open` by itself beside the version before in ab-run #49 (20 against 28, 6 tables against 14, exact test 0.12); none is behind beyond noise. Since then ab-run #57 has shown the hooks acting together and the guard holding, which was written for what free damage costs; and at its table of next versions 18 of the 19 deaths by a block not made were the two decks without the block hook. No cast or trigger rule is changed. At the tables beside #57's guard arm in ab-run #60 (seed 20261410, the opponents the next versions of 2026-11-21); the rule is in CLAUDE.md, In flight. SHIPPED 2026-11-22 as version 5: the `full` arm of ab-run #60 (seed 20261410, the tables of ab-run #57; demo-data/ab/2026-11-22-ab-v28/, DESIGN.md section 37). Beside version 4 (#57's guard arm) on the same 200 tables: 32 wins against 25 (15 tables against 8, exact test 0.21); an opponent who cannot block is attacked on 58% of the turns it could be, from 36%, and the seat died with its own creatures tapped 18 times where it did 14 times. Versions 2 to 5 on those tables: 17, 21, 25 and 32 wins. CANDIDATE react (harness 0.4.12, docs/agents/add_react.py): version 5 with Path to Exile, Chaos Warp, Unexplained Absence kept from Forge's AI and played by rules on other players' turns: at a creature attacking the seat when the attack ends its game through its best blocks and one removal changes that, or when one removal takes 6 damage or more away; otherwise in the end step before the seat's own turn at the most dangerous opponent's best permanent worth 3 or more that the spell can hit. From 3 lands the mana for one of them is kept through the seat's own turn while it has such a target. SHIPPED 2026-11-22 as version 6: the `react` arm of ab-run #64 (seed 20261460, tables that chose nothing; demo-data/ab/2026-11-22-ab-v32/, DESIGN.md section 40). Beside version 5 on the same 200 tables at the owner's table: 18 wins against 20 (7 tables against 9, exact test 0.80); Path to Exile, Chaos Warp and Unexplained Absence cast in 105 of 131 card-games held (version 5: 112 of 128), 106 of the 106 casts on another player's turn (version 5: 15 of 114), 9 at an attacker. Read over the ten decks together by the rule fixed before the run: 123 tables against 117, the cards still played and the rules acting. CANDIDATE react5 (2026-11-23): version 6 with the mana for its instant removal kept from five lands on, where version 6 keeps it from three. Version 6 kept that mana on 138 turns of 200 games and was 4 tables against 12 behind the version without the rules at the table as it is since 2026-11-23 (ab-run #67), a little behind in what it builds; a deck that spends three mana a turn on a face-down creature has none to hold back at three and four lands. Nothing else is changed: the cards are still held from Forge's AI, and before five lands they are cast on another player's turn only when the turn left the mana for them.",
+  "on": "2026-11-22"
+ }
+}
