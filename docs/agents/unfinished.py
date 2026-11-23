@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""unfinished.py RUN_DIR... [-v]: the games of ab.py run directories that ended without a winner. A session helper.
+"""unfinished.py RUN_DIR... [-v]: the games of ab.py run directories (or of a league run: shard-N/gNNNNN) that ended without a winner. A session helper.
 
 How each ended (Forge's clock, a draw Forge declared, an exception), how long those games took beside all the games, and
 what the last turn was made of: the card with the most cast and zone lines in it and whose it was. A chain of forty lines
@@ -17,7 +17,7 @@ def main(argv):
     tot = collections.Counter(); by = collections.Counter(); secs = allsecs = 0.0; games = 0
     rows = []
     for root in roots:
-        for rj in sorted(glob.glob(os.path.join(root, 'arm-*', '*', 'run.json'))):
+        for rj in sorted(glob.glob(os.path.join(root, 'arm-*', '*', 'run.json')) + glob.glob(os.path.join(root, 'shard-*', '*', 'run.json'))):
             run = json.load(open(rj)); gm = run['games'][0]; games += 1
             allsecs += (gm.get('duration_ms') or 0) / 1000
             if gm.get('winner') is not None:

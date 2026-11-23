@@ -1,0 +1,7847 @@
+{
+ "kind": "mistakes",
+ "games": 600,
+ "games_without_combat_lines": 0,
+ "arm": null,
+ "by_deck": false,
+ "deck": null,
+ "groups": {
+  "bot": {
+   "seat_games": 2400,
+   "turns_able": 16997,
+   "turns_attacked": 10444,
+   "power_able": 198928,
+   "power_sent": 126151,
+   "kill_turns": 1957,
+   "kill_taken": 1165,
+   "kill_other": 35,
+   "kill_missed": 757,
+   "kill_missed_no_attack": 671,
+   "kill_missed_short": 86,
+   "kill_missed_then_lost": 477,
+   "kill_missed_then_won": 280,
+   "kill_last_turns": 340,
+   "kill_last_missed": 6,
+   "kill_top_turns": 460,
+   "kill_top_missed": 14,
+   "kill_lesser_turns": 1157,
+   "kill_lesser_missed": 737,
+   "kill_last_no_attack": 0,
+   "kill_top_no_attack": 1,
+   "kill_lesser_no_attack": 670,
+   "open_turns": 7451,
+   "open_attacked": 4473,
+   "open_elsewhere": 1582,
+   "attacked_lethal": 1426,
+   "combat_deaths": 1402,
+   "block_not_made": 1,
+   "died_tapped_out": 157,
+   "commander_deaths": 109,
+   "kill_limited_turns": 91,
+   "deaths_block_limited": 20,
+   "cmdkill_turns": 56,
+   "cmdkill_taken": 21,
+   "cmdkill_other": 7,
+   "cmdkill_last_turns": 3,
+   "cmdkill_last_missed": 0,
+   "cmdkill_top_turns": 19,
+   "cmdkill_top_missed": 5,
+   "cmdkill_lesser_turns": 34,
+   "cmdkill_lesser_missed": 23,
+   "cmdkill_last_no_attack": 0,
+   "cmdkill_top_no_attack": 5,
+   "cmdkill_lesser_no_attack": 22,
+   "cmd_blockable_turns": 231
+  }
+ },
+ "kills_not_taken": [
+  {
+   "where": "shard-1/g00021/games/game-001.events.jsonl",
+   "t": 59,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 52,
+     "blockers": 4,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "2": 10
+   }
+  },
+  {
+   "where": "shard-1/g00041/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 3,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 1,
+     "power": 5,
+     "blockers": 0,
+     "through": 5
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00061/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    },
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "3": 1,
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-1/g00061/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00061/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 3,
+     "power": 35,
+     "blockers": 2,
+     "through": 10
+    },
+    {
+     "seat": 3,
+     "life": 7,
+     "power": 35,
+     "blockers": 1,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-1/g00061/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 7,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-1/g00061/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 41,
+     "blockers": 1,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "1": 4
+   }
+  },
+  {
+   "where": "shard-1/g00061/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 3,
+     "power": 21,
+     "blockers": 0,
+     "through": 21
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00101/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-1/g00101/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 43,
+     "blockers": 3,
+     "through": 13
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00101/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 15,
+     "blockers": 3,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00121/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "0": 6
+   }
+  },
+  {
+   "where": "shard-1/g00121/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-1/g00121/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "3": 2,
+    "1": 4
+   }
+  },
+  {
+   "where": "shard-1/g00121/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 48,
+     "blockers": 4,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "0": 11
+   }
+  },
+  {
+   "where": "shard-1/g00141/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 8,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-1/g00161/games/game-001.events.jsonl",
+   "t": 61,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 19,
+     "power": 22,
+     "blockers": 1,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "0": 8
+   }
+  },
+  {
+   "where": "shard-1/g00161/games/game-001.events.jsonl",
+   "t": 66,
+   "seat": 3,
+   "deck": "planeswalker-party",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 1,
+     "power": 3,
+     "blockers": 0,
+     "through": 3
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00181/games/game-001.events.jsonl",
+   "t": 13,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 24,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "3": 3,
+    "0": 6
+   }
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 22,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 20,
+     "power": 32,
+     "blockers": 1,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-1/g00201/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 20,
+     "power": 67,
+     "blockers": 3,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-1/g00221/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 30,
+     "power": 34,
+     "blockers": 2,
+     "through": 30
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00301/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 12,
+     "power": 16,
+     "blockers": 1,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-1/g00301/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-1/g00301/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 19,
+     "blockers": 3,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00381/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 27,
+     "power": 108,
+     "blockers": 2,
+     "through": 91
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00381/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 27,
+     "power": 86,
+     "blockers": 7,
+     "through": 37
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00401/games/game-001.events.jsonl",
+   "t": 51,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 15,
+     "power": 34,
+     "blockers": 3,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "3": 6
+   }
+  },
+  {
+   "where": "shard-1/g00421/games/game-001.events.jsonl",
+   "t": 63,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 7,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "shard-1/g00461/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 36,
+     "power": 52,
+     "blockers": 1,
+     "through": 44
+    }
+   ],
+   "attacked": {
+    "2": 8
+   }
+  },
+  {
+   "where": "shard-1/g00501/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 22,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-1/g00501/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 41,
+     "blockers": 3,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00501/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 30,
+     "power": 72,
+     "blockers": 2,
+     "through": 39
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00521/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 0,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 19,
+     "blockers": 1,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "3": 7
+   }
+  },
+  {
+   "where": "shard-1/g00521/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 0,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 23,
+     "blockers": 2,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "2": 6
+   }
+  },
+  {
+   "where": "shard-1/g00521/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 39,
+     "blockers": 2,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "0": 12
+   }
+  },
+  {
+   "where": "shard-1/g00541/games/game-001.events.jsonl",
+   "t": 51,
+   "seat": 0,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 1,
+     "power": 7,
+     "blockers": 1,
+     "through": 3
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-1/g00541/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 24,
+     "blockers": 2,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00581/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 1,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-1/g00581/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 11,
+     "power": 142,
+     "blockers": 5,
+     "through": 23
+    },
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 142,
+     "blockers": 2,
+     "through": 93
+    }
+   ],
+   "attacked": {
+    "1": 6
+   }
+  },
+  {
+   "where": "shard-1/g00581/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 11,
+     "power": 29,
+     "blockers": 0,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-10/g00030/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 18,
+     "blockers": 3,
+     "through": 7
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00070/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 25,
+     "power": 33,
+     "blockers": 1,
+     "through": 27
+    }
+   ],
+   "attacked": {
+    "1": 10
+   }
+  },
+  {
+   "where": "shard-10/g00110/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 21,
+     "blockers": 0,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "1": 3,
+    "2": 6
+   }
+  },
+  {
+   "where": "shard-10/g00110/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 24,
+     "blockers": 1,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "3": 6,
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-10/g00130/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 16,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "2": 2,
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-10/g00130/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "shard-10/g00150/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 37,
+     "blockers": 3,
+     "through": 17
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00170/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 28,
+     "power": 29,
+     "blockers": 0,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "0": 1,
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-10/g00190/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 3,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 25,
+     "power": 56,
+     "blockers": 2,
+     "through": 36
+    },
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 56,
+     "blockers": 3,
+     "through": 27
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00210/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 0,
+     "life": 20,
+     "power": 7,
+     "blockers": 0,
+     "through": 7,
+     "cmd": 23
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-10/g00230/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "2": 7
+   }
+  },
+  {
+   "where": "shard-10/g00250/games/game-001.events.jsonl",
+   "t": 77,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 29,
+     "blockers": 0,
+     "through": 29
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00270/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 3,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 26,
+     "power": 37,
+     "blockers": 1,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "2": 5
+   }
+  },
+  {
+   "where": "shard-10/g00270/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 24,
+     "power": 33,
+     "blockers": 1,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "0": 7
+   }
+  },
+  {
+   "where": "shard-10/g00270/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 0,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 34,
+     "blockers": 4,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-10/g00270/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 40,
+     "blockers": 4,
+     "through": 20
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00270/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 3,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 44,
+     "blockers": 6,
+     "through": 18
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00270/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 0,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 46,
+     "blockers": 14,
+     "through": 11
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00270/games/game-001.events.jsonl",
+   "t": 55,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 14,
+     "power": 85,
+     "blockers": 11,
+     "through": 19
+    },
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 85,
+     "blockers": 6,
+     "through": 31
+    }
+   ],
+   "attacked": {
+    "3": 28
+   }
+  },
+  {
+   "where": "shard-10/g00290/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "1": 6,
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-10/g00310/games/game-001.events.jsonl",
+   "t": 55,
+   "seat": 0,
+   "deck": "planeswalker-party",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 5,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-10/g00310/games/game-001.events.jsonl",
+   "t": 58,
+   "seat": 3,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 3,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00370/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 19,
+     "power": 30,
+     "blockers": 1,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "0": 7
+   }
+  },
+  {
+   "where": "shard-10/g00370/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 8,
+     "blockers": 6,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00390/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 0,
+     "life": 24,
+     "power": 7,
+     "blockers": 0,
+     "through": 7,
+     "cmd": 21
+    },
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 7,
+     "blockers": 0,
+     "through": 7,
+     "cmd": 24
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-10/g00390/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 19,
+     "blockers": 2,
+     "through": 18
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00390/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "top",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 3,
+     "life": 20,
+     "power": 7,
+     "blockers": 1,
+     "through": 7,
+     "cmd": 26
+    },
+    {
+     "seat": 0,
+     "life": 24,
+     "power": 7,
+     "blockers": 0,
+     "through": 7,
+     "cmd": 21
+    },
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 7,
+     "blockers": 2,
+     "through": 7,
+     "cmd": 24
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00410/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 33,
+     "power": 40,
+     "blockers": 1,
+     "through": 35
+    }
+   ],
+   "attacked": {
+    "2": 24
+   }
+  },
+  {
+   "where": "shard-10/g00410/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 33,
+     "power": 44,
+     "blockers": 0,
+     "through": 44
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-10/g00410/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 3,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 22,
+     "blockers": 9,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "shard-10/g00410/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 58,
+     "blockers": 9,
+     "through": 20
+    },
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 58,
+     "blockers": 1,
+     "through": 53
+    }
+   ],
+   "attacked": {
+    "3": 27
+   }
+  },
+  {
+   "where": "shard-10/g00430/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 13,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "3": 1,
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-10/g00450/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 26,
+     "blockers": 1,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "1": 2,
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-10/g00450/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    }
+   ],
+   "attacked": {
+    "2": 5
+   }
+  },
+  {
+   "where": "shard-10/g00450/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    },
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "2": 1,
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-10/g00450/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00470/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "top",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 0,
+     "life": 22,
+     "power": 22,
+     "blockers": 11,
+     "through": 17,
+     "cmd": 25
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-10/g00490/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 0,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 9,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "2": 6
+   }
+  },
+  {
+   "where": "shard-10/g00550/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 28,
+     "blockers": 0,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-11/g00011/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 24,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-11/g00031/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 14,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-11/g00031/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 21,
+     "blockers": 3,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-11/g00031/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 8,
+     "blockers": 0,
+     "through": 8
+    },
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 8,
+     "blockers": 0,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "0": 8
+   }
+  },
+  {
+   "where": "shard-11/g00071/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 7,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "2": 4,
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-11/g00091/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 24,
+     "power": 36,
+     "blockers": 0,
+     "through": 36
+    },
+    {
+     "seat": 3,
+     "life": 24,
+     "power": 36,
+     "blockers": 0,
+     "through": 36
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "shard-11/g00091/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 6,
+     "power": 10,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "shard-11/g00091/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 14,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00091/games/game-001.events.jsonl",
+   "t": 51,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 97,
+     "blockers": 2,
+     "through": 45
+    }
+   ],
+   "attacked": {
+    "2": 20
+   }
+  },
+  {
+   "where": "shard-11/g00131/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 32,
+     "blockers": 6,
+     "through": 15
+    },
+    {
+     "seat": 1,
+     "life": 18,
+     "power": 32,
+     "blockers": 4,
+     "through": 18
+    }
+   ],
+   "attacked": {
+    "3": 14
+   }
+  },
+  {
+   "where": "shard-11/g00131/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 19,
+     "blockers": 5,
+     "through": 3
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-11/g00151/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 3,
+     "life": 19,
+     "power": 5,
+     "blockers": 0,
+     "through": 5,
+     "cmd": 23
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-11/g00171/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 9,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00191/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 2,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 7,
+     "blockers": 2,
+     "through": 2
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00191/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 1,
+   "deck": "planeswalker-party",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 11,
+     "power": 20,
+     "blockers": 2,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "shard-11/g00271/games/game-001.events.jsonl",
+   "t": 21,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 23,
+     "power": 27,
+     "blockers": 0,
+     "through": 27
+    }
+   ],
+   "attacked": {
+    "0": 7
+   }
+  },
+  {
+   "where": "shard-11/g00351/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 14,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00351/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 9,
+     "blockers": 1,
+     "through": 7
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00351/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 2,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 22,
+     "power": 64,
+     "blockers": 5,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "0": 9
+   }
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 18,
+     "power": 34,
+     "blockers": 3,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 18,
+     "power": 26,
+     "blockers": 3,
+     "through": 20
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 18,
+     "power": 31,
+     "blockers": 4,
+     "through": 18
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 70,
+     "blockers": 4,
+     "through": 34
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 43,
+     "blockers": 3,
+     "through": 33
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 30,
+     "blockers": 2,
+     "through": 26
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 28,
+     "blockers": 3,
+     "through": 22
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 54,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 39,
+     "blockers": 3,
+     "through": 28
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 56,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 5,
+     "power": 35,
+     "blockers": 5,
+     "through": 24
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00391/games/game-001.events.jsonl",
+   "t": 57,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 5,
+     "power": 78,
+     "blockers": 5,
+     "through": 52
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00431/games/game-001.events.jsonl",
+   "t": 56,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 2,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00431/games/game-001.events.jsonl",
+   "t": 60,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 7,
+     "blockers": 1,
+     "through": 3
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00451/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 14,
+     "power": 29,
+     "blockers": 0,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "2": 12
+   }
+  },
+  {
+   "where": "shard-11/g00491/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 0,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 18,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "2": 5
+   }
+  },
+  {
+   "where": "shard-11/g00511/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 1,
+     "life": 21,
+     "power": 20,
+     "blockers": 0,
+     "through": 20,
+     "cmd": 23
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00571/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 24,
+     "power": 30,
+     "blockers": 0,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "3": 9
+   }
+  },
+  {
+   "where": "shard-11/g00571/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 3,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 24,
+     "power": 24,
+     "blockers": 2,
+     "through": 24
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-11/g00591/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "shard-11/g00591/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    },
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-12/g00012/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 12,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-12/g00012/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 39,
+     "blockers": 1,
+     "through": 21
+    },
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 39,
+     "blockers": 1,
+     "through": 21
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00052/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 2,
+     "life": 25,
+     "power": 6,
+     "blockers": 0,
+     "through": 6,
+     "cmd": 21
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-12/g00052/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "top",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 7,
+     "blockers": 3,
+     "through": 6,
+     "cmd": 22
+    },
+    {
+     "seat": 2,
+     "life": 26,
+     "power": 7,
+     "blockers": 3,
+     "through": 6,
+     "cmd": 21
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00072/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 28,
+     "blockers": 1,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-12/g00072/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 37,
+     "blockers": 1,
+     "through": 27
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-12/g00072/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 23,
+     "blockers": 1,
+     "through": 14
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-12/g00072/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 37,
+     "blockers": 1,
+     "through": 27
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-12/g00092/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-12/g00132/games/game-001.events.jsonl",
+   "t": 75,
+   "seat": 3,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 14,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-12/g00152/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 14,
+     "blockers": 1,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00172/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 33,
+     "power": 53,
+     "blockers": 2,
+     "through": 39
+    }
+   ],
+   "attacked": {
+    "2": 8
+   }
+  },
+  {
+   "where": "shard-12/g00172/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 11,
+     "blockers": 3,
+     "through": 5
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00192/games/game-001.events.jsonl",
+   "t": 23,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 0,
+     "life": 20,
+     "power": 13,
+     "blockers": 2,
+     "through": 11,
+     "cmd": 21
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-12/g00192/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 2,
+     "life": 20,
+     "power": 17,
+     "blockers": 4,
+     "through": 14,
+     "cmd": 25
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-12/g00232/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 0,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00232/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 12,
+     "blockers": 6,
+     "through": 9
+    },
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 12,
+     "blockers": 1,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00272/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 28,
+     "power": 37,
+     "blockers": 1,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "shard-12/g00272/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 11,
+     "blockers": 1,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00272/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 32,
+     "blockers": 1,
+     "through": 26
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00272/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 19,
+     "blockers": 3,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00272/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 24,
+     "blockers": 3,
+     "through": 11
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00412/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 3,
+     "life": 23,
+     "power": 15,
+     "blockers": 0,
+     "through": 15,
+     "cmd": 21
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00412/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 0,
+     "life": 20,
+     "power": 17,
+     "blockers": 1,
+     "through": 10,
+     "cmd": 21
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-12/g00412/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 19,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-12/g00432/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 31,
+     "power": 37,
+     "blockers": 0,
+     "through": 37
+    }
+   ],
+   "attacked": {
+    "1": 6
+   }
+  },
+  {
+   "where": "shard-12/g00432/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 3,
+     "power": 31,
+     "blockers": 0,
+     "through": 31
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-12/g00432/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 3,
+     "power": 46,
+     "blockers": 1,
+     "through": 37
+    }
+   ],
+   "attacked": {
+    "2": 8
+   }
+  },
+  {
+   "where": "shard-12/g00472/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 3,
+     "power": 11,
+     "blockers": 2,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "shard-12/g00472/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 3,
+     "power": 11,
+     "blockers": 2,
+     "through": 3
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00013/games/game-001.events.jsonl",
+   "t": 51,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 6,
+     "power": 21,
+     "blockers": 2,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-13/g00013/games/game-001.events.jsonl",
+   "t": 56,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 19,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-13/g00073/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 2,
+     "life": 13,
+     "power": 12,
+     "blockers": 0,
+     "through": 12,
+     "cmd": 22
+    }
+   ],
+   "attacked": {
+    "2": 1,
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-13/g00073/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 1,
+     "life": 24,
+     "power": 16,
+     "blockers": 2,
+     "through": 11,
+     "cmd": 25
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-13/g00073/games/game-001.events.jsonl",
+   "t": 57,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 1,
+     "life": 24,
+     "power": 19,
+     "blockers": 2,
+     "through": 14,
+     "cmd": 27
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-13/g00113/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 17,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-13/g00133/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 17,
+     "power": 27,
+     "blockers": 1,
+     "through": 23
+    }
+   ],
+   "attacked": {
+    "1": 12
+   }
+  },
+  {
+   "where": "shard-13/g00153/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 1,
+     "power": 6,
+     "blockers": 1,
+     "through": 1
+    }
+   ],
+   "attacked": {
+    "2": 9
+   }
+  },
+  {
+   "where": "shard-13/g00173/games/game-001.events.jsonl",
+   "t": 63,
+   "seat": 1,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-13/g00173/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    },
+    {
+     "seat": 1,
+     "life": 11,
+     "power": 20,
+     "blockers": 3,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "3": 14
+   }
+  },
+  {
+   "where": "shard-13/g00173/games/game-001.events.jsonl",
+   "t": 67,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 11,
+     "power": 42,
+     "blockers": 5,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "3": 24
+   }
+  },
+  {
+   "where": "shard-13/g00173/games/game-001.events.jsonl",
+   "t": 69,
+   "seat": 1,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 7,
+     "blockers": 1,
+     "through": 2
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00193/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 18,
+     "power": 27,
+     "blockers": 0,
+     "through": 27
+    }
+   ],
+   "attacked": {
+    "3": 3,
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-13/g00193/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 23,
+     "blockers": 0,
+     "through": 23
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00193/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 41,
+     "blockers": 0,
+     "through": 41
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-13/g00193/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 20,
+     "blockers": 3,
+     "through": 12
+    },
+    {
+     "seat": 3,
+     "life": 7,
+     "power": 20,
+     "blockers": 0,
+     "through": 20
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00213/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 37,
+     "blockers": 6,
+     "through": 16
+    },
+    {
+     "seat": 0,
+     "life": 22,
+     "power": 37,
+     "blockers": 2,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "2": 10
+   }
+  },
+  {
+   "where": "shard-13/g00213/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 30,
+     "blockers": 6,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "0": 10
+   }
+  },
+  {
+   "where": "shard-13/g00233/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 21,
+     "power": 26,
+     "blockers": 1,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-13/g00253/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 22,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-13/g00273/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 11,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "2": 7
+   }
+  },
+  {
+   "where": "shard-13/g00313/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 31,
+     "power": 67,
+     "blockers": 3,
+     "through": 38
+    },
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 67,
+     "blockers": 4,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "shard-13/g00313/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "top",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 30,
+     "power": 49,
+     "blockers": 2,
+     "through": 35
+    },
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 49,
+     "blockers": 0,
+     "through": 49
+    },
+    {
+     "seat": 1,
+     "life": 14,
+     "power": 49,
+     "blockers": 0,
+     "through": 49
+    }
+   ],
+   "attacked": {
+    "3": 8,
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-13/g00353/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 14,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "1": 6
+   }
+  },
+  {
+   "where": "shard-13/g00353/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 10,
+     "blockers": 2,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00373/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 14,
+     "blockers": 4,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-13/g00393/games/game-001.events.jsonl",
+   "t": 59,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 14,
+     "power": 38,
+     "blockers": 1,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "shard-13/g00473/games/game-001.events.jsonl",
+   "t": 60,
+   "seat": 2,
+   "deck": "planeswalker-party",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 17,
+     "blockers": 2,
+     "through": 5
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "shard-13/g00493/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 11,
+     "blockers": 3,
+     "through": 2
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00493/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 53,
+     "blockers": 2,
+     "through": 34
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-13/g00513/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 16,
+     "power": 42,
+     "blockers": 2,
+     "through": 19
+    },
+    {
+     "seat": 2,
+     "life": 30,
+     "power": 42,
+     "blockers": 0,
+     "through": 42
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-13/g00513/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 0,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00513/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 1,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    }
+   ],
+   "attacked": {
+    "3": 8
+   }
+  },
+  {
+   "where": "shard-13/g00513/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 12,
+     "blockers": 1,
+     "through": 7
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00513/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 0,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 10,
+     "blockers": 1,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00533/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 33,
+     "blockers": 2,
+     "through": 15
+    },
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 33,
+     "blockers": 0,
+     "through": 33
+    }
+   ],
+   "attacked": {
+    "3": 7
+   }
+  },
+  {
+   "where": "shard-13/g00533/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00533/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-13/g00533/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 19,
+     "blockers": 1,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "shard-13/g00533/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 4,
+     "blockers": 1,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-13/g00553/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 34,
+     "blockers": 4,
+     "through": 16
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00553/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 20,
+     "blockers": 4,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-13/g00593/games/game-001.events.jsonl",
+   "t": 63,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 16,
+     "blockers": 3,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "3": 8
+   }
+  },
+  {
+   "where": "shard-14/g00034/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 1,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 32,
+     "blockers": 8,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00054/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 3,
+   "deck": "planeswalker-party",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 1,
+     "power": 4,
+     "blockers": 1,
+     "through": 3
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00094/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 29,
+     "blockers": 1,
+     "through": 22
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-14/g00094/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 23,
+     "blockers": 2,
+     "through": 7
+    },
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 23,
+     "blockers": 1,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00094/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 16,
+     "blockers": 1,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00094/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 41,
+     "blockers": 2,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "shard-14/g00094/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 21,
+     "blockers": 5,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00094/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 21,
+     "blockers": 2,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00114/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 13,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "shard-14/g00114/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 19,
+     "blockers": 0,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "0": 9
+   }
+  },
+  {
+   "where": "shard-14/g00114/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 21,
+     "blockers": 0,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 21,
+     "blockers": 1,
+     "through": 18
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 27,
+     "blockers": 1,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "2": 1,
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-14/g00174/games/game-001.events.jsonl",
+   "t": 56,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 52,
+     "blockers": 0,
+     "through": 52
+    },
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 52,
+     "blockers": 0,
+     "through": 52
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00194/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 9,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-14/g00234/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 28,
+     "power": 32,
+     "blockers": 0,
+     "through": 32
+    },
+    {
+     "seat": 1,
+     "life": 14,
+     "power": 32,
+     "blockers": 2,
+     "through": 18
+    }
+   ],
+   "attacked": {
+    "2": 5
+   }
+  },
+  {
+   "where": "shard-14/g00234/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 13,
+     "blockers": 2,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00234/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "top",
+   "commander": true,
+   "killable": [
+    {
+     "seat": 3,
+     "life": 31,
+     "power": 13,
+     "blockers": 3,
+     "through": 8,
+     "cmd": 23
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00254/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "1": 9
+   }
+  },
+  {
+   "where": "shard-14/g00254/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 17,
+     "blockers": 2,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "2": 13
+   }
+  },
+  {
+   "where": "shard-14/g00274/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 28,
+     "power": 31,
+     "blockers": 2,
+     "through": 31
+    }
+   ],
+   "attacked": {
+    "2": 7
+   }
+  },
+  {
+   "where": "shard-14/g00314/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 3,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 12,
+     "power": 20,
+     "blockers": 1,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00414/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 18,
+     "power": 26,
+     "blockers": 1,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "2": 6
+   }
+  },
+  {
+   "where": "shard-14/g00414/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00434/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 18,
+     "power": 86,
+     "blockers": 2,
+     "through": 56
+    },
+    {
+     "seat": 1,
+     "life": 19,
+     "power": 86,
+     "blockers": 1,
+     "through": 64
+    }
+   ],
+   "attacked": {
+    "3": 9
+   }
+  },
+  {
+   "where": "shard-14/g00434/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 5,
+     "blockers": 3,
+     "through": 5
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00434/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 3,
+     "power": 16,
+     "blockers": 5,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00494/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 1,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 19,
+     "power": 32,
+     "blockers": 2,
+     "through": 20
+    },
+    {
+     "seat": 3,
+     "life": 27,
+     "power": 32,
+     "blockers": 0,
+     "through": 32
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "shard-14/g00494/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00494/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 0,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00494/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 1,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 19,
+     "power": 38,
+     "blockers": 2,
+     "through": 26
+    },
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 38,
+     "blockers": 0,
+     "through": 38
+    }
+   ],
+   "attacked": {
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-14/g00534/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 17,
+     "power": 44,
+     "blockers": 2,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-14/g00554/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-14/g00554/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-14/g00554/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "shard-14/g00554/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 37,
+     "power": 54,
+     "blockers": 1,
+     "through": 47
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-14/g00554/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 37,
+     "power": 101,
+     "blockers": 2,
+     "through": 84
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00015/games/game-001.events.jsonl",
+   "t": 60,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 5,
+     "power": 21,
+     "blockers": 12,
+     "through": 20
+    },
+    {
+     "seat": 2,
+     "life": 19,
+     "power": 21,
+     "blockers": 3,
+     "through": 20
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00015/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 5,
+     "power": 21,
+     "blockers": 9,
+     "through": 20
+    },
+    {
+     "seat": 2,
+     "life": 19,
+     "power": 21,
+     "blockers": 4,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-15/g00075/games/game-001.events.jsonl",
+   "t": 56,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 32,
+     "power": 33,
+     "blockers": 0,
+     "through": 33
+    },
+    {
+     "seat": 3,
+     "life": 22,
+     "power": 33,
+     "blockers": 0,
+     "through": 33
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "shard-15/g00095/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 36,
+     "blockers": 4,
+     "through": 28
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00115/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 8,
+     "blockers": 0,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00155/games/game-001.events.jsonl",
+   "t": 23,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 12,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {
+    "2": 1,
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-15/g00155/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 24,
+     "blockers": 2,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-15/g00175/games/game-001.events.jsonl",
+   "t": 23,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 20,
+     "blockers": 1,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00175/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-15/g00175/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00175/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 22,
+     "blockers": 1,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00175/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 0,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 18,
+     "blockers": 1,
+     "through": 12
+    },
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 18,
+     "blockers": 5,
+     "through": 2
+    }
+   ],
+   "attacked": {
+    "3": 7
+   }
+  },
+  {
+   "where": "shard-15/g00175/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 3,
+     "power": 18,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-15/g00215/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 12,
+     "power": 21,
+     "blockers": 1,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "shard-15/g00215/games/game-001.events.jsonl",
+   "t": 57,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 10,
+     "power": 29,
+     "blockers": 2,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-15/g00235/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 15,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    },
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 24,
+     "blockers": 1,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "shard-15/g00235/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 1,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-15/g00235/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 1,
+     "power": 4,
+     "blockers": 1,
+     "through": 1
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00295/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 24,
+     "power": 36,
+     "blockers": 2,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "3": 7
+   }
+  },
+  {
+   "where": "shard-15/g00315/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 4,
+     "power": 25,
+     "blockers": 0,
+     "through": 25
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00355/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 3,
+     "power": 6,
+     "blockers": 1,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00375/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 21,
+     "power": 43,
+     "blockers": 1,
+     "through": 37
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-15/g00415/games/game-001.events.jsonl",
+   "t": 23,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 18,
+     "power": 33,
+     "blockers": 0,
+     "through": 33
+    },
+    {
+     "seat": 1,
+     "life": 18,
+     "power": 33,
+     "blockers": 1,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "0": 2,
+    "1": 1,
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-15/g00435/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 3,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 12,
+     "blockers": 0,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00455/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 0,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 34,
+     "power": 44,
+     "blockers": 1,
+     "through": 40
+    }
+   ],
+   "attacked": {
+    "1": 20
+   }
+  },
+  {
+   "where": "shard-15/g00475/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 0,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 19,
+     "power": 29,
+     "blockers": 1,
+     "through": 22
+    }
+   ],
+   "attacked": {
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-15/g00495/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 15,
+     "power": 18,
+     "blockers": 0,
+     "through": 18
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "3": 2
+   }
+  },
+  {
+   "where": "shard-15/g00495/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-15/g00495/games/game-001.events.jsonl",
+   "t": 55,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 2,
+     "power": 8,
+     "blockers": 2,
+     "through": 2
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00495/games/game-001.events.jsonl",
+   "t": 59,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 4,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    },
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-15/g00495/games/game-001.events.jsonl",
+   "t": 63,
+   "seat": 0,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 1,
+     "power": 7,
+     "blockers": 1,
+     "through": 5
+    },
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 7,
+     "blockers": 1,
+     "through": 5
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00535/games/game-001.events.jsonl",
+   "t": 60,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 17,
+     "blockers": 1,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-15/g00535/games/game-001.events.jsonl",
+   "t": 62,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 7,
+     "blockers": 0,
+     "through": 7
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00555/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 10,
+     "blockers": 1,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00555/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 7,
+     "power": 14,
+     "blockers": 2,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00555/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 5,
+     "power": 29,
+     "blockers": 2,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-15/g00555/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00595/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 31,
+     "blockers": 2,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "3": 6
+   }
+  },
+  {
+   "where": "shard-15/g00595/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 63,
+     "blockers": 6,
+     "through": 30
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00595/games/game-001.events.jsonl",
+   "t": 57,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 16,
+     "power": 50,
+     "blockers": 3,
+     "through": 39
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-15/g00595/games/game-001.events.jsonl",
+   "t": 58,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 16,
+     "power": 36,
+     "blockers": 3,
+     "through": 23
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00595/games/game-001.events.jsonl",
+   "t": 60,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 16,
+     "power": 47,
+     "blockers": 5,
+     "through": 35
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-15/g00595/games/game-001.events.jsonl",
+   "t": 61,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 16,
+     "power": 42,
+     "blockers": 5,
+     "through": 25
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-15/g00595/games/game-001.events.jsonl",
+   "t": 63,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 16,
+     "power": 62,
+     "blockers": 6,
+     "through": 44
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-16/g00016/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 25,
+     "blockers": 3,
+     "through": 7
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "shard-16/g00076/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 13,
+     "blockers": 2,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-16/g00076/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 3,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 50,
+     "blockers": 2,
+     "through": 42
+    },
+    {
+     "seat": 1,
+     "life": 17,
+     "power": 50,
+     "blockers": 3,
+     "through": 38
+    }
+   ],
+   "attacked": {
+    "2": 13
+   }
+  },
+  {
+   "where": "shard-16/g00076/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 5,
+     "power": 16,
+     "blockers": 0,
+     "through": 16
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-16/g00096/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 13,
+     "power": 17,
+     "blockers": 1,
+     "through": 13
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-16/g00096/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 13,
+     "power": 62,
+     "blockers": 1,
+     "through": 53
+    }
+   ],
+   "attacked": {
+    "0": 6
+   }
+  },
+  {
+   "where": "shard-16/g00156/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 3,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 29,
+     "blockers": 4,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-16/g00176/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 29,
+     "blockers": 6,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "1": 9
+   }
+  },
+  {
+   "where": "shard-16/g00176/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 3,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 8,
+     "power": 31,
+     "blockers": 6,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-16/g00256/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 19,
+     "blockers": 4,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "2": 6
+   }
+  },
+  {
+   "where": "shard-16/g00256/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 3,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 12,
+     "power": 14,
+     "blockers": 7,
+     "through": 12
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "shard-16/g00256/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 5,
+     "power": 40,
+     "blockers": 9,
+     "through": 5
+    }
+   ],
+   "attacked": {
+    "2": 8
+   }
+  },
+  {
+   "where": "shard-16/g00296/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 14,
+     "power": 33,
+     "blockers": 3,
+     "through": 18
+    }
+   ],
+   "attacked": {
+    "0": 6
+   }
+  },
+  {
+   "where": "shard-16/g00336/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 36,
+     "blockers": 1,
+     "through": 32
+    }
+   ],
+   "attacked": {
+    "3": 15
+   }
+  },
+  {
+   "where": "shard-16/g00376/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 33,
+     "power": 35,
+     "blockers": 0,
+     "through": 35
+    },
+    {
+     "seat": 3,
+     "life": 27,
+     "power": 35,
+     "blockers": 0,
+     "through": 35
+    }
+   ],
+   "attacked": {
+    "2": 14
+   }
+  },
+  {
+   "where": "shard-16/g00376/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "top",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 33,
+     "power": 49,
+     "blockers": 1,
+     "through": 42
+    },
+    {
+     "seat": 2,
+     "life": 22,
+     "power": 49,
+     "blockers": 6,
+     "through": 22
+    },
+    {
+     "seat": 3,
+     "life": 14,
+     "power": 49,
+     "blockers": 2,
+     "through": 38
+    }
+   ],
+   "attacked": {
+    "2": 19
+   }
+  },
+  {
+   "where": "shard-16/g00376/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 2,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 16,
+     "blockers": 1,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "3": 4
+   }
+  },
+  {
+   "where": "shard-16/g00416/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 2,
+   "deck": "planeswalker-party",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 12,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-16/g00416/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 0,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 4,
+     "blockers": 0,
+     "through": 4
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-16/g00436/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 27,
+     "power": 37,
+     "blockers": 2,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "2": 14
+   }
+  },
+  {
+   "where": "shard-16/g00456/games/game-001.events.jsonl",
+   "t": 63,
+   "seat": 1,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 5,
+     "power": 15,
+     "blockers": 2,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-16/g00456/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 1,
+     "power": 9,
+     "blockers": 2,
+     "through": 1
+    }
+   ],
+   "attacked": {
+    "1": 3
+   }
+  },
+  {
+   "where": "shard-16/g00456/games/game-001.events.jsonl",
+   "t": 68,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 1,
+     "blockers": 0,
+     "through": 1
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-16/g00496/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 9,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-16/g00596/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 9,
+     "power": 16,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-16/g00596/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 2,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 2,
+     "power": 12,
+     "blockers": 2,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "1": 4
+   }
+  },
+  {
+   "where": "shard-17/g00017/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 15,
+     "power": 28,
+     "blockers": 0,
+     "through": 28
+    }
+   ],
+   "attacked": {
+    "2": 4,
+    "0": 2
+   }
+  },
+  {
+   "where": "shard-17/g00017/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 3,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 9,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00017/games/game-001.events.jsonl",
+   "t": 60,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 11,
+     "power": 18,
+     "blockers": 6,
+     "through": 16
+    },
+    {
+     "seat": 3,
+     "life": 16,
+     "power": 18,
+     "blockers": 5,
+     "through": 16
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00017/games/game-001.events.jsonl",
+   "t": 61,
+   "seat": 2,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 16,
+     "power": 57,
+     "blockers": 0,
+     "through": 57
+    },
+    {
+     "seat": 0,
+     "life": 12,
+     "power": 57,
+     "blockers": 1,
+     "through": 37
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00017/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 1,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 15,
+     "power": 19,
+     "blockers": 1,
+     "through": 18
+    },
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 19,
+     "blockers": 2,
+     "through": 17
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00017/games/game-001.events.jsonl",
+   "t": 65,
+   "seat": 2,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 15,
+     "power": 29,
+     "blockers": 1,
+     "through": 21
+    },
+    {
+     "seat": 0,
+     "life": 13,
+     "power": 29,
+     "blockers": 2,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00057/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00057/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "0": 1,
+    "2": 10
+   }
+  },
+  {
+   "where": "shard-17/g00077/games/game-001.events.jsonl",
+   "t": 17,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 26,
+     "blockers": 1,
+     "through": 22
+    }
+   ],
+   "attacked": {
+    "2": 20
+   }
+  },
+  {
+   "where": "shard-17/g00177/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 20,
+     "blockers": 1,
+     "through": 20
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-17/g00197/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 1,
+   "deck": "quick-draw",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 14,
+     "power": 32,
+     "blockers": 1,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "0": 6
+   }
+  },
+  {
+   "where": "shard-17/g00197/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 7,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-17/g00257/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 5,
+     "power": 26,
+     "blockers": 13,
+     "through": 7
+    }
+   ],
+   "attacked": {
+    "0": 8
+   }
+  },
+  {
+   "where": "shard-17/g00277/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 16,
+     "blockers": 0,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-17/g00277/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 12,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-17/g00277/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 21,
+     "blockers": 0,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-17/g00277/games/game-001.events.jsonl",
+   "t": 53,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 13,
+     "blockers": 1,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "2": 4
+   }
+  },
+  {
+   "where": "shard-17/g00317/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 0,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 21,
+     "power": 27,
+     "blockers": 1,
+     "through": 21
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "shard-17/g00317/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 1,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 12,
+     "blockers": 0,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00317/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 1,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00357/games/game-001.events.jsonl",
+   "t": 25,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 32,
+     "power": 38,
+     "blockers": 0,
+     "through": 38
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "shard-17/g00357/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 13,
+     "blockers": 0,
+     "through": 13
+    }
+   ],
+   "attacked": {
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-17/g00357/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 4,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00377/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 34,
+     "power": 147,
+     "blockers": 11,
+     "through": 46
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00397/games/game-001.events.jsonl",
+   "t": 51,
+   "seat": 3,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 9,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-17/g00397/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 7,
+     "blockers": 2,
+     "through": 7
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-17/g00417/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 34,
+     "power": 50,
+     "blockers": 2,
+     "through": 40
+    }
+   ],
+   "attacked": {
+    "3": 12
+   }
+  },
+  {
+   "where": "shard-17/g00497/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 55,
+     "blockers": 1,
+     "through": 37
+    }
+   ],
+   "attacked": {
+    "0": 8
+   }
+  },
+  {
+   "where": "shard-17/g00497/games/game-001.events.jsonl",
+   "t": 49,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 6,
+     "power": 6,
+     "blockers": 2,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00497/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 2,
+   "deck": "tricky-terrain",
+   "stood": "last",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 6,
+     "power": 59,
+     "blockers": 2,
+     "through": 25
+    }
+   ],
+   "attacked": {
+    "0": 8
+   }
+  },
+  {
+   "where": "shard-17/g00537/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 13,
+     "power": 19,
+     "blockers": 1,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "1": 8
+   }
+  },
+  {
+   "where": "shard-17/g00537/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 28,
+     "power": 45,
+     "blockers": 2,
+     "through": 35
+    },
+    {
+     "seat": 3,
+     "life": 10,
+     "power": 45,
+     "blockers": 2,
+     "through": 35
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-17/g00537/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 2,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 28,
+     "blockers": 1,
+     "through": 22
+    }
+   ],
+   "attacked": {
+    "0": 5
+   }
+  },
+  {
+   "where": "shard-17/g00537/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 20,
+     "blockers": 2,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00537/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 15,
+     "blockers": 2,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00537/games/game-001.events.jsonl",
+   "t": 34,
+   "seat": 2,
+   "deck": "enduring-enchantments",
+   "stood": "top",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 7,
+     "power": 44,
+     "blockers": 2,
+     "through": 37
+    },
+    {
+     "seat": 0,
+     "life": 25,
+     "power": 44,
+     "blockers": 11,
+     "through": 35
+    },
+    {
+     "seat": 1,
+     "life": 29,
+     "power": 44,
+     "blockers": 7,
+     "through": 35
+    }
+   ],
+   "attacked": {
+    "0": 10
+   }
+  },
+  {
+   "where": "shard-17/g00537/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 0,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 29,
+     "power": 56,
+     "blockers": 7,
+     "through": 32
+    },
+    {
+     "seat": 3,
+     "life": 7,
+     "power": 56,
+     "blockers": 2,
+     "through": 56
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00557/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 1,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 8,
+     "power": 24,
+     "blockers": 4,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "2": 2
+   }
+  },
+  {
+   "where": "shard-17/g00577/games/game-001.events.jsonl",
+   "t": 26,
+   "seat": 3,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 25,
+     "power": 32,
+     "blockers": 1,
+     "through": 25
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-17/g00597/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 9,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-17/g00597/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00018/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 5,
+     "power": 9,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {
+    "3": 9
+   }
+  },
+  {
+   "where": "shard-18/g00038/games/game-001.events.jsonl",
+   "t": 35,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 7,
+     "power": 23,
+     "blockers": 0,
+     "through": 23
+    },
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 23,
+     "blockers": 1,
+     "through": 17
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00038/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 2,
+     "power": 23,
+     "blockers": 1,
+     "through": 19
+    },
+    {
+     "seat": 2,
+     "life": 8,
+     "power": 23,
+     "blockers": 2,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "1": 4
+   }
+  },
+  {
+   "where": "shard-18/g00058/games/game-001.events.jsonl",
+   "t": 50,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 11,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-18/g00078/games/game-001.events.jsonl",
+   "t": 23,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 36,
+     "power": 72,
+     "blockers": 1,
+     "through": 57
+    }
+   ],
+   "attacked": {
+    "1": 8
+   }
+  },
+  {
+   "where": "shard-18/g00098/games/game-001.events.jsonl",
+   "t": 22,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 3,
+     "power": 7,
+     "blockers": 0,
+     "through": 7
+    }
+   ],
+   "attacked": {
+    "1": 2
+   }
+  },
+  {
+   "where": "shard-18/g00098/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 3,
+   "deck": "goblin-storm",
+   "stood": "top",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 11,
+     "power": 18,
+     "blockers": 1,
+     "through": 11
+    },
+    {
+     "seat": 1,
+     "life": 11,
+     "power": 18,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "0": 1,
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-18/g00118/games/game-001.events.jsonl",
+   "t": 36,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 31,
+     "power": 33,
+     "blockers": 0,
+     "through": 33
+    }
+   ],
+   "attacked": {
+    "2": 1,
+    "0": 6
+   }
+  },
+  {
+   "where": "shard-18/g00118/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 22,
+     "blockers": 0,
+     "through": 22
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00118/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 1,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 10,
+     "blockers": 0,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-18/g00138/games/game-001.events.jsonl",
+   "t": 42,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 10,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "2": 5
+   }
+  },
+  {
+   "where": "shard-18/g00138/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 6,
+     "power": 17,
+     "blockers": 1,
+     "through": 10
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00158/games/game-001.events.jsonl",
+   "t": 21,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 25,
+     "power": 34,
+     "blockers": 1,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "2": 7
+   }
+  },
+  {
+   "where": "shard-18/g00158/games/game-001.events.jsonl",
+   "t": 23,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 2,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "1": 1,
+    "2": 1
+   }
+  },
+  {
+   "where": "shard-18/g00158/games/game-001.events.jsonl",
+   "t": 24,
+   "seat": 0,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 1,
+     "power": 3,
+     "blockers": 0,
+     "through": 3
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-18/g00158/games/game-001.events.jsonl",
+   "t": 32,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 37,
+     "power": 64,
+     "blockers": 2,
+     "through": 51
+    }
+   ],
+   "attacked": {
+    "1": 11
+   }
+  },
+  {
+   "where": "shard-18/g00178/games/game-001.events.jsonl",
+   "t": 37,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 21,
+     "power": 42,
+     "blockers": 1,
+     "through": 31
+    }
+   ],
+   "attacked": {
+    "3": 8
+   }
+  },
+  {
+   "where": "shard-18/g00178/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 2,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "0": 3,
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-18/g00178/games/game-001.events.jsonl",
+   "t": 41,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 72,
+     "blockers": 0,
+     "through": 72
+    },
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 72,
+     "blockers": 1,
+     "through": 62
+    }
+   ],
+   "attacked": {
+    "2": 10
+   }
+  },
+  {
+   "where": "shard-18/g00178/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    },
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 26,
+     "blockers": 0,
+     "through": 26
+    }
+   ],
+   "attacked": {
+    "0": 4
+   }
+  },
+  {
+   "where": "shard-18/g00178/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 0,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 16,
+     "power": 53,
+     "blockers": 0,
+     "through": 53
+    },
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 53,
+     "blockers": 1,
+     "through": 46
+    }
+   ],
+   "attacked": {
+    "2": 6
+   }
+  },
+  {
+   "where": "shard-18/g00198/games/game-001.events.jsonl",
+   "t": 45,
+   "seat": 0,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 14,
+     "blockers": 0,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00198/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 0,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 10,
+     "power": 16,
+     "blockers": 0,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "3": 1
+   }
+  },
+  {
+   "where": "shard-18/g00238/games/game-001.events.jsonl",
+   "t": 27,
+   "seat": 2,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 3,
+     "blockers": 0,
+     "through": 3
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00238/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "0": 1,
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-18/g00238/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 24,
+     "power": 30,
+     "blockers": 0,
+     "through": 30
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-18/g00238/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 8,
+     "power": 25,
+     "blockers": 3,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "1": 4
+   }
+  },
+  {
+   "where": "shard-18/g00258/games/game-001.events.jsonl",
+   "t": 40,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 9,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00258/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 2,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 6,
+     "power": 9,
+     "blockers": 0,
+     "through": 9
+    }
+   ],
+   "attacked": {
+    "3": 5
+   }
+  },
+  {
+   "where": "shard-18/g00338/games/game-001.events.jsonl",
+   "t": 28,
+   "seat": 2,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 4,
+     "power": 11,
+     "blockers": 1,
+     "through": 5
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00338/games/game-001.events.jsonl",
+   "t": 31,
+   "seat": 1,
+   "deck": "token-triumph",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 4,
+     "power": 39,
+     "blockers": 1,
+     "through": 34
+    }
+   ],
+   "attacked": {
+    "2": 9
+   }
+  },
+  {
+   "where": "shard-18/g00338/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 4,
+     "power": 7,
+     "blockers": 1,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-18/g00338/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 4,
+     "power": 21,
+     "blockers": 12,
+     "through": 4
+    }
+   ],
+   "attacked": {
+    "1": 15
+   }
+  },
+  {
+   "where": "shard-18/g00338/games/game-001.events.jsonl",
+   "t": 51,
+   "seat": 3,
+   "deck": "tricky-terrain",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 3,
+     "power": 62,
+     "blockers": 9,
+     "through": 19
+    }
+   ],
+   "attacked": {
+    "1": 16
+   }
+  },
+  {
+   "where": "shard-18/g00378/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 3,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 12,
+     "power": 24,
+     "blockers": 2,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "2": 6
+   }
+  },
+  {
+   "where": "shard-18/g00398/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 1,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 15,
+     "power": 31,
+     "blockers": 2,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "3": 7
+   }
+  },
+  {
+   "where": "shard-18/g00438/games/game-001.events.jsonl",
+   "t": 48,
+   "seat": 2,
+   "deck": "planeswalker-party",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 12,
+     "power": 22,
+     "blockers": 1,
+     "through": 16
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "shard-18/g00458/games/game-001.events.jsonl",
+   "t": 44,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 14,
+     "blockers": 1,
+     "through": 10
+    }
+   ],
+   "attacked": {
+    "0": 1
+   }
+  },
+  {
+   "where": "shard-18/g00458/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 0,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 16,
+     "blockers": 1,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-18/g00458/games/game-001.events.jsonl",
+   "t": 52,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 8,
+     "power": 28,
+     "blockers": 3,
+     "through": 15
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00478/games/game-001.events.jsonl",
+   "t": 21,
+   "seat": 1,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 0,
+     "life": 14,
+     "power": 22,
+     "blockers": 1,
+     "through": 17
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00518/games/game-001.events.jsonl",
+   "t": 29,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 8,
+     "power": 14,
+     "blockers": 1,
+     "through": 8
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-18/g00538/games/game-001.events.jsonl",
+   "t": 33,
+   "seat": 2,
+   "deck": "wretched-ranks",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 6,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-18/g00538/games/game-001.events.jsonl",
+   "t": 38,
+   "seat": 3,
+   "deck": "enduring-enchantments",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 1,
+     "life": 13,
+     "power": 17,
+     "blockers": 0,
+     "through": 17
+    }
+   ],
+   "attacked": {
+    "2": 3
+   }
+  },
+  {
+   "where": "shard-18/g00538/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 0,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 11,
+     "power": 12,
+     "blockers": 0,
+     "through": 12
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-19/g00019/games/game-001.events.jsonl",
+   "t": 30,
+   "seat": 1,
+   "deck": "limit-break",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 4,
+     "power": 6,
+     "blockers": 0,
+     "through": 6
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-19/g00019/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 29,
+     "blockers": 0,
+     "through": 29
+    }
+   ],
+   "attacked": {
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-19/g00019/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 23,
+     "blockers": 1,
+     "through": 18
+    },
+    {
+     "seat": 1,
+     "life": 14,
+     "power": 23,
+     "blockers": 2,
+     "through": 14
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-19/g00019/games/game-001.events.jsonl",
+   "t": 46,
+   "seat": 2,
+   "deck": "goblin-storm",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 39,
+     "blockers": 3,
+     "through": 22
+    }
+   ],
+   "attacked": {}
+  },
+  {
+   "where": "shard-19/g00019/games/game-001.events.jsonl",
+   "t": 47,
+   "seat": 3,
+   "deck": "hail-caesar",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 4,
+     "power": 7,
+     "blockers": 0,
+     "through": 7
+    }
+   ],
+   "attacked": {
+    "0": 3
+   }
+  },
+  {
+   "where": "shard-19/g00039/games/game-001.events.jsonl",
+   "t": 39,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 16,
+     "power": 24,
+     "blockers": 0,
+     "through": 24
+    }
+   ],
+   "attacked": {
+    "1": 5
+   }
+  },
+  {
+   "where": "shard-19/g00039/games/game-001.events.jsonl",
+   "t": 43,
+   "seat": 2,
+   "deck": "elven-council",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 11,
+     "power": 11,
+     "blockers": 0,
+     "through": 11
+    }
+   ],
+   "attacked": {
+    "0": 4,
+    "1": 1
+   }
+  },
+  {
+   "where": "shard-19/g00059/games/game-001.events.jsonl",
+   "t": 63,
+   "seat": 1,
+   "deck": "deep-clue-sea",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 2,
+     "life": 4,
+     "power": 15,
+     "blockers": 0,
+     "through": 15
+    }
+   ],
+   "attacked": {
+    "3": 3
+   }
+  },
+  {
+   "where": "shard-19/g00059/games/game-001.events.jsonl",
+   "t": 64,
+   "seat": 2,
+   "deck": "eldrazi-incursion",
+   "stood": "lesser",
+   "killable": [
+    {
+     "seat": 3,
+     "life": 2,
+     "power": 5,
+     "blockers": 0,
+     "through": 5
+    }
+   ],
+   "attacked": {}
+  }
+ ]
+}

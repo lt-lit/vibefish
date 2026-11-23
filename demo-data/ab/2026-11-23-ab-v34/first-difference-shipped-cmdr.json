@@ -1,0 +1,2775 @@
+{
+"kind": "first-difference",
+"base": "shipped",
+"candidate": "cmdr",
+"decks": [
+"limit-break",
+"mutant-menace"
+],
+"files": {
+"identical": {
+"neither": 257,
+"both": 79,
+"tables": 336
+},
+"other": {
+"neither": 36,
+"both": 6,
+"cand_only": 3,
+"tables": 45
+},
+"attack: nobody": {
+"both": 3,
+"neither": 4,
+"cand_only": 2,
+"tables": 9,
+"base_kill": 0,
+"base_dead": 0,
+"base_exposed": 1,
+"base_sent": 6,
+"cand_kill": 0,
+"cand_dead": 0,
+"cand_exposed": 0,
+"cand_sent": 8
+},
+"target": {
+"neither": 2,
+"base_only": 1,
+"tables": 3,
+"cand_at_top": 0,
+"base_at_top": 0
+},
+"attack: lesser": {
+"both": 2,
+"cand_only": 1,
+"base_only": 1,
+"neither": 3,
+"tables": 7,
+"base_kill": 3,
+"base_dead": 1,
+"base_exposed": 1,
+"base_sent": 3,
+"cand_kill": 0,
+"cand_dead": 2,
+"cand_exposed": 3,
+"cand_sent": 12
+},
+"attack, all": {
+"both": 5,
+"neither": 7,
+"cand_only": 3,
+"base_only": 1,
+"tables": 16,
+"base_kill": 3,
+"base_dead": 1,
+"base_exposed": 2,
+"base_sent": 9,
+"cand_kill": 0,
+"cand_dead": 2,
+"cand_exposed": 3,
+"cand_sent": 20
+}
+},
+"tables": [
+{
+"deck": "limit-break",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 2,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 3,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "limit-break",
+"idx": 4,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 6,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 7,
+"outcome": "neither",
+"file": "other",
+"t": 26
+},
+{
+"deck": "limit-break",
+"idx": 8,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 9,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 10,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 46,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "limit-break",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 12,
+"outcome": "neither",
+"file": "target",
+"t": 60,
+"card": "Decimate",
+"base_at_top": false,
+"cand_at_top": false,
+"opponents": 3
+},
+{
+"deck": "limit-break",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 14,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 15,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 16,
+"outcome": "both",
+"file": "other",
+"t": 43
+},
+{
+"deck": "limit-break",
+"idx": 17,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 19,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 20,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 23,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 24,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "limit-break",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 26,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 27,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 29,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 30,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 32,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 33,
+"outcome": "both",
+"file": "attack",
+"stood": "lesser",
+"t": 51,
+"opponents": 2,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "limit-break",
+"idx": 34,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "limit-break",
+"idx": 35,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 36,
+"outcome": "base_only",
+"file": "target",
+"t": 28,
+"card": "Decimate",
+"base_at_top": false,
+"cand_at_top": false,
+"opponents": 2
+},
+{
+"deck": "limit-break",
+"idx": 37,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 39,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 40,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 41,
+"outcome": "neither",
+"file": "other",
+"t": 52
+},
+{
+"deck": "limit-break",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 43,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 44,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 45,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 46,
+"outcome": "neither",
+"file": "other",
+"t": 62
+},
+{
+"deck": "limit-break",
+"idx": 47,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 49,
+"outcome": "neither",
+"file": "other",
+"t": 67
+},
+{
+"deck": "limit-break",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 52,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 53,
+"outcome": "neither",
+"file": "other",
+"t": 21
+},
+{
+"deck": "limit-break",
+"idx": 54,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 55,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 56,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 57,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "limit-break",
+"idx": 58,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "limit-break",
+"idx": 59,
+"outcome": "neither",
+"file": "other",
+"t": 34
+},
+{
+"deck": "limit-break",
+"idx": 60,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 61,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "lesser",
+"t": 59,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 6
+}
+},
+{
+"deck": "limit-break",
+"idx": 62,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "limit-break",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 64,
+"outcome": "neither",
+"file": "other",
+"t": 65
+},
+{
+"deck": "limit-break",
+"idx": 65,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 68,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 70,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 72,
+"outcome": "neither",
+"file": "target",
+"t": 39,
+"card": "Cloud, Ex-SOLDIER",
+"base_at_top": false,
+"cand_at_top": false,
+"opponents": 3
+},
+{
+"deck": "limit-break",
+"idx": 73,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 74,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 76,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 77,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "limit-break",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 81,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 82,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 83,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 84,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 85,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 86,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 87,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 88,
+"outcome": "neither",
+"file": "other",
+"t": 37
+},
+{
+"deck": "limit-break",
+"idx": 89,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 90,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 91,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 93,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 94,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 95,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 96,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 99,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 100,
+"outcome": "both",
+"file": "other",
+"t": 59
+},
+{
+"deck": "limit-break",
+"idx": 101,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 102,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 105,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 106,
+"outcome": "neither",
+"file": "other",
+"t": 52
+},
+{
+"deck": "limit-break",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 108,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 114,
+"outcome": "neither",
+"file": "other",
+"t": 35
+},
+{
+"deck": "limit-break",
+"idx": 115,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 116,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 117,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 118,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 119,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 120,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 122,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 123,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 125,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 126,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 127,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 128,
+"outcome": "neither",
+"file": "other",
+"t": 38
+},
+{
+"deck": "limit-break",
+"idx": 129,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 130,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 131,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "limit-break",
+"idx": 132,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 133,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 134,
+"outcome": "neither",
+"file": "other",
+"t": 51
+},
+{
+"deck": "limit-break",
+"idx": 135,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 136,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 137,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 138,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "limit-break",
+"idx": 139,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 141,
+"outcome": "cand_only",
+"file": "other",
+"t": 35
+},
+{
+"deck": "limit-break",
+"idx": 142,
+"outcome": "neither",
+"file": "other",
+"t": 43
+},
+{
+"deck": "limit-break",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 148,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 149,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "limit-break",
+"idx": 150,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 152,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 154,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 155,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 159,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 162,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 163,
+"outcome": "both",
+"file": "attack",
+"stood": "lesser",
+"t": 51,
+"opponents": 2,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "limit-break",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 165,
+"outcome": "neither",
+"file": "other",
+"t": 40
+},
+{
+"deck": "limit-break",
+"idx": 166,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 168,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 169,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 174,
+"outcome": "both",
+"file": "other",
+"t": 28
+},
+{
+"deck": "limit-break",
+"idx": 175,
+"outcome": "neither",
+"file": "other",
+"t": 27
+},
+{
+"deck": "limit-break",
+"idx": 176,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 177,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "limit-break",
+"idx": 178,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 48,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "limit-break",
+"idx": 179,
+"outcome": "neither",
+"file": "other",
+"t": 48
+},
+{
+"deck": "limit-break",
+"idx": 180,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 181,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 183,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 37,
+"opponents": 1,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "limit-break",
+"idx": 184,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 185,
+"outcome": "base_only",
+"file": "attack",
+"stood": "lesser",
+"t": 47,
+"opponents": 3,
+"base": {
+"kill": true,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "limit-break",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 188,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 190,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 191,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 192,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 193,
+"outcome": "neither",
+"file": "other",
+"t": 39
+},
+{
+"deck": "limit-break",
+"idx": 194,
+"outcome": "neither",
+"file": "other",
+"t": 29
+},
+{
+"deck": "limit-break",
+"idx": 195,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 196,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 198,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 199,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "limit-break",
+"idx": 200,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 1,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 2,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 3,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 4,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 5,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 6,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 7,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 8,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 9,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 10,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 11,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 12,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 13,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 14,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 15,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 16,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 17,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 18,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 19,
+"outcome": "both",
+"file": "other",
+"t": 38
+},
+{
+"deck": "mutant-menace",
+"idx": 20,
+"outcome": "neither",
+"file": "other",
+"t": 32
+},
+{
+"deck": "mutant-menace",
+"idx": 21,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 22,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 23,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 24,
+"outcome": "cand_only",
+"file": "other",
+"t": 45
+},
+{
+"deck": "mutant-menace",
+"idx": 25,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 26,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 27,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 28,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 29,
+"outcome": "neither",
+"file": "other",
+"t": 44
+},
+{
+"deck": "mutant-menace",
+"idx": 30,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 31,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 32,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 33,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 34,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 35,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 36,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 37,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 38,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 39,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 40,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 41,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 42,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 43,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 44,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 45,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 46,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 47,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 48,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 49,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 50,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 51,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 52,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 53,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 54,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 30,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 55,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 56,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 57,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 58,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 59,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 60,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 61,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 62,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 63,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 64,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 65,
+"outcome": "both",
+"file": "other",
+"t": 30
+},
+{
+"deck": "mutant-menace",
+"idx": 66,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 67,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 68,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 69,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 70,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 71,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 72,
+"outcome": "neither",
+"file": "other",
+"t": 41
+},
+{
+"deck": "mutant-menace",
+"idx": 73,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 74,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 75,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 76,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 77,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 78,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 79,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 80,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 81,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 82,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 83,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 84,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 85,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 86,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 87,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 34,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": true,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 88,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 89,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 90,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 91,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 92,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 93,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 94,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 31,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 95,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 96,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 97,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 98,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 99,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 100,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 101,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 102,
+"outcome": "both",
+"file": "attack",
+"stood": "nobody",
+"t": 35,
+"opponents": 2,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 3
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 103,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 104,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 105,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 106,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 107,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 108,
+"outcome": "neither",
+"file": "other",
+"t": 36
+},
+{
+"deck": "mutant-menace",
+"idx": 109,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 110,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 111,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 112,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 113,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 114,
+"outcome": "neither",
+"file": "attack",
+"stood": "nobody",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 115,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 116,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 117,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 118,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 119,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 120,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 121,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 122,
+"outcome": "both",
+"file": "other",
+"t": 29
+},
+{
+"deck": "mutant-menace",
+"idx": 123,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 124,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 125,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 126,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 127,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 128,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 129,
+"outcome": "neither",
+"file": "other",
+"t": 31
+},
+{
+"deck": "mutant-menace",
+"idx": 130,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 131,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 132,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 133,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 134,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 25,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 135,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 136,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 137,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 138,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 139,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 140,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 141,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 142,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 143,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 144,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 145,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 146,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 147,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 148,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 149,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 150,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 151,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 152,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 153,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 154,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 155,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 156,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 157,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 158,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 159,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 160,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 161,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 162,
+"outcome": "neither",
+"file": "other",
+"t": 49
+},
+{
+"deck": "mutant-menace",
+"idx": 163,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 164,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 165,
+"outcome": "neither",
+"file": "other",
+"t": 24
+},
+{
+"deck": "mutant-menace",
+"idx": 166,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 167,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 168,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 169,
+"outcome": "cand_only",
+"file": "other",
+"t": 31
+},
+{
+"deck": "mutant-menace",
+"idx": 170,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 171,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 172,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 173,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 174,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 175,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 176,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 177,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 178,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 179,
+"outcome": "neither",
+"file": "attack",
+"stood": "lesser",
+"t": 29,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 0
+},
+"cand": {
+"kill": false,
+"dead": true,
+"exposed": true,
+"sent": 1
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 180,
+"outcome": "cand_only",
+"file": "attack",
+"stood": "nobody",
+"t": 26,
+"opponents": 3,
+"base": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 1
+},
+"cand": {
+"kill": false,
+"dead": false,
+"exposed": false,
+"sent": 2
+}
+},
+{
+"deck": "mutant-menace",
+"idx": 181,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 182,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 183,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 184,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 185,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 186,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 187,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 188,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 189,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 190,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 191,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 192,
+"outcome": "neither",
+"file": "other",
+"t": 47
+},
+{
+"deck": "mutant-menace",
+"idx": 193,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 194,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 195,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 196,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 197,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 198,
+"outcome": "neither",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 199,
+"outcome": "both",
+"file": "identical"
+},
+{
+"deck": "mutant-menace",
+"idx": 200,
+"outcome": "both",
+"file": "identical"
+}
+]
+}
