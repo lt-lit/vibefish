@@ -108,6 +108,8 @@ are that session's and have to be replaced by the new session's scratch director
   `life_spell.py RUN_DIR... --card NAME [--deck ID] [--arm ARM] [--show]` reads every cast of one card (DESIGN §44, written
   for Eventide's Shadow): the caster's life before, the life lost and the cards drawn until the spell's `resolve` line,
   whether the caster was out of the game that turn; and the games the card was held in and cast in, which serves any card.
+  `land_stall.py RUN_DIR...` counts the seat-games in which a seat held only lands that return a land and played none at
+  four lands or fewer, and its wins in them (DESIGN §46; `runner/mistakes.py` counts the turns).
   `league_pair.py BEFORE_DIR AFTER_DIR` reads two league runs
   on the same seed and cycles table by table (the same tables under two sets of playbooks): the same winner, the
   first line that differs, each deck's tables won in both, only before, only after. `other_turns.py RUN_DIR... [--arm ARM] [--focus]`: a seat's instants, other spells
