@@ -108,6 +108,9 @@ are that session's and have to be replaced by the new session's scratch director
   `life_spell.py RUN_DIR... --card NAME [--deck ID] [--arm ARM] [--show]` reads every cast of one card (DESIGN §44, written
   for Eventide's Shadow): the caster's life before, the life lost and the cards drawn until the spell's `resolve` line,
   whether the caster was out of the game that turn; and the games the card was held in and cast in, which serves any card.
+  `wipe_effect.py RUN_DIR... --deck ID --card NAME [--card NAME]... [--runtime DIR]` reads every cast of a board wipe
+  (DESIGN §44, the exam of Blight Curse's wipe rules): the card-games held and cast, and per cast the creatures that left
+  the battlefield on each side from the cast to the end of that turn, the opponents hit, the turn.
   `exile_uses.py RUN_DIR... --deck ID` reads a trigger that exiles cards from its controller's graveyard use by use (Winter,
   Cynical Opportunist: DESIGN §47): the cards taken, the graveyard before, what came back.
   `read-games-brief.md` is the brief of an agent that reads ten printed games of one deck for plays a competent player would

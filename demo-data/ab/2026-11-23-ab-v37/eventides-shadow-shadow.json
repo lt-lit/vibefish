@@ -1,0 +1,41 @@
+{
+ "kind": "life-spell",
+ "card": "Eventide's Shadow",
+ "deck": "blight-curse",
+ "totals": {
+  "games": 200,
+  "games_held": 52,
+  "games_cast": 2
+ },
+ "counters": {
+  "cast_take_short": 104,
+  "cast_take": 2,
+  "cast_take_counters": 7
+ },
+ "casts": [
+  {
+   "game": "arm-playbook/g0056",
+   "deck": "blight-curse",
+   "t": 40,
+   "life_before": 22,
+   "life_paid": 3,
+   "drawn": 3,
+   "life_after": 19,
+   "resolved": true,
+   "out_that_turn": false,
+   "won": false
+  },
+  {
+   "game": "arm-playbook/g0060",
+   "deck": "blight-curse",
+   "t": 44,
+   "life_before": 20,
+   "life_paid": 4,
+   "drawn": 4,
+   "life_after": 16,
+   "resolved": true,
+   "out_that_turn": false,
+   "won": false
+  }
+ ]
+}

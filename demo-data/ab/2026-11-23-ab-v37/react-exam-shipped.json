@@ -1,0 +1,274 @@
+{
+ "kind": "react-exam",
+ "variant": "react",
+ "base": "noreact",
+ "decks": {
+  "deadly-disguise": {
+   "cards": [
+    "Path to Exile",
+    "Chaos Warp",
+    "Unexplained Absence"
+   ],
+   "base": {
+    "games": 200,
+    "wins": 14,
+    "combat_deaths": 134,
+    "combat_deaths_holding": 8,
+    "casts": {
+     "own turn": 91,
+     "another player's turn": 8,
+     "at an attacker": 1
+    },
+    "cards": {
+     "Path to Exile": {
+      "another player's turn": 5,
+      "games_held": 32,
+      "games_cast": 31,
+      "own turn": 26
+     },
+     "Chaos Warp": {
+      "own turn": 45,
+      "games_held": 47,
+      "games_cast": 44
+     },
+     "Unexplained Absence": {
+      "games_held": 34,
+      "own turn": 20,
+      "games_cast": 23,
+      "another player's turn": 3,
+      "at an attacker": 1
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0161/games/game-001.events.jsonl",
+      "t": 38,
+      "card": "Unexplained Absence",
+      "attacker": "Carnifex Demon",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     }
+    ],
+    "counters": {
+     "cast_hold_vetoes": 75,
+     "cast_failed": 1
+    },
+    "hits": {
+     "own turn: at an opponent": 91,
+     "own turn: at a commander": 40,
+     "own turn: at the most dangerous opponent": 64,
+     "own turn: with two or three opponents alive": 85,
+     "own turn: at the most dangerous of two or three": 58,
+     "another player's turn: at an opponent": 8,
+     "another player's turn: at a commander": 2,
+     "another player's turn: at the most dangerous opponent": 3,
+     "another player's turn: with two or three opponents alive": 8,
+     "another player's turn: at the most dangerous of two or three": 3,
+     "at an attacker: at an opponent": 1,
+     "at an attacker: at a commander": 0,
+     "at an attacker: at the most dangerous opponent": 0,
+     "at an attacker: with two or three opponents alive": 1,
+     "at an attacker: at the most dangerous of two or three": 0
+    }
+   },
+   "cand": {
+    "games": 200,
+    "wins": 14,
+    "combat_deaths": 133,
+    "combat_deaths_holding": 11,
+    "casts": {
+     "another player's turn": 89,
+     "at an attacker": 6
+    },
+    "cards": {
+     "Path to Exile": {
+      "another player's turn": 29,
+      "games_held": 34,
+      "games_cast": 30,
+      "at an attacker": 1
+     },
+     "Chaos Warp": {
+      "another player's turn": 40,
+      "games_held": 49,
+      "games_cast": 43,
+      "at an attacker": 3
+     },
+     "Unexplained Absence": {
+      "another player's turn": 20,
+      "games_held": 33,
+      "games_cast": 21,
+      "at an attacker": 2
+     }
+    },
+    "at_attacker": [
+     {
+      "where": "arm-playbook/g0044/games/game-001.events.jsonl",
+      "t": 40,
+      "card": "Path to Exile",
+      "attacker": "Mirko, Obsessive Theorist",
+      "attackers": 2,
+      "life": 7,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0104/games/game-001.events.jsonl",
+      "t": 39,
+      "card": "Unexplained Absence",
+      "attacker": "The Wise Mothman",
+      "attackers": 1,
+      "life": null,
+      "incoming": 0,
+      "best": 0,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0114/games/game-001.events.jsonl",
+      "t": 22,
+      "card": "Chaos Warp",
+      "attacker": "Dire Fleet Ravager",
+      "attackers": 4,
+      "life": 16,
+      "incoming": 15,
+      "best": 15,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0133/games/game-001.events.jsonl",
+      "t": 43,
+      "card": "Chaos Warp",
+      "attacker": "Pantlaza, Sun-Favored",
+      "attackers": 8,
+      "life": 16,
+      "incoming": 14,
+      "best": 14,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0184/games/game-001.events.jsonl",
+      "t": 50,
+      "card": "Chaos Warp",
+      "attacker": "Giant Adephage",
+      "attackers": 2,
+      "life": 21,
+      "incoming": 2,
+      "best": 2,
+      "out": false
+     },
+     {
+      "where": "arm-playbook/g0187/games/game-001.events.jsonl",
+      "t": 38,
+      "card": "Unexplained Absence",
+      "attacker": "Mirko, Obsessive Theorist",
+      "attackers": 3,
+      "life": 5,
+      "incoming": 1,
+      "best": 1,
+      "out": false
+     }
+    ],
+    "counters": {
+     "react_end_seen": 2091,
+     "react_defend_seen": 999,
+     "cast_hold_vetoes": 937,
+     "reserve_kept": 136,
+     "cast_react": 95,
+     "cast_react_end": 89,
+     "reserve_no_target": 28,
+     "reserve_short": 81,
+     "react_lethal_seen": 16,
+     "cast_aim_attacker": 6,
+     "react_lethal_answered": 5,
+     "react_damage_taken_away": 71,
+     "cast_react_defend": 6,
+     "react_lethal_hopeless": 9,
+     "react_damage_answered": 1
+    },
+    "hits": {
+     "another player's turn: at an opponent": 89,
+     "another player's turn: at a commander": 31,
+     "another player's turn: at the most dangerous opponent": 74,
+     "another player's turn: with two or three opponents alive": 87,
+     "another player's turn: at the most dangerous of two or three": 72,
+     "at an attacker: at an opponent": 6,
+     "at an attacker: at a commander": 4,
+     "at an attacker: at the most dangerous opponent": 4,
+     "at an attacker: with two or three opponents alive": 5,
+     "at an attacker: at the most dangerous of two or three": 3
+    }
+   }
+  }
+ },
+ "all": {
+  "base": {
+   "games": 200,
+   "wins": 14,
+   "combat_deaths": 134,
+   "combat_deaths_holding": 8,
+   "held": 113,
+   "cast": 98,
+   "casts": 100,
+   "other": 9,
+   "at_attacker": 1,
+   "out_after_answer": 0,
+   "c:cast_hold_vetoes": 75,
+   "c:cast_failed": 1,
+   "h:own turn: at an opponent": 91,
+   "h:own turn: at a commander": 40,
+   "h:own turn: at the most dangerous opponent": 64,
+   "h:own turn: with two or three opponents alive": 85,
+   "h:own turn: at the most dangerous of two or three": 58,
+   "h:another player's turn: at an opponent": 8,
+   "h:another player's turn: at a commander": 2,
+   "h:another player's turn: at the most dangerous opponent": 3,
+   "h:another player's turn: with two or three opponents alive": 8,
+   "h:another player's turn: at the most dangerous of two or three": 3,
+   "h:at an attacker: at an opponent": 1,
+   "h:at an attacker: at a commander": 0,
+   "h:at an attacker: at the most dangerous opponent": 0,
+   "h:at an attacker: with two or three opponents alive": 1,
+   "h:at an attacker: at the most dangerous of two or three": 0
+  },
+  "cand": {
+   "games": 200,
+   "wins": 14,
+   "combat_deaths": 133,
+   "combat_deaths_holding": 11,
+   "held": 116,
+   "cast": 94,
+   "casts": 95,
+   "other": 95,
+   "at_attacker": 6,
+   "out_after_answer": 0,
+   "c:react_end_seen": 2091,
+   "c:react_defend_seen": 999,
+   "c:cast_hold_vetoes": 937,
+   "c:reserve_kept": 136,
+   "c:cast_react": 95,
+   "c:cast_react_end": 89,
+   "c:reserve_no_target": 28,
+   "c:reserve_short": 81,
+   "c:react_lethal_seen": 16,
+   "c:cast_aim_attacker": 6,
+   "c:react_lethal_answered": 5,
+   "c:react_damage_taken_away": 71,
+   "c:cast_react_defend": 6,
+   "c:react_lethal_hopeless": 9,
+   "c:react_damage_answered": 1,
+   "h:another player's turn: at an opponent": 89,
+   "h:another player's turn: at a commander": 31,
+   "h:another player's turn: at the most dangerous opponent": 74,
+   "h:another player's turn: with two or three opponents alive": 87,
+   "h:another player's turn: at the most dangerous of two or three": 72,
+   "h:at an attacker: at an opponent": 6,
+   "h:at an attacker: at a commander": 4,
+   "h:at an attacker: at the most dangerous opponent": 4,
+   "h:at an attacker: with two or three opponents alive": 5,
+   "h:at an attacker: at the most dangerous of two or three": 3
+  }
+ }
+}
