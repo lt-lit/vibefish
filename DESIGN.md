@@ -2300,7 +2300,7 @@ The second form asks the question the readings were about, a larger play the sea
 | Death Toll, 403 | out on turn 65 | out on turn 65 | out on turn 65 |
 | Death Toll, 469 | out on turn 56 | out on turn 48 | out on turn 48 |
 
-Six games picked for the thing the rule changes, each another game from the first difference on, say that the rules load, fire and do what they were written to do; they do not say what the change is worth, and a game the seat won can only stay won or be lost. That is what the exam is for (`ab-run` #73: each candidate alone on the tables of its deck's shipped arm in #69 and #70, the rule fixed first: CLAUDE.md, In flight).
+Six games picked for the thing the rule changes, each another game from the first difference on, say that the rules load, fire and do what they were written to do; they do not say what the change is worth, and a game the seat won can only stay won or be lost. That is what the exam is for (`ab-run` #73, run id 45157993346, commit aca856f: each candidate alone on the tables of its deck's shipped arm in #69 and #70, the rule fixed first: CLAUDE.md, In flight).
 
 `docs/agents/recast.py` is the count, kept from the scratch script of the first reading. Besides the recasts over a larger card (Blight Curse 164 of 224, Revenant Recon 138 of 285, Death Toll 150 of 245 in `league-run` #7) it says what a recast is for: after its first cast the commander is in the command zone at the start of 26 to 39% of a seat's own turns (Blight Curse 30%, Revenant Recon 30%, Death Toll 27%), and the seats cast 59 to 77% of the card-games in which they hold a card of mana value five or more (Deadly Disguise 31%, whose face-down casts carry no name).
 
