@@ -50,3 +50,51 @@ Limit Break sat in this league under version 4, without the commander's kill it 
 `../../ab/2026-11-23-ab-v34/`): 17 of the league's 22 turns on which only a commander gave a sure kill of the most
 dangerous or the last opponent are its own, and 4 of the 5 left with nobody out. Elven Council has 3 such turns in its
 200 seat-games and Deep Clue Sea 2; no other deck of the pool has one.
+
+## The receiving seat (`docs/agents/received.py`)
+
+What the other three players do to a seat's board, counted for every seat and grouped by the deck that receives: each
+nonland card that is not a token and leaves the battlefield is filed by what took it (another player's spell or ability
+that named it, a spell that swept it without naming it, combat, the seat's own doing) and by whose turn it was. It is the
+measure an opponent is to be judged by (DESIGN.md §29) and the baseline for the rules for other players' turns: neither
+league below has a seat that holds its removal for another player's turn.
+
+### The owner's table, `league-run` #5 (504 games, the versions of the morning of 2026-11-22; `received-league-run-5.json`)
+
+| Deck | Seat-games | Commander casts a seat-game | Its commander answered, a hundred seat-games | Seat-games with it answered at least once | Commander exits: named by another player's spell or ability, swept, combat, own or other | Of the answers: on the remover's own turn, on the seat's own, on a third player's | Other nonland permanents answered a seat-game (named, swept) | lost in combat | Aimed at its permanents a seat-game, share at its commander |
+|---|---|---|---|---|---|---|---|---|---|
+| mutant-menace | 204 | 2.23 | 147 | 77.9% | 210, 90, 17, 19 | 98.3%, 1.7%, 0.0% | 2.45 (1.00, 1.45) | 0.62 | 3.47, 42.1% |
+| deadly-disguise | 200 | 2.50 | 141 | 71.5% | 85, 197, 57, 39 | 98.2%, 0.7%, 1.1% | 4.16 (1.35, 2.80) | 1.16 | 3.39, 19.0% |
+| squirreled-away | 204 | 2.19 | 134 | 74.0% | 168, 106, 26, 23 | 98.2%, 1.5%, 0.4% | 2.66 (0.84, 1.82) | 0.85 | 3.38, 38.1% |
+| revenant-recon | 204 | 2.27 | 120 | 72.5% | 129, 115, 36, 51 | 97.1%, 2.0%, 0.8% | 3.42 (0.96, 2.47) | 0.93 | 3.11, 32.8% |
+| blood-rites | 200 | 2.52 | 114 | 70.5% | 59, 170, 75, 70 | 97.8%, 1.3%, 0.9% | 4.17 (1.52, 2.64) | 1.50 | 4.29, 12.8% |
+| veloci-ramp-tor | 204 | 2.26 | 109 | 64.7% | 94, 129, 47, 33 | 97.3%, 1.8%, 0.9% | 4.39 (1.57, 2.81) | 1.05 | 3.65, 21.1% |
+| death-toll | 200 | 2.14 | 104 | 64.5% | 99, 109, 51, 19 | 97.1%, 2.4%, 0.5% | 4.01 (1.88, 2.13) | 1.91 | 4.63, 16.4% |
+| blight-curse | 200 | 2.20 | 94 | 63.0% | 47, 140, 50, 77 | 98.4%, 0.5%, 1.1% | 3.34 (1.27, 2.06) | 0.91 | 3.02, 21.4% |
+| miracle-worker | 200 | 2.12 | 89 | 60.5% | 62, 116, 41, 75 | 100.0%, 0.0%, 0.0% | 2.76 (1.11, 1.65) | 0.76 | 3.46, 19.0% |
+| ahoy-mateys | 200 | 1.86 | 64 | 45.5% | 31, 96, 84, 44 | 99.2%, 0.8%, 0.0% | 4.37 (1.83, 2.54) | 1.50 | 3.05, 9.7% |
+| all ten | 2016 | 2.23 | 112 | 66.5% | 984, 1268, 484, 450 | 98.1%, 1.3%, 0.6% | 3.57 (1.33, 2.24) | 1.12 | 3.54, 22.9% |
+
+### The pool, `league-run` #6 (600 games, the versions of 2026-11-22 evening; `received-league-run-6.json`)
+
+| Deck | Seat-games | Commander casts a seat-game | Its commander answered, a hundred seat-games | Seat-games with it answered at least once | Commander exits: named by another player's spell or ability, swept, combat, own or other | Of the answers: on the remover's own turn, on the seat's own, on a third player's | Other nonland permanents answered a seat-game (named, swept) | lost in combat | Aimed at its permanents a seat-game, share at its commander |
+|---|---|---|---|---|---|---|---|---|---|
+| token-triumph | 200 | 2.87 | 165 | 73.5% | 76, 254, 57, 64 | 95.8%, 2.1%, 2.1% | 4.49 (1.27, 3.21) | 0.91 | 3.42, 19.9% |
+| enduring-enchantments | 200 | 2.52 | 153 | 73.5% | 132, 174, 42, 26 | 95.4%, 3.6%, 1.0% | 4.63 (0.89, 3.75) | 0.77 | 2.81, 36.4% |
+| deep-clue-sea | 200 | 2.62 | 141 | 72.5% | 98, 184, 39, 116 | 97.2%, 2.1%, 0.7% | 3.73 (0.96, 2.77) | 0.64 | 3.15, 28.5% |
+| elven-council | 200 | 2.52 | 136 | 70.5% | 97, 176, 51, 81 | 98.5%, 1.5%, 0.0% | 4.44 (1.17, 3.27) | 0.70 | 2.94, 25.2% |
+| quick-draw | 200 | 2.42 | 136 | 70.0% | 68, 205, 47, 41 | 97.4%, 1.5%, 1.1% | 4.40 (0.85, 3.55) | 0.91 | 3.65, 23.9% |
+| tricky-terrain | 200 | 2.71 | 122 | 63.0% | 44, 201, 98, 85 | 95.9%, 3.3%, 0.8% | 3.88 (1.11, 2.77) | 1.59 | 3.69, 10.9% |
+| wretched-ranks | 200 | 2.04 | 112 | 66.5% | 91, 134, 25, 81 | 98.2%, 1.3%, 0.4% | 3.62 (1.10, 2.51) | 1.01 | 3.00, 20.5% |
+| limit-break | 200 | 2.06 | 110 | 64.0% | 100, 120, 36, 44 | 95.0%, 4.5%, 0.5% | 3.92 (1.10, 2.82) | 0.61 | 2.75, 27.0% |
+| eldrazi-incursion | 200 | 2.05 | 110 | 56.5% | 72, 147, 30, 46 | 96.8%, 2.7%, 0.5% | 3.16 (0.97, 2.19) | 0.70 | 3.29, 13.4% |
+| hail-caesar | 200 | 2.21 | 109 | 64.5% | 108, 110, 46, 82 | 99.1%, 0.5%, 0.5% | 3.35 (0.99, 2.37) | 1.15 | 3.15, 24.1% |
+| goblin-storm | 200 | 1.82 | 84 | 59.5% | 60, 108, 40, 48 | 97.0%, 2.4%, 0.6% | 3.48 (0.74, 2.74) | 0.71 | 2.04, 19.6% |
+| planeswalker-party | 200 | 3.58 | 39 | 33.0% | 47, 31, 441, 79 | 97.4%, 1.3%, 1.3% | 3.27 (1.13, 2.13) | 2.27 | 3.46, 7.5% |
+| all twelve | 2400 | 2.45 | 118 | 63.9% | 993, 1844, 952, 793 | 96.9%, 2.3%, 0.8% | 3.86 (1.03, 2.84) | 1.00 | 3.11, 21.0% |
+
+At both tables a commander is taken off the battlefield by another player's spell or ability a little more than once a
+seat-game (112 and 118 times a hundred seat-games; in 67% and 64% of the seat-games at least once), more often by a wipe than by
+a spell that names it, and 98% and 97% of those answers come on the remover's own turn. The cards that do it are the decks' wipes and
+their removal (`by_card` in the two files). Planeswalker Party's commander is a planeswalker: it leaves in combat, attacked,
+and is seldom answered by a spell.

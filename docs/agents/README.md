@@ -100,7 +100,12 @@ are that session's and have to be replaced by the new session's scratch director
   arm every turn on which only its commander gave a sure kill of the most dangerous or the last opponent, with what was
   sent and who was out, and the tables whose two games differ first at an attack of the seat's, with the commander's
   kills on the table at that attack. `cmp_rollups.py OFFICIAL_DIR RECORD_DIR` compares a run's own `ab-rollups` with
-  the rollups made from its shards, `generated` aside. `other_turns.py RUN_DIR... [--arm ARM] [--focus]`: a seat's instants, other spells
+  the rollups made from its shards, `generated` aside. `received.py RUN_DIR... [--json OUT]` counts a game from the
+  receiving seat (DESIGN §29, §42): every nonland card that leaves the battlefield, filed by what took it (another
+  player's spell or ability that named it, a wipe, combat, the seat's own doing) and by whose turn it was, with the
+  commander apart; a league directory or an ab.py run. `league_pair.py BEFORE_DIR AFTER_DIR` reads two league runs
+  on the same seed and cycles table by table (the same tables under two sets of playbooks): the same winner, the
+  first line that differs, each deck's tables won in both, only before, only after. `other_turns.py RUN_DIR... [--arm ARM] [--focus]`: a seat's instants, other spells
   and activated abilities by whether it was its own turn or another player's (the count behind "what the bots do on
   other players' turns", DESIGN §34). `aimed_at.py RUN_DIR...`: whose permanents a seat's spells, triggers and abilities
   are aimed at (the most dangerous opponent, the widest board, the lowest life, the eventual winner, each beside
