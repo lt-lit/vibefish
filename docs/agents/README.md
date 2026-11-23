@@ -113,6 +113,9 @@ are that session's and have to be replaced by the new session's scratch director
   the battlefield on each side from the cast to the end of that turn, the opponents hit, the turn.
   `exile_uses.py RUN_DIR... --deck ID` reads a trigger that exiles cards from its controller's graveyard use by use (Winter,
   Cynical Opportunist: DESIGN §47): the cards taken, the graveyard before, what came back.
+  `recast.py RUN_DIR... [--deck ID]` counts a commander's recasts from the command zone, their tax, the recasts on a turn a
+  card of mana value five or more stayed in hand that the seat had the lands for, the seat's own turns that began with
+  its commander in the command zone, and the share of such cards cast (DESIGN §47).
   `read-games-brief.md` is the brief of an agent that reads ten printed games of one deck for plays a competent player would
   not make (DESIGN §44, §47).
   `land_stall.py RUN_DIR...` counts the seat-games in which a seat held only lands that return a land and played none at
@@ -155,6 +158,12 @@ are that session's and have to be replaced by the new session's scratch director
   refuses a candidate that changes anything but cast rules, groups and attack keys. `keep_before.py DECK...` keeps the
   shipped playbook as `<deck>-before.json` for the confirming run; `ship_version.py --parts a,b,c` records the parts
   of the join a version is made of, in place of an arm. The versions of 2026-11-21 were made this way (DESIGN.md §35).
+- `merge_parts.py DECK --name vN --parts a,b,c [--dry-run]`: the same for candidates that are each the shipped playbook
+  with one change of any kind (a key on the cast block, a block in `targets`, a rule changed where it stands, rules
+  put in, a trigger rule): each part's difference from the shipped playbook is applied to it, two parts that change
+  the same key or rule differently are refused, and every change is printed with the rules on either side of it. It
+  checks that each part's difference alone gives that part's playbook again (2026-11-23, for the versions made of the
+  parts of `ab-run` #69 to #72).
 - `reports/<date>/`: the agents' reports as handed back: the audit, the rules, the validation, what the rule format could
   not say, the deck's answers for the second pass, and where the candidate falls short of a person.
 

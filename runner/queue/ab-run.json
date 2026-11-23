@@ -1,6 +1,6 @@
 {
-  "requested": "2026-11-23T06:59Z",
-  "note": "ab-run #72: Death Toll's commander (DESIGN §47, harness 0.4.17), read by the rule in CLAUDE.md (In flight, How #72 is to be read), fixed before this was queued. playbook/variants/death-toll-graveyard.json is the shipped playbook with \"types\" in its targets for Winter, Cynical Opportunist: the end-step trigger that exiles \"any number of cards from your graveyard with four or more card types among them\" and brings a permanent back is answered by the rule (the permanent worth bringing back and the fewest other cards that make four types), where Forge's AI exiles the whole graveyard (550 of 558 uses in 200 league games). The candidate plays alone on seed 20261530 at the owner's table, the tables of ab-run #70, whose death-toll arm it is read beside. Playbook arm only; 200 games in 5 shard jobs. The request before this one: ab-run #71 (the land hook).",
+  "requested": "2026-11-23T10:40Z",
+  "note": "ab-run #73: the commander's recast (DESIGN §47, harness 0.4.18), read by the rule in CLAUDE.md (In flight, How #73 is to be read), fixed before this was queued. Three candidates, each the shipped playbook with its commander's rule made three and a group `big` (playbook/variants/<deck>-recast.json): the commander is played at once the first time (commander_casts == 0), recast in the same place while no card of the deck's larger plays can be cast (castable:big == 0), and otherwise below those plays. Each candidate plays alone, on the seed and table of an earlier run whose shipped arm of the same deck it is read beside: blight-curse@recast on seed 20261510 (ab-run #69), revenant-recon@recast and death-toll@recast on seed 20261530 (ab-run #70), all at the owner's table. The shipped playbooks are the same files in those commits and this one. Playbook arms only; 600 games in 15 shard jobs. The request before this one: ab-run #72 (Death Toll's commander).",
   "games": "200",
   "arms": "playbook",
   "shards_per_deck": "5",
@@ -11,5 +11,16 @@
   "opponent_playbooks": true,
   "pool": "runner/leagues/owners-table-v1.json",
   "seed": "20261530",
-  "decks": "death-toll@graveyard"
+  "runs": [
+    {
+      "decks": "blight-curse@recast",
+      "pool": "runner/leagues/owners-table-v1.json",
+      "seed": "20261510"
+    },
+    {
+      "decks": "revenant-recon@recast,death-toll@recast",
+      "pool": "runner/leagues/owners-table-v1.json",
+      "seed": "20261530"
+    }
+  ]
 }

@@ -3292,6 +3292,20 @@ public class PlaybookController extends PlayerControllerAi {
         return c.other == null ? c.compare(metric(c.metric)) : c.compare(metric(c.metric), metric(c.other));
     }
 
+    /** Whether a card in our hand could be cast as a spell now: the timing allows it and Forge finds the mana (and the other costs) for it. */
+    private boolean castableNow(Card c) {
+        for (SpellAbility sa : c.getSpellAbilities()) {
+            if (!sa.isSpell()) {
+                continue;
+            }
+            sa.setActivatingPlayer(player);
+            if (sa.canPlay() && ComputerUtilCost.canPayCost(sa, player, false)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /** Both sides of the game as numbers (playbook/README.md lists them). */
     private int metric(String name) {
         if (name.startsWith("hand:")) {
@@ -3299,6 +3313,16 @@ public class PlaybookController extends PlayerControllerAi {
             int n = 0;
             for (Card c : player.getCardsIn(ZoneType.Hand)) {
                 n += group != null && group.contains(c.getName()) ? 1 : 0;
+            }
+            return n;
+        }
+        if (name.startsWith("castable:")) {             // 0.4.18: the cards in hand from a named list that we could cast now
+            List<String> group = playbook.cast.groups.get(name.substring(9));
+            int n = 0;
+            if (group != null) {
+                for (Card c : player.getCardsIn(ZoneType.Hand)) {
+                    n += group.contains(c.getName()) && castableNow(c) ? 1 : 0;
+                }
             }
             return n;
         }
@@ -3413,6 +3437,8 @@ public class PlaybookController extends PlayerControllerAi {
                 }
                 return n;
             }
+            case "commander_casts":                     // 0.4.18: the times we have cast a commander of ours from the command zone (the tax is twice this)
+                return player.getTotalCommanderCast();
             case "opp_life": {                          // the highest life total among the opponents
                 int n = 0;
                 for (Player opp : player.getOpponents()) {

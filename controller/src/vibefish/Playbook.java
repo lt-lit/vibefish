@@ -155,10 +155,10 @@ public final class Playbook {
         public static final List<String> METRICS = List.of("creatures", "tokens", "attackers", "lands", "hand", "library",
                 "storm", "drawn", "turn", "life", "mana", "opponents", "power", "opp_creatures", "opp_power", "opp_life",
                 "threat", "main", "opp_toughness", "attacking", "unblocked", "attacked", "incoming", "lethal",
-                "table_creatures", "table_power");
+                "table_creatures", "table_power", "commander_casts");
         private static final Pattern CONTROLS = Pattern.compile("^(not\\s+)?controls\\s+(.+)$");
         private static final Pattern COMPARE = Pattern.compile(
-                "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");
+                "^([a-z_]+|type:[A-Za-z' -]+?|hand:[A-Za-z0-9_]+|castable:[A-Za-z0-9_]+)\\s*(>=|<=|==|!=|>|<)\\s*(-?\\d+|[a-z_]+)$");
 
         public final String text;
         public final String metric;     // null for a controls condition
@@ -189,17 +189,20 @@ public final class Playbook {
                 negate = false;
             } else {
                 throw new IllegalArgumentException("playbook condition not understood: \"" + raw + "\" (use \"<metric> <op> <number or metric>\" with "
-                        + METRICS + ", type:<CreatureType> or hand:<group>, or \"[not] controls <card name>\")");
+                        + METRICS + ", type:<CreatureType>, hand:<group> or castable:<group>, or \"[not] controls <card name>\")");
             }
         }
 
         private static boolean known(String metric) {
-            return METRICS.contains(metric) || metric.startsWith("type:") || metric.startsWith("hand:");
+            return METRICS.contains(metric) || metric.startsWith("type:") || metric.startsWith("hand:") || metric.startsWith("castable:");
         }
 
-        /** The group a {@code hand:<group>} metric counts, or null. */
+        /** The group a {@code hand:<group>} or {@code castable:<group>} metric counts, or null. */
         public String group() {
-            return metric != null && metric.startsWith("hand:") ? metric.substring(5) : null;
+            if (metric == null) {
+                return null;
+            }
+            return metric.startsWith("hand:") ? metric.substring(5) : metric.startsWith("castable:") ? metric.substring(9) : null;
         }
 
         public boolean compare(int actual) {
