@@ -457,7 +457,7 @@ One Actions run, queued on 2026-11-23 at 01:46 UTC by a push to `testing`. Its p
 
 | Run | Run id | Seed and table | What plays | What it decides |
 |---|---|---|---|---|
-| `league-run` #7 | to be filled in at the first check-in (the `league-run` workflow run started by the commit that queued it) | 20261430 on `runner/leagues/owners-table-v1.json`, 63 cycles: 504 games in 20 shards, about 200 a deck; the seed and cycles of `league-run` #5, so the same 504 tables | every seat a precon of the owner's table under the playbook shipped on 2026-11-23 (all six hooks; the rules for other players' turns in nine; the commander's kill in Mutant Menace), harness 0.4.13 | nothing: the standings, the counts, and the table before and after the rules for other players' turns |
+| `league-run` #7 | 45096445356 (commit d8dc8ff, queued 2026-11-23 01:46 UTC) | 20261430 on `runner/leagues/owners-table-v1.json`, 63 cycles: 504 games in 20 shards, about 200 a deck; the seed and cycles of `league-run` #5, so the same 504 tables | every seat a precon of the owner's table under the playbook shipped on 2026-11-23 (all six hooks; the rules for other players' turns in nine; the commander's kill in Mutant Menace), harness 0.4.13 | nothing: the standings, the counts, and the table before and after the rules for other players' turns |
 
 Twenty shard jobs at about 24 an hour: it should be done about an hour after it was queued. A check-in of the session that queued it is scheduled.
 
